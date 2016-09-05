@@ -7,6 +7,10 @@ The class syllabus for CS6400 Fall 2016 Semester.
    :height: 1024
    :width: 800
 
+Readings
+========
+
+* https://github.com/rxin/db-readings
 
 Syllabus shared by the instructor
 
