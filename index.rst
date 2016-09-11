@@ -18,6 +18,14 @@ Georgia Tech Academic Calendar for Reference: http://www.registrar.gatech.edu/ca
    cs6301/index
    cs6400/index
 
+Not Shared
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   assignments/index.rst
+
 .. _E Books: http://www.library.gatech.edu/search/ebooks.php
 .. _Safari Books: http://proquest.safaribooksonline.com/
 .. _ACM Access: http://dl.acm.org.prx.library.gatech.edu/advsearch.cfm
