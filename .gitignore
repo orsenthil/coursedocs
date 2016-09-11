@@ -90,3 +90,8 @@ ENV/
 
 # RST
 _build/
+
+
+# OMSCS-transcend specific
+
+assignments/
