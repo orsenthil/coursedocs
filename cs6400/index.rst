@@ -11,6 +11,7 @@ Notes for the Database systems concepts and design course.
    syllabus
    officehours
    welcome
+   fundamentals
 
 
 .. _Lecture Transcripts: http://www.prism.gatech.edu/~kzhou33/UdacityNotes/CS6400Subtitles.html
