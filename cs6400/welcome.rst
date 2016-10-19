@@ -15,6 +15,19 @@ Important Slides of DBMS Class
    :width: 450
 
 
+Case Study For Database Management
+----------------------------------
+
+* http://pe.sdt.gatech.edu/sites/default/files/GTPEgtonline_description.pdf
+
+
+**Information Flow Diagram**
+
+.. image:: https://dl.dropbox.com/s/ii5xi93odib6r6w/Screenshot%202016-10-18%2021.10.06.png
+   :align: center
+   :height: 300
+   :width: 450
+
 .. image:: https://dl.dropbox.com/s/cim93tdsezb9q0k/Screenshot%202016-10-18%2000.43.29.png
    :align: center
    :height: 300
@@ -118,3 +131,81 @@ Constraints
    :align: center
    :height: 300
    :width: 450
+
+
+Review of EER
+
+.. image::
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Task Decomposition
+
+
+.. image:: https://dl.dropbox.com/s/5qs7vlg2a66wm4r/Screenshot%202016-10-18%2020.57.35.png
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/eqyblm1l649negk/Screenshot%202016-10-18%2020.58.44.png
+   :align: center
+   :height: 300
+   :width: 450
+
+View Profile Task Decomposition
+
+
+.. image:: https://dl.dropbox.com/s/xk9ri6m2jmzuneh/Screenshot%202016-10-18%2021.00.16.png
+   :align: center
+   :height: 300
+   :width: 450
+
+
+**Edit Profile - 1**
+
+.. image:: https://dl.dropbox.com/s/r7tqqxje6dj2u7y/Screenshot%202016-10-18%2021.00.54.png
+   :align: center
+   :height: 300
+   :width: 450
+
+**Edit Profile - 2**
+
+.. image:: https://dl.dropbox.com/s/kr6jdshmi8lbndk/Screenshot%202016-10-18%2021.02.33.png
+   :align: center
+   :height: 300
+   :width: 450
+
+**Edit Profile - 3**
+
+.. image:: https://dl.dropbox.com/s/xsdfgfjoakmn60d/Screenshot%202016-10-18%2021.03.53.png
+   :align: center
+   :height: 300
+   :width: 450
+
+
+**SQL Request Friendship**
+
+.. image:: https://dl.dropbox.com/s/vm5m3nl8d9wk35z/Screenshot%202016-10-18%2021.04.58.png
+   :align: center
+   :height: 300
+   :width: 450
+
+
+**SQL View Pending Requests**
+
+.. image:: https://dl.dropbox.com/s/hvv6cf5lurkpael/Screenshot%202016-10-18%2021.06.10.png
+   :align: center
+   :height: 300
+   :width: 450
+
+
+**SQL Accept, Reject, Cancel Friend Requests**
+
+.. image:: https://dl.dropbox.com/s/ecs15vc3ac16btd/Screenshot%202016-10-18%2021.07.34.png
+   :align: center
+   :height: 300
+   :width: 450
+
