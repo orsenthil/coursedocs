@@ -1,4 +1,4 @@
-# coursedocs.org
+# http://www.coursedocs.org
 
 * Online Masters in Computer Science Notes
 * Useful Resources for Georgia Tech Students
