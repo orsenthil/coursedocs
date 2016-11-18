@@ -1,32 +1,36 @@
-Georgia Tech Specific Resources
--------------------------------
+Georgia Tech Computer Science Resources
+---------------------------------------
 
-Georgia Tech Academic Calendar for Reference: http://www.registrar.gatech.edu/calendar/
-
-* `E Books`_ available to Georgia Tech Students.
-* `ACM Access`_ for Georgia Tech Students.
-* `Safari Books`_ Accessible when logged in via VPN
-* `Student Software`_ - Logged in via VPN
-* `Student Perks`_ - List of Student Perks shared in one spreadsheet.
-* `OMSCS Slack Group`_ - Slack Channel used by OMSCS Students.
+* `Georgia Tech Academic Calendar`_
+* `E Books`_
+* `ACM Access`_
+* `Safari Books`_
+* `Student Software`_
+* `Student Perks`_
+* `OMSCS Slack Group`_
 * `VirtualBox Virtual Machine with Useful Software`_ - Virtualbox Virtual Machine useful for OMSCS Students.
+
+
+.. toctree::
+   :maxdepth: 1
+
+   vpn
+
+Georgia Tech Course Notes
+-------------------------
+
+.. toctree::
+   :maxdepth: 1
+
+   cs7637/index
+   cs6301/index
+   cs6400/index
 
 
 General Computer Science Resources
 ----------------------------------
 
 * `Fermats Library`_ - Fermats Library Paper Reading Resource.
-
-.. toctree::
-   :maxdepth: 1
-
-   vpn
-   cs7637/index
-   cs6301/index
-   cs6400/index
-
-Not Shared
-----------
 
 .. toctree::
    :maxdepth: 1
@@ -41,3 +45,4 @@ Not Shared
 .. _OMSCS Slack Group: https://omscs-study.slack.com
 .. _Fermats Library: http://fermatslibrary.com/
 .. _VirtualBox Virtual Machine with Useful Software: https://drive.google.com/open?id=0BzoLcmPAawjATmJkUlR3dWVtZDg
+.. _Georgia Tech Academic Calendar: http://www.registrar.gatech.edu/calendar/
