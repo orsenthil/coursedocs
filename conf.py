@@ -52,7 +52,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'OMSCS Transcend'
+project = 'coursedocs.org'
 copyright = '2016, Senthil Kumaran'
 author = 'Senthil Kumaran'
 
