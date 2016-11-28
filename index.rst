@@ -9,6 +9,7 @@ Georgia Tech Computer Science Resources
 * `Student Perks`_
 * `OMSCS Slack Group`_
 * `VirtualBox Virtual Machine with Useful Software`_ - Virtualbox Virtual Machine useful for OMSCS Students.
+8 `Specialization Planner`_
 
 
 .. toctree::
@@ -46,3 +47,4 @@ General Computer Science Resources
 .. _Fermats Library: http://fermatslibrary.com/
 .. _VirtualBox Virtual Machine with Useful Software: https://drive.google.com/open?id=0BzoLcmPAawjATmJkUlR3dWVtZDg
 .. _Georgia Tech Academic Calendar: http://www.registrar.gatech.edu/calendar/
+.. _Specialization Planner: http://omscs-courses.cfapps.io/
