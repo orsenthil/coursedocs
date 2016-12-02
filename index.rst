@@ -39,7 +39,7 @@ General Computer Science Resources
    assignments/index.rst
 
 .. _E Books: http://www.library.gatech.edu/search/ebooks.php
-.. _Safari Books: http://proquest.safaribooksonline.com/
+.. _Safari Books: http://proquest.safaribooksonline.com.prx.library.gatech.edu
 .. _ACM Access: http://dl.acm.org.prx.library.gatech.edu/advsearch.cfm
 .. _Student Software: https://software.oit.gatech.edu/
 .. _Student Perks: https://docs.google.com/spreadsheets/d/1Gk3IPDd7_WyKeSfyuxXWrh4Hkk80As82CnaOO2m750M/edit#gid=0
