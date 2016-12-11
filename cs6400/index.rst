@@ -12,6 +12,10 @@ Notes for the Database systems concepts and design course.
    officehours
    welcome
    fundamentals
+   normalization
+   efficiency
+   implementation
+   metadata
 
 
 .. _Lecture Transcripts: http://www.prism.gatech.edu/~kzhou33/UdacityNotes/CS6400Subtitles.html
