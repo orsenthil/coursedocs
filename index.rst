@@ -7,7 +7,8 @@ Georgia Tech Computer Science Resources
 * `Safari Books`_
 * `Student Software`_
 * `Student Perks`_
-* `OMSCS Slack Group`_
+* `ShareLatex`_ - For writing latex
+* `Thank a Teacher`_
 * `VirtualBox Virtual Machine with Useful Software`_ - Virtualbox Virtual Machine useful for OMSCS Students.
 * `Specialization Planner`_
 
@@ -26,6 +27,7 @@ Georgia Tech Course Notes
    cs7637/index
    cs6301/index
    cs6400/index
+   cs6601/index
 
 
 General Computer Science Resources
@@ -43,8 +45,9 @@ General Computer Science Resources
 .. _ACM Access: http://dl.acm.org.prx.library.gatech.edu/advsearch.cfm
 .. _Student Software: https://software.oit.gatech.edu/
 .. _Student Perks: https://docs.google.com/spreadsheets/d/1Gk3IPDd7_WyKeSfyuxXWrh4Hkk80As82CnaOO2m750M/edit#gid=0
-.. _OMSCS Slack Group: https://omscs-study.slack.com
 .. _Fermats Library: http://fermatslibrary.com/
 .. _VirtualBox Virtual Machine with Useful Software: https://drive.google.com/open?id=0BzoLcmPAawjATmJkUlR3dWVtZDg
 .. _Georgia Tech Academic Calendar: http://www.registrar.gatech.edu/calendar/
 .. _Specialization Planner: http://omscs-courses.cfapps.io/
+.. _Thank a Teacher: http://www.cetl.gatech.edu/thankateacher
+.. _ShareLatex: https://www.sharelatex.com/
