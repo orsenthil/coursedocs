@@ -1,5 +1,5 @@
-Georgia Tech Computer Science Resources
-=======================================
+Georgia Tech OMSCS
+==================
 
 Introduction
 ------------

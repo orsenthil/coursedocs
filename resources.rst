@@ -1,5 +1,5 @@
-Useful Resources for Online Study
-=================================
+Resources
+=========
 
 Test Taking
 -----------
