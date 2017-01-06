@@ -1,6 +1,11 @@
 Artificial Intelligence
 =======================
 
+Schedule
+--------
+
+
+
 
 Course Syllabus
 ---------------

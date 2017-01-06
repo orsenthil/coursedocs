@@ -11,3 +11,4 @@ Course Page
    :maxdepth: 1
 
    union-find
+   queues
