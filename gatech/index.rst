@@ -19,6 +19,7 @@ Georgia Tech Course Notes
    cs6301/index
    cs6400/index
    cs6601/index
+   cs7641/index
 
 
 
