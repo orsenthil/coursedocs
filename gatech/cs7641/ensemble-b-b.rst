@@ -1,13 +1,14 @@
 .. title: Ensemble B & B
 .. slug: ensemble-b-b
 .. date: 2015-08-31 20:57:49 UTC-07:00
-.. tags: 
+.. tags:
 .. category: notes
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
 
-**Ensemble Learning Boosting**
+Ensemble Learning Boosting
+==========================
 
 *scribble*
 

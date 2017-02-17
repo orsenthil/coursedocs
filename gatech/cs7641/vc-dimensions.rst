@@ -3,9 +3,12 @@
 .. date: 2015-09-05 19:30:50 UTC-07:00
 .. tags: mathjax
 .. category: notes
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
+
+VC Dimensions
+=============
 
 **Infinite Hypothesis Spaces**
 

@@ -3,11 +3,12 @@
 .. date: 2015-08-27 22:10:22 UTC-07:00
 .. tags: mathjax
 .. category: notes
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
 
-**Neural Networks**
+Neural Networks
+===============
 
 *scribble*
 

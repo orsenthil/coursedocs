@@ -1,11 +1,14 @@
 .. title: Python for Data Analysis
 .. slug: python-for-data-analysis
 .. date: 2015-08-28 09:42:13 UTC-07:00
-.. tags: 
+.. tags:
 .. category: notes
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
+
+Python for Data Analysis
+========================
 
 Read the excerpt of the book Python for `Data Analysis`_
 

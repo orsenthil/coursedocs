@@ -1,11 +1,14 @@
 .. title: Bayesian Inference
 .. slug: bayesian-inference
 .. date: 2015-10-02 08:46:19 UTC-07:00
-.. tags: 
+.. tags:
 .. category: notes
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
+
+Bayesian Inference
+==================
 
 **Intro**
 

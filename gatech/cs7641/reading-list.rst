@@ -3,11 +3,12 @@
 .. date: 2015-08-27 00:41:13 UTC-07:00
 .. tags: software, books, presentations
 .. category: notes
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
 
-**Schedule**
+Reading List
+============
 
 * Topics, Chapter and Video Reference and Dates. `Google Docs Link`_
 

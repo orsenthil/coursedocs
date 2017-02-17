@@ -3,9 +3,12 @@
 .. date: 2015-08-28 18:42:33 UTC-07:00
 .. tags: mathjax
 .. category: notes
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
+
+Decision Trees
+==============
 
 * Decision Tree  is the most popular technique in data mining and machine learning.
 * Andrew's  tutorial can be considered as self contained material on decision trees.

@@ -3,9 +3,12 @@
 .. date: 2015-09-06 10:55:09 UTC-07:00
 .. tags: mathjax
 .. category: notes
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
+
+Bayesian Learning
+=================
 
 **Introduction**
 

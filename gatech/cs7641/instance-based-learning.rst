@@ -1,13 +1,14 @@
 .. title: Instance Based Learning
 .. slug: instance-based-learning
 .. date: 2015-08-30 16:05:43 UTC-07:00
-.. tags: 
+.. tags:
 .. category:  notes
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
 
-**Instance Based Learning Before**
+Instance Based Learning
+=======================
 
 *scribble*
 

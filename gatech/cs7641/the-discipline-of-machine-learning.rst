@@ -3,9 +3,12 @@
 .. date: 2015-08-17 18:48:42 UTC-07:00
 .. tags: article
 .. category: notes
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
+
+The Discipline of Machine Learning
+==================================
 
 Article on Machine Learning.[0]
 

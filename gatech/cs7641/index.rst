@@ -7,8 +7,6 @@ Machine Learning
    :maxdepth: 3
 
    introduction
-   hello-world
-   mathematics
    python-for-data-analysis
    the-discipline-of-machine-learning
    weka-commands
@@ -20,10 +18,8 @@ Machine Learning
    comp-learning-theory
    decision-trees
    ensemble-b-b
-   exam-tips
    instance-based-learning
    kernel-methods-and-svm
    neural-networks
    regression
-   unsuperved-learning
    vc-dimensions

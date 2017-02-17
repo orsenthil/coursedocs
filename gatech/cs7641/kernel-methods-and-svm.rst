@@ -2,12 +2,14 @@
 .. slug: kernel-methods-and-svm
 .. date: 2015-09-15 09:09:13 UTC-07:00
 .. tags:  notes, mathjax
-.. category: 
-.. link: 
-.. description: 
+.. category:
+.. link:
+.. description:
 .. type: text
 
-**Quiz: The Best Line**
+Kernel Methods and SVM
+======================
+
 
 *scribble*
 

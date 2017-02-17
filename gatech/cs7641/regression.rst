@@ -1,12 +1,14 @@
 .. title: Regression and Classification
 .. slug: regression
 .. date: 2015-08-26 23:54:42 UTC-07:00
-.. tags: 
+.. tags:
 .. category: notes
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
 
+Regression
+==========
 
 **What is Regression?**
 

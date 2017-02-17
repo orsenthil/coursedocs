@@ -3,11 +3,12 @@
 .. date: 2015-09-08 19:35:33 UTC-07:00
 .. tags: coursera
 .. category: notes
-.. link: 
-.. description: 
+.. link:
+.. description:
 .. type: text
 
-**Supervised Learning**
+Supervised Learning
+===================
 
 *scribble*
 
