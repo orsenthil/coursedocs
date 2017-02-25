@@ -1,10 +1,12 @@
 Artificial Intelligence
 =======================
 
-Schedule
---------
+.. toctree::
+   :maxdepth: 3
 
-
+   notes
+   probability
+   bayesnets
 
 
 Course Syllabus
