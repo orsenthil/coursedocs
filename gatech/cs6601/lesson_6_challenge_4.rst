@@ -74,3 +74,8 @@ Given Tables
   # “Each variable is conditionally independent of its non-descendants, given its parents.”
 
   = 0.10900000000000003
+
+References
+----------
+
+* http://web.mit.edu/jmn/www/6.034/d-separation.pdf
