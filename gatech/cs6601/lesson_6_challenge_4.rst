@@ -39,6 +39,8 @@ Given Tables
 
 
 
+   # My Doubts.
+
    Cold  P(Cough)
    T      0.80 * 0.10
    T      0.30 * 0.90
