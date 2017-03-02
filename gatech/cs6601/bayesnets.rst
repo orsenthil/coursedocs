@@ -8,9 +8,6 @@ what uncertain variable influences other uncertain variable.
 Challenge Question
 ------------------
 
-**GOLD-1**
-
-
 .. image:: https://dl.dropbox.com/s/pvo18qlb1gekh1b/Screenshot%202017-02-24%2001.31.30.png
    :align: center
    :height: 300
@@ -95,8 +92,6 @@ Computing Bayes Rule
 Two Test Cancer
 ---------------
 
-** GOLD **
-
 .. image:: https://dl.dropbox.com/s/tmirw03l9x2fppb/Screenshot%202017-02-24%2002.45.44.png
    :align: center
    :height: 300
@@ -143,8 +138,6 @@ Conditional Independence
 
 Conditional Independence 2
 --------------------------
-
-** GOLD  GOLD **
 
 * Tricky again.
 * Apply Total Probability.
@@ -289,6 +282,10 @@ D Separation
    :align: center
    :height: 300
    :width: 450
+
+
+* Active Triplets render them **Dependent**
+* Inactive triplets render them **Independent**
 
 
 Conclusion
