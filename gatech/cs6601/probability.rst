@@ -143,7 +143,7 @@ What We Learned
 * Total Probability
 
 * Probability of any random variable Y, can be written as, Probability Y, "given that" some other random variable
-X_i_, times P(X_i_), summed over all possible outcomes of i for the random variable X.
+   :math:`X_i_`, times :math:`P(X_i_)`, summed over all possible outcomes of i for the random variable X.
 
 * Negation of Probability
 
@@ -172,8 +172,6 @@ Weather Quiz
 Cancer Example
 --------------
 
-**GOLD-1**
-
 .. image:: https://dl.dropbox.com/s/udqutasb9kph0hi/Screenshot%202017-02-24%2000.37.37.png
    :align: center
    :height: 300
@@ -190,8 +188,6 @@ Now, the joint probabilities are not independent events. They are joint probabil
    :width: 450
 
 * The product of prior and the conditional
-
-**GOLD-2**
 
 .. image:: https://dl.dropbox.com/s/arqcnwj7r44pjdk/Screenshot%202017-02-24%2000.55.22.png
    :align: center
@@ -223,8 +219,6 @@ Now, the joint probabilities are not independent events. They are joint probabil
 Bayes Rule
 ----------
 
-**GOLD-3**
-
 * The most important maths for this class in statistics called Bayes Rule.
 
 * B is the evidence.
@@ -239,8 +233,8 @@ Bayes Rule
 
 * The evidence to cause, is turned into causal reasoning.
 
-* Hypothetically given the cause, what is the probability of the evidence that just occured. And to correct for this
-   reasoning, we multiply it by the prior probability of the cause, and divide the whole by the normalized evidence.
+* Hypothetically given the cause, what is the probability of the evidence that just occurred. And to correct for this
+  reasoning, we multiply it by the prior probability of the cause, and divide the whole by the normalized evidence.
 
 * The Probability of Evidence is expanded often by the theorem of total probability.
 

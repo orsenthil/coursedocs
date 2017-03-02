@@ -7,6 +7,7 @@ Artificial Intelligence
    notes
    probability
    bayesnets
+   lesson_6_challenge_4
 
 
 Course Syllabus
