@@ -1,6 +1,10 @@
 Short search questions
 ======================
 
+.. role:: underline
+   :class: underline
+
+
 1) Briefly describe the advantage of depth-first search has over breadth-first search in terms of resource usage.
 
 Space Complexity of Depth First Search
@@ -46,8 +50,6 @@ https://xkcd.com/761/
 
 ----
 
-.. role:: underline
-   :class: underline
 
 3) A heuristic function for A* is considered admissible if
 
@@ -59,6 +61,40 @@ b) if and only if it always over estimates or precisely predicts the cost to the
 
 d) it produces a value between 1 and 0, inclusive
 
+----
+
+4) If the heuristic function of the A* search assigns zero to every state s such that (h(s) = 0) then A* becomes:
+
+(a) Informed Search
+(b) Iterative Deepening Depth First Search
+(c) Depth First Search
+:underline:`(d) Uniform Cost Search`
+(e) None of the Above
+
+
+----
+
+5) Given the way we defined search, is it OK to negative path lengths?
+
+
+- Yes. We take into account only nodes and not path for visit.
+
+- We will not go in circles.
+
+
+----
+
+6) Can we have negative path lengths if graph is directed and acyclic?
+
+- Yes. We can.
+
+
+----
+
+
+7) What happens to A* if we use negative heuristic values?
+
+-  Nothing. It is an admissible heuristic and it can work.
 
 
 
