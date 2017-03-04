@@ -138,7 +138,7 @@ html_theme_options = {
 # The name for this set of Sphinx documents.
 # "<project> v<release> documentation" by default.
 #
-html_title = 'OMSCS Transcend'
+html_title = 'CourseDocs'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
@@ -192,23 +192,23 @@ html_static_path = ['_static']
 
 # If false, no index is generated.
 #
-# html_use_index = True
+html_use_index = True
 
 # If true, the index is split into individual pages for each letter.
 #
-# html_split_index = False
+html_split_index = False
 
 # If true, links to the reST sources are added to the pages.
 #
-# html_show_sourcelink = True
+html_show_sourcelink = True
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 #
-# html_show_sphinx = True
+html_show_sphinx = True
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #
-# html_show_copyright = True
+html_show_copyright = True
 
 # If true, an OpenSearch description file will be output, and all pages will
 # contain a <link> tag referring to it.  The value of this option must be the
@@ -238,7 +238,7 @@ html_static_path = ['_static']
 # html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'OMSCSTranscenddoc'
+htmlhelp_basename = 'CourseDocsHTML'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -264,7 +264,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'OMSCSTranscend.tex', 'OMSCS Transcend Documentation',
+    (master_doc, 'CourseDocs.tex', 'CourseDocs Documentation',
      'Senthil Kumaran', 'manual'),
 ]
 
@@ -300,7 +300,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'omscstranscend', 'OMSCS Transcend Documentation',
+    (master_doc, 'coursedocs', 'Course Docs',
      [author], 1)
 ]
 
@@ -315,8 +315,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'OMSCSTranscend', 'OMSCS Transcend Documentation',
-     author, 'OMSCSTranscend', 'One line description of project.',
+    (master_doc, 'CourseDocs', 'Course Docs Documentation',
+     author, 'CourseDocs', 'One line description of project.',
      'Miscellaneous'),
 ]
 
