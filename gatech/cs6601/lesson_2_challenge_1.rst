@@ -86,7 +86,7 @@ d) it produces a value between 1 and 0, inclusive
 
 6) Can we have negative path lengths if graph is directed and acyclic?
 
-- Yes. We can. (Just as any path). The problem with shortest path search with negative paths is answered in part 5.
+- Yes. We can. (Just as any path). This might not a dijsktra's algorithm. But using an algorithm like `Bellman-Ford`_
 
 
 ----
@@ -96,5 +96,11 @@ d) it produces a value between 1 and 0, inclusive
 
 - Negative heuristics might not over-estimate, and thus can produce admissible heuristics. But negative paths can be
 break the heuristic function and lead us through a path which is not optimal.
+
+* `StackOverFlow Reference`_
+
+.. _StackOverFlow Reference: http://stackoverflow.com/questions/30067813/are-heuristic-functions-that-produce-negative-values
+-inadmissible
+.. _Bellman-Ford: https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
 
 
