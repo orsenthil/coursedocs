@@ -12,68 +12,71 @@ Given Tables
 
 ::
 
-    Cold
+    P(LD=T | Cough=T) =  P(Cough=T |LD=T)  *P(LD)
+                        ---------------------------
+                                P(Cough)
+                      =  (0.80 * 0.30 + 0.75 * 0.70) * P(LD)
+                         ------------------------------------
+                                P(Cough)
 
-    T = 0.30
-    F = 0.70
+                      = (0.80 * 0.30 + 0.75 * 0.70) * (0.10)
+                        ------------------------------------
+                                    P(Cough)
 
-    LD
+                      = (0.80 * 0.30 + 0.75 * 0.70) * (0.10)
+                      ---------------------------------------
+                      (0.80 * 0.30 * 0.10) + (0.30 * 0.30 * 0.90) + (0.75 * 0.70 * 0.10) + (0.05 * 0.70 * 0.90)
 
-    T = 0.10
-    F = 0.90
+                      = 0.0765
+                        -------
+                        0.189
 
-
-            Fever
-    Cold
-
-    T        0.65
-    F        0.25
-
-
-   Cold   LD   P(Cough) P(-Cough)
-
-   T      T    0.80     0.20
-   T      F    0.30     0.70
-   F      T    0.75     0.25
-   F      F    0.05     0.95
+                      = 0.40476190476190477
 
 
 
-   # My Doubts.
+----
 
-   Cold  P(Cough)
-   T      0.80 * 0.10
-   T      0.30 * 0.90
 
-   Cold  P(Cough)
-   F     0.75 * 0.10
-   F     0.05 * 0.90
+2. Question
+
+.. math::
+
+   P(LD=T|Cough=T,Fever=T)
+
+
+// Bayesian
 
 ::
 
-   P(+LD|+Cough) = P(+LD, +Cough) / P(+Cough)
-   P(+LD|+Cough) = P(+LD, +Cough, Cold) / P(+Cough, Cold)
+    P(LD=T|Cough=T,Fever=T) = P(Cough=T, Fever=T | LD=T) * P(LD=T)
 
-   # Do we need to include Fever too?
+                            = Sum(cold) [P(Cough=T,Fever=T| LD=T,cold) * P(cold) * P(LD=T) ] // Skipped a step = that was the mistake
 
-   No
+                            = Sum(cold) [P(Cough=T| LD=T,cold) * P(Fever=T| LD=T, cold) * P(cold) * P(LD=T) ]
 
-   P(+LD, +Cough, Cold)
+                            = P(LD=T) * Sum(cold) [P(Cough=T| LD=T,cold) * P(Fever=T| cold) * P(cold)]
 
-   For_all(Cold) = P(+LD, +Cough, Cold) * P(+Cough, Cold)
-                 = P(+LD, +Cough, +Cold) * P(+Cough, +Cold) + P(+LD, +Cough, -Cold) * P(+Cough, -Cold)
-                 = ((0.80 * 0.10)        *  ((0.80 * 0.10) + (0.30 * 0.90))) + ((0.75 * 0.90) * ((0.75 * 0.10) + (0.05 * 0.90)))
-                 = 0.10900000000000003
+                            = P(LD=T) * [P(Co=T|LD=T,C=T) * P(F=T|C=T) * P(C=T) + P(Co=T|LD=T,C=F) * P(F=T|C=F) * P(C=F)]
+                            = 0.10 * ((0.80 * 0.65 * 0.30) + (0.75 * 0.25 * 0.70))
+
+                            = 0.028725
+
+                          = P(Cough=T, Fever=T | LD=F) * P(LD=F)
+
+
+                          = P(LD=F) * Sum(cold) [P(Cough=T| LD=F,cold) * P(Fever=T| cold) * P(cold)]
+                          = P(LD=F) * [P(Co=T|LD=F,C=T) * P(F=T|C=T) * P(C=T) + P(Co=T|LD=F,C=F) * P(F=T|C=F) * P(C=F)]
+                          = 0.90 * ((0.30 * 0.65 * 0.30) + (0.05 * 0.25 * 0.70))
+
+                          = 0.060524999999999995
+
+                          = 0.32184873949579834
 
 
 
-::
 
-  P(LD|Cough, Fever) = P(LD, Cough, Cold,Fever) / P(Cough, Cold, Fever) # NO.
 
-  # “Each variable is conditionally independent of its non-descendants, given its parents.”
-
-  = 0.10900000000000003
 
 References
 ----------
