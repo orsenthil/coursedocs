@@ -77,16 +77,16 @@ d) it produces a value between 1 and 0, inclusive
 5) Given the way we defined search, is it OK to negative path lengths?
 
 
-- Yes. We take into account only nodes and not path for visit.
+- We define search like wavefronts. If we have negative path lengths, our wavefronts might go back and might not give
+ us a result.
 
-- We will not go in circles.
 
 
 ----
 
 6) Can we have negative path lengths if graph is directed and acyclic?
 
-- Yes. We can.
+- Yes. We can. (Just as any path). The problem with shortest path search with negative paths is answered in part 5.
 
 
 ----
@@ -94,6 +94,7 @@ d) it produces a value between 1 and 0, inclusive
 
 7) What happens to A* if we use negative heuristic values?
 
--  Nothing. It is an admissible heuristic and it can work.
+- Negative heuristics might not over-estimate, and thus can produce admissible heuristics. But negative paths can be
+break the heuristic function and lead us through a path which is not optimal.
 
 
