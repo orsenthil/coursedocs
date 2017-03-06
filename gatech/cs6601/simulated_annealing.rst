@@ -163,16 +163,16 @@ Simulated Annealing
 
 * T is the simulated temperature at time t, which reduces from a high value at the beginning to near zero eventually.
 
-* :math:`\deltaE` is the change in energy going from current to next.
+* :math:`\delta E` is the change in energy going from current to next.
 
 * When T is small, it is normal hill-climbing.
 
-.. image:: https://www.dropbox.com/s/ak6llq06hpon7j2/Screenshot%202017-03-05%2018.07.57.png?dl=0
+.. image:: https://dl.dropbox.com/s/ak6llq06hpon7j2/Screenshot%202017-03-05%2018.07.57.png
    :align: center
    :height: 300
    :width: 450
 
-* When :math:`\deltaE` is 0, we will get struck in a plateau. But eventually, we will random walk off the plateau.
+* When :math:`\delta E` is 0, we will get struck in a plateau. But eventually, we will random walk off the plateau.
 
 Local Beam Search
 -----------------
