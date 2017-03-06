@@ -5,6 +5,7 @@ Artificial Intelligence
    :maxdepth: 3
 
    notes
+   constraint_satisfaction
    simulated_annealing
    probability
    bayesnets
