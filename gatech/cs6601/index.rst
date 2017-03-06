@@ -5,10 +5,12 @@ Artificial Intelligence
    :maxdepth: 3
 
    notes
+   simulated_annealing
    probability
    bayesnets
    lesson_6_challenge_4
    lesson_2_challenge_1
+   lesson_2_challenge_2
 
 
 Course Syllabus
