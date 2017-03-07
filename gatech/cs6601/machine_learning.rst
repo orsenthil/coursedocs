@@ -285,3 +285,326 @@ Minimum Description Length
    :align: center
    :height: 300
    :width: 450
+
+.. image:: https://dl.dropbox.com/s/sd9kqoxiimljn4l/Screenshot%202017-03-07%2007.57.24.png
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/42olbo256dfgur5/Screenshot%202017-03-07%2007.58.19.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/m9k9cybt00nvz31/Screenshot%202017-03-07%2007.58.55.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Entropy
+-------
+
+.. image:: https://dl.dropbox.com/s/ujok961tist0sni/Screenshot%202017-03-07%2007.59.18.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+* We will use entropy to determine the decision tree branching.
+
+.. image:: https://dl.dropbox.com/s/y044t2rm288rozm/Screenshot%202017-03-07%2008.00.10.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Information Gain
+----------------
+
+.. image:: https://dl.dropbox.com/s/fu1uae0gs0tb7f5/Screenshot%202017-03-07%2008.00.39.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+* then we can figure out the most important attributes.
+
+.. image:: https://dl.dropbox.com/s/magt35rncixw2sd/Screenshot%202017-03-07%2008.01.47.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/om0jd14225e9vz5/Screenshot%202017-03-07%2008.03.18.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+* We cna use the same attribute at multiple levels in the decisions trees.
+
+Decision Tree Quiz 2
+--------------------
+
+.. image:: https://dl.dropbox.com/s/9sk8x6zwb7nod0z/Screenshot%202017-03-07%2008.04.41.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/e8rq9pvogkibarh/Screenshot%202017-03-07%2008.04.12.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Random Forests
+--------------
+
+.. image:: https://dl.dropbox.com/s/6z0zae804rt8837/Screenshot%202017-03-07%2008.06.52.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/cuk7bkapxkl5pd8/Screenshot%202017-03-07%2008.07.08.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Boosting
+--------
+
+.. image:: https://dl.dropbox.com/s/wef0e73ksiw51yu/Screenshot%202017-03-07%2008.11.37.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/icemif3z3r4l9xb/Screenshot%202017-03-07%2008.11.59.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/en88x3q4y9hip1i/Screenshot%202017-03-07%2008.12.20.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/rw7tqle7fiwophi/Screenshot%202017-03-07%2008.12.39.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/lh9kiv897rl23uj/Screenshot%202017-03-07%2008.13.15.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+* `Tutorial on Boosting`_
+* `Short Introduction to Boosting`_
+
+.. _Tutorial on Boosting: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Tutorial-on-Boosting_Freund-Schapire.pdf
+.. _Short Introduction to Boosting: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Short-Introduction-to-Boosting_Freund-Schapire.pdf
+
+Boosting Quiz
+-------------
+
+.. image:: https://dl.dropbox.com/s/azjtyoz7u2lyikm/Screenshot%202017-03-07%2008.14.55.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/hlc0hujt8zhtvyi/Screenshot%202017-03-07%2008.15.39.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Neural Nets
+-----------
+
+.. image:: https://dl.dropbox.com/s/yuqq33zkq6vlai1/Screenshot%202017-03-07%2008.16.44.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/z7fl7xy3audmtzi/Screenshot%202017-03-07%2008.17.18.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/fe714pyoswn2ju6/Screenshot%202017-03-07%2008.17.33.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/c55a9kx9gr9f761/Screenshot%202017-03-07%2008.17.54.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+* `Neural Networks Slides`_
+
+
+.. _Neural Networks Slides: http://aima.eecs.berkeley.edu/slides-pdf/chapter20b.pdf
+
+Neural Nets Quiz
+----------------
+
+.. image:: https://dl.dropbox.com/s/i1whn2twi04oyvf/Screenshot%202017-03-07%2008.18.22.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+::
+
+   Quiz: Neural Nets Quiz
+   Fill in the truth table for NOR and find weights such that:
+
+   a = { true if w0 + i1 w1 + i2 w2 > 0, else false }
+
+   Truth table
+
+   Enter 1 for True, and 0 (or leave blank) for False in each cell.
+   All combinations of i1 and i2 must be specified.
+
+   Weights
+
+   Each weight must be a number between 0.0 and 1.0, accurate to one or two decimal places.
+   w1 and w2 are the input weights corresponding to i1 and i2 respectively.
+   w0 is the bias weight.
+
+   Activation function
+   Choose the simplest activation function that can be used to capture this relationship.
+
+
+.. image:: https://dl.dropbox.com/s/kwmjhucwyt96500/Screenshot%202017-03-07%2008.19.21.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Multilayer Nets
+---------------
+
+.. image:: https://dl.dropbox.com/s/sp3cnnpmg4uh80c/Screenshot%202017-03-07%2008.20.01.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Perceptron Learning
+-------------------
+
+.. image:: https://dl.dropbox.com/s/m1wktevt5o9vyy0/Screenshot%202017-03-07%2008.21.42.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/q4dn1z97pnoc5e2/Screenshot%202017-03-07%2008.22.20.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/iu6wbzpw9f0m33y/Screenshot%202017-03-07%2008.24.17.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Expressiveness of Preceptron
+----------------------------
+
+.. image:: https://dl.dropbox.com/s/6g6k85b3lskqt14/Screenshot%202017-03-07%2008.25.44.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/1grs2slb8t0on5f/Screenshot%202017-03-07%2008.25.57.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Multilayer Perceptron
+---------------------
+
+.. image:: https://dl.dropbox.com/s/tnfpepvmprbj2hq/Screenshot%202017-03-07%2008.26.33.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/8lz2epthpuskypu/Screenshot%202017-03-07%2008.26.55.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Back-Propagation
+----------------
+
+.. image:: https://dl.dropbox.com/s/ax8ohieruif9c0o/Screenshot%202017-03-07%2008.27.31.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/xfz47n55x9u7osv/Screenshot%202017-03-07%2008.29.11.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/ox29qofh5ld0tnb/Screenshot%202017-03-07%2008.29.27.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Deep Learning
+-------------
+
+* https://www.udacity.com/course/deep-learning--ud730
+* https://en.wikipedia.org/wiki/Deep_learning
+
+Unsupervised Learning
+---------------------
+
+* https://en.wikipedia.org/wiki/Unsupervised_learning
+
+k-Means and EM
+--------------
+
+.. image:: https://dl.dropbox.com/s/pzw3ebew6gty3pi/Screenshot%202017-03-07%2008.32.50.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/nva08m719r9a96e/Screenshot%202017-03-07%2008.33.10.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/l53k69rjcu2ua5c/Screenshot%202017-03-07%2008.33.32.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/w3l1dshvy6gr9qx/Screenshot%202017-03-07%2008.33.54.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+* Expectation Maximization
+
+* `Pattern Recognition and Machine Learning`_ by Christopher Bishop
+
+.. _Pattern Recognition and Machine Learning: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Mixture-Models-and-EM_Bishop.pdf
+
+EM and Mixture of Gaussians
+---------------------------
+
+.. image:: https://dl.dropbox.com/s/xccinv5ayqlzu64/Screenshot%202017-03-07%2008.35.21.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/ystxkm0uqfv4rav/Screenshot%202017-03-07%2008.35.44.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+* `Using GPS to Learn Significant Locations and Predict Movement Across Multiple Users`_, Daniel Ashbrook and Thad Starner
+
+.. _Using GPS to Learn Significant Locations and Predict Movement Across Multiple Users: http://www-static.cc.gatech.edu/~thad/p/journal/using-gps-to-learn-significant-locations.pdf:w
+
