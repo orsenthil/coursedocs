@@ -9,6 +9,7 @@ Artificial Intelligence
    simulated_annealing
    probability
    bayesnets
+   machine_learning
    lesson_6_challenge_4
    lesson_2_challenge_1
    lesson_2_challenge_2
