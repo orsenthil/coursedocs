@@ -5,6 +5,7 @@ Artificial Intelligence
    :maxdepth: 3
 
    notes
+   game_playing
    constraint_satisfaction
    simulated_annealing
    probability
