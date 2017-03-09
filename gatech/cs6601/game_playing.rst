@@ -295,7 +295,88 @@ Minimax Quiz
    :height: 300
    :width: 450
 
+Alpha Beta Pruning Quiz 1
+-------------------------
+
+.. image:: https://dl.dropbox.com/s/k2km031si3smp2e/Screenshot%202017-03-08%2020.10.22.png
+   :align: center
+   :height: 300
+   :width: 450
+
+Alpha-Beta Pruning Quiz 2
+-------------------------
+
+.. image:: https://dl.dropbox.com/s/us8h6eye7mhdmwn/Screenshot%202017-03-08%2020.12.25.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Searching Complex Games
+-----------------------
+
+* AIMA: Chapter 5.3-5.4
+
+3-Player Games
+--------------
+
+.. image:: https://dl.dropbox.com/s/ghvix4o008zwn5n/Screenshot%202017-03-08%2020.22.39.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+3-Player Games Quiz
+-------------------
+
+.. image:: https://dl.dropbox.com/s/vu0n6vctyi6my8p/Screenshot%202017-03-08%2020.23.27.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+3-Player Alpha-Beta Pruning
+---------------------------
+
+.. image:: https://dl.dropbox.com/s/jrds4kwx94sh7g4/Screenshot%202017-03-08%2020.29.08.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Multi-player Alpha-Beta Pruning
+-------------------------------
+
+* `Korf 1991`_
+
+.. _Korf 1991: http://www.cc.gatech.edu/~thad/6601-gradAI-fall2015/Korf_Multi-player-Alpha-beta-Pruning.pdf
+
+In the above paper, you will get a chance to generalize minimax search techniques to games with more
+than three players. As you'll see, alpha-beta pruning doesn't work quite as effectively in this case
+as in the general case. Here are a few questions to keep in mind while reading through this paper:
+
+* Why might alphabeta pruning only work well in the two player case?
+* How does the size of the search tree change with more than two players?
+
+Probabilistic Games
+-------------------
+
+.. image:: https://dl.dropbox.com/s/2nb8d6d03kh2zu6/Screenshot%202017-03-08%2020.39.46.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Probabilistic Alpha-Beta Pruning
+--------------------------------
+
+.. image:: https://dl.dropbox.com/s/wnmy02gdmluvokr/Screenshot%202017-03-08%2020.40.26.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
 
 
 
+Further Watching
+----------------
 
+* `Game Playing`_
+* `Game Theory`_
+
+.. _Game Playing: https://classroom.udacity.com/courses/cs271/lessons/48720299/concepts/482718700923
+.. _Game Theory: https://classroom.udacity.com/courses/cs271/lessons/48716317/concepts/484037340923

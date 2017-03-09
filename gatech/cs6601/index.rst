@@ -11,9 +11,10 @@ Artificial Intelligence
    probability
    bayesnets
    machine_learning
-   lesson_6_challenge_4
+   lesson_1_challenge_7
    lesson_2_challenge_1
    lesson_2_challenge_2
+   lesson_6_challenge_4
 
 
 Course Syllabus
