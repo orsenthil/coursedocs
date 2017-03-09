@@ -380,3 +380,8 @@ Further Watching
 
 .. _Game Playing: https://classroom.udacity.com/courses/cs271/lessons/48720299/concepts/482718700923
 .. _Game Theory: https://classroom.udacity.com/courses/cs271/lessons/48716317/concepts/484037340923
+
+Resources
+---------
+
+* * https://www.ocf.berkeley.edu/~yosenl/extras/alphabeta/alphabeta.html
