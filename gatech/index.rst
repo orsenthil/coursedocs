@@ -15,6 +15,7 @@ Georgia Tech Course Notes
    :maxdepth: 1
 
    resources
+   cs6505/index
    cs7637/index
    cs6301/index
    cs6400/index
