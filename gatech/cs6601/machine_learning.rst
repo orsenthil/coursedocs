@@ -309,6 +309,11 @@ Entropy
    :height: 300
    :width: 450
 
+.. image:: https://dl.dropbox.com/s/i7wl7s4jyc35wbp/Screenshot%202017-03-10%2011.32.28.png
+   :align: center
+   :height: 300
+   :width: 450
+
 * We will use entropy to determine the decision tree branching.
 
 .. image:: https://dl.dropbox.com/s/y044t2rm288rozm/Screenshot%202017-03-07%2008.00.10.png?dl=0

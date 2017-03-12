@@ -65,8 +65,6 @@ Constraint Hypergraph
    :width: 450
 
 
-* Don't understand.
-
 Backtracking Search
 -------------------
 
@@ -88,12 +86,23 @@ Improving Backtracking Efficiency
    :height: 300
    :width: 450
 
+* Orange was the value that least constrainted the future choices.
+
 .. image:: https://dl.dropbox.com/s/4hzt06su55wq33a/Screenshot%202017-03-05%2020.10.53.png
    :align: center
    :height: 300
    :width: 450
 
+* The variable with the least number of values remaining is south australia, so we assign that next.
+
+* When there is a tie, use degree heuristic. Choose the variable with the most constraints on remaining variables.
+
 .. image:: https://dl.dropbox.com/s/o9kw0u2ridptwqv/Screenshot%202017-03-05%2020.12.51.png
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/6bzo1ssa7yiww6p/Screenshot%202017-03-11%2013.22.02.png?dl=0
    :align: center
    :height: 300
    :width: 450
@@ -147,7 +156,9 @@ Structured CSPs
    :width: 450
 
 * If we have CSP with no loops, we can solve the problem in :math:`O(nd^2)` times.
-* Topological Search: https://courses.cs.washington.edu/courses/cse326/03wi/lectures/RaoLect20.pdf
+* `Topological Search`_
+
+.. _Topological Search: https://courses.cs.washington.edu/courses/cse326/03wi/lectures/RaoLect20.pdf
 
 .. image:: https://dl.dropbox.com/s/81f4wmojuaqpn2h/Screenshot%202017-03-05%2020.30.02.png
    :align: center
@@ -172,4 +183,3 @@ Challenge Question
    :align: center
    :height: 300
    :width: 450
-
