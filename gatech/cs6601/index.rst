@@ -5,6 +5,7 @@ Artificial Intelligence
    :maxdepth: 3
 
    game_playing
+   search
    constraint_satisfaction
    simulated_annealing
    probability
