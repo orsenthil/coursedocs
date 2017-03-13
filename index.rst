@@ -26,8 +26,8 @@ General Principles
 Contribute
 ----------
 
-Contributions are welcome. If you find this website useful, you can feel the ownership to expand it too. The proverb
-that I'd like to remember is.
+Contributions are welcome. If you find this website useful, you could consider owning a part by adding new material,
+resources useful for online self-study to this site. The proverb that I'd like to remember most is this:
 
 .. image:: https://dl.dropbox.com/s/pel8n87121x4qz8/coursedocs_collaboration.jpg?dl=0
    :align: center
