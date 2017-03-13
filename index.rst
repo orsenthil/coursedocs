@@ -19,7 +19,19 @@ General Principles
 
    gatech/index
    coursera/index
+   edx/index
    resources
 
+
+Contribute
+----------
+
+Contributions are welcome. If you find this website useful, you can feel the ownership to expand it too. The proverb
+that I'd like to remember is.
+
+.. image:: https://dl.dropbox.com/s/pel8n87121x4qz8/coursedocs_collaboration.jpg?dl=0
+   :align: center
+   :height: 300
+   :width: 450
 
 .. _OMSCS: https://omscs.gatech.edu

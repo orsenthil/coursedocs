@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'coursedocs.org'
-copyright = '2016, Senthil Kumaran'
+copyright = '2017, Senthil Kumaran'
 author = 'Senthil Kumaran'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -130,7 +130,7 @@ html_title = 'CourseDocs'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
 #
-html_short_title = "omscs"
+html_short_title = "coursedocs"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
