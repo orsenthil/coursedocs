@@ -10,6 +10,13 @@ Georgia Tech Course Notes
    :maxdepth: 1
 
    computability
+   approximationalgs
+   randomizedalgs
+   bipartitematching
+   maximumflow
+   fft
+   dynamicprogramming
+
 
 
 Resources
