@@ -29,3 +29,4 @@ Resources
 * Visualizing Probability and Statistics  - http://students.brown.edu/seeing-theory/
 * Lecture Slides from Book - http://ai.stanford.edu/~latombe/cs121/2011/schedule.htm
 * Practise Alpha Beta Pruning - http://inst.eecs.berkeley.edu/~cs61b/fa14/ta-materials/apps/ab_tree_practice/
+* AIFH - http://www.heatonresearch.com/aifh/

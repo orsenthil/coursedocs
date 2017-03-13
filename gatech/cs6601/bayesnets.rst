@@ -18,6 +18,7 @@ Challenge Question
 * We will use Capital case letters to indicate our Variables.
 * We will use lower case letters to indicate when the variable is true, and - in front of it to indicate when it is
   not true.
+* I think, the step by step illustration is not accurate.
 
 .. image:: https://dl.dropbox.com/s/zs0lzjj1yjppw7u/Screenshot%202017-02-24%2001.37.42.png
    :align: center
@@ -97,17 +98,32 @@ Two Test Cancer
    :height: 300
    :width: 450
 
-* Clueless
-* Trick shown before. Which one?
-* Running Count for Cancer and - Cancer.
-* Integrate various multiplications in Bayes Rule.
-* Why are we multiplying? We are following non-normalized bayes rule.
-* Why are we multiplying twice? Like how can we rationalize + combing two times with multiplying twice.
+::
+
+   P(C| ++) = ?
+
+   Use the P' formula from above.
+
+   P'(C|++) = P(++|C) * P(C)
+            = P(+|C) * P(+|C) * P(C)
+            = 0.9 * 0.9 * 0.01
+
+   P'(-C|++) = P(++|-C) * P(-C)
+             = P(+|-C) * P(+|-C) * P(-C)
+             = 0.2 * 0.2 * 0.99
+
+   P(C| ++) = P'(C|++)
+              --------------------
+              P'(C|++) + P'(-C|++)
+
+
+
+Calculating the result.
 
 ::
 
-   n1 = 0.01 * 0.9 * 0.9
-   d1 = 0.99 * 0.2 * 0.2
+   n1 =  0.9 * 0.9 * 0.01
+   d1 =  0.2 * 0.2 * 0.99
 
    n1 / (n1 + d1)
    0.169811320754717

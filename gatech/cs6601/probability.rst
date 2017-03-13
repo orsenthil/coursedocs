@@ -142,8 +142,7 @@ What We Learned
 
 * Total Probability
 
-* Probability of any random variable Y, can be written as, Probability Y, "given that" some other random variable
-   :math:`X_i_`, times :math:`P(X_i_)`, summed over all possible outcomes of i for the random variable X.
+* Probability of any random variable Y, can be written as, Probability Y, "given that" some other random variable :math:`X_i` , times :math:`P(X_i)` , summed over all possible outcomes of i for the random variable X.
 
 * Negation of Probability
 
@@ -248,3 +247,7 @@ Bayes Rule
    :height: 300
    :width: 450
 
+Reference
+=========
+
+* http://sites.nicholas.duke.edu/statsreview/probability/jmc/
