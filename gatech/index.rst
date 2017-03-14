@@ -16,6 +16,7 @@ Georgia Tech Course Notes
 
    resources
    cs6505/index
+   cs6250/index
    cs7637/index
    cs6301/index
    cs6400/index
