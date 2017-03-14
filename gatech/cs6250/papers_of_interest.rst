@@ -1,6 +1,8 @@
 Papers of Interest
 ==================
 
+These were shared by TA, Sean Donovan.
+
 
 * `How to read a paper`_ - Keshav
 
@@ -54,56 +56,56 @@ NAMING/ADDRESSING
 BGP/ROUTING
 -----------
 
-* Stable Internet Routing Without Global Coordination - Gao and Rexford
-* BGP routing policies in ISP networks - Caesar and Rexford
-* Understanding BGP Misconfiguration - Mahajan, Wetherall, and Anderson
-* Why Is It Taking So Long to Secure Internet Routing? - Goldberg
-* A 50Gb/s IP Router - Partridge - 1998
-* BGP Security in Partial Deployment: Is the Juice Worth the Squeeze? - Lychev, Goldberg, Schapira
-* Open issues in Interdomain Routing: a survey - Yannuzzi et. al.
-* End-to-End Routing Behavior in the Internet - Paxon
-* The Peering Playbook
-* Constraint-Based Routing in the Internet: Basic Principles and Recent Research - Younis and Fahmy
+* `Stable Internet Routing Without Global Coordination`_ - Gao and Rexford
+* `BGP routing policies in ISP networks`_ - Caesar and Rexford
+* `Understanding BGP Misconfiguration`_ - Mahajan, Wetherall, and Anderson
+* `Why Is It Taking So Long to Secure Internet Routing?`_ - Goldberg
+* `A 50Gb/s IP Router`_ - Partridge - 1998
+* `BGP Security in Partial Deployment - Is the Juice Worth the Squeeze?`_ - Lychev, Goldberg, Schapira
+* `Open issues in Interdomain Routing - a survey`_ - Yannuzzi et. al.
+* `End-to-End Routing Behavior in the Internet`_ - Paxon
+* `The Peering Playbook`_
+* `Constraint-Based Routing in the Internet - Basic Principles and Recent Research`_ - Younis and Fahmy
 
 POLICY
 ------
 
-* 2014 White House NSA Report
+* `2014 White House NSA Report`_
 
 NETWORK BUFFERS
 ---------------
 
-* Sizing router buffers - Appenzeller, Keslassy, and McKeown
-* Fastpass: A Centralized “Zero-Queue” Datacenter Network - Perry et. al.
+* `Sizing router buffers`_ - Appenzeller, Keslassy, and McKeown
+* `Fastpass A Centralized “Zero-Queue” Datacenter Network`_ - Perry et. al.
 
 ETHICS
 ------
 
-* Flash Boys excerpts - Lewis
-* Raging Bulls: How Wall Street got Addicted to Light Speed Trading - Adler
+* `Flash Boys excerpts`_ - Lewis
+* `Raging Bulls - How Wall Street got Addicted to Light Speed Trading`_ - Adler
 
 VIRTUALIZATION
 --------------
 
-* GENI: A federated testbed for innovative network experiments - Berman et. al.
-* Network Functions Virtualisation - Introductory Whitepaper
+* `GENI - A federated testbed for innovative network experiments`_ - Berman et. al.
+* `Network Functions Virtualisation`_ - Introductory Whitepaper
 
 SDN
 ---
 
-* SDN Reading List - This is a great bibliography about SDN. Highly organized, has pretty much any paper you'd need.
+* `SDN Reading List`_ - This is a great bibliography about SDN. Highly organized, has pretty much any paper you'd need.
 Dozens of papers.
-* Toward Software-Defined Cellular Networks - Li, Mao, and Rexford
+* `Toward Software-Defined Cellular Networks`_ - Li, Mao, and Rexford
 
 CENSORSHIP
 ----------
 
-* Chipping Away at Censorship Firewalls with User-Generated Content - Burnett et. al.
+* `Chipping Away at Censorship Firewalls with User-Generated Content`_ - Burnett et. al.
 
 MANAGEMENT
 ----------
 
-* Unraveling the Complexity of Network Management - Benson, Akella, and Maltz
+* `Unraveling the Complexity of Network Management`_ - Benson, Akella, and Maltz
 
 Pyretic Tutorials
 -----------------
@@ -144,3 +146,34 @@ http://www.cs.cornell.edu/~jnfoster/papers/frenetic-icfp.pdf
 .. _RF-IDraw - Virtual Touch Screen in the Air Using RF Signals: http://people.csail.mit.edu/jue_w/Papers/RF-IDraw_SIGCOMM14.pdf
 .. _Intentional Naming System: http://www.cs.cornell.edu/people/egs/615/ins-sosp99.pdf
 
+.. _Stable Internet Routing Without Global Coordination: https://www.cs.princeton.edu/~jrex/papers/sigmetrics00.pdf
+.. _BGP routing policies in ISP networks: https://www.cs.princeton.edu/~jrex/papers/policies.pdf
+.. _Understanding BGP Misconfiguration: https://www.cs.cmu.edu/~srini/15-744/F04/readings/MWA02.pdf
+.. _Why Is It Taking So Long to Secure Internet Routing?: https://queue.acm.org/detail.cfm?id=2668966
+
+.. _A 50Gb/s IP Router: http://cseweb.ucsd.edu/classes/wi01/cse222/papers/partridge-50gb-ton98.pdf
+.. _BGP Security in Partial Deployment - Is the Juice Worth the Squeeze?: http://arxiv.org/abs/1307.2690
+.. _Open issues in Interdomain Routing - a survey: http://inl.info.ucl.ac.be/publications/open-issues-interdomain-routing-surve
+
+.. _End-to-End Routing Behavior in the Internet: http://conferences.sigcomm.org/sigcomm/1996/papers/paxson.pdf
+.. _The Peering Playbook: http://drpeering.net/white-papers/Art-Of-Peering-The-Peering-Playbook.html
+.. _Constraint-Based Routing in the Internet - Basic Principles and Recent Research: https://www.cs.purdue.edu/homes/fahmy/papers/routing.pdf
+.. _2014 White House NSA Report: http://www.whitehouse.gov/sites/default/files/docs/2013-12-12_rg_final_report.pdf
+
+.. _Sizing router buffers: http://www.eecs.berkeley.edu/~sylvia/papers/buffer-sizing.pdf
+.. _Fastpass A Centralized “Zero-Queue” Datacenter Network: http://dspace.mit.edu/handle/1721.1/88141
+
+.. _Flash Boys excerpts: https://www.nytimes.com/2014/04/06/magazine/flash-boys-michael-lewis.html?_r=0
+.. _Raging Bulls - How Wall Street got Addicted to Light Speed Trading: http://www.wired
+.com/2012/08/ff_wallstreet_trading/all/
+
+.. _GENI - A federated testbed for innovative network experiments: https://dl.acm.org/citation.cfm?id=2612044
+
+.. _Network Functions Virtualisation: https://portal.etsi.org/nfv/nfv_white_paper.pdf
+
+.. _SDN Reading List: http://www.nec-labs.com/~lume/sdn-reading-list.html
+
+.. _Toward Software-Defined Cellular Networks: https://www.cs.princeton.edu/~jrex/papers/ewsdn12.pdf
+
+.. _Chipping Away at Censorship Firewalls with User-Generated Content: http://gtnoise.net/papers/2010/burnett:usenixsec2010.pdf
+.. _Unraveling the Complexity of Network Management: https://www.cs.duke.edu/~tbenson/papers/NSDI09.pdf
