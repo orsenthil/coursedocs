@@ -6,6 +6,8 @@ Artificial Intelligence
 
    game_playing
    search
+   preprocessing_for_search
+   search_examples
    constraint_satisfaction
    simulated_annealing
    probability
@@ -14,6 +16,9 @@ Artificial Intelligence
    lesson_1_challenge_7
    lesson_2_challenge_1
    lesson_2_challenge_2
+   lesson_6_challenge_1
+   lesson_6_challenge_2
+   lesson_6_challenge_3
    lesson_6_challenge_4
 
 

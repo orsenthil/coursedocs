@@ -1,5 +1,3 @@
-
-
 .. image:: https://dl.dropbox.com/s/4ui8j7mnms7alrw/Screenshot%202017-03-05%2022.07.48.png
    :align: center
    :height: 300
