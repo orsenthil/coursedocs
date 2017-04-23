@@ -59,7 +59,10 @@ randomly. But in certain cases, such as for time-series or sequence data, random
    :height: 300
    :width: 450
 
-* LOOCV
+* LOOCV_
+
+
+.. _LOOCV: http://stats.stackexchange.com/questions/90902/why-is-leave-one-out-cross-validation-loocv-variance-about-the-mean-estimate-f
 
 
 Cross Validation Quiz
@@ -613,3 +616,10 @@ EM and Mixture of Gaussians
 
 .. _Using GPS to Learn Significant Locations and Predict Movement Across Multiple Users: http://www-static.cc.gatech.edu/~thad/p/journal/using-gps-to-learn-significant-locations.pdf:w
 
+
+Resources
+---------
+
+* `Entropy and Information Gain`_
+
+.. _Entropy and Information Gain: http://www.math.unipd.it/~aiolli/corsi/0708/IR/Lez12.pdf
