@@ -22,6 +22,7 @@ Artificial Intelligence
    lesson_6_challenge_4
    numpy
    logic_and_planning
+   planning_under_uncertainty
 
 
 Course Syllabus
