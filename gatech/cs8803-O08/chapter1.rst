@@ -43,3 +43,19 @@ words—that is, pairs of the form (p,s), where p is the word’s part of speech
 
 
 The process of automatically finding derivations is called parsing.
+
+NFA to DFA Subset Construction Method (In Tamil)
+------------------------------------------------
+
+https://www.youtube.com/watch?v=GrdnW4Cb_GY
+
+Minimization Procedure
+----------------------
+
+https://www.youtube.com/watch?v=1GZOzTJOBuM
+
+
+Table Driven and Hand Written Scanners
+--------------------------------------
+
+* https://stackoverflow.com/questions/27763544/direct-coded-vs-table-driven-lexer

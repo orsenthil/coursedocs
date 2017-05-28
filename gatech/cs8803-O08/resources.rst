@@ -6,3 +6,4 @@ Resources
 * https://www.cs.indiana.edu/~dyb/pubs/nano-jfp.pdf
 * https://www.clear.rice.edu/comp412/Lectures/
 * https://github.com/aalhour/awesome-compilers
+* http://hackingoff.com/compilers/scanner-generator#
