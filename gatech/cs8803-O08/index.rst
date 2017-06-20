@@ -6,4 +6,5 @@ Compilers: Theory and Practice
 
    chapter1
    chapter2
+   left_recursion
    resources
