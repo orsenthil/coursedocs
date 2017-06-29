@@ -104,3 +104,110 @@ B     -> b |.
 C     -> c.
 D     -> d |.
 F     -> f |.
+
+
+Recursive Descent Parsers
+-------------------------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/SH5F-rwWEog?list=PLEbnTDJUr_IcPtUXFy2b1sGRPsLFMghhS" frameborder="0" allowfullscreen></iframe>
+
+::
+
+    E -> i E'
+    E' -> + iE' | e
+
+* Top down parser.
+
+::
+
+    E()
+    {
+        if (l == 'i')
+        {
+            match('i');
+            E'();
+        }
+    }
+
+    l = getchar();
+
+Other function.
+
+::
+
+    E'()
+    {
+    if ( l == '+')
+    {
+        match('+');
+        match('i');
+        E'();
+    }
+    else
+    return;
+    }
+
+function match.
+
+::
+
+    match(char t) {
+    if (l == t) {
+        l = getchar();
+    else
+        printf("error");
+    }
+
+main program.
+
+::
+
+    main()
+    {
+        E();
+        if( l == "$")
+            printf("parsing success");
+    }
+
+
+Operator grammar and Operator precedence parser
+-----------------------------------------------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/n5UWAaw_byw" frameborder="0" allowfullscreen></iframe>
+
+* Operator Precedence Parser.
+* Operator Grammar.
+
+Operator Grammar.
+
+::
+
+    E -> E + E | E * E | id
+
+* There should not be two variables that are adjacent.
+* Operation Relation Table.
+* It is a bottom up parsing.
+
+In order to decrease the size of the operator precedence table, we go for operator function table.
+
+* Error detecting capability of function table is going to be lesser than Error detecting capability of relation table.
+
+LR parsing, LR(0) items and LR(0) parsing table
+-----------------------------------------------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/APJ_Eh60Qwo" frameborder="0" allowfullscreen></iframe>
+
+* Canonical collection of LR(0) items.
+* Canonical collection of LR(1) items.
+
+::
+
+    S -> AA
+    A -> aA | b
+

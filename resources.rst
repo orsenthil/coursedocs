@@ -9,7 +9,6 @@ Test Taking
 For creating quizzes and taking them.
 
 
-
 Research Papers
 ---------------
 
@@ -20,3 +19,12 @@ A utility to read scientific literature collaboratively, annotate portions of th
 .. _Fermats Library: http://fermatslibrary.com/
 .. _QuizLet: https://quizlet.com/students
 
+Visualization, Understanding and Playing
+----------------------------------------
+
+* Visualizing Algorithms: https://visualgo.net/
+* Machine Learning Visualizer: https://jeff3dx.github.io/knn
+* Data Structure Visualizations: https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
+* Competitive Programming: https://cpbook.net/
+* PyAlgo Viz: https://pyalgoviz.appspot.com/
+* Algomation: http://www.algomation.com/
