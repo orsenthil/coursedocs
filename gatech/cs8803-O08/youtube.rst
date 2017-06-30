@@ -211,3 +211,22 @@ LR parsing, LR(0) items and LR(0) parsing table
     S -> AA
     A -> aA | b
 
+
+LL(0) Parsing example and SLR(1) table
+--------------------------------------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/0kiTNN2kHyY" frameborder="0" allowfullscreen></iframe>
+
+
+::
+
+    S' -> S
+    S -> AA1
+    A -> aA | b
+
+
+* Accepting state.
+* LR(0)
+* SLR(1)
