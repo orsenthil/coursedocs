@@ -230,3 +230,46 @@ LL(0) Parsing example and SLR(1) table
 * Accepting state.
 * LR(0)
 * SLR(1)
+
+Examples of LR(0) and SLR(1)
+----------------------------
+
+::
+
+    S -> dA | aB
+    A -> bA | C
+    B -> bB | C
+
+
+Figure out if the grammar is
+
+
+i) LL(1)
+ii) LR(0)
+iii) SLR(1)
+
+Examples of LR(0) and SLR(1)
+----------------------------
+
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/5s4CWn6GiwY" frameborder="0" allowfullscreen></iframe>
+
+::
+
+    E -> E + T | T
+    T -> T F | F
+    F -> F * | a | b
+
+
+CLR(1) and LALR(1) Parsers
+--------------------------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VSkfnRfNuwI" frameborder="0" allowfullscreen></iframe>
+
+
+* LR (1) Item = LR(0) items + look ahead.
+
