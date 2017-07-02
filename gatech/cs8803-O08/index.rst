@@ -9,5 +9,6 @@ Compilers: Theory and Practice
    left_recursion
    lesson6
    lesson7
+   lesson8
    resources
    youtube
