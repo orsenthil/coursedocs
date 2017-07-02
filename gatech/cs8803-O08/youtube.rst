@@ -279,3 +279,19 @@ Conflicts and Examples of CLR(1) and LALR(1)
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/Nxj0g1mk5Ak" frameborder="0" allowfullscreen></iframe>
+
+
+Examples of CLR(1) and LALR(1) and and comparision of all the parsers
+---------------------------------------------------------------------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1XD2wk52-Cs" frameborder="0" allowfullscreen></iframe>
+
+
+Syntax Directed Translation
+---------------------------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/queUceGJqh0" frameborder="0" allowfullscreen></iframe>
