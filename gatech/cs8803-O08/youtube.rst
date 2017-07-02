@@ -295,3 +295,10 @@ Syntax Directed Translation
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube.com/embed/queUceGJqh0" frameborder="0" allowfullscreen></iframe>
+
+Example of SDT - involving a calculation
+----------------------------------------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fmRgKPLEROg" frameborder="0" allowfullscreen></iframe>
