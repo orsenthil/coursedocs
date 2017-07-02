@@ -273,3 +273,9 @@ CLR(1) and LALR(1) Parsers
 
 * LR (1) Item = LR(0) items + look ahead.
 
+Conflicts and Examples of CLR(1) and LALR(1)
+--------------------------------------------
+
+.. raw:: html
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Nxj0g1mk5Ak" frameborder="0" allowfullscreen></iframe>
