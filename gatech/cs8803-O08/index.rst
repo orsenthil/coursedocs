@@ -10,5 +10,6 @@ Compilers: Theory and Practice
    lesson6
    lesson7
    lesson8
+   lesson9
    resources
    youtube
