@@ -105,4 +105,3 @@ CFG Quiz
    :align: center
    :height: 300
    :width: 450
-
