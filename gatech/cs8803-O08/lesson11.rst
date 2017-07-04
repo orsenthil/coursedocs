@@ -114,3 +114,55 @@ Register Allocation Defined
    :align: center
    :height: 300
    :width: 450
+
+Available Registers Quiz
+------------------------
+
+.. image:: https://dl.dropbox.com/s/8hny32xzv2k2feu/Screenshot%202017-07-04%2008.50.16.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Webs Part 1
+-----------
+
+.. image:: https://dl.dropbox.com/s/kuqze36m20q61hu/Screenshot%202017-07-04%2008.54.48.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Webs Part 2
+-----------
+
+.. image:: https://dl.dropbox.com/s/pnolqzxc1swiyig/Screenshot%202017-07-04%2008.58.08.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Interference
+------------
+
+.. image:: https://dl.dropbox.com/s/20enkgbrj4mi5xd/Screenshot%202017-07-04%2009.01.24.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/mell55bvpgvxjj1/Screenshot%202017-07-04%2009.01.07.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/zixilp8dd3n3d5d/Screenshot%202017-07-04%2009.48.47.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Interference Graph
+------------------
+
+.. image:: https://dl.dropbox.com/s/0dqp6kuh4yo1b3q/Screenshot%202017-07-04%2009.50.13.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
