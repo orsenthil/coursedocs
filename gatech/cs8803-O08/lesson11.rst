@@ -389,3 +389,48 @@ Further Optimizations
    :height: 300
    :width: 450
 
+
+Register Coalescing
+-------------------
+
+.. image:: https://dl.dropbox.com/s/swmmkvxnnlz2c7l/Screenshot%202017-07-04%2011.25.37.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Register Targeting
+------------------
+
+.. image:: https://dl.dropbox.com/s/6u9hqgu54ur150k/Screenshot%202017-07-04%2011.26.01.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Pre Splitting Webs
+------------------
+
+.. image:: https://dl.dropbox.com/s/r0z7a43hbcf1a2w/Screenshot%202017-07-04%2011.28.15.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Live Range Splitting Quiz
+-------------------------
+
+.. image:: https://dl.dropbox.com/s/j67y0jshpizamk1/Screenshot%202017-07-04%2011.29.11.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Interprocedural Register Allocation
+-----------------------------------
+
+.. image:: https://dl.dropbox.com/s/2o7sj4xgno2fh13/Screenshot%202017-07-04%2011.31.22.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
