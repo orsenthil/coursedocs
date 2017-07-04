@@ -166,3 +166,80 @@ Interference Graph
    :height: 300
    :width: 450
 
+Register Allocation and Graph Coloring
+--------------------------------------
+
+.. image:: https://dl.dropbox.com/s/gczt9p10ak0599v/Screenshot%202017-07-04%2009.59.14.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/mklx22jjbw2dxlu/Screenshot%202017-07-04%2010.00.11.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Graph Coloring
+--------------
+
+.. image:: https://dl.dropbox.com/s/obnhcrnvp66k5y3/Screenshot%202017-07-04%2010.01.14.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/3ix56vpvjhn10q1/Screenshot%202017-07-04%2010.01.47.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/juti6ogqxjbjziv/Screenshot%202017-07-04%2010.04.38.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/2018s2iromvgt6o/Screenshot%202017-07-04%2010.06.15.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Graph Coloring Heuristics
+-------------------------
+
+.. image:: https://dl.dropbox.com/s/08ndcawqhkh4w1i/Screenshot%202017-07-04%2010.14.33.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/ndnj6p7ktk13chz/Screenshot%202017-07-04%2010.15.15.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/ez1qc255sd1j318/Screenshot%202017-07-04%2010.15.50.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Graph Coloring Heuristics (Cont)
+--------------------------------
+
+.. image:: https://dl.dropbox.com/s/g4gfvek1inxj7tp/Screenshot%202017-07-04%2010.19.45.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Graph Coloring Quiz
+-------------------
+
+.. image:: https://dl.dropbox.com/s/0l7fv3c26o4s2io/Screenshot%202017-07-04%2010.30.19.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/4dwt5afx790556f/Screenshot%202017-07-04%2010.34.15.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
