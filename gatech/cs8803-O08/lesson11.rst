@@ -243,3 +243,149 @@ Graph Coloring Quiz
    :width: 450
 
 
+Graph Coloring - Example 5
+--------------------------
+
+.. image:: https://dl.dropbox.com/s/mjyv6ork2gdwkj2/Screenshot%202017-07-04%2010.35.50.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/9w92o3yfntdnxso/Screenshot%202017-07-04%2010.38.01.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/su8kflbl5uf9f7y/Screenshot%202017-07-04%2010.39.34.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Graph Coloring - Example 6
+--------------------------
+
+.. image:: https://dl.dropbox.com/s/iag2jld5rueqsq1/Screenshot%202017-07-04%2010.44.17.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/462804y1bk7pd0g/Screenshot%202017-07-04%2010.44.45.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Graph Coloring Example 6 (Cont)
+-------------------------------
+
+.. image:: https://dl.dropbox.com/s/p0q0jez7zg1myd7/Screenshot%202017-07-04%2010.47.40.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Coloring Quiz
+-------------
+
+.. image::  https://dl.dropbox.com/s/whnfowiziwzu5lo/Screenshot%202017-07-04%2010.50.55.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+When Coloring Fails
+-------------------
+
+.. image:: https://dl.dropbox.com/s/3w97v24anrjg3rg/Screenshot%202017-07-04%2010.53.00.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Choosing A Web
+--------------
+
+.. image:: https://dl.dropbox.com/s/74yxydgxgsu2n0h/Screenshot%202017-07-04%2010.54.32.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Spill Costs
+-----------
+
+.. image:: https://dl.dropbox.com/s/p3xz5iod55isd1x/Screenshot%202017-07-04%2011.04.47.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Computing Spill Costs
+---------------------
+
+.. image:: https://dl.dropbox.com/s/y8meiwdgt4vp9zi/Screenshot%202017-07-04%2011.07.08.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Spill Cost Example
+------------------
+
+.. image:: https://dl.dropbox.com/s/wjnxx04m6bx86mu/Screenshot%202017-07-04%2011.09.49.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Splitting The Web
+-----------------
+
+.. image:: https://dl.dropbox.com/s/drr2k6t0fyt4twu/Screenshot%202017-07-04%2011.11.05.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Splitting Example
+-----------------
+
+.. image:: https://dl.dropbox.com/s/xf16gg6tv9h9f4v/Screenshot%202017-07-04%2011.12.51.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/5c3ni20eagoxmxz/Screenshot%202017-07-04%2011.13.44.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/wxge96ivyla05bw/Screenshot%202017-07-04%2011.14.30.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Splitting Heuristic
+-------------------
+
+.. image:: https://dl.dropbox.com/s/2uo441ayxrlvpfl/Screenshot%202017-07-04%2011.15.59.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Cost And Benefits Of Splitting
+------------------------------
+
+.. image:: https://dl.dropbox.com/s/0u43529s45p4sa0/Screenshot%202017-07-04%2011.17.54.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Further Optimizations
+---------------------
+
+.. image:: https://dl.dropbox.com/s/loji3aaktsxixbu/Screenshot%202017-07-04%2011.20.10.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
