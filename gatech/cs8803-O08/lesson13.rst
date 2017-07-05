@@ -75,3 +75,59 @@ Assembly Language Quiz
    :align: center
    :height: 300
    :width: 450
+
+
+IR Code Quiz
+------------
+
+.. image:: https://dl.dropbox.com/s/66ncn7xqw5wdzp5/Screenshot%202017-07-05%2006.38.00.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Translations Part 1
+-------------------
+
+.. image:: https://dl.dropbox.com/s/ss51m9kscv196hp/Screenshot%202017-07-05%2006.41.36.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Translations Part 2
+-------------------
+
+.. image:: https://dl.dropbox.com/s/d8w260cex206hbw/Screenshot%202017-07-05%2006.46.51.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/n1rfggwm8g715sm/Screenshot%202017-07-05%2006.47.40.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Translations Instruction Costs
+------------------------------
+
+.. image:: https://dl.dropbox.com/s/65jyu0uxg425ga7/Screenshot%202017-07-05%2006.49.09.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+* Idioms are cheaper than the constituent parts.
+
+X86 Idioms
+----------
+
+.. image:: https://dl.dropbox.com/s/uvwl5xajx7svr12/Screenshot%202017-07-05%2006.50.56.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Swap Quiz
+---------
+
