@@ -131,3 +131,92 @@ X86 Idioms
 Swap Quiz
 ---------
 
+.. image:: https://dl.dropbox.com/s/ppplrrgenu4l1e1/Screenshot%202017-07-05%2006.54.44.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/zmoqf2vhb3u30hh/Screenshot%202017-07-05%2006.55.13.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Architecture Differences
+------------------------
+
+.. image:: https://dl.dropbox.com/s/k3oudmwz4exkq5w/Screenshot%202017-07-05%2006.56.35.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/fknrzlnh42qb7hr/Screenshot%202017-07-05%2006.57.24.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/mu16g9w6r1fezbg/Screenshot%202017-07-05%2006.58.10.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Minimizing Cost
+---------------
+
+.. image:: https://dl.dropbox.com/s/0d5jwy63vyp0x4w/Screenshot%202017-07-05%2007.00.38.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/007t8hupv7kuic9/Screenshot%202017-07-05%2007.01.23.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/88la3yvj4cq1v5g/Screenshot%202017-07-05%2007.02.40.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Tree Representation
+-------------------
+
+.. image:: https://dl.dropbox.com/s/cqjc6x81fgonn3k/Screenshot%202017-07-05%2007.04.06.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/k4w1tiylvny9t5y/Screenshot%202017-07-05%2007.05.23.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/6wz9xd9rsiiorng/Screenshot%202017-07-05%2007.05.41.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Tiles
+-----
+
+.. image:: https://dl.dropbox.com/s/y33ioqyst38zz60/Screenshot%202017-07-05%2007.07.33.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/uvy8lsi014wozgv/Screenshot%202017-07-05%2007.08.35.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Tiles Part 2
+------------
+
+
