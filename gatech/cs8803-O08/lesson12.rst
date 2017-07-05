@@ -241,3 +241,156 @@ Control Flow Graph Quiz
    :width: 450
 
 
+Optimization Scope
+------------------
+
+.. image:: https://dl.dropbox.com/s/m6phhgfnw1mbyg0/Screenshot%202017-07-04%2016.40.49.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/gnvuu8sangolxqj/Screenshot%202017-07-04%2016.41.14.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/7ygw9lp3cu976ps/Screenshot%202017-07-04%2016.41.34.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/x2lho67mr2ptq4p/Screenshot%202017-07-04%2016.42.09.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/smwacyvjd2fopv5/Screenshot%202017-07-04%2016.42.27.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+The Fairy Tale
+--------------
+
+.. image:: https://dl.dropbox.com/s/cbp4s1f4wiaeujx/Screenshot%202017-07-04%2016.43.23.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/kazq53u746kat3h/Screenshot%202017-07-04%2016.43.57.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Super Local Value Numbering A Regional Technique
+------------------------------------------------
+
+.. image:: https://dl.dropbox.com/s/795x34zd6tn8lhz/Screenshot%202017-07-04%2016.45.49.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Super Local Value Numbering
+---------------------------
+
+.. image:: https://dl.dropbox.com/s/729dhqqs6fyrqb9/Screenshot%202017-07-04%2016.48.52.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/d1sciwd6cl2vjdk/Screenshot%202017-07-04%2016.50.02.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/kzz6dvugco7567l/Screenshot%202017-07-04%2016.50.31.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/dbkhv9gaho1zhkb/Screenshot%202017-07-04%2016.51.10.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+SSA Name Space
+--------------
+
+.. image:: https://dl.dropbox.com/s/r14uh3nydypoaiw/Screenshot%202017-07-04%2016.52.12.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/ps8hfcg7ts9vqcc/Screenshot%202017-07-04%2016.52.31.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/0bbtiq2grno06qk/Screenshot%202017-07-04%2016.52.54.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/c4s0uf7pn6jsyvr/Screenshot%202017-07-04%2016.53.18.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+SVN Algorithm Part 1
+--------------------
+
+.. image:: https://dl.dropbox.com/s/j5a4cmcdxoworbf/Screenshot%202017-07-04%2016.55.14.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/3cdo4wluwcy7gr4/Screenshot%202017-07-04%2016.56.16.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/9lvduch7zrz0fld/Screenshot%202017-07-04%2016.58.31.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+SVN Algorithm Part 2
+--------------------
+
+.. image:: https://dl.dropbox.com/s/uhw5wxp18eh67ej/Screenshot%202017-07-04%2017.00.59.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/9rii5b139j4fbj9/Screenshot%202017-07-04%2017.01.54.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/nbis69upv20hf3r/Screenshot%202017-07-04%2017.02.18.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/ubjvktvu2l76ltp/Screenshot%202017-07-04%2017.02.42.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/q91zdgvfi1ifvlw/Screenshot%202017-07-04%2017.04.39.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+SVN Quiz
+--------
+
+.. image:: https://dl.dropbox.com/s/8scmng7e8ivls5l/Screenshot%202017-07-04%2017.07.32.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+
