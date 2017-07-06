@@ -219,4 +219,81 @@ Tiles
 Tiles Part 2
 ------------
 
+.. image:: https://dl.dropbox.com/s/xr7qu07n78do8bb/Screenshot%202017-07-05%2021.48.04.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/nlegbfayvoq6221/Screenshot%202017-07-05%2021.48.48.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/nz0lbd7mm1qnrdn/Screenshot%202017-07-05%2021.49.01.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/yz67f5k0ilyvouz/Screenshot%202017-07-05%2021.49.20.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Algorithms
+----------
+
+.. image:: https://dl.dropbox.com/s/1evifkwzca5f51k/Screenshot%202017-07-05%2021.52.58.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/1lj89shrxsj9egq/Screenshot%202017-07-05%2021.51.59.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Ad Hoc Algorithms
+-----------------
+
+.. image:: https://dl.dropbox.com/s/0x1bqarnrhxt86m/Screenshot%202017-07-05%2021.54.31.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://www.dropbox.com/s/l9dva192n9crhks/Screenshot%202017-07-05%2021.56.51.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Cost Algorithms
+---------------
+
+.. image:: https://dl.dropbox.com/s/t8j96j5y0uer7vk/Screenshot%202017-07-05%2021.57.25.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/69yfg4bqj9hdfrm/Screenshot%202017-07-05%2021.57.55.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/hp0nkolztowz60m/Screenshot%202017-07-05%2021.58.10.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Tiling Quiz
+-----------
+
+.. image:: https://dl.dropbox.com/s/nho0x6mvb950lky/Screenshot%202017-07-05%2021.59.01.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 
