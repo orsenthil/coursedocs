@@ -264,7 +264,7 @@ Ad Hoc Algorithms
    :height: 300
    :width: 450
 
-.. image:: https://www.dropbox.com/s/l9dva192n9crhks/Screenshot%202017-07-05%2021.56.51.png?dl=0
+.. image:: https://dl.dropbox.com/s/l9dva192n9crhks/Screenshot%202017-07-05%2021.56.51.png?dl=0
    :align: center
    :height: 300
    :width: 450
@@ -292,6 +292,107 @@ Tiling Quiz
 -----------
 
 .. image:: https://dl.dropbox.com/s/nho0x6mvb950lky/Screenshot%202017-07-05%2021.59.01.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Dynamic Programming
+-------------------
+
+.. image:: https://dl.dropbox.com/s/afqipqmbsznz3mm/Screenshot%202017-07-05%2022.02.11.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/f2qb5nau24blnr4/Screenshot%202017-07-05%2022.02.28.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Recursive Algorithm
+-------------------
+
+.. image:: https://dl.dropbox.com/s/jwmfz821g057ije/Screenshot%202017-07-05%2022.03.14.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/ubb2o5v2fjw1by4/Screenshot%202017-07-05%2022.03.31.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Code Generator Generators
+-------------------------
+
+.. image:: https://dl.dropbox.com/s/hpk9szb67dmjn1x/Screenshot%202017-07-05%2022.04.16.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/fzfvj9n9wdfdjzy/Screenshot%202017-07-05%2022.04.41.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/z3jb7zv66ycktnm/Screenshot%202017-07-05%2022.04.59.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/dr45io8wxllk2a0/Screenshot%202017-07-05%2022.05.21.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/6q02nv216670i99/Screenshot%202017-07-05%2022.05.40.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/dtoyehibvtps4xm/Screenshot%202017-07-05%2022.06.07.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+Rewrite Rules
+-------------
+
+.. image:: https://dl.dropbox.com/s/f9da8qyc9kw35xn/Screenshot%202017-07-05%2022.06.56.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/fw6e8ml961pj7v8/Screenshot%202017-07-05%2022.07.22.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/vxt4hraqqw2lbat/Screenshot%202017-07-05%2022.07.41.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Rewrite Process
+---------------
+
+.. image:: https://dl.dropbox.com/s/7x18lpknmzcec5p/Screenshot%202017-07-05%2022.08.52.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Modern Processors
+-----------------
+
+.. image:: https://dl.dropbox.com/s/m788yk3l4ftyav7/Screenshot%202017-07-05%2022.09.38.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/ldpf16w0c09r4xo/Screenshot%202017-07-05%2022.10.06.png?dl=0
    :align: center
    :height: 300
    :width: 450
