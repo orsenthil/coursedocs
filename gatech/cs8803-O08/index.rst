@@ -9,6 +9,7 @@ Compilers: Theory and Practice
    left_recursion
    lesson1
    lesson2
+   lesson3
    lesson6
    lesson7
    lesson8
