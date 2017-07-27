@@ -1,7 +1,6 @@
 P1L6: Top Down Parsing: LL Parsing
 ==================================
 
-
 LL(1) Parsing
 -------------
 
@@ -57,11 +56,11 @@ First Set Example
 
 ::
 
-  E -> 
-  T -> 
+  E ->
+  T ->
   X -> e, +
   Y -> e, *
-  int -> 
+  int ->
   * ->  *
   + ->  +
   ) ->  )
@@ -120,3 +119,9 @@ C -> c
 D -> d | :math:`\epsilon`
 E -> e | :math:`\epsilon`
 
+
+
+.. raw:: html
+
+
+    <iframe src="https://drive.google.com/file/d/0Bw223ejhCropMTd6M28tb0NOZ1k/preview" width="640" height="880"></iframe>

@@ -1,5 +1,5 @@
-Lesson 7
-========
+Lesson 7 - P2L1 - Symantic Analysis
+===================================
 
 Beyond Syntax
 -------------
@@ -360,3 +360,9 @@ Videos
    <iframe width="560" height="315" src="https://www.youtube.com/embed/queUceGJqh0" frameborder="0" allowfullscreen></iframe>
 
 
+Slides
+------
+
+.. raw:: html
+
+   <iframe src="https://drive.google.com/file/d/0Bw223ejhCropZkYxOUVETGkwM28/preview" width="640" height="880"></iframe>
