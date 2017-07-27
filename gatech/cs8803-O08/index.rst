@@ -7,6 +7,7 @@ Compilers: Theory and Practice
    chapter1
    chapter2
    left_recursion
+   lesson1
    lesson6
    lesson7
    lesson8
