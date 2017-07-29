@@ -17,4 +17,6 @@ Resources
 * https://github.com/fbb-git/bisoncpp - Parser Generator for C++
 * https://www.gnu.org/software/bison/ - Parser Generator for C
 * http://booksite.elsevier.com/9780120884780/ - Engineering ther Compiler (PDF and Slides)
+* http://booksite.elsevier.com/9780120884780/Manual/index.html - Lecture Slides for 2nd Edition of Book.
+* https://gcc.godbolt.org/ - C++ Explorer.
 
