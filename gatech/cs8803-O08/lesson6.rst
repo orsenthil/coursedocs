@@ -112,12 +112,14 @@ Follow Set Quiz
 Given the following grammar, determine the follow sets:
 
 
-S -> ABCDE
-A -> a | :math:`\epsilon`
-B -> b | :math:`\epsilon`
-C -> c
-D -> d | :math:`\epsilon`
-E -> e | :math:`\epsilon`
+.. math::
+
+    S -> ABCDE
+    A -> a | `\epsilon`
+    B -> b | `\epsilon`
+    C -> c
+    D -> d | `\epsilon`
+    E -> e | `\epsilon`
 
 
 
@@ -125,3 +127,11 @@ E -> e | :math:`\epsilon`
 
 
     <iframe src="https://drive.google.com/file/d/0Bw223ejhCropMTd6M28tb0NOZ1k/preview" width="640" height="880"></iframe>
+
+
+Resources
+---------
+
+* http://smlweb.cpsc.ucalgary.ca/start.html - Viewing statistics of a grammar.
+* http://jflap.org/ - JFLAP is a package of graphical tools which can be used as an aid in learning the basic
+  concepts of Formal Languages and Automata Theory.
