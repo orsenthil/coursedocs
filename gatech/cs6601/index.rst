@@ -23,6 +23,8 @@ Artificial Intelligence
    numpy
    logic_and_planning
    planning_under_uncertainty
+   ai_resources
+   math_for_ai
 
 
 Course Syllabus
