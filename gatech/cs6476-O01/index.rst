@@ -26,6 +26,7 @@ Resources
 * https://github.com/pdvelez/CV-lecture-quizzes-python  - CV lecture quizzes in Python.
 * https://piazza.com/class/j6l30v0ijo95hv?cid=32 - Piazza for Fall 2017 course.
 * https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html - OpenCV Python Tutorials.
+* https://learn-anything.xyz/computer-vision - MindMap
 
 
 .. _Forsyth_and_Ponce Book: https://files.t-square.gatech.edu/access/content/group/gtc-8411-4a1d-5dd0-98b3-af5d4e3f7749/Books/Forsyth_and_Ponce.pdf

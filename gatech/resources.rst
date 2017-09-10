@@ -5,6 +5,7 @@ Georgia Tech Resources
 * `E Books`_
 * `ACM Access`_
 * `Safari Books`_
+* `Safari Early Access`_
 * `Student Software`_
 * `Student Perks`_
 * `ShareLatex`_ - For writing latex
@@ -41,3 +42,4 @@ It might be useful to download the Cisco Any Connect VPN Client, be on Campus Ne
 .. _Specialization Planner: http://omscs-courses.cfapps.io/
 .. _Thank a Teacher: http://www.cetl.gatech.edu/thankateacher
 .. _ShareLatex: https://www.sharelatex.com/
+.. _Safari Early Access: http://chimera.labs.oreilly.com/
