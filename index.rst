@@ -20,6 +20,7 @@ General Principles
    gatech/index
    coursera/index
    edx/index
+   codeschool/index
    resources
 
 

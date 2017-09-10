@@ -5,6 +5,8 @@ Computer Vision
    :maxdepth: 3
 
    numpy
+   opencv
+   2A_L1_Images_as_functions
 
 
 Course Syllabus
