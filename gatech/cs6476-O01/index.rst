@@ -7,6 +7,7 @@ Computer Vision
    numpy
    opencv
    2A_L1_Images_as_functions
+   2A_L3_Linearity_and_convolution
 
 
 Course Syllabus
