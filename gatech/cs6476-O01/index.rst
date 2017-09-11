@@ -8,6 +8,9 @@ Computer Vision
    opencv
    2A_L1_Images_as_functions
    2A_L3_Linearity_and_convolution
+   2A_L4_Filters_as_templates
+   2A_L5_Edge_Detection_Gradient
+   2A_L6_Edge_Detection_2D_Operators
 
 
 Course Syllabus
