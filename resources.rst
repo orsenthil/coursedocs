@@ -30,3 +30,8 @@ Visualization, Understanding and Playing
 * Algomation: http://www.algomation.com/
 * Fast Fourier Transform explained visually: http://acko.net/files/gltalks/toolsforthought/#0
 * Free Programming Resources: https://www.thefreecountry.com/
+
+Self Learning Functional CS
+---------------------------
+
+* https://functionalcs.github.io/curriculum/ - Entire multi-year curriculum for Functional thinking in Computer Science.
