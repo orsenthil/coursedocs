@@ -30,6 +30,7 @@ Visualization, Understanding and Playing
 * Algomation: http://www.algomation.com/
 * Fast Fourier Transform explained visually: http://acko.net/files/gltalks/toolsforthought/#0
 * Free Programming Resources: https://www.thefreecountry.com/
+* My Physics Lab: https://www.myphysicslab.com
 
 Self Learning Functional CS
 ---------------------------
