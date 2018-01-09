@@ -5,6 +5,6 @@ Elixir
 ------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 0
 
    elixir/index

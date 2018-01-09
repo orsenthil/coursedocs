@@ -21,7 +21,14 @@ sum of log probabilities
     logsumexp([-2,-3]) = numpy.log(numpy.exp(-2) + numpy.exp(-3))
     logsumexp(a, b) = log(e^a + e^b).
 
+::
+
+    np.uint16
+
+    np.around
+
 References
 ----------
 
 * https://mubaris.com/2017-09-09/introduction-to-statistics-using-numpy
+* http://www.scipy-lectures.org/advanced/advanced_numpy/index.html#advanced-numpy

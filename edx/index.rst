@@ -9,3 +9,4 @@ Courses
    :maxdepth: 1
 
    goblin/index
+   cs50/index
