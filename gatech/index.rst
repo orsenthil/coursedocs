@@ -24,6 +24,7 @@ Georgia Tech Course Notes
    cs7641/index
    cs8803-O08/index
    cs6476-O01/index
+   cs6475/index
 
 
 
