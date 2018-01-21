@@ -14,12 +14,6 @@ Stanley: The Robot that Won the DARPA Grand Challenge
 The robots software system relied predominantly on state-of-the-art artificial intelligence technologies such as
 machine learning and probabilistic reasoning.
 
-.. image:: https://dl.dropbox.com/s/wxqx1hb988pmgax/Screen%20Shot%202017-11-14%20at%2010.47.30%20AM.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
 Tracking intro
 --------------
 
