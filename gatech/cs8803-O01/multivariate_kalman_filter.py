@@ -143,6 +143,7 @@ class matrix:
 
 def kalman_filter(x, P):
     for n in range(len(measurements)):
+        pass
 
     # measurement update
 
@@ -164,7 +165,18 @@ H = matrix([[1., 0.]]) # measurement function
 R = matrix([[1.]]) # measurement uncertainty
 I = matrix([[1., 0.], [0., 1.]]) # identity matrix
 
-print(kalman_filter(x, P))
+# print(kalman_filter(x, P))
 # output should be:
 # x: [[3.9996664447958645], [0.9999998335552873]]
 # P: [[2.3318904241194827, 0.9991676099921091], [0.9991676099921067, 0.49950058263974184]]
+
+if __name__ == '__main__':
+    a = matrix([[10.0], [10.0]])
+    F = matrix([[12.0, 8.0], [6.0, 2.0]])
+    b = a.transpose()
+    a.show()
+    b.show()
+    F.show()
+
+    c = F * a
+    c.show()

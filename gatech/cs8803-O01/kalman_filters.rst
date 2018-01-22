@@ -387,3 +387,7 @@ Kalman Filter Design
    :height: 300
    :width: 450
 
+
+.. raw:: html
+
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/KYEr4BXhD_E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
