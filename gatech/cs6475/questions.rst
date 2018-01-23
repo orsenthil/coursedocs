@@ -80,6 +80,81 @@ Capturing a rubik's cube solution, with changes of instance of capture.
 We merge the photos to create rich time-lapse events of the solution.
 To add some more color, the time-lapse is presented with focus on two toys near the Rubiks cube.
 
+Digital Image Formats
+---------------------
+
+* GIF, JPG, PPM, TIF, BMP
+* Raw Format.
+* OpenCV / Python
+* opencv.org, python.org
+* Matlab / Octave
+* Processing.org
+* Exercises: Read and write images.
+* Image compression information.
+* Metadata about pictures (Exchangeable Image file format - EXIF "etc").
+
+Digital Image - Processing and Filtering
+----------------------------------------
+
+* Point-process computations.
+* Add/Subtract Images.
+* alpha-blending and its applications.
+* Image Histograms.
+* I(x, y)
+
+Point-process: Pixel / Point Arithmetic
+---------------------------------------
+
+* 0-255
+* 0.34 * CD + 0.34 * AE + 0.34 * LD =
+* Transparency (Conversely, Opacity).
+* Usually represented as :math:`\alpha`
+* :math:`\alpha` varies from 0 to 1. (0 = invisible, 1 = fully visible).
+* RGB :math:`\righarrow` :math:`\alpha`RGB
+* Point process computations on Images to Add and Subtract images.
+* Showed an example of :math:`\alpha` blending commonly used in Image processing.
+* Image Histogram in Image processing.
+
+
+Image Processing, Filtering via Convolution and Correlation
+-----------------------------------------------------------
+
+* A Real life example of point arithmetic
+* Variety of Blending modes built on concept of point processes.
+* average = fblend(a, b) = (a + b) / 2
+* normal = fblend(a, b) = b
+
+Arithmetic Blend modes
+----------------------
+
+* Divide (brightens photos)
+* Addition (too many whites)
+* Subtract (too many blacks)
+* Difference (subtract with scaling)
+* Darken fblend(a, b) = min(a, b) for RGB
+* Lighten: blend(a, b) = max(a, b) for RGB
+
+Advanced Modes
+--------------
+
+* Multiply
+    * Darker fblend(a, b) = ab
+* Screen
+    * brighter fblend(a, b) = 1 - (1 - a)(1 - b)
+
+Summary
+-------
+
+* Introduced Pixel / Layer Blending
+* Explained variety of blending approaches
+* Showed why some of the videos look ODD
+
+Lesson Objectives
+-----------------
+
+* Smooth an image over a neighborhood of pixels.
+* Media filtering as a special non-linear filtering and smoothing approach.
+* How to Smooth a Signal?
 
 
 
