@@ -5,3 +5,5 @@ Computational Photography
    :maxdepth: 3
 
    resources
+   questions
+

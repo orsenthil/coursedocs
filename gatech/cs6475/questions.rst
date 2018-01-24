@@ -156,5 +156,147 @@ Lesson Objectives
 * Media filtering as a special non-linear filtering and smoothing approach.
 * How to Smooth a Signal?
 
+A mathematical representation for smoothing
+-------------------------------------------
 
+* Cross-correlation or x-correlation.
+
+Box Filter (Averaging) for Smoothing
+------------------------------------
+
+* Box / Average Filter - 21 x 21
+
+Special Case: Median Filtering
+------------------------------
+
+Median filtering is a non-linear operation often used in image processing.
+
+* Reduce noise, but
+* Preserves Edges (Sharp Lines!)
+
+Main Idea: Use median of all pixels in the kernel area, instead of mean.
+
+Average filter (11 x 11)
+Median filter (11 x 11)
+
+* Image smoothing
+* Applying a kernel to smooth an image.
+* Averaging and median filtering.
+
+Next Class
+----------
+
+Cross Correlation and Convolution.
+
+1. Cross-Correlation.
+2. Convolution
+3. Difference between Cross-Correlation and Convolution.
+4. Properties of these methods.
+
+* In signal processing, cross-correlation is a measure of similarity of two waveforms as a function of a time-lag applied to one of them.
+
+* Sliding dot product or sliding inner-product of two different matrices.
+
+Cross-Correlation Method
+------------------------
+
+    G[i, j] = :math:\sum_{u=-k}^{k}\sum_{v=-k}^k h[u, v] F[i + u, j + v]
+
+Denoted by
+
+
+    G = h :math:\bigotimes F
+
+* Filtering an image.
+* Replace each pixel with a linear combination of its neighbors.
+
+* Filter "kernel" or "mask"
+* h[u, v] is a prescription for weights in the linear combination.
+
+Example: Box Filter
+-------------------
+
+Box/ Average Filter
+
+* Size 21 x 21
+* Values: Uniform
+
+Example: Gaussian Filter
+------------------------
+
+Gaussian Filter
+
+* Size: 21 x 21
+* Values: Gaussian or Normal Distribution.
+
+Using Gaussian Filters for Smoothing
+------------------------------------
+
+
+Convolution Method
+------------------
+
+* Convolution is a mathematical operation on two functions F and h
+
+
+Linear Filters
+--------------
+
+* Original 64 x 64
+* Cross-Correlation
+* Convolution
+* Differences between Cross-correlation and convolution.
+
+
+Image Analysis and Edge Detection
+---------------------------------
+
+* Image Variance
+* Convolution and Cross Correlation.
+* Using Filters to Find Features
+* Map raw pixels to an intermediate representation.
+* Reduce amount of data, preserve useful information.
+
+
+Good features to match between images
+-------------------------------------
+
+Features
+
+* Water bottle
+* Parts of an image that encode it in a compact form.
+
+Edges
+
+What kind of discontinuities are in a scene?
+
+* Surface Normal
+* Depth
+* Surface Color
+* Illumination.
+
+Images as Functions F(x, y)
+---------------------------
+
+Edges appear as ridges in the 3d height map of an image.
+
+Edge Detection
+--------------
+
+Basic Idea
+
+* Look for a neighborhood with strong signs of change.
+
+Issues to consider.
+
+* Size of the neighborhood? K=1
+* What metrics represent a "change"?
+* Threshold
+
+Derivatives of F(x, y) to get Edges
+-----------------------------------
+
+Test Image
+
+* An Edge where there is a rapid change in the image intensity function.
 
