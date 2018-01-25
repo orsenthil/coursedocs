@@ -300,3 +300,33 @@ Test Image
 
 * An Edge where there is a rapid change in the image intensity function.
 
+Edge Detection
+--------------
+
+* Feature Detection.
+* Reliable way to extract information from images.
+* Compute Edges.
+* Derivatives using kernels and neighborhood operations.
+* Three (3) methods for computing edges using kernels
+* Image noise can complicate the computation of gradients.
+* The Canny Edge Detector.
+
+Computing Discrete Gradients
+----------------------------
+
+An "operator" (mask / kernel) that effectively computes discrete derivative values with
+cross-correlation (using finite differences).
+
+Various Kernels for Computing Gradients
+---------------------------------------
+
+Prewitt
+
+Sobel
+
+Roberts
+
+Canny Edge Detector
+-------------------
+
+
