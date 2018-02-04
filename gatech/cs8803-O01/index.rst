@@ -8,3 +8,4 @@ Artificial Intelligence for Robotics
    kalman_filters
    particle_filters
    conditional_particle_filters
+   motion_planning
