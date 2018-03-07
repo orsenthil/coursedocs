@@ -22,17 +22,13 @@ General Principles
    edx/index
    codeschool/index
    resources
+   ideas/ideas
 
 
 Contribute
 ----------
 
-Contributions are welcome. If you find this website useful, you could consider owning a part by adding new material,
-resources useful for online self-study to this site. The proverb that I'd like to remember most is this:
-
-.. image:: https://dl.dropbox.com/s/pel8n87121x4qz8/coursedocs_collaboration.jpg?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+* If you find anything missing please raise a `bug-report`_ in github.
 
 .. _OMSCS: https://omscs.gatech.edu
+.. _bug-report: https://github.com/orsenthil/coursedocs

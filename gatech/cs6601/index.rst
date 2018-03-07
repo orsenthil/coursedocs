@@ -16,6 +16,8 @@ Artificial Intelligence
    lesson_1_challenge_7
    lesson_2_challenge_1
    lesson_2_challenge_2
+   lesson_3_challenge_2
+   lesson3_challenge_3
    lesson_6_challenge_1
    lesson_6_challenge_2
    lesson_6_challenge_3
@@ -23,6 +25,7 @@ Artificial Intelligence
    numpy
    logic_and_planning
    planning_under_uncertainty
+   pattern_recognition_through_time
    ai_resources
    math_for_ai
 

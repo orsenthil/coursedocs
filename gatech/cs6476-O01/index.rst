@@ -11,6 +11,9 @@ Computer Vision
    2A_L4_Filters_as_templates
    2A_L5_Edge_Detection_Gradient
    2A_L6_Edge_Detection_2D_Operators
+   3D_L5_Fundamental_Matrix
+   images
+   terms
 
 
 Course Syllabus

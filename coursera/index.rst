@@ -12,3 +12,4 @@ A coursera account is required to access those.
    :maxdepth: 1
 
    algorithms-part1/index
+   image-video-processing/notes

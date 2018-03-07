@@ -14,7 +14,6 @@ Machine Learning
    bayesian-inference
    bayesian-learning
    beautiful-probability
-   boosting-decision-tree
    comp-learning-theory
    decision-trees
    ensemble-b-b

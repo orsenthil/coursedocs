@@ -25,6 +25,9 @@ Tracking intro
    :height: 300
    :width: 450
 
+* https://en.wikipedia.org/wiki/Unimodality
+* https://en.wikipedia.org/wiki/Multimodal_distribution
+
 Gaussian Intro
 --------------
 
@@ -278,8 +281,8 @@ Kalman Filter Code
     measurements = [5.0, 6.0, 7.0, 9.0, 10.0]
     motion = [1.0, 1.0, 2.0, 1.0, 1.0]
 
-    measurement_sig = 4.0
-    motion_sig = 2.0
+    measurement_sig = 4.0  # measurement uncertainty
+    motion_sig = 2.0       # motion uncertainty
 
     mu = 0.0
     sig = 10000.0
