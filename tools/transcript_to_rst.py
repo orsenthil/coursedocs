@@ -56,8 +56,8 @@ def translate_srt_to_rst(_directory_with_transcripts, _output_file):
                 fhandle_output.write(contents)
                 fhandle_output.write("\r\n")
 
+
 if __name__ == '__main__':
-    #_directory_with_transcripts = sys.argv[1]
-    _directory_with_transcripts = '/Users/senthil/gatech/air4/transcripts'
+    _directory_with_transcripts = sys.argv[1]
     _output_file = '/Users/senthil/gatech/air4/output.rst'
     translate_srt_to_rst(_directory_with_transcripts, _output_file)

@@ -26,3 +26,10 @@ Gaussian Pyramids
 In a Gaussian pyramid, subsequent images are weighted down using a Gaussian average (Gaussian blur) and scaled down. Each pixel containing a local average that corresponds to a pixel neighborhood on a lower level of the pyramid. This technique is used especially in texture synthesis.
 
 
+Sobel Operator
+--------------
+
+.. math::
+
+   \min _ { s ^ { x } ,s ^ { y } ,\alpha } \sum _ { i = 1} ^ { k } E \left( \alpha _ { i } \mathbf { s } _ { \mathbf { i } } ^ { \mathbf { X } } + \left( 1- \alpha _ { i } \right) \mathbf { s } _ { \dot { i } } ^ { y } \right)
+

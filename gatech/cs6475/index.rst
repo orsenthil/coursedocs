@@ -5,6 +5,7 @@ Computational Photography
    :maxdepth: 3
 
    introduction
+   basics
    digital_image
    cameras
    fourier_transform
