@@ -24,6 +24,15 @@ General Principles
    resources
    ideas/ideas
 
+Helpful Repositories and Tools
+------------------------------
+
+**Numpy Helpers**
+
+Number of courses require familiarity with Numpy. I gathered a bunch of useful, small numpy programs for reference.
+
+* https://github.com/orsenthil/numpy-helpers
+
 
 Contribute
 ----------

@@ -2,6 +2,11 @@
 Artificial Intelligence for Robotics
 ====================================
 
+Course Book
+-----------
+
+* http://www.probabilistic-robotics.org/
+
 .. toctree::
    :maxdepth: 3
 
