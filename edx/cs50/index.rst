@@ -18,6 +18,16 @@ Online IDE
 * https://cs50.io/
 * https://cs50.io/orsenthil1
 
+CS50 Reference
+--------------
+* https://reference.cs50.net/
+
+Style Guide
+-----------
+
+* https://manual.cs50.net/style/
+
+
 Problem Sets
 ------------
 
