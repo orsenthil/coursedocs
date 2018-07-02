@@ -11,15 +11,19 @@ Topics
     :maxdepth: 1
 
     resources
-    pset1_
-    pset2_
-    pset3_
-    pset4_
-    pset5_
-    pset6_
-    pset7_
-    pset8_
-    project_
+
+Problem Sets
+------------
+
+* pset1_
+* pset2_
+* pset3_
+* pset4_
+* pset5_
+* pset6_
+* pset7_
+* pset8_
+* project_
 
 .. _pset1: https://docs.cs50.net/2018/x/psets/1/pset1.html
 .. _pset2: https://docs.cs50.net/2018/x/psets/2/pset2.html
