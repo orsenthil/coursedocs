@@ -1,6 +1,11 @@
 Introduction to Operating Systems
 =================================
 
+
+.. toctree::
+
+   c-programming
+
 Resources Shared by Students
 ----------------------------
 

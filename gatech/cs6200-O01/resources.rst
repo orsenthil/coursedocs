@@ -56,5 +56,40 @@ http://www.binarytides.com/socket-programming-c-linux-tutorial/
 
 
 
+CS Education
+------------
 
+* http://cs-education.github.io/sys/#
+
+* Essential C (http://cslibrary.stanford.edu/101/)
+
+* Pointers and Memory (http://cslibrary.stanford.edu/102/)
+
+* Linked list Basics (http://cslibrary.stanford.edu/103/)
+
+* Point Fun With Binky Video (http://cslibrary.stanford.edu/104/)
+
+* Linked List Problems (http://cslibrary.stanford.edu/105/)
+
+
+
+A pointer type in C is just the pointee type followed by a asterisk (*)...
+
+::
+
+   int* - type: pointer to int
+   float* - type: pointer to float
+   struct fraction* - type: pointer to struct fraction
+   struct fraction** - type: pointer to struct fraction*
+
+
+.. image::  https://dl.dropbox.com/s/i8j55mnop7p68cz/Screenshot%202018-08-14%2023.22.27.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+Why are pointer bugs so common?
+
+Try to remember to assign your pointers to refer to pointees. Don't be surprised when you forget.
 
