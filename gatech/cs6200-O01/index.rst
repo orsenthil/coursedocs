@@ -7,6 +7,7 @@ Introduction to Operating Systems
    c-programming
    resources
    P1L1
+   P1L2
 
 Resources Shared by Students
 ----------------------------
