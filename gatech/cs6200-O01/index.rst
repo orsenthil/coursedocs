@@ -5,6 +5,8 @@ Introduction to Operating Systems
 .. toctree::
 
    c-programming
+   resources
+   P1L1
 
 Resources Shared by Students
 ----------------------------

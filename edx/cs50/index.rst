@@ -50,3 +50,12 @@ Problem Sets
 .. _pset7: https://docs.cs50.net/2018/x/psets/7/pset7.html
 .. _pset8: https://docs.cs50.net/2018/x/psets/8/pset8.html
 .. _project: https://docs.cs50.net/2018/x/project/project.html
+
+
+
+Concepts
+--------
+
+* fread
+* fwrite
+* strtok
