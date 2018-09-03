@@ -18,7 +18,6 @@ Resources Shared by Students
 * https://docs.google.com/document/d/1JLQ5lqKmDpCYoiH-jk8DVqbZbIKokqvHZxfwjaerLk4/edit
 * https://docs.google.com/document/d/1uWDhrC2OBadChyyfXaeG9yHK2IX2PIgDNz1CovktyIY/edit
 
-
 Quizes
 ------
 
