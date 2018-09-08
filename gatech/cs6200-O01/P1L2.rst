@@ -4,23 +4,20 @@ P1L2
 
 1 - Lesson Preview
 ==================
-In this introductory lecture,
-we will provide a very high-level view of operating systems.
-We will explain what is an operating system and
-what is the role that it plays in computer systems.
-Then we'll look at some of the key components of operating systems,
-design principles, and organizational structures.
-The following lectures in this class will provide you with
-a much more in-depth understanding of what any of the terms and
-mechanisms that come up during this lesson actually are.
-In simplest terms, an operating system is a piece of software that abstracts and
-arbitrates the underlying hardware system.
-And in this context, abstract means to,
-to simplify what the hardware actually looks like.
-And arbitrate, it means to manage, to oversee, to control the hardware use.
-We will see throughout this course that operating system support a number of
-abstractions and arbitration mechanisms for
-the various types of hardware components in computer systems.
+
+In this introductory lecture, we will provide a very high-level view of
+operating systems.  We will explain what is an operating system and what is the
+role that it plays in computer systems.  Then we'll look at some of the key
+components of operating systems, design principles, and organizational
+structures.  The following lectures in this class will provide you with a much
+more in-depth understanding of what any of the terms and mechanisms that come
+up during this lesson actually are.  In simplest terms, an operating system is
+a piece of software that abstracts and arbitrates the underlying hardware
+system.  And in this context, abstract means to, to simplify what the hardware
+actually looks like.  And arbitrate, it means to manage, to oversee, to control
+the hardware use.  We will see throughout this course that operating system
+support a number of abstractions and arbitration mechanisms for the various
+types of hardware components in computer systems.
 
 2 - Visual Metaphor
 ===================
