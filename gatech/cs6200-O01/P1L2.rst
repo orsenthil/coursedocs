@@ -5,6 +5,11 @@ P1L2
 1 - Lesson Preview
 ==================
 
+.. image:: https://dl.dropbox.com/s/kg2oo0dkj8ssgd5/Screenshot%202018-09-07%2023.38.21.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 In this introductory lecture, we will provide a very high-level view of
 operating systems.  We will explain what is an operating system and what is the
 role that it plays in computer systems.  Then we'll look at some of the key
@@ -21,6 +26,17 @@ types of hardware components in computer systems.
 
 2 - Visual Metaphor
 ===================
+
+.. image::  https://dl.dropbox.com/s/vliy3esgthqs0hu/Screenshot%202018-09-07%2023.43.40.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image::  https://dl.dropbox.com/s/fqw3cngobydviw6/Screenshot%202018-09-07%2023.45.27.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 While this entire course will cover many elements of an operating system, it
 would be nice to have a simple illustration of what an operating system is like.
 So, to give a visual metaphor using our toy theme,
@@ -73,6 +89,18 @@ the operating system takes care of managing those difficult tasks for them.
 
 3 - What is an Operating System?
 ================================
+
+.. image::  https://dl.dropbox.com/s/is1j9xsaf33suak/Screenshot%202018-09-07%2023.48.37.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/1dbzbhyai0vqhd4/Screenshot%202018-09-08%2000.19.26.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
 So, what is an operating system and
 what is the operating system's role in computing systems?
 Let's start taking a look at what a computing system looks like and
@@ -150,6 +178,12 @@ that is the actual phone, making phone calls and receiving phone calls.
 
 4 - Operating System Definition
 ===============================
+
+.. image:: https://dl.dropbox.com/s/pozhovmzzkjh93g/Screenshot%202018-09-08%2000.24.07.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 In summary, an operating system is a layer of
 systems software that resides between applications and hardware.
 It corresponds to the software that has privileges to
@@ -164,6 +198,13 @@ protected from one another.
 
 5 - Operating System Components Quiz
 ====================================
+
+.. image:: https://dl.dropbox.com/s/0koaa87yqlnberx/Screenshot%202018-09-08%2000.27.43.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
 Now that we have been given a definition, let's take a quiz to
 see what types of components do we expect an operating system to have.
 The question is,
@@ -174,6 +215,12 @@ You should check all that apply.
 
 6 - Operating System Components Quiz Solution
 =============================================
+
+.. image:: https://dl.dropbox.com/s/h5tigh54xxk29rm/Screenshot%202018-09-08%2000.28.53.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Starting from the top, a file editor is likely not a part of
 an operating system because the users interact with it directly, and
 it's not involved directly in managing hardware.
@@ -198,6 +245,12 @@ among all of the applications that share that platform.
 
 7 - Abstraction or Arbitration Quiz
 ===================================
+
+.. image:: https://dl.dropbox.com/s/i9tnf0i8gprn8wl/Screenshot%202018-09-08%2000.33.12.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 In the previous morsel, it was stated that an operating system abstracts and
 arbitrates the use of the computer system.
 For the following options, indicate if they're examples of an abstraction,
@@ -210,6 +263,7 @@ Or, providing interchangeable access of hard disk or SSD.
 
 8 - Abstraction or Arbitration Quiz Solution
 ============================================
+
 For the first option,
 distributing memory between processes, that's an arbitration.
 This is something an operating system does as a result of its effort to
@@ -232,6 +286,12 @@ hide that from the applications.
 
 9 - Operating System Examples
 =============================
+
+.. image:: https://dl.dropbox.com/s/tjrrzl6c66re3oj/Screenshot%202018-09-08%2000.32.26.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Now that we understand what an operating system is, we can ask ourselves,
 what are some examples of actual operating systems?
 The examples of real systems out there differ based on the environment that
@@ -275,6 +335,14 @@ more in-depth examples will be given based on the Linux operating system.
 
 10 - OS Elements
 ================
+
+.. image:: https://dl.dropbox.com/s/8aec03a09ujv50d/Screenshot%202018-09-08%2000.40.06.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+
 To achieve its goals,
 an operating system supports a number of higher-level abstractions, and
 then a number of key mechanisms that operate on top of these instructions.
@@ -301,6 +369,12 @@ instance, based on some algorithm like least-recently used.
 
 11 - OS Elements Example
 ========================
+
+.. image:: https://dl.dropbox.com/s/58e3dp4wq41cfcc/Screenshot%202018-09-08%2000.42.02.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Let's look at an example.
 And, for instance, we said one of the responsibilities of
 the operating system is to manage resources like memory.
@@ -338,6 +412,12 @@ we will continue accessing them, and that's why we maintain them in memory.
 
 12 - OS Design Principles
 =========================
+
+.. image:: https://dl.dropbox.com/s/3uuf9cqmrckv1db/Screenshot%202018-09-08%2000.45.06.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Let's look at some good guiding policies when thinking about how to
 design an operating system.
 The first one we call separation between mechanisms and policy.
@@ -373,6 +453,22 @@ the underlying mechanisms and abstractions that the operating system supports.
 
 13 - OS Protection Boundary
 ===========================
+
+.. image:: https://dl.dropbox.com/s/by0hw1lbsvz2sub/Screenshot%202018-09-08%2000.50.25.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/6z279cb7hjzozgn/Screenshot%202018-09-08%2000.52.30.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/58jg3kf0yyq7zjz/Screenshot%202018-09-08%2000.54.09.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 To achieve its role of controlling and managing hardware resources on
 behalf of applications, the operating system must have special privileges,
 as the definition pointed out, to have direct access to the hardware.
@@ -414,6 +510,17 @@ And I will talk about these in a later lesson.
 
 14 - System Call Flowchart
 ==========================
+
+.. image:: https://dl.dropbox.com/s/9rcv9m5g2znb72w/Screenshot%202018-09-08%2001.05.39.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/kidugay5kj44a78/Screenshot%202018-09-08%2001.06.07.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Let's talk a little bit more about system calls.
 Using this diagram I'm going to trace through where control and
 data are exchanged during a system call.
@@ -459,6 +566,22 @@ calling an operating system service and obtaining the results.
 
 15 - Crossing the OS Boundary
 =============================
+
+.. image:: https://dl.dropbox.com/s/vqdhiak4penio2i/Screenshot%202018-09-08%2001.16.32.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/g8cxcr41hvsy2t7/Screenshot%202018-09-08%2001.17.44.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/yz9u5vc6kjoep5b/Screenshot%202018-09-08%2001.19.06.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 In summary, user/kernel transitions are a necessary step
 during application execution.
 Applications may need to perform access to certain types of hardware.
@@ -507,6 +630,22 @@ In summary, these user/kernel transitions, they're not cheap.
 
 16 - OS Services
 ================
+
+.. image:: https://dl.dropbox.com/s/xp3ay4rwnqp54s9/Screenshot%202018-09-08%2001.21.41.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/z5cqb8l6ke1aqwc/Screenshot%202018-09-08%2001.22.27.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/57ssch2o2yajgrn/Screenshot%202018-09-08%2001.22.51.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 An operating system provides applications with access to
 the underlying hardware.
 It does so by exporting a number of services.
@@ -541,6 +680,12 @@ waiting for object, creating files, etc.
 
 17 - System Calls Quiz
 ======================
+
+.. image:: https://dl.dropbox.com/s/6iw713xx3lna1tv/Screenshot%202018-09-08%2001.24.36.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Because we have been discussing system calls, I would like for
 you to take a quiz.
 You will need to fill in the following statement.
@@ -565,6 +710,17 @@ writing system parameters is done via the system control system call, SYSCTL.
 
 19 - Monolithic OS
 ==================
+
+.. image:: https://dl.dropbox.com/s/913wou5rooijp5t/Screenshot%202018-09-08%2001.25.47.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/ldz9m1lr8trueuh/Screenshot%202018-09-08%2001.26.16.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 We saw so far some rough indications how an operating system is laid out.
 But let's now more explicitly look at different types of
 operating system organizations, and
@@ -594,6 +750,12 @@ can always impact the performance that the applications are able to observe.
 
 20 - Modular OS
 ===============
+
+.. image:: https://dl.dropbox.com/s/wno61jli2h1silx/Screenshot%202018-09-08%2001.27.45.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 A more common approach today is the modular approach,
 as with the Linux operating system.
 This kind of operating system has a number of basic services and
@@ -630,6 +792,12 @@ the monolithic approach, and it's the one that's more commonly used today.
 
 21 - Microkernel
 ================
+
+.. image:: https://dl.dropbox.com/s/66cexs8yxw6css4/Screenshot%202018-09-08%2001.29.03.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Another example of OS design is what we call a microkernel.
 Microkernels only require the most basic primitives at
 the operating system level.
@@ -665,6 +833,22 @@ And we said already that these can get costly.
 
 22 - Linux and Mac OS Architectures
 ===================================
+
+.. image:: https://dl.dropbox.com/s/h91rs4wmz9ev2ql/Screenshot%202018-09-08%2001.30.14.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/e6fv16vp9bx1aqb/Screenshot%202018-09-08%2001.30.41.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/fdanym2cus5b48t/Screenshot%202018-09-08%2001.31.02.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Let's look at some popular operating systems,
 starting with the Linux architecture.
 This is what the Linux environment looks like.
@@ -692,6 +876,12 @@ kernel modules that can be dynamically loaded into the kernel.
 
 23 - Lesson Summary
 ===================
+
+.. image:: https://dl.dropbox.com/s/3l9zopegg78fkw2/Screenshot%202018-09-08%2001.32.22.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 In this lesson, we answered the big question, what is an operating system?
 And we saw that it's important because it helps abstract and
 arbitrate the use of the underlying hardware system.
