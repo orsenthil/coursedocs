@@ -8,6 +8,7 @@ Introduction to Operating Systems
    resources
    P1L1
    P1L2
+   P2L1
 
 Resources Shared by Students
 ----------------------------
