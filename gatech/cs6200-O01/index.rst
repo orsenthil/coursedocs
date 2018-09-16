@@ -9,6 +9,20 @@ Introduction to Operating Systems
    P1L1
    P1L2
    P2L1
+   P2L2
+   P2L3
+   P2L4
+   P2L5
+   P3L1
+   P3L2
+   P3L3
+   P3L4
+   P3L5
+   P4L1
+   P4L2
+   P4L3
+   P4L4
+
 
 Resources Shared by Students
 ----------------------------
