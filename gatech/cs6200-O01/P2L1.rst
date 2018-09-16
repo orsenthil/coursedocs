@@ -5,6 +5,12 @@ P2L1 - Process and Process Management
 
 1 - Lesson Preview
 ==================
+
+.. image:: https://dl.dropbox.com/s/nxmgzcy00mg854l/Screenshot%202018-09-16%2010.37.33.png
+   :align: center
+   :height: 300
+   :width: 450
+
 One of the key abstractions that operating systems support is that of a process.
 In this lecture, I will explain what is a process,
 how an operating system represents a process, and
@@ -15,8 +21,21 @@ In the simplest terms, a process is an instance of an executing program.
 Sometimes it makes sense to use the terms task or
 job interchangeably with a process.
 
+
+
 2 - Visual Metaphor
 ===================
+
+.. image:: https://dl.dropbox.com/s/ez72lgydz33r0mh/Screenshot%202018-09-16%2011.13.17.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/06mtd7h7173omoi/Screenshot%202018-09-16%2011.16.02.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 We will use again a visual metaphor to describe what a process is.
 Continuing with a toy shop as an example,
 you can think of a process as an order of toys.
@@ -52,6 +71,17 @@ these more designated hardware components.
 
 3 - What is a Process?
 ======================
+
+.. image:: https://dl.dropbox.com/s/cap7jbvfihjvx1d/Screenshot%202018-09-16%2011.21.03.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/balny74j1c0glf4/Screenshot%202018-09-16%2011.22.51.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Let's talk now, more specifically, about processes.
 And, we'll start first by understanding, what is a process?
 To do this, recall that one of the roles of
@@ -84,6 +114,12 @@ in case there's just one CPU in the system.
 
 4 - What Does a Process Look Like?
 ==================================
+
+.. image:: https://dl.dropbox.com/s/flhp7nj9buti31p/Screenshot%202018-09-16%2011.31.12.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 So what does a process look like?
 A process encapsulates all of this data for running application.
 This includes the code, the data,
@@ -134,6 +170,12 @@ So the stack is a very useful data structure.
 
 5 - Process Address Space
 =========================
+
+.. image:: https://dl.dropbox.com/s/ia2tetyv8sj0lpg/Screenshot%202018-09-16%2011.38.39.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 As a whole, we refer to this process representation as an address space.
 We said earlier that the potential range of addresses from
 v0 to vmax represents the maximum size of the process address space.
@@ -171,6 +213,12 @@ to x will, in fact, access the correct physical location where x is stored.
 
 6 - Address Space and Memory Management
 =======================================
+
+.. image:: https://dl.dropbox.com/s/fe3yw3rbksfrho1/Screenshot%202018-09-16%2011.55.08.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 We said already not all processes require the entire address space from
 V0 to VMax.
 There may be portions of this address space that are not allocated.
@@ -207,6 +255,12 @@ sure that a process is actually allowed to perform a memory access.
 
 7 - Virtual Addresses Quiz
 ==========================
+
+.. image:: https://dl.dropbox.com/s/n2afnjse2dww08e/Screenshot%202018-09-16%2011.56.47.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 To review this, let's take a quiz.
 If two processes, P1 and P2, are running at the same time,
 what are the ranges of their virtual address space that they will have?
@@ -234,6 +288,12 @@ that's what's required.
 
 9 - Process Execution State
 ===========================
+
+.. image:: https://dl.dropbox.com/s/73g25rntp2629uh/Screenshot%202018-09-16%2012.12.56.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 For an operating system to manage processes,
 it has to have some kind of idea of what they are doing.
 If the operating system stops a process, it must know what it was doing when it
@@ -273,6 +333,12 @@ the operating system maintains what we call a process control block, or a PCB.
 
 10 - Process Control Block
 ==========================
+
+.. image:: https://dl.dropbox.com/s/rjjnqlgo6uu1v3s/Screenshot%202018-09-16%2012.20.39.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Let's see now what is a Process Control Block.
 A Process Control Block is a data structure that the operating system
 maintains for every one of the processes that it manages.
@@ -315,6 +381,12 @@ particular process is no longer running on the CPU.
 
 11 - How is a PCB Used?
 =======================
+
+.. image:: https://dl.dropbox.com/s/wu0ytuwdcsmksbt/Screenshot%202018-09-16%2012.23.31.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Let's see what we mean by this.
 Let's assume the operating system manages two processes, P1 and P2.
 It has already created them and their Process Control Blocks, and
@@ -350,6 +422,12 @@ the operating system performs what we call context switch.
 
 12 - Context Switch
 ===================
+
+.. image:: https://dl.dropbox.com/s/l1yzryq8dymlal5/Screenshot%202018-09-16%2012.30.16.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Recall our illustration that shows how the operating system swaps between P1 and
 P2 for them to share the CPU.
 In this illustration, the process control blocks for P1 and P2 reside in memory.
@@ -395,6 +473,12 @@ which content switching is done.
 
 13 - Hot Cache Quiz
 ===================
+
+.. image:: https://dl.dropbox.com/s/9ryhko7vsd4on1e/Screenshot%202018-09-16%2012.31.27.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Here's a quick quiz about the processor cache.
 For the following sentence, check all options that correctly complete it.
 The sentence start says, when a cache is hot, and here are the choices.
@@ -436,6 +520,22 @@ we have to context switch and give the CPU to P2.
 
 15 - Process Life Cycle: States
 ===============================
+
+.. image:: https://dl.dropbox.com/s/v64ya8j3r5mxxer/Screenshot%202018-09-16%2012.39.12.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/x99swuld6fdzhha/Screenshot%202018-09-16%2012.41.01.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/ndo3gltquw6o0nn/Screenshot%202018-09-16%2012.41.22.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 During the context switch discussion, we said that P1 and P2 were going back and
 forth between running and idling.
 So they were in two states.
@@ -478,6 +578,12 @@ error, and at that point, the process is terminated.
 
 16 - Process State Quiz
 =======================
+
+.. image:: https://dl.dropbox.com/s/5xot45izip9ivxg/Screenshot%202018-09-16%2012.51.48.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Let's take a quiz now.
 Using the process life cycle diagram, let's answer the following question.
 The CPU is able to execute a process when the process is in
@@ -505,6 +611,12 @@ executing since it had to wait on an I/O or some kind of external event.
 
 18 - Process Life Cycle: Creation
 =================================
+
+.. image:: https://dl.dropbox.com/s/cd3bos29oqbrlra/Screenshot%202018-09-16%2012.56.23.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 You may be asking yourself, how are processes created?
 What came first?
 In operating systems, a process can create child processes.
@@ -549,16 +661,12 @@ the image that was created in the fork, with the image of this new program.
 
 19 - Parent Process Quiz
 ========================
-Since we have been talking about process creation,
-let's take a quiz about some special parent processes.
-The first question is, on UNIX-based operating systems,
-which process is often regarded as the parent of all processes?
-And the second question, which is not required but it's extra credit,
-on the Android OS, which process is regarded as the parent of all App processes?
-Feel free to use the Internet to find the answer for these questions
 
-19 - Parent Process Quiz - lang_en
-=================================
+.. image:: https://dl.dropbox.com/s/nk38d3ag11bi6az/Screenshot%202018-09-16%2012.57.14.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Since we have been talking about process creation,
 let's take a quiz about some special parent processes.
 The first question is, on UNIX-based operating systems,
@@ -580,6 +688,12 @@ app needs to be created, so the Zygote process is the parent of all of the apps.
 
 21 - Role of the CPU Scheduler
 ==============================
+
+.. image:: https://dl.dropbox.com/s/apo8coaj8cabpft/Screenshot%202018-09-16%2013.02.36.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Let's talk about process scheduling next.
 For the CPU to start executing a process, the process must be ready first.
 The problem is,
@@ -621,6 +735,12 @@ like how long that they ran in the past, other information may be also useful.
 
 22 - Length of Process
 ======================
+
+.. image:: https://dl.dropbox.com/s/a1ay036ax2er1yf/Screenshot%202018-09-16%2013.06.04.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Another issue to consider is how often do we run the scheduler?
 The more frequently we run it the more CPU time is wasted on
 running the scheduler versus running application processes.
@@ -660,8 +780,20 @@ the scheduler is choosing what's the next process it should run.
 I will discuss these design issues in a later lesson.
 But for now you need to be aware that some decisions need to be made.
 
-23 - What about
-===============
+23 - What about I/O
+===================
+
+.. image:: https://dl.dropbox.com/s/ygtzbgvzmpx44kf/Screenshot%202018-09-16%2013.09.11.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/9qo5aa6h9q1rj9c/Screenshot%202018-09-16%2013.09.54.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
 Before we move forward,
 we need to consider how I/O operations affect scheduling.
 So far, we know the operating system manages how processes access resources on
@@ -694,6 +826,12 @@ once the interrupt occurs, it will also be placed on the ready queue.
 
 24 - Scheduler Responsibility Quiz
 ==================================
+
+.. image:: https://dl.dropbox.com/s/kksu10r40k7v9iu/Screenshot%202018-09-16%2013.18.10.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 To make sure you understand the responsibilities of a CPU scheduler,
 let's take a quiz.
 The question is,
@@ -727,6 +865,23 @@ So this choice should be marked as well.
 
 26 - Inter Process Communication
 ================================
+
+.. image:: https://dl.dropbox.com/s/0fjnn92eltaxct0/Screenshot%202018-09-16%2013.22.04.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
+.. image:: https://dl.dropbox.com/s/rleykb5qq9dzinz/Screenshot%202018-09-16%2013.23.48.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/y90duxxy18efb13/Screenshot%202018-09-16%2013.25.14.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Another natural question can be, can processes interact?
 And the simple answer to this is yes.
 An operating system must provide mechanisms to allow processes to
@@ -797,6 +952,12 @@ shared memory region in a correct way.
 
 27 - Shared Memory Quiz
 =======================
+
+.. image:: https://dl.dropbox.com/s/cfaov40bdwy6vww/Screenshot%202018-09-16%2013.25.58.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Let's provide a little bit of more information through this shared memory quiz.
 Let's look at this statement.
 Shared memory-based communication performs better than
@@ -819,6 +980,12 @@ That's why the real answer is, it depends.
 
 29 - Lesson Summary
 ===================
+
+.. image:: https://dl.dropbox.com/s/fr5init858ydbad/Screenshot%202018-09-16%2013.27.29.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 In this lesson, we'll learned how a process is represented by operating systems.
 We learned how process is laid out in memory,
 how operating systems use the process control block structure to

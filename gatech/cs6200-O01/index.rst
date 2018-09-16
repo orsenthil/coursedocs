@@ -44,3 +44,15 @@ External Resources
 ------------------
 
 * https://www.tutorialspoint.com/operating_system/index.htm
+
+
+Gatech Piazza
+-------------
+
+* https://piazza.com/class/jl1t3x0xu9m709?cid=286
+
+
+Canvas
+------
+
+* http://canvas.gatech.edu/

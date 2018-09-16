@@ -296,3 +296,12 @@ Example
 
 
 * You can now pass data back and forth on stream sockets! Whee! You're a Unix Network Programmer!
+
+----
+
+Syntax: typedef data_type new_name;
+
+typedef: keyword
+data_type: existing type or user defined type created using structure/union.
+new_name: convenience name.
+
