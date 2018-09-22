@@ -16,3 +16,7 @@ C Programming Coding Conventions
 
 Example Topic
 -------------
+
+* strtok
+*
+
