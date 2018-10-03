@@ -6,7 +6,7 @@ sudo: false
 cache: pip
 
 install: pip install -r requirements.txt
-script: sphinx-build -nWT -b dummy _build/html
+script: sphinx-build -nWT -b dummy . _build/html
 
 after_failure:
   - chmod +x ./restore.sh
