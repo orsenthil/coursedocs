@@ -117,3 +117,5 @@ Why are pointer bugs so common?
 
 Try to remember to assign your pointers to refer to pointees. Don't be surprised when you forget.
 
+
+* https://www.cc.gatech.edu/projects/disl/courses/cs8803/summaries/week6/8290_1.txt
