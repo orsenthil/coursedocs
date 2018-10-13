@@ -1986,6 +1986,12 @@ the other implementations.
 
 23 - Summary of Performance Results
 ===================================
+
+.. image:: https://dl.dropbox.com/s/o6r95mkucg1ncdt/Screenshot%202018-10-12%2018.14.28.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 To summarize, the performance results
 for Flash show the following.
 When the data is in cache, the basic
@@ -2059,6 +2065,12 @@ Or, Flash can cache more files.
 
 25 - Performance Observation Quiz Solution
 ==========================================
+
+.. image:: https://dl.dropbox.com/s/v38r310igy3eads/Screenshot%202018-10-12%2018.17.12.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 The first answer is correct, yes.
 Flash has the helper processes, so
 it can handle I operations
@@ -2106,6 +2118,37 @@ the SPED performance.
 
 26 - Advice on Designing Experiments
 ====================================
+
+.. image:: https://dl.dropbox.com/s/u8z3ax2y33r5xip/Screenshot%202018-10-12%2018.23.36.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/bpmjmrspebaw9gw/Screenshot%202018-10-12%2018.25.35.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/7g4azp89ityfzch/Screenshot%202018-10-12%2018.26.37.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/no0m4t2qu8w7vwx/Screenshot%202018-10-12%2018.28.57.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/qhnbouiwjgzjzs7/Screenshot%202018-10-12%2018.29.50.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/gm0jtq9jvmp8dap/Screenshot%202018-10-12%2018.31.52.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Before we conclude this lesson I'd like
 to spend a little more time to talk
 about designing experiments.
@@ -2373,6 +2416,12 @@ the workload increases, for instance.
 
 27 - Advice on Running Experiments
 ==================================
+
+.. image:: https://dl.dropbox.com/s/fw0n6zag6q1cenj/Screenshot%202018-10-12%2018.33.16.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Okay, so at this point we have
 designed the experiments and now what?
 And now it actually becomes easy.
@@ -2413,6 +2462,17 @@ your claims are concerned.
 
 28 - Experimental Design Quiz
 =============================
+
+.. image:: https://dl.dropbox.com/s/rauqcg97cyytzbc/Screenshot%202018-10-12%2018.35.35.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/8ts1ru49b06bpux/Screenshot%202018-10-12%2018.40.35.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Let's now take a quiz in which we will
 look at a hypothetical experiment,
 and we'll try to determine if the
@@ -2568,6 +2628,12 @@ experiment will actually be useful.
 
 30 - Lesson Summary
 ===================
+
+.. image:: https://dl.dropbox.com/s/sl6rybdv9rkjzgu/Screenshot%202018-10-12%2018.41.42.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 In this lesson we introduce
 the Event-driven model for
 achieving concurrency in applications.
