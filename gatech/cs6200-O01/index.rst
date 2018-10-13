@@ -22,7 +22,9 @@ Introduction to Operating Systems
    P4L2
    P4L3
    P4L4
+   threads_birrell
    beyond_multiprocessing
+   lightweight_threads
 
 
 Resources Shared by Students
@@ -114,3 +116,12 @@ Video Times for the Udacity Lectures
     P4L3: 01:13:43
 
     P4L4: 00:58:33
+
+
+Practice Tests
+==============
+
+::
+
+    cs6200
+    1234

@@ -4,6 +4,12 @@ P2L5
 
 1 - Lesson Preview
 ==================
+
+.. image:: https://dl.dropbox.com/s/jlheddmy26ubaz8/Screenshot%202018-10-12%2007.08.01.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 In this lecture, we will contrast several approaches for
 structuring applications that require concurrency.
 This will include and comparison between multi-process and multi-threaded
@@ -21,6 +27,12 @@ structure good experiments.
 
 2 - Which Threading Model is Better?
 ====================================
+
+.. image:: https://dl.dropbox.com/s/y5utjufo03qnn08/Screenshot%202018-10-12%2007.10.43.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 During the threads and concurrency lecture, recall that we had a quiz in
 which we were comparing the boss-worker model with the pipeline model.
 And we did that specifically in one example for six worker threads in
@@ -88,6 +100,12 @@ Who cares about that?
 
 3 - Are Threads Useful?
 =======================
+
+.. image:: https://dl.dropbox.com/s/1khwgc7xzkuy98z/Screenshot%202018-10-12%2007.15.02.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 At the start of the threads and concurrency lecture, we asked ourselves whether
 threads are useful, and we mentioned there are a number of reasons why they are,
 they allow us to gain speed up because we can parallelize problems,
@@ -126,6 +144,12 @@ look very different than when we're using the 95 percentile values.
 Or maybe we're designing some hardware chip, and in that case really,
 from the hardware prospective the thing that we're really concerned with,
 is, whether or not the overall utilization of the hardware of the CPU is better.
+
+.. image:: https://dl.dropbox.com/s/djiswg1jbrxgu9p/Screenshot%202018-10-12%2007.27.30.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 What these examples illustrate is that, to evaluate some solution, and
 to determine whether it's useful or not,
 it is important to determine what are the properties that we really care for,
@@ -135,6 +159,12 @@ to whether something is useful or not, will depend on the relevant metrics.
 
 4 - Visual Metaphor
 ===================
+
+.. image:: https://dl.dropbox.com/s/29im7my7gyby5i8/Screenshot%202018-10-12%2007.33.13.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Let’s consider a visual metaphor in our discussion about metrics.
 We will do this by comparing metrics that exist in a toy shop,
 to metrics that exist in operating systems.
@@ -153,6 +183,13 @@ Metrics such as throughput, response time, utilization and
 others are also relevant from the operating systems perspective.
 For instance, it's important to understand how many processes can be
 completed over a period of time on a particular platform.
+
+.. image:: https://dl.dropbox.com/s/vu8dy5fl1z918bz/Screenshot%202018-10-12%2007.35.31.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
 It's important to know how responsive the system is.
 So when we click the mouse, does something happen immediately or
 we have to wait some noticeable amount of time?
@@ -164,6 +201,12 @@ analyze how a system behaves and how it compares to other solutions.
 
 5 - Performance Metrics Intro
 =============================
+
+.. image:: https://dl.dropbox.com/s/5xaosv1l8ij04fx/Screenshot%202018-10-12%2007.43.47.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 If you have not noticed yet,
 performance considerations are really all about the metrics that we choose.
 Ideally, metrics should be represented with values that we
@@ -194,6 +237,17 @@ by varying the resources that are allocated to it, or other dimensions.
 
 6 - Performance Metrics
 =======================
+
+.. image:: https://dl.dropbox.com/s/gbam7t11tgd9zxv/Screenshot%202018-10-12%2007.52.41.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/v36a54jcl5ubpow/Screenshot%202018-10-12%2007.57.53.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 So far in this lesson we mentioned several useful metrics.
 For instance, we talked about execution time and
 throughput, response time, CPU utilization.
@@ -307,6 +361,12 @@ what were the relevant metrics that were measured?
 
 8 - Really… Are Threads Useful?
 ===============================
+
+.. image:: https://dl.dropbox.com/s/x5hav87l21qgxup/Screenshot%202018-10-12%2008.00.30.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 So if we go back now to our question, are threads useful?
 We realize that the answer is not so simple.
 We cannot simply say, yes, threads are useful.
@@ -354,8 +414,25 @@ I will also provide you with some guidance on how to define some useful metrics,
 and how to structure experimental evaluations, so
 that you can correctly measure such metrics.
 
-9
-=
+Multi Process vs Multi Threads
+==============================
+
+.. image:: https://dl.dropbox.com/s/1gs23dm8zoxiwza/Screenshot%202018-10-12%2008.01.57.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/n5bf49mv8uh37m9/Screenshot%202018-10-12%2016.33.10.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/gibbpn0ou2wvzsk/Screenshot%202018-10-12%2016.34.47.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
 To understand Winter threats useful,
 let's start to think about what
 are the different ways to
@@ -448,6 +525,12 @@ then the processing is complete.
 
 10 - Multi Process Web Server
 =============================
+
+.. image:: https://dl.dropbox.com/s/wb0mxk3arqc2wgz/Screenshot%202018-10-12%2016.37.16.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 This, then, clearly represents
 a single threaded process.
 One easy way to achieve concurrency
@@ -489,6 +572,17 @@ to share an actual socket port.
 
 11 - Multi Threaded Web Server
 ==============================
+
+.. image:: https://dl.dropbox.com/s/agqzoq2xmnu4lxr/Screenshot%202018-10-12%2016.43.08.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/9dyuzvebnaq5vyw/Screenshot%202018-10-12%2016.45.59.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 An alternative to the multi-process
 model is to develop the web server as
 a multi-threaded application.
@@ -555,6 +649,22 @@ argument as well in our explanations.
 
 12 - Event-Driven Model
 =======================
+
+.. image:: https://dl.dropbox.com/s/8apju5lisk1b9ap/Screenshot%202018-10-12%2016.47.58.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/nzr6dzykcm372k0/Screenshot%202018-10-12%2016.49.33.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/92efpdvyg66rrb6/Screenshot%202018-10-12%2016.50.04.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Now let's talk about
 an alternative model for
 structuring server applications
@@ -646,6 +756,18 @@ call other handlers.
 
 13 - Concurrency in the Event Driven Model
 ==========================================
+
+.. image:: https://dl.dropbox.com/s/xaef1bpaegupmt1/Screenshot%202018-10-12%2016.51.53.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/2eyxtnwk3q4ur47/Screenshot%202018-10-12%2016.53.10.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
 You're probably asking yourselves,
 if the event-driven model has
 just one thread,
@@ -739,6 +861,12 @@ multiple client requests being handled.
 
 14 - Event-Driven Model: Why
 ============================
+
+.. image:: https://dl.dropbox.com/s/59fhrp6n11f8olv/Screenshot%202018-10-12%2016.57.34.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 The immediate question
 is why does this work.
 What is the benefit of having a single
@@ -815,6 +943,17 @@ be applied a multi-CPU environment.
 
 15 - Event-Driven Model: How
 ============================
+
+.. image:: https://dl.dropbox.com/s/q2zj5r9vn943za8/Screenshot%202018-10-12%2017.05.01.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image::  https://dl.dropbox.com/s/2yig434ghplcosj/Screenshot%202018-10-12%2017.06.08.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Now let's see how can
 this be implemented.
 So at the lowest level,
@@ -918,6 +1057,37 @@ make this an attractive approach.
 
 16 - Helper Threads and Processes
 =================================
+
+.. image:: https://dl.dropbox.com/s/hw15eq75h2uknjt/Screenshot%202018-10-12%2017.09.37.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/rz9ks95knkwsdo1/Screenshot%202018-10-12%2017.11.10.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/59w3x7bbg6pepsv/Screenshot%202018-10-12%2017.14.59.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/yqcpus81lvuwnqz/Screenshot%202018-10-12%2017.15.18.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/vrqk68cugtwwt8t/Screenshot%202018-10-12%2017.15.52.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/9tdbroosf9xfmc5/Screenshot%202018-10-12%2017.17.07.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 The event-driven model doesn't
 come without any challenges.
 Recall that when we talked about
@@ -1124,6 +1294,12 @@ your reasoning matches ours.
 
 18 - Models and Memory Quiz Solution
 ====================================
+
+.. image:: https://dl.dropbox.com/s/mg8zutiau9ircn1/Screenshot%202018-10-12%2017.18.30.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 The correct answer is that
 likely the event-driven
 model will consume least resources.
@@ -1154,6 +1330,17 @@ have the smallest memory footprint.
 
 19 - Flash Web Server
 =====================
+
+.. image:: https://dl.dropbox.com/s/jilfa9xotnzjjqy/Screenshot%202018-10-12%2017.20.35.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image::  https://dl.dropbox.com/s/hlmfu97f977wmim/Screenshot%202018-10-12%2017.24.19.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 With all this background
 on the event-driven model,
 we will now talk about the Flash paper.
@@ -1271,6 +1458,12 @@ these things included.
 
 20 - Apache Web Server
 ======================
+
+.. image:: https://dl.dropbox.com/s/p1irppzhy1bihd3/Screenshot%202018-10-12%2017.27.19.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Before we continue I would like to
 briefly describe the Apache Web Server.
 It's a popular open source web server,
@@ -1337,6 +1530,28 @@ processes are adjusted.
 
 21 - Experimental Methodology
 =============================
+
+.. image:: https://dl.dropbox.com/s/y6bzfhbvx3gn3l8/Screenshot%202018-10-12%2017.31.25.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image::  https://dl.dropbox.com/s/5nplpuu6yjw4109/Screenshot%202018-10-12%2017.33.36.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image::  https://dl.dropbox.com/s/r9o1f6x2138itdu/Screenshot%202018-10-12%2017.34.39.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/0sf88tm6nulrvtt/Screenshot%202018-10-12%2017.37.01.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+
 It is now time to discuss
 the experimental approach in
 the Flash paper.
@@ -1534,6 +1749,27 @@ the different implementations.
 
 22 - Experimental Results
 =========================
+
+.. image:: https://dl.dropbox.com/s/2wcz40j80a7tcnj/Screenshot%202018-10-12%2017.38.48.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/j8lqhkxmipkq3uz/Screenshot%202018-10-12%2017.40.48.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/a2l79gz2av1yfnd/Screenshot%202018-10-12%2017.43.52.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
+.. image:: https://dl.dropbox.com/s/8cus2te31q18chw/Screenshot%202018-10-12%2017.44.33.png?dl=0
+   :align: center
+   :height: 300
+   :width: 450
+
 Let's now look at
 the experimental results.
 We will start with
