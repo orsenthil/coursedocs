@@ -33,6 +33,9 @@ structure good experiments.
    :height: 300
    :width: 450
 
+.. TODO::
+   Understand the problem and then write the solution.
+
 During the threads and concurrency lecture, recall that we had a quiz in
 which we were comparing the boss-worker model with the pipeline model.
 And we did that specifically in one example for six worker threads in
