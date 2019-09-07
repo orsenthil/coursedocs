@@ -34,6 +34,7 @@ Course Book
    slam_notes
    problem_set_6
    q_a_6
+   office_hours
 
 .. raw:: html
 

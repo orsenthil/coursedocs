@@ -1,4 +1,4 @@
-Ed      xternal Resources
+External Resources
 ==================
 
 PatternCraft

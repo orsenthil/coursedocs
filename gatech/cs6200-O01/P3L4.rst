@@ -2014,7 +2014,8 @@ must-wait for
 each of the elements in this array.
 
 33 - Queueing Lock Implementation - lang_en
-==========================================
+===========================================
+
 Here is the implementation of
 the queuing lock or the so
 called Anderson lock.

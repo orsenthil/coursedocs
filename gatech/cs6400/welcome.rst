@@ -135,11 +135,6 @@ Constraints
 
 Review of EER
 
-.. image::
-   :align: center
-   :height: 300
-   :width: 450
-
 
 Task Decomposition
 

@@ -55,11 +55,9 @@ The LWP structure contains the per-LWP data such as the process-control-block (p
 
 
 .. image:: https://dl.dropbox.com/s/p5wc0vhg1stafqa/Screenshot%202018-10-04%2022.46.57.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
- The current LWP, process, and CPU structures are quickly accessible through pointers in the thread structure.
+
+The current LWP, process, and CPU structures are quickly accessible through pointers in the thread structure.
 
 Kernel Thread Scheduling
 ------------------------

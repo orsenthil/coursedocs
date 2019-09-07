@@ -110,7 +110,7 @@ Point-process: Pixel / Point Arithmetic
 * Transparency (Conversely, Opacity).
 * Usually represented as :math:`\alpha`
 * :math:`\alpha` varies from 0 to 1. (0 = invisible, 1 = fully visible).
-* RGB :math:`\righarrow` :math:`\alpha`RGB
+* RGB :math:`\righarrow` :math:`\alpha` RGB
 * Point process computations on Images to Add and Subtract images.
 * Showed an example of :math:`\alpha` blending commonly used in Image processing.
 * Image Histogram in Image processing.

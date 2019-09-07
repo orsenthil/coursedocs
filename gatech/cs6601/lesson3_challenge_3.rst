@@ -1,3 +1,7 @@
+Lesson 3 Challenge 2
+====================
+
+
 .. image:: https://dl.dropbox.com/s/4ui8j7mnms7alrw/Screenshot%202017-03-05%2022.07.48.png
    :align: center
    :height: 300
@@ -38,8 +42,7 @@ x41 x42 x43 x44
 a) all_different(x11, .. x14) and for all other rows
 b) all_different(x11, .. x41) and for all other cols.
 c) all_different(x11, x12, x21, x22)
-d) all_different(x13, x14, x23, x24)
-ditto
+d) all_different(x13, x14, x23, x24) ditto
 
 Algorithm:
 

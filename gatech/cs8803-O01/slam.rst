@@ -1,5 +1,6 @@
 1 - Putting It All Together
 ===========================
+
 [Sebastian:] Welcome to Unit 6 in CS373: Programming a Robotic Car.
 This is the final unit focused on putting it all together.
 Let's now review some of the things you've learned.
@@ -11,6 +12,7 @@ Let's start with localizing.
 
 2 - Localization
 ================
+
 We learned about how maps are being used to localized a moving robot.
 Here is a laser map being produced--in this case, Stanford's car,
 and we used particles to localize this robot
@@ -85,7 +87,8 @@ Systematic drift and biases are best addressed by the I term.
 That's the correct answer, which I'm sure you got right at this point.
 
 8 - Your Robot Car - lang_en
-===========================
+================-===========
+
 Now let's put them all together into a single piece of software.
 Upfront it took me about a whole day to do this.
 I'm not going to ask you to do it all yourself,

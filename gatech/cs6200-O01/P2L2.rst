@@ -1487,12 +1487,13 @@ You should select all that apply.
 
 34 - Critical Section Quiz Solution
 ===================================
+
 The first code snippet is correct because it perfectly aligns with the policy.
 If new_order is equal to 3,
 clearly an incoming thread will not be able to proceed.
 So this will guarantee that there cannot be more than
 three new orders processed in the toy shop.
-Note, by the way, that new_ order cannot be larger than 3, given that the only
+Note, by the way, that new order cannot be larger than 3, given that the only
 way that it will get updated is once we come out of this wait statement.
 So, the maximum value that new_order can receive in this code is 3.
 The second part of this statement also perfectly aligns with the second part of

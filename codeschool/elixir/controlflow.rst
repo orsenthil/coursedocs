@@ -4,7 +4,7 @@ Control Flow
 The case statement
 ------------------
 
-::
+.. code-block:: guess
 
     defmodule Account do
         def list_transactions(filename) do
@@ -21,7 +21,7 @@ The case statement
     end
 
 
-::
+.. code-block:: guess
 
     defmodule Account do
         def list_transactions(filename) do
@@ -35,7 +35,7 @@ The case statement
 
 The pattern matching can be over tuples.
 
-::
+.. code-block:: guess
 
     defmodule Account do
         def list_transactions(filename) do
@@ -49,12 +49,14 @@ The pattern matching can be over tuples.
 Using case with Guard Clauses
 -----------------------------
 
-defmodule Account do
-    def list_transactions(filename) do
-        case File.read(filename) do
-        {:ok, content}
-            when byte_size(content) > 10 -> "Content: (...)"
-        {:ok, content} -> "Content: #{content}"
-        {:error, type} -> "Error: #{type}"
+.. code-block:: guess
+
+    defmodule Account do
+        def list_transactions(filename) do
+            case File.read(filename) do
+            {:ok, content}
+                when byte_size(content) > 10 -> "Content: (...)"
+            {:ok, content} -> "Content: #{content}"
+            {:error, type} -> "Error: #{type}"
+        end
     end
-end

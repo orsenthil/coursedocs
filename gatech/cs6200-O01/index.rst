@@ -18,6 +18,7 @@ Introduction to Operating Systems
    P3L3
    P3L4
    P3L5
+   P3L6
    P4L1
    P4L2
    P4L3
@@ -25,6 +26,8 @@ Introduction to Operating Systems
    threads_birrell
    beyond_multiprocessing
    lightweight_threads
+   notes
+   office_hours
 
 
 Resources Shared by Students

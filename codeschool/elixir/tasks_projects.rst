@@ -9,19 +9,19 @@ Using Mix to Create a New project
 
 * build tool.
 
-::
+.. code-block:: guess
 
     mix new budget
 
 .. image:: https://dl.dropbox.com/s/etcovtfz0stbvvu/Screenshot%202017-09-09%2007.08.53.png?dl=0
-   :center:
    :width: 640
    :height: 580
 
 The mix run command.
 
 
-::
+.. code-block:: guess
+
 
     mix run -e "Budget.current_balance(100, 20) |> IO.puts"
 
@@ -35,13 +35,15 @@ What does the mix run command does.
 The Third Party Dependencies with Mix Projects
 ----------------------------------------------
 
-::
+.. code-block:: guess
+
     mix run -e "Budget.Conversion.from_euro_to_dollar(15) | IO.puts"
 
 Declaring Third-party Dependencies
 ----------------------------------
 
-::
+.. code-block:: guess
+
 
     defmodule Budget.Mixfile do 
         defp deps do
@@ -49,14 +51,14 @@ Declaring Third-party Dependencies
         end
     end
 
-::
+.. code-block:: guess
 
     mix deps.get
 
 Making HTTP Calls with the HTTPoison Library
 --------------------------------------------
 
-::
+.. code-block:: guess
 
     defmodule Budget.Conversion do
         def from_euro_to_dollar(amount) do
@@ -94,7 +96,7 @@ Making HTTP Calls with the HTTPoison Library
 Running the complete program
 ----------------------------
 
-::
+.. code-block:: guess
 
     mix run -e "Budget.Conversion.from_euro_to_dollar(15) |> IO.puts"
 

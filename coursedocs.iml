@@ -3,7 +3,7 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 2.7.13+ virtualenv at ~/py/virtualenvironments/vision" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.7 virtualenv at ~/.py/virtualenv/sphnix" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

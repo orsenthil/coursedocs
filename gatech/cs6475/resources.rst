@@ -38,6 +38,11 @@ What is Shutter Speed
 
 * https://digital-photography-school.com/shutter-speed/
 
+Nikon D3300 User Guide
+----------------------
+
+* https://www.youtube.com/watch?v=bFbatsu-o1Q
+
 Android Apps
 ------------
 
@@ -49,6 +54,7 @@ Camera Links
 ------------
 
 * https://en.wikipedia.org/wiki/Canon_PowerShot_S90
+* https://www.nikonusa.com/en/nikon-products/product-archive/dslr-cameras/d3300.html
 
 Courses Links
 -------------

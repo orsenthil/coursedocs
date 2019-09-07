@@ -16,7 +16,6 @@ Artificial Intelligence
    lesson_1_challenge_7
    lesson_2_challenge_1
    lesson_2_challenge_2
-   lesson_3_challenge_2
    lesson3_challenge_3
    lesson_6_challenge_1
    lesson_6_challenge_2

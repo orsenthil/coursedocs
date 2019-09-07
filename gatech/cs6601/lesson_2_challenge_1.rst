@@ -67,7 +67,7 @@ d) it produces a value between 1 and 0, inclusive
 
 (c) Depth First Search
 
-**(d) Uniform Cost Search**
+(d) Uniform Cost Search
 
 (e) None of the Above
 
@@ -77,8 +77,7 @@ d) it produces a value between 1 and 0, inclusive
 5) Given the way we defined search, is it OK to negative path lengths?
 
 
-- We define search like wavefronts. If we have negative path lengths, our wavefronts might go back and might not give
- us a result.
+- We define search like wavefronts. If we have negative path lengths, our wavefronts might go back and might not give us a result.
 
 
 
@@ -94,13 +93,12 @@ d) it produces a value between 1 and 0, inclusive
 
 7) What happens to A* if we use negative heuristic values?
 
-- Negative heuristics might not over-estimate, and thus can produce admissible heuristics. But negative paths can be
-break the heuristic function and lead us through a path which is not optimal.
+- Negative heuristics might not over-estimate, and thus can produce admissible heuristics. But negative paths can be break the heuristic function and lead us through a path which is not optimal.
 
 * `StackOverFlow Reference`_
 
-.. _StackOverFlow Reference: http://stackoverflow.com/questions/30067813/are-heuristic-functions-that-produce-negative-values
--inadmissible
+.. _`StackOverFlow Reference`: http://stackoverflow.com/questions/30067813/are-heuristic-functions-that-produce-negative-values-inadmissible
+
 .. _Bellman-Ford: https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
 
 

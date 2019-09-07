@@ -93,8 +93,7 @@ VIRTUALIZATION
 SDN
 ---
 
-* `SDN Reading List`_ - This is a great bibliography about SDN. Highly organized, has pretty much any paper you'd need.
-Dozens of papers.
+* `SDN Reading List`_ - This is a great bibliography about SDN. Highly organized, has pretty much any paper you'd need. Dozens of papers.
 * `Toward Software-Defined Cellular Networks`_ - Li, Mao, and Rexford
 
 CENSORSHIP
@@ -164,8 +163,7 @@ http://www.cs.cornell.edu/~jnfoster/papers/frenetic-icfp.pdf
 .. _Fastpass A Centralized “Zero-Queue” Datacenter Network: http://dspace.mit.edu/handle/1721.1/88141
 
 .. _Flash Boys excerpts: https://www.nytimes.com/2014/04/06/magazine/flash-boys-michael-lewis.html?_r=0
-.. _Raging Bulls - How Wall Street got Addicted to Light Speed Trading: http://www.wired
-.com/2012/08/ff_wallstreet_trading/all/
+.. _Raging Bulls - How Wall Street got Addicted to Light Speed Trading: http://www.wired.com/2012/08/ff_wallstreet_trading/all/
 
 .. _GENI - A federated testbed for innovative network experiments: https://dl.acm.org/citation.cfm?id=2612044
 

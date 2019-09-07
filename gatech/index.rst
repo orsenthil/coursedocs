@@ -34,6 +34,7 @@ Georgia Tech Course Notes
    cs6475/index
    cs8803-O01/index
    cs6200-O01/index
+   CS6340/index
 
 
 .. _OMSCS: https://www.omscs.gatech.edu/

@@ -3,7 +3,7 @@ Resources
 
 * The four books recommended and paper listed on Course Wiki: https://www.udacity.com/wiki/ud923/resources/text
 
-.. raw::
+.. code-block:: guess
 
     Silberschatz, Galvin, and Gagne.
     Operating System Concepts.

@@ -4,12 +4,12 @@ Lectures from youtube
 
 Elimination of left recursion and left factoring the grammars
 
-* https://www.youtube.com/watch?v=3_VCoBfrt9c
+https://www.youtube.com/watch?v=3_VCoBfrt9c
 
 
 Tool for grammars
 
-* http://smlweb.cpsc.ucalgary.ca/start.html
+http://smlweb.cpsc.ucalgary.ca/start.html
 
 Grammars
 
@@ -98,12 +98,14 @@ Test 3
 ------
 
 
-S     -> A B C D F.
-A     -> a t | a u | a v |.
-B     -> b |.
-C     -> c.
-D     -> d |.
-F     -> f |.
+.. code-block:: guess
+
+    S     -> A B C D F.
+    A     -> a t | a u | a v |.
+    B     -> b |.
+    C     -> c.
+    D     -> d |.
+    F     -> f |.
 
 
 Recursive Descent Parsers

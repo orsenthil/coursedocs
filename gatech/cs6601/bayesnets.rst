@@ -25,8 +25,7 @@ Challenge Question
    :height: 300
    :width: 450
 
-* We solve for all the situations were o2 is true given o1 is true (this is subtler meaning with involving both G and
- o1)
+* We solve for all the situations were o2 is true given o1 is true (this is subtler meaning with involving both G and o1)
 * Over all the situations were o1 is true. Here we go for every o2 and G.
 * Why are we doing this is not explained in this video.
 
@@ -45,8 +44,7 @@ We define the denominator
    :height: 300
    :width: 450
 
-* We calculated this result by summing up the results for all the relevant situations. But
-we can also get the results by sampling that can take care for more complex networks.
+* We calculated this result by summing up the results for all the relevant situations. But we can also get the results by sampling that can take care for more complex networks.
 
 
 Bayes Network
