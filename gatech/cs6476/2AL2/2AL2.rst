@@ -1,0 +1,593 @@
+1 - Intro 
+=========
+All right, welcome back to Computer Vision.
+Last time we talked about images as functions.
+An image could be thought of as a function of
+two dimensional position like i of xy.
+Or a two dimensional array we'd say f of ij row column.
+And sometimes I'll try to distinguish between whether I've got rows and
+columns and x and y.
+And we talked about how x and y are not the same as rows and columns.
+In fact, a row is typically going down so if we go row, column, that's y, x.
+The other thing is, and we're going to talk about this in a little bit,
+there's going to be this question about whether y gets bigger as you go up
+in an image, which is like what you learned in grade school, right?
+Y positive goes up.
+Or maybe a lot of you think of rows going down, and so
+we'll, we'll have to wrestle with that.
+And, we also talked about that, even though indexing in a computer world should
+start at 0, in MATLAB, indexing of arrays starts at 1, and you're sure to screw
+that up somewhere in your code, but eventually, you'll learn to figure it out.
+
+2 - Gaussian Noise 
+==================
+All right, let's do some work, not much work, but a little bit of work.
+So last time we talked about, adding a noise function to an image function, so
+here we have our noise, defined as just this random things scaled by the sigma,
+our output was just the image plus the noise.
+And we said, remember, you have to worry about the size of the sigma in
+respect to the range of the image, so if your image is 0 to 255,
+a sigma five might be plausible, if your image goes 0 to 1, size of
+sigma five is not plausible, so you have worry about how those come together.
+Now, suppose there was noise in your image, and
+you wanted to remove the noise, how might you think about doing that?
+Now I'm sure, bunch of you have suggestions that are kind of similar.
+Here, here's the typical one, right?
+Let me replace the value of each pixel,
+with sort of an average of the pixels around it.
+Okay?
+So.
+Let's think about what that would look like in 1D, and then we'll go to 2D,
+and we'll talk about why is this the right thing to do or
+when is this not the right thing to do, all right.
+So, here's our first attempt, so, we're going to replace each pixel with
+an average of the values of the pixels neighborhood, and
+this is referred to as a moving average, so here I have some location here, and
+I just take the average value and I put it down there, okay?
+And then I would move my little, what's called window as I take my average, and
+I get a new value, and I get another one, and then eventually,
+I would get this new somewhat smoothed version of the original, and
+it's smoothed meaning that we sort of averaged of the things locally.
+
+3 - Averaging Assumptions 
+=========================
+All right look, that was not rocket science, that seemed reasonable.
+But the important question to ask, really important question to ask is,
+why was that solution intuitive for you?
+Why did you say, you know what,
+I'm going to take a little average in order to get rid of some of the noise?
+What assumptions are you making about pictures, and
+by the way, about noise, in coming up with that answer.
+All right, so a little thought we come up with,
+you're making a couple of key assumptions.
+The first assumption is that the real value of
+a pixel is probably similar to the values nearby.
+Okay.
+Otherwise, why would I use the pixels nearby in order to try to
+figure out what my real value was?
+So okay that was assumption number one.
+The other thing that you're assuming.
+And for those of you who know a little,
+just a little about that problem, though the math etc.
+You're basically assuming that each noise that's been added to each pixel is
+independent of the noise that's been added to all the other pixels.
+And so what that means is if I take the average of the noise,
+that's going to tend to, I'm going to assume zero.
+That is that sometimes it'll be up, and sometimes it'll be down, and
+if I take the average around them, that that will be zero.
+So if I have pixels nearby having about the same value are related and
+the noise is independent, then the average is the right thing to do.
+
+4 - Noise Quiz 
+==============
+So here's a quiz just to sort of keep you on your toes, or
+at least to keep you mildly awake.
+If noise is just a function added to an image,
+we could remove the noise by subtracting that noise again.
+That is, the operation's reversible, okay?
+A, true, yeah, we could do that.
+B, true because we don't know the noise function so
+we wouldn't know what function to remove.
+C, false.
+When you put noise into something, it destroys information in the image and
+there is no way to recover it.
+
+5 - Noise Quiz Solution 
+=======================
+Well, this is one of these funny things.
+Hm.
+Well, these certainly true.
+Okay.
+Yes, I could remove the noise if you told me what the noise is.
+But nobody ever tells you what the noise is.
+Because if they did, they would have removed it in the first place.
+So you don't know what the noise is.
+You just know the statistics of the noise.
+And then, here is one that's interesting.
+False, because additive noise destroys information.
+Well, if you have just plain addition, and
+the addition works, then that statement is not true.
+And so, C would be wrong.
+But, suppose you have a limit between 0 and 255 or even 0 to 1.
+If your noise pushes you beyond the limits and you clip.
+You've lost that information.
+So sometimes when you add noise you get these nonlinearities.
+But in general,
+we can't remove the noise because we don't know what the noise was.
+If we did, we could just subtract it.
+
+6 - Weighted Moving Average 
+===========================
+Let's revisit our weighted average.
+Okay.
+So, instead of just thinking about averaging the local pixels,
+let's think of this as a set of weights, okay, and what we're going to do is
+we're going to weight all of these pixels by some set of weights, and
+we're going to combine them using those weights to come up with the new value.
+Now when we were just doing the moving box, our weights were just,
+let's say it was five long, they would be one fifth,
+one fifth, one fifth, one fifth, one fifth, five of them, right?
+So our weights was uniformly distributed, okay.
+But wait a minute, does that make sense?
+Remember our assumption that nearby pixels are related to my value?
+And there's another related assumption to that.
+The more nearby you are, the more related you are.
+So that means that pixels that are closer to me
+should contribute more to the average.
+So let's change our moving average, so that that's true, okay?
+Before, if you remember, we had these uniform weights.
+One, one, one, one, one, all the way across, divided by five.
+What if we wanted to use some nonuniform weights?
+So, so here's a set.
+One, four, six, four, one divided by sixteen.
+And what I’m going to do is I’m going to change those weights from
+being uniform to being nonuniform, and
+I want you to watch what happens to this bottom picture.
+So that’s the uniform weight,
+and that’s the nonuniform, centered weighted, right.
+Uniform.
+Nonuniform.
+And you'll notice that the nonuniform is a smoother rendition.
+In fact, you know, take a look here.
+You know, this area right there, we get a smoother range of, of what's going on.
+And the nonuniform weights corresponds to
+this assumption that the more nearby a pixel is, the more weight it should have.
+
+7 - Moving Average Quiz 
+=======================
+So, question, if you're going to do the moving average computation,
+the number of weights that you have should be what?
+A, odd, because it's easier to have a middle pixel.
+B, even, that way it can be symmetric around me.
+Or c, obviously either even or odd.
+
+8 - Moving Average Quiz Solution 
+================================
+For most of us, we tend to use odd sized sets of weights.
+And what that lets me do is put my set of weights centered over the pixel that
+I'm changing.
+All right? Otherwise, what I have to do is sort of put the center
+between the set of weights and average them that way.
+And that what, and then, so we tend to use a odd but symmetric weight mask.
+
+9 - Compare Filter Results Quiz 
+===============================
+All right.
+Let's talk about comparing filter results.
+I took a vector of ten random integers and plotted them as a line plot.
+I then filtered the vector with a uniform filter of length five and
+plotted the results.
+I also did the same with a nonuniform weighted filter.
+Can you figure out which is which?
+Type in the filter that you think produced the line plot in
+the corresponding box.
+Use the same notation as you would to write a vector in Octave or MATLAB.
+That is, including the two squared brackets for
+the original set of numbers you can type in the word, original.
+
+10 - Compare Filter Results Quiz Solution 
+=========================================
+The blue line has the biggest extremes.
+It's got to be the original.
+The green line is smoother, but has some uncharacteristic segments.
+For instance, here.
+While the original sequence decreased significantly,
+the green line actually increased a little.
+Similarly here, the original sequence increased, but the green line dipped.
+This indicates that values other than the central value at
+each point are affecting the results too much.
+Looking at the first unusual spike, it seems that the peaks on
+both sides are contributing as much as the central value.
+The green line is a result of a blindly uniform filter.
+The pink line is also smooth, but more importantly its peaks and
+troughs are well-aligned with the original.
+This seems to indicate that the central value had more weightage compared to
+the neighboring values.
+So yes, the pink line is a result of applying the center weighted filter.
+One minor detail, when applying these filters,
+we would want to scale the weights so that they sum to one.
+For the uniform filter this would be dividing by 5.
+And for the non uniform filter we'd divide by 16.
+
+11 - Moving Average In 2D 
+=========================
+So what about images?
+Well images are two dimensional, and doing this in 2D
+is pretty straight forward extension of 1D with a, with a little bit of a flip.
+That's going to be a joke.
+Alright, so let's do a moving average in 2D.
+I hope you can see that there's a whole bunch of zeroes in
+this picture over here.
+You see all those zeroes?
+And then in the middle on the bright area are these 90's.
+So this maybe is an image that goes from zero to 100, or whatever.
+But the idea is that zeroes are dark, and 90's are bright.
+And what I'm going to do is I'm going to take a moving average, so
+here I have my little average right?
+It's a three by three average, and I'm going to take the middle pixel,
+over here and I'm going to put that average over there.
+Okay?
+So if I put my average overall at zeros and I take an average of all zeros.
+I get, Meagan, what's the average of all zeros.
+&gt;&gt; Zero.
+&gt;&gt; Every now and then I'm going to ask her some questions she has no
+idea what the answer is.
+And she's not even sure she's supposed to know the answer, so
+that's kind of cool.
+Okay, it's zero.
+So now we move our square over one.
+Right so we, we move it over here, we get zero, zero, zero,
+zero, zero, zero, 90, okay.
+What's the average of that going to be?
+Well, you can think of each of these as one ninth, so
+one ninth times zero summed up eight times plus 90.
+That average is going to be ten.
+Okay?
+So it turns ten, and then I slide it over one more, and now I get 290, so
+its average is going to be what?
+20. And keep going.
+I get 30, and
+keep going further to 30, so I'm just moving this along, replacing the average.
+And finally, I get this total averaged value, right?
+And you can see that by putting a three by three,
+I get this nice bright area right around here which is
+where my three by three can sit over all the 90 values.
+And everywhere else it sort of falls off.
+And you'll notice the user zeroes here until we get to these tens.
+Where do those 10s come from?
+They come from this one little, bright spot there.
+Okay?
+And one of the things, by the way, you may have noticed is,
+by the boundaries we get these fun, kind of dark values.
+And we're going to talk more about, boundary conditions in a minute.
+All right.
+
+12 - Correlation Filtering 
+==========================
+So the math of what we just did is referred to as correlation or
+correlation filtering.
+And what we just did is we did it with uniform weights.
+So let's assume that our averaging window is size 2k plus 1 by 2k plus 1.
+So remember it's odd right, so
+if k were, were a three that would be a seven by seven.
+If k was one that'd be a three by three, right?
+So we have a odd sized window.
+So what we do is we're going to loop over all of
+our pixels around some location F of i,j, i,j being the row and column.
+And we loop over all the u's and all the v's going from minus k to plus k,
+summing up all of the pixels.
+And then, since we have the uniform weight right, so you have a weight of one
+there, we divide the whole thing by the number of weights in the filter, right?
+So if I had a 3 by 3 that would be 9.
+So if k was one, two, three.
+Yeah, it would be one-ninth.
+But that was uniform weights, and I don't know about you but
+I don't look any good in a uniform anymore.
+So, we're going to do something totally different here.
+No, all we're going to do is we're going to do
+what are called non-uniform weights.
+And what that means is instead of having 1 over 2k plus 1 squared we're going to
+have a different weight at each location.
+And so these non-uniform weights are written here as H of u, v.
+And those are simply the weights that you're going to,
+still some over the whole thing, but now these different weights are going to be
+applied as you move around with inside that mask.
+This operation is referred to as correlation or
+the cross-correlation and I've written this here.
+We would say that G was the correlation or cross-correlation of H with F.
+So this H by the way is referred to by many things, okay?
+It's called a kernel, it's called the mask, it's all,
+it's called the coefficients.
+It is just the matrix of the linear weights that get used.
+By the way, in case any of you have taken a machine learning class, and
+you've turk, talked about machine learning kernels and the kernel trick.
+There's a sli, very very slight relation here but really it's,
+it's a totally different thing.
+We're thinking about these kernels as these masks that we do the computation.
+
+13 - Averaging Filter 
+=====================
+So then the question arises, what makes a good kernel?
+Well obviously a very successful major.
+That was joke.
+So let's consider a uniform filter.
+Did you get that one Megan?
+Yes, you got it, good.
+All right, so you remember the averaging filter?
+Right, so the averaging filter was just this box filter of all one-ninths.
+And as we moved it around, we took this image on the left and
+we created this image on the right, all right?
+So the question actually arises.
+What if I had some image like this, and I apply that box filter.
+What would I get?
+Well, I would get this, and that is known as really, really ugly.
+Okay, that does least not to me, as a nice smooth version of the original.
+Now if you're looking at an itty-bitty monitor, it might look nice.
+But trust me it's really ugly.
+And the question is, what went wrong?
+Well, really what went wrong is squares are not smooth.
+Which is probably a statement from the 60s, but it's, it's what I mean.
+Basically filtering with something that's not smooth to try to think about
+blurring or filtering an image to make it smoother doesn't seem right.
+And in fact we’ll be able to say a lot more about what smooth means in terms of
+mathematics in a few more lectures when we talk about [INAUDIBLE] analysis.
+You know, so what was the problem?
+To get sense of what’s wrong, imagine that you had a single point of
+light that you’re looking at very far away, right?
+And you’ve blurred the camera, so it was out of focus.
+What would the image look like?
+Well, it would look something like that.
+Okay?
+Brighter in the middle, falling off towards blackness at the edges.
+Very, very deep.
+All right.
+And in fact, if we think of images as functions, I could take this image, and
+I could plot it as this function.
+If I've taught at that blurry spot, what kind of function would I get?
+Well it would look something like here on the right.
+
+14 - Blur Quiz 
+==============
+Thinking about this, if we wanted to blur a single pixel into a blurry spot,
+we would need to filter that spot with what?
+Is it A, 3x3 uniform weights?
+Is it B, an 11x11 square of uniform weights?
+C, is something that looks like that blurry spot?
+
+15 - Blur Quiz Solution 
+=======================
+Could we use a 3x3 u, uniform weights?
+No we did that and it looked awful.
+How about, an 11x11 square of uniform weights, that would be better, right,
+because it's bigger.
+Well, sort of yes sort of no,
+you still have this problem that you get these very hard boundaries.
+Clearly what you want, is something that looks like that blurry spot,
+higher values in the middle, lower at the edges
+
+16 - Gaussian Filter 
+====================
+So what would such a function look like?
+Well, it would look something like this and
+it would be, what's referred to as a Gaussian filter.
+So here's our original image, here is our filter.
+Now this is not a great Gaussian because it's only three by three.
+But you'll notice it's higher in the middle, then falls off at the edges and
+even falls off more at the corners.
+And what that is is, that's a very sort of low representation,
+very coarse representation, of a Gaussian function.
+And our Gaussian function is written here.
+This is the two-dimensional Gaussian in the u, v.
+1 over 2 pi sigma squared,
+e to the minus u squared plus v squared over sigma squared.
+That's a circularly symmetric Gaussian function.
+Get to know and love your circularly symmetric Gaussian functions.
+All right, so here I have, that's in fact what that plot was, so
+we're going to do smoothing proportional.
+So this exponentially to the minus x squared plus y
+squared over 2 sigma squared.
+And the technical description of this,
+is that it's a circularly symmetric fuzzy blob.
+That's what the Gaussian is going to be.
+So if we take that image,
+that same high textured image that we had before, and we filter that,
+with this now Gaussian blurring function, what are we going to get?
+We get something that looks like that.
+So much better, so much nicer, right?
+I mean, compare smoothing with a Gaussian to the non-Gaussian.
+Gaussian, non-Gaussian, right?
+And you can see the difference.
+In fact, in the non-Gaussian you see all these sharp edges,
+now you really seem them because they're red, all right?
+But when you do it with a Gaussian you get that nice smooth blurring.
+
+17 - Gaussian Quiz 
+==================
+Ok so now we're going to get to a quiz that's actually hard.
+It's not really hard, it just kind of feels hard, because I always screw it up.
+And that is, the Gaussian filter that we're talking about is referred to as a,
+as a exponential, and the complete formula here is what?
+So h of u, v is, by the way you see the exponents?
+They're the same everywhere.
+The only thing we're looking at that's constant.
+So, the question is, what's the right constant?
+One over 2 pi sigma squared, 1 over the square root of 2 pi sigma squared,
+1 over the square root of 2 pi sigma.
+
+18 - Gaussian Quiz Solution 
+===========================
+Okay, going back to here, it's just two pi sigma squared.
+I always forget where everything falls.
+Those of you who know your normal distributions,
+you'll remember that that's the constant that's in front of the Gaussian.
+
+19 - Variance or Standard Deviation 
+===================================
+So the Gaussian we just talked about is what's referred to as isotropic,
+a fancy word for circularly symmetric.
+And so it basically had one parameter, just sigma, right?
+Bigger sigma is, the more the blur.
+But we have to implement these in digital computers.
+We actually have to have a matrix, and so
+then we have to worry about two things.
+The size of the matrix, is the matrix three by three,
+five by five, eleven by eleven?
+And then the sigma that's represented within that.
+So let me show you that first.
+In Gaussian filters we talk about the variance, sigma squared of
+the standard deviation of sigma, and that's the amount of smoothing.
+So these two filters are the same size, they’re both 30 by 30s,
+but the sigma inside one of them is two,
+the sigma inside the other one is five, so the five has a larger sigma.
+Now sometimes we’ll make a mistake and say it’s a larger kernel.
+When we say larger,
+what we actually are talking about is the size of the sigma inside.
+And we can distinguish that.
+So here's an example of the size of the kernel.
+So both of these kernels have a sigma of five, but one of them is
+represented within a 10 by 10, and the other is represented within a 30 by 30.
+Which one do you think is going to work better?
+The bigger one, it's smoother, it's going to work better, okay.
+And by the way, if somebody says, oh I, I smooth that with a bigger kernel.
+They actually mean a bigger sigma.
+That's what you care about, is the size of the sigma, not the actual kernel.
+The kernel has to be big enough and then the sigma is, is within that.
+
+20 - Matlab 
+===========
+As I mentioned at the start of this class,
+I'll be showing my examples mostly using Matlab.
+I know we've looked at the course developer.
+Arpin has worked on being able to do it in Octave or
+also in Python using various image manipulation OpenCV.
+But what I'm going to do is show you filtering in Matlab.
+And basically Matlab makes it trivial to build filters and apply filters.
+So Matlab, what we're going to do is define two things.
+We're going to define the size of the kernel.
+Remember that's what we were talking about before.
+So in this case it's going to be a 31 by 31.
+Again, odd, so I can put a center pixel down.
+I'm going to a sigma of five, and
+Matlab has this really great little function called fspecial.
+And obviously it's special, or they would call it something else.
+In fspecial, you can give it parameters,
+one of which is the type of filter you'd like.
+You can give it the size and the sigma.
+You can also give it rectangular size and multiple sigmas.
+It will build these filters for you.
+And in fact, Matlab has this beautiful little function called surf.
+Right, which will plot for you as a surface and
+if you do it with the right color map you would see this.
+You could also show it as an image.
+That's what this little picture is right here, all right?
+But even more importantly, you can take your image, and
+that's our image here of a panda, I can filter it by this h,
+which was the filter we just built, and then I can show that.
+What's that going to look like?
+It's going to be a blurry panda.
+Okay.
+This code is all it takes to build your filters and
+apply them to images in Matlab.
+It makes it very easy.
+Again, depending upon the size of the sigma we get different
+amounts of smoothing.
+So here we're using three different sigmas of 1, 3, and 10.
+We build our Gaussians using the different sized sigmas.
+We filter them and show them, and you see that we get, you know,
+hardly any blurring, little more blurring, and a little more blurring.
+That's all it takes to build these filters in Matlab.
+
+21 - Remove Noise 
+=================
+So we talked about removing noise using a filter,
+let's see how well that really works.
+Let us load a perfectly good image.
+Spoil it by adding some noise.
+I should really name this sigma to avoid confusion later.
+Finally, we know how to create a Gaussian filter.
+We define a size and a sigma.
+And then we can use the fspecial function from the image package.
+So load up the package first.
+And then create the filter.
+Now, we can apply this filter to remove noise.
+Note the order of parameters in imfilter.
+First is the image and second is the filter.
+Notice how the filter has smoothed, or rather, blurred the image.
+The fine particle like appearance of the noise is now smudged.
+But the filter has also affected the original image a great deal.
+So, noise removal is no magic.
+You don't get back exactly what you started with.
+Visually, it might not seem very impressive, but
+image processing routines further down the road
+behave quite differently given a noisy image versus a smooth image.
+Go ahead and run this code yourself.
+Try out different parameters for noise generation and smoothing.
+
+22 - Gaussian Filter Quiz 
+=========================
+So when filtering with a Gaussian, which is true?
+Is it A?
+The sigma is most important.
+It defines the blur kernel's scale with respect to the image.
+Is it B?
+The kernel's size is most important because it defines the scale.
+C, altering the normalization coefficient, that constant on the front,
+has no effect on the blurring, it only effects the total brightness.
+And D, A and C.
+
+23 - Gaussian Filter Quiz Solution 
+==================================
+Okay, well, so it should be pretty clear that it's A and C.
+Why?
+because the sigma is what defines the blurring.
+And then the constant in the front, remember the one, and
+one over two pi sigma squared, okay?
+That just multiplies everything, so that's just going to change the brightness.
+So fundamentally, what matters is the size of the sigma or sigma squared.
+
+24 - Keeping the Two Gaussians Straight 
+=======================================
+Finally, a word of warning or clarification at least.
+We just talked about sigma as being the width of a Gaussian,
+where that was the variance of the, of the smoo, smoothing of the blurring.
+Last time we talked about sigma or sigma squared as the variance of
+a noise function, how much noise was being added.
+So in one case, where we share might the filter, the sigma is in space, okay?
+Where as in the noise case it's in an intensity or it’s in the value.
+The bigger the noise signal is, the more noise you added,
+the bigger the blurring filter sigma, the more you're going to blur.
+So, you have to be an in a reasonable called sigma as they're both
+using a normal distribution.
+But one is over a space, and one is over intensity.
+We can show those two sigmas here, and by the way,
+here I'm using I'm using images that go from zero to one.
+Partially because that I know how sigma varies with respect to the range of
+the image, and
+partially because the slides that I stole off the Internet did this.
+All right?
+So in the top row, there's no smoothing going on,
+so we have a sigma of 0.2 in the noise.
+That's a lot of noise if the range is only going from 0 to 1 or,
+or let's say minus 0.5 to 0.5.
+A sigma 0.1 is less noise.
+A sigma 0.05 is less noise yet.
+But then we can smooth it, all right, with a Gaussian.
+Right, this is the smoothing, with the Gaussian kernel.
+And the more we smooth, the blurrier these things get.
+And so, for the same amount of smoothing, the thing with the smaller amount of
+noise, with the same amount of smoothing becomes even smoother, right?
+So this image here is even smoother than that image there.
+Okay?
+But this is showing you those two sigmas, the two Gaussians.
+Almost always it'll be clear from context, but
+since I've had situations where students say,
+wait a minute, I thought the bigger signal was, the more noise we got.
+Now you're telling me the more sigma is, the more blurring is,
+the less noise we have, and I say yep, two sigmas.
+
+25 - End 
+========
+All right.
+That ends this lesson on filtering and noise.
+And we'll start going down further image processing next time.
+

@@ -1,0 +1,454 @@
+1 - Intro 
+=========
+Welcome to Computer Vision.
+The last couple lessons we introduced the notion of filtering.
+We started from a notion of how to do like,
+noise removal as a way of applying a, a linear operator type.
+Mostly time being linear.
+And it was being able to do a local averaging.
+We also talked about the difference between correlation and convolution.
+Which is sort of just keeping a little bit of bookkeeping in
+terms of keeping track of appropriate orientation of the filters.
+Now we are going to shift a little bit.
+And talk about the notion of filters as some way of
+getting at an intermediate representation of an image.
+What I mean by that is, you could imagine you take some image,
+and you convert the pixels into some, maybe an array again.
+Still an image as a function.
+But the idea is that that function now, is no longer just about the intensity.
+But it's about some property of the pixels locally in the image.
+And then we'll get to something that might be a very useful property in terms of
+representing our image.
+Before we do this, I need to put in one little caveat.
+Remember before, we talked about things being linear,
+so if I was correlating an image, filter with an image.
+If I just multiplied that correlation filter by some constant.
+Okay?
+Then the whole value would get bigger.
+So if I were comparing the output of an image correlated with
+filter one versus an image correlated with filter two.
+And I want to be talking about sort of,
+how much filter one responds to the image versus filter two.
+It's important that in some sense,
+the scale, the multiplicative scale of those filters be the same.
+Otherwise the correlation will just be scaled by their difference.
+So by the way,
+from what I'm about to tell you, it's okay to gloss over the details.
+For those of you who are doing the problem sets, you're going to learn a lot
+more about this method that's referred to as normalized correlation.
+Here I'll just introduce it.
+Here's what we're going to do, we're going to assume when we do our correlation.
+First, we're gon, we're going to normalize our filters.
+By making them that,
+say, the standard deviation of all the pixels is equal to one, let's say.
+That would be one way of doing it, because as I scale that filter up and
+down, its standard deviation grows and shrinks.
+So I'm going to make standard deviation be no more, be exactly one.
+That's a problem if you've got a constant.
+Don't worry about that problem.
+We're going to try to make it so that its standard deviation is one.
+Then the other thing that we're going to do is,
+suppose I've got two images that are actually the same.
+Except one has just been multiplied by some constant.
+Well then if I correlate, even my normalized kernel, the one that's been
+multiplied by the constant, the total value is going to get multiplied also.
+So when we do it's called normalized correlation.
+We do two things.
+We normalize the filter, like we said.
+And then when we stick the filter down over a little patch of pixels,
+we scale that patch so its standard deviation is also one.
+And then we compute the correlation.
+And as we move the filter around, we change that image scale because the,
+the pixels are different.
+And that's what's referred to as normalized correlation.
+So for the rest of what I'm going to show you,
+I'm going to be doing normalized correlation.
+
+2 - 1D Correlation 
+==================
+All right,
+back to our regularly scheduled program.
+All right, we're going to introduce
+this using one-dimensional signal and
+then we'll go to 2D.
+So here we have a signal, and
+it's a 1D signal, and here's a filter.
+And that filter,
+if you take a look, actually
+this filter here looks a lot like,
+oh yeah, something like that.
+And that's because I made this and
+I actually pulled out that chunk.
+Okay?
+But the system doesn't know that yet.
+And what we're going to do is we're
+going to do the normalized correlation
+of this filter with that signal.
+When you do that,
+you get a result that looks like this.
+And you'll notice its maximum is at
+this peak, this peak here in red, right?
+Right here, okay?
+And that's the location
+of where this filter
+came from out of that signal, okay?
+So the highest value is exactly
+when these things match.
+There are a couple of reasons to explain
+that, here's the one that I like best.
+Pretend for a moment that both of
+our signals were normalized, or
+were sort of shifted, so
+that they were about zero.
+So sometimes they went positive and
+sometimes they went negative, okay?
+And remember we've got the scale
+being approximately the same.
+because they scale up, so
+their standard deviation is one.
+If I take one filter and
+I lay it over the image and
+I'm going to multiply them and
+then sum them up.
+Remember, some of my values are positive
+and some of them might be negative.
+I realize this is the first time
+we've talked about negative signals.
+In fact, on the drawing here you'll
+notice it's zero in the middle.
+But if I've got positive numbers and
+negative numbers and
+I've got positive numbers and negative
+numbers in my filter, if I want to do
+a multiplication and have it come up as
+high as possible, when does that happen?
+Well the obvious intuition is,
+well whenever my pixels in the image
+are positive, I want my coefficients
+in my filter to be positive.
+Because positive times positive
+is what negative, Megan?
+&gt;&gt; Positive times positive?
+&gt;&gt; Yeah.
+&gt;&gt; Positive.
+&gt;&gt; Positive.
+And what do I want where
+the image is negative?
+I want the filter coefficients
+to be negative also, right?
+Because negative times negative is what,
+Megan?
+&gt;&gt; Positive.
+&gt;&gt; Positive, very good.
+Yeah, she went to film school,
+but she's doing great.
+Anyway, and so if you think of
+sort of a filter as having,
+because we've scaled it, it can't go
+arbitrarily high and arbitrarily low.
+If you get that signal to
+be lined up exactly, so
+wherever it's positive
+the other is positive and
+where one is negative the other is
+negative, you get the maximum value.
+There are a lot more sophisticated
+ways of showing this involving
+differences in distributions and
+things like that.
+They all basically will show you
+that the maximum value you can get.
+The product of these is when
+they're exactly the same.
+
+3 - Matlab Cross Correlation Doc 
+================================
+We can do the same thing in two dimensions also.
+So, here is a different pepper image.
+Right?
+This is a little chunk of the pepper image.
+Happens to have some garlic in it too.
+All right.
+Taken right sort of from here.
+I could do normalized correlation of this small patch on the whole image.
+And I can plot that.
+And when you do you get this answer.
+All right. You see this little spike here?
+That's what happens when the filter lands right on the spot in the image that it
+was taken from.
+You get this, again, the positives line up with the positives,
+the negative line up with the negatives.
+
+4 - Find Template 1D Quiz 
+=========================
+Okay. Let's write some code.
+We'll use one dimensional data to begin with.
+Given a discrete signal s as a vector and
+a template t our job is to find where that template occurs in the signal.
+This is just like finding a substring in a longer string.
+Here we are playing with numerical values which has some implications.
+Note that here we want to find the starting index where the template occurs.
+Let's print out the signal and template to see what we mean.
+Here we've used colon to generate the sequence of column numbers.
+Size of s, 2 is the number of columns in s.
+Let's see what the output looks like.
+The top row here is the column numbers.
+Can you find the template?
+Yes.
+It is located here.
+Starting at index 5 in the signal.
+So this is what I want you to do.
+I want you to write a function find_template_1D.
+That takes two parameters, t and s, the template and signal.
+It should return the index, where template is found in s.
+Once the index is found we should be able to display it.
+Let me get you started with some template code.
+By the way, you most likely need to use the image package.
+Make sure you test out your function with different signal and template values.
+When you submit your code your function will be evaluated against other
+test sets.
+
+5 - Find Template 1D Quiz Solution 
+==================================
+As you might have guessed, we want to use normalized cross correlation.
+This correlates the template t over the signal s and
+returns a normalized set of values.
+You can find out the maximum value in this result set using the max function.
+This corresponds to the best match location.
+When given two output arguments max can actually return the index of
+the max value as well.
+Isn't that what we wanted?
+Let's look at the result.
+So we see that the returned index is seven.
+But the correct answer should be five.
+What happened?
+The correlation function actually starts comparing from the first point of
+overlap between the template and the signal.
+Here the template has three elements.
+So comparison starts where the third element overlaps with
+the first element of the signal.
+And the window moves from that point forward til the end and beyond.
+The operation stops at the last point of overlap.
+Let's look at the values of c to figure out if this is really the case.
+We use the same trick here to display column numbers, and
+let's comment out other output code for clarity.
+As we can see here, we have 16 values.
+Our signal had 14.
+The first two coefficients are from positions where the template was
+partially outside the signal.
+Therefore, index three, which is the length of the template corresponds to
+the first position in the signal.
+We have to account for this offset when returning index value.
+One way to think about this is that the index value returned by
+max is the rawIndex.
+In order to get the correct index,
+we need to subtract the size of the template and add one.
+Let us restore our original output lines and look at the output.
+Now we have the correct index, five.
+This is the starting position of the template found in the signal.
+Let's try a different template.
+All right.
+As expected, the template is found at position seven.
+Note that we are not constrained by templates that have exact matches.
+For instance, we can try a template that only partially occurs in the signal.
+Quite impressive.
+The template is found in the correct position, even though there is a mismatch.
+A partial mismatch would result in a correlation coefficient that is
+less than one.
+But it might still be the maximum across all other elements.
+
+6 - Template Matching 
+=====================
+Let's continue exploring this idea of using filters as
+templates of what we want to find in two dimensions.
+Okay?
+So a template is a thing that you give me and
+you say I want you to find something else that looks like this and
+we're going to do that through a filtering.
+And here's a nice example courtesy of Christian Grumman as well I believe.
+Although I'm not sure she made, if that's one these,
+by the way this is early in the class.
+You're going to see a lot of slides that have somebody's name next to them,
+because I've got them, the.
+And then what I later discovered is,
+many of these slides came from other people, and from other people.
+So the name that I put down is the name that I was able to track it towards.
+And the rest of us on the internet we're just making our way.
+All right.
+So, here's a very simple example.
+So here we have a scene on the left and we've got this template on the right.
+All right? So this is the think that we want to find.
+And you look over here and
+you say, oh I see where it is it's, it's, it's, it's right over here.
+So what we would like is our system to spit out something like this.
+Say aha, here's my little green box.
+Well what we can do is we can actually do this through a normalized correlation.
+If I take that masked kernel template and
+I do a normalized correlation with the image on the left, what I get is a map or
+correlation image that looks like this.
+Okay?
+And you'll notice.
+That, where black lies over black and
+white lies over white, you can think of that as positive and
+negative, so I get some brightness over here and some brightness over here.
+But my really bright spot is right there
+because that's the template having landed in the right place.
+So that's how you use correlation in order to do this detection because now
+we're thinking of filters not so much as doing an averaging or
+a blurring but actually being a template that we're looking for.
+
+7 - Find Template 2D Quiz 
+=========================
+I bet you're itching to do this yourself.
+Here's the function I want you to define, find_template_2D.
+Takes a template and an image as input and
+returns the x and y coordinates where the template is found in the image.
+I have just the image to test this out.
+I'll cut out a glyph from this tablet, which will serve as our template.
+Remember, you want to find where the top left corner of
+the template occurs in the image.
+Also note the order of the return coordinates, y x.
+
+8 - Find Template 2D Quiz Solution 
+==================================
+As before, we use normalized cross correlation.
+Since the image is a two-dimensional matrix,
+we need to be careful when finding the maximum.
+Simply writing max of c would compute the column wise maximums.
+Indexing c with a single colon flattens it.
+Therefore, max of c colon would compute the image wide maximum.
+We use a slightly different trick to find the location where this
+maximum occurs.
+The find function directly returns the row and
+column, that is the y and x coordinate of the desired location.
+Remember that these are raw indices into the matrix of correlation coefficients.
+We need to account for the offset by subtracting the size of
+the template along the appropriate dimension and adding one.
+And that's it.
+Let's see what y and x values we get back.
+All right, 75, 150.
+Isn't that where we cropped out the glyph from?
+Indeed, those were the top and left coordinates.
+We can do some additional plotting to make the result more intuitive.
+Here we first show the original image, and
+then we plot a red plus on top of it where the template was found.
+Since this is not a fully interactive environment,
+we have limited plotting capability.
+In the local installation of MATLAB, or
+Octave, you can a lot more, like draw a rectangle where the template is found.
+
+9 - Where's Waldo? 
+==================
+So those of you that are old enough will remember, and
+especially if you're from the United States.
+You'll remember that for
+a while there was this whole bunch of books out there called Where's Waldo.
+And they would give you a scene that looked like this on the left, and
+your goal was to find.
+Here's Waldo right here, kind of blurred out,
+hard to see, that would be my template maybe.
+And I want to find Waldo.
+And if you take a look at this, can every body see where Waldo is?
+Well, he's right there, okay.
+We go back there, okay, you can see him.
+There he is, all right?
+So, the question is, how could you do this doing the template matching?
+Well, we would do the same thing before.
+We take our image, we take our little template, and
+maybe you can see over here on this Correlation map, all right?
+There's that bright spot right there.
+And you'll notice, that everywhere else it's hardly bright at all.
+But right there, that's that bright spot.
+
+10 - What is it Good for Quiz 
+=============================
+Besides looking for Waldo what is template matching good for?
+Lets look at some cases.
+Can you find lines in an image with templates?
+Including vertical horizontal and diagonal lines.
+How about faces?
+Some small, and some large.
+Icons on a computer screen.
+Can we use template matching to find cracks and fissures in metal components?
+This is actually something that computer vision is successfully used for,
+in real assembly lines.
+Mark the situations in which you think template matching can be
+fairly successful.
+
+11 - What is it Good for Quiz Solution 
+======================================
+Since lines in a image can be in different lengths and orientations.
+You cannot come up with a single template to find them.
+Although you can use a bunch of templates at different orientations to
+find parts of lines.
+There are much better options for this purpose.
+Template matching is in general not suitable for finding arbitrary lines.
+The case for finding faces is arguable.
+Again, due to the possible size differences,
+you cannot come up with a single template.
+Moreover faces can be front-facing or
+side-facing or rotated at any arbitrary angle.
+Either answer is correct, although as we will see,
+there are much better ways of doing this as well.
+Finding and recognzing icons on a computer screen is a fairly predictable task.
+This is because icons are usually shown upright and
+their size is from a limited set.
+Therefore, template matching is suitable in this case.
+Cracks and fissures hardly have a predictable shape.
+Therefore, they cannot be detected by template matching.
+Are there any other good uses you can think of?
+Or cases where you are sure that template matching is bound to fail?
+Share with your peers on the forum.
+
+12 - Non Identical Template Matching 
+====================================
+And in fact that's shown here.
+So it says, you know,
+what if the template in the scene is not identical to some sub image.
+So here we have a scene and we have a template, well it turns out
+that the best location of this template in this scene is right there.
+It actually finds the same car.
+Now you have to worry about scale and orientation and
+all that stuff, stuff that we're going to talk about later in the class.
+But even though the cars are quite different the fact of the matter is
+it has sort of bright stuff here and dark brown things there.
+This has bright stuff there and dark brown things there.
+So as a template it's not awful.
+So that's using these filters as templates
+
+13 - Normalized Correlation Quiz 
+================================
+Here's a question for you.
+Would this method actually work for finding Waldo in most pictures?
+A) yes, normalized correlation is a powerful thing.
+B) no, we don't actually have the right template.
+C) partially, explain how.
+
+14 - Normalized Correlation Quiz Solution 
+=========================================
+Whenever I ask you that the answer is always partially explain how and
+here's why.
+Yes, normalize correlation is powerful if you happen to have the template.
+And in here for Waldo, we have the exact template.
+How do I know? I actually cut it out of this picture to begin with,
+then I made a template out of it.
+But if I don't know what Waldo's going to look like.
+All right?
+So he's got that same dumb hat and the striped shirt, but
+he could be bent over, et cetera, whatever.
+I don't have the exact right template.
+But now think about stepping back and blurring it just a little, so there's
+kind of red stuff up here and reddish, whitish, pinkish stuff down below.
+So your template is sort of close.
+So you might actually be able to get some candidate examples.
+
+15 - End 
+========
+And actually that ends this lesson.
+Essentially we're using filters to localize interesting areas in
+the image that have some sort of property that makes the filter respond well.
+So what we're going to do going forward is we'll use some special filters to
+compute some functions, like smoothing, but
+also to sort of find strong responses just like the templates.
+And we'll do that actually in the next couple of lessons.
+

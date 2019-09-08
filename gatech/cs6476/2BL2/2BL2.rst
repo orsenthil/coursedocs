@@ -1,0 +1,266 @@
+1 - Intro 
+=========
+All right, welcome back to Computer Vision.
+So having done lines, and
+remember lines are sort of the easiest version of a parametric model,
+now let's move to something just a little bit more complicated, namely circles.
+So, here's the equation of a circle.
+You remember this from, this is Mrs. McGillicutty's algebra class.
+X minus a squared plus y minus b squared equals r squared, where a and
+b are the center, and r is the radius.
+And for now we're going to assume the radius is known.
+How did you know it?
+You know, Megan sent you a postcard and
+said, the radius is 11, okay, fine, so you know the radius.
+Oh, and we're also not, not going to use any gradient information just yet.
+We're just going to find the location of the points.
+So here we have a circle, we don't actually know where the circle is, but
+we've detected say, three points on that circle, the blue dots here, okay?
+So what is the Hough space?
+What is the accumulator erase space for the circle?
+Well since there are typically three unknowns, a, b, and r, but
+I told you the radius, Hough space is just a and b.
+Right, the center locations and the x and y direction.
+So, now let's consider the first point, say let's say, x0,
+y0, this point right here, okay.
+So, that point has to lie on the circle, and we know its radius.
+So one way of thinking about that, is that the circle is gotta
+be some radius r around that point, all right?
+And so what that does is it votes for
+a set of points, and that's what this green line represents, right?
+This set of points that are r around this location in the ab space, okay?
+So for a single point in the image space,
+we get a circle of radius r in the Hough space, all right?
+Let's move to the next point.
+Well, same thing, right?
+So it's gotta be, again, a radius r around here.
+And in Hough space, we're going to vote along this circle.
+And again the next point.
+And so if each point votes each point in the image votes for
+a circle, we collect all the votes.
+And so just as before, we get the majority of our votes here and
+that corresponds to this middle point, and that's what's drawn there.
+So it acts just like before where we were voting for lines, except now
+instead of using the sinusoids, we're voting in a circle in an ab Hough space.
+
+2 - Detecting Circles with Hough 
+================================
+In fact, here's a nice little example of the thing running.
+And this is taken from a very ancient photo but you can see right in here,
+there's a bowling ball, and that's where the plus, the crosshairs are drawn.
+And just as a, sort of to show you some other way of trying to find this
+ball that's moving, you could image just looking for the stuff that's moving.
+After all, it hasn't hit the pins yet.
+But when you'd look for the stuff that's moving, they find this bounding box.
+How come we could find more than just the ball?
+Well actually if you take a look really carefully,
+you'll see that this lane is very shiny.
+Okay. In fact, in a little while we're going to talk about reflectance functions
+and specular reflectance functions, and
+you'll talk about why on this lane you actually see the image of the ball.
+And because of that, there's motion in here as well, so
+you get this bounding box.
+But that's okay,
+all of we're saying is basically, that it was able to find the, the circle.
+Here's another example taken.
+In fact, if you go and you type Hough transform circles or
+something like that into Google, in Google, and
+you look for images, you'll actually come up with this image.
+This image was actually taken by Vivek Kwatra back when he
+was a wee graduate student, TA in my class, back in 1811 or something like that.
+And what we did was we took a picture of of these coins on top of
+a textured background.
+We, he did it because he had to, because he was my TA.
+He's now a really famous guy doing cool research stuff, all right.
+So, basically, you can take this and you can compute the edges, and
+here's an edge image of that, and then we can look for circles.
+Now, we're going to use the known radius method.
+So, let's suppose we start with the radius for a penny.
+All right.
+And you can probably see that there's this nice bright spot right here in
+the middle that corresponds to the penny.
+Now what you may also notice is that there are these kind of blown ups areas.
+Not so much here.
+It's a little harder to see.
+We'll go back here.
+And that's because you could fit a penny.
+Sort of around the edge of the circle, and the centers would be rotating around
+the middle of the circle, and that's what this little circle of centers is.
+But at the real penny, they all align up, and so you get even a brighter spot.
+So how would we find the quarters?
+Well, we just use a bigger radius, the radius of a quarter, and
+we vote again, and again you'll see these spots here, here, and here.
+And now the penny edges, well they, they again vote for
+this bit of a circle, but not nearly as strong as the quarters do.
+So this was the original is, image, and these are the combined detections, and
+so that's pretty cool, you know, you can just find the circles.
+
+3 - Hough Transform for Circles 
+===============================
+But suppose you don't know the radius.
+Okay?
+Megan sent the postcard to the wrong place.
+You moved, because you wanted to upscale your apartment and
+now you know you shouldn't have, because you're left without a radius.
+So what do we do?
+Well, let's think about it this way.
+All right?
+Now our Hough space has three dimensions, a, b and r,
+because we don't know what the radius.
+All right?
+So now if I have single point, what happens?
+Well, now if we knew the radius, let's say, the radius was, I don't know, seven
+over here, then it would be some sort of a circle centered about this point.
+Right? Just like that we did before.
+And if the radius was let's say, three,
+it would be another circle centered about the same point, but smaller.
+So I hope you can start to see that what we're getting in here is
+actually a cone, okay?
+So with unknown radius, each point votes for an entire cone in this 3D space.
+So the surface of the cone, right?
+Not a filled in cone, but the cone that's a surface.
+And the next point, what does it do?
+It votes for another cone and you can sum these all up.
+Now I will tell you this is pretty painful.
+And in fact, if any of you end up doing a problem set for some random course
+like this one, we're going to to tell you in terms of looking for circles.
+If you try to vote in a great big 3D space, it's not going to work so well.
+And in a whole bunch of lectures later when we teach you about ransack,
+it'll sort of overcome this dimensionality.
+But for now, just know that we have this little problem of growing the size of
+the voting space.
+So it can be done, it's, it's just a little bit painful.
+But remember before, one of the ways we got rid of the number of
+votes you had to do was by using the gradient direction?
+Okay?
+So because if like, I had a point and
+I knew the gradient, there was only one possible line it could be.
+Well, we can do the same thing with circles.
+All right? So now we have an unknown radius, but we have a gradient.
+All right?
+So again, our Hough space is a, b and r.
+But this time, our one point here, it has this gradient.
+Okay?
+Well, now if we knew the radius,
+we would just have one possible circle it could be.
+Right?
+So if you tell me that this is a point and that this is the gradient that I
+know the radius, that's the only place the center can be.
+But if the radius was half that, then the center would be there.
+Or the center, I guess it also could be on the other side.
+So it's just this single line of voting that can happen when you
+have the gradient and that's drawn like that.
+So in the Hough space, even though it's a three dimensional Hough space,
+you would only vote along one line.
+Okay?
+And so that's a little bit better, at least it makes the voting easier.
+You still have this problem when you have this three dimensional Hough space.
+
+4 - Algorithm for Circles 
+=========================
+So here's the algorithm sort of simply described for circles.
+Just like before, for every edge pixel, for each possible radius, right, so
+we don't know the radius, and then, either for every possible edge gradient,
+if we vote for the cone, or if we use the estimated gradient,
+then we compute a and b and we increment for a, b, and r,
+all right, and then that would just vote you in your Hough space.
+In general, even though 3D is only 50% more D than 2D,
+you'll find that voting in 3D is way more than 50% harder than 2D.
+And that's because, just one way of thinking about this is,
+let's suppose you had 100 buckets in each dimension.
+Okay.
+So, how many would that be if you had one dimension, Megan?
+&gt;&gt; 100?
+&gt;&gt; And if you had two?
+&gt;&gt; 10,000.
+&gt;&gt; And what if you had three?
+All right, that's a million, right, ten to the sixth.
+The number of cells that you have to consider is exponential in
+the number of dimensions, and that's a challenge with using the Hough transform.
+
+5 - Voting Practical Tips 
+=========================
+So a couple of practical tips with voting for the Hough transform.
+One thing you want to do is try to not do too many irrelevant votes.
+So try to minimize, sort of,
+edge elements that are not robust or are highly unlikely to be useful.
+Because remember, we don't have to find all the points along the line,
+just enough of the points.
+You want to choose a good grid discretization for
+your Hough accumulator array, right?
+How many bins you make.
+And there's no, sort of, magic answer to that.
+It's a little bit of an art.
+The problem is if things are too large, the bins are too large,
+then too many sort of false points vote for the same bin, and if the thing is
+too fine, then a little bit of noise will cause you to vote for the wrong bin.
+So it's, this, this trade off it's sort of the how course and
+fine the data structure is.
+The other things you can do, you can actually say,
+well I'm going to take my point, and I'm going to vote for the bin.
+But maybe I'll also vote for
+bins nearby, because maybe I'm not exactly where I need to be.
+It's a little bit like smoothing in the accumulator array.
+That actually can help.
+Using the gradient or the edge direction reduces the degrees of
+freedom of your voting by one, and sometimes that's very useful.
+And then the last thing is, once you've found, let's say, the circle or
+the line.
+You could go and draw it in the image, but
+if you actually wanted to find the edge points,
+well you could do a couple of things.
+One is you could actually try to look along that circle looking for
+those edge points.
+Or you could have been more clever to begin with.
+You could have, when you voted in those buckets, in those bins,
+you could have kept track of every point that voted for that bucket.
+And then once you have a winning bucket, you go and
+you look at, in that bucket and there's the list of points that voted for it.
+And that way you could find the points in the edge image that
+actually selected that object.
+
+6 - Pros and Cons 
+=================
+So some pros and cons of the Hough transform.
+All the points are processed independently, so it's okay if, you know,
+part of my stuff is occluded because each point just gets to vote.
+There's a modest amount of robustness with respect to noise so,
+because the noise points, as we said before, there are,
+they're unlikely to sort of collude to vote for the wrong thing.
+And you can use it to find multiple instances of the object
+within the single image.
+There are some downsides.
+The biggest challenge is that the complexity goes up
+exponentially with the number of model parameters.
+So you're never going to use this if you've got, like, seven model parameters,
+or maybe even four, that you're, that you're trying to explore.
+You'll have to use other methods.
+And the other thing is if you have sort of non-target shapes, suppose instead of
+circles, you actually had slightly squashed ellipses, then the voting can
+break down, and you have to be careful in terms of how you handle that.
+And as we said before, the quantization is hard to pick of good grid size and
+does require experimentation.
+
+7 - End 
+=======
+But that ends the lesson on using Hough transforms to find circles.
+That, along with the lines, is sort of the, sort of very old approach to
+parameterized method methods of finding parameterized objects.
+Even though it's old, it's,
+it's a good way of learning about extracting structure from an image.
+Remember, we go from pixels to things.
+And that's actually why it's the first sort of serious problem set.
+For those of you who are taking the online class, or
+those of you who just want to try it.
+And by the way, it's also one of the first problem sets I
+give my on campus class.
+Because they are not used to this idea of going from, sort of an image to a,
+a data structure.
+Next time, we're going to talk about,
+something more general uses of Hough transforms.
+Where your parameter is not based upon, analytical model,
+like lines and circles.
+But instead is based upon the shape of the objects that somebody gave you.
+And we'll talk about how to do that and
+also why that has developed a little bit of a resurgence in recent years.
+

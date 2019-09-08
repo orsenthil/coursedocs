@@ -1,0 +1,291 @@
+1 - Intro 
+=========
+So today what we're going to do is we're going to finish up Hough with two
+significant changes.
+The first one is we're going to use non-analytic models.
+So it's not going to be lines, not going to be circles,
+where we had, where our parameters were analytic parameters.
+Instead, the parameters are going to express, say, the orientation or
+the scale of some fixed but arbitrary template.
+The second thing, and this we'll only talk about briefly.
+Is a visual code word based approach where we
+used what are called visual code words for
+the features instead of edges, and this is much more modern computer vision.
+Edges really came from a, an older view of, of how objects would be described.
+And now the focus tends to be a lot more on individual features.
+And, later in the course, we'll talk about interest points, and features about
+those points because I don't want to teach you just old computer vision.
+So, that was the, so the, the first one was then, and this is the now
+
+2 - Generalized Hough Transform 
+===============================
+For a generalized Hough transform, it was easy when we had a specific shape,
+because based upon, our equations for a single point in an image or
+a single feature or single edge line, we would know how to vote, we would
+essentially solve for the equation that would tell us how to vote in the bins.
+But if you have an arbitrary shape, how do you know how to vote?
+Well, the way you do this is, you build what's called a Hough table.
+It was actually called an R-table in the original article but
+I think of it as a Hough table.
+The way it works is as follows, for each boundary point, and here we have our
+first one P1, what we do is, we compute a displacement or an r vector from that
+point to, here I've got it as the center, but it's some reference point,
+this is the point that we're going to use to locate the object, all right.
+And we measure that r, that's a displacement vector.
+The next thing we do is, we compute the gradient, and edge orientation.
+And what, and what we do is, we take that r, and
+we put it into a table that's indexed by theta, all right.
+So if we had some other point, that had the same theta,
+it would also add its r to exactly the same table location.
+So you would have multiple displacements, and
+I'll show you an example of that in a minute.
+But the idea is that you create the r based upon the offset, and
+then you index it by theta.
+Here's our second point P2, it has a different theta, and
+there would be a different r entered into that table.
+So we store the displacements in a table indexed by theta.
+At recognition, we essentially go backwards.
+What we do is, at every boundary point, we compute the theta that's there.
+By the way, for
+now we're assuming that the orientation of the object doesn't change.
+In a minute, I'll show you how to solve it when, well more than a minute,
+I'll show you how to solve this when the orientation does change.
+So at every boundary point, here's P1, we figure out the orientation, we go
+into our table, we find all of the displacement vectors that are associated with
+that orientation, so there's going to be this one, maybe there were some
+others as well, but we're definitely going to vote with this one for this point.
+Then later at P2, we find its orientation,
+we find all the displacement vectors that are associated with that orientation.
+That one's going to, definitely has this one, so this votes as well.
+And the whole idea is that the,
+the correct reference point gathers a whole bunch of votes.
+So what you're doing is, you're using this table, this R-table or Hough table,
+in order to tell each, found each point in the new test image how to vote.
+This was originally done by Dana Ballard, and
+I'll point out that this is back in 1980, 30 plus some odd years ago.
+And that's just a way of showing you that what goes around sometimes comes
+around, even in computer vision.
+
+3 - Generalized Hough Transform Example 
+=======================================
+So let me take you through an example now and
+in this example here you've got a picture.
+I'm going to assume a few things to make it easy.
+The first thing I'm
+going to assume is that we've got these little edge elements, these gradients.
+And I'm going to assume that we know which way is inside to the edge and
+which way is outside.
+It just makes it easier for the image for indexing.
+So, let's start by looking at all of those bottom horizontal edges that
+are pointing inwards, all right?
+So they all have the same theta, all right?
+Now, as we go across all those different edge elements,
+they each have different displacements to the center.
+So, all of those red lines,
+those are all the displacements associated with being a bottom horizontal edge.
+So if I found a little bottom bottom horizontal edge,
+I'd have to vote with all of those displacements.
+So what that would look like at run time is as follows.
+So here I have a little edge element.
+And it's voting for
+all these different displacements, which all would lie along that line.
+Where did all those different displacements come from?
+They're all here.
+These were the displacements for every possible bottom edge line, so
+everyone of those vectors have to be voted by each bottom element.
+So that's just one element but, of course, there's the next element.
+It has to vote the same way, it comes from the same theta.
+And another one, and another one, and another one, and
+eventually this big long line of possible offsets are voted for.
+Now, I didn't indicate here, the one in the middle is actually voted for
+more often so maybe you can think of the middle as being thicker than the ends.
+But it is that this line has the votes for, for where the center might be.
+We don't know where along the center it is yet.
+Well, now what we can do is we can take a look at
+the downward pointing diagonals.
+And you'll notice that for the downward pointing diagonals, it can be
+anywhere from being straight above it all the way over to the right of it, okay?
+So it can be straight above it or all the way over to the right.
+So what this means is at run time, each little diagonal element has to
+vote straight above it, all the way to all the way over to the right.
+And that's what's represented here for the first part.
+And here's another diagonal element, and another diagonal element, and
+another diagonal element.
+Until finally they've all stacked up.
+And you'll notice, already, I know where the object is.
+This is how this center was found.
+So the idea is that we're using this table of those offsets,
+indexed by the gradient, in order to vote for the center.
+
+4 - Generalized Hough Transform Algorithm 
+=========================================
+So the Generalized Hough transform or
+Generalize Hough transform algorithm is very easy.
+If the orientation is known,
+you know the orientation of the object, you do exactly what I showed you.
+For each edge point, you compute the gradient direction, you retrieve
+the displacement vectors r for that direction to vote for the reference point,
+and the peak in this space, in this case, we're only voting in X, Y.
+That's the reference point, that's where your object is.
+It's the one with the most, sort of, supporting edges.
+Now, it's sort of unreasonable that you might know the orientation and
+the scale, so let's talk about orientation.
+Okay? Supposed the orientation is not known.
+Well, all we have to do is try the different possible orientations, and
+that's written here, again for each edge point.
+But now, we have a, what we'll call a master orientation.
+This is the actual orientation of the object.
+For each orientation, possible master orientation,
+we compute the gradient direction, but we subtract off the master.
+So the master here is this theta star, the actual gradient is theta.
+But the, the gradient we're going to use is this theta prime,
+which is just the gradient with the overall orientation subtracted off of it.
+And so now, we retrieve the displacement vectors for theta prime.
+So we're still voting, and peaks in this Hough space are the reference point,
+but notice now that we're voting in X and Y and also theta star.
+So you remember that space complexity, which is k to the n?
+Well, n just went from being two to three, and the bottom line is any
+decent sized number squared is much smaller than any decent sized number cubed.
+So you just got a lot bigger by going to this adding this orientation.
+What's kind of cool by the way and this was in the original arbitrary shapes
+paper, you could also do this for say scale.
+Suppose the scale was unknown, our algorithm looks stunningly similar for
+each edge point.
+But now instead of having a master theta, right?
+We have a master scale.
+So for each possible master scale, we again compute the gradient direction.
+We again retrieve the displacement vectors, but now we have to
+vote with the scaled displacement, the vector scaled by S.
+And again we vote, whichever gets the most votes is the right point.
+And the peaks in this space and
+now the space is X, Y and S where S is the scale.
+So again, it's cubic.
+Now you can imagine that if you had scale and
+orientation, that would be quartic, that's raised to the 4th.
+Modest numbers raised to the fourth power are brutal, so
+you have to be careful in terms of how you do this.
+
+5 - Application in Recognition 
+==============================
+For the last, part of the lesson, I want to talk about a much more
+modern approach to using these Hough transform, displacement vectors.
+In fact it was proposed as recently as 2004,
+and subsequently, as a way of, locating a particular object.
+What we're going to do now is, instead of using edges or
+the idea of high, high value gradients as a, as a feature that you can find.
+What we're going to use are little feature patches, all right?
+And feature patches are just little chunks of an image that, for some reason,
+for, for one reason or
+another, you've decided, these are useful things to try to go find.
+So, if you have those, this is the way that would work.
+So we have a training image here, and
+I'm going to assume for now that our feature patch is tire, and I'll tell you in
+a minute about how we go about finding those feature patches, all right?
+And so here I've located the tire in two different places, and so
+in the same way as with the gradient, so when I first find it here,
+I say, okay, there's a displacement vector to the right like that.
+And I'll put that in a table that's indexed by the feature patch.
+And then I find that, oop, I found it again, it's over here, and it's index, and
+it, it has a displacement vector to the left, like that.
+So I put that in a, in the same table, and
+in fact it's indexed by the same feature type.
+So, these features are referred to as visual codewords, which I'll describe in
+just a minute, and the idea that I would have a table based upon the codewords.
+And associated with each codeword is the set of displacement vectors that I
+have to vote with every time I find that feature anywhere in the image.
+
+6 - Training 
+============
+So, the first step in training, are developing what's called visual code-words.
+And, basically the way it works is this, you have some sort of an operator, and
+we'll talk about interest point operators,
+that generate what are called interest points.
+That is, these are points in the image where reasonable amounts of
+interesting stuff is happening.
+And we'll talk about Harris corners and other ways of finding that.
+What you do is, you take your interest point operator,
+pull out all the interesting points on a bunch of training images.
+You collect the little image patch right around those points,
+you may get hundreds of them, or thousands of them, and then you cluster them,
+and you use some algorithm for doing a clustering.
+And when you're all done with those clusters,
+the centers of those clusters are referred to, as visual code words.
+So here, you can see all of these images that were
+taken from something like tires, then they were all clustered, and so
+the code word is this little tire piece.
+Here's a, here is a centered tire, right?
+This is the piece of a tire, this is a full tire.
+And there are other kinds of code-words, so these become the little
+features that we're going to look for in different images.
+And this, of course, would assume in this particular case, we're looking for
+cars, we got a bunch of training images on cars.
+By the way I should say, all of this is done automatically, okay?
+So, you're going to see some things that look a little strange in
+terms of code-words, well.
+It just happened to fall out of the data.
+This is not a human doing it.
+This is telling the system to go ahead and do this.
+The second thing you do is you take these code words, these are our features.
+Remember like we had the tire, and
+we found everywhere that the tire landed in the image.
+So what we have here is all of these marks, or these little interest points.
+And what we do is, for every interest point,
+we find the feature that seems to look best at that point.
+So that becomes the label of that point.
+All right, so remember just the way we had
+a label before that said the gradient was horizontal pointing inward, here we
+have the label is that it's the bottom right-hand corner of a tire, okay?
+So this is mapping each of the interest points to some particular patch.
+Finally, what we do is we take each of these little features and
+we treat them just like we treated those little gradient images, right?
+We take the patch, we find the displacement vector to the center, and we
+write down that displacement vector in a table that's indexed by a patch label.
+So if I find a tire and
+it's to the left, which means the displacement vector is to the right.
+I put down that displacement vector.
+If I find a tire to the right which means its displacement vector is to
+the left, I add that same displacement vector to the table with the entry
+of the tire, and that stores all those displacements.
+
+7 - Application in Recognition  
+===============================
+So at run time, it works like following.
+So here I'm going to show you on two cars using just the tire patch as
+the example, all right?
+Suppose we have only one feature and it's the tire.
+And suppose we try looking for it everywhere, okay?
+So we look for it everywhere and we find these four.
+Okay?
+Well, when we find them, what we have to do is we have to
+take the displacement vectors associated with that codeword and
+vote with all those displacement vectors.
+So let's remember for the tire codeword, there are two displacement vectors.
+One to the right, one to the left.
+So we vote for those.
+And then we simply look for
+spots, points that have more votes than other places.
+So in the case, where is it, where are those points?
+Well, just in the center of the cars.
+As I said, this was originally proposed by some folks at the ECCV,
+European Conference Creative Vision 2004 and
+it subsequently been evolved from that.
+And the, so the idea is that we're now using this notion of detecting features
+and something about their configuration in order to try to find these objects
+
+8 - End 
+=======
+So that's the end of this lesson and
+its the end of our entire discussion about Hough transform.
+It's an interesting example of a general approach in this case it's voting that
+was first developed many years ago like I said back in the 80s.
+Which resurfaces in sort of more sophisticated forms as things come along.
+In fact, there's something recently called Hough forests and
+Hough forests combine the Hough offset ideas that features vote for
+offsets with an ensemble or a collection of classifiers similar to
+random forests and that's why these things are called Hough forests.
+Fortunately for you your only going to be using the basic Hough transform for
+lines and circles for your problem set.
+It's more work than it looks, so, you know, make sure you leave plenty of time,
+and I think after you get that working, you'll have an appreciation for
+what it means to get these more sophisticated methods to work.
+

@@ -1,0 +1,749 @@
+1 - Intro 
+=========
+Welcome back to Computer Vision.
+The last lesson, we started talking about filtering as a way of
+finding a specific pattern in an image.
+We talked about template finding.
+And the idea was that given some pattern, correlation or
+convolution would be some way of finding that pattern in the image.
+And the assume, we assumed that the,
+that the goal thing that we were looking for was given to us.
+And then there was also this idea that, well,
+maybe we could just take the locations where this pattern was found.
+And that became sort of a description of what we were looking for.
+You could even think of that as describing the image,
+although we didn't talk too much about that.
+But again, that's the idea that you have,
+you know what the important thing is that you're looking at.
+But what about generic images?
+Ones that you don't know in advance.
+What's going to be in the picture.
+What are some good, the word we sometimes use is features,
+what are some good things to try to find in the picture,
+that might capture a lot of the information there, and
+sort of give you the essence of what you need to work on.
+
+2 - Reduced Images 
+==================
+So to get some insight into this question, I want to show you some very
+very greatly reduced images which are still going to be meaningful, that is,
+you know, what is going on to me in use, so normally when I do this in class,
+what I do is I say raise your hand when you can tell me, if you can tell me,
+what’s in the picture.
+So I would show then this.
+And everybody would raise their hand, and
+they would say it’s some goofy looking lion.
+All right?
+And I would show them a picture like this, okay, there, there’s an elephant.
+There’s a really cool, old car.
+There is a, something I'm never going to own, a private jet.
+But what you can see about these pictures is there's actually not a lot of
+pixels being used in this, in these pictures of different grayscale values.
+Instead, somebody has just sort of drawn in the edges.
+And yet, that conveys to you a lot of the information.
+So the idea is that, in some sense, edges in an image seem to be important,
+they seem to convey something about what's going on.
+
+3 - Edges 
+=========
+Let's talk about edges in just a generic image,
+and how it is that edges come to be within a picture.
+So what you can see here is this is some ancient picture somebody drew out,
+that there are edges that happen for a variety of reasons, right?
+So here's one right there, okay.
+And that's at a depth discontinuity.
+First we're looking at the bottle, then we're looking at the background.
+Here's a shadow edge.
+Of course, shadows aren't really that harsh but, go with me further.
+There's idea that there's a discontinuity in the illumination.
+Up here, from this top to there, is a discontinuity in the surface normal.
+That is the shape in one way, and then the [INAUDIBLE] the shape changes and
+it's pointing the different direction.
+And then finally, edges here can do to be to essentially color discontinuity, so
+we go from white to black on the same surface, same illumination, same shape and
+everything, but the reflectance is actually different.
+So that's what edges look like.
+We can look at them in a real picture.
+I think this is UT Texas,
+which would mean that again this was stolen from Crystal Robin as well.
+Borrowed. All right, so in a real image we have depth discontinuity.
+So the side of the building, we have shadows.
+So there you can see the shadow being cast by the sun on the front.
+What's interesting is we have textures.
+So if you were to blow up this area.
+And we'll, maybe we'll take a look at some texture later.
+Just from the, the texture or you can think of this as paint things are on
+the surface, you get different edges that show up.
+And then finally, the top ridge of that little cement thing,
+the edge around the bridge on top, that's like the top of the bottle cap.
+Same stuff, same color, but I get a discontinuity in surface orientation.
+So, our goal for today and, and next time also, is to find the edges in image.
+Or to put this another way, we want to convert an image,
+which is a function of x y, into a reduced set of pixels or
+curves et cetera that are the important elements of the picture somehow.
+And the idea is so, you know, that it encodes the changes that matter to you.
+
+4 - Change Boundaries Quiz 
+==========================
+So here's a simple question.
+Edges seem to occur at "change boundaries" that are related to the shape or
+the illumination.
+Which is not such a boundary?
+An occlusion between two people.
+So I'm here and somebody else is there, there's an occlusion between me.
+A cast shadow on the sidewalk.
+A crease in a piece of paper or a stripe on a sign.
+
+5 - Change Boundaries Quiz Solution 
+===================================
+Well as we said before, in the picture of that bottle, this last one,
+a stripe on a sign, that's not actually due to a change in any of
+the physics of the, the shape or the illumination.
+It's actually due to a change in the reflectance function.
+Okay. And we'll talk about that later when we talk about reflectance functions.
+But the idea is that it, it's not part of the nature of the geometry of
+the shape of the object or of the scene.
+But of having to do with the, the reflected texture.
+Or a reflected color
+
+6 - Edge Detection 
+==================
+So the question becomes what do we do?
+How do we compute?
+To figure out that a pixel in an image.
+The pixel is some location x, y is actually an edge pixel.
+That is that it lands on an edge or is part of an edge somewhere.
+To think about this, we have to return to our idea of image as function.
+So you remember here's our comedienne.
+And this was two different representations of the same function.
+One just happens to be shown to you as a picture, so
+you're used to seeing that although it's pretty scary.
+And the other is shown as this height map,
+where the height was proportional to the intensity.
+And the thing that's clear is that these edges, right?
+So this edge by the side of her face there.
+Is really a steep cliff by the side in, in that function.
+Okay.
+And what we're going to look for fundamentally for
+edges are going to be these steep changes somewhere in that image function.
+So it sounds pretty simple.
+Okay.
+In some little local neighborhood.
+Can I determine that I'm in a,
+at a location where there's going to be a very strong change?
+Doesn't seem so hard.
+Well, there are two things that we have to sort of answer in order to
+be able to do this.
+If we're trying to look at a neighborhood with strong signs of change.
+We had this question of well, how big is a neighborhood?
+And then what do you mean detecting change?
+How much of change is change?
+And, and how are we going to determine exactly where that change is?
+So, so here's an example of a function and
+the idea is that, you know, probably the edge might be thought of as like that.
+Our first problem of course, is we don't get to do that.
+We have to pick the pixels that we say are the edge.
+Right?
+We don't get to say it's between, well, we could say, it's between pixels but
+we, we tend not to do that, right?
+So the idea here is that the 80s are on one side and these 20s and
+30s are on another side, so we have to try to go about finding those.
+
+7 - Derivatives and Edges 
+=========================
+Change is going to be about what when we talk about functions?
+Well change is going to be about derivatives, all right?
+And this is why we're going to be
+able to talk about derivatives with respect to our functions.
+So here we have a very simple image, and
+I'm going to show you a plot here of a horizontal row, so if we just take a row.
+And we would just plot it.
+You'd see it starts out high and then it comes down smoothly and
+then it goes back up again.
+All right, so this is a nice smooth image.
+Well as you remember, when you were taking a look at change back in
+calculus class, you would take the derivative.
+If I apply the derivative to that function,
+I would get a function that looks like this.
+So this is the first derivative of that scan line, and these edges,
+which are these edges, correspond to these extrema of the derivative.
+That is, here's, somewhere down here is where the maximum negative slope is.
+And somewhere over here is where the maximum positive slope.
+This is the maximum negative.
+That's the maximum positive.
+So, finding edges is going to have something to do
+with finding peaks in the derivative.
+So how are we going to find these extreme in the derivatives?
+Well, the same way we found other things, right.
+How do we find Waldo?
+We ran some filter, we applied some filter and looked for its response.
+So we're going to filter our image with the appropriate word is
+operator in order to find these peaks in the derivatives.
+
+8 - What is a Gradient 
+======================
+So let's talk about differential operators.
+Okay, so a differential operator, when applied to an image,
+it returns some derivative, okay.
+And we're going to model these operators as filters, as masks, as kernels,
+that are going to compute that image gradient function, all right?
+And then we're going to threshold this gradient function
+to select the edge pixels.
+All of which brings us to the question, what is a gradient?
+All right, so, here you gotta go way back in your mind there somewhere, for
+those of you, and I guess I, I make to little, I mean,
+many of you are heavily involved in the, in the, getting your degree, or
+your courses and you've been taking all these math courses.
+If so, I apologize for being so pedantic.
+For those of you who haven't looked at a calculus course in a while, we're
+going to have to remind you a little bit about multivariate calculus, okay?
+And multivariate is when you have a function that was a function of
+more than one variable.
+So for example an image is a function f or i of two variables, x and y.
+And when I have functions that are a function of more than one variable,
+I can take what's referred to as a partial derivative.
+The derivative in the x direction, or the derivative in the y direction.
+And the gradient is the vector that's made up of those derivatives.
+So let's take a look at this for images.
+So I'm going to write this as the gradient of an image.
+And this is that operator that I'm going to use to show the gradient.
+And an image is just a two vector, made up of the partial of f
+with respect to x, the gradient of the image in the x direction, and
+the partial of f with respect to y, okay?
+So here's an image.
+And that, you can see in this image, it's only changing in the x direction.
+So its gradient would be whatever the change is in the x direction and
+0 in the y direction.
+Likewise, here's an image that only changes in the y direction.
+Now in this case, I'm talking about, I was drawing the arrow in this way.
+We could either think of y as going, more positive as you go down, we talked
+about this, or you can just say that this is the direction of the gradient in
+the sense that in this direction is where it's getting brighter, okay.
+So in this image my gradient would be 0 partial of f respect to x, but
+I would have partial of f respect to y.
+And normally of course, I have change in both direction and
+that's the gradient itself.
+It's partial of f respect to x and the partial of f respect to y.
+And it has both a magnitude, how quickly things are getting brighter.
+And also you can see there's this angle,
+which is sort of the direction of that gradient.
+And the gradient of a function is the direction of
+most rapid increase in intensity, and the magnitude of that
+vector is how much it's changing as a function of a unit step in that direction.
+Here we're just expressing all of this mathematically.
+The gradient is given by the two partials.
+The direction can be computed by just computing the arc tangent.
+That is, the arc tangent of the change in y over the change in x.
+Computer people amongst you, you should probably use a tan 2.
+So, that if the partial of f with respect to x is zero,
+that your machine doesn't explode.
+And then we can also talk about the magnitude of the gradient which is
+just the magnitude of these sums, and
+that's telling you how rapidly the function is changing.
+Which, of course, is clearly going to be related to something to do
+with edges because remember we said that edges,
+we get steep cliffs where things change tremendously, so we're going to look for
+large magnitudes of gradients when we're finding edges.
+
+9 - Magnitude Quiz 
+==================
+So, quick quiz,
+what does it mean when the magnitude of the image gradient is zero?
+The image is constant over the entire neighborhood.
+B, the underlying function is at a maximum.
+C, the underlying function is at a minimum.
+And D, either A, B, or C.
+
+10 - Magnitude Quiz Solution 
+============================
+It's a, b, or c.
+If you remember from calculus, right, when you have a function,
+when it gets to the maximum it's neither going up nor down right there, right?
+So the gradient, the slope is zero.
+So I have a function, so I have an image that's got a nice bright spot and
+I'm at the spot that's the brightest.
+Right? The gradient is going to to be zero.
+Likewise, if I'm in a hole, and
+I'm at the part that's darkest, the gradient is going to be zero.
+And of course if the entire image is 118, okay?
+Constant, there's no change anywhere, or
+just over a neighborhood, also the gradient would be zero.
+So the gradient is zero in any of these three cases.
+
+11 - Finite Differences 
+=======================
+So look, so what what we were just talking about is fine for
+calculus class, where you got all those fancy little Greek symbols.
+And you probably, by now,
+wish you were paying a little more attention to those Greek symbols.
+But the question is, how do we do these things in a computer where we don't get
+to do continuous math?
+So to do that, we have to talk about discrete gradients.
+So, in continuous math land,
+the partial of f with respect to x is just this limit, right?
+So we, we move a little bit in the x direction,
+epsilon, subtract off the original one and divide by epsilon, and
+when we let limit go to zero, that becomes our derivative.
+But in discrete world, we can't move arbitrarily close.
+We have to take what are called finite differences.
+So what we're going to do is we're going to talk about approximating our partial
+by some finite difference.
+So the simplest finite difference is this one, right?
+I take one step in the x direction, and I see what the value of the function is,
+and I subtract off the original, and I divide how big was the step.
+Just one.
+So that just becomes this value.
+So we say it's approximately f of x plus 1 minus f of x, okay?
+And that's called the right derivative.
+You get it?
+because it's, takes step one to the right.
+Oh, wait.
+One to the right.
+Right, left, for those of you who aren't looking at this thing in a mirror.
+Okay. In order to talk about the right way to think about these derivatives,
+let's take a look at our finite differences a little bit more.
+So here we have a picture of the striped duck that David puts in
+his book very often, David Forsyth.
+And you can see here we have this, it's a zebra, okay?
+So we have this picture of this zebra which has all these stripes on it.
+And over here, we have one of those finite difference images.
+First question, is this the finite difference in x or in y?
+Well, let's take a look.
+Here I have these nice kind of almost vertical stripes, and as I go across,
+you can see that I get a bright value and a dark value and a bright value and
+a dark value, so in others words, as I'm seeing changes going horizontally,
+in x, I'm getting different values of whatever this finite difference is, but
+across here, I have hardly any changes in x,
+and only changes in y, and you'll notice this is not a very strong signal there.
+Okay, so this is going to be a finite difference in x.
+One of the things that might be bugging you about this,
+is on the right-hand side here,
+I'm showing you an image that has positive numbers and negative numbers in it.
+So here's the deal.
+Normally, when we display an image, we make zero black and
+some other number white.
+Or we say some minimum value's black, and some maximum value is white.
+Oh, I didn't say it has to be zero, it has to be some minimum.
+So I could make like minus 128 be black and plus 127 be white.
+Or minus 20.
+And I could make zero be gray.
+So what you're seeing here on the right is what's referred to as
+a gradient image where gray is zero, white means positive, black means negative.
+This is sure to mess you up, in some of, doing some of the problem sets,
+et cetera, but remember, that the display of an image is just for
+convenience for me and you when it's a mathematical function like this.
+
+12 - Partial Derivatives of an Image 
+====================================
+Here's another example of partial derivatives.
+So here we have another animal that tends to have stripes.
+Although, I would not get as close to this one.
+So first question.
+Which one is the x and which one is the y?
+Well, let's see.
+Again, we have some vertical stripes here.
+And we see them right there really strongly.
+So that changes as you go to the x.
+And they don't show up over here so much.
+But here we have horizontal stripes, all right, that show up nicely.
+You probably figured out by now that on the left hand side we have the partial
+with respect to x.
+On the right hand side, the partial respect to y.
+And in fact if you take a look at this, you'll see that, and
+I'm going to make sure I put these in the right way, is that when I get to this,
+this edge right there, which is this edge right there.
+That as it gets brighter, that value goes high.
+So the filter that I'm using here is this minus 1, plus 1 correlation filter.
+I take that value at my right,
+subtract off the one from my left and that's the value.
+And now, correlation versus convolution matters.
+Because if I swapped it around, things would be different.
+On the y side it's also going to be plus 1 or minus 1, but I write it like this.
+And the reason that I do that is,
+one of these is the filter that you would use for computing the y gradient.
+But whether it's the one on the left or
+the one on the right will depend if whether in your universe you make y go
+up positively or you make it go down positively.
+And that's a choice that you get to make.
+You can put the origin of your image in the top left hand corner like
+computer scientists tend to think about them or in the bottom left hand
+corner like mathematicians for thousands of years have done that.
+Only computer scientists would screw with that, but we did.
+So you, you'll probably have to figure it out which way y is in your world and
+then apply the right filter.
+By the way, I can take the magnitude of this.
+That is just take the, the sum of the squares and
+take the square root, and I would end up with a picture that looks like that.
+And that should start to give you a hint as to where we're headed because that
+looks an awful lot like an edge image.
+
+13 - The Discrete Gradient 
+==========================
+So those are our discreet gradients, but now we said we wanted an operator.
+Right, we want to mask our kernel that can implement these gradients.
+So here's an example of an operator H.
+And I'm going to use three rows, and I'll tell you why in just a minute.
+For now we only have these two columns.
+So the question is, is this a good operator?
+&gt;&gt; No. &gt;&gt; No, it's not a good operator.
+Why is it not a good operator?
+Well there's a couple reasons.
+One of which is there is no middle pixel.
+So it's hard for me to say that this pixels value because the question is
+what's special about the right.
+It's should be, I could also be able to go to the left.
+So, if I wanted to do that what might I do?
+Well, I might do an operation that looks like that.
+I'm going to go to the right here, and the left there.
+Now, you might ask yourself why is it a plus a half and minus a half.
+&gt;&gt; Why is it?
+&gt;&gt; No, ask yourself, don't ask me.
+Well, okay, here's why.
+It's the average of the right derivative and the left derivative.
+And what I mean by that is, the right derivative would be a plus one here, and
+a minus one there, okay.
+The left derivative would be a plus one here, and a minus one there.
+If I wanted to average them, I would add them and divide by two.
+So, I add them I get minus 1, 0, 1, and then when I divide by 2.
+I get minus one-half and plus one-half, with a 0 in the middle.
+So that's why this thing that goes plus a half to the right minus a half to
+the left is the average of the left and right derivatives.
+Get it?
+Cool.
+
+14 - Sobel Operator 
+===================
+People have been doing derivatives and edges for a very long time.
+The most classic one is referred to as a Sobel operator, named after Leonard.
+I have no idea.
+It's named after some guy named Sobel.
+And the Sobel operator looks just like what I was showing you.
+But instead of one-half and
+minus one-half, it's got this weird thing where it's doing these eighths.
+And you can see that it does, not only plus 2 minus 2,
+which you would then divide by 4 and you get the same value.
+But it also does a plus 1 minus 1 on the row above me,
+and a plus 1 minus 1 on the row below me.
+And the idea here is, that if I'm taking a derivative.
+Remember how we said before we assume that our images are sort of
+locally this smooth, that is they change similarly?
+So the idea here is that if I'm going to compute a derivative at a pixel,
+I won't look just left, right at me, but also look nearby me.
+And then to normalize this thing, you have to divide it by 8.
+By the way, having just finished,
+almost finished teaching the course here on campus, we had a problem set where
+people were having a heck of a time that they hadn't had a problem with before.
+Turned out,
+somebody had discovered that MATLAB has a built in function called imgradientxy.
+And they said, could we use that function to compute the gradient?
+Since it was for part of a problem set that was more advanced and
+they had already done gradients, I said sure.
+And all the sudden people are having all sorts of problems.
+And the reason was, if you look up imgradient,
+it tells you that it applies the Sobel operator by default.
+Well here's the Sobel operator.
+Looks great, but you know what?
+It doesn't divide by 8.
+So all their gradients were scaled by a factor of 8 and
+it totally screwed up the entire class.
+A hundred people got screwed up because of this.
+So, now we tell them you can use im gradient, but you better divide by 8.
+Oh, by the way,
+the y one is here as well, and in this case y is positive going up.
+Remember, it can go in either direction.
+Alright, so the Sobel gradient would just be made up
+of the application of this sx and sy to get you these values.
+And the magnitude is just the square root of the sum of the squares.
+I should have said that gx is the application of sx,
+gy is the application of sy.
+So the magnitude is just what we did before.
+And here is the arctan2,
+the atan2 that we were talking about in order to get the gradient.
+So here's an ancient example.
+It's so ancient I know because that's X Windows, so
+that even predates when most of you were born.
+And here you have a picture on the left that's an image.
+Here is a gradient magnitude, so
+you just apply the Sobel Operator, take the sum of the squares, square root of.
+And then by the way you could just threshold it.
+And you'll notice two things.
+One, it's not an awful edge image and two, it's not a great edge image.
+All right?
+So we're like part way there.
+We're partly towards getting that done.
+
+15 - Well Known Gradients 
+=========================
+There are lots of well known edge operators.
+There's the so, Sobel.
+Then Prewitt and Roberts which you can see does these different kinds of ways.
+Matlab basically understands all of these.
+And in fact, in Matlab there's this cool little function now called fspecial,
+which will make filters for you depending upon the name that's in,
+might be in the imfilter toolbox only or, or basic Matlab.
+But the idea is that you can give it Gaussian, you can give it thing,
+you can give it Sobel.
+And if you give it Sobel,
+what it'll do is it will reply back this operator, okay?
+And in this case, by the way, turn everything into doubles in Matlab,
+if I apply that to some image, all right?
+So here's the double of my image,
+I apply the filter, and then I display it, and I use a gray color map.
+And you can see it gives me that gradient image, okay, and
+that's the y gradient only.
+It also will give you back the x gradient.
+
+16 - Compute Gradients Quiz 
+===========================
+Quick quiz.
+It is better to compute gradients using, convolution since that's
+the right way to model filtering so you don't get flipped results.
+B) correlation because it's easier to
+know which way is which which way the derivatives are being computed.
+C) it doesn't really matter.
+Or, d) neither since I can just write a for-loop and
+it'll compute the derivatives.
+
+17 - Compute Gradients Quiz Solution 
+====================================
+Well, this is a tough one.
+The answer is either b or c.
+Look, as long as you keep track of what's going on, it doesn't matter.
+You can do whatever you want, which case it would be c.
+Remember before I showed you those correlation operators that I'm
+doing correlations, because I want to know which way is the right way?
+So the right versus to the left.
+So I think when you're doing filtering for
+gradients, doing correlation probably works better for you.
+And by the way, so in the old days,
+we used to have to either call correlation or convolution explicitly in Matlab.
+Now we tend to use i m filter, as we've talked about before.
+I m filter by default does correlation.
+So if you want convolution, make sure you tell it.
+All right?
+So you just have to keep track of that.
+
+18 - Gradient Direction Quiz 
+============================
+Let's take a closer look at gradient directions,
+especially how they're computed and represented.
+How about we use an image that has clearly defined edges and
+distinct angles, like this?
+Note that we convert the image to double type after reading and
+scale it down to a 0 to 1 range.
+This makes it easier to track down numerical issues that may crop up.
+It also makes it convenient to display,
+because imshow assumes a 0 to 1 range for double images.
+MATLAB and Octave have a direct way of computing image gradients.
+Imgradientxy is the function, it returns a pair of matrices, the first
+one being the gradient in x direction and the second one in the y direction.
+I'm pretty sure that the default filter used is Sobel, but
+you can also mention it explicitly.
+Let's try to visualize the gradient images.
+But note that imgradientxy does not normalize the gradient
+images therefore we must scale them to the appropriate range.
+Now why do we need to add 4 and divide by 8?
+To understand this, let us consider this a bell operator which looks like this.
+Now what happens when this filter interacts with an image, or
+an image region, that is black on the left hand side and white on the right?
+All these negative coefficients, they get multiplied by 0 and cancel out.
+Whereas these positive coefficients get multiplied by 1 and some to 4.
+So the total response of the filter at that position would be 4.
+Similarly, an image region which has white on the left hand side and
+black on the right hand side would result in minus 4.
+So our gradient values are in the range minus 4 to plus 4.
+If we add 4 to each of these values, the range shifts to 0 to 8.
+Hence, dividing by 8 gives us a 0, 1 range.
+Enough with the math.
+Now what does this look like?
+As expected, in the x gradient image, you see the vertical edges show up.
+Similarly, you can view the y gradient.
+This time the horizontal edges show up more clearly.
+Note that on your local machines, you should be able to simply pass in
+the expected range and let imshow do the scaling.
+If you leave out the limit values and pass in an empty vector,
+then imshow will scale the image based on the actual minimum and
+maximum values found in the image.
+This can give slightly different results.
+For instance, say the minimum magnitude found was minus 3.5.
+This behavior is similar to what imgsc does,
+although that has other options for setting the color map, et cetera.
+Okay, now that we have the x and y gradients,
+we are interested in computing the overall gradient magnitude and direction.
+Fortunately there is a function to do this in one step.
+The magnitude return is the Euclidian norm of the gradient in x and
+y directions.
+As we saw earlier, each of those could have an absolute value of 4.
+So the total magnitude values can go from 0 up to 4 times root 2.
+And that's what we used to scale it by.
+This is what the gradient magnitude looks like.
+The edge pixels are not super bright,
+which kind of indicates that the edges were not as sharp, but that's okay.
+The edges are still distinctly visible.
+Remember that the gradient direction is an angle computed as
+the tan inverse of y by x gradient values.
+The result is returned in degrees ranging from minus 180 to plus 180.
+Where 0 degree corresponds with the positive x-axis, and
+increasing angle rotates counterclockwise.
+The right edge has gradient pointing at 0 degrees.
+Gradient values in the plain areas of the image are undefined.
+Since they have to be set to some number, they're also 0,
+which is why you can't see the gradient values along the right edge.
+As I mentioned, angles go counter clockwise, so this is 45 degrees,
+90, 135 interestingly,
+gradient pointing to the left is at 180 degrees, which is the same as minus 180.
+And here are the other angles for good measure.
+Now I want you to write a function that finds pixels with
+desired gradient direction.
+The function should be called select_gdir.
+The first couple of arguments are the gradient magnitude and direction images.
+The third is the minimum magnitude value we want to consider.
+This is to filter out noisy pixels that can have random gradient directions, but
+usually low magnitude.
+The last two arguments specify the desired gradient range, low to high.
+For instance, here we want to look at gradients in the 45 degree angle,
+with a plus minus 15 margin.
+Note that you need to return a binary image that can be displayed with imshow.
+Here's some code to get you started.
+
+19 - Gradient Direction Quiz Solution 
+=====================================
+Okay, the solution is actually a one-liner.
+Firstly, we know that we want pixels that have at
+least the minimum magnitude specified.
+We can use relational operators to directly compare matrices with scalar values.
+This is essentially a thresholding operation.
+Next, we use a pair of comparisons to say that gdir should be
+between angle_low and angle_high.
+Notice that the results of the three comparisons are combined using
+the element-wise and operator.
+And that's it.
+Let's see which pixels have a 45 degree gradient.
+Seems to work as expected.
+Notice that the line is thinner than expected.
+Not all the pixels with a gradient direction of 45 degrees have
+been included because the ones with low magnitude have been filtered out.
+Similarly, we can look at 0 degrees.
+Here we specify the range as minus 15 to plus 15, 90.
+Here's a negative angle, minus 135.
+Note the low and high values.
+180 degrees can be tricky.
+Something for you to think about.
+
+20 - But in the Real World 
+==========================
+So far, so good.
+Except that what I just showed you won't work.
+[LAUGH] And let me show you why.
+So in the real world.
+So here I have this little function, okay?
+And so this is f of x, right?
+And it's got some stuff, and then it takes a jump and
+it's got some more stuff over there.
+So that's intensity as a function of x.
+If I actually take the gradient of that function by just doing,
+say, a right difference.
+All right?
+What I'll do, I'll apply my derivative operator and I'll get this.
+And one might ask, where is the edge.
+Well, we can see here, the edge is really, whoops,
+I missed, the edge is right there.
+But in this mess, it's sort of hard to tell.
+And the problem, of course, is that we've added noise.
+And that noise has caused us to have positive and
+negative derivatives all over the place.
+So let's look a little bit more about the effect of noise on some of
+our derivatives and what we might do about them, okay?
+So, here we have again more of that striped duck,
+and here we have the gradient image.
+And what you can start to see is that as I add noise to the image,
+my gradient starts to fall apart.
+That is I'm starting to see this, I had this little bit of Gaussian noise and
+now I'm turning into these big salt and pepper noise.
+Oh it feels like salt and
+pepper noise, just these large spikes are happening within my derivative.
+So we have to handle that noise somehow.
+You probably know how to handle, how do we handle noise?
+We filter, we smooth, we get rid of it, right?
+We did that before.
+Come on, are you paying attention?
+Alright, so here's my image f.
+So now let me apply a smoothing kernel, h.
+Okay, so I'm just going to smooth it.
+So when I smooth it, I get this is h convolved.
+Doesn't matter whether you do convolution or correlation.
+H convolved with f, and you see now I get a nice, smooth function.
+So now that we've smoothed the signal, we can take the derivative and
+what you see is we get this nice, smooth peak.
+So, where is the edge?
+The edge is going to be at this peak right here,
+corresponding to that edge right there.
+So basically in order to find our edges, we're going to have to
+basically apply smooth gradients somehow and look for some peaks.
+Before we go ahead and
+do that, remember this whole notion of associate property and linearity etc.
+We can save ourselves an operation, because the derivative of h
+convolved with f, is the same as the derivative of h convolved with f.
+So what does that look like when we're doing this edge detection?
+It's the following.
+So here we have the same f that we had before.
+Now, I take my h, and I take the derivative.
+That now looks like this.
+When I apply that function directly to f,
+I get out the same value that I got out last time.
+Which has to be because of the associative property of linear operators, and
+derivatives and filtering being these linear operators.
+That also saves us an operation, because we can just take this filter and
+apply it and no more derivatives have to be done.
+All right, so last question, okay.
+So, we have these nice peaks.
+We have to find the peaks.
+We have to find the maximum of that derivative.
+How do we find maxima?
+We take more derivatives.
+So we're going to have to take another derivative.
+So now, instead of just doing a single derivative,
+we're going to take a second derivative.
+So, before h was just a Gaussian, this was our first derivative of a Gaussian.
+If we take the derivative of that again we get this,
+what's sometimes called inverted mexican hat.
+And you'll see that, when we do it in 2D,
+right, because it's kind of like this sombrero shape but up and down, right?
+When we apply that operator to the image,
+we get this nice zero crossing with this strong slope.
+And that's what corresponds to our edge.
+All right.
+And this idea of a stong slope zero crossing.
+We don't have to find general maxima, we just have to find any place where
+the value is zero and that nearby has a strong gradient.
+
+21 - Linearity Property Quiz 
+============================
+Alright little quiz.
+So which linearity property or
+properties did we take advantage of to first take the derivative of
+the kernel and then apply that and not have to do it the two steps before?
+a) associative, b) commutative, c) differentiation, d) (a) and (c).
+
+22 - Linearity Property Quiz Solution 
+=====================================
+Actually well it's d.
+We, we took the associative and the differentiation is linear and
+associative can be applied and that's what allowed us to take the derivative of
+the operator and apply that to the whole image.
+We'll talk a little bit, I guess next time,
+why that's a good thing to do sometimes.
+But its simplest explanation, let's suppose my image is 1,000 by 1,000.
+And pose my derivative, my, my smoother is 31 by 31.
+I could take the derivative of a 31 by 31,
+which is small, and then apply that to my 1,000 by 1,000.
+Or, I could apply my 31 by 31 to my 1,000 by 1,000 and
+then take a derivative of the whole 1,000 by 1,000 which would be a lot
+bigger operation than taking the derivative of a smaller filter to begin with.
+That's one of the reasons why, we do that.
+
+23 - End 
+========
+So that ends the lesson on gradients in 1D,
+and now what we'll have to do is do it in two dimensions.
+

@@ -1,0 +1,1303 @@
+1 - Taking over for Aaron - lang_en
+===================================
+Hello and
+welcome to the Computer Vision class.
+I'm Irfan Essa and I'm a professor here
+in the School of Interactive Computing
+and the College of
+Computing in Georgia Tech.
+This is a class on computer vision.
+It's aimed at covering the foundational
+aspects of how to analyze images and
+to extract content from images.
+That is, how can we build a computer or
+a machine that can see and
+interpret an image.
+First what do I mean by foundational?
+I mean that we are going to
+cover the mathematical and
+computational methods to provide
+you with core concepts of how
+can a computer be built
+to interpret images.
+Notice I am using the word interpret.
+In Computer Vision we are interested
+in extracting information,
+knowledge from an image.
+any want to go beyond processing
+an image to really knowing what
+is inside the image,
+what's the content of the image.
+So we will learn the math and the basic
+concepts how to compute with an image
+and extract information from it.
+So this class will have lectures,
+of course what is a class
+without without a lecture?
+All the video lectures are by my
+friend and colleague Aaron Balik.
+And I'm biased but
+I've known Aaron for a long time and
+I can tell you he's a great lecturer.
+He actually and
+seriously thinks he's funny but
+I guess I will let you
+be the judge of that.
+I've known Aaron for over 20 years
+now and we've worked together.
+I started at MIT and I learn computer
+vision early days at MIT also.
+And then we were both
+here at Georgia Tech for
+a while, until he decided recently
+to become Dean of Engineering
+at the Washington University
+in St Louis.
+So bidding him farewell, and
+since I really do love this material and
+Computer Vision, I've decided to
+take over this class from now on.
+So the video lectures are still
+going to be by Aaron,
+but I will now manage
+an able team of TA's and
+course developers over the term and
+will work with them to
+provide additional material like
+the assignments and exams for this term.
+I'll also be the one you will hear from
+on various communication channels for
+this class.
+It's now back quickly to a bit
+more about Computer Vision.
+Computer Vision is really
+about analyzing images and
+videos to extract knowledge from them.
+ostly these images are of real scenes
+like that of a street image with
+cars and such where autonomous vehicle
+they'll have to navigate through or
+it could be other types of images like
+that of an X-ray inside a human head and
+we need to do image analysis to
+be able to extract things about
+of interest in medical applications.
+So essentially the goal is image and
+video understanding which means
+labeling interesting things in an image
+and also tracking them as they move.
+In this class you will learn
+about the foundations of how to
+build systems that can do this
+kind of image understanding.
+In addition to math and
+the foundational theoretical context,
+you will also learn about doing
+a series of assignments to give you
+real hands on experience
+with computer vision.
+I look forward to seeing
+all of you online and
+engage with you as you learn
+this exciting material.
+
+1 - Taking over for Aaron 
+=========================
+Hello and
+welcome to the Computer Vision class.
+I'm Irfan Essa and I'm a professor here
+in the School of Interactive Computing
+and the College of
+Computing in Georgia Tech.
+This is a class on computer vision.
+It's aimed at covering the foundational
+aspects of how to analyze images and
+to extract content from images.
+That is, how can we build a computer or
+a machine that can see and
+interpret an image.
+First what do I mean by foundational?
+I mean that we are going to
+cover the mathematical and
+computational methods to provide
+you with core concepts of how
+can a computer be built
+to interpret images.
+Notice I am using the word interpret.
+In Computer Vision we are interested
+in extracting information,
+knowledge from an image.
+any want to go beyond processing
+an image to really knowing what
+is inside the image,
+what's the content of the image.
+So we will learn the math and the basic
+concepts how to compute with an image
+and extract information from it.
+So this class will have lectures,
+of course what is a class
+without without a lecture?
+All the video lectures are by my
+friend and colleague Aaron Balik.
+And I'm biased but
+I've known Aaron for a long time and
+I can tell you he's a great lecturer.
+He actually and
+seriously thinks he's funny but
+I guess I will let you
+be the judge of that.
+I've known Aaron for over 20 years
+now and we've worked together.
+I started at MIT and I learn computer
+vision early days at MIT also.
+And then we were both
+here at Georgia Tech for
+a while, until he decided recently
+to become Dean of Engineering
+at the Washington University
+in St Louis.
+So bidding him farewell, and
+since I really do love this material and
+Computer Vision, I've decided to
+take over this class from now on.
+So the video lectures are still
+going to be by Aaron,
+but I will now manage
+an able team of TA's and
+course developers over the term and
+will work with them to
+provide additional material like
+the assignments and exams for this term.
+I'll also be the one you will hear from
+on various communication channels for
+this class.
+It's now back quickly to a bit
+more about Computer Vision.
+Computer Vision is really
+about analyzing images and
+videos to extract knowledge from them.
+ostly these images are of real scenes
+like that of a street image with
+cars and such where autonomous vehicle
+they'll have to navigate through or
+it could be other types of images like
+that of an X-ray inside a human head and
+we need to do image analysis to
+be able to extract things about
+of interest in medical applications.
+So essentially the goal is image and
+video understanding which means
+labeling interesting things in an image
+and also tracking them as they move.
+In this class you will learn
+about the foundations of how to
+build systems that can do this
+kind of image understanding.
+In addition to math and
+the foundational theoretical context,
+you will also learn about doing
+a series of assignments to give you
+real hands on experience
+with computer vision.
+I look forward to seeing
+all of you online and
+engage with you as you learn
+this exciting material.
+
+2 - Difference between CV and CP 
+================================
+As some of you know, I also teach
+the computational photography class.
+One question always comes up.
+What is the difference between these two
+classes and the material covered in it?
+There is indeed some overlap
+between the classes,
+especially in the initial
+few modules where we
+learn about computing with images and
+extracting information from images.
+Computational photography is really
+about capturing a light from a scene
+to record a scene into a photograph or
+such other related novel artifact
+that showcases the scene.
+Image analysis is done to
+support the capture and
+display of the scene in novel ways.
+Some of it's actually about
+building newer forms of cameras and
+softwares to facilitate that process.
+Computer vision is really about
+interpreting an analysis of the scene.
+That is what is the content of the image
+of the scene, who is in there,
+what is in the image and
+what is happening.
+Needless to say, there is overlap and
+one can benefit from the other.
+I also enjoy both of them and
+I do work in research and education in
+both these topics because they're about
+building intelligence systems and
+about actually processing and
+analyzing images and photographs.
+I'm excited about it,
+I look forward to engaging with all of
+you on either, or both, of these topics
+
+2 - Difference between CV and CP - lang_en
+=========================================
+As some of you know, I also teach
+the computational photography class.
+One question always comes up.
+What is the difference between these two
+classes and the material covered in it?
+There is indeed some overlap
+between the classes,
+especially in the initial
+few modules where we
+learn about computing with images and
+extracting information from images.
+Computational photography is really
+about capturing a light from a scene
+to record a scene into a photograph or
+such other related novel artifact
+that showcases the scene.
+Image analysis is done to
+support the capture and
+display of the scene in novel ways.
+Some of it's actually about
+building newer forms of cameras and
+softwares to facilitate that process.
+Computer vision is really about
+interpreting an analysis of the scene.
+That is what is the content of the image
+of the scene, who is in there,
+what is in the image and
+what is happening.
+Needless to say, there is overlap and
+one can benefit from the other.
+I also enjoy both of them and
+I do work in research and education in
+both these topics because they're about
+building intelligence systems and
+about actually processing and
+analyzing images and photographs.
+I'm excited about it,
+I look forward to engaging with all of
+you on either, or both, of these topics
+
+3 - Introduction to Computer Vision Course 
+==========================================
+Hi.
+Welcome to the Introduction to Computer Vision.
+I'm Professor Aaron Bobick here at Georgia Tech.
+I'm thrilled to be able to teach this course in this medium.
+I've been teaching this for quite a while.
+I've been a professor for, oh my gosh, almost 25 years in computer vision.
+Spent some time at the MIT Media Lab, and
+I've been at Georgia Tech for the last 15 years.
+y own research has been predominantly in activity recognition.
+And now it's moved a little more to robotics in terms of vision for
+robots understanding people.
+But the basics of this course is,
+is to cover sort of the fundamentals of computer vision,
+to give you a background enough that you could just enough to be dangerous.
+So before we tell you more about the course, it's important that you meet
+a couple of other people who are responsible for the success of this course.
+And it will be a success or I'll be really, really annoyed and, and then people,
+see everybody's going to see this and they'll think really poorly of me.
+Anyway, the first person you have to meet is probably the most important person
+in making this a success, no pressure, is Dr.
+Arpin Chuckarvarde who is our course developer.
+Come on over, Arpin.
+So tell the good folks at home or
+sitting at their desks at work a little something about yourself.
+&gt;&gt; Sure I got my PhD from North Carolina State University in
+biologically inspired computer vision.
+&gt;&gt; What is, what is that?
+&gt;&gt; Oh you take human vision systems and animal vision systems.
+Study them, how they function and use those ideas in an artificial setting.
+&gt;&gt; Cool.
+And what made you want to do this course development work.
+Well I heard that Udacity is making this
+online computer vision course with Georgia Tech and I thought,
+this is a good way to use the knowledge I've put together over the years.
+&gt;&gt; Okay, great, well thanks, and
+you guys will be hearing more from Arpin as the time goes on.
+So the other really important person you have to meet is Megan Smith.
+egan is our video guru.
+She is the film person, the editing person, the production person.
+She makes my hair look non-existent and yeah, just makes everything look great.
+She also allows me to illustrate the difference between the illusion of
+power and actual power.
+See, the illusion of power is I can call Megan over and
+she'll probably come over and say hello.
+egan, come on over and say hello.
+Say hello to everybody.
+&gt;&gt; Hello. &gt;&gt; The reason I say that that's the illusion of power.
+The person who has the real power is Megan because she does the video editing.
+So, if she wanted to, she could make me look incredibly foolish.
+But, you would never do that, would you?
+[SOUND].
+Never.
+&gt;&gt; Uh-huh.
+Okay, well you'll be hearing from her sometimes when we ask some questions and
+she makes some interesting noises in the background.
+But I just wanted you to put a,
+a face with the beautiful melodic voice that you'll be hearing later.
+So thanks, Megan.
+All right, so that's the crew.
+And I think this is going to be a good time.
+I mean it's maybe, maybe, okay.
+aybe that's a little bit much.
+I think you'll enjoy the class.
+There is a lot to be learned.
+We can't actually cover all of computer vision, but
+we can sort of go over a whole bunch of the fundamentals and
+I think you'll learn a lot if you actually do the work.
+And it is a bunch of work, I don't want to, I don't want to pretend otherwise.
+But if you do it I think you'll come away with the ability to do
+things that you couldn't do before.
+
+4 - What is Computer Vision 
+===========================
+All right. So let's begin our trip down computer vision lane here.
+So the first question you might ask is, what is computer vision?
+&gt;&gt; What is computer vision?
+&gt;&gt; See, I told you you were going to hear from Megan.
+Well, there's a couple of ways of thinking about it.
+I like this slide that I borrowed from Steve Seitz,
+where he talks about every picture tells a story.
+And one way of thinking about computer vision is the goal of
+computer vision is to interpret images.
+That is, say something about what's present in the scene or
+what's actually going on.
+So, what we're doing is, we're going to take images in,
+and what's going to come out is something that has some meaning to it.
+That is, we're going to extract,
+we're going to create some sort of interpretations,
+some sort of an understanding of what that image is representative of.
+This is different, many of you may have some exposure to image processing,
+which is the manipulation of images.
+That's images in and images out.
+And we'll talk a little bit about that because you use image processing for
+per, for computer vision.
+But fundamentally computer vision is about understanding something
+that's in the image.
+
+5 - Identify Objects Quiz 
+=========================
+So as a thought experiment and actually as one of these arpin quizzes.
+That's what we're going to call these things, arpin quizzes.
+Here's a scene.
+So I want you to just take a look at that scene.
+And then you can stare at it as long as you want.
+Okay, you got it?
+And here's what I want you to do.
+Type in the little text box there as many items that you could label or
+identify as you want.
+ake sure when you do you type it with a comma separated list.
+That way the machine can understand what's going on.
+
+6 - Identify Objects Quiz Solution 
+==================================
+So, here you can see a list of items that were put in by somebody,
+not all that imaginative.
+No, it wasn't Art.
+It was somebody else.
+Really.
+You know, sofa, table, chair, things that were in the room.
+But notice, those are specific things.
+You could have said, wall, floor.
+You might've said that's a living room, that's probably a house.
+That's a modern house.
+Or you could have said that's the house of an upper-middle class family
+taken back in 1997 somewhere near Ohio.
+How you would know that I don't know,
+but maybe you know something about interior decorating.
+
+7 - Recognize Action Quiz 
+=========================
+That was cool.
+Picture, tell me what's in the picture.
+But those labels, you notice, those were all about sort of,
+static objects that were present in a single image.
+These days, especially with sort of the ubiquity of media,
+computer vision is not limited to just processing a single image.
+In fact, we can process a whole bunch of images such as a video.
+And video allows us to start talking about thinks like action.
+So to illustrate that, let's call back on Arpan again.
+Arpan, come on over.
+All right, Arpan, do your thing.
+So, here's a quick quiz, what did Arpan just do?
+
+8 - Recognize Action Quiz Solution 
+==================================
+Well, what Arpan just did is he flapped his arms like a bird.
+And not such a great bird, but a bird.
+Okay? And the question you might ask is, how would I get a computer to do that?
+&gt;&gt; How would I get a computer to do that?
+&gt;&gt; Well the good news is, at the very end of this class.
+We'll give you at least a few ways that you could actually think abut a computer
+processing video, that'll be able to recognize simple actions done by a person
+
+9 - Why Study Computer Vision 
+=============================
+If that’s computer is, vision is why would you want to study this?
+Well, I mean, a, you might want to get a Masters in
+Computer Science degree at Georgia Tech, and everything else was filled.
+And you got stuck with Bob, and well, so here you are.
+But there’s actually some really good reasons to do that.
+These days images and imagery have become ubiquitous in all of our technology.
+cameras, video, you can stream them, you can send them etc.
+So what's become fundamental to an awful lot of
+systems is the manipulation in the processing of imagery.
+And extracting information from that.
+There are domains such as surveillance.
+There are building 3D models for medical imaging.
+Or capturing for motion capture.
+These are all different current industries that leverage computer vision in
+a variety of ways.
+But most of all, the reason to do it is, it is just a really cool and
+deep set of problems.
+And it's way more fun that learning how to build compilers.
+And now, I have to go apologize to all my compiler friends, but
+they know it's true.
+
+10 - OCR and Face Recognition 
+=============================
+Interesting question is sort of what is the state of the art
+in computer vision now?
+What are things that are people doing with computer vision?
+How might that compare a little bit to the way humans do vision?
+Here is a, a simple example of stuff that, fact used to be sort of considered to
+be difficult, but is actually now pretty standard.
+So let's talk about simple optical character recognition.
+So here's an example from some license plate readers.
+And license plates are somewhat easier because there's a fixed font.
+In fact, not that long ago doing OCR was considered very hard.
+Today if you have a scanner, or
+if you have Adobe Acrobat, it comes with OCR built in.
+Because that's how ubiquitous and sort of easy it is.
+A little more challenging,
+many of you may have started using automated teller machines.
+Where you can deposit bank checks with hand written numbers that are the amount.
+And also, for quite a while the Post Office has been recognizing the ZIP
+codes using, machines.
+Again, on handwritten envelopes.
+So that's an example of computer vision extracting the meaning.
+What are the numbers that are there?
+Another thing that's very common these days is face detection.
+Just about any digital camera that you buy today, you pick it up,
+using the default setting, it will find the faces.
+So, here's an example.
+One of the cool things, by the way, is bunch of lectures in the future,
+we'll talk about the technology that basically does exactly this.
+So the next time, so when we get to those, you pick up a camera and
+it finds the faces.
+You'll say, oh, I know how they're doing that.
+But actually now, cameras can do more.
+I think the one on the left, I think is from the web,
+from Fiji, that if you take a picture of somebody, and they blink.
+You know, and that can be really annoying, it'll tell you they blinked.
+aybe even more interestingly, Sony has something called the Smile Shutter,
+which will watch for people.
+And you sort of press it, and say, take a picture now.
+But actually it waits until you, it sees the person smile.
+And even further these days, there are cameras that will recognize who you are.
+So this is a screen taken from a shot where it does camera based login.
+So it knows about a bunch of different people.
+You walk up to the computer, you say, yo, computer it's me.
+Actually you don't have to say anything, and the computer says, it's you.
+And it logs you in.
+So that's face recognition.
+We're going to talk also, a little bit, about face recognition.
+Although the face detection stuff techno,
+that technology is one that will be sort of more fundamental to the class.
+
+11 - Object Recognition 
+=======================
+In sort of a related way,
+there's a lot of technology these days involving object recognition.
+So there was this company.
+There is this company, Evolution Robotics, that had developed this thing called
+Lane Hawk, which basically prevented some of you.
+None of you.
+From putting stuff on the bottom of a basket and
+then wheeling it out and forgetting to mention to the cashier that it was there.
+This is actually a huge problem.
+And the system, you can see the camera here.
+Right, see, that's a camera down here, looking at this.
+I wonder if we're going to have to, like, erase that that's a beer.
+Yeah, you see, now nobody can see.
+Okay, you can't tell what that is.
+Okay. And it can detect what that is, which is not only pretty cool.
+But if you go on their website they'll tell you that five years later,
+that product was bought by a different company.
+So, there's money to be made in computer vision.
+Go do a really cool startup.
+Object recognition used to require a lot of computing power.
+It's, the computing power has gotten smaller.
+And it allows us to now operate in smaller packages.
+So, there's this whole area of augmented reality and
+object recognition by mobile devices.
+So, here's a system of where you, you're showing it a picture of this statue.
+It recognizes who this is and what the monument is.
+And here's an old picture from Nokia, where you can actually go off to the web,
+pull out information and display it to you.
+So for a while we were talking about doing this on smart phones,
+now it sits on your face.
+This is Professor Thad Starner, a Georgia Tech professor as well.
+He was instrumental in the developement of Google Glass.
+And one of the things that Glass does is you've got a camera looking out of
+what you're seeing.
+And can, through the same object recognition methods,
+can give you information about what you're looking at.
+And this is also part of computer vision.
+
+12 - Special Effects and 3D Modeling 
+====================================
+There's a area of computer vision people know a little bit less about.
+It's used a lot in special effects,
+everything from capturing the shape of somebody,
+so you take the scan of somebody's face, whether it's laser or otherwise.
+You build models, and then you can make lots of these people, and
+you can light them from different sides and
+different directions because you have a full 3D model.
+Likewise, motion capture, so if you saw Pirates of the Caribbean,
+the one with the, the guy with all the weird things on his face, and of course,
+you know, that's all CGI, but the question is,
+how do they know exactly where to put his face and everything?
+Well, that, there are these markers that are being worn that
+are being tracked by these cameras.
+And they have to figure out the three-dimensional geometry, and
+that's also a form of computer vision.
+Another area that's become but this is a shot from Google Earth actually,
+this is from Microsoft's Virtual Earth.
+Google Earth is yet another version of it.
+Where basically, they can take imagery, so here's imagery, aerial imagery.
+But also, they can use that to figure out the models of the buildings.
+Put those three-dimensional models in there, and
+then you can fly around them however you want.
+So that's a structure for motion method of using lots of images,
+a sequence, to recover the three-dimensional structure.
+We'll talk only a little bit about that.
+We'll focus mostly on a couple of images.
+
+13 - Smart Cars 
+===============
+Another area that you know,
+really blossomed lately is the use of computer vision for automotive.
+This is a,
+a website, web picture taken from Mobileye, which is a company out of Israel.
+And they've developed all sorts of technologies that use computer vision that
+are relevant to automobiles.
+Everything from automatically recognizing signs to,
+here it's a little hard to see, red outline.
+The system is automatically identifying where the pedestrians are.
+They have a system that alerts you if pedestrians getting close and
+you're, seem to be going too fast.
+You can also build systems that either brake or slow down or whatever.
+But the idea is that computer vision has really gotten into smart cars.
+And in fact, smart cars are here.
+So this car, some of you know, that is Stanley.
+Stanley was the Stanford.
+That's the little red S there.
+Entry into the Urban Grand Challenge run by DARPA.
+And it was started by.
+Stanley was run by this guy.
+What's his name?
+Oh yeah, Thrun something, I don't know Sebastian.
+He's the guy who also started Udacity.
+He's sort of a way under achieving, no ambition kind of guy.
+They won that.
+And then Sebastian, because he's just out there,
+convinced Google to get involved in the making the automobile process.
+The self driving car, which most of you have heard about.
+Here's a picture of it out on the highway.
+And the real mark that these things are here today is.
+States now have starting passing legislation that helps detail, well who's at
+fault if an accident happens on a particular road and it's a self driving car.
+So this is where technology starts to hit policy and economics, and
+that's when you know it's real.
+
+14 - Sports 
+===========
+Another big economic place for computer vision is sports.
+If you watch any sort of professional sports on TV,
+you see them leveraging computer vision sometimes in powerful ways,
+sometimes in simple ways but are really useful.
+So here, this is Sportvision first down line for American football.
+I say American football because sometimes when I go to Europe and
+I say football they think a ball is round.
+We know that footballs are not round.
+And what's interesting about this line here is this is the line that he has to
+cross to make a first down.
+Of course that's not on the field, it's drawn in there.
+The only interesting computer vision that's going on here is you'll notice that
+that line does not go through him.
+So the system had to separate out the player from the background, okay?
+And even though, by the way, kind of greenish color in there,
+it's able to separate the grass from the player.
+In fact, if you ever watch one of these games when it's rainy and
+it's an outdoor field and
+it gets all muddy, the first down line stops working so well.
+Because the grass is now mud and it doesn't look like grass anymore and
+it can't tell the players and the whole thing doesn't work so well.
+And you can see a computer vision failure right there.
+
+15 - Vision Based Interaction 
+=============================
+Something else that has really changed lately,
+is the pushing of computer vision down into video games.
+So one of the first places to do that was the Nintendo Wii.
+The remote control, there's actually a camera system built right into here, that
+tracks the two dots that are from the sensor bar and reports that information.
+But the real game changer in terms of computer vision being involved in games,
+was the Microsoft Kinect.
+The Microsoft Kinect is a depth sensor.
+And what I mean by that, is it can produce a scene like this, that is, it can,
+it can produce an image like this from a scene.
+And this is a depth image, right?
+So darker is farther away.
+And brighter is closer.
+And gray here is sort of in between.
+These white stripes, these are where the thing is shadowed.
+Don't worry about that.
+So from a technology perspective.
+From a raw technology perspective, most people think that
+what was important about the Kinect was that it created a depth image.
+But you will know better.
+No. The important thing about a Kinect,
+is that it can produce skeletal descriptions.
+Using a combination of machine learning techniques applied to computer vision,
+the folks at Microsoft and this came out of Microsoft Cambridge in the UK.
+Were able to recover the skeleton geometry of people from the depth image.
+And by the way, they do it instantaneously.
+Every frame, they do it differently.
+They don't even track it, they just do it one frame at a time.
+It's that robust.
+Right? And because they can get the skeleton information,
+you can build really cool user interfaces.
+So you could you know, do driving games and go like this, to steer your car.
+Now personally, I would get tired of that after a little while.
+But you know, if you're a prepubescent you know, maybe this is a lot of fun.
+uch more interesting of course, is playing with robots.
+And here you see, this is Simon, in Andrea Tomas' lab, here at Georgia Tech.
+And the reason that Simon is waving to this student, is that
+behind Simon over here, there's a Kinect that's looking at the student waving.
+And is getting back the depth information.
+Also the skeleton information is then interpreting the skeleton information,
+in terms of what the human is doing.
+And that in turn, allows the robot a decision about what the robot wants to do.
+So even though the Kinect was sort of promoted and
+invented as a way of impacting games.
+And early on, there was some uncertainty at Microsoft whether they wanted to
+open up that, system and let people use it.
+They quickly realized that this is something that everybody wants to use.
+And it has really revolutionized the way people think about depth imaging, and
+computer vision applied to depth imagery.
+
+16 - Security and Medical Imaging 
+=================================
+Finally, two more surveillance is a huge issue.
+This ideas of being able to monitor environment for
+crowd safety, a variety of reasons.
+These are screenshots taken from Siemens sells a system for
+doing port monitoring.
+Just to know whether, say, people are loitering, or
+vehicles are approaching that aren't supposed to be.
+This is also a computer vision.
+A more direct effect on a single individual with computer vision is work in
+medical imagining.
+Okay, so here you see an example.
+There's all sorts of 3D imaging, MRI, CAT scan,
+stuff like that, but here you see some work.
+This came out of Eric Grimson's lab a while ago at MIT where on a screen,
+a the computer vision system is registering the skull
+that's on the table with a model that has been created from the 3D imaging.
+So while, when the surgeon looks at this monitor, he sees the real person, and
+by the way, if there were a scalpel here, he'd see the hand with the scalpel or
+drill or whatever you're using to make a hole in the person's head.
+And where the various structures are underneath that you wanted to see, and
+that's also computer vision.
+Look, this is just a quick taste of the state of the art,
+hopefully, it inspires you.
+One of the things I want you to realize is that
+almost everything that I showed you here is less than ten years only, and
+in fact, many of them are less than five years old.
+So the field is rapidly changing, and
+there's a tremendous amount of opportunity in computer vision right now, so
+this is exactly the right time for you to take this class.
+So that you can invent some cool technology.
+ake, $3 gazillion and
+send a very large donation to the people who made it possible.
+
+17 - A Novel Application Quiz 
+=============================
+Quick!
+Put on your entrepreneur cap.
+Think of a situation, maybe from your own day-to-day life,
+where computer vision could be applied and maybe isn't quite yet.
+
+18 - A Novel Application Quiz Solution 
+======================================
+Obviously, there's no particularly right or wrong answer.
+With computing having gotten so small and powerful, and cameras being so easy
+to produce and cheap, you can start doing computer vision all sorts of places.
+
+19 - Why is This Hard 
+=====================
+Look.
+You opened your eyes sometime, you know, when you were really, really small.
+kind of fuzzy for a while.
+But after a while, you just saw.
+So you might wonder, you know, why is this hard?
+Let me give you a couple of examples.
+So here we have a, what you think of as a simple scene, and
+this was generated by Ted Adelson up at MIT.
+Allright?
+And you see on this screen, we've got this checker board here.
+And we've got this cylinder casting a shadow.
+All right?
+And there are light and dark squares.
+And you see these two squares, the A square and the B square?
+Which of those two squares do you think is actually darker?
+Okay. Well if you're like me you say, well duh, it's the A square.
+Okay that's, the A is dark, and B is light.
+aybe not so fast.
+All right?
+So here I have a gray bar, and
+this gray bar is the same intensity all the way down.
+And through the magic of Powerpoint,
+we're going to slide that grey bar over, and now we have a problem.
+There's no edge here, there's no edge there.
+That's a constant grey bar, right?
+That means squares A and B are actually the same color on this screen.
+Really. In fact if I put two of those bars there,
+you start to be able to see it.
+Let me go back and forth there.
+Do you see that?
+When there is only one bar,
+your brain just wants you to believe that that is a checkerboard.
+And that it, the cast shadow, and that that's the light square.
+If you actually took a photometer and you measured, you would see that are as
+many photons coming off of this region, as off of that region.
+But the photometer doesn't have your brain.
+It doesn't understand.
+No, no. no, no, that's actually a light square in a cast shadow.
+All right?
+This is why computer vision is hard.
+
+20 - Vision is NOT Image Processing 
+===================================
+So in that example, the thing to realize is
+those two squares that have the same measurement of intensity.
+All right?
+So seeing is not the same thing as just measuring image properties.
+In fact, seeing is called, we refer to it as building a percept,
+a build up a description in your head of what's actually going on there,
+based upon what's in the measurements.
+That can be illustrated in a couple of ways.
+Here's one, so this is a very, very old stereoscope.
+This is a slide borrowed from Michael Black.
+And we'll talk about this in detail when we do stereo.
+And if, and the, the stereoscope here is designed so
+that one image goes through one eye, and the other image goes to the other eyes.
+So, here they, here they are.
+If you take a look at those two images, this is the left image, and
+this is the right image.
+Left, right, left, right.
+It's the difference between those two images that lets your brain realize that
+the dad holding the kid is in front of the bed where the mom is.
+Okay, and it's that difference you're building that
+description from the difference between those images.
+So I'm going to show you a video now from Dan Kersten that shows you
+that perception is an active construction on the part of your head.
+So here, there's going to be this ball rolling back and
+forth, okay, and the ball's going to do the same thing, but
+the shadows are going to do something different.
+Ready, watch.
+Whoa.
+Okay.
+So let's do that again.
+So you see the ball, and the shadow goes with it, and
+you see the ball going to the back corner of the checkerboard.
+And now, we move the shadow sideways, and you see the ball lifting up.
+The ball did the same thing in both cases.
+All right?
+But your brain, because of the shadow, says the ball did something different.
+So again, that’s not a property of measurement.
+So here’s another example.
+So what you’re going to see is what looks like a green piece of paper or
+something on a checkerboard.
+You saw that green thing lift up.
+Right? You saw it come right off the checkerboard, right?
+Let's do it again, all right?
+Here we go, it comes up off the checkerboard, right?
+Just look at the top left-hand corner of that green thing,
+and you will see that absolutely nothing moves.
+None of the green pixels move at all.
+The only thing that moves are those darkish pixels,
+which your brain says is a cast shadow.
+So that means your brain had to pretend there was some illuminant up in the sky
+over here, making these shadows.
+And the only explanation is that the,
+the green thing came up off the, the, the checkerboard.
+So it's another example of your brain doing this construction.
+So the previous examples I was showing you,
+are in some sense the human system doing something wrong, right?
+The ball didn't actually change what it did.
+But actually, what happened there is that, there's ambiguity as to what the ball
+is doing, and your brain is creating the story, it is making the description,
+and the difference between straight image processing and
+computer vision is building that description.
+And we're going to show you some of the methods that you would use to help do
+that construction.
+
+21 - Course Overview 
+====================
+So let me give you a little bit of a course overview.
+To do that, let me explain sort of how the course is thought of, at least by me,
+and Arpin thought this was really good, and Arpin's really smart, so
+if he thought this was really good, maybe it's, it's good.
+You can think of computer vision as being a relationship between sort of
+three ways of thinking about what goes on.
+At the top of the triangle is the computational model.
+Often that's the math.
+The, and I'll use an example from stereo.
+So here we're showing you sort of the, the mathematics geometry behind, if you
+have multiple views looking at a point out there, how you could reason about it,
+and how what the math would be behind trying to find its actual depth, right?
+The idea, you know, here's its center of one camera,
+the center of another camera, here is some point, possibly here, here,
+here, and by matching, we're going to be able to figure out what the depth is.
+Once we have the math,
+we can develop an algorithm, so here's an example of doing stereo by
+what's called just correlating two patches along an epipolar line.
+Don't worry, you're going to learn what these things are.
+And computing say, the sum of square differences.
+Just how well they match and you would measure that, and
+the point at the minimum,
+that's what this bottom point here is, that would be the right match.
+And by knowing that match, I would know what the depth is.
+So that's the algorithm.
+And then the algorithm when we describe it to you in class or
+in lecture, the algorithm always works.
+But of course, the last point of the triangle are real images.
+And when you apply these algorithms to real images, you're going to find that,
+oh, you know, Professor Bobic, he just lied.
+[LAUGH] Okay.
+In particular, what you're going to find is that to make these things
+work requires some reasonable amount of experimentation.
+So we'll give you images in stereo, actually, we'll give you some scenes for
+which there exists ground truth.
+That is, you actually know what the right answer is.
+And the question will be, how close is your result to the right answer?
+The answer's going to be not really close.
+[LAUGH] Because you're going to be implementing a relatively straightforward
+stereo algorithm.
+And the reason there are more complicated stereo algorithms out there is because
+the straightforward one doesn't handle all the little issues that
+show up in a real image.
+This triangle of three ways of thinking about computer vision,
+computational models, algorithm, and
+real imagery, that's really, that triangle is how the course is structured.
+What we'll do is, we'll develop the theory,
+which will explain to you why it's possible to compute these things, and then,
+we'll show some algorithms that implement that theory by
+making certain assumptions or certain ways of going about handling the images.
+And then, you'll actually apply them to real images,
+which have all of their own mysterious properties.
+That's going to be, will talk more about, in a minute about the problem sets.
+The idea of the problem sets is to get you to understand sort of
+the interplay between the theory, the algorithm, and the images.
+
+22 - Topic Outline 
+==================
+The course itself is structured in these sort of ten overall units.
+Don't worry, they're not all as equally long and pedantic as this introduction.
+We'll start off early by doing some image processing because you have to
+manipulate images to do a variety of types of interaction with them later.
+And we actually have a problem set early on there that
+goes from image processing to getting some basic structure.
+Then we'll talk about the geometry of cameras and camera models, and what
+happens when you have multiple views and how you can relate them to each other.
+We'll get down to the image and talk about features, computing something about
+one image and figuring out where in the other image those same points occur.
+because once you can do that, there's a lot you can do in terms of
+thinking about either transforming images or computing geometry between them.
+We'll spend just a little bit of time talking about how images get formed in
+the first place, what we call lightness and brightness.
+How does light interact with material and
+then come to your imaging sensor in order to make a picture?
+We'll spend a bit of time talking about motion, remember we talked about not
+just static images, but we can actually have sequences of images?
+So the question of how things are moving can be looked at.
+And these are sort of separated into motion in the image, and that,
+that is sort of how the pixels change, and then tracking the object.
+And we'll focus a bit on tracking as well.
+Then we'll get to something which we're going to do just a little bit of,
+of classification and recognition.
+And some of you may be saying, aw that's disappointing.
+No, no, no, it's not disappointing, okay?
+A lot of classification recognition is deeply steeped in machine learning.
+So what we'll do is, we'll do some of it here, sort of some basic pattern
+recognition, and then computer vision applied to recognition.
+And then if you want to do more in the recognition universe,
+you'll have to learn some machine learning as well.
+The course concludes with just some extra stuff that is just useful to know,
+if you're actually going to do computer vision work.
+And then finally, because I can't help myself and neither can Arpin,
+because he has true inspiration from biological systems,
+we'll talk a little bit about how the human vision system works.
+
+23 - Course Details 
+===================
+As I mentioned, the core of the doing
+of this class are the problem sets.
+It says 8.
+The first one is a very simple thing
+just to make sure that you can get your
+images in, do some basic manipulation
+of the pixels, and submit them.
+It's a way of making sure the mechanics
+of everything are working for you.
+Then problem sets one through seven
+are actually to implement a variety of
+the algorithms that we talk
+about sometimes some simplified
+versions of them.
+Apply them to imagery
+that we'll give you and
+see what sort of results you can get.
+A quick thing also,
+we'll be using Piazza.
+Piazza is a social network thing for
+academics.
+I've been using this for
+a couple of years now in my
+class here at Georgia Tech.
+Is a great way for
+students to communicate about
+whatever's bothering them.
+Now what's bothering them?
+It's always the problem sets.
+Every now and then it's the lecturer but
+mostly it's the problem sets.
+And you'll see, you know, Piazza used
+and then all of the sudden the problem
+set is due and Piazza use goes like
+this and then it goes like that.
+So I encourage you strongly
+to use the forums.
+If you have a question,
+almost certainly somebody else
+has that same question too.
+So go ahead and post it, and
+somebody's going to say,
+man I'm glad you asked that question.
+Or, you may find they already asked
+that question, and either or I or
+somebody else has already
+answered that question.
+So I encourage you to
+actively use that forum.
+Whenever you have a sharing system
+like this, people always say, well,
+how much exactly are we
+allowed to share?
+And it's always a challenge, and
+here's what I tell students.
+Full blackboard or
+whiteboard collaboration is fine.
+So if you guys want to stand or talk to
+each other in front of a whiteboard and
+sketch out how the code works and
+what you had to do and how you had to
+change the parameters, that's great.
+What I want you to do, though,
+is write your own code.
+So, if you're posting an answer to
+Piazza, don't post big chunks of code,
+because it's just going to be too
+tempting for somebody to just take that.
+Post sort of what you had to do.
+If you don't write your own code,
+you won't understand why it is that
+certain things make things happen.
+I every now and
+then get a complaint from people,
+why is it that we're implementing
+things that just exist in libraries?
+And the real answer is,
+"so when it doesn't work,
+you'll know why." Because guess what?
+It often won't work in the library
+either or won't work as well.
+And then you'll have no
+understanding of what goes on.
+So, yes some of what you will do
+will say you're not allowed to use
+now that function A, B or C.
+We'll talk about that in a minute.
+And it's not just because it's good for
+your health right it's not
+just like you're eating spinach,
+it actually is important for
+you to develop some understanding
+as to how these algorithms work.
+There will be a final exam.
+It is not designed to be hard.
+It is simply designed to force you to
+go back and look at the material and
+just for a second time get it into your
+head, and it also allows us to ask some
+questions about stuff that didn't
+show up on the problem sets.
+Normally when I give the exam
+here it's a three-hour slot and
+it takes people an hour.
+But it just basically
+covers the base material.
+The grading, current rubric is
+that 85% of the grade is based
+upon the problem sets, which means 15%
+of the grade is based upon the final,
+and the other 10% of the grade
+is based upon how I feel.
+
+24 - Software 
+=============
+All right, so the last thing we have
+to talk about are the logistics
+of how you actually do the work.
+And essentially,
+there's going to be two places that
+you're going to be doing the doing.
+Well, three.
+First,
+there are these Arpin quizzes, where
+you just have to click on the dots or
+fill in the things, and usually those
+are just going to be making sure that
+you're not asleep while
+watching the videos.
+The real work's going to come in terms
+of doing some computer vision work.
+First, whenever we introduce
+certain image processing or
+computer vision types of new algorithms
+or methods, as often as we can,
+we'll produce some embedded
+programming exercises,
+which you can actually use while you're
+doing the videos and work within them.
+And in particular there, there may be a
+function that Matlab already implements.
+And so, you will play with the function
+in the embedded system that you can just
+use, so you might come to
+understand the different, say,
+the effect of the parameters.
+But then,
+when we get to the problem sets,
+you'll actually be writing some
+of these functions for your own.
+So let's talk about your
+own software environments.
+ost of the examples
+that I will describe and
+talk about come from using Matlab.
+I use Matlab normally when I teach here.
+I use the base Matlab, plus what's
+called the image processing toolbox.
+By the way, there is a computer
+vision toolbox also for Matlab.
+I don't make use of that in this course.
+It has some of the more advanced things.
+For what we do, we just need Matlab and
+the image processing toolbox.
+By the way, for any of you that
+are actual students with a student ID or
+academic affiliation,
+there is a student version of Matlab,
+which costs less than most
+computer vision textbooks.
+If you go to a company and
+you have to buy Matlab,
+it is a relatively significant
+piece of software to acquire.
+The fact that you as a student can
+get Matlab at a student discount, and
+by the way, the license never expires,
+you just get to use it, I highly
+recommend you go out and do that.
+And no, MathWorks has not
+paid me anything to say that.
+Really, honestly.
+Honest, I wouldn't kid you.
+But, if you don't want to do that, there
+is an open source version of something
+called Octave, and Octave is a open
+source, sort of equivalent of Matlab.
+And there's also image processing
+toolbox equivalent available for Octave.
+Arpin will give you a little more
+detail about exactly how to get that,
+in order to get that installed.
+But that's the examples, that's the sort
+of system that I'll be using as example.
+For some of you, you might rather
+do this using Python and OpenCV.
+OpenCV is something that
+originally came out of Intel,
+took a winding path through Willow
+Garage for a while, is now a part of,
+I think the Open Source Robotics
+something.
+It's moved into a not-for-profit,
+that's sustaining it.
+OpenCV has really enabled people to do
+a lot of image manipulation stuff in
+a robust way, from either Python or C++.
+When we give out the problem sets,
+if there's something special that
+you need to know about how to do
+it in Python/OpenCV versus Matlab,
+we'll describe both of them.
+And you can use either one of
+those programming environments.
+atlab tends to make
+things a little easier,
+things like plotting and clicking on
+images and seeing what's going on.
+Python and Open CV is a little more
+connected to what you might actually
+have to do out there in the job world,
+to actually produce
+computer vision code.
+
+25 - Matlab 
+===========
+If you choose to use MATLAB for
+this course, you will need base MATLAB along with the image processing toolbox.
+Head over to the MathWorks website and look for the latest release.
+Click Buy Online to see pricing options.
+We recommend getting a student edition.
+You can either choose the MATLAB and Simulink Student Suite,
+which includes the image processing toolbox, or, you can
+choose the base MATLAB portion, and the image processing toolbox separately.
+Know that you may need MATLAB or
+specific toolboxes for other courses, so choose wisely.
+Your institution may also have a volume licensing agreement with MathWorks.
+So find that out before you download it for yourself.
+Once you have MATLAB installed, try out a few simple commands.
+The command window is connected to an interpreter.
+This is where you will spend most of your time.
+You can type in arithmetic expressions that are evaluated on the spot.
+You can also create variables.
+Note how it printed out the value of the variable here.
+If you want to suppress that, use a semicolon at the end.
+You can also create vectors and matrices and run operations on them.
+You might have noticed this workspace being updated.
+It lists all the variables currently in memory and the value assigned to them.
+There is also a file browser that lists the files in the current folder.
+ATLAB has built-in functionality to read images.
+We will use the imread command.
+Note that you can use tab completion to make your life easier.
+Tab completion also works with file names in the current directory.
+You can display an image using imshow.
+The image processing toolbox contains several useful commands for
+working with images.
+One of these is rgb2gray.
+It converts a red-green-blue colored image into a grayscale or monochrome image.
+The MATLAB website provides great resources to help you get started, including
+code examples, webinars, and extensive documentation.
+
+26 - Octave 
+===========
+Octave is a free and
+open source language for numerical and scientific computing.
+It is mostly syntax and feature compatible with MATLAB.
+You can download it from the GNU Octave website.
+Follow the instructions for your corresponding system.
+Linux is probably the easiest, and Windows is a bit of a pain.
+I am on an OS X machine here.
+There is a binary installer for OS X.
+But I've had problems with it later on when trying to install packages.
+So I prefer the Homebrew route.
+If you don't have Homebrew set up already, first install XCode.
+Then open up a terminal and
+use the Xcode-select command to install command line tools.
+Now you can install Homebrew.
+You will also need a LaTeX distribution, like MacTeX.
+This may take a while to download.
+Once you have Xcode, its command line tools, Homebrew, and MapTech installed.
+Continue with the instructions on the wiki.
+Once you have Octave installed and
+it's in your path you should be able to run it by simply typing Octave.
+This is the Octave Interpreter.
+Similar to the Math Lab command window.
+You can type arithmetic expressions, create variables, and
+even work with vectors and matrices.
+To suppress the result of an expression showing up in the output,
+use a semicolon at the end.
+You can type exit to come out of the interpreter.
+You can also run Octave in GUI-mode.
+Note that this might still be an experimental feature, and
+tends to break very easily.
+You can carry out the same operations here as the console version.
+In addition you have a work space which lists the variables currently in memory.
+And a file browser showing contents of the current directory.
+As in Matlab,
+you can read images using the imread command and display them using imshow.
+The base installation of Octave does not include any additional packages.
+To install a package, we need to use the pkg install command.
+The -forge option pulls packages from the online Octave-Forge repository.
+Octave-Forge contains an extensive collection of packages.
+We are interested in the image package.
+Notice that this package has some dependencies.
+We can install the image package, along with all its dependencies, namely,
+general, control, and signal, in a single command.
+Once installed, they should show up in the list of packages.
+Now you can load the image package by typing pkg load image, and
+then use functions from it like rgb2gray.
+It converts a color RGB image into a gray scale or monochrome image.
+For more information on the image package, check out it's Octave Forge page.
+There is an extensive function reference that you'll need to use frequently.
+The Octave Wiki is very useful as well.
+It has installation instructions for a number of platforms,
+as well as tutorials and examples to help you get started.
+Play around with these to become more familiar with the Octave environment.
+
+27 - Learning Goals Quiz 
+========================
+To help inform us a little bit, what do you expect to learn from this course?
+Put it in the text box here.
+We'll collect them all.
+And as we go through them,
+it'll help inform just a little bit in terms of how we think about the answers
+to the questions and the discussions that we have on the forum.
+
+28 - End 
+========
+All right. So, look, that ends the motivation and sort of what computer vision
+is and why you might do it and how we're going to do it in this class.
+Arvid, you have anything else you want to add?
+&gt;&gt; Yeah.
+I just hope that you're excited about the course by now.
+To make sure that you don't listen to the entire course like a podcast,
+I'm going to step in with some annoying little quizzes.
+&gt;&gt; Annoying, huh?
+&gt;&gt; Yes. &gt;&gt; Oh, okay.
+&gt;&gt; They we'll find out.
+&gt;&gt; Okay.
+Arvid has been practicing all his life about how to be annoying,
+that's what his mother told me.
+So I think he's got it down.
+But anyway, it's time we get started, it's a bit of work but
+I think if if you do it, you'll learn a lot of computer vision, so
+let's strap ourselves in and just get going.

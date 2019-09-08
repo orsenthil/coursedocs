@@ -1,0 +1,852 @@
+1 - Intro 
+=========
+Up until now, we've really been doing really mostly image processing where
+you take an image in, sum of I of x,y and you apply some function to it and
+you get out a new image what I'm labelling is I prime of x,y.
+And that's great and there's whole courses, in fact, entire careers.
+Hundreds of thousands of PhDs written on image processing.
+But that's not why we're here.
+We're here to talk about real computer vision.
+In real vision you still take an image in, but what you get out is good stuff.
+All right, the whole idea is that we're putting images in and
+we're getting stuff out.
+So what are some examples of stuff?
+Well, maybe just a line.
+So here we have an image on the left and
+some edge description of it in the middle, and
+you can see a whole bunch of lines that have been found within this image.
+Or maybe you want to find circles.
+Actually it's a little hard to see, but there's a bowling ball there.
+And the way the bowling ball was found was find all the circles in the image.
+Well guess what?
+There's only one circle and that's the bowling ball.
+Or, here's some more circles.
+Just find the coins.
+And in fact I'll tell you that this particular picture was put
+together by a TI TA of mine a huge number of years ago.
+He's now a pretty famous researcher doing stuff on at I can't say where.
+But this was in order to show how to do a Hough transform on circles.
+And you might even find a good stuff as like.
+Find me this car.
+So you see on the,
+on the left here just some examples of where we might locate the car.
+But actually, the car is found right in the middle.
+Actually, this is a notion of an arbitrary shape.
+And in fact, we're going to get to how to do finding an arbitrary shape.
+Actually not this lecture, not this lesson, not the one after it.
+But the one after that, where we talk about a generalized Hough transform.
+
+2 - Parametric Model 
+====================
+Today we're going to focus on finding parametric models.
+And what we mean by a parametric model is that it's a, it's a class.
+It's a class, it's a model that represents a set of instances where each
+instance can be represented by a particular setting of the parameter or
+the parameters.
+So for example, a line is a parametric model.
+A circle is a parametric model.
+And, like I said, we'll even be able to talk about a parameterized template,
+where you have a template but
+you change it's shape according to the value of some parameters.
+So, when you're trying to fit a parametric model, or another way of saying is
+you're trying to find a parametric model inside your image.
+They're essentially a cup,
+there are a couple of things you have to keep in mind.
+The first is, what parametric model are you going to use?
+That is, you know, how are you going to represent,
+how do you go from the parameters to the thing you're representing.
+And in fact, today, we're going to show you that even for
+something as simple as a line, how do your parameterization matters.
+The other thing about this model, and
+this actually works to our advantage, is that the membership, or
+the notion that a little point in the image or an edge or
+a template belongs to a model, is not determined by just looking at that edge.
+You actually have to look at many different edges or look at the whole model.
+And that notion of extended support is something we're going to
+take advantage of.
+And then finally whenever you go looking for parametric model.
+You could just say well, if computers were infinitely fast, and
+every time we use one they feel like they're becoming infinitely fast.
+Well I would just check for every possible line in all possible places.
+Well, the reality is that even with really, really, really, fast computers.
+The number of possible models is really, really, really big.
+So it turns out you're really, really, really, I'm losing track here.
+Turns out you're a really fast computer,
+still, you have to worry about the combinatorics of your computation
+
+3 - Line Fitting 
+================
+Here's a simple example, okay?
+Line fitting.
+And you might wonder, you know, what's, why might I want to find lines?
+Well, you know, as the example shows here on the left, you might want to
+know that your chips are seated correctly, so you see the lines on the chips.
+Or this is the tower again for the University of Texas, and
+you find the edges, and you might just want to see whether or
+not you might be in the State Legislature, and you want to make sure
+the tower at the University of Texas is not leaning to the left.
+That's a joke for some of you.
+But we're going to assume, for
+now, that finding lines is something we want to do.
+So you might be wondering, well, wait a minute,
+we just spent a long time learning about how to find edges.
+Aren't we done?
+Can't we just find the edges?
+Well, if that were true, I wouldn't be standing here.
+So let's talk about the difficulty of line finding.
+So here's that same University of Texas tower, again,
+courtesy of Christian Gromen, and we've run an edge operator.
+And what I've done here is, I've pulled up a part of it just so
+we can talk about some of the phenomenon.
+So problem number one is that there's lots of points here that have nothing to
+do with the lines.
+So all these little edge points down here, these have nothing to do with
+the lines, so we have to be able to dealt with them efficiently and rapidly.
+Second, only parts of the lines are actually detected.
+So for example, here you can see that there's this big gap in the line.
+Even though what we'd really like to do is say that we found the entire line.
+And finally, there's noise and corruption actually where we do find the edge.
+So over here, you'll notice that in these lines across here,
+there's all this stuff that doesn't exactly lie on the line.
+You can see that pixels are jumping around here, as well.
+So we have to be able to go from these noisy measurements to
+where the edges are in order to find the actual lines.
+
+4 - Edge to Lines Quiz 
+======================
+All right, let's try to build some intuition about how to go
+from edges to lines.
+Remember that edge images are just collections of pixels, pixels like these,
+where possible lines could be found.
+How many lines can you identify in this image?
+
+5 - Edge to Lines Quiz Solution 
+===============================
+So you could identify lines in different ways.
+For instance, this could be a short segment,
+a longer segment to the right-hand side and a diagonal cutting across.
+Now this is a consistent set of line segments, which almost accounts for
+all of the edge points.
+But there are other possibilities.
+For instance, this long segment going right through and
+two shorter segments on either side.
+There's no single correct answer to this question.
+If you entered 2, 3, or 4, we would accept it as correct.
+Hopefully, this will give you an idea how finding line segments in
+an image is not a trivial task.
+This is especially true if you don't have any additional context and
+are looking at edge pixels individually.
+
+6 - Voting 
+==========
+As I said before, it's not feasible to check every possible line,
+even with a really, really fast computer.
+What we have to do instead is somehow allow the data to speak to us,
+allow the data to decide where the lines are.
+And because this is democracy, what are we going to do?
+Well, we're going to do something called voting.
+So, voting is a general technique where we let the features vote for
+all the models that are compatible with it.
+And the way it works is pretty straightforward.
+We cycle through all the features.
+Now, today for
+most of the features what I'm going to need is little edge points, all right.
+And each edge point is going to cast a vote for the model parameters or
+the different sets of model parameters that it's happy with or consistent with.
+And when we're all done, we look for the model parameters that receive a lot of
+votes and those are the parameter models that we are going to instantiate.
+Why does voting work?
+Well, voting works for the same reason that Mickey Mouse, Donald Duck, and
+Lara Croft are never elected governor of California.
+Angelina Jolie maybe, but not Lara Croft.
+You see what happens is,
+in every election there are people, there could be millions of people who,
+who are unhappy with the main candidates, the real candidates, if you will.
+And they'll write in some silly name, Mickey Mouse or Lara Croft.
+But, even if there are millions of silly votes, as long as they don't all put
+down the same, silly name, then in some sense a real candidate will get elected.
+And this will work unless, Stephen Colbert, or
+somebody like that tries to orchestrate an overthrow.
+But, in general, the idea is that these silly votes are all distributed across,
+sort of, the not important candidate.
+So this works the same way for our computer vision.
+Noise and clutter features will cast votes too, just like the real features.
+But typically their fo,
+their votes should be inconsistent with the majority of the good features.
+Also another nice thing is, even if part of the circle, say, is occluded and
+there are no features there to vote for it, because the rest of
+the circle has gotten a lot of votes, we're able to find the circle.
+So the example we're going to use today to start with is just on
+fitting lines, all right?
+And to fit lines, we're going to have to ask a couple of questions.
+First of all, given points that belong to a line, what is the line?
+That is, you know, which, which line are they picking.
+How many lines are there?
+And which points belong to which lines?
+Now we're mostly going to focus on the first question for this lecture and
+in fact most of what we'll do, but extensions to what we're talking about make
+it easy to do questions two, and three as well.
+So the, the method that we're going to talk about today is called the Hough
+transform, and
+it's a voting technique that can be used to answer all these questions.
+And the main idea is just that voting principle.
+Each edge point is going to vote for compatible lines, that is,
+it's going to vote for any old line that would go through it, and
+then you're look for the lines that get many votes.
+So there might be two, three, four lines, and, you can find all of them.
+And by the way, if you keep track of which points voted for which lines,
+you're also able to go back and say which points belong to that line.
+
+7 - Hough Space 
+===============
+So I'm going to take you through sort of how this works, and
+the key to the Hough Transform is Hough space.
+Here we have a line in image space.
+And you all remember the first equation, you solve a line somewhere in Mrs.
+Thompson's or Mrs. McGilacutti's or whoever your missus.
+Mine was Mr. Zebrow actually.
+He was also the football coach.
+I learned algebra from the football coach in junior high school,
+which is a very strange thing.
+Anyway so you remember that the equation line is y equals m 0 x plus b 0.
+So what we're going to construct is what's called Hough space.
+And it's really the Hough parameter space.
+And in lines in this representation we have two parameters m and b.
+So for this line y equals m0 x plus 0.
+That's represented at a location in the Hough space at m0 b0.
+So there it is.
+There's the point in Hough's space.
+Now the key idea here is that the line in
+the image corresponds to a point in Hough space.
+Okay, you got that?
+A line in the image corresponds to a point in Hough space.
+Now we're going to do something a little different.
+Suppose we only have one point in the image space.
+And we'll put that point here at x0, y0.
+Well, what are the equations of the lines that might go through that point?
+Well, in image space we know that the line that goes through that
+point is going to satisfy for whatever the m and the b are.
+It's going to satisfy the equation y0 has to equal m x0 plus b, right?
+That, in order for it to go through the point x0, y0 it has to have a m and
+b such that this equation holds.
+Well, with some very simple algebraic rearrangement,
+that becomes b is equal to minus x0 m plus y0.
+That's the equation of a line in m b space.
+In fact, it's a line with slope negative x0 and intercept y0.
+Okay, so the idea here is that a point in image space is a line in Hough space.
+This is the duality.
+Well, if we have one point, what happens if we have a second point?
+X1, y1.
+Well, that's going to be another line.
+Right? That's going to be a line with b equals minus x1 m plus y1.
+And so now here's the really cool question.
+What line would be consistent with both points?
+Well it has to be the point where these two lines in Hough's space intersect.
+because that's the m and b that's consistent with being on
+a line that goes through x0 y0 and on a line that goes through m1 b1.
+And this ladies and gentlemen, boys and girls and
+all you interested parties, this is how we're going to find lines from points.
+So, now we have to reduce this to an algorithm.
+We'll first do it graphically and then actually show the algorithm.
+So basically, every point gives me a line in Hough space.
+So what I do is, I create a grid, here it's of m and b, we're going to
+change that in a minute, which, which are made up of a set of bins.
+And every point votes for
+a line's worth of bins, so it casts a vote in every bin that it goes through.
+You collect up all the votes.
+And after every point has voted, and
+whichever bin has the most votes, that's your line.
+So this, basically, we're going to be casting votes into bins and
+then finding the bins that have, sort of a large number of votes.
+Larger than, sort of the average noisy area.
+Before we implement this in real code and real math,
+we're going to have to rethink our representation of lines just a little bit.
+You might remember,
+that there were some issues with the m b representation of ver, or lines.
+In particular for example a vertical line is really painful, right?
+Because m is equal to infinity and in 7th or 8th grade or 9th grade or
+12th grade algebra.
+The notion of having an infinite slope is kind of very painful.
+All right, so
+what we want to do is we want to use a more robust representation of lines.
+So that we don't have any sort of bad numerical problems.
+So what we're going to use is a polar representation for lines.
+
+8 - Polar Representation for Lines 
+==================================
+So in our polar representation,
+this purplish line here is going to
+be defined by two quantities.
+One of them is just this distance, d.
+This is the distance of a line to
+the origin, the perpendicular distance.
+It's the distant to the closest
+point on the line to the origin.
+And the second parameter, so
+that first parameter is d, and
+the second parameter's theta.
+which is just the angle,
+that this perpendicular makes with
+the x-axis, or if you want, you
+can have it be the angle that the line
+makes with the axis, doesn't matter.
+You just have to pick an angle.
+So basically what we have now is
+a polar representation of an angle.
+And a distance.
+In such a representation,
+by doing just a little bit of math,
+you can basically see that the dot
+product of any point on the line xy.
+Dotted with the cosine theta, sine theta
+location of this normal is equal to d.
+There's a lot of ways to do it but
+basically you can show that if you
+formulate it this way, that x
+cosine(theta) + y sine(theta) = d.
+So it's a lot, not a lot,
+it's a little bit ugly.
+Well, it's beautiful if
+you like trigonometry.
+It's ugly if you like algebra.
+It's a little bit more ugly than
+the y equals mx plus b formulation.
+But it doesn't have this problem that
+any of our lines are ill-defined.
+This is a perfectly fine way
+of representing any line.
+You can have any direction you want.
+Theta can go however it wants to go.
+And you can be,
+you can go right through the origin.
+D can be zero, or
+it can get as big as you need it to go.
+One of the interesting things now is
+if you take a look at this equation.
+If I know x and y, what I have
+left in terms of d and theta.
+Is a sinusoid, all right?
+Which is why we say that a point in
+image space is now a sinusoid in Hough
+space, and we'll see an example
+of that in a minute.
+See, before, we had this beautiful
+duality of a point in image space was
+a line in Hough space, and a point in
+Hough space was a line in image space.
+Well, because we've introduced this
+cosines and sines, it's still a duality,
+but it's no longer simply
+between points and lines.
+One other comment about this, there's
+a redundancy or an ambiguity here.
+Let me draw it to you this way.
+Here's d, so
+if d can only be positive, this line has
+to be able to spin all the way around.
+So theta would have to go from zero
+to two pi, zero to 360 degrees.
+But If d could be positive or negative.
+Then theta only has to
+go from zero to pi.
+Or zero to minus pi and
+how you draw that.
+The idea is you'd only need
+a 180 degrees worth of coverage.
+Which way you do it
+doesn't really matter and
+our algorithm will do
+it in a particular way.
+But there's just this trade-off
+between if you let d go positive
+to negative top has it negative
+then only it has to go zero to pi.
+In fact,
+you can restrict things even more
+if you make this be the origin of
+your image, the top left-hand corner.
+If you're going to say that your
+line has to be within the image.
+Okay?
+Then that restricts even more
+because it has to cut off that quadrant,
+so theta and d are restricted even more.
+But these are just choices that
+you make in terms of how you code
+up the algorithm.
+
+9 - Basic Hough Transform Algorithm 
+===================================
+So speaking of the algorithm, let's take a look at it.
+So we're going to use the polar parameterization of the line,
+the polar representation.
+And something called a Hough Accumulator Array, which is just a fancy word for
+the thing that's going to collect the votes.
+You're basically going to have an array, two dimensions in this case, that where
+the bins represent different values of d and different values of theta.
+One of the things you'll have to decide, and
+by the way you'll be implementing this, is how big are the bins?
+How many of them are there?
+So if it goes from 0 to let's say 0 to pi,
+well if you have every one degree then there'd be 180 bins, if you had ever
+10 degree there'd only be 18 so you have to decide how big the bins are.
+So given this equation and the Hough Accumulator Array, here is the algorithm.
+And I hope you appreciated that I tried to color code this.
+It looks garishly ugly but it tries to keep everything clean.
+So, the basic Hough algorithm is this.
+You initialize your accumulator rate to zero everywhere, then, for
+every edge point, aha, so we have to have a set of edge points.
+That is, at every place in x, y,
+we have to know whether it's an edge point, or we have a list of them.
+Somehow, we know which points are edges, in fact, how do we know we know that?
+Because we did that last time, right?
+So you know how to do this in MATLAB or Octave or
+your can write it in assembly code if you were really masochistic.
+So for each edge point x, y, what we do is, so here I use theta from 0 to 180,
+that's you know, supposed to be 1 degree increments.
+All right, solve for d.
+We just use that equation since we have x and y and
+we have theta we can solve for d.
+But notice, I'm not doing anything to restrict d being positive or
+negative here, so it could be positive, could be negative.
+And I have to then set H of d, theta, I have to increment its vote.
+So if d is negative, what that means is, what I really mean is,
+the bin of that d.
+So maybe my d goes from minus 100 to 100.
+So I would have 201 bins, if I do them by steps of 1, so
+if I got a minus 20, I'd have to add 100, that'd be 80.
+You, you get what I'm saying, right?
+The, the d value goes into its bin, so
+the bin of that D value gets incremented by one.
+After you've done all the voting you find the values of d and
+theta, where H of d of theta is a maximum.
+So you want to find these peaks.
+By the way, MATLAB there's a function called Hough Peaks, which by the way,
+you're not going to be allowed to use,
+because you're going to have to write your own peak finder.
+All right.
+Well anyway, let's assume you found just one d in theta, well the,
+the line itself would be d is equal to x cosine theta minus y sine theta.
+Get it? That's all there is to finding these lines given the edge points.
+
+10 - Complexity of the Hough Transform 
+======================================
+So we did an algorithm.
+Whenever you do an algorithm,
+you just need to think about things like how well does it work?
+Well, obviously it work great, because I'm telling you about it.
+No, but we'll, we'll see that in a minute.
+More importantly for algorithms we have to talk about things like complexity.
+So the first question is, this is the easy one.
+What's the space complexity?
+That is how much memory do I have to use?
+Well, forgetting the image for
+a moment, the bottom line is I need k to the n bins.
+All right?
+So if I have k bins in each dimension, it's k to the n is the number of bins.
+So we were doing this in two dimensions, so it would be k squared.
+So, you know, if I have about 100, so it's about 10,000 maybe.
+That should tell you and this is going to come up in our next lesson,
+that adding the number of parameters,
+which increases n in this case can be very expensive in terms of memory.
+In fact, also in your problem set, you're going to try to do something and
+you're going to grow up MATLAB and
+then you're going to figure out how to fix it.
+What about time complexity in terms of the voting?
+Well, the nice thing is that the voting is linearly proportional to
+the number of edge points.
+You run through your edge points and they each vote.
+And the voting maybe might take a little bit of time, but it's constant.
+All right?
+Compare that, let's say, let's suppose you're trying to fit a circle.
+Okay?
+So a circle is defined by three points.
+So if you have some large number of edge points,
+the number of triples is that number, let's call it q.
+Q choose three would be a very big number, right?
+Whereas if you do something that's proportional to just q,
+you're in much better shape.
+So the idea here is that the time complexity is constant in the number of
+features or edge points that you've detected.
+
+11 - Hough Example 
+==================
+Let's take a look at some examples, some toy examples and
+then some real examples.
+Here we have a cartoon example of an image on the left that just has a bunch of
+dots in it and those dots happen to all lie on a line, which is good.
+So this is a noise-free Hough example of which there are none in
+the real universe, but I made, I've got one here.
+No, I was about to say I made one, no, I stole this one.
+Others I made, these I stole.
+So on the left here,
+in image space, we have a bunch of points that all lie on the line.
+And they lie on a perfect line, so that's how you know this is a cartoon
+example, because that never actually happens for real.
+What we have on the right are the votes.
+And what you can see here is that each dot is creating a particular trace.
+And you'll notice that those are parts of sinusoids.
+Kay, here's another one.
+And that comes from that equation that I was saying before.
+And what's most important is all the votes over here line up.
+And that's how we would know that's where the line is.
+See?
+So cool.
+All right, suppose I showed you the picture of a square.
+All right? And I ran an edge detector on it.
+What would you expect to see in Hough space?
+Well let's see, how many lines do we have in a square?
+That you learned hopefully before seventh grade.
+There would be four lines, okay, and you would get a Hough accumulator array,
+a bonding thing that looks like this.
+And here you see that there are four peaks.
+It's a little hard to see sometime in the image, but
+the idea is that the values there are much higher than the values elsewhere and
+you can see how the votes overlap.
+So here you would know that there are four lines and
+you'd be able to pull them out.
+Okay?
+Here's another blocks world scene.
+You can see that there's a bunch of edges there, and here's the Hough array, and
+you see there's sort of sinusoids dancing all over the place.
+Here by the way you see one really big, bright spot.
+What's that spot going to be?
+Well, that's going to correspond to this nice, big, long edge.
+There are other spots.
+And that makes sense because there are other lines.
+But this big bright one is going to be the longest one.
+Because it has the most votes.
+
+12 - Hough Demo Intro 
+=====================
+We'll take a minute here to do a little demonstration of
+using a Hough transform that's built into MATLAB.
+And I'll repeat, on your problem set, you're going to be doing some Hough code.
+And you're not to use the Hough implementation that's already there.
+Nor anybody else's Hough implementation that you have from the, from the web.
+Because it turns out when you go and
+write your Hough implementation certain things are going to break.
+And it's in that experience of it breaking that you're going to learn what
+the important elements of it are.
+
+13 - Hough Demo 
+===============
+To detect lines in an image,
+we first need to find edge pixels.
+So let's load an image,
+convert it to grayscale, and
+find edge pixels using
+the Canny Operator.
+Let's see what these look like.
+Here's the original image.
+As you can see, it has some lines in it.
+The grayscale version, and edge pixels.
+Now we'll apply the Hough
+transform method to find lines.
+For this we'll use the Hough
+function in MATLAB.
+Find out more about this function
+in the MATLAB documentation.
+The equivalent function
+in Octave is houghtf.
+The first returned value
+is the accumulator array.
+The second is a vector
+of theta values or
+angles and third is a vector
+of radius values or rho.
+Let's see what this looks like.
+We pass in the theta and
+rho values to properly label each axis.
+Rho or distance from origin
+is along the y axis.
+And the angle, theta, is on the x axis
+ranging from minus 90 to plus 90.
+Okay, so let's find the peaks
+in this accumulator array.
+We pass in 100 as the maximum number
+of peaks we are interested in.
+Note that a similar function called
+immaximize needs to be used in octave.
+Let's plot these peaks on
+the hough accumulator array.
+Note that we need to use the theta and
+rho values to plot the peaks correctly.
+The peaks are marked by small red boxes.
+The size of the peaks matrix is 13 by 2.
+13 peaks were found.
+Each row contains
+the location of a peak.
+The first column has row values,
+or y values.
+And the second one has x values.
+Using these peaks,
+we can find line segments using
+the hough lines function in MATLAB.
+It looks like 28 line
+segments were found.
+Each element in line_segs is
+a structure where the two end points,
+the theta and the rho values.
+Let's plot these line segments.
+As you can see, most of the longer
+line segments have been detected, but
+a lot of spurious line
+segments also show up.
+Okay, so how can we get better results?
+Let's take a look at
+the edge pixels again.
+We notice that there are breaks along
+the longer lines in some areas.
+There is also this dense grouping of
+curves that could throw the Hough
+detector off.
+To find a set of cleaner, or
+more meaningful lines,
+we can do multiple things.
+For instance, we could increase
+the threshold parameter for hough peaks.
+To understand what
+these parameters mean,
+let's look at the documentation for
+this function.
+So threshold is the minimum
+value in the accumulator array
+that is the minimum number of pixels
+that support a line required for
+that line to be counted
+as a valid candidate.
+Any possible lines with less
+pixels will not be considered.
+Here we set it to be 0.6 times the
+maximum value in the accumulator array,
+the default being 0.5 times max.
+Neighborhood size defines
+the region over which
+local maxima will be computed.
+Note that this is not
+a region in the image.
+We are computing local maxima
+in the accumulator array, so
+the size of the neighborhood is
+defined in rho and theta dimensions.
+A neighborhood size of five degrees
+along the theta dimension means that
+a strong line will suppress
+other lines that are similar but
+slightly off in direction.
+Recall that we found 13
+peaks in our last attempt.
+This time we have only seven peaks.
+Let's see where these peaks are.
+Looks like we might have
+cleaner results after all.
+Let's compare this with
+the previous accumulator peaks.
+We see that a lot of
+the previously found peaks in this
+dense region are now gone.
+The new peaks are clustered
+around three major locations.
+Okay, what more can we do?
+We could play with
+the parameters of houghlines.
+How about we increase
+the fill gap parameter to 50?
+This is the maximum number of pixels
+allowed between two segments for
+them to be counted as one if
+they lie along the same line.
+To focus on longer lines, let's increase
+the minimum length to be 100 pixels.
+For a better understanding
+of these parameters,
+take a look at the documentation for
+houghlines.
+Okay, let's see what
+the new segments look like.
+Compared with the previous results,
+we see that the false positives
+have been mostly removed.
+Some of the previously broken
+segments have also been joined.
+Obviously you can do a better job
+by playing with the parameters,
+especially here.
+So feel free to play with
+the huff transform functions.
+
+14 - Hough on a Real Image 
+==========================
+Here I'll show you an example of Hough running on
+a real image to show you that what it does well and what it doesn't do well.
+This is a picture of an American football field.
+This is American football, you know, played with a ball that's not round.
+We run an edge detector of some flavor, and we get out these edges, and
+those are some interesting looking edges.
+And then what we do is we run that through a Hough accumulator array.
+You can see the sinusoids here, sort of spread out, but
+you're seeing that these, these squares are all of these peaks that were found,
+and this is using some code that tries to look for peaks.
+So you'll notice that a whole bunch of them are very close together, right?
+So being very close together would mean that they're about the same angle, and
+that they're approximately in the same location.
+Same angle, same location, well, yes, I mean, here are lines that are the same
+angle and about the same location in here, and here, and here.
+And even here, about the same angle, about the same location.
+So you would expect to find peaks that are nearby.
+So I'm showing you this peak image here.
+If I were to draw the lines associated with each one of these peaks,
+I would see something that looks like this.
+So, there's good news and bad news on here.
+The good news is that it found an awful lot of line segments.
+Okay, you'll notice it also missed a bunch.
+Okay, why is that?
+Well, that has something to do with the nature of the edges that were found in
+the bins in the voting.
+These are all details that are going to matter in terms of how
+well you find the edges.
+You'll also notice that there is this cyan line, here, and
+that's the longest line segment found.
+Now, somebody should be saying, wait a minute, line segments?
+What do you mean by line segments?
+&gt;&gt; Line segments?
+What do you mean by line segments?
+&gt;&gt; Well, in the Hough transform, when you find a theta and d, or an m and b,
+for that matter, that's an infinite line, right?
+That, that's a line that goes as far as you want to,
+certainly goes through the entire image.
+If you want to find the line segments, of the points that voted for that line,
+and just connect them or just connect the two that are furthermost away.
+Or do some other operation of running along that infinite line,
+seeing if there's an edge point near there or anywhere near there.
+So you have to do some other operation besides the voting we just showed
+in order to find the line segments.
+The good news for
+you is that in your problem set, I just want you to find the infinite line.
+You don't have to worry about finding the line segment that's actually
+supported in the image.
+
+15 - Impact of Noise on Hough 
+=============================
+Couple little things to look at remaining.
+The first is the impact of noise on the Hough transform.
+So here what you can see is an image on the left where we've taken that
+same cartoon set of dots and we perturbed them a little bit off the line.
+So we've added a little bit of noise to their location.
+On the right, you see the Hough votes.
+And you'll notice that now, the peak, not so precise.
+And in fact, if we had very, very fine bins, we might miss that peak altogether.
+So, in a minute we're going to talk a little bit about changing bin sizes,
+with respect to noise, as a, a way of making the thing work.
+But, what happens is that small amounts of noise can bump you off.
+So by the way, one really kind of cool thing you could do,
+if you wanted to find sort of the general peak over here, what might you do?
+You might smooth this image, right?
+You could actually take a,
+say a filtering of that as an image, then find the peaks.
+And now you know you've moved the peaks around a little bit because
+you blurred it.
+But now you at least found the peak, and you say, I'm going to do
+the Hough transform again, but this time I'm going to just focus on that area.
+Okay, so I'm going to build a new array with much finer bins but only there, and
+if d or theta are outside there, I'm not even going to count those votes and
+that would let you go from a noisy image to, to a better one.
+There's actually another problem.
+What happens if we have a lot of noise?
+Like, suppose all we have is noise.
+Here on the left, what you've got is a bunch of points that are put down,
+that are just randomly put there.
+And on the right, everybody gets the vote.
+Lara Croft or whoever you want.
+Go ahead and vote.
+Turns out there were no real candidates.
+But maybe we don't know that.
+You can accidentally find peaks.
+So sometimes you have to worry about,
+is the peak that I'm finding actually real or not?
+It's helpful if you already know, let's suppose you know there's six lines in
+the picture, well then you just find the six highest peaks, but
+if you don't know how many are there, you have this question of, when is a peak
+a real peak and when is it just the accidental alignment of votes?
+
+16 - Extensions 
+===============
+To conclude this lesson,
+I want to talk about a couple of extensions to the Hough transform.
+And then some of these extensions are going to carry over,
+both to the next lesson and the one after.
+By far, sort of the extension that people leverage the most is the one
+shown here using the gradient.
+You'll notice that our algorithm is almost exactly the same.
+We initialize our accumulator array.
+We iterate over each point, but now instead of looping or
+iterating over all possible orientations, we actually take
+the gradient at that point, and we take theta from that gradient.
+Now you could take a single theta, or you might even take a range of thetas,
+where you say, well, I know that it's,
+you know, approximately 45 degrees plus or minus 10, so I'll vote for
+minus 35 to 55, but I don't have to worry about voting for all the others.
+I've written it here as if you've got a single value.
+Now that you have theta, you can solve your equation directly,
+just as we did before, and we increment our accumulator array.
+The nice thing is, is that by using the gradient,
+you've reduced the voting time hugely, right?
+You don't have to worry, you just have a single point.
+Also, later, you can use it to reduce the dimensionality.
+So this is the extension that people make use of the most.
+In fact, the whole notion of orientation is something we'll talk about more
+going forward.
+A few other extensions.
+One is well, remember when we were doing edge detection,
+we said that some edges had stronger magnitude than others.
+And you have to set a threshold.
+Well, you might lower that threshold a bit to try to get more edges.
+But the idea is you might want to count the edges with a higher threshold more.
+Well, what would it mean to count them more?
+Well, you could imagine that stronger edges would get more votes.
+Another extension, and this is similar to what I was talking about before is,
+is playing with or changing the bin size of theta and d.
+As we said before, big bins make it easy to, first of all, vote, it's fast.
+But you sometimes can get similar lines landing in the same bin.
+To find a bin, and you have this problem that the real line because of
+noise votes for different bins, so extension is to do this hierarchically.
+First, do a coarse binning where you,
+you, have sort of larger bins, bins that capture more values.
+Once you find peaks there, you then go to finer arrays just within those areas,
+and you, you improve your recovering of the model.
+And finally, it's not just an extension, but
+it's a whole new way of doing things.
+We did this for lines, but you can do this easily.
+I shouldn't say easily.
+You can do this pretty straightforwardly for
+other parameterized types of shapes like circles, which,
+in fact, we will be doing in a little bit, oh, and you'll be doing as well.
+Or actually,
+any other shape including shapes that are defined by their templates.
+
+17 - End 
+========
+So that's the end of this lesson.
+You will undoubtedly go back and
+look at this pretty carefully since this algorithm and the manipulation of data
+sets are going to serve as the basis of the first part of the Hough problem set.
+And when you look up this stuff on the web,
+which many of you will you'll want to relate that back to what we've seen here.
+And I'll tell you this,
+implementing the Hough transform feels relatively straightforward.
+That's why people, when it was on a course where the problem set was
+due Sunday night at 11:55 p.m.,
+many of them started at around 6:00 p.m.
+They later reported that it
+took them more like ten hours to do this problem set.
+And that's because the extensions and so, etc.
+Nothing quite works exactly like I say it does.
+That by the way, is going to be a lesson of this class.
+The papers, first, what we say in class never works.
+because it's a distillation of the simple stuff.
+What we say in papers hardly ever works,
+because we have to make it very you know, sound great for publication.
+In reality, stuff works, you take the theory and
+then you have to massage both the imagery and the al and the algorithms.
+
