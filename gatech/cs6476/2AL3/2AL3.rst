@@ -1,0 +1,779 @@
+1 - Intro 
+=========
+Welcome back to computer vision.
+today, we're going to continue talking more about filtering and
+sort of finish up the basics about that, so
+then next time, we can apply that to more complicated uses of filtering.
+And we're going to start by developing some linear intuition.
+And the reason linearity is important will become clear in a minute.
+Let's do a little intuition.
+So an operator, we'll call it H,
+or a system, is called linear if two properties hold.
+And for what I'm going to show now both f1 and f2 are going to be functions, and
+a is going to be a constant.
+So the first property is called additivity,
+which is basically just that the things sum.
+So if I have some operator, and I apply that to the sum of the two functions,
+f1 plus f2, I just get the sum of the operator applied to each of the function,
+looks a lot like the distributive law of addition and
+multiplication, but that's additivity.
+And the other one, which is sometimes called scaling property, but
+is actually technical term I think is homogeneity of degree 1, is just that if
+you multiply your function, in this case, f again, by a constant a, and
+then apply H, what you get is a times H applied to f1, and so when you
+multiply by a constant, that constant just propagates through in a linear way.
+We do some multiplication, and then we sum them, and because multiplication and
+addition both have these properties basically,
+the filtering operations we're going to do are going to be linear.
+And we're going to take advantage of that later.
+
+2 - Linear Quiz 
+===============
+Question.
+Which of these are not linear?
+a) the sum, b) the max of a function, c) an average,
+d) a square root, e) (b) and (d)
+
+3 - Linear Quiz Solution 
+========================
+Okay, well that's pretty straight forward.
+A sum, well a sums are sums are sums.
+You know that's linear it's going to do the right thing.
+A max of course doesn't change, right?
+If I've got two functions and I'm taking the max it's determined by, sort of,
+the single biggest value and the rest of the function doesn't matter.
+And of course square root,
+well that's not going to be linear because square roots are never linear.
+I think you can figure that out.
+
+4 - Impulse Function and Response 
+=================================
+What linearity is going to allow us to do is to build up a signal or
+a function, remember an image, a piece at a time and
+then be able to say how a linear operator affects that whole image.
+Right? Because, basically the way both linearity allows us to say is if I
+could sum up a bunch of things to make an image,
+then if I apply a linear operator to that whole image, it's going to be
+the same as the sum of applying that linear operator to each of the pieces.
+And it let's us talk about things in an effective way.
+So, to do that we need sort of these building blocks of a function.
+And the building block of functions is what's referred to as an impulse.
+And the impulse function in a discrete world is very easy to talk about.
+It's a single point with a value 1, and it looks just like an impulse.
+In the continuous world, an impulse is a little bit trickier because what
+does it mean to be sort of at a single point width, you know,
+it would have some amount 1, and that's where you have to turn on your calculus
+hats just a little bit, no, I guess you put on your calculus hats, right?
+And an impulse is actually a small, little signal whose area is 1.
+Okay? So, and as the thing gets narrower and narrower in width,
+it has to get taller in height in order to maintain that same area.
+And in the limit what you get is an impulse.
+So it's got 0 width and infinite height, but it's,
+it's integral, it's area is 1, and that's what's referred to as an impulse.
+We're going to mostly stay in the discrete world, so
+we won't have to worry too much about that.
+So the, the cool thing about an impulse is the following.
+Suppose I've got some sort of a system, a black box.
+So it's a function H, right?
+So, sorry, it's an operator H.
+And we don't know, actually, anything about it.
+But if I put in an impulse, okay, so
+I put an impulse into the system, I can see what comes out.
+By the way, that response is called the impulse response.
+Not, not all that clever, right?
+So what's really cool is, if I know what the impulse response
+of some black box H is, maybe we'll call that h of x, okay.
+I can describe what this operators going to do by h of x.
+The reason that works is the following.
+Since any sequence of pulses here, and we're going to do this in 2D in a minute,
+can be described by just adding in a shifted set and
+scaled set of those single impulses.
+If I know how this black box effects just the single impulse.
+I'll be able to say how it affects the entire image.
+Okay?
+And that's why impulse responses matter.
+
+5 - Filtering an Impulse Signal 
+===============================
+So, let's take a look at what an impulse response looks like in an image.
+So here we have an impulse.
+Okay, and so, here's our impulse, right?
+It's just a single pixel with a value of one, okay?
+And we're going to filter it with some kernel, h, okay?
+Remember kernel mask,
+thing that we're moving around in order to make our filter, so we have our H.
+So the question is, what is the output?
+And again, I want to thank Christin Gramen for having made these slides so
+I can change them, steal them, move them around.
+So first I put down my filter, and
+you see my filter's over here like this, right?
+So it doesn't hit that 1 at all, and so its value is just going to be a 0.
+Fine, no big deal.
+All right.
+Now, move the filter over a little bit.
+Well, it just pulls out the f here, right, so this
+pixel right there pulls out the f so an f goes right there, in, in my result.
+Move it over one more time, what do I get, I get the e.
+Move it over one more time again, what do I get, I get the d.
+So, you notice that even though the filter goes D-E-F, left to right.
+In the image, what comes out is F-E-D, going the other way, and
+that's just because of how this correlation pulled it up.
+And it won't surprise you that it, not only does it flip it left and
+right, it also flips it up and down.
+And that's what happens when you do a correlational filter of a impulse.
+Just because of the way you slide it over,
+you'll end up flipping that entire response.
+By the way, something that I was being implicit about is I was assuming that
+this center of that filter was what we were calling the reference point, right.
+So wherever the center was located, wherever that center pixel.
+That was the one that was being entered into on the result.
+Okay.
+You could use a different point, but we're going to assume that the center pixel
+is the reference pintal, pixel of the filter.
+
+6 - Kernel Quiz 
+===============
+So here's a quick little quiz for you.
+Suppose our kernel, our filter, the thing we're moving around,
+was size M by M, right?
+So maybe it was a five by five or
+a three by three, so M would be three or five in that case.
+And suppose our picture was N by N, maybe our picture is 100 by 100, or
+1000 by 1000.
+How many multiplies would it take to filter the whole image,
+with that filter, all right?
+Two M N.
+M times M times N times 2.
+M times N times N.
+M times M times N times N.
+Hallelujah singing something.
+I don’t know it just seems like it had a rhythm to it there
+
+7 - Kernel Quiz Solution 
+========================
+So let's think about it.
+Well actually in fact, the answer, and
+we would normally write it this way, M squared N squared right?
+Because every pixel I have to multiply all of
+the coefficients times the pixels that are underneath.
+So there are M times N coefficients.
+And I have to do that over all of the N times N pixels.
+So the number of operations is on the order of M squared N squared,
+which can get pretty large if M and N are moderate size.
+Later we'll talk just a little bit
+about what are called linearly separable filters.
+We don't use them a lot anymore if you've got really fast computers, but it,
+it can make things be much quicker.
+
+8 - Correlation vs Convolution 
+==============================
+We had this problem, of when we put in through a correlation,
+we got back out sort of this flip thing, all right.
+And, if you remember,
+here's the equation of correlation, we have this kernel H and we sum over it,
+going from minus k to plus k, multiplying it times our image, and
+what that did was it caused us to end up with that flipped result, all right.
+The right way of thinking about this, is that, when an impulse comes in and
+it hits the filter, what comes back out is sort of this, this reverse signal.
+So, the, the right way of thinking about the operator is there's
+something called convolution, and when we do convolution, that's what we
+actually mean when we say we're going to apply this filter or this kernel, and
+what convolution does, is it, flips both the left-right and
+the up-down direction, you could have either flipped the kernel or
+flipped the axis to the pixels, it doesn't matter, you would get the, the same
+value, and, so that flipping gives you what's referred to as convolution.
+So by the way, if I was using a Gaussian or
+a box filter, how will the outputs be different for correlation and convolution,
+that is what happens if I flip my Gaussian, answer, nothing, okay?
+For a circularly symmetric or for a symmetric filter, whether I do convolution
+or correlation doesn't matter, it is going to matter to us in the next lecture,
+the one after that when we take derivatives in one direction or
+the other, and that's when you have to be careful, but
+if you have a symmetric filter, it doesn't matter.
+So this can be illustrated nicely in the following way, so
+here we have the, equation for
+the convolution operator, and we're going to illustrate it like this, all right.
+So here we have our filter and there's this little asterisk up here and
+the asterisk is to show you sort of what the top right hand corner is.
+When we do correlation, we just pick that up and then we sort of slide it
+around, when we do convolution, what we do is we rotate, the thing, and,
+because it essentially flips it left, right and up, down, right, you
+see that the little asterisk is now down here in the bottom left hand corner.
+Okay? And then, thank you, Kristin.
+We zoom that all over the image and that gives you your output.
+So, that's our convolution operator.
+Again, the difference between correlation and convolution only matters if
+you have an asymmetric filter but now you know the difference.
+Like I say, convolution is actually sort of the physics, so
+what's going on when you put an impulse through this response.
+
+9 - Convolution Quiz 
+====================
+When convolving a filter with an impulse image,
+we get back the filter as a result, right?
+So in other words, by doing the convolution, we, we flipped it, and
+then we rotate it and
+it flips again, so I take an impulse, and I convolve it with H, I get back H.
+All right, well then, how about the following?
+If we convolve an image with an impulse, what would we get?
+Well, A, a blurred version of the image.
+B, the original image.
+C, a shifted version of the original image.
+And D, you have no idea.
+
+10 - Convolution Quiz Solution 
+==============================
+So you don't get any credit for d.
+You have, even if d is true, you have no idea.
+You get no credit for d, all right?
+The answer, actually, is the original image.
+And the way to think about that is, when I was doing the convolution or
+the correlation.
+There’s really no distinction of what’s the image and what’s the filter, right?
+It’s just an operation where I combine these things.
+So, before when I was convolving an impulse with a filter and
+getting back the filter.
+We were thinking of the impulses, the image, and the, and
+the filter as the filter.
+But you could have just thought of as the filter as the image, and
+the impulse is the thing you're doing the convolute, convolution with.
+And basically all the impulse is doing out,
+is pulling out the single pixel and sticking it in the results.
+So when you can convolve something with an impulse,
+you get back just the original image.
+
+11 - Properties of Convolution 
+==============================
+All right.
+One more thing.
+In order for all of this to work, we need a pr-,.
+a, a property called shift invariance.
+And shift invariance is basically that your operator behaves
+everywhere the same way.
+So I have a couple of pixels over here on the left and I apply my operator.
+If I had the same pixels over here on the right.
+Oh, this is my left,
+my right, your right, turn around, okay, or, look, never mind.
+If I have them up and down, right.
+If I have a couple pixels up here, and I apply a filter I get the same values if
+I have a couple pixels down here and I apply a filter.
+That means that I can shift things around and
+do the addition, and get my entire image back.
+As we said, because convolution or correlation are built on multiplication and
+addition, these are linear operators,
+making the whole notion of filtering a linear operation.
+And this means that convolution has some very useful properties.
+For example, it's commutative.
+All right. So, f convolved with g is the same as g convolved with f.
+Remember that whole idea about which is the impulse and which is the filter?
+It's also associative.
+So that here we, we wrote the associative property of convolution.
+We're going to take advantage of that in just a minute.
+It has an, a, a unit impulse.
+It's the identity.
+So that's what we talk about,
+that if you convolve any function with the identity you get back that function.
+And then here's a cool one.
+Differentiation of course is just the limit of subtraction and then a division,
+and a division is same as multiplication it's 1 over in that, in that case.
+So differentiation is a linear operator.
+Now you may have remembered that from calculus, right, so the derivative of
+a times f, where a is a constant, was just a times the derivative of f.
+And the derivative of f plus g was the derivative of f plus the derivative of g.
+So, differentiation is also a linear operator.
+And because of associativity we get this cool property here.
+That the derivative of a convolution is the same as taking
+the derivative of one of the elements and then convolving it with the second.
+And we're going to make use of that when we do edge detection and
+gradient finding in a little bit.
+
+12 - Computational Complexity and Separability 
+==============================================
+I want to talk just a quick second about computational complexity.
+Mentioned it before.
+As we said, if your image is N by N and your kernel is M by M or
+we will call it W by W for sort of width.
+And it's easier to say W being different than N because [INAUDIBLE].
+Exactly, okay?
+So the question is how many multiplies do we need?
+And we said before that we need N times N times W times W,
+or N squared W squared.
+Doesn't N squared W squared sound better than N squared M squared?
+Because when I say N squared M squared you have no idea what I'm saying if I
+say it quickly.
+N squared W squared works.
+And that can get sort of big.
+So there's a cute little property.
+Sometimes your main kernel, your, your filter,.
+Can be created by convolving a single row with a single column.
+And when that's true,
+you can take advantage of the associative property, in terms of how we do this.
+And this is what's refered to as a linearly separable kernel.
+So let me show you an example.
+So here we have a single column, and here we have a single row.
+And just think of 0s being around it.
+If I convolve this column by this row I would get out
+this new H which has 1 2 1 2 4 2 1 2 1 in it.
+Okay? So c convolved with r equals H.
+See, this is why we don't use my handwriting.
+Let's suppose we wanted to filter something with H.
+All right?
+So that would look like this.
+We have a function G that we're going to create by convolving F with H.
+But we said that C convolved R is the same as H, so that convolves F.
+And because of the associative property,
+C convolved with R then convolved with F.
+In order to get our new function,
+is the same as C convolved with R convolve with F.
+And the reason that's better is that I can do
+two column convolutions instead of one square.
+So now instead of being W squared N squared it's 2 times W times N squared.
+And that can be,
+that used to be very important when computers were not quite as fast.
+But it's still reasonably important, because for
+example, if W is say a 31 by 31, that's a factor of 15 difference, all right?
+So that's more than an order of magnitude.
+Anytime you can do anything that buys you an order of magnitude for
+not a lot of money.
+You should go ahead and make that purchase.
+Because orders of magnitude are hard to come by.
+So here's a nice way of doing this.
+So when we do various kinds of smoothing,
+etc, often we use linerally separable filters and you can just apply them.
+
+13 - Linear Operation Quiz 
+==========================
+Here's another quick quiz.
+True or false?
+Division is a linear operator.
+Okay? A, false because X divided by Y plus Z
+does not equal X over Y plus X over Z.
+True, because X plus Y divided by Z is the same as
+X divided by Z plus Y divided by Z.
+And c, I have no idea.
+
+14 - Linear Operation Quiz Solution 
+===================================
+Okay, again, C might be true, but it's false.
+No, C is true, but you get no credit.
+The answer is true, in this case, because it's division by a constant.
+All right, so in this case, if I'm dividing by Z, so if I sum up X plus
+Y divided by the Z, it's the same thing as X divided by Z plus Y divided by Z.
+Much later we're going to be doing perspective projection, and you're going to
+end up having to normalize the X and Y values, by the Z value of a point.
+And then the Z is actually going to be a component of the element.
+And since that component can change, that's not going to be a linear operation.
+But in general, division is a fine linear operation because the last time I
+checked, dividing by two is the same as multiplying by point five, and
+multiplication is a part of the linear operation.
+
+15 - Boundary Issues 
+====================
+&gt;&gt; One thing that comes up when doing filtering is what to do
+about the boundaries,
+because you might ask what happens when your filter falls off the edge.
+&gt;&gt; What happens when your filter falls off the edge?
+&gt;&gt; Meghan has been rehearsing this all week, outstanding.
+Well, basically it's undefined until you define it.
+All right?
+So you have to think about what size operation you want, so
+that can be illustrated like this.
+Okay?
+And here we're going to use a little bit of old MatLab nomenclature,
+they've changed it, because the old MatLab nomenclature actually makes it clear.
+So, here I've got a function f and I'm filtering it with g.
+And you might try to think about well, what's the size output that I want.
+And there's sort of three different possible sizes.
+One is when g just touches that corner, I start to get a response.
+So if I think of the center point of g as the reference,
+I would actually get a box that's bigger than the original function.
+Okay.
+The flip side is if I want to make sure that all of g is actually touching f,
+then I'm going to, again using the center point,
+I end up with a smaller output than the original.
+And that, that's used to be referred to as valid,
+since all those points were in fact correct.
+But the problem is when I filter a 55 by 55 image,
+I'd really want to get back a 55 by 55.
+I don't want to get back a 58 by 58 or a 52 by 52.
+What I want is referred to as the same.
+So here you see that we put that filter with its middle at the corners and
+we get back the same size.
+So the problem of course,
+is what's underneath these pixels here that are sticking out?
+And basically when you do filtering,
+you have to tell the system what you want there.
+
+16 - Methods  
+=============
+MATLAB has a couple of ways of thinking about how to do this, right?
+And we're going to use, again, old MATLAB nomenclature, and
+then I'll tell you about the new one.
+So there are a couple of different methods.
+The first method is called clip.
+Clip basically means I assume that that outside boundary is black.
+I then apply my filter, so here I can see my filter.
+And when I pull out the image,
+you can notice that this thing has gotten kind of dark at the edges.
+And that makes sense because that black has leaked in, all right.
+But that’s referred to as clipping.
+Another method is called wrap around.
+It’s kind of a weird method.
+It has to do with some Fourier analysis that we’ll talk about later.
+Basically it says that I assume my picture continues and wraps around.
+Which means that you see this stuff filled in here?
+That's the stuff that comes from this side of the picture.
+It's easier to see up here, right?
+These, these red peppers came from down here.
+And the, the yellow straw comes from over there.
+All right?
+And that was under assumption that what you were actually looking at
+was a periodic signal.
+So if you were looking at a periodic signal.
+The next thing that would happen would be the stuff that was at the start of it.
+Well, in filtering, in image filtering, that doesn't work so well.
+Here, I'm going to apply the filter, and
+then I'm going to cut back to the original size image.
+And you'll notice that there's some red stuff here.
+Where did that red stuff come from?
+Well, it actually came from the bottom because it got wrapped around.
+There is a method that's called copy edge or
+replicate where you just basically extend out, right?
+So I just extend out the same value.
+And then I run my filter and then I pull out my picture and
+that's reasonable, okay?
+The replicate method is a, is an easy one, and it gives you a reasonable result.
+It basically says that the image sort of stays the same.
+Now the problem is is that the statistics, of course, are different, right?
+Because you had this nice varying image, and
+then you make everything be sort of the same going out.
+So, another method is called reflection.
+Okay, are sometimes called symmetric.
+And what that does is you, you reflect the image out.
+And here, I just did that.
+In fact, here let me draw right here.
+Here's the reflected edge.
+It's actually, if I erase it, hard to see that edge.
+Right? Because I basically re, I, I take the image and I fold it back out again.
+All right.
+So, then I take that.
+I apply my filter.
+And then I pull out the image, and it actually does a pretty good job.
+So, often you either want to do what's called replicate, or
+copy, the edge or reflect across the image.
+In new MATLAB these are expressed using this function called imfilter,
+which comes from the Image Processing Toolbox.
+And you can do you put in a value.
+Puts that value in, so we put in 0, it's like clipping.
+You can wrap around with circular and
+then the copy edge is replicate and reflection is symmetric.
+And typically, you'll use either replicate or symmetric.
+
+17 - Explore Edge Options 
+=========================
+So which is your favorite option to deal with edge issues?
+Load up the image package, read an image, create a gaussian filter.
+Remember gaussians are special.
+Now when you apply it, specify an edge parameter.
+Passing in zero is equivalent to the default.
+You can see the black seeping in along all the edges.
+This is because we passed in zero.
+What happens if we put in some other number?
+Try it out.
+What about circular?
+If you look closely, you'll see the green seeping in on this side, and
+a little bit of red on the opposite side.
+Replicate.
+Replicate is not too bad.
+No obvious effects.
+And lastly, symmetric, or reflect across edge.
+Not bad either, actually not too different from replicate.
+Feel free to experiment with these different options, filter sizes, and sigmas.
+
+18 - Reflection Method Quiz 
+===========================
+The reflection method of handling boundary conditions is,
+in filtering is good because.
+A) the created imagery has the same statistics as the original image.
+B) the computation is the least expensive of the methods.
+C) setting pixels to zero is quick.
+Or d) none of the above.
+
+19 - Reflection Method Quiz Solution 
+====================================
+Well, C is true but irrelevant.
+B is false but irrelevant.
+A is the correcting thing.
+The imagery that you create by doing that reflection has the same statistics.
+And I guess I should have also written, no obvious edge induced.
+Right? When I did that reflection,
+it was actually hard to see where those edges were.
+
+20 - Practicing with Linear Filters 
+===================================
+So the very last part of this lesson,
+we'll do some simple analysis about what different filters we'll do, and
+then we'll do more sophisticated filtering later.
+Here we have a picture, there's the original one on the left,
+somebody's eye, maybe you know whose eye it is,
+and I convolve it with that filter that's an impulse, what do you get back?
+Well what do you get when you convolve an image with an impulse,
+you get the original, and there it is, it's no change, 'kay so
+when you filter with an impulse, all right.
+So here's a slightly interesting one, what happens if I've got an impulse but
+it's actually not centered at the reference point but
+it's shifted over right, by one.
+Well what's going to happen is, when I place my filter down the, in the middle,
+it's going to go get the fill, the pixel from the right, and
+put that down at the reference point, then I move it over,
+and I get the right, now whether I get the one on the right or
+the left will depend on whether I'm doing correlation or convolution,
+remember correlation I just move it around, convolution I flip it over and
+then move it around, but what you're going to end up with is a shifted image, so
+in this case you'll shift to the left if you're doing correlation, so
+by shifting the impulse you get a shifted function, and
+that's because the idea is that the center coordinate here is 0,0.
+All right, what about this?
+So now I've got all ones divided by 9 so
+it's so it sums to 1, what is that going to look like?
+Well, we've already seen that, right, that's just a, kind of a crummy
+smoothing filter, it's a blur, all right, so I just get out the blurred eye.
+All right, now comes something really cool.
+All right?
+What if my filter, is actually the combination of these two?
+Okay?
+This is essentially twice the impulse, minus the blur.
+All right.
+Now, this is still all linear, so, the output of applying this kernel,
+where the kernel is made up of sums and multiplies, can just be done by
+taking the sums of the original two outputs, and that would look like this.
+And you'll notice, I'll show you a better example in a minute,
+that it's kind of sharpened up the image, it's accentuated the differences, and
+this is, drawing something like this, so here, this is filter is called,
+a sharpening filter, and it's got these little parts that have to do with the,
+the minus, and then the part in the middle.
+And if I show this applied to the whole filter, okay, you'll see that,
+and you, so, now you know whose eye it is, there is Einstein's eye and
+you'll, and if you take a look on your screen,
+you'll see that this one is a good deal sharper than the, than the previous one.
+
+21 - Unsharp Mask 
+=================
+You have time for a quick story?
+Okay, sure.
+Anybody here ever use Photoshop?
+Raise your hand.
+In the older Photoshop or
+even currently, they have something called the unsharp mask.
+Okay?
+And when you apply the unsharp mask, what does it do?
+It makes it sharper.
+Now you might ask,
+why would you call an unsharp mask something that makes it sharper?
+Don't ask.
+Okay.
+In the old days, like when you did things in a darkroom,
+you were playing with light and you, chemicals, etc.
+But you still actually able to add and subtract light.
+So those of you have ever seen film knows that film were made out of
+negatives, right?
+And so that where it was dark, it would let out hardly any light and
+where it was light it would let a lot and
+then the, it would reflect on, it would be projected onto paper.
+And then whenever a lot of light hit the paper, it would become black and
+that's why you had to make it be a negative.
+Some very clever photographer figured out the following.
+Let's suppose I take a negative and then I put a piece of
+wax paper over it and I put another piece of film underneath that.
+Okay?
+And I turn on the light for just a split [SOUND] second.
+I will get a blurry negative of the original negative.
+Okay?
+Right? Because it, it becomes a negative, it's a piece of film, so
+I, I put the, the good negative, the sharp negative piece of wax paper and
+then another negative and there are other ways of making it.
+But the idea is that I would get a blurry negative of the negative, okay?
+So if the negative were all white, this negative would now become all black.
+All right?
+It was the negative value.
+Then what you could do is you'd develop that film, et cetera.
+You could put that blurry negative of the negative in
+with the original film and expose it at one shot.
+And the math that was being done was exactly this math.
+We had our original and because it's a negative of it,
+we're subtracting off a slightly blurry version of the picture and
+that would give you a sharper picture.
+So that's how you did image processing with chemicals and
+film to make a sharper picture.
+And what do you think that extra negative that you made, okay?
+That was blurrier was called, it was less sharp.
+It was the unsharp mask and it would be added to the original picture.
+And the unsharp mask would yield for you sharper picture.
+So now you learned something totally irrelevant,
+because you probably haven't even seen a piece of film.
+But it is why in software today, unsharp masks make pictures sharper.
+And now you actually know why, why the math works.
+Right? You're essentially subtracting off a slightly blurry version of
+the image.
+
+22 - Filter Quiz 
+================
+&gt;&gt; Here's a quick quiz.
+If a filter's coefficients don't add up to 1,
+they can be corrected by multiplying by the necessary scale.
+&gt;&gt; Right, you can just multiply them through by whatever it takes, all right?
+&gt;&gt; Or, the resulting image could be multiplied by the square root of
+that number after the operation to compensate for the horizontal and
+vertical application of the filter.
+A, true.
+B, false.
+
+23 - Filter Quiz Solution 
+=========================
+Of course it's false!
+Look, if the thing needs to be multiplied by, 2.5 to make everything sum to 1,
+then that 2.5 can be applied to the filter or it can be applied to the image.
+Not 2.5 squared, or something like that.
+because remember, linear scaling,
+linear multiplication, just passes right through these linear operations.
+
+24 - Different Kinds of Noise 
+=============================
+So we said, and we talked about this two times ago
+that Gaussian averaging was a reasonable thing to do.
+If the noise was independent in each pixel and was centered about 0.
+So that it like, the noise is created by a Gaussian process.
+So some were positive, some were negative, etc.
+And now we've talked a little bit about how they're doing the filtering.
+But there are other kinds of noise as well, and
+we need different kinds of filtering.
+Maybe not a linear filter.
+That's why it's at the end of this lesson.
+Just to show you something that's not linear, but an effective filter.
+Okay. So on the left here,
+we have that pepper image with a little bit of Gaussian noise added.
+And on the right, we have the pepper image with the salt and pepper noise.
+Different peppers.
+Peppers as in good peppers to eat with salt and
+pepper noise, which spicy pepper black.
+The question is what kind of filtering might you need to use on
+the right hand side, okay?
+So the way to approach this is to remember that our other
+assumption about images, right?
+Is that the underlying image change slowly around the pixel.
+So the idea is that if there's some sort of arbitrary value.
+That was put in some location as what happens in salt and pepper noise.
+How could we go about finding the value that we
+should replace that value with to make a better picture?
+Now remember, when we were doing the filtering, this blurring.
+We were essentially replacing the pixel values by the local average.
+And it was either a box average or a Gaussian average.
+And that was fine when the noise was not a huge amount of noise and
+it tended to go to 0.
+So by averaging, you tend to average away the noise and
+get about the right value of pix, of, of the pixel.
+But if a few sort of totally random values are being injected into your image.
+You really need to do something different.
+And as some of you know is when I have sort of these very spurious values.
+An interesting way of, of, coming up with sort of the appropriate middle value,
+is not an average, but a median.
+
+25 - Median Filter 
+==================
+Here I'm going to show you a median filter and image processing.
+At the top here, we have a chunk of our image and
+notice that in the middle is a pixel that probably is not right.
+Probably is a piece of salt.
+All right.
+Because there are all these other lower numbers and then poof a 90.
+So the question is, what should we replace that with?
+If we just do the regular filter, then we would take the local average of
+everything, including the 90, and stick that there.
+A better idea is to do a median filtering.
+So we sort all those pixels.
+Whoops, I left out the 10.
+There we go.
+And we pull out the middle value, the 27.
+And we replace that here.
+So now you see the 90 is totally gone.
+The 27 happens to be replicated.
+We don't care.
+But the idea is that we replace that pixel with this median value.
+So before you're gone, we ask some questions about that.
+First of all, what's kind of nice is every value we put in
+the picture was present locally.
+Especially if it's odd.
+If it's even, then it's the average of the two,
+but if it's an odd number of pixels,
+the median is one of those pixels whose value is somewhere around me.
+So I'm not introducing any sort of really weird values.
+So that's good for when I have these weird spikes, like this salt and
+pepper, but here's a question for you.
+Is it a linear operation?
+What do you think Megan?
+&gt;&gt; No?
+&gt;&gt; Good. Yeah.
+Right. No, look median is not a linear thing right.
+I add in a couple different things.
+I summed them up and the median can move however the median going to move.
+It's not going to behave nicely.
+So what is this look like in a real picture?
+So here we have our pepper image.
+So here is the salt and pepper version of it.
+Again, different peppers.
+And here it is with the median applied.
+If you zoom on that you'll see that that's a really well cleaned up image.
+And you can see,
+this was a scan line, the plot of a single row across the image.
+And you can see all the salt and no pepper noise.
+And when I replace that with the median, I get a much nicer signal over here.
+And that's why median filtering works so much better for salt and pepper noise.
+So I'm showing you this because the median is really an example of
+a non-linear thing.
+It's also sometimes refered to as edge preserving.
+And the reason for that is shown on this simple drawing here.
+Suppose I have, I've got a signal that's supposed to be like this but
+there was a single spike added to that.
+If I take the median, I get this nice effect.
+This thing comes here, this, et cetera.
+If I were to take the mean or the average or a blur.
+I would tend to blur across that nice sharp edge and
+that's why median filtering is referred to as edge preserving.
+And so this is class of nonlinear filters that are useful but
+they're a little less well behaved in terms of the mathematics.
+
+26 - Apply a Median Filter 
+==========================
+Let's apply a median filter.
+As usual, load an image.
+Let's add some salt and pepper noise.
+Octave and Matlab have some great utility functions, like imnoise.
+You pass in an image, and then the type of noise you want, and a parameter.
+Here's some salt and pepper on the moon.
+This time we won't use imfilter.
+Remember that median filtering is a non-linear technique.
+We use the function medfilt2, which stands for
+median filtering in two dimensions.
+As you can see, a median filtering is really effective in removing salt and
+pepper noise.
+A little bit of blurring has occurred, but not too much.
+Try it for yourself.
+
+27 - End 
+========
+So this is the end of the, the lesson.
+Mostly what we've just talked about is so
+you understand more about correlation and convolution.
+Remember, correlation we take the filter straight, convolution is it's
+the 180 degree rotation so it's both left, right and up and down.
+Most of the time if we're using symmetric,
+when we're using symmetric filters it doesn't matter.
+But if we're taking derivatives, right, so the derivative in the x direction,
+there's actually a positive direction versus negative direction.
+That's when you do have to
+worry a little bit about correlation versus convolution.
+And most importantly, filtering is going to be an important tool, sort of, in
+your toolbox for how to deal with images and get out the elements that you need.
+And we'll do more of that over the next time.
+And then again, much later, when we're trying to compute features over images.
+

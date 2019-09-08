@@ -1,0 +1,410 @@
+1 - Intro 
+=========
+All right, welcome back to Computer Vision.
+Today, we're going to sort of finish up our edge detection unit.
+Which will then be used for things that you're going to be doing later.
+Our last lesson we talked about the notion of edges and
+how they related to magnitudes of gradients and derivatives of functions.
+And we remembered what a gradient was in case that part of
+your brain had fallen off.
+And we talked about developing some operators that you could apply to
+the image that would be computing these gradients.
+We showed how they were sensitive to noise, and
+we had to do worry about filtering in order to smooth these things out.
+And we talked, we could sort of first filter the image.
+And then apply the operator.
+Or we could filter the operate.
+We could, sorry, smooth the operator and apply that to the image.
+And here is a,
+a picture just reminding that by doing this, saved us that one operation.
+So here is our function, f.
+Here is the smoothing filter.
+We take the derivative of that.
+And from then on in,
+we could just use that operator to find these peaks and edges.
+
+2 - Derivative of Gaussian Filter 2D 
+====================================
+In 2D of course, it's not just a derivative but
+we have to talk about the direction of the derivative.
+In gradients, we have derivatives in the x direction and
+derivatives in the y direction.
+So when you do this same trick of taking the derivative of our filter,
+we have to say, in what direction are we taking that derivative?
+So let's write this like this.
+So what we want to do is,
+let's suppose we want to take the derivative in the x direction.
+And what this little h of x is meant to imply is that
+that's a little filter that just takes our derivative in the x direction.
+Maybe it's a Sobel operator, maybe it's one of the others.
+But it's a small filter taking a derivative.
+And g, here, is going to be our Gaussian.
+And you know, as we said before, because of the associative property,
+besides smoothing and then taking the derivative,
+we can apply an operator that is the Gaussian with its derivative.
+So that's what's shown here.
+Okay? And the minus 1 1, that's a trivial one,
+it could be minus 1 0 1, it's my generic derivative operator.
+And the g, this is my Gaussian, my nice smooth, and
+I just pulled out a chunk of the matrix that's, that's kind of like that.
+And what does that give us?
+Well that gives us this function like that, okay?
+And so that is, it's first derivative of the Gaussian, which when I apply to
+an image gives me the derivative of the Gaussian smooth image for
+that associative property from before.
+So the question is, is it preferable to do this, right, to apply this.
+And we should think about this as a quiz, all right.
+Because it is preferable.
+
+3 - Smoothing Quiz 
+==================
+So here is the question.
+Why is it preferable to apply h to the smoothing function,
+h here is our derivative, and apply that result?
+Well, it's not.
+They're mathematically equivalent.
+B, since h is typically smaller, we take a fewer derivatives so it's faster.
+C, the smoothed derivative operator is computed once and
+you have it to use repeatedly, or B and C.
+
+4 - Smoothing Quiz Solution 
+===========================
+A is true, but not relevant here.
+Yes, they're mathematically equivalent, but I just say,
+why would you prefer one or the other?
+Well, both B and C are reasons why you might, right?
+They're just basically filters you have around.
+I want the gradient and the x direction.
+Here's my filter, I'll just apply it.
+And it, it just makes it a easier way, to do that computation.
+You know, going forward,
+you may decide that you've got different smooth images already, and
+you're just going to take the gradient, so you just do that directly.
+Fine, you know,
+be contrary, that's okay, because A is true, they are mathematically equivalent.
+
+5 - Effect of Sigma on Derivatives 
+==================================
+So like I said, when you do this, you end up with this gradient function.
+And of course, we do this both in the x direction and the y direction.
+And, you know, we now have this problem of correlation versus convolution.
+Well, if this is the x direction, if x goes positive this way,
+this is a correlation filter.
+By the way, this picture is what this looks like as an image.
+Okay?
+So these zero values on the outside, that's these gray, and
+where it goes negative is negative and where it goes positive is positive.
+In the y direction, which way is positive is always a problem because,
+like we said, y can go up or y can go down.
+You know, the main issue of course, is that it, it, it goes vertically.
+So those are our two operators.
+So that's how you would use a Gaussian in order to get some smooth derivatives.
+But there is this question of how big a Gaussian should we use?
+You might remember from filtering that we could pick different size Gaussians,
+and here again is the fspecial being used, to get different sigmas.
+And what happens is, you get more or less smooth versions of the image.
+The same is true when we compute derivatives, right?
+We can change the sigma, the size of the Gaussian.
+And when you do that, you'll get sort of enhancing the, the magnitudes of these
+derivatives as a function of sort of how quickly the image varies over space.
+All right?
+So with a small sigma,
+all of this fine texture in here shows up everywhere in here.
+In fact, even this little texture in here shows up in there.
+But if I use a bigger sigma, okay?
+So this area here you see there's a whole lot less going on there,
+because we smoothed away most of that small variation.
+So one way of thinking about this, smaller values, finer features are going to
+be detected and larger values, only the larger scale edges will be detected.
+
+6 - Canny Edge Operator  
+========================
+Now that we know how to compute smooth derivatives and
+gradients, we can return to the question of how do we actually find the edges.
+And fundamentally it's a multi-step process, right?
+You're going to create smooth derivatives to suppress sort of little bit
+noise and we're going to compute sort of the main gradients, then we're going to
+threshold that gradient somehow to find sort of significant areas of change, and
+then we're going to take those areas and then we're going to take those areas
+and we're going to do what's called, thinning and
+there's an example of that shown down here, we'll talk more about that, so
+that a fat edge becomes just a single contour, and say that's the edge, and
+then finally, we're going to have to somehow connect or
+link those pixels if you actually want to have a connected contour.
+So the edge operator I want to talk about is done by John Canny,
+actually as his masters, thesis, when I was,
+still at school there as well, went on to do some really cool stuff in his PhD,
+but everybody knows it because it was called the Canny, edge operator.
+And the Canny operator works the following way, you first filter the image with
+derivative of a Gaussian, you find the magnitude and
+orientation, then you do what's called non-maximum suppression,
+which is this thinning, and we'll talk about that in a minute.
+And then, there's a linking operation, we're going to talk about that in detail,
+that was really the cool insight, where you're going to define not just one
+threshold, but two, and you're going to use the, the high threshold to start to
+edges, but you'll use the lower threshold to continue.
+By the way, MATLAB does Canny edges, so you can just take the Canny edges by
+calling the edge function, and I encourage you to do doc edge or, or help if,
+if your doc thing's not set up, to learn all about the edge detection in MATLAB,
+it's actually a great source of image processing information,
+the documentation of the image processing tool box in MATLAB.
+
+7 - Canny Edge Detector 
+=======================
+So, to illustrate the Canny edge detector,
+I'm going to use this picture of Lena.
+Now, this was a picture that was used for image processing a lot.
+Some guy, he cut out just the top part of a picture of 1972,
+that, of Lena Soderberg, I think was her name.
+Because it appeared in a a men's magazine.
+So he used just the picture.
+And by the way, this is Lena recently.
+So we all change.
+But here is our Lena image.
+And if we were to take just the magnitude of the gradient,
+we get a value that looks like this.
+You see it's close to edges, but actually, you and I see edges, right?
+It's just a gradient image, all right?
+So then we can threshold that gradient.
+So now you can see a bunch of that stuff has gone away.
+So anything with a gradient that's not high enough has been removed.
+And then we do an operation called thinning and
+we'll talk more about this in a minute.
+The fancy name is non-maximal suppression.
+Basically saying if I've got a bunch of points that exceed a threshold locally,
+let me only pull out the point that exceeds it the most.
+We'll talk about that in a second.
+When you do that, you get something that looks like that, all right?
+So that you go back and you can see there's the thinned version of that.
+Just a quick note about why you have to do the thinning, all right?
+So let's take a look at this little area here.
+You can see that there is this kind of thick part that exceeds the threshold.
+And what we would like to say is that there's an edge running through
+the middle.
+So you think about it, if you're coming across here,
+you might see a profile that starts low and then goes up high, all right?
+And if you take the derivative of that,
+you'll see that the derivative over this area is above this threshold.
+So that gives you this thick edge.
+And we want to turn it into a thin edge.
+So the way the non-maximal suppression,
+the thinning is done in a canny operator is as follows.
+And you don't act, you're not going to have to implement this,
+I just want you to be aware of what's going on.
+Basically it finds areas of high gradient, and it looks across
+in the direction of the gradient, and it finds just the peak there.
+And then over here same thing, you would find the peak here.
+Here the gradient is in that direction, so would find the peak there, right?
+Sometimes, and that's what this picture's showing here,
+sometimes you have to interpolate, right?
+You find the gradient, you say okay, I think it's somewhere in
+between two pixels, so you can actually get sub-pixel accuracy.
+But the point is, that it basically looks perpendicular to the gradient,
+in order to find, the maximum.
+So that's how you do the, the thinning part, and
+now there's one very clever detail to look at, all right?
+If you take a look at this point sort of under the chin here,
+you'll see that some of the pixels did not survive the thresholding, okay?
+And it's a problem because we, maybe we,
+you can say we had too high a threshold.
+But the problem is if we make the threshold too low.
+Then a whole bunch of stuff is going to show up that we don't
+actually care about.
+So the question is how to deal with that.
+So this is what John did in the, the hysteresis.
+The first thing we do is we apply a high threshold to detect edge,
+strong edge pixels.
+So the threshold pulls out a bunch of pixels.
+Then what we do is we can link those strong edge pixels to form strong edges.
+Okay. So far not so clever.
+Here's where the clever part becomes.
+We now apply a low threshold to find weak, but possible edge pixels.
+And then, we extend the strong edges following the weak pixels.
+So what that means is that if an edge only has weak pixels on it,
+it doesn't get found to be an edge.
+An edge can only be found if some of the pixels are strong-edge pixels.
+The assumption here is that all edges that I
+care about will have some strong pixels in them.
+And then, I might have to continue through a weak area, but
+the edge got initiated by the strong detections.
+
+8 - For Your Eyes Only Demo 
+===========================
+This one's for your eyes only.
+Don't tell anyone you found these in a graduate computer vision course.
+All right, I have two images for you, frizzy and froomer.
+I want you to find edges in these images, and
+then display the edge pixels that are common across both.
+Go ahead and do that, note what you see, and move on to the following quiz.
+
+9 - For Your Eyes Only Quiz 
+===========================
+So what's the secret code?
+
+10 - For Your Eyes Only Quiz Solution 
+=====================================
+Hope this wasn't too difficult.
+Yes, the code is 007.
+Now let's see how we got that.
+First, convert the images from color to grayscale.
+And then use the edge function to compute the edges individually for each image.
+Note that I've explicitly passed in canny.
+The default is I think sobel, which doesn't work as well.
+Canny accepts additional arguments, the hysteresis values and smoothing sigma.
+Feel free to play with them.
+Here are frizzy's edges.
+This is almost perfect.
+Note that around the mouth and
+nose, where we had thick outlines, we have double edges.
+This is expected.
+And here's froomer's edges, also pretty good.
+Okay. Now what?
+Note that edge images are binary images.
+Which means you can and them together to find common edge pixels.
+And there you go.
+You never know what's hiding in an image or two.
+
+11 - Canny Results 
+==================
+So here's a result.
+And, you know, one of the interesting things is,
+I mean, it looks pretty good, it's a good edge image.
+But my very first computer vision courses from Berthold Horn,
+who was one of the creators of computer vision.
+And, you know, he expressed the concern that it's really hard to know when and
+edge image is good.
+Right?
+Because the real question is what are you going to use those edges for?
+So I'll just say that the canny edge operator gives us
+better edges than other operators.
+Meaning that they tend to pull out the edges that you would want for
+future processing.
+Now one question, of course, is since we're doing these smooth derivatives
+is what size Gaussian kernel do we use in order to compute our edges?
+And as we said before, the different sigmas, so here we have sigma one, sigma
+two applied to this clown image, you can see what it does to the edge image.
+Large sigmas detect large scale images, small ones detect small.
+And the choice of sigma really depends upon the behavior that you want.
+
+12 - Canny Edge Quiz 
+====================
+So a quiz.
+The Canny edge operator is probably quite sensitive to noise.
+A, true, derivatives accentuate noise.
+B, false, the gradient is computed using a derivative of
+Gaussian operator which removes noise.
+Or C, mostly false, it depends upon the sigma you chose.
+
+13 - Canny Edge Quiz Solution 
+=============================
+Okay, well it's c, it's mostly false.
+It's pretty good with spec to noise, but
+you do have to worry about the sigma that you've picked.
+
+14 - Single 2D Edge Detection Filter 
+====================================
+Finally, one last thing to show you just sort of in completeness.
+So, you remember one dimensional case of the second derivative of the Gaussian.
+So, what we have here is, this was our original Gaussian.
+This second derivative was this inverted Mexican hat operator, and
+when we applied that to f.
+It's the same thing as taking the second derivative of the smoothed version.
+We were looking for that spot there and those what are called zero-crossings
+that, on that bottom graph, that corresponded to where the edges were, okay?
+But to do this in two,
+in two dimension is a little bit harder, and the reason is.
+There's more than one direction to take our derivative.
+So here we have our Gaussian, the formula there, and it,
+you know, is this nice mountain in the middle.
+But we have to take a derivative in one direction, and so,
+you know, that's the one that's saying x, and there'd by one and Y.
+And then on our second derivatives there'd be three choices.
+I could take the partial of x again, so
+that's a partial of f squared is partial of x twice.
+I can do the partial of y, twice.
+I can also do the partial of f with respect to y.
+Which one am I supposed to use?
+Well, the correct answer is,
+you use what's referred to as a Laplacian of Gaussian.
+The Laplacian operator, shown here, is this second derivative of x of
+f with respect to x squared plus the secondary of f with respect to y squared.
+And that's what actually gives you this Mexican hat operator symmetrically.
+And if you apply that to the image and
+you take the 0 crossings, you will get your edges.
+And in fact, if you run the some demonstration code in matlab for edges.
+You can take Canny edges, or you can take difference of Gaussians or
+Laplacian of Gaussians, they're, they're almost identical.
+And you can see, what that does is it's looking for
+the 0 crossings and it's another way of getting the edges.
+One of the challenges there is those tend to be closed counters all
+the time whereas the Canny will only find you the,
+the contours that have some magnitude support.
+I would tell you most people, more people probably use canny for
+just doing regular edge detection.
+
+15 - Edge Demo 
+==============
+Here is a quick demo in MATLAB showing you a few different ways of
+computing edges.
+Note that you can do the same in Octave.
+Just remember to load the image package.
+All right, let's read an image and display it.
+Here we use figure to open a new window, imshow to show the image in the window,
+and title to set a title, all in one line.
+We will use this idiom frequently.
+Let's now convert the image to monochrome or grayscale.
+We'll use the rgb2gray function for this purpose.
+And here's what it looks like.
+Now let's create a smoothed version of the image.
+First, create a Gaussian filter using the fspecial function.
+Here's what the filter looks like.
+Whoa, plotting it as a surface might help.
+Okay.
+Now apply this filter to the image.
+Compare this with the original.
+All right. For the first method, we will shift the image left by one pixel,
+right by one pixel, and compute their difference.
+Let's make a copy of the smooth version to create the left image.
+To shift the image to the left, we copy all the pixels from the second column
+onwards til the end to positions first column to n minus 1.
+Note that the last and second last columns here would be identical.
+Similarly for right.
+Now we compute the difference, remembering to convert to double type.
+Note that the difference may contain negative numbers.
+So to display it correctly,
+we pass in an empty vector as the second argument to imshow.
+Notice how object boundaries are highlighted as brighter or
+darker areas, indicating greater positive or negative differences.
+Other areas are almost gray, indicating close to zero difference.
+Our second method is to use the canny edge detector.
+We use the edge function, passing in canny as the method argument.
+Remember that the Canny algorithm performs non-maximal suppression?
+That, along with some other tricks, result in a much more meaningful edge image.
+Let's also run the Canny edge detector on the smooth version of the image.
+Notice how a lot of the detail features are now gone.
+Here is the original set of edges for comparison.
+Our last method uses Laplacian of Gaussian.
+You simply need to pass in log as the method argument.
+Again, the edges found by Canny are shown for comparison.
+You can use doc edge to find out more options that might be available.
+As you can see, there are other edge operators that you can apply,
+as well as pass in custom parameters.
+By this time, you should have MATLAB or Octave installed on your local machine.
+You will need it to solve the problem sets.
+Please refer back to the introduction lesson for instructions.
+
+16 - End 
+========
+So, that ends the lesson on edge detection and
+in fact, the first subunit all together on image processing.
+Hopefully you've learned a little bit about filtering with convolution and
+correlation, and the idea about taking these derivatives.
+We've also talked about filters being used as templates.
+next, what we're going to do is we're going to take a little detour, and
+do some real computer vision.
+That is, computing some data structure that tells us what's in
+the picture from our images, and will actually use these edges and
+then we'll come back to doing more about image processing.
+But first, you'll get to go find some lines, circles, coins, and
+cool stuff in pictures.
+
