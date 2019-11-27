@@ -23,7 +23,9 @@ Computer Vision
 Course Syllabus
 ---------------
 
+* http://bit.ly/CVatGT-F19
 * https://docs.google.com/spreadsheets/u/1/d/1Ay_3S1dOBevMLxcEAtCM0VbWzKa3gnDhwxji9sFWy-g/pubhtml
+
 
 
 Resources
