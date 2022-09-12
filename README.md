@@ -1,4 +1,4 @@
-# http://www.coursedocs.org
+# https://courses.learntosolveit.com
 
 * Online Masters in Computer Science Notes
 * Useful Resources for Georgia Tech Students
