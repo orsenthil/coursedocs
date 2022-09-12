@@ -40,8 +40,8 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'coursedocs.org'
-copyright = '2017, Senthil Kumaran'
+project = 'courses.learntosolveit.com'
+copyright = '2022, Senthil Kumaran'
 author = 'Senthil Kumaran'
 
 # The version info for the project you're documenting, acts as replacement for
