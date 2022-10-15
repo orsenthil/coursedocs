@@ -1,7 +1,7 @@
 Threads Birrell
 ===============
 
-.. code-block:: guess
+.. code-block:: c
 
     * An Introduction to Programming with Threads.
     ** Andrew D. Birrell.

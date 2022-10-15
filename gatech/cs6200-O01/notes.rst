@@ -9,7 +9,7 @@ prep the socket address structures for subsequent use. It's also used in host na
 and service name lookups. That'll make more sense later when we get to actual usage, but
 just know for now that it's one of the first things you'll call when making a connection.
 
-.. code-block:: guess
+.. code-block:: c
 
     struct addrinfo {
         int              ai_flags;     // AI_PASSIVE, AI_CANONNAME, etc.
@@ -29,7 +29,7 @@ You'll load this struct up a bit, and then call getaddrinfo(). It'll return a po
 to a new linked list of these structures filled out with all the goodies you need.
 
 
-.. code-block:: guess
+.. code-block:: c
 
     struct sockaddr {
         unsigned short    sa_family;    // address family, AF_xxx
@@ -42,7 +42,7 @@ pointer to a struct sockaddr and vice-versa. So even though connect() wants a st
 sockaddr*, you can still use a struct sockaddr_in and cast it at the last minute!
 
 
-.. code-block:: guess
+.. code-block:: c
 
     // (IPv4 only--see struct sockaddr_in6 for IPv6)
 
@@ -57,7 +57,7 @@ sockaddr*, you can still use a struct sockaddr_in and cast it at the last minute
 
 *  the sin_port must be in Network Byte Order (by using htons()!)
 
-.. code-block:: guess
+.. code-block:: c
 
     // (IPv4 only--see struct in6_addr for IPv6)
 
@@ -67,7 +67,7 @@ sockaddr*, you can still use a struct sockaddr_in and cast it at the last minute
     };
 
 
-.. code-block:: guess
+.. code-block:: c
 
     // (IPv6 only--see struct sockaddr_in and struct in_addr for IPv4)
 
@@ -84,7 +84,7 @@ sockaddr*, you can still use a struct sockaddr_in and cast it at the last minute
     };
 
 
-.. code-block:: guess
+.. code-block:: c
 
     struct sockaddr_storage {
         sa_family_t  ss_family;     // address family
@@ -111,7 +111,7 @@ a struct in_addr or a struct in6_addr depending on whether you specify AF_INET o
 for "presentation to network"—you can call it "printable to network" if that's easier to remember.)
 
 
-.. code-block:: guess
+.. code-block:: c
 
     struct sockaddr_in sa; // IPv4
     struct sockaddr_in6 sa6; // IPv6
@@ -126,7 +126,7 @@ on error, or 0 if the address is messed up. So check to make sure the result is 
 
 Network to printable.
 
-.. code-block:: guess
+.. code-block:: c
 
     // IPv4:
 
@@ -152,7 +152,7 @@ Network to printable.
 getaddrinfo()—Prepare to launch!
 --------------------------------
 
-.. code-block:: guess
+.. code-block:: c
 
     #include <sys/types.h>
     #include <sys/socket.h>
@@ -167,7 +167,7 @@ getaddrinfo()—Prepare to launch!
 socket()—Get the File Descriptor!
 ---------------------------------
 
-.. code-block:: guess
+.. code-block:: c
 
 
     #include <sys/types.h>
@@ -178,7 +178,7 @@ socket()—Get the File Descriptor!
 
 Example.
 
-.. code-block:: guess
+.. code-block:: c
 
     int s;
     struct addrinfo hints, *res;
@@ -207,7 +207,7 @@ match an incoming packet to a certain process's socket descriptor. If you're goi
 Here is the synopsis for the bind() system call:
 
 
-.. code-block:: guess
+.. code-block:: c
 
     #include <sys/types.h>
     #include <sys/socket.h>
@@ -217,7 +217,7 @@ Here is the synopsis for the bind() system call:
 
 Example
 
-.. code-block:: guess
+.. code-block:: c
 
     struct addrinfo hints, *res;
     int sockfd;
@@ -247,7 +247,7 @@ the AI_PASSIVE and put an IP address in for the first argument to getaddrinfo().
 
 * Add code to your program allowing it to reuse the port
 
-.. code-block:: guess
+.. code-block:: c
 
     int yes=1;
     //char yes='1'; // Solaris people use this
@@ -262,7 +262,7 @@ the AI_PASSIVE and put an IP address in for the first argument to getaddrinfo().
 5.4. connect()
 --------------
 
-.. code-block:: guess
+.. code-block:: c
 
     #include <sys/types.h>
     #include <sys/socket.h>
@@ -273,7 +273,7 @@ the AI_PASSIVE and put an IP address in for the first argument to getaddrinfo().
 
 Example
 
-.. code-block:: guess
+.. code-block:: c
 
     struct addrinfo hints, *res;
     int sockfd;
