@@ -15,7 +15,7 @@ General Principles
 * Content should be useful as a reference material. Watching videos take time,
   docs are easier to read and skim through.
 
-* No Assignment Solutions. Hints to approach is alright.
+* No Assignment Solutions.
 
 .. toctree::
    :maxdepth: 1
