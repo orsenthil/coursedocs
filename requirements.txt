@@ -1,6 +1,4 @@
 sphinx
+piccolo_theme
 sphinx-rtd-theme
-furo
-piccolo-theme
 sphinx-sitemap
-piccolo-theme
