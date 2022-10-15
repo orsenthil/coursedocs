@@ -35,3 +35,6 @@ sends traces to X-Ray automatically. The upstream service, such as Amazon API
 Gateway, or an application hosted on Amazon EC2 that is instrumented with the
 X-Ray SDK, samples incoming requests and adds a tracing header that tells
 Lambda to send traces or not.
+
+
+.. image:: /_static/aws-systems-manager.png
