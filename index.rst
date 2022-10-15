@@ -39,6 +39,11 @@ small numpy programs for reference.
 * https://github.com/orsenthil/numpy-helpers
 
 
+Projects
+--------
+
+* `Learn to Solve it <https://www.learntosolveit.com>`_
+
 Contribute
 ----------
 
