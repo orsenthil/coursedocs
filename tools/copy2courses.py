@@ -47,4 +47,5 @@ if __name__ == '__main__':
         optional_file_name = sys.argv[1]
 
     destination_filename = copy_screenshot(optional_file_name)
-    write_to_clipboard(destination_filename)
+    code_for_rst = f'.. image:: /_static/{destination_filename}'
+    write_to_clipboard(code_for_rst)
