@@ -24,6 +24,7 @@ General Principles
    coursera/index
    edx/index
    codeschool/index
+   udemy/index
    resources
    ideas/ideas
 
