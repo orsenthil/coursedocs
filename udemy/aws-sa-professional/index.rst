@@ -36,3 +36,4 @@ Gateway, or an application hosted on Amazon EC2 that is instrumented with the
 X-Ray SDK, samples incoming requests and adds a tracing header that tells
 Lambda to send traces or not.
 
+.. image:: 2022-10-15_15-00.png

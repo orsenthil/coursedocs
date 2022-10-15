@@ -15,15 +15,22 @@ def get_latest_file():
     return latest_file
 
 
+def write_to_clipboard(output):
+    process = subprocess.Popen('pbcopy',
+                               env={'LANG': 'en_US.UTF-8'},
+                               stdin=subprocess.PIPE)
+    process.communicate(output.encode())
+
+
 def copy_screenshot(filename=None):
+    latest_file = get_latest_file()
+
     if filename is not None:
         destination = os.path.join(COURSEDOCS_DIR, filename)
     else:
-        destination = COURSEDOCS_DIR
+        destination = os.path.join(COURSEDOCS_DIR, latest_file)
 
     destination_filename = destination.split('/')[-1]
-
-    latest_file = get_latest_file()
 
     subprocess.run(['cp', latest_file, destination])
 
@@ -40,5 +47,4 @@ if __name__ == '__main__':
         optional_file_name = sys.argv[1]
 
     destination_filename = copy_screenshot(optional_file_name)
-
-    subprocess.run(['pbcopy', destination_filename])
+    write_to_clipboard(destination_filename)
