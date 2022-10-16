@@ -2,8 +2,20 @@ AWS SA Professional
 ===================
 
 
+Course Material
+---------------
+
+* `Link to Slides <https://media.datacumulus.com/aws-sap/AWS%20Certified%20Solutions%20Architect%20Professional%20Slides%20v2.2.1.pdf>`_
+
+
+Practice Exams
+--------------
+
 * https://www.udemy.com/course/practice-exam-aws-certified-solutions-architect-professional/
 
+
+AWS References
+--------------
 
 `Accessing Amazon CloudWatch logs for AWS Lambda <https://docs.aws.amazon.com/lambda/latest/dg/monitoring-cloudwatchlogs.html>`_
 
