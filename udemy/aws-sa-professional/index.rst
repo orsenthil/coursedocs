@@ -12,6 +12,7 @@ Practice Exams
 --------------
 
 * https://www.udemy.com/course/practice-exam-aws-certified-solutions-architect-professional/
+* https://www.udemy.com/course/aws-certified-solutions-architect-professional-aws-practice-exams/
 
 
 AWS References
