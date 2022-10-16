@@ -9,3 +9,4 @@ Courses
    :maxdepth: 1
 
    aws-sa-professional/index
+   technical-analysis-masterclass/index

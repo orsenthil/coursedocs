@@ -1,6 +1,10 @@
 AWS SA Professional
 ===================
 
+Exam Link
+---------
+
+* https://www.aws.training/Certification
 
 Course Material
 ---------------
