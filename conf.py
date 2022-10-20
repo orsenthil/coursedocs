@@ -23,6 +23,11 @@ extensions = [
     'sphinx.ext.mathjax'
 ]
 
+html_theme_options = {
+    "source_url": 'https://github.com/orsenthil/coursedocs'
+}
+
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
