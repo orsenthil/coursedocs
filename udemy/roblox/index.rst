@@ -15,7 +15,6 @@ Program to Print the String
 
 .. literalinclude:: sec_2.1.lua
    :language: lua
-   :linenos:
 
 
 Program with Conditional Statement
@@ -23,7 +22,6 @@ Program with Conditional Statement
 
 .. literalinclude:: sec_2.2.lua
    :language: lua
-   :linenos:
 
 
 Program with Conditional Statements and Boolean
@@ -31,7 +29,6 @@ Program with Conditional Statements and Boolean
 
 .. literalinclude:: sec_2.3.lua
    :language: lua
-   :linenos:
 
 
 Functions
@@ -39,4 +36,3 @@ Functions
 
 .. literalinclude:: sec_2.4.lua
    :language: lua
-   :linenos:
