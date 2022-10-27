@@ -50,15 +50,23 @@ Parameter Strings
 .. literalinclude:: sec_2.6.lua
    :language: lua
 
-Part
-----
+Calculator with String
+----------------------
 
 .. literalinclude:: sec_2.7.lua
    :language: lua
 
-Workspace
----------
+Part
+----
 
 .. literalinclude:: sec_2.8.lua
    :language: lua
+
+
+Workspace
+---------
+
+.. literalinclude:: sec_2.9.lua
+   :language: lua
+
 
