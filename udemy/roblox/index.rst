@@ -36,3 +36,29 @@ Functions
 
 .. literalinclude:: sec_2.4.lua
    :language: lua
+
+
+Functions with Parameters
+-------------------------
+
+.. literalinclude:: sec_2.5.lua
+   :language: lua
+
+Parameter Strings
+-----------------
+
+.. literalinclude:: sec_2.6.lua
+   :language: lua
+
+Part
+----
+
+.. literalinclude:: sec_2.7.lua
+   :language: lua
+
+Workspace
+---------
+
+.. literalinclude:: sec_2.8.lua
+   :language: lua
+
