@@ -45,7 +45,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'courses.learntosolveit.com'
+project = 'Courses'
 copyright = '2022, Senthil Kumaran'
 author = 'Senthil Kumaran'
 

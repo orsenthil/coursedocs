@@ -70,3 +70,35 @@ Workspace
    :language: lua
 
 
+* When creating a part, make it anchored.
+
+Touching the part
+-----------------
+
+.. literalinclude:: sec_2.10.lua
+   :language: lua
+
+Changing Brick Color with Touch
+-------------------------------
+
+.. literalinclude:: sec_2.11.lua
+   :language: lua
+
+Inline Touch Function
+---------------------
+
+.. literalinclude:: sec_2.12.lua
+   :language: lua
+
+Player touch the part
+---------------------
+
+.. literalinclude:: sec_2.13.lua
+   :language: lua
+
+Pick up the Part
+----------------
+
+.. literalinclude:: sec_2.14.lua
+   :language: lua
+
