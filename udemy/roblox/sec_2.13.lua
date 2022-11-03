@@ -13,7 +13,7 @@ myPart.Touched:Connect(function(hit)
     local character = hit.Parent
     local humanoid = character:FindFirstChild("Humanoid")
     if humanoid and db then
-        local player = game.Players.GetPlayerFromCharacter(character)
+        local player = game.Players:GetPlayerFromCharacter(character)
         -- game.Players:FindFirstChild(character.Name)
         db = false
         myPart.BrickColor = BrickColor.Random()
