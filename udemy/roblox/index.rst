@@ -102,3 +102,8 @@ Pick up the Part
 .. literalinclude:: sec_2.14.lua
    :language: lua
 
+Sign to pick up the part
+------------------------
+
+.. literalinclude:: sec_2.15.lua
+   :language: lua
