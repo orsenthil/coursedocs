@@ -107,3 +107,9 @@ Sign to pick up the part
 
 .. literalinclude:: sec_2.15.lua
    :language: lua
+
+
+Camping Project
+===============
+
+.. image:: /_static/2022-11-09_18-25.png
