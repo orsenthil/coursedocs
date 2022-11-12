@@ -36,3 +36,14 @@ Self Learning Functional CS
 ---------------------------
 
 * https://functionalcs.github.io/curriculum/ - Entire multi-year curriculum for Functional thinking in Computer Science.
+
+.. todo::
+
+   **Visualization, Understanding and Playing**
+
+   * `Visualizing Algorithms <https://visualgo.net/>`_
+   * `Data Structure Visualizations <https://www.cs.usfca.edu/~galles/visualization/Algorithms.html>`_
+   * `Fast Fourier Transform explained visually <http://acko.net/files/gltalks/toolsforthought/#0>`_
+
+.. image:: _static/linux-networking-toolkit.jpg
+
