@@ -25,6 +25,7 @@ General Principles
    edx/index
    codeschool/index
    udemy/index
+   kubernetes/index
    resources
    ideas/ideas
 
