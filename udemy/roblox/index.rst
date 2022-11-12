@@ -7,6 +7,33 @@ Udemy Course
 
 * https://www.udemy.com/course/code-a-simple-game-in-roblox-studio/
 
+Roblox
+------
+
+* Using Studio
+* Building with Parts
+* Building with Physics
+* Building Terrain
+* Lighting Environment
+* Atmosphere Environment
+* Effects Environment
+* Importing Assets
+* GameStructure and Collaboration
+* Lua Overview
+* Collisions, Humanoids,Score
+* Interacting with GUIs
+* Coding Animation
+* Sounds and Music
+* Using the AnimationEditor
+* Combat,Teleporting,DataStores
+* Multiplayer Code and the Client-ServerModel
+* Module Scripts
+* Coding Camera Movements
+* Cross Platform Building
+* Global Community Building
+
+.. image:: https://i.imgur.com/JIldhrt.png
+
 Code
 ====
 
