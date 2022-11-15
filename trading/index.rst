@@ -31,7 +31,7 @@ Trading
     * Mr.Money Mustache
     * Vanguard Index Fund
     * etfdb.com
-
+    * https://optioncharts.io/
 
 #. moving price average. Then you have bollinger lines, basically price +/-
    standard deviations.

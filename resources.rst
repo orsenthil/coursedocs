@@ -1,13 +1,14 @@
 Resources
 =========
 
+* https://free-for.dev/#/
+
 Test Taking
 -----------
 
 * `QuizLet`_
 
 For creating quizzes and taking them.
-
 
 Research Papers
 ---------------
