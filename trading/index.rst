@@ -1,6 +1,38 @@
 Trading
 =======
 
+.. image:: _static/Personal-Finance.jpg
+
+.. todo::
+
+    **Education**
+
+    * `Compound Interest <http://www.moneychimp.com/features/compound_interest.htm>`_
+    * `Marketlife Finance by Adam Grimes <https://www.marketlifetrading.com/site/start>`_
+    * `Tasty Trade <https://tastytrade.thinkific.com>`_
+    * `OpenBB <https://openbb.co/why-openbb>`_
+    * `PyAlgotrade <http://gbeced.github.io/pyalgotrade/docs/v0.20/html/tutorial.html>`_
+    * `Trading View <https://www.tradingview.com/>`_
+    * `Bogleheads <https://www.bogleheads.org/wiki/Getting_started>`_
+    * `Money Banking <https://www.coursera.org/learn/money-banking>`_
+    * https://paynym.is/about
+    * https://www.coinomi.com/en/#
+    * https://suite.trezor.io/
+    * https://www.circle.com/en/
+    * https://deltaray.io/
+    * https://oneoption.com/
+    * https://www.honestmath.com/
+    * https://tastytrade.thinkific.com/collections
+    * https://www.khanacademy.org/economics-finance-domain/core-finance
+    * Schwab
+    * Coinbase
+    * MarketLife
+    * Money From Yummy Sourashtra Books
+    * Mr.Money Mustache
+    * Vanguard Index Fund
+    * etfdb.com
+
+
 #. moving price average. Then you have bollinger lines, basically price +/-
    standard deviations.
 #. A site that lets you test moving average strategies is Portfolio Visualizer
