@@ -3,6 +3,23 @@ Trading
 
 .. image:: _static/Personal-Finance.jpg
 
+
+.. topic:: Hello, Trade World!
+
+    My first software assisted options trading profit was 343 dollars for 7 days.
+
+.. code-block:: bash
+
+    $ python3
+    Python 3.9.10 (main, Jan 15 2022, 11:48:00)
+    [Clang 13.0.0 (clang-1300.0.29.3)] on darwin
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>> 2.56 + 8.22 + 0.01
+    10.790000000000001
+    >>> _ - (0.20 + 0.36 + 6.01 + 0.26 + 0.53)
+    3.4300000000000006
+    >>>
+
 .. todo::
 
     **Education**
