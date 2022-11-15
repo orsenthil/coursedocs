@@ -97,3 +97,32 @@ C Programming
 -------------
 
 * Let us C - https://archive.org/details/let-us-c/page/251/mode/2up
+
+
+Setup Python with custom OpenSSL
+--------------------------------
+
+
+::
+
+    cd ~
+    wget https://www.openssl.org/source/openssl-1.1.1b.tar.gz
+    wget https://www.openssl.org/source/openssl-1.1.1b.tar.gz.sha256
+    sha256sum openssl-1.1.1b.tar.gz
+    cat openssl-1.1.1b.tar.gz.sha256
+    tar zxvf openssl-1.1.1b.tar.gz
+    ls /home/senthilx/
+    cd openssl-1.1.1b
+    ./config \
+        --prefix=/home/senthilx/custom-openssl \
+        --libdir=lib \
+        --openssldir=/etc/ssl
+    make -j1 depend
+    make -j8
+    make install_sw
+
+    cd ~
+    cd cpython
+    ./configure -C --with-openssl=/home/senthilx/openssl --with-openssl-rpath=auto --prefix=/home/senthilx/python-3.x.x
+    make
+    make install
