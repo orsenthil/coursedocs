@@ -27,6 +27,7 @@ General Principles
    udemy/index
    kubernetes/index
    python/index
+   golang/index
    trading/index
    resources
    ideas/ideas
