@@ -140,3 +140,16 @@ Camping Project
 ===============
 
 .. image:: /_static/2022-11-09_18-25.png
+
+
+LeaderBoard
+-----------
+
+.. literalinclude:: sec_3.1.lua
+   :language: lua
+
+Log Pickup
+----------
+
+.. literalinclude:: sec_3.3.lua
+   :language: lua
