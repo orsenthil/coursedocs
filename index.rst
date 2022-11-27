@@ -1,10 +1,7 @@
-https://courses.learntosolveit.com
-==================================
+Courses
+=======
 
-This site has documentation, notes, reference materials for various online
-courses.  This started as a website for OMSCS_ material, still contains
-majority of notes from those, but has included other useful and interesting
-online courses too.
+Reference materials for the courses that I have taken.
 
 General Principles
 ------------------
@@ -48,10 +45,10 @@ Projects
 
 * `Learn to Solve it <https://www.learntosolveit.com>`_
 
-Contribute
-----------
+Ask me anything
+---------------
 
-* If you find anything missing please raise a `bug-report`_ in github.
+* Please create a `discussion`_ in github.
 
 .. _OMSCS: https://omscs.gatech.edu
-.. _bug-report: https://github.com/orsenthil/coursedocs
+.. _discussion: https://github.com/orsenthil/coursedocs
