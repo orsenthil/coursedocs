@@ -75,14 +75,8 @@ With Address Sanitizer for Debugging
 
     export CFLAGS="-fno-sanitize-recover -fwrapv"
 
-    I typically don't build in the main directory, so that I can have multiple
-    different builds with different compilers or compiler flags against the same
-    source.  But if you don't need that, feel free to build in the root directory
-    of the repository.
-
-
-Python 3.9
-----------
+Python 3.12
+-----------
 
 .. code-block:: bash
 
@@ -126,3 +120,10 @@ Setup Python with custom OpenSSL
     ./configure -C --with-openssl=/home/senthilx/openssl --with-openssl-rpath=auto --prefix=/home/senthilx/python-3.x.x
     make
     make install
+
+CPython Internals
+-----------------
+
+
+* https://blog.sourcerer.io/python-internals-an-introduction-d14f9f70e583
+
