@@ -20,8 +20,7 @@
 # ones.
 extensions = [
     'sphinx.ext.todo',
-    'sphinx.ext.mathjax',
-    'myst_parser',
+    'sphinx.ext.mathjax'
 ]
 
 html_theme_options = {
