@@ -20,7 +20,7 @@
 # ones.
 extensions = [
     'sphinx.ext.todo',
-    'sphinx.ext.mathjax'
+    'sphinx.ext.mathjax',
     'myst_parser',
 ]
 
