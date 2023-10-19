@@ -153,3 +153,14 @@ Log Pickup
 
 .. literalinclude:: sec_3.3.lua
    :language: lua
+
+
+
+Roblox Programming - 2023
+=========================
+
+Pass The Ice Wall
+-----------------
+
+.. literalinclude:: new_sec_2.9.lua
+   :language: lua
