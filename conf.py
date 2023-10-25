@@ -20,7 +20,9 @@
 # ones.
 extensions = [
     'sphinx.ext.todo',
-    'sphinx.ext.mathjax'
+    'sphinx.ext.mathjax',
+    'myst_parser'
+
 ]
 
 html_theme_options = {
@@ -34,8 +36,8 @@ templates_path = ['_templates']
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
 #
-# source_suffix = ['.rst', '.md']
-source_suffix = '.rst'
+source_suffix = ['.rst', '.md']
+# source_suffix = '.rst'
 
 # The encoding of source files.
 #
@@ -46,7 +48,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Courses'
-copyright = '2022, Senthil Kumaran'
+copyright = '2023, Senthil Kumaran'
 author = 'Senthil Kumaran'
 
 # The version info for the project you're documenting, acts as replacement for
