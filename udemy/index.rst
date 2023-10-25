@@ -12,3 +12,4 @@ Courses
    aws-devops-professional/index
    technical-analysis-masterclass/index
    roblox/index
+   roblox/class3
