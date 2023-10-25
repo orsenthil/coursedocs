@@ -3,23 +3,6 @@ Resources
 
 * https://free-for.dev/#/
 
-Test Taking
------------
-
-* `QuizLet`_
-
-For creating quizzes and taking them.
-
-Research Papers
----------------
-
-* `Fermats Library`_
-
-A utility to read scientific literature collaboratively, annotate portions of the paper.
-
-.. _Fermats Library: http://fermatslibrary.com/
-.. _QuizLet: https://quizlet.com/students
-
 Visualization, Understanding and Playing
 ----------------------------------------
 
@@ -27,7 +10,6 @@ Visualization, Understanding and Playing
 * Data Structure Visualizations: https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 * Competitive Programming: https://cpbook.net/
 * PyAlgo Viz: https://pyalgoviz.appspot.com/
-* Algomation: http://www.algomation.com/
 * Fast Fourier Transform explained visually: http://acko.net/files/gltalks/toolsforthought/#0
 * Free Programming Resources: https://www.thefreecountry.com/
 * My Physics Lab: https://www.myphysicslab.com
@@ -46,4 +28,3 @@ Self Learning Functional CS
    * `Fast Fourier Transform explained visually <http://acko.net/files/gltalks/toolsforthought/#0>`_
 
 .. image:: _static/linux-networking-toolkit.jpg
-
