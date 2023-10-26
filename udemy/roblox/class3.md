@@ -28,3 +28,12 @@
    :language: lua
 
 ```
+
+### All Steps Example
+
+```{eval-rst}
+
+.. literalinclude:: section2/all_steps.lua
+   :language: lua
+
+```
