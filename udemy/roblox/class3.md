@@ -6,7 +6,8 @@
 
 ```{eval-rst}
 
-.. include:: section2/for_loop.lua
+.. literalinclude:: section2/for_loop.lua
+   :language: lua
 
 ```
 
@@ -14,7 +15,8 @@
 
 ```{eval-rst}
 
-.. include:: section2/while_loop.lua
+.. literalinclude:: section2/while_loop.lua
+   :language: lua
 
 ```
 
@@ -22,6 +24,7 @@
 
 ```{eval-rst}
 
-.. include:: section2/table_example.lua
+.. literalinclude:: section2/table_example.lua
+   :language: lua
 
 ```
