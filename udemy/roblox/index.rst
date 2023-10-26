@@ -6,6 +6,8 @@ Udemy Course
 =============
 
 * https://www.udemy.com/course/code-a-simple-game-in-roblox-studio/
+* https://nlbsg.udemy.com/course/code-a-simple-game-in-roblox-studio/
+* https://www.mrbrendonross.com/roblox-courses 
 
 Roblox
 ------
