@@ -1,0 +1,3 @@
+media:
+  input: src/media
+  output: media
