@@ -3,7 +3,8 @@ Database Systems Concepts and Design
 
 Notes for the Database systems concepts and design course.
 
-* `Lecture Transcripts`_
+* Link to Course - https://edstem.org/us/courses/47527/lessons/ 
+
 
 .. toctree::
    :maxdepth: 3
@@ -17,6 +18,3 @@ Notes for the Database systems concepts and design course.
    metadata
    fundamental
    terms
-
-
-.. _Lecture Transcripts: http://www.prism.gatech.edu/~kzhou33/UdacityNotes/CS6400Subtitles.html
