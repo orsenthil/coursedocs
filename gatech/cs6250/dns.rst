@@ -1,6 +1,5 @@
 DNS
 ===
 
-.. raw:: html
+Refer to the class notes at https://drive.google.com/drive/folders/18nhV78vCr9BM2ws5DH83Nbv8mx16Y9Db?usp=drive_link
 
-    <iframe src="https://drive.google.com/file/d/0Bw223ejhCropcHJvSFBnMnRYS1E/preview" width="640" height="880"></iframe>
