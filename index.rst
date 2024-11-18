@@ -29,6 +29,14 @@ General Principles
    resources
    ideas/ideas
 
+Aduni
+-----
+
+Tuition Free MIT Experiment.
+
+* https://github.com/uthcode/aduni
+
+
 Helpful Repositories and Tools
 ------------------------------
 
@@ -45,10 +53,6 @@ Projects
 
 * `Learn to Solve it <https://www.learntosolveit.com>`_
 
-Ask me anything
----------------
-
-* Please create a `discussion`_ in github.
 
 .. _OMSCS: https://omscs.gatech.edu
 .. _discussion: https://github.com/orsenthil/coursedocs
