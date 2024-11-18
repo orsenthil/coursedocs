@@ -21,7 +21,8 @@
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
-    'myst_parser'
+    'myst_parser',
+    'sphinx-simplepdf'
 
 ]
 
