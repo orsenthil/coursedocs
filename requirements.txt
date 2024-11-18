@@ -1,3 +1,4 @@
 sphinx
 piccolo-theme
 myst-parser
+sphinx-simplepdf
