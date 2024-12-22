@@ -22,8 +22,6 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'myst_parser',
-    'sphinx-simplepdf'
-
 ]
 
 html_theme_options = {
