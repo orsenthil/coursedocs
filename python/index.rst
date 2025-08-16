@@ -1,27 +1,25 @@
 Python
 ======
 
-.. todo::
 
-    * `C Programming <https://www.cprogramming.com>`_
-    * `PyAlgo Viz <https://pyalgoviz.appspot.com/>`_
-    * `Doing HTTP Request Inline <https://prestigemad.com/#!/doc/browser/master>`_
-    * `Curl Converter <https://curlconverter.com/>`_
-    * The official `Python Developer’s Guide <https://devguide.python.org/>`_
-    * `Your Guide to the CPython Source Code <https://realpython.com/cpython-source-code-guide/>`_ (Aug 2019) by Anthony Shaw
-    * `Internals of CPython 2.7 <https://intopythoncom.files.wordpress.com/2017/04/internalsofcpython2-7.pdf>`_
-    * `Internals of CPython 3.6 <https://intopythoncom.files.wordpress.com/2017/04/internalsofcpython3-6-1.pdf>`_
-    * `Advanced Internals of CPython 3.6 <https://intopythoncom.files.wordpress.com/2017/04/merged.pdf>`_
-    * `Python Development Documentation <https://pythondev.readthedocs.io/>`_ by Victor Stinner
-    * `CPython internals: A ten-hour codewalk through the Python interpreter source code <http://pgbovine.net/cpython-internals.htm>`_ (October 2014) by Philip Guo
-    * `Lifecycle of a Python Code - CPython's Execution Model <https://web.archive.org/web/20190427101546/https://dev.to/btaskaya/lifecycle-of-a-python-code---cpythons-execution-model-85i>`_ by Batuhan Osman Taşkaya (October 2018)
-    * `A Python Interpreter Written in Python <http://aosabook.org/en/500L/a-python-interpreter-written-in-python.html>`_ (2016) by Allison Kaptur, from `500 Lines or Less
-      <http://aosabook.org/en/index.html>`_ book.
-
+* `C Programming <https://www.cprogramming.com>`_
+* `PyAlgo Viz <https://pyalgoviz.appspot.com/>`_
+* `Doing HTTP Request Inline <https://prestigemad.com/#!/doc/browser/master>`_
+* `Curl Converter <https://curlconverter.com/>`_
+* The official `Python Developer’s Guide <https://devguide.python.org/>`_
+* `Your Guide to the CPython Source Code <https://realpython.com/cpython-source-code-guide/>`_ (Aug 2019) by Anthony Shaw
+* `Internals of CPython 2.7 <https://intopythoncom.files.wordpress.com/2017/04/internalsofcpython2-7.pdf>`_
+* `Internals of CPython 3.6 <https://intopythoncom.files.wordpress.com/2017/04/internalsofcpython3-6-1.pdf>`_
+* `Advanced Internals of CPython 3.6 <https://intopythoncom.files.wordpress.com/2017/04/merged.pdf>`_
+* `Python Development Documentation <https://pythondev.readthedocs.io/>`_ by Victor Stinner
+* `CPython internals: A ten-hour codewalk through the Python interpreter source code <http://pgbovine.net/cpython-internals.htm>`_ (October 2014) by Philip Guo
+* `Lifecycle of a Python Code - CPython's Execution Model <https://web.archive.org/web/20190427101546/https://dev.to/btaskaya/lifecycle-of-a-python-code---cpythons-execution-model-85i>`_ by Batuhan Osman Taşkaya (October 2018)
+* `A Python Interpreter Written in Python <http://aosabook.org/en/500L/a-python-interpreter-written-in-python.html>`_ (2016) by Allison Kaptur, from `500 Lines or Less <http://aosabook.org/en/index.html>`_ book.
+* https://blog.sourcerer.io/python-internals-an-introduction-d14f9f70e583
 
 .. code-block:: bash
 
-   brew install pkg-config openssl@1.1 xz gdbm tcl-tk
+   brew install pkg-config openssl xz gdbm tcl-tk
 
 Clone
 -----
@@ -30,13 +28,20 @@ Clone
 
    gh repo clone python/cpython
 
+Version of Brew Installed Package
+---------------------------------
+
+.. code-block:: bash
+
+   brew info openssl
+
 Python 3.10
 -----------
 
 .. code-block:: bash
 
     PKG_CONFIG_PATH="$(brew --prefix tcl-tk)/lib/pkgconfig" \
-      ./configure --with-pydebug --with-openssl=$(brew --prefix openssl@1.1)
+      ./configure --with-pydebug --with-openssl=$(brew --prefix openssl@3)
 
 With Address Sanitizer for Debugging
 ------------------------------------
@@ -83,7 +88,7 @@ Python 3.12
     export PKG_CONFIG_PATH="$(brew --prefix tcl-tk)/lib/pkgconfig"
 
     ./configure --with-pydebug \
-                  --with-openssl=$(brew --prefix openssl@1.1) \
+                  --with-openssl=$(brew --prefix openssl@3) \
                   --with-tcltk-libs="$(pkg-config --libs tcl tk)" \
                   --with-tcltk-includes="$(pkg-config --cflags tcl tk)"
 
@@ -125,5 +130,4 @@ CPython Internals
 -----------------
 
 
-* https://blog.sourcerer.io/python-internals-an-introduction-d14f9f70e583
 
