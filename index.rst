@@ -28,12 +28,3 @@ General Principles
    trading/index
    resources
    ideas/ideas
-
-Projects
---------
-
-* `Learn to Solve it <https://www.learntosolveit.com>`_
-
-
-.. _OMSCS: https://omscs.gatech.edu
-.. _discussion: https://github.com/orsenthil/coursedocs

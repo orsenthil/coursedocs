@@ -7,15 +7,6 @@ Introduction
 Following pages and notes will be useful for Georgia Tech, OMSCS_ Students. If you are an OMSCS Student and want to
 contribute your material to this section, please submit a pull request.
 
-
-Georgia Tech Resources
-----------------------
-
-.. toctree::
-   :maxdepth: 1
-
-   resources
-
 Georgia Tech Course Notes
 -------------------------
 
