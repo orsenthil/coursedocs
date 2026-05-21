@@ -25,6 +25,3 @@ General Principles
    kubernetes/index
    python/index
    golang/index
-   trading/index
-   resources
-   ideas/ideas
