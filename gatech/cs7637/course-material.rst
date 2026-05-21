@@ -13,13 +13,9 @@ Course Materials
 
 * `Knowledge Based AI Class Documents`_
 * `Syllabus for the course`_
-* `Full Calendar`_
-
 
 .. _Knowledge Based AI Class Documents: https://drive.google.com/drive/u/0/folders/0B4i4SOmq6niISmtDMEhUYWxVMTQ
 .. _Syllabus for the course: https://docs.google.com/document/d/1Nfy0sNjnBHS4BKtHrE8gJS2pFAuF0up3vVtETxbiQ7c/edit
-.. _Full Calendar: https://docs.google.com/document/d/1ADrey2Q5XzDAxWpoM187D0NGyvzl0RLawry12Zx4qFI/edit#heading=h.gjdgxs
-
 
 Books and References
 --------------------
