@@ -1,18 +1,16 @@
 Courses
 =======
 
-Reference materials for the courses that I have taken.
+This website is a collection of reference materials for the courses that I have
+taken. No repetition of the content. If the content can be referenced by link to
+the parent site, a link should be provided.
 
-General Principles
-------------------
+Content should be useful as a reference material. Watching videos take time,
+docs are easier to read and skim through.
 
-* Preferably no repetition of the content. If the content can be referenced by
-  link to the parent site, a link should be provided.
-
-* Content should be useful as a reference material. Watching videos take time,
-  docs are easier to read and skim through.
-
-* No Assignment Solutions.
+I have used tools like Sphinx and Read the Docs, various python snippets to read
+transcripts and convert them to markdown, I have used llms to enhance the
+quality of the content for reviewing.
 
 .. toctree::
    :maxdepth: 1
@@ -24,4 +22,3 @@ General Principles
    udemy/index
    kubernetes/index
    python/index
-   golang/index
