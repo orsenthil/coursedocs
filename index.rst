@@ -29,25 +29,6 @@ General Principles
    resources
    ideas/ideas
 
-Aduni
------
-
-Tuition Free MIT Experiment.
-
-* https://github.com/uthcode/aduni
-
-
-Helpful Repositories and Tools
-------------------------------
-
-**Numpy Helpers**
-
-Number of courses require familiarity with Numpy. I gathered a bunch of useful,
-small numpy programs for reference.
-
-* https://github.com/orsenthil/numpy-helpers
-
-
 Projects
 --------
 
