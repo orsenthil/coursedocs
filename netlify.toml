@@ -3,5 +3,5 @@
   publish = "_build/html"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
   PYTHON_VERSION = "3.11"
