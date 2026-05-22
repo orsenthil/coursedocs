@@ -1,39 +1,32 @@
 OpenCV
 ======
 
-http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_core/py_basic_ops/py_basic_ops.html
-
+* Reference: http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_core/py_basic_ops/py_basic_ops.html
 
 .. raw:: html
 
     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4zHbI-fFIlI" frameborder="0" allowfullscreen></iframe>
 
-Blur / Noise Without Noise
---------------------------
+Smoothing Before Edge Detection
+---------------------------------
 
-::
+A common pipeline for feature detection:
 
-    Blur/Smooth Without Noise?
-    Right now for HoughCircles, I'm doing:
+**HoughCircles pipeline**:
 
-    1. convert image to grayscale
-    2. get edge image with canny
-    3. pass edge image to houghcircles
+1. Convert image to grayscale
+2. Get edge image with Canny
+3. Pass edge image to ``cv2.HoughCircles``
 
-    For HoughLines:
+**HoughLines pipeline**:
 
-    0 (if needed) use cv2.inRange to get color masks
-    1. get edge image with canny
-    2. pass edge image to houghlines
+1. (Optional) Use ``cv2.inRange`` for color masks
+2. Get edge image with Canny
+3. Pass edge image to ``cv2.HoughLines``
 
-    My understanding before was that smoothing an image helps when there's Gaussian noise to get rid of high frequency pixels. Maybe I'm confusing myself...but should we be smoothing regardless of whether there's noise or not? If so, does the smoothing come after converting to gray scale or using color masks? Or after canny?
+**When to smooth**: Apply Gaussian smoothing *before* edge detection (before Canny), regardless of whether visible noise is present. Smoothing suppresses high-frequency pixel variations that produce spurious edges. Apply smoothing after grayscale conversion but before Canny.
 
-    Been working on this pset for close to 20 hours now and still stuck on part 4 so any help to clear this up would be awesome!
+.. code-block:: python
 
-::
-
-    I used a Gaussian filter to smooth the image before manipulating it in any other way -
-    I pass the smoothed image into my other functions to mask and get houghlines, etc.
-    It seems to be working pretty well.
-
-
+   smoothed = cv2.GaussianBlur(gray, (5, 5), 0)
+   edges = cv2.Canny(smoothed, threshold1, threshold2)
