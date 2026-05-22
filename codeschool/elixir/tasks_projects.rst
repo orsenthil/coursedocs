@@ -13,10 +13,6 @@ Using Mix to Create a New project
 
     mix new budget
 
-.. image:: https://dl.dropbox.com/s/etcovtfz0stbvvu/Screenshot%202017-09-09%2007.08.53.png?dl=0
-   :width: 640
-   :height: 580
-
 The mix run command.
 
 

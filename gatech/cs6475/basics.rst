@@ -1,35 +1,31 @@
 Basics for Image Processing
 ===========================
 
-What is a kernel?
------------------
+Kernels
+-------
 
-A kernel is essentially a fixed size array of numerical coefficeints along
-with an anchor point in that array, which is tipically located at the center.
-
+A **kernel** (filter mask) is a fixed-size array of numerical coefficients with an anchor point, typically at the center. The kernel is convolved with the image to produce filtered output.
 
 .. image:: https://docs.opencv.org/2.4/_images/filter_2d_tutorial_kernel_theory.png
    :align: center
    :height: 300
    :width: 450
 
+Gaussian Pyramids
+-----------------
+
+A **Gaussian pyramid** is built by repeatedly blurring (Gaussian average) and downsampling an image. Each level contains a local average corresponding to a pixel neighborhood at the level below. Used extensively in **texture synthesis** and multi-scale analysis.
 
 Laplacian Pyramids
 ------------------
 
-A Laplacian pyramid is very similar to a Gaussian pyramid but saves the difference image of the blurred versions between each levels. Only the smallest level is not a difference image to enable reconstruction of the high resolution image using the difference images on higher levels. This technique can be used in image compression
-
-
-Gaussian Pyramids
------------------
-
-In a Gaussian pyramid, subsequent images are weighted down using a Gaussian average (Gaussian blur) and scaled down. Each pixel containing a local average that corresponds to a pixel neighborhood on a lower level of the pyramid. This technique is used especially in texture synthesis.
-
+A **Laplacian pyramid** stores the **difference** between successive Gaussian pyramid levels rather than the blurred images themselves. Only the smallest (coarsest) level is stored directly — all higher levels are difference images that enable reconstruction of the full-resolution image. Used in **image compression** and **blending** (e.g., Laplacian pyramid blending for seamless composites).
 
 Sobel Operator
 --------------
 
+The Sobel operator computes image gradients by convolving with directional derivative kernels. It is commonly used in edge detection.
+
 .. math::
 
    \min _ { s ^ { x } ,s ^ { y } ,\alpha } \sum _ { i = 1} ^ { k } E \left( \alpha _ { i } \mathbf { s } _ { \mathbf { i } } ^ { \mathbf { X } } + \left( 1- \alpha _ { i } \right) \mathbf { s } _ { \dot { i } } ^ { y } \right)
-

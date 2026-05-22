@@ -1,144 +1,91 @@
 Efficiency
 ==========
 
-Efficiency/Indexing/Physical Database
--------------------------------------
+Physical database design concerns how data is stored on disk and how access structures (indexes) speed up queries.
 
-* Efficiency, Indexing, Physical Database Design
-
-Computer Architecture
----------------------
-
-.. image:: https://dl.dropbox.com/s/9iwgw3y7ueyk8fv/Screenshot%202016-12-11%2005.22.30.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Why should you care
--------------------
-
-.. image:: https://dl.dropbox.com/s/n2taomcw0gqiy8m/Screenshot%202016-12-11%2005.25.00.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Disk
-----
-
-.. image:: https://dl.dropbox.com/s/kun4bk53hssfi2j/Screenshot%202016-12-11%2005.28.16.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Records
--------
-
-.. image:: https://dl.dropbox.com/s/d1mic1x7jeyzh5w/Screenshot%202016-12-11%2005.31.51.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Blocks
-------
-
-.. image:: https://dl.dropbox.com/s/k15tdtjf2tlcso5/Screenshot%202016-12-11%2005.39.03.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Files
------
-
-.. image:: https://dl.dropbox.com/s/e9jvckm3xtanhu1/Screenshot%202016-12-11%2005.41.11.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Assumptions
------------
-
-.. image:: https://dl.dropbox.com/s/iel8h6q7oohfgji/Screenshot%202016-12-11%2005.43.37.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Heap-Unsorted
--------------
-
-.. image:: https://dl.dropbox.com/s/0wocc8gexkqgj1p/Screenshot%202016-12-11%2007.52.10.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Sorted File
------------
-
-.. image:: https://dl.dropbox.com/s/82wh8mfxvtua5zr/Screenshot%202016-12-11%2007.55.44.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Primary Index
--------------
-
-.. image:: https://dl.dropbox.com/s/srtcl38gdnm3tcp/Screenshot%202016-12-11%2008.57.12.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-* Sparse Index vs Dense Index?
-
-
-Primary Index - Part 2
-----------------------
-
-.. image:: https://dl.dropbox.com/s/pwizuohufhye0qy/Screenshot%202016-12-11%2008.58.46.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Secondary Index
----------------
-
-.. image:: https://dl.dropbox.com/s/re9ipzi2oxofo54/Screenshot%202016-12-11%2009.04.12.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* Only for point queries.
-
-Multi-Level Index
+Storage Hierarchy
 -----------------
 
-.. image:: https://dl.dropbox.com/s/tnz9xv8se9jrb8n/Screenshot%202016-12-11%2009.07.52.png
-   :align: center
-   :height: 300
-   :width: 450
+The **storage hierarchy** (registers → cache → main memory → disk → tape) has increasing capacity but decreasing speed at each level. Database performance is dominated by **disk I/O** — minimizing disk accesses is the primary optimization goal.
 
-Multi-Level Index - B+ Tree
----------------------------
-
-.. image:: https://dl.dropbox.com/s/vo700ymkisxe0vh/Screenshot%202016-12-11%2009.11.49.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Static Hashing
+Disk Structure
 --------------
 
-.. image:: https://dl.dropbox.com/s/tdyge95rqla2s20/Screenshot%202016-12-11%2009.13.38.png
-   :align: center
-   :height: 300
-   :width: 450
+- Data is stored on **platters** with concentric **tracks**, divided into **sectors**.
+- Access time = **seek time** (move head to track) + **rotational latency** (wait for sector) + **transfer time**.
+- Sequential access is much faster than random access.
 
-Static Hashing - 2
+Records, Blocks, and Files
+--------------------------
+
+- A **record** is the physical storage unit for a tuple.
+- Records are grouped into fixed-size **blocks** (pages) — the unit of disk I/O.
+- A **file** is a collection of blocks storing records of one or more relations.
+
+File Organizations
 ------------------
 
-.. image:: https://dl.dropbox.com/s/c7eywf28ryqybrr/Screenshot%202016-12-11%2009.15.28.png
-   :align: center
-   :height: 300
-   :width: 450
+Heap (Unsorted)
+~~~~~~~~~~~~~~~
 
+- Records are inserted at the end of the file.
+- **Insert**: O(1) — fast (append to last block).
+- **Search**: O(n) — requires linear scan.
+- **Delete**: Search + mark/overwrite.
+
+Sorted File
+~~~~~~~~~~~
+
+- Records ordered by a **sort key**.
+- **Search**: O(log n) via binary search on blocks.
+- **Insert**: Expensive — requires shifting records to maintain order.
+- **Range queries**: Efficient once the start point is found.
+
+Indexing
+--------
+
+Primary Index
+~~~~~~~~~~~~~
+
+- Built on the **ordering key** of a sorted file.
+- **Sparse index**: One index entry per block (points to the first record in each block).
+- **Dense index**: One index entry per record.
+- Sparse primary indexes are smaller and fit in fewer blocks.
+
+Secondary Index
+~~~~~~~~~~~~~~~
+
+- Built on a **non-ordering field** — always a **dense index**.
+- Supports **point queries** only (not efficient for range queries without additional structure).
+
+Multi-Level Index
+~~~~~~~~~~~~~~~~~
+
+- When a single-level index is too large to search efficiently, build an index on the index.
+- Each level reduces the search space by the **blocking factor** of the index.
+- The **B+ tree** is the standard multi-level index structure:
+
+  - Balanced — all leaf nodes at the same depth
+  - Internal nodes contain keys and pointers to children
+  - Leaf nodes contain keys and pointers to data records, plus pointers to sibling leaves for range scans
+  - Typical fan-out keeps tree height at 3–4 levels for very large tables
+
+Hashing
+-------
+
+**Static hashing** maps a key to a fixed number of buckets via a hash function.
+
+- **Insert/Search/Delete**: O(1) average case.
+- **Overflow chains** degrade performance when buckets fill up.
+- No support for range queries.
+- **Extendible hashing** and **linear hashing** are dynamic schemes that grow/shrink the hash table as data changes.
+
+Indexing Decisions
+------------------
+
+When deciding whether to create an index, consider:
+
+- **Table size**: Small tables (fitting in a few blocks) gain little from indexing.
+- **Multiple access paths**: Each additional index adds write overhead (every insert/update/delete must maintain all indexes).
+- **Read vs write ratio**: Indexes help reads but slow writes. Favor indexes on read-heavy tables.
+- **Existing indexes**: Check whether a needed access path is already covered by an existing index.

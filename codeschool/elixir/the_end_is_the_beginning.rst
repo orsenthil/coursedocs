@@ -35,11 +35,6 @@ Understanding Recursion
     end
 
 
-.. image:: https://dl.dropbox.com/s/pdxjrzjox72qc43/Screenshot%202017-09-03%2021.25.12.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
 Two Cases for Recursion
 
 * The base case, also called terminating scenario, where the function does NOT invoke itself.

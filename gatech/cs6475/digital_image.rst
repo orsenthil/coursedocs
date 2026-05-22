@@ -1,236 +1,129 @@
 Digital Image
 =============
 
-02-01 Digital Image
--------------------
+What is a Digital Image?
+------------------------
 
-* What is a Digital Image?
-* How to make an image a computable entity?
-
-.. image:: https://dl.dropbox.com/s/vwef0l8tqlnor3z/Screenshot%202018-02-04%2011.16.33.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/jw2v573bhtpyjti/Screenshot%202018-02-04%2011.22.02.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/21btqm84bdt250r/Screenshot%202018-02-04%2011.22.47.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/v6fdojuaoqyf0i9/Screenshot%202018-02-04%2011.24.20.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/dypcj04i5ffstui/Screenshot%202018-02-04%2011.25.28.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/abjs3l04y1ummfl/Screenshot%202018-02-04%2011.25.51.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/s9smb1p397n0i0h/Screenshot%202018-02-04%2011.45.09.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/tnn6kxo3uop70uj/Screenshot%202018-02-04%2011.45.56.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/judzm0d7smbb1vt/Screenshot%202018-02-04%2011.47.28.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/bvu19dhlzkb4ixt/Screenshot%202018-02-04%2011.48.20.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/rpdw8lehudx502f/Screenshot%202018-02-04%2011.48.47.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+A digital image is a 2D function :math:`I(x, y)` mapping pixel coordinates to intensity values, making images computable entities that can be stored, processed, and analyzed as matrices.
 
 Digital Image Formats
-.....................
+~~~~~~~~~~~~~~~~~~~~~
 
-Raster image formats store a series of colored dots "pixels."
+**Raster image formats** store a grid of colored dots (pixels). The number of bits per pixel determines color depth:
 
-Number of bits for each pixel represents the depth of color.
+- **1 bpp**: 2 colors (binary — black or white)
+- **4 bpp**: 16 colors
+- **8 bpp**: 256 colors
+- **24 bpp**: 8 bits per channel (RGB) — 16,777,216 colors
+- **32 bpp**: 24-bit color + 8-bit alpha channel
 
-* 1 bit-per-pixel: 2 colors (black or white, binary).
-* 4 bits-per-pixel: 16 colors
-* 8 bits-per-pixel: 256 different colors
+Common formats: GIF, JPG, PPM, TIF, BMP, camera RAW.
 
-Images can also be 16, 24, 32 bits-per-pixel:
+Tools: OpenCV/Python, MATLAB/Octave, Processing.org
 
-* 24 bits per pixel usually means 8 bits per color
-* At the two highest levels, the pixels themselves can carry up to 16, 777, 216 colors
+Point Processes
+---------------
 
-Common Raster Image formats
+**Point processes** operate on individual pixels independently — the output at :math:`(x, y)` depends only on the input at :math:`(x, y)`.
 
-* GIF, JPG, PPM, TIF, BMP etc.
-* Will discuss camera RAW format.
+Operations on Images
+~~~~~~~~~~~~~~~~~~~~
 
-Exercises
+- **Add/Subtract**: Combine or difference two images pixel-wise
+- **Alpha blending**: Weighted combination of images using transparency parameter :math:`\alpha \in [0, 1]`
+
+  - :math:`\alpha = 0` → invisible, :math:`\alpha = 1` → fully visible
+  - RGB becomes :math:`\alpha` RGB (premultiplied alpha)
+  - Blend: :math:`I_{out} = \alpha \cdot I_A + (1 - \alpha) \cdot I_B`
+
+- **Image histograms**: Distribution of pixel intensity values; useful for contrast analysis and equalization
+
+Blending Modes
+--------------
+
+Blending modes define how two layers of pixels are combined:
+
+**Arithmetic modes**:
+
+- **Average**: :math:`f(a, b) = (a + b) / 2`
+- **Normal**: :math:`f(a, b) = b`
+- **Addition**: Tends to produce whites (overexposure)
+- **Subtraction**: Tends to produce blacks (underexposure)
+- **Difference**: Subtract with scaling
+- **Divide**: Brightens photos
+- **Darken**: :math:`f(a, b) = \min(a, b)` per channel
+- **Lighten**: :math:`f(a, b) = \max(a, b)` per channel
+
+**Advanced modes**:
+
+- **Multiply**: Darkens — :math:`f(a, b) = a \cdot b`
+- **Screen**: Brightens — :math:`f(a, b) = 1 - (1 - a)(1 - b)`
+
+Reference: https://en.wikipedia.org/wiki/Blend_modes
+
+Smoothing
 ---------
 
-* mathworks.com
-* opencv.org, python.org
-* processing.org
+Smoothing reduces noise by averaging pixel values over a neighborhood.
 
-02-02 Point Processes
----------------------
+**Box filter (averaging)**: Replaces each pixel with the uniform average of its kernel neighborhood (e.g., 21×21).
 
-Image Processing and Filtering
-..............................
+**Gaussian filter**: Weights neighbors by a Gaussian distribution — closer pixels contribute more. Produces smoother results than box filtering.
 
-* Point Process Computations on an Image
-* How to combine intensities from 2 images.
-* Point-process computations
-* Add / Subtract Images
-* alpha-blending and it's applications
-* Image histograms
+**Median filtering**: A non-linear operation that replaces each pixel with the **median** of all pixels in the kernel area.
 
-.. image:: https://dl.dropbox.com/s/s5am4wg2ystitjb/Screenshot%202018-02-04%2012.28.10.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+- Reduces noise effectively
+- **Preserves edges** (sharp lines) — unlike averaging filters which blur edges
+- Main idea: use median instead of mean
 
-.. image:: https://dl.dropbox.com/s/s7n8bp0flfvqunv/Screenshot%202018-02-04%2012.28.26.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+Convolution and Cross-Correlation
+----------------------------------
 
-.. image:: https://dl.dropbox.com/s/nqs7cjzzsbor3v6/Screenshot%202018-02-04%2012.29.11.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+**Cross-correlation**: Sliding dot product of a kernel :math:`h` over an image :math:`F`:
 
-.. image:: https://dl.dropbox.com/s/acpkq1m9jxnoq1k/Screenshot%202018-02-04%2012.29.33.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+.. math::
 
-.. image:: https://dl.dropbox.com/s/zs9viliiqkdvd81/Screenshot%202018-02-04%2012.30.07.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+   G[i, j] = \sum_{u=-k}^{k} \sum_{v=-k}^{k} h[u, v] \cdot F[i + u, j + v]
 
-02-03 Blending Modes
---------------------
+Denoted :math:`G = h \otimes F`.
 
-.. image:: https://dl.dropbox.com/s/nzdsj49wt570u02/Screenshot%202018-02-04%2012.35.12.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+- Replaces each pixel with a **linear combination** of its neighbors
+- The kernel :math:`h[u, v]` specifies the weights
 
-.. image:: https://dl.dropbox.com/s/n313alcbat9cof3/Screenshot%202018-02-04%2012.35.36.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+**Convolution**: Same as cross-correlation but with a **flipped kernel**. For symmetric kernels, cross-correlation and convolution produce identical results.
 
-.. image:: https://dl.dropbox.com/s/inhsf6qf4u1sves/Screenshot%202018-02-04%2012.36.45.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+**Common filters**:
 
-* https://en.wikipedia.org/wiki/Blend_modes
-* https://blog.udacity.com/2014/09/udacity-videos-transparent-hand.html
+- **Box filter**: Uniform weights (e.g., 21×21) — averaging
+- **Gaussian filter**: Weights follow normal distribution — smoother falloff
 
+Gradients and Edge Detection
+-----------------------------
 
-02-04 Smoothing
----------------
+**Edges** are locations of rapid change in the image intensity function :math:`F(x, y)`. They appear as ridges in the 3D height map of an image.
 
-Image Processing and Filtering: Smoothing
-.........................................
+Discontinuities arise from changes in:
 
-* Smooth an image over a neighborhood of pixels
-* Median Filtering as a special non-linear filtering and smoothing approach.
+- Surface normal
+- Depth
+- Surface color
+- Illumination
 
-.. image:: https://dl.dropbox.com/s/hu7yrj46bsto2c5/Screenshot%202018-02-04%2012.46.19.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+**Edge detection approach**:
 
-.. image:: https://dl.dropbox.com/s/3rmuhncfa2i1ioo/Screenshot%202018-02-04%2012.51.40.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+1. Look for neighborhoods with strong signs of change
+2. Considerations: neighborhood size, change metric, threshold
+3. Compute **gradients** (discrete derivatives) using kernels
 
-.. image:: https://dl.dropbox.com/s/afvcsud46cfh95m/Screenshot%202018-02-04%2012.52.22.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+**Gradient kernels** (operators for computing discrete derivatives):
 
-.. image:: https://dl.dropbox.com/s/hqc443ln4u0gzb0/Screenshot%202018-02-04%2012.52.40.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+- **Prewitt**: Equal-weight gradient approximation
+- **Sobel**: Weighted gradient approximation (emphasizes center row/column)
+- **Roberts**: 2×2 diagonal difference operator
 
-.. image:: https://dl.dropbox.com/s/24owovd0m7l45d3/Screenshot%202018-02-04%2012.53.58.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+**Canny Edge Detector**: The standard multi-stage edge detection algorithm:
 
-.. image:: https://dl.dropbox.com/s/co0tfjf6lxm1uxc/Screenshot%202018-02-04%2012.54.52.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/bwzsh533x86rssm/Screenshot%202018-02-04%2012.55.36.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/5b8i1vhnbdyxr80/Screenshot%202018-02-04%2012.56.13.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/6itzirijyvrft5m/Screenshot%202018-02-04%2012.57.33.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/qqxlzsrl38bszbh/Screenshot%202018-02-04%2012.58.06.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/15621rpndu4zwo5/Screenshot%202018-02-04%2013.04.53.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Median Filtering
-................
-
-Median Filtering: Non Linear Operation often used in image processing.
-
-* Reduces noise, but
-* Preserves edges (Sharp Lines!)
-
-Main Idea: Use median of all pixels in kernel area, instead of mean.
-
-
-02-05 Convolution and Cross-Correlation
----------------------------------------
-
-02-06 Gradients
----------------
-
-02-07 Edges
------------
-
+1. Smooth with Gaussian filter
+2. Compute gradient magnitude and direction
+3. Non-maximum suppression (thin edges)
+4. Hysteresis thresholding (strong/weak edge linking)

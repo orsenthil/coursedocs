@@ -41,7 +41,3 @@ The cond statement
         end
     end
 
-
-.. image:: https://dl.dropbox.com/s/sczz7kuqssjn4z5/Screenshot%202017-09-09%2006.49.54.png?dl=0
-   :width: 640
-   :height: 580

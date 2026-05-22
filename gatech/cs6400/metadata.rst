@@ -1,104 +1,52 @@
 Metadata
 ========
 
-Archival Metadata Hardware used
--------------------------------
+Metadata is "data about data" — it describes the structure, context, provenance, and preservation requirements of stored information.
 
-* Many different types of Hardware
+Archival Metadata
+-----------------
 
-Experiences with Metadata
--------------------------
+Archival metadata addresses the challenge of **long-term data preservation**: how to ensure data remains readable and interpretable decades or centuries later. Organizations dealing with this include:
 
-* NASA
-* Justice Department
-* National Archives
-* UCAR
+- NASA
+- U.S. Justice Department
+- National Archives
+- UCAR (University Corporation for Atmospheric Research)
 
-The Question
-------------
-
-* How do you make sure you can read your stuff in 100 years from now?
-
-Preservation metadata OAIS information Model
---------------------------------------------
-
-* http://www.oclc.org/research/pmwg/
+The core question: **How do you make sure you can read your data 100 years from now?**
 
 OAIS Information Model
 ----------------------
 
-.. image:: https://dl.dropbox.com/s/tr3cklx5nmqm60v/Screenshot%202016-12-11%2010.19.44.png
-   :align: center
-   :height: 300
-   :width: 450
+The **Open Archival Information System** (OAIS) is the reference model for long-term digital preservation.
 
-Content Information Package
----------------------------
+* Reference: http://www.oclc.org/research/pmwg/
 
-.. image:: https://dl.dropbox.com/s/9f9hazo7x054kww/Screenshot%202016-12-11%2010.20.59.png
-   :align: center
-   :height: 300
-   :width: 450
+Key components of the OAIS model:
 
+- **Content Information**: The data object plus its **Representation Information** (needed to interpret the bits as meaningful data).
+- **Preservation Description Information (PDI)**: Metadata that supports long-term preservation:
 
-.. image:: https://dl.dropbox.com/s/95seoeuu0polf8e/Screenshot%202016-12-11%2010.21.51.png
-   :align: center
-   :height: 300
-   :width: 450
+  - **Reference** — identifiers for the content
+  - **Provenance** — history of the content (origin, custody chain, transformations)
+  - **Context** — why the content was created, relationship to other information
+  - **Fixity** — integrity checks (checksums, digital signatures)
 
-OAIS Information Model Part 2
------------------------------
-
-.. image:: https://dl.dropbox.com/s/dxv1rsgr6r73js7/Screenshot%202016-12-11%2010.22.52.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Preservation Description Information
-------------------------------------
-
-.. image:: https://dl.dropbox.com/s/9zdvdly6few40wp/Screenshot%202016-12-11%2010.23.51.png
-   :align: center
-   :height: 300
-   :width: 450
-
-OAIS Information Model part 03
-------------------------------
-
-.. image:: https://dl.dropbox.com/s/catby8m2ysyvfcz/Screenshot%202016-12-11%2010.24.39.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Standards for Archival Metadata are not mature
-----------------------------------------------
-
-.. image::  https://dl.dropbox.com/s/ly6f9s8vhjuzj5x/Screenshot%202016-12-11%2010.26.22.png
-   :align: center
-   :height: 300
-   :width: 450
-
+- **Packaging Information**: Binds content and PDI into information packages (SIP, AIP, DIP).
 
 Metadata Representation Standards
----------------------------------
+----------------------------------
 
-* XML
-* XML Schema
-* OWL
-* RDF
-* Dublin Core
-* XML METS
-* VERS
-* AIP
-* MOF
+- **XML** / **XML Schema** — structured markup and validation
+- **RDF** — Resource Description Framework for semantic metadata
+- **OWL** — Web Ontology Language for formal knowledge representation
+- **Dublin Core** — a minimal set of 15 metadata elements for resource discovery
+- **METS** (XML) — Metadata Encoding and Transmission Standard for digital library objects
+- **VERS** — Victorian Electronic Records Strategy (government records)
+- **AIP** — Archival Information Package (OAIS packaging)
+- **MOF** — Meta-Object Facility (OMG standard for metamodeling)
 
-Several elements are necessary
-------------------------------
+Key Takeaway
+~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/9mdfbuoan06zz1h/Screenshot%202016-12-11%2010.28.17.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
+Standards for archival metadata are **still maturing**. Multiple competing standards exist, and interoperability remains a challenge. Effective preservation requires a combination of content metadata, structural metadata, and provenance tracking.

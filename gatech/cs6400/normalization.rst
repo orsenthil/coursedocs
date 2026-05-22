@@ -1,234 +1,88 @@
 Normalization
 =============
 
+Normalization is the process of decomposing relations to eliminate redundancy and anomalies while preserving information and functional dependencies.
 
-Normalize
----------
+- An **EER diagram** mapped to relations always produces normalized databases.
 
-* EER Diagram always produces the databases that are normalized.
-
-
-.. image:: https://dl.dropbox.com/s/fik862fi4gl0fof/Screenshot%202016-12-11%2004.31.29.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-What is all about?
-------------------
-
-.. image:: https://dl.dropbox.com/s/zr07r6ysx78z58q/Screenshot%202016-12-11%2004.33.12.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-The Rules
----------
-
-* No redundancy of facts.
-* No cluttering of facts.
-* Must preserve information.
-* Must preserve functional dependencies.
-
-
-Not a relation
---------------
-
-* Multi-value attributes.
-* Values of attributes are pull from set of atomic values.
-
-NF2 = Non First Normal Form
-
-
-.. image:: https://dl.dropbox.com/s/4owa0njcrz2uinn/Screenshot%202016-12-11%2004.35.43.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Relation with Problems
+Goals of Normalization
 ----------------------
 
-.. image:: https://dl.dropbox.com/s/e1fykdxxhfcfgms/Screenshot%202016-12-11%2004.37.06.png
-   :align: center
-   :height: 300
-   :width: 450
+- No redundancy of facts
+- No cluttering of facts
+- Must preserve information (lossless joins)
+- Must preserve functional dependencies
 
-
-Relation with Problems - Redundancy
------------------------------------
-
-.. image:: https://dl.dropbox.com/s/e2x3erylul0nqec/Screenshot%202016-12-11%2004.37.44.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Relation with Problems - Insertion Anamoly
-------------------------------------------
-
-.. image:: https://dl.dropbox.com/s/34amdds3gv8n43r/Screenshot%202016-12-11%2004.38.43.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Relation with Problems = Deletion Anamoly
------------------------------------------
-
-.. image:: https://dl.dropbox.com/s/ef3bvfkcggbi0p7/Screenshot%202016-12-11%2004.42.19.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Relation with Problems - Update Anamoly
----------------------------------------
-
-.. image:: https://dl.dropbox.com/s/1i568k7l76warda/Screenshot%202016-12-11%2004.42.52.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Information loss
-----------------
-
-.. image:: https://dl.dropbox.com/s/navrsm7ma3vz4ia/Screenshot%202016-12-11%2004.43.56.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-.. image:: https://dl.dropbox.com/s/f1s8djbkg0zpwhx/Screenshot%202016-12-11%2004.45.49.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Dependency Loss
----------------
-
-.. image:: https://dl.dropbox.com/s/t41ys6i1vl9xdb8/Screenshot%202016-12-11%2004.46.57.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Perfect Decomposition
----------------------
-
-.. image:: https://dl.dropbox.com/s/w4sdqd41h4o1gcr/Screenshot%202016-12-11%2004.48.13.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Functional Dependencies
------------------------
-
-.. image:: https://dl.dropbox.com/s/wjhcf440u2fyd5q/Screenshot%202016-12-11%2004.53.09.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Full Functional Dependency
---------------------------
-
-.. image:: https://dl.dropbox.com/s/qs007cjxyi8bb8z/Screenshot%202016-12-11%2004.55.17.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Functional Dependencies and Keys
---------------------------------
-
-* How to enforce functional dependency.
-* We use keys to enforce functional dependencies X->Y
-
-.. image:: https://dl.dropbox.com/s/ln6esmz2o989o3o/Screenshot%202016-12-11%2004.56.34.png
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/aezx2lg75fuzcgs/Screenshot%202016-12-11%2004.56.56.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Overview of Normal Forms
-------------------------
-
-* Non First Normal Forms Datastructures
-
-.. image:: https://dl.dropbox.com/s/24oslo8mr37pz9z/Screenshot%202016-12-11%2004.58.43.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Normal Form - Definitions
--------------------------
-
-* NF^2: Non First Normal Form
-* 1NF: R is in 1NF iff all domain values are atomic.
-* 2NF: R is in 2NF iff R is in 1NF and every non-key attribute is fully dependent on the key.
-* 3NF: R is in 3NF iff R is in 2NF and every non-key attribute is non-transitively dependent on the key.
-* BCNF (Boyce-Codd Normal Form): R is in BCNF iff every determinant is a candidate key.
-* Determinant: A set of attributes on which some other attribute is fully functionally dependent.
-
-Kent and Diehr Quote
---------------------
-
-All attributes must dependent on the key (1NF), the whole key (2NF), and nothing but the key (3NF), so help me codd!
-
-1NF BCNF flow chart
--------------------
-
-.. image:: https://dl.dropbox.com/s/mjqpuivz5l66g8o/Screenshot%202016-12-11%2005.07.07.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Compute with Functional Dependencies with Armstrongs Rules
-----------------------------------------------------------
-
-.. image:: https://dl.dropbox.com/s/ppq1zlmy2cp69m0/Screenshot%202016-12-11%2005.09.00.png
-   :align: center
-   :height: 300
-   :width: 450
-
-How to guarantee lossless joins
--------------------------------
-
-.. image:: https://dl.dropbox.com/s/o882lrutcylyvhm/Screenshot%202016-12-11%2005.10.29.png
-   :align: center
-   :height: 300
-   :width: 450
-
-How to guarantee preservation of FDs
-------------------------------------
-
-.. image:: https://dl.dropbox.com/s/1iis9f3rv0i0dzv/Screenshot%202016-12-11%2005.11.24.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Email Interest - Good Decomposition
------------------------------------
-
-.. image:: https://dl.dropbox.com/s/0zv46277e6c9d1t/Screenshot%202016-12-11%2005.12.59.png
-   :align: center
-   :height: 300
-   :width: 450
-
-3NF and BCNF
-------------
-
-* There does exist relations which can only be decomposed to 3NF, but not to BCNF, while being lossless and dependency preserving.
-
-* It can only happen when the relation has overlapping keys.
-
-It Never Happens in Practice
+Non-First Normal Form (NF²)
 ----------------------------
 
-* There does exists relations that exists in 3NF and not in BCNF. (Only in theory)
+A relation is **not in 1NF** if it contains multi-valued or composite attributes. All attribute values must be drawn from a set of **atomic values**.
 
+Anomalies in Unnormalized Relations
+------------------------------------
 
+Poorly designed relations suffer from three types of anomalies:
+
+- **Redundancy**: The same fact is stored multiple times across rows.
+- **Insertion Anomaly**: Cannot insert certain facts without inserting unrelated data (e.g., cannot add a department without an employee).
+- **Deletion Anomaly**: Deleting a tuple inadvertently removes unrelated facts.
+- **Update Anomaly**: Updating a repeated fact requires changing multiple rows; partial updates cause inconsistency.
+
+Decomposition Quality
+---------------------
+
+- **Information Loss**: A bad decomposition may lose information — the natural join of the decomposed relations does not reconstruct the original.
+- **Dependency Loss**: A decomposition may fail to preserve functional dependencies, making some constraints unenforceable without joins.
+- **Perfect Decomposition**: Achieves both lossless joins and dependency preservation.
+
+Functional Dependencies
+------------------------
+
+A **functional dependency** X → Y means that for any two tuples with the same X values, the Y values must also be the same.
+
+A **full functional dependency** X → Y means Y is functionally dependent on X but not on any proper subset of X.
+
+Functional Dependencies and Keys
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- Keys enforce functional dependencies: if X is a key, then X → (all attributes).
+- A **determinant** is any set of attributes on which some other attribute is fully functionally dependent.
+
+Normal Form Definitions
+-----------------------
+
+- **NF²**: Non-First Normal Form — contains non-atomic values
+- **1NF**: All domain values are atomic
+- **2NF**: In 1NF, and every non-key attribute is **fully dependent** on the key (no partial dependencies)
+- **3NF**: In 2NF, and every non-key attribute is **non-transitively dependent** on the key
+- **BCNF** (Boyce-Codd Normal Form): Every determinant is a candidate key
+
+**Kent and Diehr Quote**: "All attributes must depend on the key (1NF), the whole key (2NF), and nothing but the key (3NF), so help me Codd!"
+
+Armstrong's Axioms
+-------------------
+
+Rules for computing the closure of functional dependencies:
+
+- **Reflexivity**: If Y ⊆ X, then X → Y
+- **Augmentation**: If X → Y, then XZ → YZ
+- **Transitivity**: If X → Y and Y → Z, then X → Z
+
+Derived rules: union, decomposition, pseudotransitivity.
+
+Lossless Join Guarantee
+------------------------
+
+A decomposition of R into R1 and R2 is **lossless** if and only if the common attributes (R1 ∩ R2) form a superkey of either R1 or R2.
+
+Dependency Preservation Guarantee
+----------------------------------
+
+A decomposition preserves dependencies if the union of the functional dependencies enforceable on the individual decomposed relations is equivalent to the original set of dependencies.
+
+3NF vs BCNF
+------------
+
+- There exist relations that can be decomposed to **3NF** (lossless + dependency-preserving) but **not to BCNF** without losing dependencies.
+- This can only happen when the relation has **overlapping candidate keys**.
+- In practice, this situation rarely occurs.

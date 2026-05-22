@@ -1,85 +1,94 @@
 Threads Birrell
 ===============
 
-.. code-block:: c
+*An Introduction to Programming with Threads* — Andrew D. Birrell, January 6, 1989.
 
-    * An Introduction to Programming with Threads.
-    ** Andrew D. Birrell.
-    ** Date: Jan-6, 1989
-    ** Reading: Oct-3-2018
+| Paper: https://web.mit.edu/6.826/www/notes/HO16.pdf
 
-    * Introduction
-    ** A “thread” is a straightforward concept: a single sequential flow of control.
-    ** Having “multiple threads” in a program means that at any instant the program hasmultiple points of execution, one in each of its threads.
-    ** Having the threads execute within a “single address space” means that the computer’saddressing hardware is configured so as to permit the threads to read and write the samememory locations.
-    ** off-stack (global) variables are shared among all the threads.
-    ** “lightweight”. This means that threadcreation, existence, destruction and synchronization primitives are cheap.
+Introduction
+------------
 
-    * Why use concurrency?
+- A **thread** is a single sequential flow of control.
+- **Multiple threads** means a program has multiple points of execution at any instant, one per thread.
+- Threads executing within a **single address space** can read and write the same memory locations.
+- Off-stack (global) variables are shared among all threads.
+- Threads are **lightweight** — creation, destruction, and synchronization primitives are cheap.
 
-    ** The alternative, with most conventional operating systems, is to configure your program asmultiple separate processes, running in separate address spaces. This tends to be expensiveto set up, and the costs of communicating between address spaces are often high, even inthe presence of shared segments.
-    ** Threads by adopting an attitude that devicerequests are all sequential (i.e. they suspend execution of the invoking thread until therequest completes), and that the program meanwhile does other work in other threads.
-    ** For example, when you add or remove something ina balanced tree you could happily return to the caller before re-balancing the tree.
-    ** Adding threads to defer work is apowerful technique, even on a uni-processor.
-    ** Even if the same total work is done,reducing latency can improve the responsiveness of your program.
+Why Use Concurrency?
+--------------------
 
-    * The Design of a thread facility.
+- The alternative is multiple separate processes in separate address spaces — expensive to set up, and inter-address-space communication costs are high even with shared segments.
+- Threads simplify I/O by treating device requests as sequential (suspending the invoking thread until completion) while the program does other work in other threads.
+- Threads can **defer work** — e.g., return to the caller before re-balancing a tree. This is powerful even on a uniprocessor.
+- Reducing latency improves responsiveness even if total work is the same.
 
-    ** four major mechanisms: thread creation, mutual exclusion, waiting for events, and some arrangementfor getting a thread out of an unwanted long-term wait.
+Design of a Thread Facility
+----------------------------
 
-    ** Thread creation.
-    *** A thread is created by calling “Fork”, giving it a procedure and an argument record.
-    *** The type REFANY means a dynamically typed pointer to garbage-collected storage.
+Four major mechanisms: **thread creation**, **mutual exclusion**, **waiting for events**, and **alert** (getting a thread out of an unwanted long-term wait).
 
-        ~
-        TYPE Thread;
-        TYPE Forkee = PROCEDURE(REFANY): REFANY;
-        PROCEDURE Fork(proc: Forkee; arg: REFANY): Thread;
-        PROCEDURE Join(thread: Thread): REFANY;
-        ~
+Thread Creation
+~~~~~~~~~~~~~~~
 
-    ***  following program fragment executes theprocedure calls “a(x)” and “b(y)” in parallel, and assigns the result of calling “a(x)” to thevariable “q”.
+A thread is created by calling ``Fork``, giving it a procedure and an argument record. ``REFANY`` is a dynamically typed pointer to garbage-collected storage.
 
-    ~VAR t: Thread;
-    t := Fork(a, x);
-    p := b(y);
-    q := Join(t);~
+.. code-block:: modula3
 
-    *** Most forked threads are permanent dæmon threads, orhave no results, or communicate their results by some synchronization arrangement otherthan “Join”.
-    *** If a thread’s initial procedure has returned and there is no subsequent call of“Join”, the thread quietly evaporates.
+   TYPE Thread;
+   TYPE Forkee = PROCEDURE(REFANY): REFANY;
+   PROCEDURE Fork(proc: Forkee; arg: REFANY): Thread;
+   PROCEDURE Join(thread: Thread): REFANY;
 
-    ** Mutual Exclusion.
+The following executes ``a(x)`` and ``b(y)`` in parallel, assigning the result of ``a(x)`` to ``q``:
 
-    *** The simplest way that threads interact is through access to shared memory.
-    *** primitive that offers mutual exclusion (sometimes called critical sections), specifying fora particular region of code that only one thread can execute there at any time.
-    *** The programmer can achieve mutual exclusion on a set of variables by associatingthem with a mutex, and accessing the variables only from a thread that holds the mutex(i.e., from a thread executing inside a LOCK clause that has locked the mutex).
+.. code-block:: modula3
 
-    ~
-    TYPE Mutex;
-    LOCK mutex DO ... statements ... END;
-    ~
+   VAR t: Thread;
+   t := Fork(a, x);
+   p := b(y);
+   q := Join(t);
 
-    ** Conditional Variables
+- Most forked threads are permanent daemon threads, have no results, or communicate results via synchronization rather than ``Join``.
+- If a thread's initial procedure returns with no subsequent ``Join``, the thread quietly evaporates.
 
-    *** The resourcebeing scheduled is the shared memory accessed inside the LOCK clause, and the schedulingpolicy is one thread at a time.
+Mutual Exclusion
+~~~~~~~~~~~~~~~~
 
-    ~
-    TYPE Condition;
-    PROCEDURE Wait(m: Mutex; c: Condition);
-    PROCEDURE Signal(c: Condition);
-    PROCEDURE Broadcast(c: Condition);
-    ~
+- The simplest thread interaction is through shared memory access.
+- **Mutual exclusion** (critical sections) ensures only one thread executes a particular region of code at a time.
+- Achieve mutual exclusion by associating variables with a **mutex** and accessing them only from a thread holding the mutex (inside a ``LOCK`` clause).
 
-    *** If a thread wants the resource, it locks the mutex andexamines the shared data. If the resource is available, the thread continues. If not, thethread unlocks the mutex and blocks, by calling “Wait”. Later, when some other threadmakes the resource available it awakens the first thread by calling “Signal” or “Broadcast”.
+.. code-block:: modula3
 
-    ** Alerts
+   TYPE Mutex;
+   LOCK mutex DO ... statements ... END;
 
-    *** Alerts are exceptions fot threads.
+Condition Variables
+~~~~~~~~~~~~~~~~~~~
 
-    ** Deadlocks
+The shared memory accessed inside the ``LOCK`` clause is the scheduled resource; the scheduling policy is one thread at a time.
 
-    *** The most effective rule for avoiding such deadlocks is to apply a partial order to theacquisition of mutexes in your program. In other words, arrange that for any pair ofmutexes { M1, M2 }, each thread that needs to hold M1 and M2 simultaneously locksM1 and M2 in the same order (for example, M1 is always locked before M2). This rulecompletely avoids deadlocks involving only mutexes (though as we will see later, thereare other potential deadlocks when your program uses condition variables).
+.. code-block:: modula3
 
-    ** Complexity
+   TYPE Condition;
+   PROCEDURE Wait(m: Mutex; c: Condition);
+   PROCEDURE Signal(c: Condition);
+   PROCEDURE Broadcast(c: Condition);
 
-    *** worrying about these spurious wake-ups, lock conflicts and starvationmakes the program more complicated.
+- A thread locks the mutex and examines shared data. If the resource is available, it continues. If not, it unlocks the mutex and blocks by calling ``Wait``.
+- Another thread later makes the resource available and awakens the waiting thread via ``Signal`` or ``Broadcast``.
+
+Alerts
+~~~~~~
+
+Alerts are the exception mechanism for threads — used to interrupt a thread stuck in an unwanted long-term wait.
+
+Deadlocks
+~~~~~~~~~
+
+The most effective rule for avoiding deadlocks: apply a **partial order** to mutex acquisition. For any pair of mutexes {M1, M2}, every thread that needs both must lock them in the same order (e.g., always M1 before M2). This completely avoids mutex-only deadlocks, though condition variables can introduce additional deadlock scenarios.
+
+Complexity
+~~~~~~~~~~
+
+Spurious wake-ups, lock conflicts, and starvation add complexity to concurrent programs.

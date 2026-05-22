@@ -1,71 +1,27 @@
 Methodology IV: Implementation
 ==============================
 
-Implementation
---------------
-
-.. image:: https://dl.dropbox.com/s/tytntpcgxsge6uk/Screenshot%202016-12-11%2009.20.15.png
-   :align: center
-   :height: 300
-   :width: 450
-
+The implementation phase translates the logical database design into a running system using a specific technology stack.
 
 AMP Solution Stack
 ------------------
 
-.. image:: https://dl.dropbox.com/s/oco5cnsyqv4m95x/Screenshot%202016-12-11%2009.20.51.png
-   :align: center
-   :height: 300
-   :width: 450
+A common implementation stack:
 
+- **A** — Apache (web server)
+- **M** — MySQL / MariaDB (relational database)
+- **P** — PHP / Python / Perl (server-side scripting)
 
-To Index or Not
----------------
+Modern alternatives include MEAN (MongoDB, Express, Angular, Node.js) and similar stacks, but the relational model and SQL remain the foundation.
 
-.. image:: https://dl.dropbox.com/s/96yq0u4hc8w26n3/Screenshot%202016-12-11%2009.22.59.png
-   :align: center
-   :height: 300
-   :width: 450
+Indexing Decisions
+------------------
 
-To Index or Not - Size of the Table
------------------------------------
+The choice of whether to index a column depends on several factors:
 
-.. image:: https://dl.dropbox.com/s/znm33uoxlns21bx/Screenshot%202016-12-11%2009.24.36.png
-   :align: center
-   :height: 300
-   :width: 450
+- **Table size**: Indexing very small tables provides negligible benefit since a full table scan is already fast.
+- **Access path overhead**: Each index adds storage and maintenance cost — every ``INSERT``, ``UPDATE``, and ``DELETE`` must update all affected indexes.
+- **Read vs write ratio**: Heavy-read workloads benefit from indexes; heavy-write workloads suffer from index maintenance overhead.
+- **Existing indexes**: Before adding a new index, check whether the query's access pattern is already covered by a composite or covering index.
 
-To Index or Not - Multiple Access Paths add up
-----------------------------------------------
-
-.. image:: https://dl.dropbox.com/s/b8hgk49vvu0pmhk/Screenshot%202016-12-11%2009.26.12.png
-   :align: center
-   :height: 300
-   :width: 450
-
-To Index or Not Reads and or Writes
------------------------------------
-
-.. image:: https://dl.dropbox.com/s/gu9fke8o1ctifmz/Screenshot%202016-12-11%2009.27.29.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-To Index or Not Already Indexed
--------------------------------
-
-.. image:: https://dl.dropbox.com/s/2zg5tpt297piqv3/Screenshot%202016-12-11%2009.28.37.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-To Index or Not Some Advice
----------------------------
-
-.. image:: https://dl.dropbox.com/s/3drnfh6i8u9ab5p/Screenshot%202016-12-11%2009.29.46.png
-   :align: center
-   :height: 300
-   :width: 450
-
+**General advice**: Index primary keys (usually automatic), foreign keys used in joins, and columns frequently appearing in ``WHERE`` clauses or ``ORDER BY``. Avoid indexing columns with low cardinality or tables with heavy write loads.

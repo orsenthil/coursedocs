@@ -1,38 +1,50 @@
 Fourier Transform
 =================
 
-Images are nothing but samples of different intensities. These samples can be represented in frequency spectra. Those
-frequency images can be used to analyze images differently.
+Images are samples of different intensities that can be represented in the **frequency domain**. Frequency representations enable powerful analysis and manipulation techniques.
 
 Lesson Objectives
 -----------------
 
-* Using sines and cosines to reconstruct a signal.
-* The Fourier Transform
-* Frequency Domains for a Signal
+- Using sines and cosines to reconstruct a signal
+- The Fourier Transform and its properties
+- Frequency domain representation of signals and images
+- Three properties of convolution (commutativity, associativity, distributivity)
 
-* Using Sines and Cosines to reconstruct the signal
-* The Fourier Transform
-* Frequency Domains for a signal
-* Three properties of Convolution.
+Fourier Transform
+-----------------
 
+The **Fourier Transform** decomposes a signal (or image) into a sum of sinusoidal components at different frequencies, amplitudes, and phases. This reveals which frequencies dominate the signal.
 
-04-01 Fourier Transform
------------------------
+- **Low frequencies** correspond to smooth, slowly varying regions
+- **High frequencies** correspond to edges and fine detail
+- Filtering in the frequency domain (e.g., low-pass, high-pass) is equivalent to convolution in the spatial domain
 
-04-02 Blending
---------------
+Blending
+--------
 
-04-03 Pyramids
---------------
+Frequency-domain analysis informs blending strategies — e.g., blending low frequencies from one image with high frequencies from another (hybrid images).
 
-04-04 Cuts
-----------
+Pyramids
+--------
 
-04-05 Features
---------------
+**Gaussian and Laplacian pyramids** provide a multi-scale frequency decomposition useful for blending, compression, and analysis.
 
-04-06 Feature Detection and Matching
-------------------------------------
+Cuts
+----
 
+**Graph cuts** and **min-cut/max-flow** algorithms find optimal seams for compositing images.
 
+Features
+--------
+
+Feature detection identifies distinctive points in images for matching, alignment, and recognition.
+
+Feature Detection and Matching
+------------------------------
+
+Techniques for detecting and matching features across images:
+
+- **Harris corner detector**: Finds points with large intensity variation in multiple directions
+- **SIFT** (Scale-Invariant Feature Transform): Detects and describes features invariant to scale and rotation
+- **Feature matching**: Comparing descriptors between images to find correspondences
