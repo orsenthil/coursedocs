@@ -27,7 +27,6 @@ Introduction to Operating Systems
    beyond_multiprocessing
    lightweight_threads
    notes
-   office_hours
 
 
 Resources Shared by Students
@@ -80,45 +79,45 @@ Video Times for the Udacity Lectures
 ::
 
 
-    P1L1: 00:09:20
+    Course Overview: 00:09:20
 
-    P1L2: 00:40:46
-
-
-
-    P2L1: 00:47:03
-
-    P2L2: 02:05:15
-
-    P2L3: 00:34:32
-
-    P2L4: 01:23:03
-
-    P2L5: 01:24:28
+    What is an Operating System?: 00:40:46
 
 
 
-    P3L1: 01:42:56
+    Process and Process Management: 00:47:03
 
-    P3L2: 01:16:34
+    Threads and Concurrency: 02:05:15
 
-    P3L3: 00:36:49
+    PThreads: 00:34:32
 
-    P3L4: 01:15:17
+    Thread Design Considerations: 01:23:03
 
-    P3L5: 01:03:20
-
-    P3L6: 01:05:57
+    Thread Performance Considerations: 01:24:28
 
 
 
-    P4L1: 01:14:24
+    CPU Scheduling: 01:42:56
 
-    P4L2: 00:58:37
+    Memory Management: 01:16:34
 
-    P4L3: 01:13:43
+    Inter-Process Communication: 00:36:49
 
-    P4L4: 00:58:33
+    Synchronization Constructs: 01:15:17
+
+    I/O Management: 01:03:20
+
+    Virtualization: 01:05:57
+
+
+
+    Remote Procedure Calls (RPC): 01:14:24
+
+    Distributed File Systems: 00:58:37
+
+    Distributed Shared Memory: 01:13:43
+
+    Datacenter Technologies: 00:58:33
 
 
 Practice Tests

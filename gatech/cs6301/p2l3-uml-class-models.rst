@@ -1,5 +1,5 @@
-.. title: P2L3 UML Class Models 
-.. slug: P2L3 UML Class Models 
+.. title: UML Class Models
+.. slug: UML Class Models
 .. date: 2016-05-27 23:40:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P2L3 UML Class Models
-=====================
+UML Class Models
+================
 
 
 Overview

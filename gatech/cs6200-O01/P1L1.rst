@@ -1,8 +1,5 @@
-P1L1
-====
-
 Course Overview
----------------
+===============
 
 This course covers what operating systems are, why they are needed, and how they are designed and implemented — including the key **mechanisms**, **abstractions**, and **policies** that operating systems provide.
 

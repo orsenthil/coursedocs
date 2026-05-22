@@ -1,5 +1,5 @@
-.. title: 22 - Diagnosis 
-.. slug: 22 - Diagnosis 
+.. title: Diagnosis
+.. slug: Diagnosis
 .. date: 2016-01-23 06:52:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-==============
-22 - Diagnosis
-==============
+Diagnosis
+=========
 
 Overview
 --------

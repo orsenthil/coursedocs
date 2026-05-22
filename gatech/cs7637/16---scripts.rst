@@ -1,5 +1,5 @@
-.. title: 16 - Scripts 
-.. slug: 16 - Scripts 
+.. title: Scripts
+.. slug: Scripts
 .. date: 2016-01-23 06:46:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-============
-16 - Scripts
-============
+Scripts
+=======
 
 Scripts Overview
 ----------------

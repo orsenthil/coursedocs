@@ -1,5 +1,3 @@
-P2L5
-----
 
 Thread Performance Considerations
 ==================================

@@ -1,5 +1,5 @@
-.. title: P3L3 Architectural Views 
-.. slug: P3L3 Architectural Views 
+.. title: Architectural Views
+.. slug: Architectural Views
 .. date: 2016-05-27 23:50:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P3L3 Architectural Views
-========================
+Architectural Views
+===================
 
 
 Introduction

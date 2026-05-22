@@ -1,5 +1,5 @@
-.. title: P4L3 Object Design 
-.. slug: P4L3 Object Design 
+.. title: Object Design
+.. slug: Object Design
 .. date: 2016-05-27 23:59:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P4L3 Object Design
-==================
+Object Design
+=============
 
 Object-Oriented Design (OOD) bridges the gap between analysis models (UML diagrams, OCL constraints, non-functional requirements) and a target implementation in an OO language.
 

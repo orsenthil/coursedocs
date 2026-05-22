@@ -1,5 +1,5 @@
-.. title: P1L3 Design Concepts 
-.. slug: P1L3 Design Concepts 
+.. title: Design Concepts
+.. slug: Design Concepts
 .. date: 2016-05-27 23:36:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P1L3 Design Concepts
-====================
+Design Concepts
+===============
 
 
 Definitions

@@ -1,5 +1,5 @@
-P4L3 Distributed Shared Memory
-===============================
+Distributed Shared Memory
+=========================
 
 Distributed Shared Memory Overview
 -----------------------------------

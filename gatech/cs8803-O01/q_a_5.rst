@@ -1,5 +1,5 @@
-1 - Office Hours Week 5
-=======================
+Office Hours Week 5
+===================
 
 Welcome to the 5th office hours.
 

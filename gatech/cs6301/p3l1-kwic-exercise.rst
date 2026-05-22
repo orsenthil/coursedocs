@@ -1,5 +1,5 @@
-.. title: P3L1 KWIC Exercise 
-.. slug: P3L1 KWIC Exercise 
+.. title: KWIC Exercise
+.. slug: KWIC Exercise
 .. date: 2016-05-27 23:47:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P3L1 KWIC Exercise
-==================
+KWIC Exercise
+=============
 
 
 Introduction

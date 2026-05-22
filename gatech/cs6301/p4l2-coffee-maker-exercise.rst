@@ -1,5 +1,5 @@
-.. title: P4L2 Coffee Maker Exercise 
-.. slug: P4L2 Coffee Maker Exercise 
+.. title: Coffee Maker Exercise
+.. slug: Coffee Maker Exercise
 .. date: 2016-05-27 23:58:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P4L2 Coffee Maker Exercise
-==========================
+Coffee Maker Exercise
+=====================
 
 This lesson walks through Robert Martin's coffee maker exercise, contrasting traditional OOA (noun-based) design with a **use-case-driven, role-based** approach, and applying the **Dependency Inversion Principle** to promote reuse.
 

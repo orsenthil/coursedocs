@@ -1,5 +1,5 @@
-P2L3: PThreads
-==============
+PThreads
+========
 
 Overview
 --------

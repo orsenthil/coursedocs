@@ -1,7 +1,7 @@
 Syllabus
 ========
 
-CS6400 — Database Systems Concepts and Design (Fall 2016).
+Database Systems Concepts and Design (Fall 2016).
 
 Readings
 --------

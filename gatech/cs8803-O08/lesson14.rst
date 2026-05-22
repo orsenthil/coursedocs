@@ -1,5 +1,5 @@
-P4L1 - Procedure Abstraction
-============================
+Procedure Abstraction
+=====================
 
 Variable Scope
 --------------

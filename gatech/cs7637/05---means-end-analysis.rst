@@ -1,5 +1,5 @@
-.. title: 05 - Means-End Analysis 
-.. slug: 05 - Means-End Analysis 
+.. title: Means-End Analysis
+.. slug: Means-End Analysis
 .. date: 2016-01-23 06:36:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-=======================
-05 - Means-End Analysis
-=======================
+Means-End Analysis
+==================
 
 State Spaces
 ------------

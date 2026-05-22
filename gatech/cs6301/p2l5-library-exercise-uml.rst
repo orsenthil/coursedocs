@@ -1,5 +1,5 @@
-.. title: P2L5 Library Exercise (UML) 
-.. slug: P2L5 Library Exercise (UML) 
+.. title: Library Exercise (UML)
+.. slug: Library Exercise (UML)
 .. date: 2016-05-27 23:42:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P2L5 Library Exercise (UML)
-===========================
+Library Exercise (UML)
+======================
 
 Analyzing Requirements
 ----------------------

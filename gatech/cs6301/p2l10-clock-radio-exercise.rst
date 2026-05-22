@@ -1,5 +1,5 @@
-.. title: P2L10 Clock Radio Exercise 
-.. slug: P2L10 Clock Radio Exercise 
+.. title: Clock Radio Exercise
+.. slug: Clock Radio Exercise
 .. date: 2016-05-27 23:38:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P2L10 Clock Radio Exercise
-==========================
+Clock Radio Exercise
+====================
 
 
 Modeling with Statecharts

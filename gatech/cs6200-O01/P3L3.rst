@@ -1,5 +1,5 @@
-P3L3: Inter-Process Communication
-==================================
+Inter-Process Communication
+===========================
 
 IPC Overview
 ------------

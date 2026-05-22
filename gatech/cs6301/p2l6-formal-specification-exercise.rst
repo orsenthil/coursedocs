@@ -1,5 +1,5 @@
-.. title: P2L6 Formal Specification Exercise 
-.. slug: P2L6 Formal Specification Exercise 
+.. title: Formal Specification Exercise
+.. slug: Formal Specification Exercise
 .. date: 2016-05-27 23:43:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -8,8 +8,8 @@
 .. type: text
 
 
-P2L6 Formal Specification Exercise
-==================================
+Formal Specification Exercise
+=============================
 
 Formal Specification
 --------------------

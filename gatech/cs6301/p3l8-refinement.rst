@@ -1,5 +1,5 @@
-.. title: P3L8 Refinement 
-.. slug: P3L8 Refinement 
+.. title: Refinement
+.. slug: Refinement
 .. date: 2016-05-27 23:55:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P3L8 Refinement
-===============
+Refinement
+==========
 
 
 Complexity and Abstraction

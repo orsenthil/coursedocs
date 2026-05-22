@@ -1,5 +1,5 @@
-.. title: P3L6 Connectors 
-.. slug: P3L6 Connectors 
+.. title: Connectors
+.. slug: Connectors
 .. date: 2016-05-27 23:53:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P3L6 Connectors
-===============
+Connectors
+==========
 
 
 Overview

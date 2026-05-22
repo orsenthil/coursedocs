@@ -1,5 +1,5 @@
-.. title: P4L6 Design Reviews 
-.. slug: P4L6 Design Reviews 
+.. title: Design Reviews
+.. slug: Design Reviews
 .. date: 2016-05-28 00:02:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P4L6 Design Reviews
-===================
+Design Reviews
+==============
 
 Reviews (also called inspections or walkthroughs) are systematic readings of software artifacts to detect defects. They complement testing and proofs — each technique finds problems the others miss.
 

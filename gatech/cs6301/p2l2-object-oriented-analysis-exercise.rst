@@ -1,5 +1,5 @@
-.. title: P2L2 Object Oriented Analysis Exercise 
-.. slug: P2L2 Object Oriented Analysis Exercise 
+.. title: Object Oriented Analysis Exercise
+.. slug: Object Oriented Analysis Exercise
 .. date: 2016-05-27 23:39:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P2L2 Object Oriented Analysis Exercise
-======================================
+Object Oriented Analysis Exercise
+=================================
 
 
 Object-Oriented Analysis (OOA)

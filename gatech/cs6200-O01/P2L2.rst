@@ -1,5 +1,5 @@
-P2L2: Threads and Concurrency
-=============================
+Threads and Concurrency
+=======================
 
 Threads vs Processes
 --------------------

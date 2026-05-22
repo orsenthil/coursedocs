@@ -4,7 +4,7 @@ Computer Vision
 .. toctree::
    :maxdepth: 3
 
-   1L1/1L1
+   1AL1/1AL1
    2AL1/2AL1
    2AL2/2AL2
    2AL3/2AL3

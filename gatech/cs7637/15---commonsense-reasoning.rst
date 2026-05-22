@@ -1,5 +1,5 @@
-.. title: 15 - Commonsense Reasoning 
-.. slug: 15 - Commonsense Reasoning 
+.. title: Commonsense Reasoning
+.. slug: Commonsense Reasoning
 .. date: 2016-01-23 06:45:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-==========================
-15 - Commonsense Reasoning
-==========================
+Commonsense Reasoning
+=====================
 
 Commonsense Reasoning Overview
 -------------------------------

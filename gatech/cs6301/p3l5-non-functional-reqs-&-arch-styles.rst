@@ -1,5 +1,5 @@
-.. title: P3L5 Non-Functional Reqs & Arch Styles 
-.. slug: P3L5 Non-Functional Reqs & Arch Styles 
+.. title: Non-Functional Reqs & Arch Styles
+.. slug: Non-Functional Reqs & Arch Styles
 .. date: 2016-05-27 23:52:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P3L5 Non-Functional Reqs & Arch Styles
-=======================================
+Non-Functional Reqs & Arch Styles
+=================================
 
 
 Introduction

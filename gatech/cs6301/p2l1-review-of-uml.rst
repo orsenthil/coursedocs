@@ -1,5 +1,5 @@
-.. title: P2L1 Review of UML 
-.. slug: P2L1 Review of UML 
+.. title: Review of UML
+.. slug: Review of UML
 .. date: 2016-05-27 23:37:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P2L1 Review of UML
-==================
+Review of UML
+=============
 
 
 History and Origins

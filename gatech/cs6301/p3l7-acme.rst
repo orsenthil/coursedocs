@@ -1,5 +1,5 @@
-.. title: P3L7 Acme 
-.. slug: P3L7 Acme 
+.. title: Acme
+.. slug: Acme
 .. date: 2016-05-27 23:54:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P3L7 Acme
-=========
+Acme
+====
 
 
 Architectural Description Languages

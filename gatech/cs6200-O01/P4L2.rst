@@ -1,5 +1,5 @@
-P4L2 Distributed File Systems
-==============================
+Distributed File Systems
+========================
 
 Distributed File Systems
 ------------------------

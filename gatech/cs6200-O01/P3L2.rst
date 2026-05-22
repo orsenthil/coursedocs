@@ -1,5 +1,3 @@
-P3L2
-----
 
 Memory Management
 =================

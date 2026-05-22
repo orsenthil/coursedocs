@@ -1,5 +1,5 @@
-.. title: 02 - Introduction to CS7637 
-.. slug: 02 - Introduction to CS7637 
+.. title: Course Introduction
+.. slug: Course Introduction
 .. date: 2016-01-23 06:33:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-===========================
-02 - Introduction to CS7637 
-===========================
+Course Introduction
+===================
 
 Class Goals and Outcomes
 ------------------------

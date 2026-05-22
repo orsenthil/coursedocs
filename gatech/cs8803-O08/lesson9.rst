@@ -1,5 +1,5 @@
-P2L3 - Control Flow Graphs
-==========================
+Control Flow Graphs
+===================
 
 Basic Block Quiz
 ----------------

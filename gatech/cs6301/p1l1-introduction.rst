@@ -1,5 +1,5 @@
-.. title: P1L1 Introduction 
-.. slug: P1L1 Introduction 
+.. title: Introduction
+.. slug: Introduction
 .. date: 2016-05-27 23:34:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P1L1 Introduction
-=================
+Introduction
+============
 
 
 Learning Objectives

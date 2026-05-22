@@ -2,8 +2,8 @@ Overview of Compilation
 =======================
 
 
-1.1 Introduction
-----------------
+Introduction
+------------
 
 
 Why Study Compiler Construction
@@ -30,8 +30,8 @@ _________________________________________
 
 
 
-1.3.1 The Front End
--------------------
+The Front End
+-------------
 
 Checking Syntax
 _______________

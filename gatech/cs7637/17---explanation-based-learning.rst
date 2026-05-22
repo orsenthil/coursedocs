@@ -1,5 +1,5 @@
-.. title: 17 - Explanation-Based Learning 
-.. slug: 17 - Explanation-Based Learning 
+.. title: Explanation-Based Learning
+.. slug: Explanation-Based Learning
 .. date: 2016-01-23 06:47:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-===============================
-17 - Explanation-Based Learning
-===============================
+Explanation-Based Learning
+==========================
 
 Overview
 --------

@@ -1,5 +1,5 @@
-1 - Office Hours Week 1
-=======================
+Office Hours Week 1
+===================
 [Sebastian Thrun - Professor CS373, Andy Brown - Course Manager CS373]
 [Andy:] Welcome to our first office hours. We've seen a lot of really good discussion in the forums.
 Now we have Professor Thrun here with me--I'm Andy the moderator in the CS373 forum.

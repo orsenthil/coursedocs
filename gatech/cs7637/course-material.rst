@@ -7,7 +7,6 @@
 .. description: 
 .. type: text
 
-================
 Course Materials
 ================
 

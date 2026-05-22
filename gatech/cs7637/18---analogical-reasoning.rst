@@ -1,5 +1,5 @@
-.. title: 18 - Analogical Reasoning 
-.. slug: 18 - Analogical Reasoning 
+.. title: Analogical Reasoning
+.. slug: Analogical Reasoning
 .. date: 2016-01-23 06:48:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-=========================
-18 - Analogical Reasoning
-=========================
+Analogical Reasoning
+====================
 
 Overview
 --------

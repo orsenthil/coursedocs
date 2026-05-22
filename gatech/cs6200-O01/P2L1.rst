@@ -1,5 +1,5 @@
-P2L1 - Process and Process Management
-=====================================
+Process and Process Management
+==============================
 
 What is a Process?
 ------------------

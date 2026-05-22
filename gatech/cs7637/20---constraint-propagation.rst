@@ -1,5 +1,5 @@
-.. title: 20 - Constraint Propagation 
-.. slug: 20 - Constraint Propagation 
+.. title: Constraint Propagation
+.. slug: Constraint Propagation
 .. date: 2016-01-23 06:50:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-===========================
-20 - Constraint Propagation
-===========================
+Constraint Propagation
+======================
 
 Overview
 --------

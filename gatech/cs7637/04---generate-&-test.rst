@@ -1,5 +1,5 @@
-.. title: 04 - Generate & Test 
-.. slug: 04 - Generate & Test 
+.. title: Generate & Test
+.. slug: Generate & Test
 .. date: 2016-01-23 06:35:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-====================
-04 - Generate & Test
-====================
+Generate & Test
+===============
 
 Overview
 --------

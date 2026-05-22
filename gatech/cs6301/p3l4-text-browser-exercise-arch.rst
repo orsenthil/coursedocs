@@ -1,5 +1,5 @@
-.. title: P3L4 Text Browser Exercise (Arch) 
-.. slug: P3L4 Text Browser Exercise (Arch) 
+.. title: Text Browser Exercise (Arch)
+.. slug: Text Browser Exercise (Arch)
 .. date: 2016-05-27 23:51:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P3L4 Text Browser Exercise (Arch)
-=================================
+Text Browser Exercise (Arch)
+============================
 
 
 Overview

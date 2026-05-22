@@ -1,5 +1,5 @@
-P1L3 - Regex NFA
-================
+Regex NFA
+=========
 
 .. raw:: html
 

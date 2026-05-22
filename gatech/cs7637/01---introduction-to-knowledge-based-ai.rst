@@ -1,5 +1,5 @@
-.. title: 01 - Introduction to Knowledge-Based AI 
-.. slug: 01 - Introduction to Knowledge-Based AI 
+.. title: Introduction to Knowledge-Based AI
+.. slug: Introduction to Knowledge-Based AI
 .. date: 2016-01-23 06:32:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-========================================
-01 - Introduction to Knowledge-Based AI
-========================================
+Introduction to Knowledge-Based AI
+==================================
 
 Conundrums in AI
 ----------------

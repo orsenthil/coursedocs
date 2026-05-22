@@ -259,8 +259,8 @@ Kalman Filter Design
    <iframe width="560" height="315" src="https://www.youtube.com/embed/KYEr4BXhD_E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 
-1 - Introduction
-================
+Introduction
+============
 Welcome to my second class on Kalman filters.
 I want to take you on a little tour to where it all began--Stanford University.
 Behind me is Vale, Stanford's Research Center.
@@ -282,8 +282,8 @@ This is the car parked in the garage right now. We see the back wall.
 These are all range measurements that tell you how far things are away,
 and they are essential as the input to the Kalman filter that we're going to learn about today.
 
-2 - Tracking Intro
-==================
+Tracking Intro
+==============
 I'd like to take my students on a little journey to Stanford
 and show them our self-driving car that uses sensors to sense the environment.
 So let me dive into the class pretty much right now.
@@ -324,8 +324,8 @@ Let's assume the it sees as its measurement, an object here, here, here,
 here, and here for the times t = 0, t = 1, t = 2, and t = 3.
 Where would you assume the object would be at t = 4? Check one of those 3 boxes.
 
-3 - Tracking Intro Solution
-===========================
+Tracking Intro Solution
+=======================
 And he asked you to expect it right over here.
 From those observations you would say that the velocity
 points in the direction of this vector.
@@ -341,8 +341,8 @@ The Google self-driving car uses methods like these to understand
 where other traffic is based on radar and laser-range data.
 So let's dive in!
 
-4 - Gaussian Intro
-==================
+Gaussian Intro
+==============
 You remember our Markov model where the world was divided into discrete grids,
 and we assigned to each grid a certain probability.
 Such a representation of probability over spaces is called a histogram
@@ -376,8 +376,8 @@ Let me draw you a couple of functions, and you tell me which ones you believe
 are Gaussian by checking the box on the right side.
 Please excuse my poor drawing skills here.
 
-5 - Gaussian Intro Solution
-===========================
+Gaussian Intro Solution
+=======================
 The answer is this one is a Gaussian, this one, and this one.
 They are all characterized by this exponential drop-off on both sides
 that are symmetrical, and they have a single peak.
@@ -386,8 +386,8 @@ This is a bimodal function that has two peaks and as a result is not Gaussian.
 The same is true over here and over here,
 so these guys don't qualify.
 
-6 - Variance Comparison
-=======================
+Variance Comparison
+===================
 Let me ask you again about your intuition
 and draw three more Gaussians, and, again, excuse my poor drawing skills here.
 Now I'm going to ask you about the covariance.
@@ -395,8 +395,8 @@ For each of those check exactly one box.
 Is the covariance large, medium, or small?
 Obviously, one of those is the largest, one is a medium, and one is small.
 
-7 - Variance Comparison Solution
-================================
+Variance Comparison Solution
+============================
 The answer is this is the largest covariance. It's the widest spread.
 This is the smallest, and this is medium.
 To see how this is being found in the formula over here,
@@ -410,15 +410,15 @@ The larger sigma-squared, the more uncertain we are about the actual state.
 This is a very certain distribution where expected deviation is small.
 This is a relative uncertain distribution where we know very little.
 
-8 - Preferred Gaussian
-======================
+Preferred Gaussian
+==================
 [Which to prefer]
 If we track another care with our Google self-driving car,
 which Gaussian would we prefer?
 The first, second, or third?
 
-9 - Preferred Gaussian Solution
-===============================
+Preferred Gaussian Solution
+===========================
 The answer is the third, because that's the one that's most certain,
 and because it is most certain, it makes a chance of accidentally
 hitting another car the smallest just by the fact that we know more about the car
@@ -430,14 +430,14 @@ They are also symmetrical.
 And you learned a little bit about how to use them as a belief in a probabilistic filter.
 Let's go and program a Gaussian.
 
-10 - Evaluate Gaussian
-======================
+Evaluate Gaussian
+=================
 Let me ask you to calculate the value of x--
 you will need a calculator for this--
 for the following values: mu equals 10, sigma-squared equals 4, and x equals 8.
 
-11 - Evaluate Gaussian Solution
-===============================
+Evaluate Gaussian Solution
+==========================
 The approximate answer is 0.12.
 x minus mu squared is 4, this is 10 minus 8 to the square
 divided by 4 equals 1.
@@ -447,8 +447,8 @@ This guy over here is approximately 0.2, which gives us as a product 0.12
 I won't torture you with any more questions like these, because they're really not fun,
 but we can program this now.
 
-12 - Maximize Gaussian
-======================
+Maximize Gaussian
+=================
 Starting with the following source code,
 I'm looking for a completion of this one line over here that returns the Gaussian function
 with arguments mu = 10, sigma2 = 4, and x = 8,
@@ -459,15 +459,15 @@ Applying that to the following numbers over here gives me 0.12.
 Now, here's a question for you.
 How do I have to modify x = 8 to be the maximum return value for this function f?
 
-13 - Maximize Gaussian Solution
-===============================
+Maximize Gaussian Solution
+==========================
 The answer is assess with the same value as mu,
 in which case this expression over here becomes zero, and we get the maximum.
 We get the peak of the Gaussian.
 We set x to the same value as mu, to 10, and the output is 0.2 approximately.
 
-14 - Measurement and Motion 1
-=============================
+Measurement and Motion 1
+========================
 Now let's look at the Kalman filter.
 The Kalman filter represents all distributions but Gaussians.
 Just like in the last class where we talked about measurement cycles and motion cycles,
@@ -480,26 +480,26 @@ You might remember that one of the two steps, measurement or motion,
 required a convolution and the other one a product.
 Please check the corresponding box.
 
-15 - Measurement and Motion 1 Solution
-======================================
+Measurement and Motion 1 Solution
+=================================
 Measurements were implemented using products,
 and motions using a convolution.
 If you don't know this, please go back and check the last class on localization.
 
-16 - Measurement and Motion 2
-=============================
+Measurement and Motion 2
+========================
 In fact, we talked about Bayes Rule,
 and we talked about total probability.
 Please, again, check, whether Bayes Rule and total probability apply
 to measurements or motions.
 
-17 - Measurement and Motion 2 Solution
-======================================
+Measurement and Motion 2 Solution
+=================================
 The answer is the measurement, the product, was using Bayes Rule,
 and motion was using total probability.
 
-18 - Shifting the Mean
-======================
+Shifting the Mean
+=================
 In Kalman filters we iterate measurement and motion.
 This is often called a "measurement update,"
 and this is often called "prediction."
@@ -521,16 +521,16 @@ Here's a quiz for you.
 Will the new mean of the subsequent Gaussian be over here, over here, or over here?
 Check one of these three boxes.
 
-19 - Shifting the Mean Solution
-===============================
+Shifting the Mean Solution
+==========================
 The answer is over here in the middle.
 It's between the two old means--the mean of the prior and the mean of the measurement.
 It's slightly further on the measurement side,
 because the measurement was more certain as to where the vehicle is than the prior.
 The more certain we are, the more we pull the mean in the direction of the certain answer.
 
-20 - Predicting the Peak
-========================
+Predicting the Peak
+===================
 Now, here's a question that's really, really hard.
 When we graph the new Gaussian, I can graph one that's very wide and very peaky.
 If I were to measure where the peak of the new Gaussian is,
@@ -542,8 +542,8 @@ This is an insanely hard question.
 I'd like you to take your chances here,
 and I'll explain to you the answer in just a second.
 
-21 - Predicting the Peak Solution
-=================================
+Predicting the Peak Solution
+============================
 Very surprisingly, the resulting Gaussian
 is more certain than the two component Gaussians.
 That is, the covariance is smaller than either of the two covariances in isolation.
@@ -553,8 +553,8 @@ than either Gaussian in isolation. It'll look something like this.
 That is completely not obvious.
 You might have to take this with faith, but I can actually prove it to you.
 
-22 - Parameter Update
-=====================
+Parameter Update
+================
 Suppose we multiply two Gaussians as in Bayes rule--
 a prior and a measurement probability.
 The prior has a mean of mu and a variance of sigma-squared.
@@ -583,8 +583,8 @@ Suppose I use the following Gaussians:
 These are Gaussians with equal variance but different means that might look as follows.
 Compute for me the new mean after the update and the new sigma-squared.
 
-23 - Parameter Update Solution
-==============================
+Parameter Update Solution
+=========================
 The answer for the new mean is just the one in the middle,
 and reason is both weights over here are equivalent,
 so we take the mean between mu and nu, which is 11.
@@ -592,8 +592,8 @@ Then with sigma-squared it's 2.
 If you take 1/4 plus 1/4, then you get 1/2, so 1 over 1/3 equals 2,
 which means the new variance term is half the size of the previous variance terms.
 
-24 - Parameter Update 2
-=======================
+Parameter Update 2
+==================
 Let's do this again.
 Suppose our mean is 10 and 13, and the variances are imbalanced--8 and 2--
 which corresponds to the following picture.
@@ -601,8 +601,8 @@ There's a relatively shallow distribution centered on 10
 and a much more peaked distribution centered on 13.
 Compute for me what the resulting mu prime and sigma-squared prime are.
 
-25 - Parameter Update 2 Solution
-================================
+Parameter Update 2 Solution
+===========================
 With a little bit of math we find that the new mean is 12.4,
 and the new sigma-squared is 1.6.
 12.4 is much closer to 13 than 10, and that's because the Gaussian centered on 13
@@ -615,8 +615,8 @@ For the weighted average we get 2 times 10 plus 8 times 13.
 Then we normalize by the sum of those two things over here.
 So this is 124 divided by 10, which gives us 12.4.
 
-26 - Separated Gaussians
-========================
+Separated Gaussians
+===================
 Let me ask you a different quiz,
 which from the math, but it tests your intuition.
 Suppose we have a prior that sits over here
@@ -626,14 +626,14 @@ Let me first quiz you where the new mean would be.
 Is it going to be here, here, here, or here?
 Please check the corresponding check mark.
 
-27 - Separated Gaussians Solution
-=================================
+Separated Gaussians Solution
+============================
 The answer is here. It's in the middle.
 It's in the straight middle, because these two variances are the same,
 so we just average the means.
 
-28 - Separated Gaussians 2
-==========================
+Separated Gaussians 2
+=====================
 Let me ask the hard question now.
 Will it be a Gaussian like this where the variance is larger,
 a Guassian with the exact same variance,
@@ -641,8 +641,8 @@ or an even more peaked Guassian that's more certain
 than the two original factors in this calculation.
 Please check exactly one of the three boxes over here.
 
-29 - Separated Gaussians 2 Solution
-===================================
+Separated Gaussians 2 Solution
+==============================
 The answer is it's the more peaked Gaussian.
 That is somewhat counter-intuitive.
 You'd think if this was your initial measurement probability
@@ -658,8 +658,8 @@ This is very counter-intuitive, but now we understand why.
 I hope you feel comfortable with the fact that we have actually gotten
 more information about the location, which is manifest by a more focused estimate.
 
-30 - New Mean and Variance
-==========================
+New Mean and Variance
+=====================
 Let's now go back and write a program
 in which we calculate the new mean and the new variance term.
 I really just want you to write a Python program
@@ -675,8 +675,8 @@ Of course, Python tends to not give you the exact output,
 so there are a couple of zeros over here but ignore those.
 The answer is effectively 12.4 and 1.6. Can you fill in those gaps?
 
-31 - New Mean and Variance Solution
-===================================
+New Mean and Variance Solution
+==============================
 Here's my answer. This is the expression for the mean.
 This is the one for the variance.
 I run it, and I get the exact same answer.
@@ -689,8 +689,8 @@ the measurement update step.
 That's really the difficult step in Kalman filtering.
 The other one--the prediction step or the motion step--is much, much easier to program.
 
-32 - Gaussian Motion
-====================
+Gaussian Motion
+===============
 [Thrun] So let's step a step back and look at what we've achieved.
 We knew there was a measurement update and a motion update,
 which is also called prediction.
@@ -736,15 +736,15 @@ with a motion uncertainty of 6.
 Now describe to me the predictive Gaussian
 and give me the new mu and the new sigma square.
 
-33 - Gaussian Motion Solution
-=============================
+Gaussian Motion Solution
+========================
 [Thrun] And the answer is just add those up.
 8 + 10 = 18
 4 + 6 = 10
 And that's it.
 
-34 - Predict Function
-=====================
+Predict Function
+================
 [Thrun] Let's program this.
 I'm giving you a skeleton code.
 This is the same update function as before.
@@ -755,14 +755,14 @@ and computes the new updated prediction, mean, and variance.
 So for example, if our prior is 10 and 4, our motion is 12 and 4,
 I would like to get out to 22 and 8 according to the formulas I've just given you.
 
-35 - Predict Function Solution
-==============================
+Predict Function Solution
+=========================
 And yes, it's as easy as this. We just add the two means and
 the two variances. It's amazing, this entire
 program over here implements a one-dimensional common feature.
 
-36 - Kalman Filter Code
-=======================
+Kalman Filter Code
+==================
 So now let's put everything together.
 Let's write a main program that takes these 2 functions, update and predict,
 and feeds into a sequence of measurements and motions.
@@ -788,8 +788,8 @@ which is your 10 position moved by 1,
 and the uncertainty--residual uncertainty of 4.
 Can you implement this so you get the exactly same outputs as I've gotten over here?
 
-37 - Kalman Filter Code Solution
-================================
+Kalman Filter Code Solution
+===========================
 This piece of code implements the entire Kalman filter.
 It goes through all the measurement elements and quietly assumes there are
 as many measurements as motions indexed by n.
@@ -869,8 +869,8 @@ We were able to drag it into the right direction but not all the way
 because our false initial belief has such a strong weight
 in the overall equation.
 
-38 - Kalman Prediction
-======================
+Kalman Prediction
+=================
 Now we understand a lot about the 1D Kalman filter.
 You've programmed one. You understand how to incorporate measurements.
 You understand how to incorporate motion,
@@ -892,8 +892,8 @@ Where would you now expect at time t = 3 the object to be?
 Let me give you 3 different places.
 Please click at the most likely location.
 
-39 - Kalman Prediction Solution
-===============================
+Kalman Prediction Solution
+==========================
 The answer is here.
 What the Kalman filter does for you, if you do estimation and high dimensional spaces,
 is to not just go into x and y spaces,
@@ -910,8 +910,8 @@ That is just really, really, really great.
 That's one of the reasons that Kalman filters are such a popular algorithm
 in artificial intelligence and in control theory at large.
 
-40 - Kalman Filter Land
-=======================
+Kalman Filter Land
+==================
 To explain how this works, I have to talk about high dimesional gaussians.
 These are often called multivariate gaussians.
 The mean is now a vector with 1 element for each of the variance.
@@ -951,8 +951,8 @@ to the right side to the point over here.
 Now how does the Kalman filter address this?
 This is the true beauty of the Kalman filter.
 
-41 - Kalman Filter Prediciton
-=============================
+Kalman Filter Prediciton
+========================
 In Kalman filter land, we're going to build a 2-dimensional estimate.
 1 for the location, and 1 for the velocity denoted x dot.
 The velocity can be zero. It can be negative, or it can be positive.
@@ -977,8 +977,8 @@ I'll give you 3 choices.
 Here? Here? Or here?
 Please pick the one that makes the most sense.
 
-42 - Kalman Filter Prediciton Solution
-======================================
+Kalman Filter Prediciton Solution
+=================================
 The answer is right over here. Why?
 If a cars starting point is the point over here, for which we know the location is 1,
 and the velocity is 1, and if we predict 1 time step in the future,
@@ -986,22 +986,22 @@ then for that prediction, we know the location will be 2,
 and the velocity might be a little uncertain, but it stays about the same.
 So we end up with a point over here. Let's do this again.
 
-43 - Another Prediction
-=======================
+Another Prediction
+==================
 Let me consider a velocity of 2,
 which means this is our starting point.
 Let me ask you where you would expect among those choices
 to be the most plausible prediction to be.
 
-44 - Another Prediction Solution
-================================
+Another Prediction Solution
+===========================
 Just like before, it'll be over here with a velocity of 2, initial position of 1,
 we find ourselves in 3.
 And again, this model assumes that in the absence of more knowledge,
 the velocity shouldn't really change.
 
-45 - More Kalman Filters
-========================
+More Kalman Filters
+===================
 When you put all this together, you find that all these possibilites on the Gaussian over here,
 link to a Gaussian that looks like this.
 This is a really interesting 2-dimensional Gaussian, which you should really think about.
@@ -1055,8 +1055,8 @@ That is actually true for all of the different filters but because Kalman filter
 very efficient to calculate, when we have a problem like this,
 you tend to often use just a Kalman filter.
 
-46 - Kalman Filter Design
-=========================
+Kalman Filter Design
+====================
 When we design a Kalman filter, you need effectively 2 things.
 For the state, you need a state transition function,
 and that's usually a matrix, so we're now in the world of linear algebra.
@@ -1098,8 +1098,8 @@ but I would recommend just not to worry about this.
 There's a set of linear algebra equations that implement the Kalman filter
 and higher dimensions.
 
-47 - Kalman Matrices
-====================
+Kalman Matrices
+===============
 I have a new, challenging programming assignment for you that will take you a while,
 but I would like you to implement a multidimensional Kalman filter for the example
 I've just given you.
@@ -1205,8 +1205,8 @@ and then go and fill in the filter code
 in accordance to the things that I showed you
 for the multivariate Kalman filter.
 
-48 - Kalman Matrices Solution
-=============================
+Kalman Matrices Solution
+========================
 [Male] And here is my code.
 If you've got this correct,
 then I'm mightily impressed with what you've done because
@@ -1286,8 +1286,8 @@ I promise you you've just digested the most difficult thing
 I have to teach you in this entire class.
 Congratulations.
 
-49 - Conclusion
-===============
+Conclusion
+==========
 So this completes my unit on Kalman filters. You learned actually quite a bit.
 You learned about Gaussians, how to do measurement updates using multiplication,
 how to do prediction or state transitions using convolution,

@@ -1,5 +1,5 @@
-Lesson 7 - P2L1 - Symantic Analysis
-===================================
+Semantic Analysis
+=================
 
 Beyond Syntax
 -------------

@@ -1,5 +1,5 @@
-.. title: P4L5 Design Principles 
-.. slug: P4L5 Design Principles 
+.. title: Design Principles
+.. slug: Design Principles
 .. date: 2016-05-28 00:01:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P4L5 Design Principles
-======================
+Design Principles
+=================
 
 Design principles (also called heuristics or guidelines) are informal rules of thumb for producing high-quality OO designs. They complement architectural styles and design patterns as ways to learn from others' experience.
 

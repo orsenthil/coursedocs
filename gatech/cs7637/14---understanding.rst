@@ -1,5 +1,5 @@
-.. title: 14 - Understanding 
-.. slug: 14 - Understanding 
+.. title: Understanding
+.. slug: Understanding
 .. date: 2016-01-23 06:44:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-==================
-14 - Understanding
-==================
+Understanding
+=============
 
 Understanding Overview
 ----------------------

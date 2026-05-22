@@ -1,5 +1,5 @@
-1 - Office Hours Week 4
-=======================
+Office Hours Week 4
+===================
 
 Hello, and welcome to the fourth Office Hours.
 We've had a lot of really good discussion in the forums and some great questions.

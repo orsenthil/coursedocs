@@ -1,5 +1,5 @@
-.. title: 25 - Advanced Topics 
-.. slug: 25 - Advanced Topics 
+.. title: Advanced Topics
+.. slug: Advanced Topics
 .. date: 2016-01-23 06:55:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-====================
-25 - Advanced Topics
-====================
+Advanced Topics
+===============
 
 
 Visuospatial Reasoning

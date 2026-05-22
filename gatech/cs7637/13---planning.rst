@@ -1,5 +1,5 @@
-.. title: 13 - Planning 
-.. slug: 13 - Planning 
+.. title: Planning
+.. slug: Planning
 .. date: 2016-01-23 06:43:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-=============
-13 - Planning
-=============
+Planning
+========
 
 Planning Overview
 -----------------

@@ -1,5 +1,5 @@
-1 - Probability
-===============
+Probability
+===========
 So welcome to our very first homework assignment.
 This is number 1. [Homework Assignment #1]
 Just to recap, in the class we learned about localization. [Localization]
@@ -17,8 +17,8 @@ and we have 2 conditionals, P(Y|X) and P(Y|¬X), both 0.6.
 What's the probability of Y?
 Here you have to apply total probability.
 
-2 - Probability Solution
-========================
+Probability Solution
+====================
 [Question 1] The correct answer in the first case is 0.8.
 This is just 1 minus 0.2.
 If X and Y are independent, then we just take the product of those 2 things, which is 0.04.
@@ -34,8 +34,8 @@ When you plug in the numbers, you get 0.6 times 0.2 over here;
 And if you regroup this, or you put the 0.2 and the 0.8 together into one,
 you end up with 0.6.
 
-3 - Localization
-================
+Localization
+============
 Let me ask you a localization question.
 You remember a robot operating in a plane environment has usually 3 coordinates.
 It has an x-coordinate, a y-coordinate, and a heading direction--often called orientation.
@@ -55,8 +55,8 @@ You would get six such variables,
 and I wonder how the memory use of the basic histogram localization scales.
 Please check exactly one of those four boxes over here.
 
-4 - Localization Solution
-=========================
+Localization Solution
+=====================
 The answer is exponential.
 Suppose we resolve each variable at a granularity of 20 different values,
 so there's 20 different values for x and 20 for y and 20 for θ.
@@ -69,8 +69,8 @@ or the histogram method is that the scale of memory is exponential,
 which means it's not applicable to even problems with 6 dimensions,
 because you can't really allocate memory for 6 dimensions.
 
-5 - Bayes' Rule
-===============
+Bayes' Rule
+===========
 I'm now going to quiz you on Bayes Rule.
 Say you own a house, and you know that the house might catch fire in your absence,
 but the probability of it catching fire--"f" over here--is small.
@@ -93,8 +93,8 @@ After you've done this, I'd like you to compute the normalized values
 that have to add up to 1.
 Please enter all 4 values for this homework assignment.
 
-6 - Bayes' Rule Solution
-========================
+Bayes' Rule Solution
+====================
 Here are my answers.
 The prior for fire is 0.001
 times the probability that the neighbor now correctly said, yes, it burns, which is 0.9.
@@ -113,8 +113,8 @@ In fact, it's approximately 0.9 times as large as the initial probability.
 The reason why that is the case is it relates to the 0.9 probability of speaking the truth.
 It's not exactly 0.9 because of normalization, but it's approximately 0.9.
 
-7 - Localization Program
-========================
+Localization Program
+====================
 This is our first programming assignment.
 In class, we localized the robot in a 1D world
 with a number of grid cells where each grid cell could have a different color,
@@ -219,8 +219,8 @@ using the measurement correctness probability and motion success probability,
 and then compute an output of just the final distribution.
 If you've done this, you'll succeed.
 
-8 - Localization Program Solution
-=================================
+Localization Program Solution
+=============================
 Here is my solution to the programming assignment,
 and it's quite straightforward given the class, but I'm really proud if you go it correct,
 because it enabled you to program your own localization algorithm
@@ -305,8 +305,8 @@ I leave this as an exercise, because I can't do this in this Python environment 
 But I congratulate you that you really managed to do something quite amazing,
 which is build an amazing piece of localization software.
 
-9 - Congratulations
-===================
+Congratulations
+===============
 Congratulations. You made it through homework assignment number 1.
 You learned about Monte Carlo robot localization
 with a technique that I often call histogram filters.

@@ -40,8 +40,8 @@ First Search Program
 --------------------
 
 
-1 - Motion Planning
-===================
+Motion Planning
+===============
 Let's talk about motion planning.
 The fundamental problem in motion planning is that a robot might live in a world like this,
 and it might want to find its way to a goal like this
@@ -76,8 +76,8 @@ The goal is find the minimum cost path.
 Before we program anything, let me see if I can ask you a couple of questions
 for minimum cost paths.
 
-2 - Compute Cost
-================
+Compute Cost
+============
 Suppose we live in a discrete world like this, and this is a world we'll be programming.
 Let's for simplicity assume that the world is divided into little grid cells.
 Our initial location is over here facing north or up.
@@ -90,8 +90,8 @@ Each of those costs me exactly 1 unit of cost.
 Then what's the total cost I have to endure to move from start to goal?
 This is a number. Please put a number in here.
 
-3 - Compute Cost Solution
-=========================
+Compute Cost Solution
+=====================
 The answer I want to see is 7 and not 6.
 The reason why I want to see 7 is it takes 6 steps to go on the shortest path to the goal--
 1, 2, 3, 4, 5, 6.
@@ -99,8 +99,8 @@ But in this cell over here I have to turn to the left side.
 That turn also costs me a unit of 1.
 That's in total 6 straight motions and 1 turn, gives me 7.
 
-4 - Compute Cost 2
-==================
+Compute Cost 2
+==============
 Let me now change the action model into a different model.
 We have 3 actions. Here is the first. I can go just forward.
 The second one is I can turn left and then go forward.
@@ -112,8 +112,8 @@ This one over here I turn right and go forward.
 Let's say for the time being the cost of each of those is 1.
 What is now the total cost of the optimal path to the goal?
 
-5 - Compute Cost 2 Solution
-===========================
+Compute Cost 2 Solution
+=======================
 The answer is 6. We apply this action over here 3 times--1, 2, 3.
 We're at this section over here.
 Now we apply the left turn and go forward action, which is the center action over here.
@@ -121,8 +121,8 @@ We end facing over here. That's the fourth. Then we go straight again twice.
 This action over here--5 and 6.
 So we get a total of 6, as opposed to 7 when we counted the turning separately.
 
-6 - Optimal Path
-================
+Optimal Path
+============
 The reason why I change the actions this way is for my next quiz.
 Suppose we punish left turns. Why would we do this?
 Well, in real traffic, left turns are harder to do than the right turns.
@@ -137,8 +137,8 @@ In this example here, let's now say that forward motion will cost you 1.
 A left turn costs you 10, and a right turn costs you 1.
 Now, what is the optimal path, and specifically what's the cost of the optimal path?
 
-7 - Optimal Path Solution
-=========================
+Optimal Path Solution
+=====================
 This was a tricky question. It's 15 it turns out.
 The path stays the same. I haven't punished left turns enough. Let me just try this.
 If I were to go forward, forward, forward, left, forward, forward,
@@ -151,14 +151,14 @@ and avoid the left turn altogether--1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 1
 The path around this loop over here has a cost of 16, which is more than 15.
 We still prefer the left turn.
 
-8 - Optimal Path 2
-==================
+Optimal Path 2
+==============
 So for this final version, let me punish left turns even more
 Now they cost us 20.
 What is now the total cost to get to the goal?
 
-9 - Optimal Path 2 Solution
-===========================
+Optimal Path 2 Solution
+=======================
 The answer is 16.
 Now we're going to take the loop over here--
 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11, 12, 13, 14, 15, 16.
@@ -166,8 +166,8 @@ With a cost of left turns this high, the left turn over here becomes prohibitive
 and we'd rather take a detour on the right side
 and do 3 right turns as opposed to 1 left turn.
 
-10 - Maze
-=========
+Maze
+====
 Let me look at a different maze, and this is not a car example anymore,
 but it's close to what we're going to program.
 Suppose we start over here, and our goal is to go into this corner over here.
@@ -177,16 +177,16 @@ How many steps does it take for the robot that starts over here
 to reach the goal position?
 Please enter your number over here.
 
-11 - Maze Solution
-==================
+Maze Solution
+=============
 The answer is 7.
 As you can see, the shortest path will lead along here.
 Then it becomes ambiguous. We could either go right or up.
 Let's say we randomly go up and hit the goal--
 so 1, 2, 3, 4, 5, 6, 7 steps to the goal.
 
-12 - Maze 2
-===========
+Maze 2
+======
 Let's look at the path planning problem as a search problem.
 If you took my AI online class, you know what this is all about,
 but I want to make sure that everybody can understand what I'm talking about.
@@ -204,13 +204,13 @@ that leads our robot from the start state to the goal state.
 Just to check, tell me how many you think these are.
 How many action are required to go from start to goal?
 
-13 - Maze 2 Solution
-====================
+Maze 2 Solution
+===============
 The answer is 11.
 You go 2 down, 3 to the right makes 5, 1 up makes 6, 2 to the right is 8, 3 down is 11.
 
-14 - First Search Program
-=========================
+First Search Program
+====================
 The big question now is can we write a program that finds the shortest path from start to goal?
 To do so, let's give the grid cell names.
 We have 6 columns, named from 0 to 5, and 5 rows, from 0 to 4.
@@ -315,8 +315,8 @@ Please implement this using the algorithm idea that I've just given you.
 It's going to be difficult. It's going to take you a while.
 But if you do this, you're almost where I want you to be to learn about A*.
 
-15 - First Search Program Solution
-==================================
+First Search Program Solution
+=============================
 Here's my solution--I defined a function "search,"
 which is the only function I'm going to run in the end. It's like the main routine.
 To check cells once they're expanded so we don't expand them again,
@@ -394,8 +394,8 @@ This is the key of a search algorithm.
 The only remaining thing now is that I call the search routine
 that prints me out this thing over here.
 
-16 - Expansion Grid
-===================
+Expansion Grid
+==============
 In the next programming quiz, I would like you to print out a table called expand,
 which does not exist right now.
 What expand is, is a table of the same size as grid
@@ -421,8 +421,8 @@ So for example, you might have 0, 2 over here, and 1 over here
 but what should be the case is when there is a full blockage
 the right side should just never expand.
 
-17 - Expansion Grid Solution
-============================
+Expansion Grid Solution
+=======================
 And here is my solution.
 Analogous to the closed table, I make an expand table
 of exactly the same size but initialized it with -1.
@@ -435,8 +435,8 @@ When later on at the very end, I print out this table
 using this command over here, I get the table down here.
 So your implementation should show something just like this.
 
-18 - Print Path
-===============
+Print Path
+==========
 Now I have a really challenging piece of software for you.
 I would like you to augment this to print something entirely different,
 which is the final solution.
@@ -471,8 +471,8 @@ If you fail, not a big deal.
 You can completely understand how the lecture works and not sure of the code
 once you hit the submit button, and you move on.
 
-19 - Print Path Solution
-========================
+Print Path Solution
+===================
 So here is my solution.
 I make a field called action of the same size as the grid,
 where I memorize for each cell what action it took to get there.
@@ -520,8 +520,8 @@ Very tricky, but look this is an advanced artificial intelligence class,
 you might as well program something really tricky.
 It took me a while to program it myself, but I finally got it right too.
 
-20 - A*
-=======
+A*
+===
 Now I want to come with you to the absolute meat of this class, which is called A-star.
 A-star was invented by Nels Nelson at Stanford many years ago,
 and is a variant of the search algorithm that's more efficient than expanding every node.
@@ -650,8 +650,8 @@ the so called heuristic function, we can guide the search.
 When we have an impasse we can pick a node that looks closer to the goal state.
 As a result we will likely make more progress towards the goal.
 
-21 - Implement A*
-=================
+Implement A*
+============
 So with the heuristic function I've given you of simply the minimum number of steps
 it takes to get to the goal in the absence of obstacles,
 you can now construct an algorithm that implements a star
@@ -662,8 +662,8 @@ that are signs -1 not just to the obstacles but everything over here
 that has not to be expanded according to the heuristic.
 That's your task for the next quiz.
 
-22 - Implement A* Solution
-==========================
+Implement A* Solution
+=====================
 It turns out the actual implementation is really minimal
 compared to what you already implemented.
 With this modification you've implemented A-Star,
@@ -729,8 +729,8 @@ it can make a huge difference especially if there is a huge dead end somewhere
 that can't reach the goal.
 Then A-star performs much, much more efficiently than the simple search.
 
-23 - A* in Action
-=================
+A* in Action
+============
 So here is an actual implementation from the DARPA Urban Challenge.
 The Stanford trial car trying to find a way through a maze.
 As you can see the maze is changing as the car moves.
@@ -788,8 +788,8 @@ you have to change the motion model.
 You have to see the next class I'm teaching, when I go into
 continuous models and I'm going to show you how to turn this into a continuous path.
 
-24 - Dynamic Programming
-========================
+Dynamic Programming
+===================
 I now want to teach you an alternative method for planning.
 This alternative method has a number of advantages and a number of disadvantages.
 It's called dynamic programming,
@@ -836,8 +836,8 @@ That requires a different algorithm than A-star.
 It happens to be a more computation involved algorithm.
 As I said before, it's called dynamic programming for robot path planning.
 
-25 - Computing Value
-====================
+Computing Value
+===============
 Let's look at a very simple piece of code that implements this planning algorithm.
 We have a grid here as before with 0s and 1s. You're familiar with it.
 The start location on the top left, the goal location on the bottom right.
@@ -874,24 +874,24 @@ Let me give you a quiz.
 In this world here with the goal location over here,
 I'd like to understand what is the value of the cell in the bottom right.
 
-26 - Computing Value Solution
-=============================
+Computing Value Solution
+========================
 The answer is 15,
 because it takes 15 steps on the shortest path to go from here to here--
 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, and 15.
 
-27 - Computing Value 2
-======================
+Computing Value 2
+=================
 What is the value of this cell over here?
 
-28 - Computing Value 2 Solution
-===============================
+Computing Value 2 Solution
+==========================
 The answer is 3--1, 2, 3.
 In fact, when you draw in all the values, you can see how the value propagates
 in the structure and so on.
 
-29 - Value Program
-==================
+Value Program
+=============
 Let's now implement something that calculates the value function.
 Here's our familiar grid again.
 We have a vertical obstacle over here, a T-shaped obstacle over here.
@@ -913,8 +913,8 @@ with different actions--up, left, down, and right.
 I also give you something we'll be using in a later quiz
 and the cost for the step is supposed to be 1.
 
-30 - Value Program Solution
-===========================
+Value Program Solution
+======================
 Here's my implementation, which should be relatively straight forward.
 We have a value function that is the same size as my world,
 and I initialize with 99 everywhere.
@@ -959,8 +959,8 @@ It's also interesting to see what happens if I cut off any path to the goal.
 The the resulting value function will retain 99s for most of the state variables--
 exactly those where there is no valid path to the goal.
 
-31 - Optimum Policy
-===================
+Optimum Policy
+==============
 In this next quiz I'd like you to extend your software to print out the optimal policy.
 That's happened over here.
 If we look at the grid, there's an obstacle over here.
@@ -979,8 +979,8 @@ There's only one optimal thing to do, which is going down.
 I want you to write code that outputs this policy,
 which is in many ways very similar to the path output by A-star.
 
-32 - Optimum Policy Solution
-============================
+Optimum Policy Solution
+=======================
 In dynamic programming, this happens to be really easy to program--
 even easier than in A-star. Here is how I did it.
 I defined a field called "policy" of the same size as my grid,
@@ -998,8 +998,8 @@ If one of those succeeds, I just memorize in my policy function what that action
 with a command over here.
 If I finally know output this, then I get this field over here.
 
-33 - Left Turn Policy
-=====================
+Left Turn Policy
+================
 Let's now have some fun and apply this to an actual car problem.
 The one I'll using is a bit simplified as always,
 but it does relate to real world path planning as is done, for example, by Google Maps.
@@ -1059,8 +1059,8 @@ This is our last quiz in this lecture.
 Our last programming assignment, and you might spend some time.
 It took me a while to program it myself to get an output just like this over here.
 
-34 - Left Turn Policy Solution
-==============================
+Left Turn Policy Solution
+=========================
 Here is my solution, I have the value function initialized. It has lots of 999s.
 The policy is a similar function in 3D.
 Then I have a function called policy2d, which is the one I'm later going to print.
@@ -1116,8 +1116,8 @@ That's something you would have done to get back this table over here.
 That's somewhat nontrivial. I didn't tell you this, but I hope you figured it out.
 But everything else is the same dynamic programming loop that you've seen before.
 
-35 - Planning Conclusion
-========================
+Planning Conclusion
+===================
 A visualization of our Standford racing car, Junior,
 in action, applying that exact same algorithm for actual driving.
 You can see here that a right turn is being executed, followed by a lane shift.

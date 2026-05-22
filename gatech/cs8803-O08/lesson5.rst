@@ -1,5 +1,5 @@
-P1L5 = Recursive Descent Parser
-===============================
+Recursive Descent Parser
+========================
 
 .. raw:: html
 

@@ -1,8 +1,5 @@
-P1L2
-====
-
 What is an Operating System?
-----------------------------
+============================
 
 An **operating system** is a layer of systems software between applications and hardware that:
 

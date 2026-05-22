@@ -1,5 +1,5 @@
-.. title: 26 - Wrap-Up 
-.. slug: 26 - Wrap-Up 
+.. title: Wrap-Up
+.. slug: Wrap-Up
 .. date: 2016-01-23 06:56:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-============
-26 - Wrap-Up
-============
+Wrap-Up
+=======
 
 
 Cognitive Systems Architecture Revisited

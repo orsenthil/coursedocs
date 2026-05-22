@@ -1,5 +1,5 @@
-.. title: 24 - Meta-Reasoning 
-.. slug: 24 - Meta-Reasoning 
+.. title: Meta-Reasoning
+.. slug: Meta-Reasoning
 .. date: 2016-01-23 06:54:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-===================
-24 - Meta-Reasoning
-===================
+Meta-Reasoning
+==============
 
 
 Introduction

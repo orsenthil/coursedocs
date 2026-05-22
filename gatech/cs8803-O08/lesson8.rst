@@ -1,5 +1,5 @@
-P2L2: IR Code Generation
-========================
+IR Code Generation
+==================
 
 IR Quiz
 -------

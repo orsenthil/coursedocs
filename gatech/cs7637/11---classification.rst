@@ -1,5 +1,5 @@
-.. title: 11 - Classification 
-.. slug: 11 - Classification 
+.. title: Classification
+.. slug: Classification
 .. date: 2016-01-23 06:41:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-===================
-11 - Classification
-===================
+Classification
+==============
 
 Classification Overview
 -----------------------

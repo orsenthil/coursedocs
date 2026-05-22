@@ -1,5 +1,5 @@
-P3L1 - Register Allocation
-==========================
+Register Allocation
+===================
 
 Full Compiler Structure
 -----------------------

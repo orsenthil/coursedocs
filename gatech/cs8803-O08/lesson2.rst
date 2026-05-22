@@ -1,5 +1,5 @@
-P1L2 - Regular Expressions And DFA
-==================================
+Regular Expressions And DFA
+===========================
 
 .. raw:: html
 

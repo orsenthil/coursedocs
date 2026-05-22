@@ -1,5 +1,5 @@
-.. title: 10 - Incremental Concept Learning 
-.. slug: 10 - Incremental Concept Learning 
+.. title: Incremental Concept Learning
+.. slug: Incremental Concept Learning
 .. date: 2016-01-23 06:40:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-=================================
-10 - Incremental Concept Learning
-=================================
+Incremental Concept Learning
+============================
 
 Overview
 --------

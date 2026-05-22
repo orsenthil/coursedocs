@@ -1,5 +1,5 @@
-.. title: P4L4 Design Patterns 
-.. slug: P4L4 Design Patterns 
+.. title: Design Patterns
+.. slug: Design Patterns
 .. date: 2016-05-28 00:00:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P4L4 Design Patterns
-====================
+Design Patterns
+===============
 
 A **design pattern** is a reusable solution to a recurring design problem in context. Patterns capture design experience — the problem, solution, tradeoffs, applicability, and implementation options.
 

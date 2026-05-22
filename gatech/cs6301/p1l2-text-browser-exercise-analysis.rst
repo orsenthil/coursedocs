@@ -1,5 +1,5 @@
-.. title: P1L2 Text Browser Exercise (Analysis) 
-.. slug: P1L2 Text Browser Exercise (Analysis) 
+.. title: Text Browser Exercise (Analysis)
+.. slug: Text Browser Exercise (Analysis)
 .. date: 2016-05-27 23:35:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P1L2 Text Browser Exercise (Analysis)
-=====================================
+Text Browser Exercise (Analysis)
+================================
 
 
 Problem Statement

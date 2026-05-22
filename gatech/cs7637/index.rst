@@ -1,9 +1,9 @@
-.. Knowledge Based AI - CS7376-O01 documentation master file, created by
+.. Knowledge Based AI documentation master file, created by
    sphinx-quickstart on Wed Jan 27 00:10:09 2016.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Knowledge Based AI - CS7376-O01
+Knowledge Based AI
 ===============================
 
 Contents:

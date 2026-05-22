@@ -1,5 +1,5 @@
-.. title: P2L9 Behavior Modeling 
-.. slug: P2L9 Behavior Modeling 
+.. title: Behavior Modeling
+.. slug: Behavior Modeling
 .. date: 2016-05-27 23:46:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P2L9 Behavior Modeling
-======================
+Behavior Modeling
+=================
 
 States and Events
 -----------------

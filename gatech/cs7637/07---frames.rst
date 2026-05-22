@@ -1,5 +1,5 @@
-.. title: 07 - Frames 
-.. slug: 07 - Frames 
+.. title: Frames
+.. slug: Frames
 .. date: 2016-01-23 06:37:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-===========
-07 - Frames
-===========
+Frames
+======
 
 Overview
 --------

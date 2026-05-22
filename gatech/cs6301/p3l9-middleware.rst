@@ -1,5 +1,5 @@
-.. title: P3L9 Middleware 
-.. slug: P3L9 Middleware 
+.. title: Middleware
+.. slug: Middleware
 .. date: 2016-05-27 23:56:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P3L9 Middleware
-===============
+Middleware
+==========
 
 
 Distributed Systems Architecture

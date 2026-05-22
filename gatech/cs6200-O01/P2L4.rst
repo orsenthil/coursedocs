@@ -1,5 +1,3 @@
-P2L4
-----
 
 Thread Design Considerations
 ============================

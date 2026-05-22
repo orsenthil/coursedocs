@@ -1,5 +1,5 @@
-.. title: 21 - Configuration 
-.. slug: 21 - Configuration 
+.. title: Configuration
+.. slug: Configuration
 .. date: 2016-01-23 06:51:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-==================
-21 - Configuration
-==================
+Configuration
+=============
 
 Design
 ------

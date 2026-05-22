@@ -1,5 +1,5 @@
-.. title: P3L2 Overview of Architectural Styles 
-.. slug: P3L2 Overview of Architectural Styles 
+.. title: Overview of Architectural Styles
+.. slug: Overview of Architectural Styles
 .. date: 2016-05-27 23:49:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P3L2 Overview of Architectural Styles
-=====================================
+Overview of Architectural Styles
+================================
 
 
 Introduction

@@ -1,5 +1,5 @@
-P1L1: Introduction to Compilers
-===============================
+Introduction to Compilers
+=========================
 
 .. raw:: html
 

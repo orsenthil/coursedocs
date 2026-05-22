@@ -1,5 +1,5 @@
-.. title: P2L7 OCL 
-.. slug: P2L7 OCL 
+.. title: OCL
+.. slug: OCL
 .. date: 2016-05-27 23:44:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P2L7 OCL
-========
+OCL
+===
 
 Overview
 --------

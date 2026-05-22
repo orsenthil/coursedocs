@@ -1,5 +1,5 @@
-.. title: P2L8 Library Exercise (OCL) 
-.. slug: P2L8 Library Exercise (OCL) 
+.. title: Library Exercise (OCL)
+.. slug: Library Exercise (OCL)
 .. date: 2016-05-27 23:45:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P2L8 Library Exercise (OCL)
-===========================
+Library Exercise (OCL)
+======================
 
 Purpose
 -------

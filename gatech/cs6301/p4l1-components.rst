@@ -1,5 +1,5 @@
-.. title: P4L1 Components 
-.. slug: P4L1 Components 
+.. title: Components
+.. slug: Components
 .. date: 2016-05-27 23:57:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P4L1 Components
-===============
+Components
+==========
 
 
 Bottom-Up Design

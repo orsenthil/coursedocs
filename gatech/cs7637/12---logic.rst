@@ -1,5 +1,5 @@
-.. title: 12 - Logic 
-.. slug: 12 - Logic 
+.. title: Logic
+.. slug: Logic
 .. date: 2016-01-23 06:42:57 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,9 +7,8 @@
 .. description: 
 .. type: text
 
-==========
-12 - Logic
-==========
+Logic
+=====
 
 Why Formal Logic
 ----------------

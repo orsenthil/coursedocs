@@ -1,5 +1,5 @@
-P1L6: Top Down Parsing: LL Parsing
-==================================
+Top Down Parsing: LL Parsing
+============================
 
 LL(1) Parsing
 -------------

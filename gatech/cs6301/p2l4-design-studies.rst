@@ -1,5 +1,5 @@
-.. title: P2L4 Design Studies 
-.. slug: P2L4 Design Studies 
+.. title: Design Studies
+.. slug: Design Studies
 .. date: 2016-05-27 23:41:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P2L4 Design Studies
-===================
+Design Studies
+==============
 
 Design Studies
 --------------

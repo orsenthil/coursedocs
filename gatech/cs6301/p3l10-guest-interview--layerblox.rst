@@ -1,5 +1,5 @@
-.. title: P3L10 Guest Interview- LayerBlox 
-.. slug: P3L10 Guest Interview- LayerBlox 
+.. title: Guest Interview- LayerBlox
+.. slug: Guest Interview- LayerBlox
 .. date: 2016-05-27 23:48:20 UTC-08:00
 .. tags: notes, mathjax
 .. category: 
@@ -7,8 +7,8 @@
 .. description: 
 .. type: text
 
-P3L10 Guest Interview- LayerBlox
-================================
+Guest Interview- LayerBlox
+==========================
 
 
 Background
