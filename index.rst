@@ -2,15 +2,12 @@ Courses
 =======
 
 This website is a collection of reference materials for the courses that I have
-taken. No repetition of the content. If the content can be referenced by link to
-the parent site, a link should be provided.
-
-Content should be useful as a reference material. Watching videos take time,
-docs are easier to read and skim through.
+taken. No repetition of the content.  Content should be useful as a reference
+material. Watching videos take time, docs are easier to read and skim through.
 
 I have used tools like Sphinx and Read the Docs, various python snippets to read
-transcripts and convert them to markdown, I have used llms to enhance the
-quality of the content for reviewing.
+transcripts and convert them to restructured text, I have used llms to enhance
+the quality of the content for reviewing.
 
 .. toctree::
    :maxdepth: 1
@@ -21,4 +18,3 @@ quality of the content for reviewing.
    codeschool/index
    udemy/index
    kubernetes/index
-   python/index
