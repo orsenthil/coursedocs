@@ -34,11 +34,6 @@ Even interrupts are handled by kernel threads.
 
 A major feature of the new kernel is its support of multiple kernel-supported threads of control, called lightweight processes (LWPs), in any user pro- cess, sharing the address space of the process and other resources, such as open files.
 
-.. image:: https://dl.dropbox.com/s/4h0riy41e0shy9m/Screenshot%202018-10-04%2021.59.44.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
 
 While all LWPs have a kernel thread, not all kernel threads have an LWP
 
@@ -52,9 +47,6 @@ The per-process data was divided between non-swappable data in the proc structur
 The per-process data is contained in the proc structure. It contains a list of kernel threads associ- ated with the process, a pointer to the process address space, user credentials, and the list of signal handlers. The proc structure also contains the ves- tigial user structure, which is now much smaller than a page, and is no longer practical to swap.
 
 The LWP structure contains the per-LWP data such as the process-control-block (pcb) for storing user-level processor registers, system call arguments, signal handling masks, resource usage information, and profiling pointers.
-
-
-.. image:: https://dl.dropbox.com/s/p5wc0vhg1stafqa/Screenshot%202018-10-04%2022.46.57.png?dl=0
 
 
 The current LWP, process, and CPU structures are quickly accessible through pointers in the thread structure.
@@ -73,10 +65,6 @@ System Threads
 
 threads have no need for LWP structures, so the thread structure and stack for these threads can be allocated together in a non- swappable area.
 
-.. image:: https://dl.dropbox.com/s/5swyk785aobjaok/Screenshot%202018-10-04%2023.12.43.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 Synchronization Architecture
 ----------------------------
@@ -118,10 +106,5 @@ A flag is set in the cpu structure indicating that an interrupt at that level ha
 
 Interrupt Thread Cost
 ---------------------
-
-
-
-
-
 
 

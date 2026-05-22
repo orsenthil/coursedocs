@@ -22,7 +22,6 @@ Resources
     Arpaci-Dusseau Books, Version 0.80, May 2014.
 
 
-
 Beej's guides are also well regarded and free for browsing online (you can purchase copies as well).
 
 The Linux Man-Pages Project is another excellent source of reference material that I use all the time (easy to browse
@@ -105,12 +104,6 @@ A pointer type in C is just the pointee type followed by a asterisk (*)...
    float* - type: pointer to float
    struct fraction* - type: pointer to struct fraction
    struct fraction** - type: pointer to struct fraction*
-
-
-.. image::  https://dl.dropbox.com/s/i8j55mnop7p68cz/Screenshot%202018-08-14%2023.22.27.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 
 Why are pointer bugs so common?
