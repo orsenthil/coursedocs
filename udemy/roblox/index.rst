@@ -1,43 +1,23 @@
 Learn How to Code Games in Roblox Studio
 ########################################
 
-
-Udemy Course
-=============
+Links
+=====
 
 * https://www.udemy.com/course/code-a-simple-game-in-roblox-studio/
-* https://nlbsg.udemy.com/course/code-a-simple-game-in-roblox-studio/
-* https://www.mrbrendonross.com/roblox-courses 
+* https://www.mrbrendonross.com/roblox-courses
 
-Roblox
-------
+Course Topics
+=============
 
-* Using Studio
-* Building with Parts
-* Building with Physics
-* Building Terrain
-* Lighting Environment
-* Atmosphere Environment
-* Effects Environment
-* Importing Assets
-* GameStructure and Collaboration
-* Lua Overview
-* Collisions, Humanoids,Score
-* Interacting with GUIs
-* Coding Animation
-* Sounds and Music
-* Using the AnimationEditor
-* Combat,Teleporting,DataStores
-* Multiplayer Code and the Client-ServerModel
-* Module Scripts
-* Coding Camera Movements
-* Cross Platform Building
-* Global Community Building
+* Studio: parts, physics, terrain, lighting, atmosphere, effects, assets
+* Game structure, collaboration, client-server model
+* Lua: collisions, humanoids, score, GUIs, animation, sounds, combat, teleporting, DataStores, module scripts, camera
 
 .. image:: https://i.imgur.com/JIldhrt.png
 
-Code
-====
+Lua Basics (Section 2)
+======================
 
 Program to Print the String
 ---------------------------
@@ -45,13 +25,11 @@ Program to Print the String
 .. literalinclude:: sec_2.1.lua
    :language: lua
 
-
 Program with Conditional Statement
 ----------------------------------
 
 .. literalinclude:: sec_2.2.lua
    :language: lua
-
 
 Program with Conditional Statements and Boolean
 -----------------------------------------------
@@ -59,13 +37,11 @@ Program with Conditional Statements and Boolean
 .. literalinclude:: sec_2.3.lua
    :language: lua
 
-
 Functions
 ---------
 
 .. literalinclude:: sec_2.4.lua
    :language: lua
-
 
 Functions with Parameters
 -------------------------
@@ -85,24 +61,19 @@ Calculator with String
 .. literalinclude:: sec_2.7.lua
    :language: lua
 
-Part
-----
+Part & Workspace
+----------------
 
 .. literalinclude:: sec_2.8.lua
    :language: lua
 
-
-Workspace
----------
-
 .. literalinclude:: sec_2.9.lua
    :language: lua
 
+**Tip:** When creating a part, make it **anchored**.
 
-* When creating a part, make it anchored.
-
-Touching the part
------------------
+Touch Events
+------------
 
 .. literalinclude:: sec_2.10.lua
    :language: lua
@@ -119,32 +90,30 @@ Inline Touch Function
 .. literalinclude:: sec_2.12.lua
    :language: lua
 
-Player touch the part
+Player Touch the Part
 ---------------------
 
 .. literalinclude:: sec_2.13.lua
    :language: lua
 
-Pick up the Part
+Pick Up the Part
 ----------------
 
 .. literalinclude:: sec_2.14.lua
    :language: lua
 
-Sign to pick up the part
+Sign to Pick Up the Part
 ------------------------
 
 .. literalinclude:: sec_2.15.lua
    :language: lua
 
-
-Camping Project
-===============
+Camping Project (Section 3)
+===========================
 
 .. image:: /_static/2022-11-09_18-25.png
 
-
-LeaderBoard
+Leaderboard
 -----------
 
 .. literalinclude:: sec_3.1.lua
@@ -156,12 +125,10 @@ Log Pickup
 .. literalinclude:: sec_3.3.lua
    :language: lua
 
-
-
-Roblox Programming - 2023
+Roblox Programming — 2023
 =========================
 
-Pass The Ice Wall
+Pass the Ice Wall
 -----------------
 
 .. literalinclude:: new_sec_2.9.lua
