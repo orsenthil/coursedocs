@@ -66,6 +66,19 @@ Example — garage door opener:
 
 **State Transition Diagrams**: Graphical FSM representation. Ovals or rectangles = states; directed arcs = transitions labeled ``event/action``. Layout has no semantic meaning. A filled circle indicates the start/default state.
 
+.. mermaid::
+
+   stateDiagram-v2
+       [*] --> DoorClosed_MotorOff
+       DoorClosed_MotorOff --> MotorRunningUp : button press
+       MotorRunningUp --> DoorOpen_MotorOff : sensor door up
+       MotorRunningUp --> DoorPartiallyOpen_MotorOff : button press
+       DoorOpen_MotorOff --> MotorRunningDown : button press
+       MotorRunningDown --> DoorClosed_MotorOff : sensor door down
+       MotorRunningDown --> DoorPartiallyClosed_MotorOff : button press
+       DoorPartiallyClosed_MotorOff --> MotorRunningUp : button press
+       DoorPartiallyOpen_MotorOff --> MotorRunningDown : button press
+
 Problems with STDs:
 
 - Too many arrows (n states × m events)

@@ -82,6 +82,48 @@ Dependency Inversion Principle
 
 **Result:** A class model with three abstract classes (UserInterface, HotWaterSource, ContainmentVessel) and three Mark IV subclasses that implement the hardware-specific behavior.
 
+.. mermaid::
+
+   classDiagram
+       class UserInterface {
+           <<abstract>>
+           +checkBrewButton()*
+           +signalBrewingComplete()*
+       }
+       class HotWaterSource {
+           <<abstract>>
+           +isReady()*
+           +start()*
+           +stop()*
+       }
+       class ContainmentVessel {
+           <<abstract>>
+           +isReady()*
+           +potPresent()*
+           +setFull()*
+       }
+       class M4UserInterface {
+           +checkBrewButton()
+           +signalBrewingComplete()
+       }
+       class M4HotWaterSource {
+           +isReady()
+           +start()
+           +stop()
+       }
+       class M4ContainmentVessel {
+           +isReady()
+           +potPresent()
+           +setFull()
+       }
+
+       UserInterface <|-- M4UserInterface
+       HotWaterSource <|-- M4HotWaterSource
+       ContainmentVessel <|-- M4ContainmentVessel
+       UserInterface --> HotWaterSource
+       UserInterface --> ContainmentVessel
+       HotWaterSource --> ContainmentVessel
+
 Summary
 --------
 

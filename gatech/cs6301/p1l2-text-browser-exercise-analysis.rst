@@ -42,6 +42,29 @@ Analysis Model
 
 A **UML class-model diagram** expresses the analysis. Each class rectangle has three compartments: name (top), attributes (middle), and operations (bottom). Lines between rectangles denote relationships.
 
+.. mermaid::
+
+   classDiagram
+       class ViewPort {
+           +Integer height
+           +String contents
+           +resize(size: Integer) void
+       }
+       class ScrollBar {
+           +Integer handlePosition
+           +Integer handleSize
+           +moveHandle(position: Integer) void
+       }
+       class FileManager {
+           +String[] document
+       }
+       class Displays["◇ Displays"]
+       ViewPort -- FileManager : LinesVisible
+       ViewPort -- Displays
+       ScrollBar -- Displays
+       FileManager -- Displays
+       ViewPort -- ScrollBar : HandleProportion
+
 **Operations** (derived from use cases):
 
 - ``ViewPort.resize(size: Integer): void`` — resizes the viewport

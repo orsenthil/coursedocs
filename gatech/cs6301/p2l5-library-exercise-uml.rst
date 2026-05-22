@@ -90,6 +90,57 @@ Refining Relationships
 
 **Return operation** added to Patron. A ``whenReturned`` attribute is added to the CheckedOut class — a special value indicates an active loan; a date value indicates the item was returned (allowing the system to retain fine information until paid).
 
+.. mermaid::
+
+   classDiagram
+       class Patron {
+           +String name
+           +String address
+           +String phoneNumber
+           +Integer libraryCardNumber
+           +/Date age
+           +itemsCheckedOut()
+           +whenDue()
+           +outstandingOverdueFines()
+           +checkOut()
+           +request()
+           +return()
+       }
+       class Title {
+           +String titleName
+       }
+       class Item {
+           +Money value
+       }
+       class LoanableItem {
+           +Date dueDate
+       }
+       class NonLoanableItem
+       class Book {
+           +Boolean bestSeller
+       }
+       class AudioVideoMaterial
+       class ReferenceBook
+       class Magazine
+       class CheckedOut {
+           +Integer renewed
+           +Date dueDate
+           +/Money fine
+           +Date whenReturned
+       }
+
+       Item <|-- LoanableItem
+       Item <|-- NonLoanableItem
+       LoanableItem <|-- Book
+       LoanableItem <|-- AudioVideoMaterial
+       NonLoanableItem <|-- ReferenceBook
+       NonLoanableItem <|-- Magazine
+       Title o-- Item : 1..*
+       Patron "0..*" -- "0..*" Title : Request
+       Patron -- LoanableItem : Checkout
+       Patron .. CheckedOut
+       LoanableItem .. CheckedOut
+
 Final Considerations
 --------------------
 

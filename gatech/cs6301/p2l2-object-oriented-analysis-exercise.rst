@@ -77,6 +77,34 @@ Operations (from Action Verbs)
 Issues: "has been counted" is stative (describes state, not action) — revisited under relationships. "Examine", "consists of", and "is set to" describe conditions rather than actions and map to equality checks.
 
 
+.. mermaid::
+
+   classDiagram
+       class Tree {
+           +Tree leftSubtree
+           +Tree rightSubtree
+           +Integer leaves
+           +Integer parts
+           +split()
+           +throwAway()
+       }
+       class Leaf
+       class Pile {
+           +Boolean empty
+           +put(tree)
+           +get()
+           +take()
+       }
+       class Counter {
+           +Integer value
+           +increment()
+           +display()
+       }
+       Tree <|-- Leaf : is-a
+       Tree o-- Tree : subtrees
+       Pile o-- Tree : contains
+       Counter -- Leaf : counts
+
 Relationships
 -------------
 

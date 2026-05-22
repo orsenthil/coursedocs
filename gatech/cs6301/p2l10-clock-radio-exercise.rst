@@ -104,6 +104,49 @@ The outermost layer is a two-state machine:
 
 All percept sub-machines are nested within the Plugged-In state. This mirrors Harel's digital watch example (batteries in/out).
 
+.. mermaid::
+
+   stateDiagram-v2
+       [*] --> Unplugged
+       Unplugged --> PluggedIn : insert plug
+       PluggedIn --> Unplugged : pull plug
+
+       state PluggedIn {
+           state DisplayFSM {
+               [*] --> ClockTime
+               ClockTime --> WakeTime : press Wake
+               WakeTime --> ClockTime : release Wake
+               ClockTime --> SleepTime : press Sleep
+               SleepTime --> ClockTime : release Sleep
+           }
+
+           state ModeSwitchFSM {
+               [*] --> Off
+               Off --> On : slide right
+               On --> Off : slide left
+               On --> WakeRadio : slide right
+               WakeRadio --> On : slide left
+               WakeRadio --> WakeBeep : slide right
+               WakeBeep --> WakeRadio : slide left
+           }
+
+           state SpeakerFSM {
+               [*] --> SpeakerOff
+               SpeakerOff --> SpeakerOn : play
+               SpeakerOn --> SpeakerOff : stop
+           }
+
+           state SetModeFSM {
+               [*] --> NoneSet
+               NoneSet --> ClockSet : Hour or Min pressed
+               NoneSet --> WakeSet : Wake + Hour or Min
+               NoneSet --> SleepSet : Sleep + Hour or Min
+               ClockSet --> NoneSet : released
+               WakeSet --> NoneSet : released
+               SleepSet --> NoneSet : released
+           }
+       }
+
 
 Setting the Time
 ----------------

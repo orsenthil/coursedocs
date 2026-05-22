@@ -105,6 +105,32 @@ Composite Pattern (Structural, Detail)
 - Data structure for children (array, hash, linked list)?
 - Cascading delete (filled diamond = composition in UML)?
 
+.. mermaid::
+
+   classDiagram
+       class Component {
+           <<abstract>>
+           +operation()*
+           +add(Component)
+           +remove(Component)
+           +getChild(int)
+       }
+       class Leaf {
+           +operation()
+       }
+       class Composite {
+           +operation()
+           +add(Component)
+           +remove(Component)
+           +getChild(int)
+       }
+       class Client
+
+       Component <|-- Leaf
+       Component <|-- Composite
+       Composite o-- Component : children
+       Client --> Component
+
 **Example:** Inventory management — Component=InventoryItem, Leaf=StainlessSteelHexBolt, Composite=BlueBirdBoxKit, Client=OutOfStockDetector
 
 Singleton Pattern (Creational, Detail)
@@ -119,6 +145,15 @@ Singleton Pattern (Creational, Detail)
 1. Define a class (static) variable to hold the instance
 2. ``getInstance()`` checks if instance exists; creates it if not
 3. Make constructor private/protected to prevent external instantiation
+
+.. mermaid::
+
+   classDiagram
+       class Singleton {
+           -Singleton$ uniqueInstance
+           -Singleton()
+           +getInstance()$ Singleton
+       }
 
 **Consequences:**
 
@@ -150,6 +185,43 @@ Visitor Pattern (Behavioral, Detail)
 - **Element** (abstract) — declares ``accept(Visitor)``
 - **ConcreteElement** — implements ``accept`` by calling ``visitor.visit(this)``
 - **ObjectStructure** — the collection/tree; enumerates elements
+
+.. mermaid::
+
+   classDiagram
+       class Visitor {
+           <<abstract>>
+           +visitConcreteElementA(ConcreteElementA)*
+           +visitConcreteElementB(ConcreteElementB)*
+       }
+       class ConcreteVisitor1 {
+           +visitConcreteElementA(ConcreteElementA)
+           +visitConcreteElementB(ConcreteElementB)
+       }
+       class ConcreteVisitor2 {
+           +visitConcreteElementA(ConcreteElementA)
+           +visitConcreteElementB(ConcreteElementB)
+       }
+       class Element {
+           <<abstract>>
+           +accept(Visitor)*
+       }
+       class ConcreteElementA {
+           +accept(Visitor)
+           +operationA()
+       }
+       class ConcreteElementB {
+           +accept(Visitor)
+           +operationB()
+       }
+       class ObjectStructure
+
+       Visitor <|-- ConcreteVisitor1
+       Visitor <|-- ConcreteVisitor2
+       Element <|-- ConcreteElementA
+       Element <|-- ConcreteElementB
+       ObjectStructure o-- Element
+       Element --> Visitor : accept
 
 **Behavior (double dispatch):**
 

@@ -22,6 +22,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.mathjax',
     'myst_parser',
+    'sphinxcontrib.mermaid',
 ]
 
 html_theme_options = {
