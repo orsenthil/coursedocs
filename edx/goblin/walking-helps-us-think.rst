@@ -1,21 +1,8 @@
-Walking helps us think
+Walking Helps Us Think
 ======================
 
-.. slug: walking-helps-us-think
-.. date: 2015-08-03 23:15:45 UTC-07:00
-.. tags:
-.. category:
-.. link:
-.. description:
-.. type: text
+Walking aids **diffused-mode thinking** — useful for creative problem solving. Walking that requires focused attention on the problem itself can be counterproductive.
 
+Attention is a scarce resource — conserve it.
 
-This news article_ describes how walking assists in thinking. I can realize that
-they are talking about the diffused mode of thinking which is required for
-creative problem solving. It also mentions that walking while requiring focussed
-attention for some types of problems could be counter productive.
-
-The other important point emphasised was how attention is scarce resource and
-how it should be conserved.
-
-.. _article: http://www.newyorker.com/tech/elements/walking-helps-us-think
+Reference: `New Yorker — Walking Helps Us Think <http://www.newyorker.com/tech/elements/walking-helps-us-think>`_

@@ -1,16 +1,6 @@
 Youse
 =====
 
-.. slug: youse
-.. date: 2015-08-05 01:28:21 UTC-07:00
-.. tags: articles
-.. category:
-.. link:
-.. description:
-.. type: text
+Australian plural of **you** (more than one person). Included in the Macquarie Dictionary despite controversy.
 
-
-Youse refers to "You" and typically more than one person.
-It looks like the author faced some heat in inclusion_ of that word in the dictionary.
-
-.. _inclusion: http://www.theguardian.com/books/australia-culture-blog/2014/aug/12/australias-national-dictionary-editor-on-the-heat-about-youse
+Reference: `Guardian — Australia's national dictionary editor on the heat about youse <http://www.theguardian.com/books/australia-culture-blog/2014/aug/12/australias-national-dictionary-editor-on-the-heat-about-youse>`_

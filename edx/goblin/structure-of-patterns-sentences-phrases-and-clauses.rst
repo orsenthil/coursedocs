@@ -1,17 +1,24 @@
-Structure of Patterns, Sentences, phrases and clauses
-=====================================================
-.. slug: structure-of-patterns-sentences-phrases-and-clauses
-.. date: 2015-08-30 22:24:24 UTC-07:00
-.. tags:
-.. category:
-.. link:
-.. description:
-.. type: text
+Structure: Sentences, Phrases, and Clauses
+==========================================
 
-These are the slots in the sentence, subject names and predicate tells.
+Sentence Slots
+--------------
 
-.. image:: https://dl.dropbox.com/s/1m3gosupd325raa/Screenshot%202015-08-30%2022.36.26.png
-   :align: center
-   :width: 400
-   :height: 300
+- **Subject** — who or what the sentence is about.
+- **Predicate** — what the subject does or is; must contain a **finite verb**.
 
+Clause Types
+------------
+
+- **Independent (main) clause**: complete sentence on its own.
+- **Dependent (subordinate) clause**: incomplete alone — needs a main clause.
+
+Sentence Forms
+--------------
+
+- **Simple**: one independent clause.
+- **Compound**: two+ independent clauses (FANBOYS or semicolon).
+- **Complex**: one dependent + one independent clause.
+- **Compound-complex**: combination of both.
+
+See week-2-sentences.rst for full details and examples.

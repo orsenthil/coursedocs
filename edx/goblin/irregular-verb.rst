@@ -1,12 +1,8 @@
-Irregular Verb
-==============
+Irregular Verbs
+===============
 
-.. slug: irregular-verb
-.. date: 2015-09-13 23:02:37 UTC-07:00
-.. tags:
-.. category:
-.. link:
-.. description:
-.. type: text
+English has ~**200 irregular verbs** with 30–40 different patterns (e.g., *sing/sang/sung*).
 
-Swahili has Zero irregular verbs and English has about 200 irregular verbs.
+Swahili has **zero** irregular verbs — all verbs follow regular patterns despite being highly inflected.
+
+Common native-speaker errors: *sung* for *sang*, etc.

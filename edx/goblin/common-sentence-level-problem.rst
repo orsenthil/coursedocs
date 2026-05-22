@@ -1,26 +1,20 @@
-Common Sentence Level Problem
-=============================
+Common Sentence-Level Problems
+==============================
 
-.. slug: common-sentence-level-problem
-.. date: 2015-08-30 22:57:03 UTC-07:00
-.. tags:
-.. category:
-.. link:
-.. description:
-.. type: text
+Comma Splice
+------------
 
-* Comma splice. Commas do not join, they cut.
+Commas do not join independent clauses — they cut.
 
+And-ness (Rewrite Example)
+--------------------------
 
+**Before:**
 
-Example 1: Could you rewrite this sentence by eliminating the ‘and’s’?
+  *Proposals are to be submitted in duplicate, and enclosed in a sealed envelope, and endorsed with a reference number, and shall be lodged at the address below.*
 
-Proposals are to be submitted in duplicate, and enclosed in a sealed envelope, and endorsed with a
-reference number, and shall be lodged at the address below.
+**After:**
 
+  *Proposals are to be submitted in duplicate, enclosed in a sealed envelope. They should be endorsed with a reference number and lodged at the address below.*
 
-Proposals are to be submitted in duplicate, enclosed in a sealed envelope. They should be
-endorsed with a reference number. It shall be lodged at the address below.
-
-
-
+See also: week-2-sentences.rst for fragments, run-ons, is-ness, and of-ness.
