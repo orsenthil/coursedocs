@@ -17,10 +17,6 @@ Kernel Methods and SVM
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/kjpx9rmketq7i7h/Screenshot%202015-09-15%2021.28.22.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -151,10 +147,6 @@ it so let's see if we can try to work out how you go about finding this least co
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/znhihxowrro30da/Screenshot%202015-09-16%2006.45.08.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -291,11 +283,6 @@ C: Oh, I like that, we get a quiz. That is the correct answer.
 * Maximize the margin.
 
 *slides*
-
-.. image:: https://dl.dropbox.com/s/mfnvuupbqau8p87/Screenshot%202015-09-16%2007.46.19.png
-   :align: center
-   :width: 400
-   :height: 300
 
 
 *transcript*
@@ -461,10 +448,6 @@ where we can solve this directly.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/fe2lsfdh2jnyhtp/Screenshot%202015-09-16%2021.34.08.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -564,10 +547,6 @@ it
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/59coyqfofg0pzbl/Screenshot%202015-09-17%2005.01.15.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -623,15 +602,6 @@ do a quick quiz.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/1thz2b5lmkcp1vt/Screenshot%202015-09-17%2005.03.24.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/xe4949ahkuct2v1/Screenshot%202015-09-17%2005.20.04.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -743,15 +713,6 @@ in terms of their output labels. With respect to how similar they are to one ano
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/4qym01wm6u5zffe/Screenshot%202015-09-17%2005.47.07.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/xv36ca17ofdp3hk/Screenshot%202015-09-17%2005.47.50.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -900,21 +861,6 @@ so simple we can make it into a quiz.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/k5ggpz5axzehviu/Screenshot%202015-09-17%2006.25.27.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/wwixj7v1k4qzeon/Screenshot%202015-09-17%2006.26.28.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
-.. image:: https://dl.dropbox.com/s/fz7ktho8gs4wp7d/Screenshot%202015-09-17%2006.34.18.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1125,12 +1071,6 @@ little bit. And, and see if we can make this a little bit more precise and easie
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/qeq1u9r0gz77qpr/Screenshot%202015-09-17%2006.55.12.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
 
 *transcript*
 
@@ -1245,11 +1185,6 @@ M: Gotcha.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/f6lkuo7brd50z79/Screenshot%202015-09-17%2007.30.16.png
-   :align: center
-   :width: 400
-   :height: 300
-
 
 **Back to Boosting**
 
@@ -1260,10 +1195,6 @@ M: Gotcha.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/f4o93wpnq3fmdas/Screenshot%202015-09-17%2008.03.29.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1437,10 +1368,6 @@ five second quiz.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/7m85rrynmf1kamo/Screenshot%202015-09-17%2008.32.50.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 

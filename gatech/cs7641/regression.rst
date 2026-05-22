@@ -19,10 +19,6 @@ Regression
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/513adjpxelwyybx/Screenshot%202015-09-12%2016.55.49.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -85,11 +81,6 @@ C: Oh, that actually kind of makes sense.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/itvpay72zos3coi/Screenshot%202015-09-12%2017.12.27.png
-   :align: center
-   :width: 400
-   :height: 300
-
 
 *transcript*
 
@@ -145,10 +136,6 @@ that's what we're going to use.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/cv96lfie4yphmtx/Screenshot%202015-09-12%2017.23.32.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -213,15 +200,6 @@ M: That's true.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/5cy1sdkmig1o168/Screenshot%202015-09-12%2017.32.11.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/sd0c435etzot6ss/Screenshot%202015-09-12%2017.41.11.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -293,18 +271,10 @@ nicely.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/0laqwlje7rwdrp8/Screenshot%202015-09-12%2017.52.23.png
-   :align: center
-   :width: 400
-   :height: 300
 
 We plot the squared errors. The function that we try to minimize. The amount of error got lesser
 and lesser.
 
-.. image:: https://dl.dropbox.com/s/ahhwefce4tq1kne/Screenshot%202015-09-12%2017.54.12.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -366,10 +336,6 @@ but it doesn't feel quite right like the curves that we're looking there looked 
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/ae14xu8mi1g8ney/Screenshot%202015-09-12%2018.00.03.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -409,15 +375,6 @@ out to be the right answer but lets actually lets actually evaluate that more co
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/6vob6scuiiyv575/Screenshot%202015-09-12%2018.12.28.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/5gfs86efsebuk74/Screenshot%202015-09-12%2018.13.44.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -469,10 +426,6 @@ powers that we care about. And then we just compute this quantity and we're good
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/c2qxj1orolp0wd3/Screenshot%202015-09-12%2018.24.15.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -545,24 +498,10 @@ errors and the noise that are, that are in it.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/uyybmicx60j7jpw/Screenshot%202015-09-12%2018.37.02.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
-.. image:: https://dl.dropbox.com/s/6lvd6zuy5b85gsd/Screenshot%202015-09-12%2018.38.37.png
-   :align: center
-   :width: 400
-   :height: 300
 
 We are going to use folds (coming from of folds of sheep) and it will create a model by using one
 of the folds as test set itself.
 
-.. image:: https://dl.dropbox.com/s/k0epmdp0p0an65h/Screenshot%202015-09-12%2018.39.59.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -668,16 +607,6 @@ housing example.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/scamghkp14e23h7/Screenshot%202015-09-12%2018.51.52.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
-.. image:: https://dl.dropbox.com/s/bvoua7ggy70wo9k/Screenshot%202015-09-12%2018.53.19.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -752,12 +681,6 @@ C: That's actually kind of cool.
 *scribble*
 
 *slides*
-
-.. image:: https://dl.dropbox.com/s/quhprgxguwh0d8v/Screenshot%202015-09-12%2019.04.09.png
-   :align: center
-   :width: 400
-   :height: 300
-
 
 
 *transcript*
@@ -869,9 +792,5 @@ M: No problem sir.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/ndz0d09wcfnl5tr/Screenshot%202015-09-12%2019.05.14.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*

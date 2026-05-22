@@ -1,82 +1,48 @@
-Bayes Net Calculation
-=====================
+Challenge: Bayes Net Calculation
+=================================
 
-.. image:: https://dl.dropbox.com/s/746tssbnukoyw1n/Screenshot%202017-03-01%2007.56.05.png
-   :align: center
-   :height: 300
-   :width: 450
+Given a Bayes network with variables: Lung Disease (LD), Cold (C), Cough (Co), Fever (F).
 
+Problem 1: P(LD=T | Cough=T)
+------------------------------
 
-Given Tables
-------------
+Using Bayes' rule:
 
 ::
 
-    P(LD=T | Cough=T) =  P(Cough=T |LD=T)  *P(LD)
+    P(LD=T | Cough=T) = P(Cough=T | LD=T) * P(LD=T)
                         ---------------------------
-                                P(Cough)
-                      =  (0.80 * 0.30 + 0.75 * 0.70) * P(LD)
-                         ------------------------------------
-                                P(Cough)
+                                P(Cough=T)
 
-                      = (0.80 * 0.30 + 0.75 * 0.70) * (0.10)
-                        ------------------------------------
-                                    P(Cough)
+    Numerator:
+    P(Co=T|LD=T) = P(Co=T|LD=T,C=T)*P(C=T) + P(Co=T|LD=T,C=F)*P(C=F)
+                 = (0.80 * 0.30 + 0.75 * 0.70) = 0.765
 
-                      = (0.80 * 0.30 + 0.75 * 0.70) * (0.10)
-                      ---------------------------------------
-                      (0.80 * 0.30 * 0.10) + (0.30 * 0.30 * 0.90) + (0.75 * 0.70 * 0.10) + (0.05 * 0.70 * 0.90)
+    P(Co=T|LD=T) * P(LD=T) = 0.765 * 0.10 = 0.0765
 
-                      = 0.0765
-                        -------
-                        0.189
+    Denominator (total probability):
+    = (0.80*0.30*0.10) + (0.30*0.30*0.90) + (0.75*0.70*0.10) + (0.05*0.70*0.90)
+    = 0.189
 
-                      = 0.40476190476190477
+    Result: 0.0765 / 0.189 ≈ 0.405
 
+Problem 2: P(LD=T | Cough=T, Fever=T)
+---------------------------------------
 
-
-----
-
-
-2. Question
-
-.. math::
-
-   P(LD=T|Cough=T,Fever=T)
-
-
-// Bayesian
+Enumerate over hidden variable Cold:
 
 ::
 
-    P(LD=T|Cough=T,Fever=T) = P(Cough=T, Fever=T | LD=T) * P(LD=T)
+    P(Co=T,F=T | LD=T) * P(LD=T)
+    = P(LD=T) * Σ_cold [P(Co=T|LD=T,cold) * P(F=T|cold) * P(cold)]
+    = 0.10 * [(0.80 * 0.65 * 0.30) + (0.75 * 0.25 * 0.70)]
+    = 0.028725
 
-                            = Sum(cold) [P(Cough=T,Fever=T| LD=T,cold) * P(cold) * P(LD=T) ] // Skipped a step = that was the mistake
+    P(Co=T,F=T | LD=F) * P(LD=F)
+    = 0.90 * [(0.30 * 0.65 * 0.30) + (0.05 * 0.25 * 0.70)]
+    = 0.060525
 
-                            = Sum(cold) [P(Cough=T| LD=T,cold) * P(Fever=T| LD=T, cold) * P(cold) * P(LD=T) ]
-
-                            = P(LD=T) * Sum(cold) [P(Cough=T| LD=T,cold) * P(Fever=T| cold) * P(cold)]
-
-                            = P(LD=T) * [P(Co=T|LD=T,C=T) * P(F=T|C=T) * P(C=T) + P(Co=T|LD=T,C=F) * P(F=T|C=F) * P(C=F)]
-                            = 0.10 * ((0.80 * 0.65 * 0.30) + (0.75 * 0.25 * 0.70))
-
-                            = 0.028725
-
-                          = P(Cough=T, Fever=T | LD=F) * P(LD=F)
-
-
-                          = P(LD=F) * Sum(cold) [P(Cough=T| LD=F,cold) * P(Fever=T| cold) * P(cold)]
-                          = P(LD=F) * [P(Co=T|LD=F,C=T) * P(F=T|C=T) * P(C=T) + P(Co=T|LD=F,C=F) * P(F=T|C=F) * P(C=F)]
-                          = 0.90 * ((0.30 * 0.65 * 0.30) + (0.05 * 0.25 * 0.70))
-
-                          = 0.060524999999999995
-
-                          = 0.32184873949579834
-
-
-
-
-
+    P(LD=T | Co=T,F=T) = 0.028725 / (0.028725 + 0.060525) ≈ 0.322
 
 References
 ----------

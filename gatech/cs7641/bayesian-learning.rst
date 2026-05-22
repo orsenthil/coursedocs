@@ -30,10 +30,6 @@ Bayesian Learning
 
 *slide*
 
-.. image:: https://dl.dropbox.com/s/o4qdznrwf9s0ukl/Screenshot%202015-09-06%2011.43.42.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -140,11 +136,6 @@ C: Perfect
     Pr(h | D) = ( Pr (D | h) * Pr (h) ) / Pr(D)
 
 *slides*
-
-.. image:: https://dl.dropbox.com/s/1dkr0s3hmvjz0t7/Screenshot%202015-09-07%2009.53.58.png
-   :align: center
-   :width: 400
-   :height: 300
 
 
 *transcript*
@@ -310,11 +301,6 @@ C: Okay.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/rqmd3x7h9894bud/Screenshot%202015-09-07%2010.27.06.png
-   :align: center
-   :width: 400
-   :height: 300
-
 
 *transcript*
 
@@ -398,16 +384,6 @@ M: Sure.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/n8ihv3xteeuseb6/Screenshot%202015-09-07%2010.39.47.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
-.. image:: https://dl.dropbox.com/s/fbzdx1gnqk8ihkb/Screenshot%202015-09-07%2011.11.40.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -719,10 +695,6 @@ M: Okay.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/y2080rctoj4n31o/Screenshot%202015-09-07%2012.14.55.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcripts*
 
@@ -849,16 +821,6 @@ C: Okay.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/46vnfbpk29xyevw/Screenshot%202015-09-07%2012.42.24.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
-.. image:: https://dl.dropbox.com/s/utx9082xcq37kka/Screenshot%202015-09-07%2012.45.29.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1095,15 +1057,6 @@ hypotheses.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/2xu3p1q8ydc4c02/Screenshot%202015-09-07%2014.11.48.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/ycy6hcsamcsyb8f/Screenshot%202015-09-07%2014.15.59.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcripts*
 
@@ -1288,16 +1241,6 @@ C: Excellent.
 * Gaussian Noise.
 
 *slides*
-
-.. image:: https://dl.dropbox.com/s/lcxephz28fnlrep/Screenshot%202015-09-07%2014.48.00.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/hc4yezxkb2nmu8m/Screenshot%202015-09-07%2015.04.26.png
-   :align: center
-   :width: 400
-   :height: 300
 
 
 *transcript*
@@ -1717,17 +1660,6 @@ C: Beautiful.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/8lxhf18d7odfffy/Screenshot%202015-09-07%2015.39.01.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
-.. image:: https://dl.dropbox.com/s/qgcy20sc82x35vt/Screenshot%202015-09-07%2015.46.04.png
-   :align: center
-   :width: 400
-   :height: 300
-
 
 *transcript*
 
@@ -1919,10 +1851,6 @@ C: Okay.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/mzxvp7atadbkdqe/Screenshot%202015-09-07%2016.07.14.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -2040,15 +1968,6 @@ C: Well, let's make it more concrete.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/cjimdrjdbrcwdvg/Screenshot%202015-09-07%2016.16.12.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/oslcbnepsue8dxc/Screenshot%202015-09-07%2016.23.58.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -2194,16 +2113,6 @@ everything I've told you so far is a lie.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/45kkixhs5wscgih/Screenshot%202015-09-07%2016.37.48.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/1yrcniqtzpprlwz/Screenshot%202015-09-07%2016.41.33.png
-   :align: center
-   :width: 400
-   :height: 300
-
 
 *transcript*
 
@@ -2330,12 +2239,5 @@ M: All right. Good.
 * discovered an effective way to take online class with notes.
 
 *slides*
-
-.. image:: https://dl.dropbox.com/s/ht8qlrkfip7rd68/Screenshot%202015-09-07%2016.51.03.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
 
 

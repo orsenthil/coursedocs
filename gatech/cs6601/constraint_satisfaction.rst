@@ -1,185 +1,106 @@
 Constraint Satisfaction
 =======================
 
-
-
-Challenge Question
-------------------
-
-.. image:: https://dl.dropbox.com/s/jshq91z8qkpgle7/Screenshot%202017-03-05%2019.49.10.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-* Backtracking
-* Forward Checking
-* Minimum Remaining Values (MRV)
-* Least Constraint Value.
-
-
-Map Coloring
-------------
-
-.. image:: https://dl.dropbox.com/s/64nvvjeys0l9cxm/Screenshot%202017-03-05%2019.51.18.png
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/c2pp2m8ucxpjely/Screenshot%202017-03-05%2019.51.50.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Constraint Graph
+CSP Fundamentals
 ----------------
 
-.. image:: https://dl.dropbox.com/s/r9y9obplq8r9hdi/Screenshot%202017-03-05%2019.52.47.png
-   :align: center
-   :height: 300
-   :width: 450
+Definition
+~~~~~~~~~~
 
-* The nodes are the variables.
-* ARCs show the constraints between the variables.
+A **Constraint Satisfaction Problem** is defined by:
 
-Map Coloring Quiz
------------------
+- **Variables**: :math:`X = \{X_1, X_2, \ldots, X_n\}`
+- **Domains**: :math:`D_i` for each variable (set of possible values)
+- **Constraints**: relations restricting combinations of values
 
-.. image:: https://dl.dropbox.com/s/f9atvvr680n4i35/Screenshot%202017-03-05%2019.54.10.png
-   :align: center
-   :height: 300
-   :width: 450
+A **solution** is an assignment of values to all variables that satisfies every constraint.
 
-CSP Examples
-------------
+Types of constraints:
 
-* Preferences Constraints are called - Optimization Problem.
-* Solved using Linear Programming.
+- **Unary**: restricts a single variable (e.g., :math:`X_1 \neq \text{red}`).
+- **Binary**: relates two variables (e.g., :math:`X_1 \neq X_2`).
+- **Higher-order (global)**: involves three or more variables (represented via constraint hypergraph).
+- **Preference (soft) constraints**: define optimization problems, solvable via linear programming.
 
-Constraint Hypergraph
----------------------
+Map Coloring Example
+~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/fe9cugk4zfoxh1o/Screenshot%202017-03-05%2019.59.24.png
-   :align: center
-   :height: 300
-   :width: 450
-
+- **Variables**: regions (e.g., WA, NT, SA, Q, NSW, V, T for Australia).
+- **Domains**: {Red, Green, Blue}.
+- **Constraints**: adjacent regions must have different colors.
+- **Constraint graph**: nodes = variables, edges = binary constraints.
 
 Backtracking Search
 -------------------
 
-.. image:: https://dl.dropbox.com/s/s0rdicyuid9qly0/Screenshot%202017-03-05%2020.00.47.png
-   :align: center
-   :height: 300
-   :width: 450
+Basic Algorithm
+~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/zlbh6zhjl8voeme/Screenshot%202017-03-05%2020.01.46.png
-   :align: center
-   :height: 300
-   :width: 450
+Depth-first search with one variable assigned per level:
 
-Improving Backtracking Efficiency
----------------------------------
+1. Select an unassigned variable.
+2. Try each value in its domain.
+3. If consistent with constraints, recurse.
+4. If no value works, **backtrack** to the previous variable.
 
-.. image:: https://dl.dropbox.com/s/9zop2vf2cs9hw1k/Screenshot%202017-03-05%2020.04.07.png
-   :align: center
-   :height: 300
-   :width: 450
+Complexity: :math:`O(d^n)` in the worst case for :math:`n` variables with domain size :math:`d`.
 
-* Orange was the value that least constrainted the future choices.
+Variable Ordering — MRV
+~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/4hzt06su55wq33a/Screenshot%202017-03-05%2020.10.53.png
-   :align: center
-   :height: 300
-   :width: 450
+**Minimum Remaining Values (MRV)**: choose the variable with the fewest legal values remaining. Fails early on constrained variables ("fail-first" strategy).
 
-* The variable with the least number of values remaining is south australia, so we assign that next.
+**Degree heuristic** (tiebreaker): among MRV-tied variables, choose the one involved in the most constraints on unassigned variables.
 
-* When there is a tie, use degree heuristic. Choose the variable with the most constraints on remaining variables.
+Value Ordering — LCV
+~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/o9kw0u2ridptwqv/Screenshot%202017-03-05%2020.12.51.png
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/6bzo1ssa7yiww6p/Screenshot%202017-03-11%2013.22.02.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+**Least Constraining Value (LCV)**: choose the value that rules out the fewest choices for neighboring variables. Maximizes future flexibility ("fail-last" for values).
 
 Forward Checking
-----------------
+~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/33ajsgbb4jz5tbr/Screenshot%202017-03-05%2020.16.18.png
-   :align: center
-   :height: 300
-   :width: 450
+After assigning a variable, immediately remove inconsistent values from the domains of neighboring unassigned variables.
 
+- Acts as an early warning system: if any neighbor's domain becomes empty, backtrack immediately.
+- Detects failure earlier than plain backtracking.
 
-* Forward Checking is an early warning system to that helps us notify that our search is going in the wrong direction.
-
-
-Constraint Propagation And Arc Consistency
+Constraint Propagation and Arc Consistency
 ------------------------------------------
 
-.. image:: https://dl.dropbox.com/s/iv719mc5o7nloev/Screenshot%202017-03-05%2020.23.35.png
-   :align: center
-   :height: 300
-   :width: 450
+Arc Consistency (AC-3)
+~~~~~~~~~~~~~~~~~~~~~~
 
+An arc :math:`(X_i, X_j)` is **arc-consistent** if for every value in :math:`D_i`, there exists a consistent value in :math:`D_j`.
 
-* What is ARC Consistency?
+**AC-3 algorithm**:
 
+1. Initialize queue with all arcs.
+2. For each arc :math:`(X_i, X_j)`, remove values from :math:`D_i` that have no support in :math:`D_j`.
+3. If :math:`D_i` changed, re-enqueue all arcs :math:`(X_k, X_i)` where :math:`k \neq j`.
+4. If any domain becomes empty, the CSP has no solution.
 
-Constraint Propagation Quiz
----------------------------
+Complexity: :math:`O(ed^3)` where :math:`e` = number of arcs, :math:`d` = max domain size.
 
-.. image:: https://dl.dropbox.com/s/s51m6psst1equ1t/Screenshot%202017-03-05%2020.24.28.png
-   :align: center
-   :height: 300
-   :width: 450
-
+Forward checking is a restricted form of arc consistency (only checks arcs from assigned to unassigned variables).
 
 Structured CSPs
 ---------------
 
-.. image:: https://dl.dropbox.com/s/v9cqnlknyt1wm81/Screenshot%202017-03-05%2020.26.34.png
-   :align: center
-   :height: 300
-   :width: 450
+- If the constraint graph is a **tree** (no loops), the CSP can be solved in :math:`O(nd^2)` time.
+- **Algorithm**: choose a root, apply directed arc consistency from leaves to root (topological order), then assign values from root to leaves.
+- For non-tree graphs: **tree decomposition** or **cutset conditioning** to exploit near-tree structure.
 
-* Break it down into smaller problems.
+Reference: `Topological Search (U. Washington) <https://courses.cs.washington.edu/courses/cse326/03wi/lectures/RaoLect20.pdf>`_
 
-.. image:: https://dl.dropbox.com/s/jamhr59wo9q1pz8/Screenshot%202017-03-05%2020.29.27.png
-   :align: center
-   :height: 300
-   :width: 450
+Iterative (Local Search) Methods
+---------------------------------
 
-* If we have CSP with no loops, we can solve the problem in :math:`O(nd^2)` times.
-* `Topological Search`_
+**Min-Conflicts algorithm**:
 
-.. _Topological Search: https://courses.cs.washington.edu/courses/cse326/03wi/lectures/RaoLect20.pdf
+1. Start with a complete random assignment.
+2. Select a variable that violates a constraint.
+3. Reassign it to the value that minimizes the number of conflicts.
+4. Repeat until solution found or max iterations reached.
 
-.. image:: https://dl.dropbox.com/s/81f4wmojuaqpn2h/Screenshot%202017-03-05%2020.30.02.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Iterative Algorithms
---------------------
-
-.. image:: https://dl.dropbox.com/s/sfgrwch7yvuv8zt/Screenshot%202017-03-05%2020.31.13.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* MinConflict Algorithm illustration.
-
-Challenge Question
-------------------
-
-.. image:: https://dl.dropbox.com/s/ehrw30viveda41w/Screenshot%202017-03-05%2020.32.38.png
-   :align: center
-   :height: 300
-   :width: 450
+Effective for large CSPs (e.g., million-queens). Typically solves n-Queens in roughly :math:`O(n)` steps.

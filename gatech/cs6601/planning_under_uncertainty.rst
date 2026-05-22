@@ -1,365 +1,147 @@
-Planning under uncertainty
+Planning Under Uncertainty
 ==========================
 
-Introduction
-------------
-
-* Decisions under uncertainty.
-
-Planning Under Uncertainty MDP
-------------------------------
-
-.. image:: https://dl.dropbox.com/s/4ayem8kvhuo9gvf/Screenshot%202017-04-23%2018.43.49.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-.. image:: https://dl.dropbox.com/s/wnt0i78ygvooltt/Screenshot%202017-04-23%2018.45.20.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-MDP = Markov Decision Processes
-POMDP = Partially Observable Markov Decision Processes
-
-.. image:: https://dl.dropbox.com/s/7ezkh8jqj6w8enf/Screenshot%202017-04-23%2018.47.22.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Robot Tour Guide Examples
+Markov Decision Processes
 -------------------------
 
-.. image:: https://dl.dropbox.com/s/eodpq3q8dacplqt/Screenshot%202017-04-23%2018.48.56.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+Core Concepts
+~~~~~~~~~~~~~
+
+An **MDP** is defined by the tuple :math:`(S, A, T, R, \gamma)`:
+
+- :math:`S` — set of states
+- :math:`A` — set of actions
+- :math:`T(s, a, s') = P(s' | s, a)` — transition model (Markov property: depends only on current state)
+- :math:`R(s)` or :math:`R(s, a, s')` — reward function
+- :math:`\gamma \in [0, 1)` — discount factor
+
+A **policy** :math:`\pi(s) \to a` maps each state to an action. The goal is to find the **optimal policy** :math:`\pi^*` that maximizes expected cumulative discounted reward.
 
 MDP Grid World
---------------
+~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/f4fpbuxmhbcplp1/Screenshot%202017-04-23%2018.52.28.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+Classic example: agent on a grid with stochastic movement.
 
-.. image:: https://dl.dropbox.com/s/5ebzfmivqfhlb6d/Screenshot%202017-04-23%2018.53.00.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+- Action ``North`` moves North with 80% probability, East or West with 10% each.
+- Terminal states with positive (+1) or negative (-1) reward.
+- Step cost (e.g., -0.04) encourages finding the goal quickly.
+- Walls: attempted move into wall leaves agent in place.
 
-Problems with Conventional Planning 1
--------------------------------------
+Problems with Conventional Planning
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/t8419xkr6c3ms6u/Screenshot%202017-04-23%2018.54.40.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+- **Branching factor too large**: stochastic actions create exponential branching.
+- **Plans become contingency trees**, not sequences — need policies instead.
+- A **policy** assigns an action to every state, handling any outcome automatically.
 
-Branching Factor is too large
------------------------------
+Policy and Costs
+~~~~~~~~~~~~~~~~
 
-Quiz: Branching Factor Question
+The optimal policy depends on the reward structure:
 
-For this problem (and only this problem) assume actions are stochastic
-in a way that is different than described in 4. MDP Gridworld.
+- High step cost → agent takes risks to finish quickly (e.g., walks near -1 terminal).
+- Low step cost → agent takes safe detours to avoid negative terminals.
+- Negative step cost < -1 → any terminal is preferable to continuing, even the -1 terminal.
 
-Instead of an action north possibly going east or west, an action north
-will possibly go northeast or northwest (i.e. to the diagonal squares).
+Value Iteration
+~~~~~~~~~~~~~~~
 
-Likewise for the other directions e.g. an action west will
-possibly go west, northwest or southwest (i.e. to the diagonals).
+Computes optimal state values via iterative Bellman updates:
 
-.. image:: https://dl.dropbox.com/s/z24rz96fwf0aero/Screenshot%202017-04-23%2018.55.49.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+.. math::
 
-Problems With Conventional Planning 2
--------------------------------------
+   V_{k+1}(s) = \max_a \left[ R(s, a) + \gamma \sum_{s'} T(s, a, s') \, V_k(s') \right]
 
-.. image:: https://dl.dropbox.com/s/c4029bxl10hqz32/Screenshot%202017-04-23%2018.57.36.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+Algorithm:
 
+1. Initialize :math:`V_0(s) = 0` for all states.
+2. For each iteration, update every state using the Bellman equation.
+3. Repeat until :math:`\max_s |V_{k+1}(s) - V_k(s)| < \epsilon`.
+4. Extract policy: :math:`\pi^*(s) = \arg\max_a \left[ R(s,a) + \gamma \sum_{s'} T(s,a,s') V(s') \right]`.
 
-Quiz: Policy Question 1
------------------------
+**Convergence**: guaranteed because :math:`\gamma < 1` makes the Bellman operator a contraction.
 
-Stochastic actions are as in 4. MDP Grid World.
-
-An action North moves North with 80% chance otherwise East with 10%
-chance or West with 10% chance. Likewise for the other directions.
-
-.. image:: https://dl.dropbox.com/s/ih1nn4hl28fcpug/Screenshot%202017-04-23%2018.58.50.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Quiz: Policy Question 2
------------------------
-
-Stochastic actions are as in 4. MDP Grid World.
-
-An action North moves North with 80% chance otherwise East with 10%
-chance or West with 10% chance. Likewise for the other directions.
-
-.. image:: https://dl.dropbox.com/s/6hf9efi73eiju3v/Screenshot%202017-04-23%2018.59.33.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Quiz: Policy Question 3
------------------------
-
-Stochastic actions are as in 4. MDP Grid World.
-
-An action North moves North with 80% chance otherwise East with 10%
-chance or West with 10% chance. Likewise for the other directions.
-
-.. image:: https://dl.dropbox.com/s/xg3j0csgtvgcvqr/Screenshot%202017-04-23%2019.11.19.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-MDP And Costs
--------------
-
-.. image:: https://dl.dropbox.com/s/sqn47yp8n6zw840/Screenshot%202017-04-23%2019.23.37.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-.. image:: https://dl.dropbox.com/s/wbn07nf6a7vavv6/Screenshot%202017-04-23%2019.25.14.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/bvymyd4z0ku5p8p/Screenshot%202017-04-23%2019.26.18.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Value Iteration 1
------------------
-
-.. image:: https://dl.dropbox.com/s/yh9ynemskfugtc6/Screenshot%202017-04-23%2019.27.19.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/2rv714lbhg3bcnz/Screenshot%202017-04-23%2019.27.56.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Value Iteration 2
------------------
-
-.. image:: https://dl.dropbox.com/s/7hm158160xvvcmq/Screenshot%202017-04-23%2019.28.28.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Value Iteration 3
------------------
-
-.. image:: https://dl.dropbox.com/s/h1t9bd58ej5nhkx/Screenshot%202017-04-23%2019.29.22.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-.. image:: https://dl.dropbox.com/s/yxwkql6adw6f7zm/Screenshot%202017-04-23%2019.32.01.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/ck02bgdqakd0j6s/Screenshot%202017-04-23%2019.32.37.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/jhjoayu7kdhkcq9/Screenshot%202017-04-23%2019.33.44.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/2vjifcjfia2qemv/Screenshot%202017-04-23%2019.34.36.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Quiz: Deterministic Question 1
-------------------------------
-
-.. image:: https://dl.dropbox.com/s/rrup51mpa7rl1m2/Screenshot%202017-04-23%2019.36.19.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Quiz: Deterministic Question 2
-------------------------------
-
-.. image:: https://dl.dropbox.com/s/86u0u9wgkc7dzfk/Screenshot%202017-04-23%2019.37.14.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Quiz: Deterministic Question 3
-------------------------------
-
-.. image:: https://dl.dropbox.com/s/58e4aro6s1yd9l6/Screenshot%202017-04-23%2019.38.09.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Quiz: Stochastic Question 1
----------------------------
-
-.. image:: https://dl.dropbox.com/s/w5a1876uoyzty8x/Screenshot%202017-04-23%2019.39.37.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Quiz: Stochastic Question 2
----------------------------
-
-.. image:: https://dl.dropbox.com/s/9a05m0m60q3qd0u/Screenshot%202017-04-23%2019.42.05.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-::
+Example computation (stochastic grid world)::
 
    >>> 77 * 0.8 + (0.1 * -100) - 3
    48.6
 
+Policy Iteration
+~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/1dzh0q1iyyd6k31/Screenshot%202017-04-23%2019.43.48.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+Alternates between evaluation and improvement:
 
-Value Iterations and Policy 1
------------------------------
+1. **Policy evaluation**: given fixed policy :math:`\pi`, solve for :math:`V^\pi(s)` (system of linear equations).
+2. **Policy improvement**: for each state, set :math:`\pi(s) = \arg\max_a Q(s, a)`.
+3. Repeat until policy is stable.
 
-.. image:: https://dl.dropbox.com/s/ejbn6keiw7k9wzv/Screenshot%202017-04-23%2019.44.57.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+Converges in fewer iterations than value iteration but each iteration is more expensive (solves a linear system).
 
+MDP Summary
+~~~~~~~~~~~
 
-Value Iterations And Policy 2
------------------------------
+- MDPs model sequential decision-making under stochastic transitions.
+- Value iteration and policy iteration both converge to optimal policy.
+- Discount factor :math:`\gamma` ensures finite utility for infinite horizons.
+- Optimal policy depends on transition probabilities, rewards, and discount factor.
 
-.. image:: https://dl.dropbox.com/s/t5mcvqukqaob2s7/Screenshot%202017-04-23%2019.45.43.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+Partially Observable MDPs
+-------------------------
 
+Overview
+~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/u8b1n00hzol0e3t/Screenshot%202017-04-23%2019.46.29.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+When the agent cannot directly observe the full state, use a **POMDP**.
 
-.. image:: https://dl.dropbox.com/s/xl4qgv4zh1h2pln/Screenshot%202017-04-23%2019.47.01.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+* Reference: `Emery & Montemerlo (2004) <http://robots.stanford.edu/papers/EmeryMontemerlo04a.pdf>`_
 
-.. image::  https://dl.dropbox.com/s/s4zngcev3mnuszv/Screenshot%202017-04-23%2019.47.42.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+POMDP vs. MDP
+~~~~~~~~~~~~~~
 
-Markov Decision Process Conclusion
-----------------------------------
+===============  ====================================  =========================================
+Property         MDP                                   POMDP
+===============  ====================================  =========================================
+State            Fully observable                       Partially observable
+Agent tracks     Current state                          Belief state :math:`b(s)` (distribution)
+Policy input     State :math:`s`                        Belief state :math:`b`
+Action choice    :math:`\pi(s)`                         :math:`\pi(b)`
+===============  ====================================  =========================================
 
-.. image:: https://dl.dropbox.com/s/960vdbamvdzhdfy/Screenshot%202017-04-23%2019.49.31.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+POMDP Definition
+~~~~~~~~~~~~~~~~
 
-Partial Observability Introduction
-----------------------------------
+Extends MDP with:
 
-* http://robots.stanford.edu/papers/EmeryMontemerlo04a.pdf
+- :math:`O` — set of observations
+- :math:`Z(o | s', a)` — observation model (probability of observation given resulting state and action)
 
-POMDP Vs MDP
-------------
+The agent maintains a **belief state** :math:`b(s)` — a probability distribution over states, updated via Bayes' rule after each action and observation:
 
-.. image:: https://dl.dropbox.com/s/7j1tflgoq7s1g51/Screenshot%202017-04-23%2019.51.24.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+.. math::
 
-POMDP
------
+   b'(s') = \eta \; Z(o | s', a) \sum_s T(s, a, s') \, b(s)
 
-.. image:: https://dl.dropbox.com/s/roxi06ebcz3horb/Screenshot%202017-04-23%2019.52.50.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+where :math:`\eta` is a normalizing constant.
 
-.. image:: https://dl.dropbox.com/s/10e6a1imtgu6h3y/Screenshot%202017-04-23%2019.53.16.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+Solving POMDPs
+~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/nn27k1tu75bml26/Screenshot%202017-04-23%2019.54.21.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+- The belief space is continuous (simplex over states), making exact solutions intractable for large problems.
+- **Belief-space MDP**: convert POMDP to an MDP over belief states; apply value iteration in belief space.
+- Optimal finite-horizon value function is piecewise-linear and convex over the belief simplex.
+- **Approximations**: point-based value iteration (PBVI), POMCP (Monte Carlo tree search over beliefs).
 
-.. image:: https://dl.dropbox.com/s/hqygtcsdcnncj4r/Screenshot%202017-04-23%2019.55.26.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+Reinforcement Learning Connection
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/i4silyidx2qf6wi/Screenshot%202017-04-23%2019.56.48.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+When the transition model :math:`T` and/or reward function :math:`R` are unknown, the agent must learn from interaction:
 
-.. image:: https://dl.dropbox.com/s/1ln9l1d2bkw2exn/Screenshot%202017-04-23%2019.57.17.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Planning Under Uncertainity Conclusion
---------------------------------------
-
-.. image:: https://dl.dropbox.com/s/2wu0tdkttvusci0/Screenshot%202017-04-23%2019.58.29.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+- **Model-based RL**: learn :math:`T` and :math:`R`, then solve the MDP.
+- **Model-free RL**: learn :math:`Q(s, a)` directly (e.g., Q-learning, SARSA).
 
 Further Study
+~~~~~~~~~~~~~
 
-Charles Isbell and Michael Littmann’s ML course
-
-* `Markov Decision Processes`_
-
-* `Reinforcement Learning`_
-
-.. _Markov Decision Processes: https://classroom.udacity.com/courses/ud262/lessons/684808907/concepts/last-viewed
-.. _Reinforcement Learning: https://classroom.udacity.com/courses/ud262/lessons/643978935/concepts/last-viewed
-
-Peter Norvig and Sebastian Thrun’s AI course:
-
-* `Reinforcement Learning_2`_
-
-.. _Reinforcement Learning_2:  https://classroom.udacity.com/courses/cs271/lessons/48724471/concepts/last-viewed
-
-
-
-
-
-
-
+- `Markov Decision Processes (Isbell & Littman) <https://classroom.udacity.com/courses/ud262/lessons/684808907/concepts/last-viewed>`_
+- `Reinforcement Learning (Isbell & Littman) <https://classroom.udacity.com/courses/ud262/lessons/643978935/concepts/last-viewed>`_
+- `Reinforcement Learning (Norvig & Thrun) <https://classroom.udacity.com/courses/cs271/lessons/48724471/concepts/last-viewed>`_

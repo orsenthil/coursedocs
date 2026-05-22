@@ -1,28 +1,14 @@
-Lesson 1 Challenge #7: Expectimax 2
-===================================
+Challenge: Expectimax Pruning
+=============================
 
-.. image:: https://dl.dropbox.com/s/9va8q1bkx8w9c11/Screenshot%202017-03-08%2006.36.38.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+**Problem**: Can we prune in Expectimax trees?
 
+**Key insight**: If at any point evaluating further cannot improve the expectimax value, we can prune.
 
-Solution
---------
+Pruning Rules
+-------------
 
-.. image:: https://dl.dropbox.com/s/em5f149onwq4fw4/Screenshot%202017-03-08%2007.10.57.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+- **Mid-branch**: If we reach the maximum possible value (e.g., 6), further evaluation can only give lower values. Since this won't change the result, we prune.
+- **Right-branch**: After getting -3.2 in the first subtree, the maximum achievable is :math:`-3.2 + (10 \times 0.6) = 2.8`. If this is below the current best, prune remaining branches.
 
-
-* If any point it time, if we see that evaluating further is not going to "improve" the expectimax value, we stop and
-  prune the nodes in that level.
-
-* In the mid-branch, As soon as we reach 6, we know, that's the max we can get. While evaluating further will give
-   lower value, we are not interested because that is not going to change the result, and thus we prune it.
-
-* In the right-most branch, after getting -3.2 in the first left tree of the right most branch, without looking
-   further, we can state that the max we can get it 2.8 (Because -3.2 + (10 * 0.6) = 2.8), so we prune those branches.
-
-
+Unlike alpha-beta pruning in minimax, expectimax pruning requires knowing bounds on utility values to determine when further evaluation is futile.

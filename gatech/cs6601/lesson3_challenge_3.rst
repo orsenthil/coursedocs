@@ -1,66 +1,39 @@
-Lesson 3 Challenge 2
-====================
+Challenge: Simulated Annealing & CSP
+=====================================
 
+Simulated Annealing Calculations
+---------------------------------
 
-.. image:: https://dl.dropbox.com/s/4ui8j7mnms7alrw/Screenshot%202017-03-05%2022.07.48.png
-   :align: center
-   :height: 300
-   :width: 450
+Given current energy, next energy, and temperature T, compute acceptance probability:
 
-1. delta(E) = (60 - 100) = -40 = P = e^(-40/50)
-2. delta(E) = (120 - 200) = -80 = P = e^(-80/50)
-3. delta(E) = (25 - 100) = -75 = P = e^(-75/150)
-4. delta(E) = (210 - 200) = P = 1
-5. delta(E) = (150 - 100) = P = 1
-6. delta(E) = (40 - 200) = P  = e^(-160/300) = 0.58
+- :math:`\Delta E > 0` → always accept (P = 1)
+- :math:`\Delta E < 0` → accept with probability :math:`P = e^{\Delta E / T}`
 
-----
+Worked examples:
 
-00100 = 1 =  1/8
-11000 = 2 = 1/4
-01001 = 2 = 1/4
-10010 = 2 = 1/4
-00100 = 1 = 1/8
+1. :math:`\Delta E = 60 - 100 = -40, T = 50 \Rightarrow P = e^{-40/50}`
+2. :math:`\Delta E = 120 - 200 = -80, T = 50 \Rightarrow P = e^{-80/50}`
+3. :math:`\Delta E = 25 - 100 = -75, T = 150 \Rightarrow P = e^{-75/150}`
+4. :math:`\Delta E = 210 - 200 = +10 \Rightarrow P = 1`
+5. :math:`\Delta E = 150 - 100 = +50 \Rightarrow P = 1`
+6. :math:`\Delta E = 40 - 200 = -160, T = 300 \Rightarrow P = e^{-160/300} \approx 0.58`
 
-Sum = 8
+CSP: Sudoku-like Grid
+----------------------
 
-   01001 -    01010  -> 01011  -> 3
-   10010 ->   10001  -> 11001  -> 3
+Variables: :math:`x_{ij}` for a 4×4 grid.
 
+Constraints:
 
-----
+- **Row**: ``all_different(x11, x12, x13, x14)`` for each row
+- **Column**: ``all_different(x11, x21, x31, x41)`` for each column
+- **Box**: ``all_different(x11, x12, x21, x22)`` for each 2×2 box
 
-a) node names
-b) arc names
+Algorithms: **Forward Checking** + **Minimum Remaining Values (MRV)** heuristic.
 
+CSP: Menu Selection
+--------------------
 
-x11 x12 x13 x14
-x21 x22 x23 x24
-x31 x32 x33 x34
-x41 x42 x43 x44
+Variables: appetizer {v, e}, main-course {f, p, fp}
 
-a) all_different(x11, .. x14) and for all other rows
-b) all_different(x11, .. x41) and for all other cols.
-c) all_different(x11, x12, x21, x22)
-d) all_different(x13, x14, x23, x24) ditto
-
-Algorithm:
-
-a) Forward Checking.
-b) Minimum Remaining Value Heuristic.
-
-----
-
-appetizer
-- v
-- e
-
-main-course
-- f
-- p
-- f,p
-
-Constraint: e -> (f, p, fp)
-
-
-
+Constraint: ``e → (f, p, fp)`` — if appetizer is eggs, main course must include fish and/or pork.

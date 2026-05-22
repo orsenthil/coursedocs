@@ -16,10 +16,6 @@ VC Dimensions
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/ar0vvyubavzs37y/Screenshot%202015-09-29%2004.14.27.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -65,10 +61,6 @@ M: Alright well lets do a quiz.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/03nzwd990ap0m1d/Screenshot%202015-09-29%2004.17.03.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -163,10 +155,6 @@ C: Agreed.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/kuhver0i15do25v/Screenshot%202015-09-06%2008.34.44.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -228,10 +216,6 @@ C: I like that.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/145zohqjv0nx1fp/Screenshot%202015-09-29%2004.45.22.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -294,10 +278,6 @@ expressive or how powerful the hypothesis space is. And in this case, not very e
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/wn53wra9wrv137p/Screenshot%202015-09-29%2004.48.53.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -327,17 +307,6 @@ C: Okay, sounds like fun.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/w59gb75kxkhvr1s/Screenshot%202015-09-29%2004.59.41.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
-
-.. image:: https://dl.dropbox.com/s/b4o5xh6u3m9eom8/Screenshot%202015-09-06%2008.58.19.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -502,16 +471,6 @@ did.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/35t9a6buy6g616n/Screenshot%202015-09-29%2005.13.37.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
-.. image:: https://dl.dropbox.com/s/lyfy33dqm1yjos6/Screenshot%202015-09-29%2005.23.48.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -724,10 +683,6 @@ three or does it keep getting bigger?
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/nf2jgqsr1a0afk4/Screenshot%202015-09-29%2005.28.21.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -765,10 +720,6 @@ greater than or equal to thing.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/nr17hqyc8jnuzlb/Screenshot%202015-09-29%2005.33.45.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -925,10 +876,6 @@ the natural log of an infinite hypothesis space?
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/ipc2j930ha6ht2w/Screenshot%202015-09-29%2005.48.29.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -978,10 +925,6 @@ Let's do that.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/jghac7rnon6aasc/Screenshot%202015-09-29%2005.52.53.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1027,10 +970,6 @@ M: Yeah, I agree. That V and that C guy, they're pretty smart.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/blqorkit4ulm33f/Screenshot%202015-09-29%2005.54.51.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 

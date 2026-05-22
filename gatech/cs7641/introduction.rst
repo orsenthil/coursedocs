@@ -202,18 +202,6 @@ algorithms.
 
 *scribble*
 
-.. image:: https://dl.dropbox.com/s/tk30pcb1xoukgb0/Screenshot%202015-09-09%2005.58.27.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
-.. image:: https://dl.dropbox.com/s/sm0cg8hu0b4gwom/Screenshot%202015-09-09%2006.11.06.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
 
 *transcripts*
 

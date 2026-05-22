@@ -1,283 +1,149 @@
 Simulated Annealing
 ===================
 
+Optimization and Local Search
+-----------------------------
+
 Traveling Salesman Problem
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/41ydapm0xkm6w88/Screenshot%202017-03-05%2016.47.35.png
-   :align: center
-   :height: 300
-   :width: 450
+- Visit *n* cities exactly once and return to start, minimizing total distance.
+- NP-Hard: no known polynomial-time exact algorithm.
+- Heuristic improvement: iteratively uncross paths that intersect.
+- Local search starts from a random tour, makes small modifications (e.g., 2-opt swaps).
 
-.. image:: https://dl.dropbox.com/s/f6u24ixpdme18fn/Screenshot%202017-03-05%2016.49.01.png
-   :align: center
-   :height: 300
-   :width: 450
+N-Queens Problem
+~~~~~~~~~~~~~~~~
 
-* Salesman has to visit 5 cities.
-* Must return back the same city he started from.
-* What is the efficient order of flights to minimize the overall distance flown.
-* NP-Hard. Non Deterministic Polynomial.
-* Uncross the paths where the paths crossed.
-* Doing this iteratively.
+Place *n* queens on an *n* x *n* board so no two attack each other.
 
+- **Heuristic function**: number of attacking pairs (goal = 0).
+- **Local search**: move one queen per column to minimize conflicts.
+- Gets stuck in local minima — a configuration where every single move increases conflicts.
 
-Methods to help find the global maximum
----------------------------------------
+Hill Climbing
+-------------
 
-.. image:: https://dl.dropbox.com/s/ik7p38pb6e0njhi/Screenshot%202017-03-05%2016.58.35.png
-   :align: center
-   :height: 300
-   :width: 450
+Local Maxima and Plateaus
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-4-Queens
---------
+Hill climbing greedily moves to the best neighbor. Failure modes:
 
-.. image:: https://dl.dropbox.com/s/8m7q0o5ehny05is/Screenshot%202017-03-05%2017.00.37.png
-   :align: center
-   :height: 300
-   :width: 450
+- **Local maximum**: all neighbors are worse, but global optimum exists elsewhere.
+- **Plateau (shoulder)**: flat region where no neighbor improves the objective.
+- **Ridges**: sequence of local maxima not directly connected.
 
+Step Size
+~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/js51nyzucwvjlao/Screenshot%202017-03-05%2017.01.14.png
-   :align: center
-   :height: 300
-   :width: 450
-
-5-Queens
---------
-
-.. image:: https://dl.dropbox.com/s/hmznjxrr5b8g5lm/Screenshot%202017-03-05%2017.03.36.png
-   :align: center
-   :height: 300
-   :width: 450
-
-n-Queens Heuristic Function
----------------------------
-
-.. image:: https://dl.dropbox.com/s/fq6z15jws7ejxbx/Screenshot%202017-03-05%2017.20.01.png
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/4jyc22wi7lr6pht/Screenshot%202017-03-05%2017.20.25.png
-   :align: center
-   :height: 300
-   :width: 450
-
-n-Queens local Minima
----------------------
-
-.. image:: https://dl.dropbox.com/s/i2i1g69hi4zwrpr/Screenshot%202017-03-05%2017.21.34.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Local Maxima
-------------
-
-.. image:: https://dl.dropbox.com/s/0r57f8wvxugduwc/Screenshot%202017-03-05%2017.24.11.png
-   :align: center
-   :height: 300
-   :width: 450
-
+- **Too small**: gets stuck on plateaus and shoulders; slow convergence.
+- **Too large**: oscillates over sharp peaks; may never terminate.
+- **Adaptive**: start with large steps, reduce over time.
 
 Random Restarts
----------------
+~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/ti899qffhlrijbw/Screenshot%202017-03-05%2017.25.32.png
-   :align: center
-   :height: 300
-   :width: 450
+- Run hill climbing multiple times from random initial states.
+- Avoids revisiting previously explored basins of attraction.
+- With enough restarts, finds global optimum with probability approaching 1.
+- Expected restarts: :math:`1/p` where :math:`p` is probability a single run succeeds.
 
-* Avoid the paths that we have already considered.
+Simulated Annealing Algorithm
+-----------------------------
 
-Hill-Climbing Quiz
-------------------
+Annealing Intuition
+~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/rvkia2t4n5pj397/Screenshot%202017-03-05%2017.29.23.png
-   :align: center
-   :height: 300
-   :width: 450
+Inspired by metallurgical annealing: heating metal and slowly cooling it allows atoms to settle into a low-energy crystalline structure. Analogous energy minimization produces globally optimal configurations.
 
-Step Size Too Small
--------------------
+* Reference: https://en.wikipedia.org/wiki/Simulated_annealing
 
-.. image:: https://dl.dropbox.com/s/pxc19ybqhy5ig7r/Screenshot%202017-03-05%2017.30.57.png
-   :align: center
-   :height: 300
-   :width: 450
+Algorithm
+~~~~~~~~~
 
-* With Small Steps you can get struck in the flat "Shoulder".
+.. code-block:: text
 
+   function SIMULATED-ANNEALING(problem, schedule) returns a solution state
+     current ← initial state of problem
+     for t = 1 to ∞ do
+       T ← schedule(t)
+       if T = 0 then return current
+       next ← a randomly selected successor of current
+       ΔE ← Value(next) - Value(current)
+       if ΔE > 0 then current ← next
+       else current ← next with probability exp(ΔE / T)
 
-Step Size Too Large
--------------------
+Key properties:
 
-.. image:: https://dl.dropbox.com/s/dv0mlxcn4q81uu8/Screenshot%202017-03-05%2017.31.55.png
-   :align: center
-   :height: 300
-   :width: 450
+- **Temperature** :math:`T` starts high, decreases according to a cooling schedule.
+- At high :math:`T`: accepts almost any move (exploration, like random walk).
+- At low :math:`T`: behaves like hill climbing (exploitation).
+- When :math:`\Delta E = 0` (plateau), random walk eventually escapes.
+- Acceptance probability of a downhill move: :math:`P = e^{\Delta E / T}`.
 
-* Miss Sharp Hills Completely.
-* Infinite Loop and never Terminate.
-* Algorithm can oscillate and never terminate.
+Temperature Schedule
+~~~~~~~~~~~~~~~~~~~~
 
-* Start with a large step-size and reduce the step-size with the smaller step-size.
-
-Hill-Climbing Quiz 2
---------------------
-
-.. image:: https://dl.dropbox.com/s/rksd8v0ephdglbx/Screenshot%202017-03-05%2017.48.09.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Annealing
----------
-
-.. image:: https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/IronAlfa%26IronGamma.svg/640px-IronAlfa%26IronGamma.svg.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* Wikipedia: https://en.wikipedia.org/wiki/Simulated_annealing
-* Energy Minimization
-* When the energy of the molecule reduces, the molecules arrange themselves in the lowest energy configuration and
-  they form patterns like mud-cracks or honey combs.
-* Honey-combs. Honeybees tries to optimize their storage space and minimize the structure they are building.
-
-Simulated Annealing
--------------------
-
-.. image:: https://dl.dropbox.com/s/pstt0hnnnbwz8a3/Screenshot%202017-03-05%2017.57.33.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-.. image:: https://dl.dropbox.com/s/bqiyqpgcp8u6e3v/Screenshot%202017-03-05%2018.04.18.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* T is the simulated temperature at time t, which reduces from a high value at the beginning to near zero eventually.
-
-* :math:`\delta E` is the change in energy going from current to next.
-
-* When T is small, it is normal hill-climbing.
-
-.. image:: https://dl.dropbox.com/s/ak6llq06hpon7j2/Screenshot%202017-03-05%2018.07.57.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* When :math:`\delta E` is 0, we will get struck in a plateau. But eventually, we will random walk off the plateau.
+- Must decrease slowly enough to allow exploration of the state space.
+- Common schedules: linear (:math:`T = T_0 - \alpha t`), geometric (:math:`T = T_0 \cdot \alpha^t`), logarithmic (:math:`T = c / \ln(t+1)`).
+- **Theoretical guarantee**: with a logarithmic schedule, SA converges to the global optimum (but impractically slow).
 
 Local Beam Search
 -----------------
 
-.. image:: https://dl.dropbox.com/s/wvsf422tpvfdhe1/Screenshot%202017-03-05%2018.14.28.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* K-particles.
-* Each time frame, we keep track of randomly generated neighbours of these particles and keep the k best ones for the
-  next iteration.
-
-Representing n-Queens
----------------------
-
-.. image:: https://dl.dropbox.com/s/ns7t6ggg4l2cnc9/Screenshot%202017-03-05%2018.16.06.png
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/dpabgd95llxh9ge/Screenshot%202017-03-05%2018.16.30.png
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/vcrahkjcqsbiovm/Screenshot%202017-03-05%2018.17.24.png
-   :align: center
-   :height: 300
-   :width: 450
+- Maintain :math:`k` states ("particles") in parallel.
+- At each step, generate all successors of all :math:`k` states, keep the best :math:`k` overall.
+- Differs from :math:`k` random restarts: states share information (best regions attract more particles).
+- **Stochastic beam search**: select successors probabilistically (proportional to fitness) to maintain diversity.
 
 Genetic Algorithms
 ------------------
 
-.. image:: https://dl.dropbox.com/s/jf8sv1x52qipln7/Screenshot%202017-03-05%2018.19.09.png
-   :align: center
-   :height: 300
-   :width: 450
+Representation
+~~~~~~~~~~~~~~
 
-* The fitness function
+Encode candidate solutions as strings (e.g., n-Queens: a sequence of row positions per column).
+
+Fitness and Selection
+~~~~~~~~~~~~~~~~~~~~~
+
+Fitness function for n-Queens:
 
 .. math::
 
-   28 - number_of_attacking_pairs
+   f = \binom{n}{2} - \text{number\_of\_attacking\_pairs}
 
+For 8-Queens: max fitness = 28 (no attacks).
 
-.. image:: https://dl.dropbox.com/s/iaqhibtl171g52o/Screenshot%202017-03-05%2018.23.48.png
-   :align: center
-   :height: 300
-   :width: 450
+**Selection**: probability of selecting individual :math:`i` is proportional to its fitness:
 
-* Add the four scores and normalize them to a percentage.
+.. math::
 
-.. image:: https://dl.dropbox.com/s/pj10x1e5ub8nct7/Screenshot%202017-03-05%2018.44.14.png
-   :align: center
-   :height: 300
-   :width: 450
+   P(i) = \frac{f_i}{\sum_j f_j}
 
+Roulette-wheel selection: normalize fitness scores to percentages, roll to select parents.
 
-* We roll a 100 sided die to select the first parent.
-* 1-31 - First Board. 32 - to 60 second one, 61 to 90 - third one, 90 to 100 - fourth.
+Crossover
+~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/s1vm7z3ehctnunt/Screenshot%202017-03-05%2018.54.08.png
-   :align: center
-   :height: 300
-   :width: 450
+- Select a random crossover point.
+- Combine the prefix of one parent with the suffix of the other.
+- Produces offspring that inherit structure from both parents.
 
-* After rolling die, we selected the parents in the second column here.
+Mutation
+~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/bpt7mo78jlorqzd/Screenshot%202017-03-05%2018.55.23.png
-   :align: center
-   :height: 300
-   :width: 450
+- Randomly alter one gene (e.g., change one queen's row position) with small probability.
+- Introduces diversity not present in any parent.
+- Prevents premature convergence to local optima.
+- **Without mutation**, GA risks never reaching the global optimum if the necessary gene values are absent from the initial population.
 
-* Using Crossover.
-* Take the first-part and tack them to the second part.
+GA Summary
+~~~~~~~~~~
 
-GA Crossover
-------------
-
-.. image:: https://dl.dropbox.com/s/pqqs6e2z4ehjq6w/Screenshot%202017-03-05%2018.58.03.png
-   :align: center
-   :height: 300
-   :width: 450
-
-GA Mutation
------------
-
-* What if there is a critical part of the solution that is in none of the parents.
-* More randomness. Just like mutations in biology, we are going to use mutations in genetic algorithms.
-
-.. image:: https://dl.dropbox.com/s/n0ild46s46jqwjv/Screenshot%202017-03-05%2019.07.49.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* How many generations are needed to get a good answer.
-
-GA Crossover Quiz
------------------
-
-.. image:: https://dl.dropbox.com/s/r3425jt4virfwqm/Screenshot%202017-03-05%2019.09.23.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* Without mutation, we run the risk of never actually reaching the goal.
-
+1. Initialize random population.
+2. Evaluate fitness.
+3. Select parents (fitness-proportional).
+4. Crossover to produce offspring.
+5. Mutate with small probability.
+6. Replace population; repeat until convergence.

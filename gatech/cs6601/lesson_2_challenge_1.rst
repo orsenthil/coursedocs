@@ -1,104 +1,31 @@
-Short search questions
-======================
+Search Questions
+================
 
-1) Briefly describe the advantage of depth-first search has over breadth-first search in terms of resource usage.
+**Q1: Advantage of DFS over BFS in resource usage?**
 
-Space Complexity of Depth First Search
+DFS space complexity is :math:`O(bm)` where :math:`b` is branching factor and :math:`m` is max depth. BFS must store all nodes at the current depth level — space complexity :math:`O(b^d)`. For large graphs with limited search depth, DFS uses far less memory.
 
-.. math::
+**Q2: Two advantages of BFS over DFS?**
 
-    O(|V|)
+1. BFS always finds a path if one exists (DFS may loop in cyclic graphs without cycle detection)
+2. BFS finds the shallowest (optimal for uniform cost) path first
 
+**Q3: Admissible heuristic for A*?**
 
-This is same as breadth-first in terms of resource usage.
+**(c)** A heuristic is admissible if and only if it **never overestimates** the cost to the goal.
 
-For practical applications, the graph tends to be very large and search is done on limited depth. In such cases,
-depth first search uses that limited depth (resource) where as for the breadth-first search at the same depth uses
-more resource.
+**Q4: If h(s) = 0 for all states, A* becomes?**
 
-At a particular depth, breadth-first search by design has to keep track of all the nodes at the depth, and thus has
-to keep track of more resources.
+**(d) Uniform Cost Search** — without heuristic guidance, A* degenerates to expanding nodes in order of path cost.
 
-----
+**Q5: Can we have negative path lengths?**
 
+With standard search (wavefront expansion), negative path lengths can cause wavefronts to move backward, breaking optimality. Standard Dijkstra/A* assumes non-negative edge weights.
 
-2) A breadth-first search can have advantages over a plain depth-first search,
-despite the issue of resource usage. Briefly describe two such possible advantages.
+**Q6: Negative path lengths in directed acyclic graphs?**
 
+Yes — in a DAG, negative edges are safe since there are no cycles. Use `Bellman-Ford <https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm>`_ or topological sort-based relaxation.
 
-XKCD answers this really well.
+**Q7: Negative heuristic values in A*?**
 
-.. image:: https://d1b10bmlvqabco.cloudfront.net/attach/ix489xx12sl36q/i4le4lw9o4v752/izvkjpffqatt/dfs.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-
-A breadth-first search makes a lot of sense for dating in general, actually; it suggests dating a bunch of people casually before getting serious, rather than having a series of five-year relationships one after the other.
-
-https://xkcd.com/761/
-
-**Translating to technical terms.**
-
-1) BFS always gives you a path (alternatively when DFS is still looking for next node to evaluate and going in circles).
-2) At any given stage, BFS gives an optimal towards to the goal to evaluate.
-
-----
-
-
-3) A heuristic function for A* is considered admissible if
-
-a) it can over estimate the cost to the goal
-
-b) if and only if it always over estimates or precisely predicts the cost to the goal
-
-**c) if and only if it never over estimates the cost to the goal**
-
-d) it produces a value between 1 and 0, inclusive
-
-----
-
-4) If the heuristic function of the A* search assigns zero to every state s such that (h(s) = 0) then A* becomes:
-
-(a) Informed Search
-
-(b) Iterative Deepening Depth First Search
-
-(c) Depth First Search
-
-(d) Uniform Cost Search
-
-(e) None of the Above
-
-
-----
-
-5) Given the way we defined search, is it OK to negative path lengths?
-
-
-- We define search like wavefronts. If we have negative path lengths, our wavefronts might go back and might not give us a result.
-
-
-
-----
-
-6) Can we have negative path lengths if graph is directed and acyclic?
-
-- Yes. We can. (Just as any path). This might not a dijsktra's algorithm. But using an algorithm like `Bellman-Ford`_
-
-
-----
-
-
-7) What happens to A* if we use negative heuristic values?
-
-- Negative heuristics might not over-estimate, and thus can produce admissible heuristics. But negative paths can be break the heuristic function and lead us through a path which is not optimal.
-
-* `StackOverFlow Reference`_
-
-.. _`StackOverFlow Reference`: http://stackoverflow.com/questions/30067813/are-heuristic-functions-that-produce-negative-values-inadmissible
-
-.. _Bellman-Ford: https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm
-
-
+Negative heuristics don't necessarily overestimate, so they can be admissible. However, combined with negative path costs, they can break optimality guarantees. See `StackOverflow discussion <http://stackoverflow.com/questions/30067813/are-heuristic-functions-that-produce-negative-values-inadmissible>`_.

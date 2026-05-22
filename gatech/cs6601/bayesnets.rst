@@ -1,536 +1,213 @@
 Bayes Nets
 ==========
 
-Bayes Nets take the idea of uncertainty and probability  and marry it with efficient structures. We can understand
-what uncertain variable influences other uncertain variable.
+Bayes nets combine probability with efficient graph structures to model how uncertain variables influence each other.
 
+**Notation:** Capital letters denote variables; lowercase denotes the variable being true; a leading :math:`\neg` denotes false.
 
-Challenge Question
-------------------
+Structure and Parameters
+------------------------
 
-.. image:: https://dl.dropbox.com/s/pvo18qlb1gekh1b/Screenshot%202017-02-24%2001.31.30.png
-   :align: center
-   :height: 300
-   :width: 450
+A Bayes network is a directed acyclic graph (DAG) where:
 
-* This requires creativity to connect O1 and O2.
-* We have to use g somehow.
-* We will use Capital case letters to indicate our Variables.
-* We will use lower case letters to indicate when the variable is true, and - in front of it to indicate when it is
-  not true.
-* I think, the step by step illustration is not accurate.
+* Each node is a random variable with a conditional probability table (CPT)
+* Edges encode direct causal/probabilistic dependencies
+* The full joint distribution factorizes as:
 
-.. image:: https://dl.dropbox.com/s/zs0lzjj1yjppw7u/Screenshot%202017-02-24%2001.37.42.png
-   :align: center
-   :height: 300
-   :width: 450
+.. math::
 
-* We solve for all the situations were o2 is true given o1 is true (this is subtler meaning with involving both G and o1)
-* Over all the situations were o1 is true. Here we go for every o2 and G.
-* Why are we doing this is not explained in this video.
+   P(X_1, \ldots, X_n) = \prod_i P(X_i \mid \text{Parents}(X_i))
 
-
-We define the numerator
-
-.. image:: https://dl.dropbox.com/s/cz3atf9kxehtpyo/Screenshot%202017-02-24%2001.42.50.png
-   :align: center
-   :height: 300
-   :width: 450
-
-We define the denominator
-
-.. image:: https://dl.dropbox.com/s/smv3gpgs25fumh3/Screenshot%202017-02-24%2001.44.10.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* We calculated this result by summing up the results for all the relevant situations. But we can also get the results by sampling that can take care for more complex networks.
-
-
-Bayes Network
--------------
-
-* We care about diagnostic reasoning.
-
-.. image::  https://dl.dropbox.com/s/uxu1x138ciwkph3/Screenshot%202017-02-24%2002.25.44.png
-   :align: center
-   :height: 300
-   :width: 450
-
-How many parameters?
-
-* We need one with the evidence positive.
-* We need once with the evidence negative.
-* One probability for the evidence itself.
-
-
-.. image:: https://dl.dropbox.com/s/zhexycql503lp27/Screenshot%202017-02-24%2002.27.40.png
-   :align: center
-   :height: 300
-   :width: 450
-
+For a single binary variable with one binary parent, we need three parameters: :math:`P(\text{evidence})`, :math:`P(\text{child} | \text{parent})`, and :math:`P(\text{child} | \neg\text{parent})`.
 
 Computing Bayes Rule
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
-* We compute the posterior probability not normalized, but ditching the probability B.
+Compute the unnormalized posterior, then normalize:
 
-.. image::  https://dl.dropbox.com/s/a3y7xt379zumi17/Screenshot%202017-02-24%2002.31.42.png
-   :align: center
-   :height: 300
-   :width: 450
+.. math::
 
-* We calculate the normalizer indirectly using the terms itself.
+   P'(A|B) = P(B|A) \cdot P(A)
 
-.. image:: https://dl.dropbox.com/s/d1t91jrqma5l8op/Screenshot%202017-02-24%2002.33.07.png
-   :align: center
-   :height: 300
-   :width: 450
+.. math::
 
+   P(A|B) = \frac{P'(A|B)}{P'(A|B) + P'(\neg A|B)}
 
-Two Test Cancer
----------------
+This avoids computing :math:`P(B)` directly — the normalizer is recovered from the unnormalized terms themselves.
 
-.. image:: https://dl.dropbox.com/s/tmirw03l9x2fppb/Screenshot%202017-02-24%2002.45.44.png
-   :align: center
-   :height: 300
-   :width: 450
+Two-Test Cancer Example
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Given :math:`P(C) = 0.01`, :math:`P(+|C) = 0.9`, :math:`P(+|\neg C) = 0.2`, and two conditionally independent positive tests:
 
 ::
 
-   P(C| ++) = ?
+   P(C | ++) = ?
 
-   Use the P' formula from above.
+   P'(C|++)  = P(+|C) · P(+|C) · P(C)    = 0.9 × 0.9 × 0.01
+   P'(¬C|++) = P(+|¬C) · P(+|¬C) · P(¬C) = 0.2 × 0.2 × 0.99
 
-   P'(C|++) = P(++|C) * P(C)
-            = P(+|C) * P(+|C) * P(C)
-            = 0.9 * 0.9 * 0.01
+   P(C|++) = P'(C|++) / [P'(C|++) + P'(¬C|++)]
 
-   P'(-C|++) = P(++|-C) * P(-C)
-             = P(+|-C) * P(+|-C) * P(-C)
-             = 0.2 * 0.2 * 0.99
+   n1 = 0.9 × 0.9 × 0.01
+   d1 = 0.2 × 0.2 × 0.99
+   P(C|++) = n1 / (n1 + d1) = 0.1698
 
-   P(C| ++) = P'(C|++)
-              --------------------
-              P'(C|++) + P'(-C|++)
-
-
-
-Calculating the result.
-
-::
-
-   n1 =  0.9 * 0.9 * 0.01
-   d1 =  0.2 * 0.2 * 0.99
-
-   n1 / (n1 + d1)
-   0.169811320754717
-
-
-.. image:: https://dl.dropbox.com/s/i2e1s2e8v120scs/Screenshot%202017-02-24%2002.56.24.png
-   :align: center
-   :height: 300
-   :width: 450
+Two positive tests raise the posterior from ~4.3% (one test) to ~17%.
 
 Conditional Independence
 ------------------------
 
-.. image:: https://dl.dropbox.com/s/6rxgvmxfphe8298/Screenshot%202017-02-24%2002.59.44.png
-   :align: center
-   :height: 300
-   :width: 450
+Conditional independence is the central structural property of Bayes networks.
 
-* Conditional Independence is a big thing in Bayes network.
+:math:`X \perp Y \mid Z` means :math:`X` and :math:`Y` are conditionally independent given :math:`Z`:
 
-.. image:: https://dl.dropbox.com/s/16dy6pv5faer4tv/Screenshot%202017-02-24%2003.01.37.png
-   :align: center
-   :height: 300
-   :width: 450
+.. math::
 
-* Without A, B and C are independent.
-* Given A, B and C are not independent. They are both conditioned on A.
+   P(X, Y \mid Z) = P(X \mid Z) \cdot P(Y \mid Z)
 
-Conditional Independence 2
---------------------------
+**Key pattern — common cause** (:math:`B \leftarrow A \rightarrow C`):
 
-* Tricky again.
-* Apply Total Probability.
+* **Without** observing :math:`A`: :math:`B` and :math:`C` are independent
+* **Given** :math:`A`: :math:`B` and :math:`C` become dependent (both conditioned on the common cause)
 
-.. image:: https://dl.dropbox.com/s/332s5ikar2v0zwq/Screenshot%202017-02-24%2003.20.48.png
-   :align: center
-   :height: 300
-   :width: 450
+To verify conditional independence computationally, apply total probability to marginalize hidden variables and check whether the joint factors into marginals.
 
-.. image:: https://dl.dropbox.com/s/7ygv4e7fuf4ak8s/Screenshot%202017-02-24%2003.24.27.png
-   :align: center
-   :height: 300
-   :width: 450
+Absolute vs. Conditional Independence
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-* Right here is the Magic. How did we bring this in?
-* Why do we not have any denominator.
-
-
-.. image:: https://dl.dropbox.com/s/kns1stjd71zjbjw/Screenshot%202017-02-24%2004.09.18.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* A Lot has happened in here. This is short-circuiting.
-
-.. image:: https://dl.dropbox.com/s/55g9nnv0fyvcok6/Screenshot%202017-02-24%2004.16.23.png
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/asqdlqjzsmxnx2d/Screenshot%202017-02-24%2004.17.38.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Compare
--------
-
-* Same thing approached. Two different situations.
-
-.. image:: https://dl.dropbox.com/s/smv3gpgs25fumh3/Screenshot%202017-02-24%2001.44.10.png
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/55g9nnv0fyvcok6/Screenshot%202017-02-24%2004.16.23.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Absolute and Conditional
-------------------------
-
-.. image:: https://dl.dropbox.com/s/bbrqxphfi6nmomr/Screenshot%202017-02-24%2020.29.05.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
+Absolute independence (:math:`X \perp Y`) and conditional independence (:math:`X \perp Y \mid Z`) are distinct properties. Neither implies the other.
 
 Confounding Cause
------------------
+~~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/ejn4qwdu4isw3h1/Screenshot%202017-02-24%2008.50.54.png
-   :align: center
-   :height: 300
-   :width: 450
+When two effects share a common hidden cause (fork: :math:`B \leftarrow A \rightarrow C`), the effects appear correlated. Conditioning on the cause :math:`A` renders them independent.
 
 Explaining Away
----------------
+~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/g1jiqnre3ia32d3/Screenshot%202017-02-24%2008.52.17.png
-   :align: center
-   :height: 300
-   :width: 450
+When two independent causes produce a common effect (collider: :math:`A \rightarrow C \leftarrow B`):
 
-.. image:: https://dl.dropbox.com/s/yeutvmix4hyq57f/Screenshot%202017-02-24%2008.53.30.png
-   :align: center
-   :height: 300
-   :width: 450
+* **Before** observing :math:`C`: :math:`A \perp B` (causes are marginally independent)
+* **After** observing :math:`C`: :math:`A \not\perp B \mid C` (knowing the effect makes the causes dependent — observing one "explains away" the other)
 
-Explaining Away 2
------------------
+This extends transitively: observing any descendant of the collider also activates the dependency between the causes.
 
-.. image:: https://dl.dropbox.com/s/jxn9a02cutmwpcr/Screenshot%202017-02-24%2021.13.27.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Explaining Away 3
------------------
-
-.. image:: https://dl.dropbox.com/s/a2k3gjkpfsh6f5g/Screenshot%202017-02-24%2021.19.44.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Conditional Dependence
-----------------------
-
-.. image:: https://dl.dropbox.com/s/04ab2uph1r2vkzz/Screenshot%202017-02-24%2021.21.12.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-General Bayes Network
----------------------
-
-
-.. image::  https://dl.dropbox.com/s/nbf2tor4yz0bbp5/Screenshot%202017-02-24%2021.22.38.png
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/vt82z3mdkplpufi/Screenshot%202017-02-24%2021.24.20.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-D Separation
+D-Separation
 ------------
 
-.. image:: https://dl.dropbox.com/s/xb21x38u6qc1lmx/Screenshot%202017-02-24%2021.25.32.png
-   :align: center
-   :height: 300
-   :width: 450
+D-separation determines conditional independence in a Bayes network from graph structure alone.
 
-* Not Independent, if linked by *unknown* variable.
+**Triplet types** (for path :math:`X - Z - Y`):
 
-.. image:: https://dl.dropbox.com/s/uhzgjhwfc2vxoqi/Screenshot%202017-02-24%2021.26.33.png
-   :align: center
-   :height: 300
-   :width: 450
+.. list-table::
+   :header-rows: 1
+   :widths: 30 20 20
 
-D Separation
-------------
+   * - Structure
+     - :math:`Z` unknown
+     - :math:`Z` known
+   * - Causal chain: :math:`X \to Z \to Y`
+     - Active (dependent)
+     - Inactive (independent)
+   * - Common cause: :math:`X \leftarrow Z \to Y`
+     - Active (dependent)
+     - Inactive (independent)
+   * - Common effect: :math:`X \to Z \leftarrow Y`
+     - Inactive (independent)
+     - Active (dependent)
 
-.. image:: https://dl.dropbox.com/s/1d9cb70w42f99qq/Screenshot%202017-02-24%2021.28.08.png
-   :align: center
-   :height: 300
-   :width: 450
+**Rules:**
 
-
-* Active Triplets render them **Dependent**
-* Inactive triplets render them **Independent**
-
-
-Conclusion
-----------
-
-.. image:: https://dl.dropbox.com/s/imppwbjtti4pkua/Screenshot%202017-02-24%2021.29.41.png
-   :align: center
-   :height: 300
-   :width: 450
+* **Active triplets** → variables are **dependent**
+* **Inactive triplets** → variables are **independent**
+* Two nodes are d-separated (conditionally independent) given evidence :math:`E` iff **every** undirected path between them contains at least one inactive triplet
 
 Probabilistic Inference
 -----------------------
 
-* Probability Theory
-* Bayes Net
-* Independence
-* Inference
+Given a Bayes network, inference answers queries of the form :math:`P(Q \mid E = e)` where:
 
-.. image:: https://dl.dropbox.com/s/fmbg4knfrkdz5qs/Screenshot%202017-02-25%2005.52.20.png
-   :align: center
-   :height: 300
-   :width: 450
+* **Query variables** :math:`Q` — what we want to compute
+* **Evidence variables** :math:`E` — what we observe
+* **Hidden variables** :math:`H` — neither query nor evidence; must be marginalized out
 
-* What kind of questions can we ask?
-* Given some inputs what are the outputs?
-* Evidence (know) and Query (to find out) Variables.
-* Hidden (neither Evidence or Query. We have to compute)variables.
-* Probabilistic Inference, output is going to be probability distribution over query variables.
+The output is a probability distribution over the query variables.
 
-.. image:: https://dl.dropbox.com/s/r09675e4drswgfd/Screenshot%202017-02-25%2005.55.57.png
-   :align: center
-   :height: 300
-   :width: 450
+Inference is direction-sensitive: networks flowing from causes to effects are easier to reason about.
 
 Enumeration
------------
+~~~~~~~~~~~
 
-* Start by stating the problem
-* Using conditional probability
+Enumerate all possible assignments to hidden variables:
 
-.. image:: https://dl.dropbox.com/s/xbhakaxuezhxnep/Screenshot%202017-02-25%2005.59.12.png
-   :align: center
-   :height: 300
-   :width: 450
+.. math::
 
-.. image:: https://dl.dropbox.com/s/6pyyuk13ymf4c01/Screenshot%202017-02-25%2006.01.44.png
-   :align: center
-   :height: 300
-   :width: 450
+   P(Q \mid e) = \alpha \sum_{h} \prod_i P(x_i \mid \text{Parents}(x_i))
 
-.. image:: https://dl.dropbox.com/s/w9lajc4h2wqvnmz/Screenshot%202017-02-25%2006.02.35.png
-   :align: center
-   :height: 300
-   :width: 450
+where :math:`\alpha` is the normalizing constant and the product is over all variables evaluated at their assigned values.
 
-* We denote that product of 5 numbers term as a single term called f(e,a)
-* Then the final sum is the answer to sum of four terms where each term is a product of 5 numbers.
+Define :math:`f(e, a)` as the product of all relevant CPT entries for a particular assignment. The final answer sums :math:`f` over all :math:`2^n` joint assignments of :math:`n` binary hidden variables.
 
-.. image:: https://dl.dropbox.com/s/6rqq7gv64ko5ywq/Screenshot%202017-02-25%2006.04.57.png
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/h1do4kipzng82t3/Screenshot%202017-02-25%2006.05.27.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Speeding up Enumeration
------------------------
-
-.. image:: https://dl.dropbox.com/s/h1kqmgznefudqzt/Screenshot%202017-02-25%2006.18.58.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* Reduce the cost of each row in the table.
-* Still the same number of rows.
-
-
-**Using dependence**
-
-.. image:: https://dl.dropbox.com/s/ztn5wq66p08c6pq/Screenshot%202017-02-25%2006.23.33.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Casual Direction
-----------------
-
-* Bayes Network is easier to do inference on, when the network flows from causes to effects.
-
+**Optimization — pulling out terms:** Factor terms that don't depend on the innermost summation variable outside the sum. This reduces the cost per row (though the number of rows stays the same).
 
 Variable Elimination
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
-* NP Hard computation to do inference over Bayes Nets in general.
-* Requires algebra to manipulate the arrays that come out the probabilistic terms.
+Exact inference is NP-hard in general. Variable elimination improves on enumeration by:
 
-.. image:: https://dl.dropbox.com/s/q0ufdgn4h6ci0p4/Screenshot%202017-02-25%2006.35.05.png
-   :align: center
-   :height: 300
-   :width: 450
+1. Choosing a variable to eliminate (marginalize out)
+2. Computing a **factor** by summing over that variable in relevant CPTs
+3. Replacing the original terms with the smaller factor
+4. Repeating until only query variables remain
 
-* Compute by Marginalising out and we have smaller network to deal with.
+Each elimination step shrinks the effective network. With a good elimination ordering, variable elimination is significantly more efficient than full enumeration — though finding the optimal ordering is itself NP-hard.
 
-.. image:: https://dl.dropbox.com/s/7zms1cwvz9l2ggc/Screenshot%202017-02-25%2006.38.29.png
-   :align: center
-   :height: 300
-   :width: 450
+Approximate Inference — Sampling
+--------------------------------
 
-* We apply elimination, also called marginalization or summing out to apply to the table.
+When exact inference is intractable, sampling methods provide approximate answers.
 
-.. image:: https://dl.dropbox.com/s/yij3e5xs0mib8gx/Screenshot%202017-02-25%2006.41.32.png
-   :align: center
-   :height: 300
-   :width: 450
+Direct Sampling
+~~~~~~~~~~~~~~~
 
-Variable Elimination - 2
-------------------------
+Sample each variable in topological order from its CPT given its parents' sampled values. Count outcomes to estimate any probability.
 
-* We sum out the variables and find the distribution.
-
-.. image:: https://dl.dropbox.com/s/7tnknw21tihfz0j/Screenshot%202017-02-25%2006.43.37.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Variable Elimination - 3
-------------------------
-
-.. image:: https://dl.dropbox.com/s/z706dpnoslrfxl1/Screenshot%202017-02-25%2006.46.06.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* Summing out and eliminating.
-* If we make a good choice, then variable elimination is going to be more efficient than enumerating.
-
-
-Approximate Inference
----------------------
-
-* Sampling
-
-.. image:: https://dl.dropbox.com/s/uvfz2og3pbsbp33/Screenshot%202017-02-25%2006.51.24.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* Enough counts to estimate the joint probability distribution.
-* Sampling has an advantage over elimination as know a procedure to come up with an approximate value.
-* Without knowing the conditional probabilities, we can still do sampling.
-* Because we can follow the process.
-
-Sampling Exercise
------------------
-
-* Sample that randomly
-* Doubt: Weighted Sample or the Random Sample. Video suggests that it is a weighted sample.
-
-.. image:: https://dl.dropbox.com/s/c34wjhd6p3heqvs/Screenshot%202017-02-25%2007.02.35.png
-   :align: center
-   :height: 300
-   :width: 450
-
-Approximate Inference 2
------------------------
-
-* In the limit, the sampling will approach the true probability.
-* Consistent.
-* Sampling can be used for complete probability distribution.
-* Sampling can be used for an individual variable.
-
-* What if we want to compute for a conditional distribution?
-
-.. image:: https://dl.dropbox.com/s/dlvkzx2r6dudecx/Screenshot%202017-02-25%2007.13.39.png
-   :align: center
-   :height: 300
-   :width: 450
+* In the limit of infinite samples, estimates converge to true probabilities (**consistency**)
+* Works for full joint distributions or individual marginals
+* Does not require knowing the conditional probabilities analytically — just the ability to sample from the process
 
 Rejection Sampling
-------------------
+~~~~~~~~~~~~~~~~~~
 
-* Evidence is unlikely, you will reject a lot of variables.
+To estimate :math:`P(Q \mid E = e)`: generate samples from the full joint, **reject** any sample where evidence variables don't match :math:`e`, and count query outcomes in accepted samples.
 
-.. image:: https://dl.dropbox.com/s/i3qv2e1svcmecer/Screenshot%202017-02-25%2007.22.37.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* We introduce a new method called *likelihood weighting* so that we can keep everyone.
-* In likelihood weighting, we fix the evidence variables.
-
-.. image::  https://dl.dropbox.com/s/4osmw87r1l3u4ft/Screenshot%202017-02-25%2007.23.40.png
-   :align: center
-   :height: 300
-   :width: 450
+**Problem:** When evidence is unlikely, most samples are rejected — exponentially inefficient.
 
 Likelihood Weighting
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/xjhlsqbshnp4mik/Screenshot%202017-02-25%2007.26.11.png
-   :align: center
-   :height: 300
-   :width: 450
+Fix evidence variables to their observed values; sample only non-evidence variables. Weight each sample by:
 
-* It is a weighted Sample.
+.. math::
 
-.. image:: https://dl.dropbox.com/s/cc4jr3zd3dwtly5/Screenshot%202017-02-25%2007.28.37.png
-   :align: center
-   :height: 300
-   :width: 450
+   w = \prod_{e_i \in E} P(e_i \mid \text{Parents}(e_i))
 
-* We make likelihood weighting consistent.
+Use weighted counts to estimate the posterior. This is a **consistent** estimator and avoids rejecting any samples.
+
+**Limitation:** Only accounts for evidence upstream of query variables in the sampling order; downstream evidence is handled through weights, not the sampling distribution itself.
 
 Gibbs Sampling
---------------
+~~~~~~~~~~~~~~
 
-* Josiah Gibbs, takes all the evidence into account, not just upstream evidence.
-* Markov Chain Monty Carlo
-* We have a set of variables, we re-sample just one variable at a time conditioned on all the others.
-* Select one non-evidence variable and resample it on all other variables.
+A Markov Chain Monte Carlo (MCMC) method that accounts for **all** evidence:
 
-.. image:: https://dl.dropbox.com/s/rnr442leqpjpuuu/Screenshot%202017-02-25%2007.34.54.png
-   :align: center
-   :height: 300
-   :width: 450
+1. Initialize all non-evidence variables randomly
+2. Repeat: pick one non-evidence variable, resample it conditioned on its **Markov blanket** (parents, children, and children's other parents)
+3. After a burn-in period, collect samples
 
-* We end up walking around the variables.
-* The samples are dependent.
-* They are very similar.
-* The technique is consistent.
+**Properties:**
+
+* Considers both upstream and downstream evidence via the Markov blanket
+* Successive samples are correlated (not independent)
+* Consistent — converges to the true distribution in the limit

@@ -16,10 +16,6 @@ Instance Based Learning
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/1r4vbrcvykaf186/Screenshot%202015-08-30%2016.15.57.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -61,10 +57,6 @@ mean by that.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/mz819k56so15xo7/Screenshot%202015-08-30%2016.22.37.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -156,10 +148,6 @@ just a little bit clever.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/g3stmzcn8xtzhj2/Screenshot%202015-08-30%2016.28.36.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -263,11 +251,6 @@ neighbors than just the closest one.
   the algorithm.
 
 *slides*
-
-.. image:: https://dl.dropbox.com/s/5dsdmlohy49b829/Screenshot%202015-09-13%2014.57.36.png
-   :align: center
-   :width: 400
-   :height: 300
 
 
 *transcript*
@@ -380,10 +363,6 @@ M: Yeah, let's go for it.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/tmvp18n96s0zvv5/Screenshot%202015-09-13%2015.11.35.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -555,15 +534,6 @@ M: Awesome.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/furogkuqg249lih/Screenshot%202015-08-30%2016.52.30.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/9jj234y9111wt3r/Screenshot%202015-08-30%2017.14.11.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -909,15 +879,6 @@ M: Right, that makes sense.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/7grzv7kjbxlsptf/Screenshot%202015-09-13%2016.36.24.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/dwqm4ih6403g26x/Screenshot%202015-09-13%2016.42.31.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1161,10 +1122,6 @@ M: Okay, so let's do that.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/89w49lgjzlgs7li/Screenshot%202015-08-30 %2018.03.42.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1330,10 +1287,6 @@ M: Alright let's do it.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/gci8tyfq4mt4vlz/Screenshot%202015-08-30%2019.02.32.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1397,10 +1350,6 @@ C: All right.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/tq78a1n02y1ltsd/Screenshot%202015-09-13%2017.24.00.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1562,10 +1511,6 @@ M: Sometimes it gives us equations that helps us but sometimes it gives us curse
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/moqqxjzlckgiw2z/Screenshot%202015-08-30%2019.57.05.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcripts*
 
@@ -1681,8 +1626,4 @@ M: Neat.
 
 **Summary of Instance Based Learning**
 
-.. image:: https://dl.dropbox.com/s/uqnb2upf0qo8dqb/Screenshot%202015-08-30%2019.53.52.png
-   :align: center
-   :width: 400
-   :height: 300
 

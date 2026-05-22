@@ -16,15 +16,6 @@ Neural Networks
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/aem8hige0tsuwqx/Screenshot%202015-09-13%2008.08.07.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/ri4el5pl7029lqv/Screenshot%202015-08-27%2022.13.32.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -80,10 +71,6 @@ things out.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/6i54mpn2zdgipqu/Screenshot%202015-09-13%2008.19.56.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -126,10 +113,6 @@ M: Good.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/tnlycdokqq40y2v/Screenshot%202015-09-13%2008.30.55.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -208,10 +191,6 @@ already in a position to compute something fascinating. So let's do a quiz.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/6b75hocecjzdwh0/Screenshot%202015-09-13%2008.40.58.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -254,10 +233,6 @@ be possible. So let's let's do that as a quiz.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/k1vcus6237zu339/Screenshot%202015-09-13%2008.45.25.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -321,10 +296,6 @@ C: Okay.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/8t2ay27ovvvcci3/Screenshot%202015-08-28%2007.58.37.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -378,10 +349,6 @@ C: So, alright. Maybe if we can do that, we can do anything. So, let's, let's gi
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/jdv0d0vt2yx5yfw/Screenshot%202015-08-29%2017.46.39.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -470,24 +437,10 @@ C: Right. And there you go. And of course there's an infinite number of solution
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/dwvn47mu0y064uc/Screenshot%202015-08-29%2018.13.19.png
-   :align: center
-   :width: 400
-   :height: 300
 
 It's the negative theta that we are using to multiply it with biases so that we can compare it
 with zero instead of theta.
 
-.. image:: https://dl.dropbox.com/s/vbvgn126xqqcku5/Screenshot%202015-09-13%2009.40.34.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
-.. image:: https://dl.dropbox.com/s/gb05fcws9siz2pk/Screenshot%202015-09-13%2009.49.01.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -636,10 +589,6 @@ C: Fair enough. Okay.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/e8vbzn3s2d9ptq6/Screenshot%202015-09-13%2010.20.53.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -719,10 +668,6 @@ rate.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/abj0ngjguiwqvt6/Screenshot%202015-09-13%2010.46.02.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -753,10 +698,6 @@ C: As far as I'm concerned.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/7doj4huo09alcrk/Screenshot%202015-08-29%2019.29.22.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -810,10 +751,6 @@ C: Well, I'll tell you how much I like it when you show me a function that acts 
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/o3c6ekbst6wctdz/Screenshot%202015-08-29%2019.37.36.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -884,10 +821,6 @@ there's this smooth transition in between, there's other ways of making that sha
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/0xbzm02mx53k1dl/Screenshot%202015-09-13%2011.28.05.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -948,16 +881,11 @@ further, comes up again and doesn't come down as far and you could easily get yo
 point like this where you're not at the global minimum. Your at some local optimum.
 
 
-
 Neural Network
 --------------
 
 * Back propagation, computationally beneficial organization of the chain rule.
 
-.. image:: https://dl.dropbox.com/s/oilgaizggn4uk20/Screenshot%202015-08-29%2019.55.27.png
-   :align: center
-   :width: 400
-   :height: 300
 
 **Optimizing Weights**
 
@@ -968,10 +896,6 @@ Neural Network
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/witquw5nzaghbi9/Screenshot%202015-08-29%2020.12.57.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1037,10 +961,6 @@ C: Makes perfect sense.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/7ncvxblbjy04qxn/Screenshot%202015-08-29%2020.36.38.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1127,10 +1047,6 @@ other algorithms
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/e8dz5r8qw5gw4u7/Screenshot%202015-08-29%2020.41.42.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1199,9 +1115,5 @@ better generalization error with simpler hypotheses.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/1oyqo0cep0tovkb/Screenshot%202015-08-29%2020.44.39.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*

@@ -23,10 +23,6 @@ Simplest theory presented to describe any model.
 
 Example of a dataset.
 
-.. image:: https://dl.dropbox.com/s/poucdlgqtncklkb/Screenshot%202015-08-28%2018.50.32.png
-   :align: center
-   :width: 400
-   :height: 300
 
 **Classification**
 
@@ -46,17 +42,8 @@ Example of a dataset.
 * A database person will call it as k-dimensional data cube.
 
 
-.. image:: https://dl.dropbox.com/s/srk6cublfptv91h/Screenshot%202015-08-30%2012.14.44.png
-   :align: center
-   :width: 400
-   :height: 300
-
 It says easy to appreciate graphically, does not say how the graphs were devised.
 
-.. image:: https://dl.dropbox.com/s/i72465pxzi73m0k/Screenshot%202015-08-30%2012.16.14.png
-   :align: center
-   :width: 400
-   :height: 300
 
 Now this is stretching out the entire histogram graphs.
 
@@ -101,10 +88,6 @@ Another generic term and it is broad topic. It was used with data
 compression, but it is now used in data mining too. The topic of
 `Information Gain`_ forms a sub-part of this topic.
 
-.. image:: https://dl.dropbox.com/s/x94h57dwcc3yd83/Screenshot%202015-08-30%2013.18.02.png
-   :align: center
-   :width: 400
-   :height: 300
 
 You are trying to predict, if it is easy to ask computer to find which
 attribute has the highest information gain?
@@ -125,22 +108,12 @@ the clear definition of Information Gain?)
 
 **A Decision Stump**
 
-.. image:: https://dl.dropbox.com/s/qvov2w1j0dl81rb/Screenshot%202015-08-30%2013.29.02.png
-   :align: center
-   :width: 400
-   :height: 300
-
 
 * What is pchance here ?
 * How did we come with 22 and 18 as values.
 
 
 **The final tree**
-
-.. image:: https://dl.dropbox.com/s/hbbjojxytemyiva/Screenshot%202015-08-30%2013.54.48.png
-   :align: center
-   :width: 400
-   :height: 300
 
 
 You have to follow the tree to understand the various decision that could be
@@ -149,11 +122,6 @@ taken after asking about the particular value.
 
 **Base cases for recursion**
 
-.. image:: https://dl.dropbox.com/s/sxweboaj5oif1cd/Screenshot%202015-08-30%2014.02.03.png
-   :align: center
-   :width: 400
-   :height: 300
-
 
 * If all records have same output or all records cannot be subdivided using
   some other attribute, then do not recurse.
@@ -161,10 +129,6 @@ taken after asking about the particular value.
 * Intuitively, this is proposing another base case, which states that if
   there is no information gain, then do not recurse.
 
-.. image:: https://dl.dropbox.com/s/l870kkd4xlf0zn4/Screenshot%202015-08-30%2014.05.44.png
-   :align: center
-   :width: 400
-   :height: 300
 
 * But there is a problem with that theory. The example is that of X-OR gate.
 
@@ -172,10 +136,6 @@ taken after asking about the particular value.
 
 **Basic Decision Tree summarized**
 
-.. image:: https://dl.dropbox.com/s/hbx1ixvd2rnq5oh/Screenshot%202015-08-30%2014.09.22.png
-   :align: center
-   :width: 400
-   :height: 300
 
 **Reference Slides**
 
@@ -237,10 +197,6 @@ numbers.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/tcoav88lrueyq9x/Screenshot%202015-09-09%2007.14.29.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -309,10 +265,6 @@ M: That makes sense.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/iwrl4iftal67clv/Screenshot%202015-09-09%2006.57.01.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -405,10 +357,6 @@ sample or another name for which I prefer is a training set.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/fx7likfrawlt3eu/Screenshot%202015-09-09%2020.32.40.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -475,17 +423,12 @@ just memorized but here you have to do generalization. As you remember from our 
 generalization is the whole point of machine learning.
 
 
-
 **Example 1 - Dating**
 
 *scribble*
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/nplbbdvwp8d0cs6/Screenshot%202015-09-09%2020.47.51.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -564,10 +507,6 @@ and then try to actually figure out how we may actually solve this.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/s9hf9gfllb3f2pu/Screenshot%202015-09-09%2020.56.06.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -640,15 +579,6 @@ not.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/dl3d6v0szufi7ta/Screenshot%202015-09-09%2021.03.38.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/pwawiw3o6ti7slq/Screenshot%202015-09-09%2021.06.06.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -732,16 +662,6 @@ this tree over any of the other possible number of trees that we might have chos
 
 Prior concept discussion slide
 
-.. image:: https://dl.dropbox.com/s/vuejqsnox6c8nk9/Screenshot%202015-09-09%2021.20.00.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/hbglr5klmivdovz/Screenshot%202015-09-09%2021.21.30.png
-   :align: center
-   :width: 400
-   :height: 300
-
 
 *transcript*
 
@@ -809,22 +729,6 @@ think you can make an argument either way. And I think you actually made both ar
 *scribble*
 
 *slides*
-
-.. image:: https://dl.dropbox.com/s/o2zjtl518wwekib/Screenshot%202015-09-09%2021.45.42.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
-.. image:: https://dl.dropbox.com/s/lnql161lpy67206/Screenshot%202015-09-09%2021.48.04.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/wyvoigt5lojr38o/Screenshot%202015-09-09%2021.51.58.png
-   :align: center
-   :width: 400
-   :height: 300
 
 
 *transcript*
@@ -945,18 +849,6 @@ either need an easy problem or you need to find a clever way of cheating.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/ne0suuspnj7yvlc/Screenshot%202015-09-09%2022.03.03.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
-.. image:: https://dl.dropbox.com/s/ao1w4gw55nepavc/Screenshot%202015-09-09%2022.25.37.png
-   :align: center
-   :width: 400
-   :height: 300
-
-
 
 *transcript*
 
@@ -1026,10 +918,6 @@ need to ask which is, exactly how big is the truth table itself?
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/sqgtj2y6lbyl0sr/Screenshot%202015-09-10%2019.51.38.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1140,10 +1028,6 @@ C: Exactly. So the goal is to maximize over the entropy gain. And that's the bes
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/gfm4pliqpedcm1a/Screenshot%202015-09-10%2020.05.43.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1199,10 +1083,6 @@ as they're correct and they give you good splits near the top of the tree.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/r8iixn0erb6whyc/Screenshot%202015-09-10%2020.15.07.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1273,10 +1153,6 @@ that's how you would deal with continuous attributes.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/odpv9isx2mbpx6s/Screenshot%202015-09-10%2020.21.43.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1335,10 +1211,6 @@ which case, I'm old.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/ledy4ze5ley9vpe/Screenshot%202015-09-10%2020.36.40.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1431,10 +1303,6 @@ giving you a smaller tree. And it's a very simple addition to the standard ID3 a
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/ecf60tf5x7hl17o/Screenshot%202015-09-10%2020.46.39.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1495,10 +1363,6 @@ C: Yeah. So either way we're doing a kind of voting. I like that.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/4vyde5u39ty24rm/Screenshot%202015-09-10%2020.48.39.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 

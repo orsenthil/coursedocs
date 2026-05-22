@@ -14,10 +14,6 @@ Ensemble Learning Boosting
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/bh12jof2d4jaz98/Screenshot%202015-08-31%2022.41.56.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -152,10 +148,6 @@ to understand, but an ensemble nonetheless.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/o8yqflgdat6i9k4/Screenshot%202015-09-13%2018.19.34.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -203,10 +195,6 @@ and then you combine them and you're done.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/4dziu26anjla63l/Screenshot%202015-09-13%2018.33.43.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -270,10 +258,6 @@ M: They're important.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/55ioeel85jls7ro/Screenshot%202015-09-13%2018.41.28.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -347,10 +331,6 @@ see if we can do something a little bit better, even better than that. Okay?
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/x7el9eof0gf5fd7/Screenshot%202015-09-13%2019.00.45.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -483,10 +463,6 @@ of the issues and we're going to see all of those when we talk about boosting ri
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/zcesapyou9xqcg2/Screenshot%202015-09-13%2019.26.26.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -559,10 +535,6 @@ M: Sure.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/6j6jmxnp8z6xry4/Screenshot%202015-09-13%2019.36.44.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -653,10 +625,6 @@ M: Got it.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/3jx2ppad3zbrgdm/Screenshot%202015-09-13%2019.48.57.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -727,10 +695,6 @@ M: Sure.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/y4f4osy9mdrjiju/Screenshot%202015-09-13%2020.10.15.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -908,10 +872,6 @@ it's actually a fairly strong, and important condition.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/59lgpzpr0ep32xj/Screenshot%202015-09-13%2020.25.47.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -968,10 +928,6 @@ C: Right, so let me do that for you right now.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/wve4igjpu63sd41/Screenshot%202015-09-13%2020.35.12.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1113,10 +1069,6 @@ some of the ones that you were getting wrong, right.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/kxdr0po3y2k9rqx/Screenshot%202015-09-13%2020.58.56.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1157,10 +1109,6 @@ C: You're welcome. I'm about helping others, Michael, you know that.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/zlf7crb6tx8uzid/Screenshot%202015-09-13%2021.23.08.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1320,15 +1268,6 @@ and these two minuses are going to be smaller. So, what do you think the third h
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/ushmpire11atsos/Screenshot%202015-09-13%2021.25.21.png
-   :align: center
-   :width: 400
-   :height: 300
-
-.. image:: https://dl.dropbox.com/s/c7mfrjtdb5lv2n0/Screenshot%202015-09-13%2021.32.48.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1413,10 +1352,6 @@ C: Yeah, that's a good thing, we should ponder that.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/2wgbljgbmwpifj6/Screenshot%202015-09-13%2021.48.31.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1631,9 +1566,5 @@ possible distributions for you to do better than chance otherwise.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/dxl1i52op3x8zbs/Screenshot%202015-09-13%2021.57.53.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*

@@ -284,10 +284,6 @@ works out really well.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/e5dsk4anmidh0hv/Screenshot%202015-10-03%2020.05.50.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -448,10 +444,6 @@ going to do next is look at a nice representation of that, kind of information.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/izhu44tifz1a0ne/Screenshot%202015-10-03%2020.23.11.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -483,10 +475,6 @@ this table. because otherwise that would have been kind of mean.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/v6958js76px7txk/Screenshot%202015-10-04%2006.08.20.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -648,10 +636,6 @@ C: Okay. Cool.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/o87d2q688zc7mch/Screenshot%202015-10-04%2006.12.49.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -761,10 +745,6 @@ C: Okay, fair enough.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/cuh0l8jkcl07tdr/Screenshot%202015-10-04%2006.18.53.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -818,10 +798,6 @@ M: Right, so the fewer number of parents, the more compact the distribution ends
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/tcb5z9n7i14w0jk/Screenshot%202015-10-04%2006.30.37.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -961,10 +937,6 @@ some good arguments for why it actually is.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/iajmdrdy6ym66l9/Screenshot%202015-10-04%2006.38.52.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1002,10 +974,6 @@ C: Okay.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/9u0marrphirnm09/Screenshot%202015-10-04%2006.40.51.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1069,10 +1037,6 @@ C: Excellent.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/nzhgzyf5atwn2ex/Screenshot%202015-10-04%2007.18.03.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1315,10 +1279,6 @@ C: Man, and the algorithm shou, shou, should not involve me. [LAUGH]
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/kxrchia1wp7bqht/Screenshot%202015-10-04%2008.41.36.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1489,10 +1449,6 @@ M: No I did not.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/icmmn78be0ooxu7/Screenshot%202015-10-04%2008.50.42.png
-   :align: center
-   :width: 400
-   :height: 300
 
 *transcript*
 
@@ -1661,8 +1617,4 @@ C: Nice.
 
 *slides*
 
-.. image:: https://dl.dropbox.com/s/3s2zjey7k8b8dma/Screenshot%202015-10-04%2008.53.56.png
-   :align: center
-   :width: 400
-   :height: 300
 

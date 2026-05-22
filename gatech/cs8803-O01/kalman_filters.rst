@@ -20,10 +20,6 @@ Tracking intro
 * Kalman Filter - Continuous - Uni-modal distribution.
 * Monte Carlo localization. - discrete - multi-modal distribution.
 
-.. image:: https://dl.dropbox.com/s/sltbfawwq2q0lun/Screenshot%202018-01-21%2011.39.54.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 * https://en.wikipedia.org/wiki/Unimodality
 * https://en.wikipedia.org/wiki/Multimodal_distribution
@@ -31,15 +27,6 @@ Tracking intro
 Gaussian Intro
 --------------
 
-.. image:: https://dl.dropbox.com/s/30ql57x15keiqtt/Screenshot%202018-01-21%2011.48.10.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/y8hnmvpf0iov3u9/Screenshot%202018-01-21%2011.49.51.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 Variance Comparison
 -------------------
@@ -51,10 +38,6 @@ Variance Comparison
 Preferred Gaussian
 ------------------
 
-.. image:: https://dl.dropbox.com/s/5sgv07choujs8hk/Screenshot%202018-01-21%2012.08.19.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 Evaluate Gaussian
 -----------------
@@ -86,10 +69,6 @@ Kalman Filter
 
 Measurement updates and motion updates.
 
-.. image:: https://dl.dropbox.com/s/ra2vy5p9vo1fmz9/Screenshot%202018-01-21%2012.25.21.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 .. attention::
 
@@ -104,11 +83,6 @@ In localization, performing a measurement meant updating our belief by a multipl
 Measurement and Motion 2
 ------------------------
 
-.. image:: https://dl.dropbox.com/s/rlv7v2w0ncdwz2p/Screenshot%202018-01-21%2012.31.29.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
 
 The measurement meant updating our belief (and renormalizing our distribution). Motion meant keeping track of where
 all of our probability "went" when we moved (which meant using the law of Total Probability).
@@ -116,23 +90,9 @@ all of our probability "went" when we moved (which meant using the law of Total 
 Shifting the mean
 -----------------
 
-.. image:: https://dl.dropbox.com/s/1dv93nsbzx5w2zx/Screenshot%202018-01-21%2012.36.42.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/2nz7ya70893h0fp/Screenshot%202018-01-21%2012.38.27.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 Predicting the Peak
 -------------------
-
-.. image:: https://dl.dropbox.com/s/quan7d72vvya3di/Screenshot%202018-01-21%2012.40.33.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 
 .. attention::
@@ -143,15 +103,6 @@ Predicting the Peak
 Parameter Update
 ----------------
 
-.. image:: https://dl.dropbox.com/s/wvyuh12ylmowpza/Screenshot%202018-01-21%2012.52.53.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/lzbofx39l4r67l4/Screenshot%202018-01-21%2012.53.49.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 .. code-block:: python
 
@@ -162,10 +113,6 @@ Parameter Update
     def new_sigma2(sigma2_1, sigma2_2):
         return (1.0/((1.0/sigma2_1) + (1.0/sigma2_2)))
 
-.. image:: https://dl.dropbox.com/s/x6oq8de5zbn0x06/Screenshot%202018-01-21%2013.01.19.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 .. attention::
 
@@ -175,11 +122,6 @@ Parameter Update 2
 ------------------
 
 
-.. image:: https://dl.dropbox.com/s/m1cs3zbqkyhmz1o/Screenshot%202018-01-21%2013.10.26.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
 .. attention::
 
    Notice that the new mean is between the previous two means and the new variance is LESS than either of the
@@ -188,18 +130,9 @@ Parameter Update 2
 Separated Gaussians
 -------------------
 
-.. image:: https://dl.dropbox.com/s/mcy3tcratp4dl6b/Screenshot%202018-01-21%2013.15.33.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 Since the Gaussian's have the same width (which means same certainty), than their product will be a Gaussian with a mean that is right in the middle.
 
-
-.. image:: https://dl.dropbox.com/s/m338obmsu8x6t8p/Screenshot%202018-01-21%2013.19.21.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 This can be hard to wrap your head around, but multiple measurements ALWAYS gives us a more certain (and therefore taller and narrower) belief.
 
@@ -224,16 +157,6 @@ New Mean and Variance
 
 Gaussian Motion
 ---------------
-
-.. image:: https://dl.dropbox.com/s/as8z5x56act1obt/Screenshot%202018-01-21%2013.28.27.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/8d1h1rfoh48tdr9/Screenshot%202018-01-21%2013.32.03.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 
 Predict Function
@@ -298,15 +221,6 @@ Kalman Prediction
 
 * 1-D Kalman Filters.
 
-.. image:: https://dl.dropbox.com/s/ppqpw566vv0s4ar/Screenshot%202018-01-21%2014.14.58.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/775tohhq5xjvvy8/Screenshot%202018-01-21%2014.18.50.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 Kalman Filter Land
 ------------------
@@ -314,33 +228,16 @@ Kalman Filter Land
 * Higher Dimensional Gaussians
 * Multi-variate Gaussians
 
-.. image:: https://dl.dropbox.com/s/bsg4trsuhnu3xzq/Screenshot%202018-01-21%2014.23.54.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/b7w6lux04juufa7/Screenshot%202018-01-21%2014.28.05.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 Kalman Filter Prediction
 ------------------------
 
-.. image:: https://dl.dropbox.com/s/uh7eoq7w0tdpmqr/Screenshot%202018-01-21%2014.31.24.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 Our prediction is that we would move forward in the x direction by one and that our velocity is still one.
 
 Another Prediction
 ------------------
 
-.. image:: https://dl.dropbox.com/s/4eqs367v2wqdqok/Screenshot%202018-01-21%2014.34.15.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 We'd expect our velocity to remain unchanged, but we should move forward in the x direction
 by two (since the velocity was two).
@@ -348,47 +245,13 @@ by two (since the velocity was two).
 More Kalman Filters
 -------------------
 
-.. image:: https://dl.dropbox.com/s/0q3cpfbgi0ab9z6/Screenshot%202018-01-21%2014.35.26.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-.. image:: https://dl.dropbox.com/s/dxou9oli2kknhhe/Screenshot%202018-01-21%2014.37.24.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/znme1jw4oswep36/Screenshot%202018-01-21%2014.37.53.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/z6nz1rvds63255r/Screenshot%202018-01-21%2014.39.31.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 The car **estimates** the velocity of the other vehicles based on the measurements of it's positions using Kalman
 filters.
 
-.. image:: https://dl.dropbox.com/s/ef1a6apkkavoqe5/Screenshot%202018-01-21%2014.40.23.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 Kalman Filter Design
 --------------------
-
-.. image:: https://dl.dropbox.com/s/6bcy8p7rs5x27qs/Screenshot%202018-01-21%2014.43.08.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/6zqdmoxqsy6r1g0/Screenshot%202018-01-21%2014.44.58.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
 
 
 .. raw:: html

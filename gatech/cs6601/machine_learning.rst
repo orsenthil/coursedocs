@@ -1,625 +1,236 @@
 Machine Learning
 ================
 
-Introduction to Machine Learning
---------------------------------
-
-* The Wild Dolphin Project: http://www.wilddolphinproject.org/
-* CHAT (Cetacean Hearing and Telemetry): http://www.wilddolphinproject.org/our-research/chat-research/
-
-Challenge Question
-------------------
-
-.. image:: https://dl.dropbox.com/s/w1r1odresud2h3j/Screenshot%202017-03-06%2020.49.23.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-* Answer C
-* Decision Trees are understandable and easy to explain.
-
-k-Nearest Neighbors
+Supervised Learning
 -------------------
 
-.. image:: https://dl.dropbox.com/s/ud6yqjfj82gwaak/Screenshot%202017-03-06%2020.52.30.png
-   :align: center
-   :height: 300
-   :width: 450
+k-Nearest Neighbors (k-NN)
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+* Classify a new point by finding the k nearest examples in training data and applying majority label
+* Distance metric (typically Euclidean) determines "nearest"
+* k=1: decision boundary is Voronoi tessellation of training points
+* Larger k smooths boundaries but may lose local structure
+* Non-parametric: no assumptions about data distribution
+* Lazy learner — stores all training data, no explicit model built
 
-.. image:: https://dl.dropbox.com/s/l9id3i0cdplwcci/Screenshot%202017-03-06%2020.53.37.png
-   :align: center
-   :height: 300
-   :width: 450
+Cross-Validation
+~~~~~~~~~~~~~~~~
 
-
-* Normal Bite (O)
-* Cookie Cutter Bite (+)
-
-* Find the nearest example in the training data-set and apply that label.
-
-Cross Validation
-----------------
-
-Cross Validation
-
-Note: When applying k-fold cross-validation, you usually need to select the training/test samples on each iteration
-randomly. But in certain cases, such as for time-series or sequence data, random selection not be a valid approach.
-
-
-.. image:: https://dl.dropbox.com/s/nnc4tblx32cr0km/Screenshot%202017-03-06%2020.57.54.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-.. image:: https://dl.dropbox.com/s/4nkz70iz59ymo1n/Screenshot%202017-03-06%2021.00.00.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* LOOCV_
-
+* Split data into k folds; train on k-1, test on remaining fold; rotate and average error
+* Estimates generalization performance without wasting data
+* For time-series/sequence data, random fold selection is invalid — use temporal splits
+* Leave-One-Out CV (LOOCV_): k = n; low bias, high variance of error estimate
+* Use cross-validation to select hyperparameters (e.g., k in k-NN, tree depth)
 
 .. _LOOCV: http://stats.stackexchange.com/questions/90902/why-is-leave-one-out-cross-validation-loocv-variance-about-the-mean-estimate-f
 
+Gaussian Distribution and Bayes Classification
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Cross Validation Quiz
----------------------
+* Gaussian (Normal) distribution: parameterized by mean μ and variance σ²
+* Central Limit Theorem: sum of many independent random variables → Gaussian (https://en.wikipedia.org/wiki/Central_limit_theorem)
+* Decision boundary between two Gaussians: point where posterior probabilities are equal
+* Classification error = area of overlap between class-conditional distributions
 
-.. image:: https://dl.dropbox.com/s/sjs3x7voadlei7b/Screenshot%202017-03-06%2021.06.56.png
-   :align: center
-   :height: 300
-   :width: 450
+**Bayes Classifier:**
 
+* Optimal classifier minimizes total expected error
+* Assigns class with highest posterior: argmax P(C|x) = argmax P(x|C)P(C)
+* Requires knowing true class-conditional densities
 
-* It is claimed that the number of pizza deliveries to the Pentagon was used to predict the start of the first Iraq War.
+**Naive Bayes:**
 
-The Gaussian Distribution
--------------------------
+* Assumes features are conditionally independent given class: P(x₁,x₂,...,xₙ|C) = ∏ P(xᵢ|C)
+* Maximum likelihood estimation for parameters from training data
+* Works well even when independence assumption is violated
+* Reference: `Naive Bayes Classifier with insect examples`_
 
-.. image:: https://dl.dropbox.com/s/78n5znh0olbmt2s/Screenshot%202017-03-06%2021.21.29.png
-   :align: center
-   :height: 300
-   :width: 450
+.. _Naive Bayes Classifier with insect examples: http://www.cs.ucr.edu/~eamonn/CE/Bayesian%20Classification%20withInsect_examples.pdf
 
+**No Free Lunch Theorem:**
 
-Central Limit Theorem
----------------------
-
-* https://en.wikipedia.org/wiki/Central_limit_theorem
-
-Grasshoppers Vs Katydids
-------------------------
-
-* Naive Bayes Classifier with insect examples: http://www.cs.ucr.edu/~eamonn/CE/Bayesian%20Classification%20withInsect_examples.pdf
-
-.. image:: https://dl.dropbox.com/s/tx8xmx3nx3op7dq/Screenshot%202017-03-06%2022.36.22.png
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/gb4cj5yfiudg4ol/Screenshot%202017-03-06%2022.36.58.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Gaussians Quiz
---------------
-
-.. image:: https://dl.dropbox.com/s/dhqm7z77ofolisy/Screenshot%202017-03-06%2022.40.13.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Decision Boundaries
--------------------
-
-.. image:: https://dl.dropbox.com/s/00lpr8fmmggc5hc/Screenshot%202017-03-06%2023.20.29.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Recognition Quiz
-----------------
-
-.. image:: https://dl.dropbox.com/s/47i4wtdto8xmuoy/Screenshot%202017-03-06%2023.22.44.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Decision Boundaries
--------------------
-
-.. image:: https://dl.dropbox.com/s/tc6iio8ths44oig/Screenshot%202017-03-06%2023.24.27.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Error
------
-
-.. image:: https://dl.dropbox.com/s/ks4pkqepgjer9np/Screenshot%202017-03-06%2023.24.50.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-.. image:: https://dl.dropbox.com/s/c1vxqsfpt9wd43t/Screenshot%202017-03-06%2023.30.54.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/biwkj3umy1hayyo/Screenshot%202017-03-06%2023.31.29.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Bayes Classifier
-----------------
-
-.. image:: https://dl.dropbox.com/s/evcb58l7tmccy3i/Screenshot%202017-03-06%2023.33.50.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Bayes Rule Quiz
----------------
-
-.. image:: https://dl.dropbox.com/s/850lpklbblscalb/Screenshot%202017-03-06%2023.35.19.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Naive Bayes
------------
-
-.. image:: https://dl.dropbox.com/s/bqmeuxls073lh9a/Screenshot%202017-03-06%2023.36.27.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/8i3bvh308pe81kk/Screenshot%202017-03-06%2023.37.20.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Maximum Likelihood
-------------------
-
-.. image:: https://dl.dropbox.com/s/25nz51aehsprnqf/Screenshot%202017-03-06%2023.38.36.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Naive Bayes Quiz
-----------------
-
-.. image:: https://dl.dropbox.com/s/hraobnsfp5zp030/Screenshot%202017-03-06%2023.50.26.png
-   :align: center
-   :height: 300
-   :width: 450
-
-
-.. image:: https://dl.dropbox.com/s/puu6p1k6fuqynw2/Screenshot%202017-03-06%2023.51.41.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-No Free Lunch
--------------
-
-* `No Free Lunch Theorems`_ for Optimization by David H. Wolpert and William G. Macready
+* No single learning algorithm dominates all others across all possible problems
+* Algorithm choice depends on problem structure and assumptions
+* Reference: `No Free Lunch Theorems`_ (Wolpert & Macready)
 
 .. _No Free Lunch Theorems: https://ti.arc.nasa.gov/m/profile/dhw/papers/78.pdf
 
-Naive Bayes vs kNN
-------------------
+**Naive Bayes vs k-NN:**
 
-.. image:: https://dl.dropbox.com/s/ixtte5v07v3yrpf/Screenshot%202017-03-06%2023.53.25.png
-   :align: center
-   :height: 300
-   :width: 450
+* Naive Bayes: fast training, works well with high-dimensional data, assumes feature independence
+* k-NN: no training phase, captures complex boundaries, sensitive to irrelevant features and curse of dimensionality
 
-Using a Mixture of Gaussians
-----------------------------
+Using Mixture of Gaussians
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/edwjyihfutln7q8/Screenshot%202017-03-06%2023.54.41.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+* Model complex distributions as weighted sum of Gaussians
+* Kernel Density Estimation as non-parametric alternative
+* Cross-validation to avoid overfitting when selecting number of components
 
-* Kernel Density Estimation.
+Decision Trees
+--------------
 
-* Cross-Validation to avoid Overfitting.
+Basics
+~~~~~~
 
-Generalizations
----------------
-
-.. image:: https://dl.dropbox.com/s/pdheypcaalpwf3a/Screenshot%202017-03-06%2023.56.17.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Decision Tree with Discrete Information
----------------------------------------
-
-.. image:: https://dl.dropbox.com/s/ykm48yq0jkcuewo/Screenshot%202017-03-06%2023.58.57.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-* `Decision Trees, Daniel Kohlsdorf`_
+* Hierarchical partitioning of feature space via axis-aligned splits
+* Internal nodes: test on attribute; branches: attribute values; leaves: class labels
+* Discrete attributes: multi-way split on values
+* Continuous attributes: binary split on threshold (e.g., x > t)
+* Decision trees are understandable and easy to explain
+* Reference: `Decision Trees, Daniel Kohlsdorf`_
 
 .. _Decision Trees, Daniel Kohlsdorf: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Decision-Trees_Kohlsdorf.pdf
 
+Entropy and Information Gain
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Decision Tree Quiz 1
---------------------
+**Entropy** measures impurity of a set S:
 
-.. image::  https://dl.dropbox.com/s/obhruvfqd91lcvm/Screenshot%202017-03-07%2000.00.11.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+  H(S) = -Σ pᵢ log₂(pᵢ)
 
-Decision Trees with Continuos Information
------------------------------------------
+* H = 0 when all examples belong to one class (pure)
+* H = 1 bit for binary classification with equal split
+* Used to determine optimal attribute for splitting
 
-.. image:: https://dl.dropbox.com/s/c9a83ynb40qxd3g/Screenshot%202017-03-07%2000.01.24.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+**Information Gain** = reduction in entropy from splitting on attribute A:
+
+  IG(S, A) = H(S) - Σ (|Sᵥ|/|S|) H(Sᵥ)
+
+* Select attribute with highest information gain at each node
+* Same attribute can appear at multiple levels in the tree
+* Greedy top-down construction (ID3/C4.5 algorithm)
 
 Minimum Description Length
---------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/4q856rzay7r0ngv/Screenshot%202017-03-07%2000.03.08.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image::  https://dl.dropbox.com/s/526gyr8zylj25rv/Screenshot%202017-03-07%2000.03.59.png
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/sd9kqoxiimljn4l/Screenshot%202017-03-07%2007.57.24.png
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/42olbo256dfgur5/Screenshot%202017-03-07%2007.58.19.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/m9k9cybt00nvz31/Screenshot%202017-03-07%2007.58.55.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Entropy
--------
-
-.. image:: https://dl.dropbox.com/s/ujok961tist0sni/Screenshot%202017-03-07%2007.59.18.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/i7wl7s4jyc35wbp/Screenshot%202017-03-10%2011.32.28.png
-   :align: center
-   :height: 300
-   :width: 450
-
-* We will use entropy to determine the decision tree branching.
-
-.. image:: https://dl.dropbox.com/s/y044t2rm288rozm/Screenshot%202017-03-07%2008.00.10.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Information Gain
-----------------
-
-.. image:: https://dl.dropbox.com/s/fu1uae0gs0tb7f5/Screenshot%202017-03-07%2008.00.39.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-* then we can figure out the most important attributes.
-
-.. image:: https://dl.dropbox.com/s/magt35rncixw2sd/Screenshot%202017-03-07%2008.01.47.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/om0jd14225e9vz5/Screenshot%202017-03-07%2008.03.18.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-* We cna use the same attribute at multiple levels in the decisions trees.
-
-Decision Tree Quiz 2
---------------------
-
-.. image:: https://dl.dropbox.com/s/9sk8x6zwb7nod0z/Screenshot%202017-03-07%2008.04.41.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/e8rq9pvogkibarh/Screenshot%202017-03-07%2008.04.12.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+* Occam's Razor applied to trees: prefer simpler models
+* MDL: best hypothesis minimizes description length of data + hypothesis
+* Pruning: remove subtrees that don't improve generalization
+* Balance tree complexity against training accuracy
 
 Random Forests
---------------
+~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/6z0zae804rt8837/Screenshot%202017-03-07%2008.06.52.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/cuk7bkapxkl5pd8/Screenshot%202017-03-07%2008.07.08.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
+* Ensemble of decision trees trained on bootstrap samples (bagging)
+* Each tree considers random subset of features at each split
+* Final prediction: majority vote across all trees
+* Reduces variance/overfitting compared to single tree
 
 Boosting
 --------
 
-.. image:: https://dl.dropbox.com/s/wef0e73ksiw51yu/Screenshot%202017-03-07%2008.11.37.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/icemif3z3r4l9xb/Screenshot%202017-03-07%2008.11.59.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/en88x3q4y9hip1i/Screenshot%202017-03-07%2008.12.20.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/rw7tqle7fiwophi/Screenshot%202017-03-07%2008.12.39.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/lh9kiv897rl23uj/Screenshot%202017-03-07%2008.13.15.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-* `Tutorial on Boosting`_
-* `Short Introduction to Boosting`_
+* Ensemble method that combines weak learners sequentially
+* Each new learner focuses on examples misclassified by previous learners
+* Reweight training examples: increase weight of misclassified, decrease correctly classified
+* Final classifier: weighted vote of all weak learners
+* AdaBoost: exponential loss, weight α_t = ½ ln((1-ε_t)/ε_t) where ε_t is weighted error
+* Highly resistant to overfitting in practice (margin theory)
+* References: `Tutorial on Boosting`_, `Short Introduction to Boosting`_ (Freund & Schapire)
 
 .. _Tutorial on Boosting: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Tutorial-on-Boosting_Freund-Schapire.pdf
 .. _Short Introduction to Boosting: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Short-Introduction-to-Boosting_Freund-Schapire.pdf
 
-Boosting Quiz
--------------
+Neural Networks
+---------------
 
-.. image:: https://dl.dropbox.com/s/azjtyoz7u2lyikm/Screenshot%202017-03-07%2008.14.55.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+Perceptron
+~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/hlc0hujt8zhtvyi/Screenshot%202017-03-07%2008.15.39.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+* Single neuron: output a = f(w₀ + Σ wᵢxᵢ) where f is activation function
+* Step activation: a = 1 if w₀ + w·x > 0, else 0
+* Can represent linearly separable functions (AND, OR, NOT, NOR)
+* Cannot represent XOR (not linearly separable)
 
-Neural Nets
------------
-
-.. image:: https://dl.dropbox.com/s/yuqq33zkq6vlai1/Screenshot%202017-03-07%2008.16.44.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-.. image:: https://dl.dropbox.com/s/z7fl7xy3audmtzi/Screenshot%202017-03-07%2008.17.18.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/fe714pyoswn2ju6/Screenshot%202017-03-07%2008.17.33.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/c55a9kx9gr9f761/Screenshot%202017-03-07%2008.17.54.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-* `Neural Networks Slides`_
-
-
-.. _Neural Networks Slides: http://aima.eecs.berkeley.edu/slides-pdf/chapter20b.pdf
-
-Neural Nets Quiz
-----------------
-
-.. image:: https://dl.dropbox.com/s/i1whn2twi04oyvf/Screenshot%202017-03-07%2008.18.22.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+**NOR gate example:**
 
 ::
 
-   Quiz: Neural Nets Quiz
-   Fill in the truth table for NOR and find weights such that:
+   a = { true if w0 + i1*w1 + i2*w2 > 0, else false }
 
-   a = { true if w0 + i1 w1 + i2 w2 > 0, else false }
+   Truth table for NOR:
+   i1=0, i2=0 → 1
+   i1=0, i2=1 → 0
+   i1=1, i2=0 → 0
+   i1=1, i2=1 → 0
 
-   Truth table
+   Weights: w0 > 0, w1 < -w0, w2 < -w0 (e.g., w0=0.5, w1=-1.0, w2=-1.0)
 
-   Enter 1 for True, and 0 (or leave blank) for False in each cell.
-   All combinations of i1 and i2 must be specified.
+**Perceptron Learning Rule:**
 
-   Weights
+* w ← w + α(y - ŷ)x where α is learning rate
+* Converges if data is linearly separable (Perceptron Convergence Theorem)
+* No convergence guarantee for non-separable data
 
-   Each weight must be a number between 0.0 and 1.0, accurate to one or two decimal places.
-   w1 and w2 are the input weights corresponding to i1 and i2 respectively.
-   w0 is the bias weight.
+Multilayer Networks
+~~~~~~~~~~~~~~~~~~~
 
-   Activation function
-   Choose the simplest activation function that can be used to capture this relationship.
-
-
-.. image:: https://dl.dropbox.com/s/kwmjhucwyt96500/Screenshot%202017-03-07%2008.19.21.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Multilayer Nets
----------------
-
-.. image:: https://dl.dropbox.com/s/sp3cnnpmg4uh80c/Screenshot%202017-03-07%2008.20.01.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Perceptron Learning
--------------------
-
-.. image:: https://dl.dropbox.com/s/m1wktevt5o9vyy0/Screenshot%202017-03-07%2008.21.42.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/q4dn1z97pnoc5e2/Screenshot%202017-03-07%2008.22.20.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/iu6wbzpw9f0m33y/Screenshot%202017-03-07%2008.24.17.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-Expressiveness of Preceptron
-----------------------------
-
-.. image:: https://dl.dropbox.com/s/6g6k85b3lskqt14/Screenshot%202017-03-07%2008.25.44.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-.. image:: https://dl.dropbox.com/s/1grs2slb8t0on5f/Screenshot%202017-03-07%2008.25.57.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-Multilayer Perceptron
----------------------
-
-.. image:: https://dl.dropbox.com/s/tnfpepvmprbj2hq/Screenshot%202017-03-07%2008.26.33.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-.. image:: https://dl.dropbox.com/s/8lz2epthpuskypu/Screenshot%202017-03-07%2008.26.55.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
+* Hidden layers allow representation of non-linear decision boundaries
+* With one hidden layer and enough units: universal function approximator
+* Sigmoid/logistic activation: σ(z) = 1/(1+e⁻ᶻ) — smooth, differentiable
+* Network topology: input layer → hidden layer(s) → output layer
 
 Back-Propagation
-----------------
+~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/ax8ohieruif9c0o/Screenshot%202017-03-07%2008.27.31.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+* Gradient descent on network weights to minimize error
+* Chain rule propagates error gradients from output back through hidden layers
+* Weight update: wᵢⱼ ← wᵢⱼ - α ∂E/∂wᵢⱼ
+* For output layer: δⱼ = (yⱼ - tⱼ)f'(netⱼ)
+* For hidden layer: δⱼ = f'(netⱼ) Σ wⱼₖδₖ
+* Issues: local minima, slow convergence, vanishing gradients in deep networks
+* Reference: `Neural Networks Slides`_
 
-.. image:: https://dl.dropbox.com/s/xfz47n55x9u7osv/Screenshot%202017-03-07%2008.29.11.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/ox29qofh5ld0tnb/Screenshot%202017-03-07%2008.29.27.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+.. _Neural Networks Slides: http://aima.eecs.berkeley.edu/slides-pdf/chapter20b.pdf
 
 Deep Learning
--------------
+~~~~~~~~~~~~~
 
-* https://www.udacity.com/course/deep-learning--ud730
-* https://en.wikipedia.org/wiki/Deep_learning
+* Multiple hidden layers learn hierarchical representations
+* Techniques to train deep nets: pre-training, dropout, batch normalization, ReLU activations
+* Resources: https://www.udacity.com/course/deep-learning--ud730, https://en.wikipedia.org/wiki/Deep_learning
 
 Unsupervised Learning
 ---------------------
 
+k-Means Clustering
+~~~~~~~~~~~~~~~~~~
+
+* Partition n points into k clusters by minimizing within-cluster sum of squares
+* Algorithm: (1) initialize k centroids, (2) assign points to nearest centroid, (3) recompute centroids, (4) repeat until convergence
+* Converges to local optimum; sensitive to initialization
+* Hard assignment: each point belongs to exactly one cluster
 * https://en.wikipedia.org/wiki/Unsupervised_learning
 
-k-Means and EM
---------------
+Expectation Maximization (EM)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/pzw3ebew6gty3pi/Screenshot%202017-03-07%2008.32.50.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/nva08m719r9a96e/Screenshot%202017-03-07%2008.33.10.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/l53k69rjcu2ua5c/Screenshot%202017-03-07%2008.33.32.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-.. image:: https://dl.dropbox.com/s/w3l1dshvy6gr9qx/Screenshot%202017-03-07%2008.33.54.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-* Expectation Maximization
-
-* `Pattern Recognition and Machine Learning`_ by Christopher Bishop
+* Generalization of k-means with soft (probabilistic) assignments
+* E-step: compute posterior probability of each point belonging to each cluster
+* M-step: update parameters (means, covariances, mixing weights) using soft assignments
+* Guaranteed to increase likelihood at each iteration; converges to local maximum
+* Reference: `Pattern Recognition and Machine Learning`_ (Bishop)
 
 .. _Pattern Recognition and Machine Learning: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Mixture-Models-and-EM_Bishop.pdf
 
-EM and Mixture of Gaussians
----------------------------
+Gaussian Mixture Models (GMM)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: https://dl.dropbox.com/s/xccinv5ayqlzu64/Screenshot%202017-03-07%2008.35.21.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
+* Model data as mixture of k Gaussians: P(x) = Σ πₖ N(x|μₖ,Σₖ)
+* Parameters: mixing coefficients πₖ, means μₖ, covariance matrices Σₖ
+* Trained using EM algorithm
+* More flexible than k-means: captures elliptical clusters, soft boundaries
+* Application: learning significant locations from GPS data (Ashbrook & Starner)
+* Reference: `Using GPS to Learn Significant Locations and Predict Movement Across Multiple Users`_
 
-.. image:: https://dl.dropbox.com/s/ystxkm0uqfv4rav/Screenshot%202017-03-07%2008.35.44.png?dl=0
-   :align: center
-   :height: 300
-   :width: 450
-
-
-* `Using GPS to Learn Significant Locations and Predict Movement Across Multiple Users`_, Daniel Ashbrook and Thad Starner
-
-.. _Using GPS to Learn Significant Locations and Predict Movement Across Multiple Users: http://www-static.cc.gatech.edu/~thad/p/journal/using-gps-to-learn-significant-locations.pdf:w
-
+.. _Using GPS to Learn Significant Locations and Predict Movement Across Multiple Users: http://www-static.cc.gatech.edu/~thad/p/journal/using-gps-to-learn-significant-locations.pdf
 
 Resources
 ---------
 
 * `Entropy and Information Gain`_
+* Wild Dolphin Project: http://www.wilddolphinproject.org/
+* CHAT (Cetacean Hearing and Telemetry): http://www.wilddolphinproject.org/our-research/chat-research/
 
 .. _Entropy and Information Gain: http://www.math.unipd.it/~aiolli/corsi/0708/IR/Lez12.pdf
