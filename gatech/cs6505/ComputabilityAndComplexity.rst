@@ -3,8 +3,6 @@ Computability and Complexity
 
 *From Computability, Complexity & Algorithms — Charles Brubaker and Lance Fortnow*
 
-* Refer to the class notes in this Shared Google Drive - https://drive.google.com/drive/folders/1N7WgkJFYJRK1TL7Hgx3msN7ukAYHU-gD?usp=sharing
-* http://omscs.wikidot.com/courses:cs6505
 * Source: https://s3.amazonaws.com/content.udacity-data.com/courses/gt-cs6505/ComputabilityAndComplexity.html
 
 This page is a comprehensive overview of the full course. Detailed notes for each topic
