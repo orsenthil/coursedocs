@@ -12,12 +12,19 @@ Principles
 Four Types
 ----------
 
-| Type | Marks |
-|------|-------|
-| Stoppers | full stop (period), comma |
-| Linkers | semicolon, colon, dash |
-| Intruders | comma pair, dash pair, brackets |
-| Intoners | exclamation mark, question mark |
+.. list-table::
+   :header-rows: 1
+
+   * - Type
+     - Marks
+   * - Stoppers
+     - full stop (period), comma
+   * - Linkers
+     - semicolon, colon, dash
+   * - Intruders
+     - comma pair, dash pair, brackets
+   * - Intoners
+     - exclamation mark, question mark
 
 Also: apostrophe, hyphen, quotation marks, slash, ellipsis.
 

@@ -30,12 +30,19 @@ Key principles:
 Spelling Variants
 ~~~~~~~~~~~~~~~~~
 
-| US | UK/AU |
-|----|-------|
-| catalog | catalogue |
-| center | centre |
-| color | colour |
-| organize | organise |
+.. list-table::
+   :header-rows: 1
+
+   * - US
+     - UK/AU
+   * - catalog
+     - catalogue
+   * - center
+     - centre
+   * - color
+     - colour
+   * - organize
+     - organise
 
 Vocabulary Pitfalls
 ~~~~~~~~~~~~~~~~~~~

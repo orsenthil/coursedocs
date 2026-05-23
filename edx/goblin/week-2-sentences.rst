@@ -37,12 +37,19 @@ A **sentence** is grammatically complete, expresses a complete idea, starts with
 Sentence Functions
 ~~~~~~~~~~~~~~~~~~
 
-| Function | Example |
-|----------|---------|
-| Statement | The cat sat on the mat. |
-| Question | Did the cat sit on the mat? |
-| Command | Sit on that mat, cat! |
-| Exclamation | Wow! Look at that cat! |
+.. list-table::
+   :header-rows: 1
+
+   * - Function
+     - Example
+   * - Statement
+     - The cat sat on the mat.
+   * - Question
+     - Did the cat sit on the mat?
+   * - Command
+     - Sit on that mat, cat!
+   * - Exclamation
+     - Wow! Look at that cat!
 
 Sentence Forms
 ~~~~~~~~~~~~~~
@@ -67,12 +74,30 @@ Loose vs Periodic
 Common Sentence-Level Problems
 ------------------------------
 
-| Problem | Issue | Fix |
-|---------|-------|-----|
-| **Fragment** | Missing subject or finite verb | Add missing element or combine |
-| **Fused/run-on** | Two sentences joined with no punctuation | Add period, semicolon, or conjunction |
-| **Comma splice** | Comma joins two independent clauses | Use period, semicolon, or conjunction — commas don't join |
-| **And-ness** | Too many clauses chained with *and* | Restructure; use subordination |
-| **Is-ness** | Over-reliance on *to be* | Replace with strong action verbs |
-| **Of-ness** | Excessive *of* constructions | Rewrite with verbs |
-| **List-like** | Series of tiny independent points | Combine into flowing prose |
+.. list-table::
+   :header-rows: 1
+
+   * - Problem
+     - Issue
+     - Fix
+   * - **Fragment**
+     - Missing subject or finite verb
+     - Add missing element or combine
+   * - **Fused/run-on**
+     - Two sentences joined with no punctuation
+     - Add period, semicolon, or conjunction
+   * - **Comma splice**
+     - Comma joins two independent clauses
+     - Use period, semicolon, or conjunction — commas don't join
+   * - **And-ness**
+     - Too many clauses chained with *and*
+     - Restructure; use subordination
+   * - **Is-ness**
+     - Over-reliance on *to be*
+     - Replace with strong action verbs
+   * - **Of-ness**
+     - Excessive *of* constructions
+     - Rewrite with verbs
+   * - **List-like**
+     - Series of tiny independent points
+     - Combine into flowing prose

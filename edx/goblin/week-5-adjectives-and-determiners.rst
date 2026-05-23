@@ -12,11 +12,21 @@ Adjectives **modify nouns and pronouns** — clarify, describe, delimit, qualify
 
 **Degrees of comparison**
 
-| Positive | Comparative | Superlative |
-|----------|-------------|-------------|
-| bright | brighter | brightest |
-| good | better | best |
-| bad | worse | worst |
+.. list-table::
+   :header-rows: 1
+
+   * - Positive
+     - Comparative
+     - Superlative
+   * - bright
+     - brighter
+     - brightest
+   * - good
+     - better
+     - best
+   * - bad
+     - worse
+     - worst
 
 - Add -er/-est for short adjectives; use *more/most* for longer ones.
 - **Absolute adjectives** cannot be graded: *perfect*, *unique*, *eternal*, *impossible*, *minimum*.

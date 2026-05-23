@@ -4,11 +4,21 @@ Verb Tenses — Common Errors
 Tense Shift Corrections
 -----------------------
 
-| Wrong | Correct | Issue |
-|-------|---------|-------|
-| *...students who **asked** questions during the lecture* | *...students who **ask** questions* | Present context needs present tense |
-| *...a low rumble **announces** the approaching storm* | *...a low rumble **announced** the approaching storm* | Past narrative needs past tense |
-| *Yesterday we **walk** to school* | *Yesterday we **walked** to school* | Past time marker requires past tense |
+.. list-table::
+   :header-rows: 1
+
+   * - Wrong
+     - Correct
+     - Issue
+   * - *...students who **asked** questions during the lecture*
+     - *...students who **ask** questions*
+     - Present context needs present tense
+   * - *...a low rumble **announces** the approaching storm*
+     - *...a low rumble **announced** the approaching storm*
+     - Past narrative needs past tense
+   * - *Yesterday we **walk** to school*
+     - *Yesterday we **walked** to school*
+     - Past time marker requires past tense
 
 When to Shift Tense
 -------------------

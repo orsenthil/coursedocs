@@ -4,17 +4,29 @@ Parts of Speech and Word Classes
 Traditional Parts of Speech
 ---------------------------
 
-| Part | Definition |
-|------|------------|
-| Noun | Naming word |
-| Pronoun | Noun substitute |
-| Verb | Doing or being word |
-| Adjective | Describes nouns/pronouns |
-| Adverb | Describes adjectives, verbs, other adverbs |
-| Article | Specifies definiteness (*the*) or indefiniteness (*a*) |
-| Conjunction | Joining word |
-| Preposition | Positions nouns in relation to other words |
-| Interjection | Conveys emotion |
+.. list-table::
+   :header-rows: 1
+
+   * - Part
+     - Definition
+   * - Noun
+     - Naming word
+   * - Pronoun
+     - Noun substitute
+   * - Verb
+     - Doing or being word
+   * - Adjective
+     - Describes nouns/pronouns
+   * - Adverb
+     - Describes adjectives, verbs, other adverbs
+   * - Article
+     - Specifies definiteness (*the*) or indefiniteness (*a*)
+   * - Conjunction
+     - Joining word
+   * - Preposition
+     - Positions nouns in relation to other words
+   * - Interjection
+     - Conveys emotion
 
 Word Classes (Linguistics)
 --------------------------

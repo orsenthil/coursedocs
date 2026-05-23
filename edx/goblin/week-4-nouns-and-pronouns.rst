@@ -42,16 +42,36 @@ A **pronoun** stands in place of a noun (*pro* + *nomen*).
 
 **Types**
 
-| Type | Examples | Notes |
-|------|----------|-------|
-| Demonstrative | this, that, these, those | Point to |
-| Interrogative | who, whom, which, what, whose, where | Ask questions |
-| Relative | who, whom, whose, which, that, what | Join to antecedent |
-| Indefinite | anyone, everyone, none, some | *None* often = *not any* |
-| Reflexive | myself, yourself, themselves | Subject = object |
-| Intensive | myself, yourself | Emphasis only |
-| Distributive | each, either, neither | Always singular verb |
-| Expletive | it, there | Fill subject slot — use sparingly |
+.. list-table::
+   :header-rows: 1
+
+   * - Type
+     - Examples
+     - Notes
+   * - Demonstrative
+     - this, that, these, those
+     - Point to
+   * - Interrogative
+     - who, whom, which, what, whose, where
+     - Ask questions
+   * - Relative
+     - who, whom, whose, which, that, what
+     - Join to antecedent
+   * - Indefinite
+     - anyone, everyone, none, some
+     - *None* often = *not any*
+   * - Reflexive
+     - myself, yourself, themselves
+     - Subject = object
+   * - Intensive
+     - myself, yourself
+     - Emphasis only
+   * - Distributive
+     - each, either, neither
+     - Always singular verb
+   * - Expletive
+     - it, there
+     - Fill subject slot — use sparingly
 
 **That-creep**: use *who* for people, not *that* — *She's the girl **who** arrived first.*
 

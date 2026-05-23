@@ -35,12 +35,29 @@ Verb Phrases and Phrasal Verbs
 Non-Finite Verb Forms
 ~~~~~~~~~~~~~~~~~~~~~
 
-| Form | Ending | Function | Example |
-|------|--------|----------|---------|
-| **Present participle** | -ing | With helping verb | *I am riding* |
-| **Past participle** | -ed/-en/-t | With helping verb; can be adjective | *I have cooked*; *bored students* |
-| **Gerund** | -ing | Always functions as noun | *Swimming can be therapeutic* |
-| **Infinitive** | to + base | Base form | *I want to breed show ponies* |
+.. list-table::
+   :header-rows: 1
+
+   * - Form
+     - Ending
+     - Function
+     - Example
+   * - **Present participle**
+     - -ing
+     - With helping verb
+     - *I am riding*
+   * - **Past participle**
+     - -ed/-en/-t
+     - With helping verb; can be adjective
+     - *I have cooked*; *bored students*
+   * - **Gerund**
+     - -ing
+     - Always functions as noun
+     - *Swimming can be therapeutic*
+   * - **Infinitive**
+     - to + base
+     - Base form
+     - *I want to breed show ponies*
 
 - Split infinitives (*to boldly go*) are fine in English — the Latin-based rule does not apply.
 
@@ -49,11 +66,29 @@ Tense, Mood, and Voice
 
 **Three tenses**, each with four **aspects**:
 
-| Tense | Simple | Continuous | Perfect | Perfect Continuous |
-|-------|--------|------------|---------|-------------------|
-| Past | wrote | was writing | had written | had been writing |
-| Present | write | is writing | has written | has been writing |
-| Future | will write | will be writing | will have written | will have been writing |
+.. list-table::
+   :header-rows: 1
+
+   * - Tense
+     - Simple
+     - Continuous
+     - Perfect
+     - Perfect Continuous
+   * - Past
+     - wrote
+     - was writing
+     - had written
+     - had been writing
+   * - Present
+     - write
+     - is writing
+     - has written
+     - has been writing
+   * - Future
+     - will write
+     - will be writing
+     - will have written
+     - will have been writing
 
 **Mood**:
 
