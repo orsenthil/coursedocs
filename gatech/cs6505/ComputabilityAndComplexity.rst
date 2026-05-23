@@ -3,8 +3,6 @@ Computability and Complexity
 
 *From Computability, Complexity & Algorithms — Charles Brubaker and Lance Fortnow*
 
-* Source: https://s3.amazonaws.com/content.udacity-data.com/courses/gt-cs6505/ComputabilityAndComplexity.html
-
 This page is a comprehensive overview of the full course. Detailed notes for each topic
 are in their own files. The sections below give the full arc from formal languages through
 undecidability.

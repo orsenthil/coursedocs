@@ -10,7 +10,6 @@ Georgia Tech Course Notes
    :maxdepth: 1
 
    ComputabilityAndComplexity
-   computability
    churchturing
    undecidability
    dynamicprogramming
@@ -19,11 +18,3 @@ Georgia Tech Course Notes
    fft
    approximationalgs
    randomizedalgs
-
-
-
-Resources
----------
-
-
-* Notes in PDF: https://drive.google.com/drive/u/1/folders/0Bw223ejhCropYzdVTHNQaVQzdDQ
