@@ -8,8 +8,6 @@ Courses
 .. toctree::
    :maxdepth: 1
 
-   aws-sa-professional/index
-   aws-devops-professional/index
+   aws-certification/index
    technical-analysis-masterclass/index
    roblox/index
-   roblox/class3

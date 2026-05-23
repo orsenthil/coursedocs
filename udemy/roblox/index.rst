@@ -22,52 +22,76 @@ Lua Basics (Section 2)
 Program to Print the String
 ---------------------------
 
-.. literalinclude:: sec_2.1.lua
+.. literalinclude:: lua/sec_2.1.lua
    :language: lua
 
 Program with Conditional Statement
 ----------------------------------
 
-.. literalinclude:: sec_2.2.lua
+.. literalinclude:: lua/sec_2.2.lua
    :language: lua
 
 Program with Conditional Statements and Boolean
 -----------------------------------------------
 
-.. literalinclude:: sec_2.3.lua
+.. literalinclude:: lua/sec_2.3.lua
    :language: lua
 
 Functions
 ---------
 
-.. literalinclude:: sec_2.4.lua
+.. literalinclude:: lua/sec_2.4.lua
    :language: lua
 
 Functions with Parameters
 -------------------------
 
-.. literalinclude:: sec_2.5.lua
+.. literalinclude:: lua/sec_2.5.lua
    :language: lua
 
 Parameter Strings
 -----------------
 
-.. literalinclude:: sec_2.6.lua
+.. literalinclude:: lua/sec_2.6.lua
    :language: lua
 
 Calculator with String
 ----------------------
 
-.. literalinclude:: sec_2.7.lua
+.. literalinclude:: lua/sec_2.7.lua
+   :language: lua
+
+For Loop
+--------
+
+.. literalinclude:: lua/for_loop.lua
+   :language: lua
+
+While Loop
+----------
+
+.. literalinclude:: lua/while_loop.lua
+   :language: lua
+
+Table Example
+-------------
+
+.. literalinclude:: lua/table_example.lua
+   :language: lua
+
+All Steps Example
+-----------------
+
+.. literalinclude:: lua/all_steps.lua
    :language: lua
 
 Part & Workspace
 ----------------
 
-.. literalinclude:: sec_2.8.lua
+.. literalinclude:: lua/sec_2.8.lua
    :language: lua
 
-.. literalinclude:: sec_2.9.lua
+.. literalinclude:: lua/sec_2.9.lua
    :language: lua
 
 **Tip:** When creating a part, make it **anchored**.
@@ -75,37 +99,37 @@ Part & Workspace
 Touch Events
 ------------
 
-.. literalinclude:: sec_2.10.lua
+.. literalinclude:: lua/sec_2.10.lua
    :language: lua
 
 Changing Brick Color with Touch
 -------------------------------
 
-.. literalinclude:: sec_2.11.lua
+.. literalinclude:: lua/sec_2.11.lua
    :language: lua
 
 Inline Touch Function
 ---------------------
 
-.. literalinclude:: sec_2.12.lua
+.. literalinclude:: lua/sec_2.12.lua
    :language: lua
 
 Player Touch the Part
 ---------------------
 
-.. literalinclude:: sec_2.13.lua
+.. literalinclude:: lua/sec_2.13.lua
    :language: lua
 
 Pick Up the Part
 ----------------
 
-.. literalinclude:: sec_2.14.lua
+.. literalinclude:: lua/sec_2.14.lua
    :language: lua
 
 Sign to Pick Up the Part
 ------------------------
 
-.. literalinclude:: sec_2.15.lua
+.. literalinclude:: lua/sec_2.15.lua
    :language: lua
 
 Camping Project (Section 3)
@@ -116,13 +140,13 @@ Camping Project (Section 3)
 Leaderboard
 -----------
 
-.. literalinclude:: sec_3.1.lua
+.. literalinclude:: lua/sec_3.1.lua
    :language: lua
 
 Log Pickup
 ----------
 
-.. literalinclude:: sec_3.3.lua
+.. literalinclude:: lua/sec_3.3.lua
    :language: lua
 
 Roblox Programming — 2023
@@ -131,5 +155,5 @@ Roblox Programming — 2023
 Pass the Ice Wall
 -----------------
 
-.. literalinclude:: new_sec_2.9.lua
+.. literalinclude:: lua/new_sec_2.9.lua
    :language: lua
