@@ -3,8 +3,6 @@ Database Design Case Study
 
 This section walks through a complete database design methodology using a case study for Georgia Tech Professional Education (GTPE) online programs.
 
-* Case study description: http://pe.sdt.gatech.edu/sites/default/files/GTPEgtonline_description.pdf
-
 Information Flow Diagram (IFD)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

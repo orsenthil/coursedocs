@@ -67,11 +67,6 @@ BGP/ROUTING
 * `The Peering Playbook`_
 * `Constraint-Based Routing in the Internet - Basic Principles and Recent Research`_ - Younis and Fahmy
 
-POLICY
-------
-
-* `2014 White House NSA Report`_
-
 NETWORK BUFFERS
 ---------------
 
@@ -105,14 +100,6 @@ MANAGEMENT
 ----------
 
 * `Unraveling the Complexity of Network Management`_ - Benson, Akella, and Maltz
-
-Pyretic Tutorials
------------------
-
-https://www.youtube.com/watch?v=hq7L4davQy8
-https://www.usenix.org/publications/login/october-2013-volume-38-number-5/modular-sdn-programming-pyretic
-https://www.usenix.org/conference/nsdi13/technical-sessions/presentation/monsanto
-http://www.cs.cornell.edu/~jnfoster/papers/frenetic-icfp.pdf
 
 
 .. _How to read a paper: http://groups.csail.mit.edu/netmit/wordpress/wp-content/themes/netmit/papers/HowtoRead.pdf
@@ -157,7 +144,6 @@ http://www.cs.cornell.edu/~jnfoster/papers/frenetic-icfp.pdf
 .. _End-to-End Routing Behavior in the Internet: http://conferences.sigcomm.org/sigcomm/1996/papers/paxson.pdf
 .. _The Peering Playbook: http://drpeering.net/white-papers/Art-Of-Peering-The-Peering-Playbook.html
 .. _Constraint-Based Routing in the Internet - Basic Principles and Recent Research: https://www.cs.purdue.edu/homes/fahmy/papers/routing.pdf
-.. _2014 White House NSA Report: http://www.whitehouse.gov/sites/default/files/docs/2013-12-12_rg_final_report.pdf
 
 .. _Sizing router buffers: http://www.eecs.berkeley.edu/~sylvia/papers/buffer-sizing.pdf
 .. _Fastpass A Centralized “Zero-Queue” Datacenter Network: http://dspace.mit.edu/handle/1721.1/88141

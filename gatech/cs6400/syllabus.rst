@@ -1,8 +1,6 @@
 Syllabus
 ========
 
-Database Systems Concepts and Design (Fall 2016).
-
 Readings
 --------
 

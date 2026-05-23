@@ -18,11 +18,13 @@ Books
 
 * https://d1b10bmlvqabco.cloudfront.net/attach/jbe3aw2nwc031n/ixory6sosP2/jcigv7z03w61/books.pdf
 
+Study Material
+--------------
 
-Georgia Tech Course Work
-------------------------
+Making Real Programs Explode - A Simple Application of Random Testing
+http://pages.cs.wisc.edu/~bart/fuzz/fuzz-revisited-talk.pdf
 
-.. toctree::
-   :maxdepth: 1
 
-   assignment1
+A Randomized Scheduler with Probabilistic Guarantees of Finding Bugs
+
+https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/paper-83.pdf

@@ -3,10 +3,6 @@ Dynamic Programming
 
 *From Computability, Complexity & Algorithms — Charles Brubaker and Lance Fortnow*
 
-* Source: https://s3.amazonaws.com/content.udacity-data.com/courses/gt-cs6505/dynamicprogramming.html
-
-----
-
 Introduction
 ------------
 
