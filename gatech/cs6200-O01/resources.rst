@@ -50,10 +50,6 @@ C References:
 
 .. _Function Pointers: http://www.cprogramming.com/tutorial/function-pointers.html
 
-* `Presentation on programming with C from Chris D.`_
-
-.. _Presentation on programming with C from Chris D.: https://docs.google.com/presentation/d/1B7_q_FjpWau-1-A7NFKkDUHLHJMIDKSwCK4dM0nSlXg/edit#slide=id.p18
-
 * `Youtube of the Q&A C Video from Chris. D.`_
 
 ..  _Youtube of the Q&A C Video from Chris. D.: https://www.youtube.com/watch?v=UmLpG077DcU

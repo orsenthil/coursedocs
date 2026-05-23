@@ -10,8 +10,6 @@
 Reading List
 ============
 
-* Topics, Chapter and Video Reference and Dates. `Google Docs Link`_
-
 **Tutorials**
 
 * `Think Stats, Exploratory Data Analysis in Python`_
@@ -92,7 +90,6 @@ Reading List
 * `Lecture Schedule`_
 
 .. _Lecture Schedule: https://t-square.gatech.edu/portal/tool/877973ee-731f-4440-80dd-7b86d8e9e47e?panel=Main
-.. _Google Docs Link: https://docs.google.com/document/d/1PPkL-4hsWhiIl-EEtvno5Vn1_Q7kVnpI0JsayK8losY/edit
 .. _Andrew Moore's tutorial: http://www.cs.cmu.edu/~awm/tutorials.html
 .. _Computational Learning Theory: http://www.cs.wustl.edu/~sg/CS527_SP02/learning-theory-notes.pdf
 .. _Bottom up Pruning: https://www.cis.upenn.edu/~mkearns/papers/pruning.pdf

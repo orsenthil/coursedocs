@@ -7,7 +7,6 @@ Artificial Intelligence
    game_playing
    search
    preprocessing_for_search
-   search_examples
    constraint_satisfaction
    simulated_annealing
    probability

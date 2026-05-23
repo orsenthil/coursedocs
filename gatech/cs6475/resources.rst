@@ -61,6 +61,4 @@ Courses Links
 
 * https://cs.brown.edu/courses/cs129/
 * https://github.gatech.edu/omscs6475
-* https://docs.google.com/spreadsheets/u/1/d/e/2PACX-1vTgZouV59QBgDuT0tLTaNc6SN-cwxZ-a9YLU8g-ifq0kbgUPL5Ex0IbyVFiWKIC8Et0_vh1dNcLbyCt/pubhtml#
-* https://drive.google.com/drive/u/0/folders/0B6yqgGWSjCbpMlQ4cmwzalhPSmc
 * https://compphotography.wordpress.com/
