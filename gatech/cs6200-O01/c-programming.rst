@@ -13,6 +13,3 @@ C Programming Coding Conventions
 
 * If the data structure is `void *`, it is usually a pointer.
 
-
-Example Topic
--------------
