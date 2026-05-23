@@ -1,12 +1,3 @@
-.. title: UML Class Models
-.. slug: UML Class Models
-.. date: 2016-05-27 23:40:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 UML Class Models
 ================
 

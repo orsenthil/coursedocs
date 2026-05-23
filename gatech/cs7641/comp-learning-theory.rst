@@ -1,12 +1,3 @@
-.. title: Comp Learning Theory
-.. slug: comp-learning-theory
-.. date: 2015-09-05 11:58:47 UTC-07:00
-.. tags: mathjax
-.. category: notes
-.. link:
-.. description:
-.. type: text
-
 Comp Learning Theory
 ====================
 

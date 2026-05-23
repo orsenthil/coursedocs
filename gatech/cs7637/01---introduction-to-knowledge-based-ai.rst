@@ -1,12 +1,3 @@
-.. title: Introduction to Knowledge-Based AI
-.. slug: Introduction to Knowledge-Based AI
-.. date: 2016-01-23 06:32:57 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Introduction to Knowledge-Based AI
 ==================================
 

@@ -1,12 +1,3 @@
-.. title: Commonsense Reasoning
-.. slug: Commonsense Reasoning
-.. date: 2016-01-23 06:45:57 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Commonsense Reasoning
 =====================
 

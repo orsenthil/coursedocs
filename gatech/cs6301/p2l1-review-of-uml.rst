@@ -1,12 +1,3 @@
-.. title: Review of UML
-.. slug: Review of UML
-.. date: 2016-05-27 23:37:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Review of UML
 =============
 

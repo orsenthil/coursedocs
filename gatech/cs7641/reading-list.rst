@@ -1,12 +1,3 @@
-.. title: Reading List
-.. slug: reading-list
-.. date: 2015-08-27 00:41:13 UTC-07:00
-.. tags: software, books, presentations
-.. category: notes
-.. link:
-.. description:
-.. type: text
-
 Reading List
 ============
 
@@ -62,34 +53,6 @@ Reading List
 
 * `Bayesian Learning Extension`_
 
-**Lectures Duration**
-
-* Lecture	Duration (min)
-* ML IS THE ROX	22
-* SL 1 - Decision Trees	104
-* SL 2 - Regression & Classification	48
-* SL 3 - Neural Networks	61
-* SL 4 - Instance Based Learning	75
-* SL 5 - Ensemble B&B	79
-* SL 6 - Kernel Methods & SVMs	84
-* SL 7 - Comp Learning Theory	91
-* SL 8 - VC Dimensions	44
-* SL 9 - Bayesian Learning	89
-* SL 10 - Bayesian Inference	74
-* UL 1 - Randomized Optimization	146
-
-* UL 2 - Clustering	78
-* UL 3 - Feature Selection	51
-* UL 4 - Feature Transformation	84
-* UL 5 - Info Theory	21
-* RL 1 - Markov Decision Processes	122
-* RL 2 - Reinforcement Learning	57
-* RL 3 - Game Theory	112
-* RL 4 - Game Theory Continued	101
-* Outro	27
-* `Lecture Schedule`_
-
-.. _Lecture Schedule: https://t-square.gatech.edu/portal/tool/877973ee-731f-4440-80dd-7b86d8e9e47e?panel=Main
 .. _Andrew Moore's tutorial: http://www.cs.cmu.edu/~awm/tutorials.html
 .. _Computational Learning Theory: http://www.cs.wustl.edu/~sg/CS527_SP02/learning-theory-notes.pdf
 .. _Bottom up Pruning: https://www.cis.upenn.edu/~mkearns/papers/pruning.pdf

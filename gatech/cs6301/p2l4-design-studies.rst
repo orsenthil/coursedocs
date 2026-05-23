@@ -1,12 +1,3 @@
-.. title: Design Studies
-.. slug: Design Studies
-.. date: 2016-05-27 23:41:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Design Studies
 ==============
 

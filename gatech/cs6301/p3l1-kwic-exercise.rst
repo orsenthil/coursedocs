@@ -1,12 +1,3 @@
-.. title: KWIC Exercise
-.. slug: KWIC Exercise
-.. date: 2016-05-27 23:47:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 KWIC Exercise
 =============
 

@@ -1,12 +1,3 @@
-.. title: Diagnosis
-.. slug: Diagnosis
-.. date: 2016-01-23 06:52:57 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Diagnosis
 =========
 

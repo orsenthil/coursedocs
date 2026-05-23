@@ -1,12 +1,3 @@
-.. title: Overview of Architectural Styles
-.. slug: Overview of Architectural Styles
-.. date: 2016-05-27 23:49:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Overview of Architectural Styles
 ================================
 

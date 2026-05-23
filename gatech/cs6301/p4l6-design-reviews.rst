@@ -1,12 +1,3 @@
-.. title: Design Reviews
-.. slug: Design Reviews
-.. date: 2016-05-28 00:02:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Design Reviews
 ==============
 

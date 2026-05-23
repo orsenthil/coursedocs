@@ -1,12 +1,3 @@
-.. title: Beautiful Probability
-.. slug: beautiful-probability
-.. date: 2015-10-04 17:06:50 UTC-07:00
-.. tags:
-.. category: notes
-.. link:
-.. description:
-.. type: text
-
 Beautiful Probability
 =====================
 

@@ -1,12 +1,3 @@
-.. title: Weka Commands
-.. slug: weka-commands
-.. date: 2015-09-19 11:08:49 UTC-07:00
-.. tags:
-.. category:
-.. link:
-.. description:
-.. type: text
-
 Weka Commands
 =============
 

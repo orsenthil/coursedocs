@@ -1,12 +1,3 @@
-.. title: Non-Functional Reqs & Arch Styles
-.. slug: Non-Functional Reqs & Arch Styles
-.. date: 2016-05-27 23:52:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Non-Functional Reqs & Arch Styles
 =================================
 

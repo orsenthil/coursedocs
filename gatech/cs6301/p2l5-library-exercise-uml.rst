@@ -1,12 +1,3 @@
-.. title: Library Exercise (UML)
-.. slug: Library Exercise (UML)
-.. date: 2016-05-27 23:42:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Library Exercise (UML)
 ======================
 

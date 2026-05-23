@@ -1,12 +1,3 @@
-.. title: Generate & Test
-.. slug: Generate & Test
-.. date: 2016-01-23 06:35:57 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Generate & Test
 ===============
 

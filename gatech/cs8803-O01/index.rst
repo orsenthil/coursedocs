@@ -34,10 +34,3 @@ Course Book
    slam_notes
    problem_set_6
    q_a_6
-   office_hours
-
-.. raw:: html
-
-    <object data="https://storage.googleapis.com/supplemental_media/udacityu/cs373/Brief%20Course%20Summary.pdf" type="application/pdf" width="100%" height="800px">
-           <p>This browser does not support PDFs. Please download the PDF to view it: <a href="https://storage.googleapis.com/supplemental_media/udacityu/cs373/Brief%20Course%20Summary.pdf">Course Summaray</a>.</p>
-        </object>

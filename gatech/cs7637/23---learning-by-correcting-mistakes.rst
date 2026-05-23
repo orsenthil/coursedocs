@@ -1,12 +1,3 @@
-.. title: Learning by Correcting Mistakes
-.. slug: Learning by Correcting Mistakes
-.. date: 2016-01-23 06:53:57 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Learning by Correcting Mistakes
 ===============================
 

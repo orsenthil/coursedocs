@@ -1,12 +1,3 @@
-.. title: Acme
-.. slug: Acme
-.. date: 2016-05-27 23:54:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Acme
 ====
 

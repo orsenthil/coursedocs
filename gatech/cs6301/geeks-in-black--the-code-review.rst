@@ -1,12 +1,3 @@
-.. title: Geeks in Black- The Code Review 
-.. slug: Geeks in Black- The Code Review 
-.. date: 2016-05-27 23:33:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 ===============================
 Geeks in Black- The Code Review
 ===============================

@@ -1,12 +1,3 @@
-.. title: Design Patterns
-.. slug: Design Patterns
-.. date: 2016-05-28 00:00:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Design Patterns
 ===============
 

@@ -1,12 +1,3 @@
-.. title: Case-Based Reasoning
-.. slug: Case-Based Reasoning
-.. date: 2016-01-23 06:39:57 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Case-Based Reasoning
 ====================
 

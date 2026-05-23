@@ -1,12 +1,3 @@
-.. title: Middleware
-.. slug: Middleware
-.. date: 2016-05-27 23:56:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Middleware
 ==========
 

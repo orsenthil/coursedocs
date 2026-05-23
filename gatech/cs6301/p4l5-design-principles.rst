@@ -1,12 +1,3 @@
-.. title: Design Principles
-.. slug: Design Principles
-.. date: 2016-05-28 00:01:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Design Principles
 =================
 

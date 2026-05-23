@@ -1,12 +1,3 @@
-.. title: Text Browser Exercise (Analysis)
-.. slug: Text Browser Exercise (Analysis)
-.. date: 2016-05-27 23:35:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Text Browser Exercise (Analysis)
 ================================
 

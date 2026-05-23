@@ -1,12 +1,3 @@
-.. title: Object Design
-.. slug: Object Design
-.. date: 2016-05-27 23:59:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Object Design
 =============
 

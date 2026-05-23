@@ -1,12 +1,3 @@
-.. title: Object Oriented Analysis Exercise
-.. slug: Object Oriented Analysis Exercise
-.. date: 2016-05-27 23:39:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Object Oriented Analysis Exercise
 =================================
 

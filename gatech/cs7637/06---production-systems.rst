@@ -1,12 +1,3 @@
-.. title: Production Systems
-.. slug: Production Systems
-.. date: 2016-01-30 10:01:45 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Production Systems
 ==================
 

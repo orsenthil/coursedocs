@@ -1,12 +1,3 @@
-.. title: Architectural Views
-.. slug: Architectural Views
-.. date: 2016-05-27 23:50:20 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Architectural Views
 ===================
 

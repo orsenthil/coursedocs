@@ -1,12 +1,3 @@
-.. title: Learning by Recording Cases
-.. slug: Learning by Recording Cases
-.. date: 2016-01-23 06:38:57 UTC-08:00
-.. tags: notes, mathjax
-.. category: 
-.. link: 
-.. description: 
-.. type: text
-
 Learning by Recording Cases
 ===========================
 
