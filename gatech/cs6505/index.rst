@@ -9,13 +9,16 @@ Georgia Tech Course Notes
 .. toctree::
    :maxdepth: 1
 
+   ComputabilityAndComplexity
    computability
+   churchturing
+   undecidability
+   dynamicprogramming
+   maximumflow
+   bipartitematching
+   fft
    approximationalgs
    randomizedalgs
-   bipartitematching
-   maximumflow
-   fft
-   dynamicprogramming
 
 
 
