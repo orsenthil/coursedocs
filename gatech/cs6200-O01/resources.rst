@@ -40,7 +40,7 @@ C References:
 
 * `Lynda`_
 
-.. _Lynda: http://lynda.gatech.edu
+.. _Lynda: https://www.linkedin.com/learning/
 
 * `Gosh Darn Function Pointers`_
 
@@ -52,7 +52,7 @@ C References:
 
 * `Youtube of the Q&A C Video from Chris. D.`_
 
-..  _Youtube of the Q&A C Video from Chris. D.: https://www.youtube.com/watch?v=UmLpG077DcU
+.. _Youtube of the Q&A C Video from Chris. D.: https://www.youtube.com/watch?v=UmLpG077DcU
 
 * `Mac GDB`_
 

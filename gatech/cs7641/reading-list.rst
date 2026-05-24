@@ -4,7 +4,7 @@ Reading List
 **Tutorials**
 
 * `Think Stats, Exploratory Data Analysis in Python`_
-* `Linear Regression Using Weka`_
+* `Weka For Regression`_
 
 **Software**
 
@@ -14,13 +14,11 @@ Reading List
 * `Weka Tutorial`_
 * `StackOverflow question for XOR case`_
 * `Weka Command Line Options`_
-* `Weka For Regression`_
 
-.. _Weka For Regression: http://www.ibm.com/developerworks/opensource/library/os-weka1/index.html
+.. _Weka For Regression: https://waikato.github.io/weka-wiki/
 .. _Weka Command Line Options: http://www.cs.waikato.ac.nz/~remco/weka_bn/node13.html
 .. _Weka Tutorial: http://www.brc.dcs.gla.ac.uk/courses/bioinformatics-strand/CMSB/tutorials/WekaTutorial.html
 .. _StackOverflow question for XOR case: http://stackoverflow.com/questions/17227977/step-by-step-guide-to-train-a-multilayer-perceptron-for-the-xor-case-in-weka
-.. _Linear Regression Using Weka: http://www.ibm.com/developerworks/opensource/library/os-weka1/index.html
 
 **Books**
 
@@ -41,8 +39,6 @@ Reading List
 * `Andrew Moore's tutorial`_
 * `Bottom up Pruning`_
 * `Computational Learning Theory`_
-
-[1]: https://www.cis.upenn.edu/~mkearns/papers/pruning.pdf
 
 **References**
 

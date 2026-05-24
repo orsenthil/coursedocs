@@ -48,16 +48,3 @@ A single file named salarycalc_uniquelog.txt combining the uniquelog.txt files g
 salarycalc.cpp file
 The fixed salarycalc.cpp file that was fixed and validated against the existing seed files. This file will be compiled and given various input files, including but not limited to the provided seed files, to ensure existing program functionality and to ensure known bugs are fixed.
 60.0 pts
-
-
-Study Material
-==============
-
-
-Making Real Programs Explode - A Simple Application of Random Testing
-http://pages.cs.wisc.edu/~bart/fuzz/fuzz-revisited-talk.pdf
-
-
-A Randomized Scheduler with Probabilistic Guarantees of Finding Bugs
-
-https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/paper-83.pdf

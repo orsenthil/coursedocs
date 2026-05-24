@@ -12,7 +12,7 @@ Math for AI
 MOOCs / Courses
 ---------------
 
-* IBM - Math of Machine Learning Topics / MOOCs - http://datascience.ibm.com/blog/the-mathematics-of-machine-learning/
+* IBM - Math of Machine Learning Topics / MOOCs - https://web.archive.org/web/2020/http://datascience.ibm.com/blog/the-mathematics-of-machine-learning/
 * MIT - Linear Algebra - https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/
 * Khan Academy - Linear Algebra - https://www.khanacademy.org/math/linear-algebra
 * Khan Academy - Calculus - https://www.khanacademy.org/math/calculus-home
@@ -23,8 +23,8 @@ MOOCs / Courses
 Books
 -----
 
-* An Introduction to Statistical Learning [PDF] - http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Sixth%20Printing.pdf
-* Elements of Statistical Learning [PDF] - http://statweb.stanford.edu/~tibs/ElemStatLearn/
+* An Introduction to Statistical Learning [PDF] - https://www.statlearning.com/
+* Elements of Statistical Learning [PDF] - https://hastie.su.domains/ElemStatLearn/
 * The Manga Guide to Linear Algebra, @Amazon
 * Anything by Gilbert Strang (especially "Linear Algebra and its Applications" and "Computational Science and Engineering")
 * "All of Statistics" by Larry Wasserman (@Amazon)
@@ -35,7 +35,6 @@ Course Notes
 * ML Math Essentials - http://courses.washington.edu/css490/2012.Winter/lecture_slides/02_math_essentials.pdf
 
 Other Resources
-https://github.com/josephmisiti/awesome-machine-learning
 https://github.com/sindresorhus/awesome#computer-science
 https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md
 

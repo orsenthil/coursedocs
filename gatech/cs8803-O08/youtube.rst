@@ -7,9 +7,7 @@ Elimination of left recursion and left factoring the grammars
 https://www.youtube.com/watch?v=3_VCoBfrt9c
 
 
-Tool for grammars
-
-http://smlweb.cpsc.ucalgary.ca/start.html
+Tool for grammars — see grammar statistics resource in the lessons page.
 
 Grammars
 

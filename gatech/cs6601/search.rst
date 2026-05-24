@@ -200,12 +200,11 @@ Problems with Search
 References
 ----------
 
-* Korf, 1997, `Finding Optimal Solutions to Rubik's Cube Using Pattern Databases.`_
+* Korf, 1997, `Finding Optimal Solutions to Rubik's Cube Using Pattern Databases`_
 * Goldberg, 2011. `Reach for A* An Efficient Point-to-Point Shortest Path Algorithm`_
 * Goldberg & Harrelson, March 2003. `Computing the Shortest Path A* Search Meets Graph Theory.`_
 * Gutman, 2004. `Reach-based Routing A New Approach to Shortest Path Algorithms Optimized for Road Networks.`_
 
-.. _Finding Optimal Solutions to Rubik's Cube Using Pattern Databases.: https://www.cs.princeton.edu/courses/archive/fall06/cos402/papers/korfrubik.pdf
 .. _Reach for A* An Efficient Point-to-Point Shortest Path Algorithm: http://www.cc.gatech.edu/~thad/6601-gradAI-fall2015/02-search-01-Astart-ALT-Reach.pdf
 .. _Computing the Shortest Path A* Search Meets Graph Theory.: http://www.cc.gatech.edu/~thad/6601-gradAI-fall2015/02-search-Goldberg03tr.pdf
 .. _Reach-based Routing A New Approach to Shortest Path Algorithms Optimized for Road Networks.: http://www.cc.gatech.edu/~thad/6601-gradAI-fall2015/02-search-Gutman04siam.pdf
