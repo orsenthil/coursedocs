@@ -1,12 +1,10 @@
 Clock Radio Exercise
 ====================
 
-
 Modeling with Statecharts
 -------------------------
 
 Statecharts are a precise way of modeling the behavior of complex **reactive systems**. This exercise models the behavior of a common clock radio to illustrate the statechart modeling process.
-
 
 Clock Radio Description
 -----------------------
@@ -35,7 +33,6 @@ Clock Radio Description
 - Alarm automatically turns off after **one hour** to prevent all-day sounding
 - Radio is powered by wall socket (no battery)
 
-
 Percepts
 --------
 
@@ -49,7 +46,6 @@ A **percept** is an externally sensible (visual, audible, tactile) aspect of a d
 - **Volume knob** — rotational position provides tactile feedback
 - **Mode switch** — physical position (On/Off/Radio/Alarm)
 - **AM/FM switch** — physical position
-
 
 Percept States and Finite State Machines
 ----------------------------------------
@@ -70,7 +66,6 @@ Each percept is modeled as a **concurrent finite state machine** within the stat
 
 **Overall structure:** Seven concurrently executing sub-machines model the radio's percepts.
 
-
 Events and External Controls
 -----------------------------
 
@@ -84,7 +79,6 @@ An **event** is a spontaneous, instantaneous occurrence that state machines reac
 - Sliding the mode switch left/right (Events 12, 13)
 
 Each event requires a documented **stimulus-response** entry specifying the system's expected behavior, including conditionals (e.g., "if in state On, sliding right → Off").
-
 
 Outermost Statechart Layer
 --------------------------
@@ -138,7 +132,6 @@ All percept sub-machines are nested within the Plugged-In state. This mirrors Ha
            }
        }
 
-
 Setting the Time
 ----------------
 
@@ -147,7 +140,6 @@ A **SetMode sub-machine** tracks which timer is being configured:
 - **None** (default) → **ClockSet** / **WakeSet** / **SleepSet**
 
 Pressing Wake or Sleep while pressing Hour/Min determines which timer increments. This sub-machine ensures the same Hour/Min buttons affect different timers depending on context.
-
 
 Stimulus-Response Table
 -----------------------
@@ -165,7 +157,6 @@ Event   Stimulus                    Response
 12–13   Slide mode switch           Mode advances one position left/right (conditional on current state)
 ======  ==========================  =============================================
 
-
 Timer Events and Internal States
 --------------------------------
 
@@ -178,14 +169,12 @@ Timer Events and Internal States
 
 Internal timer sub-machines are added to the statechart to track these time-based triggers.
 
-
 Coordination Mechanisms
 -----------------------
 
 **Guarded transitions:** Response to an event is conditioned on another sub-machine's state. Example: Event 20 triggers speaker → Playing only if mode switch is in Music state. The guard ``[in Music]`` appears in square brackets on the transition.
 
 **Cascaded events:** A response to one event can broadcast a new internal event. Example: turning the frequency knob (Event 4) produces three responses — knob position changes, radio channel changes, and frequency bar moves. The bar is in a different sub-machine, so an internal event (Event A) is broadcast to coordinate them.
-
 
 Validation
 ----------
@@ -195,7 +184,6 @@ After building the statechart, it must be **validated** through:
 - **Review** — walk through use cases with a team, verifying each concurrent machine behaves correctly
 - **Model checking** — encode all concurrent machines formally; use an automated model checker to verify properties
 - **Simulation** — build an interpreter to execute the statechart and test scenarios interactively
-
 
 Statechart Modeling Method Summary
 ----------------------------------
@@ -209,7 +197,6 @@ Statechart Modeling Method Summary
 7. Provide **coordination mechanisms** (guarded transitions, cascaded events)
 8. Add default states, guards, and internal events
 9. **Validate** the resulting statechart
-
 
 Conclusion
 ----------

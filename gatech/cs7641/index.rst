@@ -2,7 +2,6 @@
 Machine Learning
 ================
 
-
 .. toctree::
    :maxdepth: 3
 

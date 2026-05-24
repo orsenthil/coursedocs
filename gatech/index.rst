@@ -4,7 +4,7 @@ Georgia Tech OMSCS
 Introduction
 ------------
 
-Following pages and notes will be useful for Georgia Tech, OMSCS_ Students. If you are an OMSCS Student and want to
+Following pages and notes will be useful for Georgia Tech OMSCS Students. If you are an OMSCS Student and want to
 contribute your material to this section, please submit a pull request.
 
 Georgia Tech Course Notes
@@ -26,6 +26,3 @@ Georgia Tech Course Notes
    cs8803-O01/index
    cs6200-O01/index
    CS6340/index
-
-
-.. _OMSCS: https://www.omscs.gatech.edu/

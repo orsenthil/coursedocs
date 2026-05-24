@@ -1,12 +1,10 @@
 Non-Functional Reqs & Arch Styles
 =================================
 
-
 Introduction
 ------------
 
 Software architecture prescribes the high-level structure of a system. Beyond functionality, the system must satisfy a set of possibly **conflicting non-functional requirements** (NFRs). These qualities are often **crosscutting** — their implementation is spread across the entire system, strongly affecting overall structure. Material drawn from Bosch.
-
 
 Functional vs. Non-Functional Requirements
 -------------------------------------------
@@ -19,7 +17,6 @@ Req    Description                                   Type
 3      Must be written in Java                        **NF** (platform constraint)
 4      Allow human to choose X or O as marker         **F** (part of what system computes)
 =====  ============================================  ====
-
 
 Quality Catalog
 ---------------
@@ -79,7 +76,6 @@ Security
 
 **Example application:** Online banking.
 
-
 Architectural Styles Reviewed
 ------------------------------
 
@@ -90,7 +86,6 @@ Five styles examined against the five qualities:
 - **Blackboard** — common knowledge base iteratively updated by specialist knowledge sources
 - **Object-Oriented** — individual reusable, self-sufficient objects with encapsulated data and behavior
 - **Implicit Invocation** — components broadcast events; others register interest and are called back when events occur
-
 
 Quality × Style Matrix
 -----------------------
@@ -140,7 +135,6 @@ Implicit Invocation
 - **Safety:** (−) Interaction complexity makes safety harder to ensure.
 - **Security:** (−) Fragmentation from many independent components. (+) Encapsulation mitigates some risks.
 
-
 Negative Side Effects
 ---------------------
 
@@ -165,7 +159,6 @@ Performance              **Reduced understanding** (special cases and arcane dat
 Security                 **Increased coupling** (centralized data access control couples all modules)
 Reliability              **Compromised delivery schedule** (extra checking/documentation code)
 =======================  ==========================================
-
 
 Summary
 -------

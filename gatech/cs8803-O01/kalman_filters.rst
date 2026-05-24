@@ -4,12 +4,8 @@ Kalman Filters
 Introduction
 ------------
 
-
 Stanley: The Robot that Won the DARPA Grand Challenge
 +++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-* https://en.wikipedia.org/wiki/Stanley_(vehicle)
-* http://robots.stanford.edu/papers/thrun.stanley05.pdf
 
 The robots software system relied predominantly on state-of-the-art artificial intelligence technologies such as
 machine learning and probabilistic reasoning.
@@ -20,13 +16,8 @@ Tracking intro
 * Kalman Filter - Continuous - Uni-modal distribution.
 * Monte Carlo localization. - discrete - multi-modal distribution.
 
-
-* https://en.wikipedia.org/wiki/Unimodality
-* https://en.wikipedia.org/wiki/Multimodal_distribution
-
 Gaussian Intro
 --------------
-
 
 Variance Comparison
 -------------------
@@ -34,10 +25,8 @@ Variance Comparison
 * Co-variance.
 * What's the difference between variance and co-variance?
 
-
 Preferred Gaussian
 ------------------
-
 
 Evaluate Gaussian
 -----------------
@@ -60,7 +49,6 @@ Maximize Gaussian
 
     print f(10.,4.,10.)
 
-
 Measurement and Motion 1
 ------------------------
 
@@ -68,7 +56,6 @@ Kalman Filter
 +++++++++++++
 
 Measurement updates and motion updates.
-
 
 .. attention::
 
@@ -79,10 +66,8 @@ Measurement updates and motion updates.
 
 In localization, performing a measurement meant updating our belief by a multiplicative factor, while moving involved performing a convolution.
 
-
 Measurement and Motion 2
 ------------------------
-
 
 The measurement meant updating our belief (and renormalizing our distribution). Motion meant keeping track of where
 all of our probability "went" when we moved (which meant using the law of Total Probability).
@@ -90,10 +75,8 @@ all of our probability "went" when we moved (which meant using the law of Total 
 Shifting the mean
 -----------------
 
-
 Predicting the Peak
 -------------------
-
 
 .. attention::
 
@@ -103,16 +86,13 @@ Predicting the Peak
 Parameter Update
 ----------------
 
-
 .. code-block:: python
 
     def new_mean(mu_1, sigma2_1, mu_2, sigma2_2):
         return (1.0/(sigma2_1 + sigma2_2)) * (sigma2_2 * mu_1 + sigma2_1 * mu_2)
 
-
     def new_sigma2(sigma2_1, sigma2_2):
         return (1.0/((1.0/sigma2_1) + (1.0/sigma2_2)))
-
 
 .. attention::
 
@@ -120,7 +100,6 @@ Parameter Update
 
 Parameter Update 2
 ------------------
-
 
 .. attention::
 
@@ -130,9 +109,7 @@ Parameter Update 2
 Separated Gaussians
 -------------------
 
-
 Since the Gaussian's have the same width (which means same certainty), than their product will be a Gaussian with a mean that is right in the middle.
-
 
 This can be hard to wrap your head around, but multiple measurements ALWAYS gives us a more certain (and therefore taller and narrower) belief.
 
@@ -154,10 +131,8 @@ New Mean and Variance
 
     print update(10.,8.,13., 2.)
 
-
 Gaussian Motion
 ---------------
-
 
 Predict Function
 ----------------
@@ -183,7 +158,6 @@ This program implements the 1-dimensional Kalman filter.
 
     print predict(10., 4., 12., 4.)
 
-
 Kalman Filter Code
 ------------------
 
@@ -194,12 +168,10 @@ Kalman Filter Code
         new_var = 1/(1/var1 + 1/var2)
         return [new_mean, new_var]
 
-
     def predict(mean1, var1, mean2, var2):
         new_mean = mean1 + mean2
         new_var = var1 + var2
         return [new_mean, new_var]
-
 
     measurements = [5.0, 6.0, 7.0, 9.0, 10.0]
     motion = [1.0, 1.0, 2.0, 1.0, 1.0]
@@ -221,23 +193,19 @@ Kalman Prediction
 
 * 1-D Kalman Filters.
 
-
 Kalman Filter Land
 ------------------
 
 * Higher Dimensional Gaussians
 * Multi-variate Gaussians
 
-
 Kalman Filter Prediction
 ------------------------
-
 
 Our prediction is that we would move forward in the x direction by one and that our velocity is still one.
 
 Another Prediction
 ------------------
-
 
 We'd expect our velocity to remain unchanged, but we should move forward in the x direction
 by two (since the velocity was two).
@@ -245,21 +213,12 @@ by two (since the velocity was two).
 More Kalman Filters
 -------------------
 
-
 The car **estimates** the velocity of the other vehicles based on the measurements of it's positions using Kalman
 filters.
-
 
 Kalman Filter Design
 --------------------
 
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/KYEr4BXhD_E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-
-Introduction
 ============
 Welcome to my second class on Kalman filters.
 I want to take you on a little tour to where it all began--Stanford University.
@@ -1298,5 +1257,3 @@ Now, next is your homework assignment.
 I hope you can prove what you've learned and ace it.
 Then, next week, we're going to move into particle filters, which is an exciting third method for state estimation.
 So I'll see you for the homework assignment, and then I'll see you in class for particle filters.
-
-

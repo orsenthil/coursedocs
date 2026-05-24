@@ -1,7 +1,6 @@
 Advanced Topics
 ===============
 
-
 Visuospatial Reasoning
 ----------------------
 
@@ -11,7 +10,6 @@ Visuospatial Reasoning
 - **Spatial** — the "where" (locations, spatial relations)
 
 A defining characteristic of visuospatial knowledge is that causality is at most *implicit*. A picture of a fallen cup with a pool of water doesn't explicitly state causation, but we infer the cup fell and spilled. Visuospatial knowledge enables inferences about causality without representing it directly.
-
 
 Propositional vs. Analogical Representations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -34,7 +32,6 @@ Two approaches to handling visuospatial knowledge:
 
 The same distinction applies to other modalities (e.g., auditory). Open questions in cognitive science: When a melody reminds you of another, are you matching propositional extractions or directly matching analogical representations?
 
-
 Knowledge Content and Encoding
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -52,7 +49,6 @@ Knowledge Content and Encoding
 
 Most of KBAI deals with verbal/propositional knowledge. Fully understanding and leveraging visuospatial + analogical representations remains an open challenge.
 
-
 Galatea: Visuospatial Analogical Transfer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -63,7 +59,6 @@ The Duncker radiation problem: A physician must destroy a tumor with a laser, bu
 Most computational models extract a propositional causal pattern: "if resource can achieve goal but obstacle blocks it, decompose resource and converge from multiple directions."
 
 Galatea instead transferred the *visuospatial* structure step-by-step — mapping spatial elements (top road → top body part, fortress → tumor) without abstracting a causal pattern. The causality remains implicit but the problem-solving procedure transfers purely through spatial correspondence.
-
 
 Archytas: Causal Models from Drawings
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -79,7 +74,6 @@ Process:
 
 Result: Given a new piston-crankshaft drawing, Archytas assembles a causal model ("linear motion converts to rotational motion") by analogy to known drawings — extracting causal information from visuospatial representations.
 
-
 Raven's Progressive Matrices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -89,7 +83,6 @@ Multiple computational approaches to Raven's test use visuospatial representatio
 - Keith McGreggor's system uses fractal representations
 
 Both achieve good accuracy, demonstrating that analogical/visuospatial representations can support complex reasoning without propositional intermediaries.
-
 
 Systems Thinking
 ----------------
@@ -102,7 +95,6 @@ Examples:
 - Businesses: manufacturing, marketing, delivery units at individual/team/organization levels
 
 **Systems thinking** = reasoning about invisible properties and complex behaviors of systems; deriving invisible processes from visible structure.
-
 
 Structure-Behavior-Function Models
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -119,7 +111,6 @@ Key properties:
 - They capture multiple levels of abstraction
 - They enable diagnosis and design of complex systems by making invisible causal processes explicit
 
-
 Design Thinking
 ---------------
 
@@ -129,7 +120,6 @@ Design Thinking
 
 - Problem-solution co-evolution (the problem evolves as the solution evolves)
 - Ill-defined, underconstrained, open-ended problems
-
 
 IDOL: Learning Design Patterns
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -145,7 +135,6 @@ Example:
 IDOL extracted the general pattern: *if a design achieves value X via behavior B1, achieve value 2X by replicating B1 through series composition.*
 
 When later given the problem of designing a higher-capacity water pump, IDOL transferred the cascading pattern from electrical circuits — connecting multiple pumps in series. This is analogical transfer of design patterns across domains.
-
 
 Creativity
 ----------
@@ -170,7 +159,6 @@ Additional processes:
 - **Serendipity** — a suspended goal connects with an unrelated discovery (Mestral's Velcro: stuck zipper problem + burrs on dog's legs under microscope)
 - **Conceptual combination** — blending two concepts to produce something new
 
-
 Can AI Be Creative?
 ~~~~~~~~~~~~~~~~~~~
 
@@ -179,7 +167,6 @@ Arguments against AI creativity (and their rebuttals):
 - "Algorithm outputs can't be novel" → Combinations of algorithms for open-ended problems *can* produce novel outputs (e.g., design, scientific discovery)
 - "Given same input, output is always the same" → Output depends on input + method + *context/situation*; same input in different contexts yields different outputs
 - "If we can trace the process, it's not creative" → Creativity can be defined by the output alone (a black box producing interesting music is creative regardless of whether we understand the process)
-
 
 AI Ethics
 ---------

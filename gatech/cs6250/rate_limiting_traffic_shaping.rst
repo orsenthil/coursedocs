@@ -313,11 +313,11 @@ Examples of Powerboost
 .. figure:: images/rate_limiting_traffic_shaping/power_boost_examples_bismark_graph.jpg
    :alt: Examples of Powerboost — Bismark Project Graph
 
-   Examples of PowerBoost — Bismark (http://projectbismark.net/). Graph shows throughput
+   Examples of PowerBoost — Bismark. Graph shows throughput
    (Kbits/s) vs Time (seconds) for four different cable modems (RCA Thomson, Motorola,
    DLINK, Scientific Atlanta). Different homes → Different shaping profiles!
 
-In the Bismark Project at Georgia Tech, which you can go check out at http://projectbismark.net,
+In the Bismark Project at Georgia Tech, which you can go check out at
 we've done some measurements of Comcast Power Boosts in different home networks. Here are
 some real world examples of Power Boost's traffic shaping profile in four different home
 networks, each with a different cable modem as shown in the caption. You can see that different

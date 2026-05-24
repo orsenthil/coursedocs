@@ -1,14 +1,11 @@
 Overview of Compilation
 =======================
 
-
 Introduction
 ------------
 
-
 Why Study Compiler Construction
 _______________________________
-
 
 A good compiler contains a microcosm of computer science. It makes practical use of greedy algorithms
 (register allocation), heuristic search techniques (list scheduling), graph algorithms (dead-code
@@ -20,15 +17,12 @@ pipeline scheduling. Few software systems bring together as many complex and div
 Working inside a compiler provides practical experience in software
 engineering that is hard to obtain with smaller, less intricate systems.
 
-
 The Fundamental Principles of Compilation
 _________________________________________
 
 * The compiler must preserve the meaning of the program being compiled.
 
 * The compiler must improve the input program in some discernible way.
-
-
 
 The Front End
 -------------
@@ -41,21 +35,13 @@ program and to classify each word with a part of speech. In a compiler, this tas
 called the scanner. The scanner takes a stream of characters and converts it to a stream of classified
 words—that is, pairs of the form (p,s), where p is the word’s part of speech and s is its spelling.
 
-
 The process of automatically finding derivations is called parsing.
 
 NFA to DFA Subset Construction Method (In Tamil)
 ------------------------------------------------
 
-https://www.youtube.com/watch?v=GrdnW4Cb_GY
-
 Minimization Procedure
 ----------------------
 
-https://www.youtube.com/watch?v=1GZOzTJOBuM
-
-
 Table Driven and Hand Written Scanners
 --------------------------------------
-
-* https://stackoverflow.com/questions/27763544/direct-coded-vs-table-driven-lexer

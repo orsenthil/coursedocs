@@ -421,7 +421,7 @@ heterogeneous in the sense that they should support different technologies.
 
    How are virtual networks implemented? Nodes: VMs (or virtual environments, e.g. Xen,
    VMware, VServers) on Hypervisor/HW. Edges: Tunnels. Diagram shows VMs connected
-   through switches with IP tunnels to other VMs. See http://openvswitch.org/
+   through switches with IP tunnels to other VMs. See
 
 So virtual networks have two components, nodes and edges. The physical nodes themselves must
 be virtualized. One possible way of virtualizing a node is a virtual machine. A more lightweight
@@ -538,7 +538,7 @@ Frenetic Language
    :alt: Frenetic Language
 
    Frenetic: SQL-Like Query Language — Example: select(bytes) where(in: 2 and srcport: 80)
-   groupBy(dstMAC) every(60). See http://frenetic-lang.org/
+   groupBy(dstMAC) every(60). See
 
 One example of a programming language that sits on top of such a north-bound API is Frenetic,
 which is an SQL-like query language. For example, Frenetic would allow a programmer to count

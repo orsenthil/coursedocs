@@ -16,4 +16,3 @@ Computational Photography
    questions
    notes
    05_01_Image_Transformation
-

@@ -1,7 +1,6 @@
 Problem Set 5
 =============
 
-
 Missing Parameters
 ==================
 Welcome to homework 5.
@@ -263,5 +262,3 @@ not just in controlling self-driving cars but in a great number of other control
 Thank you for taking the class so far. You learned a lot already.
 You learned about localization, about planning and control,
 and we almost learned talking about how to build a self-driving car.
-
-

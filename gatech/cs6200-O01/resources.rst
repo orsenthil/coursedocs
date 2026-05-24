@@ -1,7 +1,7 @@
 Resources
 =========
 
-* The four books recommended and paper listed on Course Wiki: https://www.udacity.com/wiki/ud923/resources/text
+* The four books recommended and paper listed on Course Wiki
 
 .. code-block:: guess
 
@@ -21,76 +21,49 @@ Resources
     Operating Systems: Three Easy Pieces.
     Arpaci-Dusseau Books, Version 0.80, May 2014.
 
-
 Beej's guides are also well regarded and free for browsing online (you can purchase copies as well).
 
 The Linux Man-Pages Project is another excellent source of reference material that I use all the time (easy to browse
 through and search for specific system calls). This is maintained by the author of The Linux Programming Interface.
 
-
 C References:
 
-* `MIT course on C programming`_
+* MIT course on C programming
 
-.. _MIT course on C programming: https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-087-practical-programming-in-c-january-iap-2010/lecture-notes/
+* Learn C in X minutes
 
-* `Learn C in X minutes`_
+* Lynda
 
-.. _Learn C in X minutes: https://learnxinyminutes.com/docs/c/
+* Gosh Darn Function Pointers
 
-* `Lynda`_
+* Function Pointers
 
-.. _Lynda: https://www.linkedin.com/learning/
+* Youtube of the Q&A C Video from Chris. D.
 
-* `Gosh Darn Function Pointers`_
+* Mac GDB
 
-.. _Gosh Darn Function Pointers: http://goshdarnfunctionpointers.com/
-
-* `Function Pointers`_
-
-.. _Function Pointers: http://www.cprogramming.com/tutorial/function-pointers.html
-
-* `Youtube of the Q&A C Video from Chris. D.`_
-
-.. _Youtube of the Q&A C Video from Chris. D.: https://www.youtube.com/watch?v=UmLpG077DcU
-
-* `Mac GDB`_
-
-.. _Mac GDB: https://www.youtube.com/watch?v=5xFlMD1XPDM
-
-* `GDB help list`_
-
-.. _GDB help list: https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf
+* GDB help list
 
 Harvard CS50 course on C and their reference site.
 
-* `CS 50`_
+* CS 50
 
-* `CS 50 Reference`_
+* CS 50 Reference
 
-* `typedef example`_
-
-.. _CS 50: https://cs50.harvard.edu/
-
-.. _CS 50 Reference: https://reference.cs50.net/
-
-.. _typedef example: https://overiq.com/c-programming/101/typedef-statement-in-c/#typedef-with-a-structure
+* typedef example
 
 CS Education
 ------------
 
-* http://cs-education.github.io/sys/#
+* Essential C
 
-* Essential C (http://cslibrary.stanford.edu/101/)
+* Pointers and Memory
 
-* Pointers and Memory (http://cslibrary.stanford.edu/102/)
+* Linked list Basics
 
-* Linked list Basics (http://cslibrary.stanford.edu/103/)
+* Point Fun With Binky Video
 
-* Point Fun With Binky Video (http://cslibrary.stanford.edu/104/)
-
-* Linked List Problems (http://cslibrary.stanford.edu/105/)
-
+* Linked List Problems
 
 A pointer type in C is just the pointee type followed by a asterisk (*)...
 
@@ -101,10 +74,6 @@ A pointer type in C is just the pointee type followed by a asterisk (*)...
    struct fraction* - type: pointer to struct fraction
    struct fraction** - type: pointer to struct fraction*
 
-
 Why are pointer bugs so common?
 
 Try to remember to assign your pointers to refer to pointees. Don't be surprised when you forget.
-
-
-* https://www.cc.gatech.edu/projects/disl/courses/cs8803/summaries/week6/8290_1.txt

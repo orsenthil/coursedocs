@@ -1,9 +1,6 @@
 Network Programming
 ===================
 
-* https://beej.us/guide/bgnet/html/single/bgnet.html#theory
-
-
 My First StructTM—struct addrinfo. This structure is a more recent invention, and is used to
 prep the socket address structures for subsequent use. It's also used in host name lookups,
 and service name lookups. That'll make more sense later when we get to actual usage, but
@@ -23,11 +20,8 @@ just know for now that it's one of the first things you'll call when making a co
         struct addrinfo *ai_next;      // linked list, next node
     };
 
-
-
 You'll load this struct up a bit, and then call getaddrinfo(). It'll return a pointer
 to a new linked list of these structures filled out with all the goodies you need.
-
 
 .. code-block:: c
 
@@ -36,11 +30,9 @@ to a new linked list of these structures filled out with all the goodies you nee
         char              sa_data[14];  // 14 bytes of protocol address
     };
 
-
 And this is the important bit: a pointer to a struct sockaddr_in can be cast to a
 pointer to a struct sockaddr and vice-versa. So even though connect() wants a struct
 sockaddr*, you can still use a struct sockaddr_in and cast it at the last minute!
-
 
 .. code-block:: c
 
@@ -53,8 +45,6 @@ sockaddr*, you can still use a struct sockaddr_in and cast it at the last minute
         unsigned char      sin_zero[8]; // Same size as struct sockaddr
     };
 
-
-
 *  the sin_port must be in Network Byte Order (by using htons()!)
 
 .. code-block:: c
@@ -65,7 +55,6 @@ sockaddr*, you can still use a struct sockaddr_in and cast it at the last minute
     struct in_addr {
         uint32_t s_addr; // that's a 32-bit int (4 bytes)
     };
-
 
 .. code-block:: c
 
@@ -83,7 +72,6 @@ sockaddr*, you can still use a struct sockaddr_in and cast it at the last minute
         unsigned char   s6_addr[16];   // IPv6 address
     };
 
-
 .. code-block:: c
 
     struct sockaddr_storage {
@@ -95,21 +83,15 @@ sockaddr*, you can still use a struct sockaddr_in and cast it at the last minute
     char      __ss_pad2[_SS_PAD2SIZE];
     };
 
-
-
 What's important is that you can see the address family in the ss_family field—check this to see if it's AF_INET
 or AF_INET6 (for IPv4 or IPv6). Then you can cast it to a struct sockaddr_in or struct sockaddr_in6 if you wanna.
-
-
 
 3.4. IP Addresses, Part Deux
 ----------------------------
 
-
 The function you want to use, inet_pton(), converts an IP address in numbers-and-dots notation into either
 a struct in_addr or a struct in6_addr depending on whether you specify AF_INET or AF_INET6. ("pton" stands
 for "presentation to network"—you can call it "printable to network" if that's easier to remember.)
-
 
 .. code-block:: c
 
@@ -119,10 +101,8 @@ for "presentation to network"—you can call it "printable to network" if that's
     inet_pton(AF_INET, "10.12.110.57", &(sa.sin_addr)); // IPv4
     inet_pton(AF_INET6, "2001:db8:63b3:1::3490", &(sa6.sin6_addr)); // IPv6
 
-
 Now, the above code snippet isn't very robust because there is no error checking. See, inet_pton() returns -1
 on error, or 0 if the address is messed up. So check to make sure the result is greater than 0 before using!
-
 
 Network to printable.
 
@@ -137,7 +117,6 @@ Network to printable.
 
     printf("The IPv4 address is: %s\n", ip4);
 
-
     // IPv6:
 
     char ip6[INET6_ADDRSTRLEN]; // space to hold the IPv6 string
@@ -146,8 +125,6 @@ Network to printable.
     inet_ntop(AF_INET6, &(sa6.sin6_addr), ip6, INET6_ADDRSTRLEN);
 
     printf("The address is: %s\n", ip6);
-
-
 
 getaddrinfo()—Prepare to launch!
 --------------------------------
@@ -163,18 +140,15 @@ getaddrinfo()—Prepare to launch!
                     const struct addrinfo *hints,
                     struct addrinfo **res);
 
-
 socket()—Get the File Descriptor!
 ---------------------------------
 
 .. code-block:: c
 
-
     #include <sys/types.h>
     #include <sys/socket.h>
 
     int socket(int domain, int type, int protocol);
-
 
 Example.
 
@@ -194,7 +168,6 @@ Example.
 
     s = socket(res->ai_family, res->ai_socktype, res->ai_protocol);
 
-
 bind()—What port am I on?
 -------------------------
 
@@ -206,14 +179,12 @@ match an incoming packet to a certain process's socket descriptor. If you're goi
 
 Here is the synopsis for the bind() system call:
 
-
 .. code-block:: c
 
     #include <sys/types.h>
     #include <sys/socket.h>
 
     int bind(int sockfd, struct sockaddr *my_addr, int addrlen);
-
 
 Example
 
@@ -239,11 +210,9 @@ Example
 
     bind(sockfd, res->ai_addr, res->ai_addrlen);
 
-
 By using the AI_PASSIVE flag, I'm telling the program to bind to the IP of the
 host it's running on. If you want to bind to a specific local IP address, drop
 the AI_PASSIVE and put an IP address in for the first argument to getaddrinfo().
-
 
 * Add code to your program allowing it to reuse the port
 
@@ -258,7 +227,6 @@ the AI_PASSIVE and put an IP address in for the first argument to getaddrinfo().
         exit(1);
     }
 
-
 5.4. connect()
 --------------
 
@@ -268,8 +236,6 @@ the AI_PASSIVE and put an IP address in for the first argument to getaddrinfo().
     #include <sys/socket.h>
 
     int connect(int sockfd, struct sockaddr *serv_addr, int addrlen);
-
-
 
 Example
 
@@ -294,7 +260,6 @@ Example
 
     connect(sockfd, res->ai_addr, res->ai_addrlen);
 
-
 * You can now pass data back and forth on stream sockets! Whee! You're a Unix Network Programmer!
 
 ----
@@ -304,4 +269,3 @@ Syntax: typedef data_type new_name;
 typedef: keyword
 data_type: existing type or user defined type created using structure/union.
 new_name: convenience name.
-

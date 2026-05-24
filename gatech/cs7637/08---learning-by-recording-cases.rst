@@ -59,8 +59,5 @@ Learning by recording cases has a strong connection to cognition:
 - This shifts the balance in the reasoning-memory-learning triad: **memory and learning become primary**, reducing the need for active reasoning
 - We don't think as much as we think we do — much of intelligent behavior is memory-driven retrieval rather than novel problem-solving
 
-
 Resources
 ---------
-
-* https://techtalktone.wordpress.com/2014/11/09/using-learning-by-recording-cases-to-solve-rpm/

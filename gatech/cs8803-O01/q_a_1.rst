@@ -148,4 +148,3 @@ to think like a roboticist and still solve the interesting problems--with this c
 [Sebastian:] Okay. Thank you.
 [CS 373: Programming a Robotic Car - Taught by Professor Sebastian Thrun]
 [Udacity - udacity.com]
-

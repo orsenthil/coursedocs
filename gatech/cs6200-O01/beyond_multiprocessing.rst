@@ -3,8 +3,6 @@ Beyond MultiProcessing
 
 Eykholt, J.R., et. al., "Beyond Multiprocessing: Multithreading the Sun OS Kernel".
 
-https://s3.amazonaws.com/content.udacity-data.com/courses/ud923/references/ud923-eykholt-paper.pdf
-
 Introduction
 ------------
 
@@ -29,11 +27,9 @@ Kernel threads use synchronization primitives that support protocols for prevent
 
 SunOS uses kernel threads to provide asynchro- nous kernel activity, such as asynchronous writes to disk, servicing STREAMS queues, and callouts.
 
-
 Even interrupts are handled by kernel threads.
 
 A major feature of the new kernel is its support of multiple kernel-supported threads of control, called lightweight processes (LWPs), in any user pro- cess, sharing the address space of the process and other resources, such as open files.
-
 
 While all LWPs have a kernel thread, not all kernel threads have an LWP
 
@@ -47,7 +43,6 @@ The per-process data was divided between non-swappable data in the proc structur
 The per-process data is contained in the proc structure. It contains a list of kernel threads associ- ated with the process, a pointer to the process address space, user credentials, and the list of signal handlers. The proc structure also contains the ves- tigial user structure, which is now much smaller than a page, and is no longer practical to swap.
 
 The LWP structure contains the per-LWP data such as the process-control-block (pcb) for storing user-level processor registers, system call arguments, signal handling masks, resource usage information, and profiling pointers.
-
 
 The current LWP, process, and CPU structures are quickly accessible through pointers in the thread structure.
 
@@ -65,7 +60,6 @@ System Threads
 
 threads have no need for LWP structures, so the thread structure and stack for these threads can be allocated together in a non- swappable area.
 
-
 Synchronization Architecture
 ----------------------------
 
@@ -78,12 +72,10 @@ By default, the kernel thread synchronization primitives that can logically bloc
 Mutual Exclusion Lock Implementation
 ------------------------------------
 
-
 Turnstiles vs Queues in Synchronization Objects
 -----------------------------------------------
 
 Instead, two bytes in the synchronization object are used to find a turnstile structure containing the sleep queue header and priority inheritance information [Khanna 1992]. Turnstiles are preallocated such that there are always more turnstiles than the number of threads active.
-
 
 One alternative method would be to select the sleep queue from an array using a hash function on the address of the synchronization object.
 
@@ -93,7 +85,6 @@ Interrupts as Threads
 Lastly, interrupt handlers must live in a constrained environment that avoids any use of kernel functions that can poten- tially sleep, even for short periods.
 
 The restructured kernel uses a primitive spin lock protected by raised priority to implement this. This is one of a few bounded sections of code where interrupts are locked out.
-
 
 Implementing Interrupts as Threads
 ----------------------------------
@@ -106,5 +97,3 @@ A flag is set in the cpu structure indicating that an interrupt at that level ha
 
 Interrupt Thread Cost
 ---------------------
-
-

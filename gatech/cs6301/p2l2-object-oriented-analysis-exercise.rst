@@ -1,12 +1,10 @@
 Object Oriented Analysis Exercise
 =================================
 
-
 Object-Oriented Analysis (OOA)
 ------------------------------
 
 Before solving a problem (design), you must understand it (analysis). **Object-Oriented Analysis (OOA)** is a requirements analysis technique developed by Abbott and Booch in the 1980s. It models real-world objects from their natural-language descriptions to produce an object analysis model, expressed primarily using UML class model diagrams.
-
 
 Why Objects over Functions
 --------------------------
@@ -16,7 +14,6 @@ Prior to OOA, the dominant approach was **functional decomposition** (structured
 Example: In a banking application, functions like interest computation, fee structures, and tax rules change frequently. But the need to represent accounts, account holders, and transactions persists. Designing around stable objects leads to more sustainable designs.
 
 In structured analysis, data is secondary to functions. In OOA, **data objects are defined first** (attributes and types), then functions are defined and associated with specific objects.
-
 
 The OOA Technique
 -----------------
@@ -37,7 +34,6 @@ Steps
 4. Underline all **verbs**; distinguish action verbs from stative/linking verbs
 5. Assign **action verbs** as operations of appropriate classes
 6. Assign **stative verbs** as relationships between classes
-
 
 Example: Counting Tree Leaves
 ------------------------------
@@ -66,7 +62,6 @@ Operations (from Action Verbs)
 - Tree: ``split()``, ``throwAway()``
 
 Issues: "has been counted" is stative (describes state, not action) — revisited under relationships. "Examine", "consists of", and "is set to" describe conditions rather than actions and map to equality checks.
-
 
 .. mermaid::
 
@@ -121,7 +116,6 @@ Association
 A general relationship indicated by an unadorned labeled line. **Stative verbs** (denoting states of being) often indicate associations.
 
 In the tree example, there is an implied association between Counter and Leaf — the counter *counts* the leaves.
-
 
 Caveats
 -------

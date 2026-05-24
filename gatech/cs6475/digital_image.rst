@@ -59,8 +59,6 @@ Blending modes define how two layers of pixels are combined:
 - **Multiply**: Darkens — :math:`f(a, b) = a \cdot b`
 - **Screen**: Brightens — :math:`f(a, b) = 1 - (1 - a)(1 - b)`
 
-Reference: https://en.wikipedia.org/wiki/Blend_modes
-
 Smoothing
 ---------
 

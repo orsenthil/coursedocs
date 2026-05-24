@@ -473,7 +473,7 @@ NOX Overview
 .. figure:: images/software_defined_networking/nox_overview.jpg
    :alt: NOX Overview
 
-   NOX: Overview — First-generation OpenFlow controller (http://www.noxrepo.org/).
+   NOX: Overview — First-generation OpenFlow controller.
    Open-source, stable, widely used. Two flavors: "Classic" (C++/Python), "New Nox" (C++
    only, fast, clean).
 

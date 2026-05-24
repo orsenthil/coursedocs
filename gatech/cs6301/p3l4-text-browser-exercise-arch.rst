@@ -1,7 +1,6 @@
 Text Browser Exercise (Arch)
 ============================
 
-
 Overview
 --------
 
@@ -13,7 +12,6 @@ This lesson revisits the TextBrowser example from an **architectural design** pe
 - **FileManager** — file system interface to the document
 - **ViewPort** — resizable window displaying lines of text
 - **ScrollBar** — controlling device for selecting which lines appear (via a draggable handle)
-
 
 Phase 0 — Preparation (Context Diagram)
 ----------------------------------------
@@ -35,7 +33,6 @@ Construct a **context diagram** showing:
   - Viewport height
   - Handle size (proportional to visible portion of file)
   - Handle position in tray
-
 
 Phase 1 — Decomposition
 ------------------------
@@ -61,7 +58,6 @@ Indirect effect (invariant) — display document:
   ``viewport.viewContents = document.subSequence(scrollbar.handlePosition, scrollbar.handlePosition + viewport.height - 1)``
 
   The visible contents are the subsequence of document lines starting at the scrollbar's handle position, continuing for ``height`` lines.
-
 
 Phase 2 — Architectural Style Selection
 ----------------------------------------
@@ -108,7 +104,6 @@ Three invariants to maintain:
 2. **Display document** — visible lines match file contents at handle position
 3. **Line visibility** — visible lines correspond to viewport height
 
-
 Phase 3 — Invariant Maintenance
 --------------------------------
 
@@ -151,7 +146,6 @@ Mediated                Clean separation per invariant      Extra objects/indire
 
 The fundamental trade-off is between **locality** (understanding in one place) and **complexity** (concentration of logic).
 
-
 Process Summary
 ---------------
 
@@ -175,7 +169,6 @@ Process Summary
 - Update OCL (convert association constraints to component-owned constraints)
 - Select invariant maintenance strategy
 - Assign responsibility for maintaining each invariant
-
 
 Conclusion
 ----------

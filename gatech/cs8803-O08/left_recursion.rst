@@ -10,7 +10,6 @@ We should eliminate the left recursion without changing the language.
 The language the above generates is :math:`\beta \alpha^*`
 The above representation is not in the grammar form.
 
-
 We can convert the above language to left recursive form like this.
 
 .. math::

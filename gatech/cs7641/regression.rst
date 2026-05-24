@@ -6,13 +6,11 @@ Regression
 - Name origin: Galton's **"regression to the mean"** — tall parents' children tend shorter than parents but taller than population mean; slope of parent–child height line **< 1**.
 - Historical term stuck; ML **regression** = fit a functional form to data points (not psychological "regressing").
 
-
 Regression and Function Approximation
 -------------------------------------
 
 - Parent height vs average child height: approximately **linear** relationship; slope **2/3** in real populations → children regress toward mean.
 - Modern use: find mathematical relationship from measurements (coefficients :math:`C_0, C_1, \ldots`).
-
 
 Linear Regression
 -----------------
@@ -20,7 +18,6 @@ Linear Regression
 - Example: **housing price** vs square footage (synthetic 9 points, 1k–10k sq ft).
 - **Best-fit line** minimizes **sum of squared errors** between points and line.
 - Interpolation at 5k sq ft may disagree with line vs eyeballing neighbors.
-
 
 Finding the Best Fit
 --------------------
@@ -33,7 +30,6 @@ Finding the Best Fit
 - Error: :math:`E(C) = \sum_i (C - y_i)^2`.
 - Derivative, set to zero → **:math:`C = \frac{1}{n}\sum_i y_i`** (mean of :math:`y`).
 - Squared loss brings the **mean** back; same idea generalizes to lines and higher-order polynomials.
-
 
 Order of the Polynomial
 -----------------------
@@ -51,7 +47,6 @@ Polynomial family:
 **Quiz: pick degree for housing**
 - Degree **3 (cubic)**: good fit without over-committing; degree **8** overfits noise.
 - Degree 0/1/2 leave substantial error; cubic stays between points sensibly.
-
 
 Polynomial Regression (matrix form)
 -----------------------------------
@@ -71,7 +66,6 @@ For :math:`n` examples :math:`(x_i, y_i)`, find :math:`C_0,\ldots,C_3` for cubic
 
 - Equivalent to **projection** minimizing squared error; arrange data into :math:`\mathbf{X}`, compute :math:`\mathbf{w}`.
 
-
 Errors
 ------
 
@@ -85,7 +79,6 @@ Observed :math:`y` = true function + **noise**. Common sources (all realistic):
 | **Unmeasured factors** | Housing: location, quality, interest rates — not just size |
 
 Goal: fit **signal**, not **noise**.
-
 
 Cross Validation
 ----------------
@@ -101,14 +94,12 @@ Cross Validation
 - Too complex → **overfit** (fits training noise; high error on unseen data).
 - Sweet spot: complex enough for structure, not so complex that error is modeled.
 
-
 Housing Example Revisited
 -------------------------
 
 - **Training error** (red): decreases monotonically as polynomial degree ↑ (nested models).
 - **Cross-validation error** (blue): starts higher (predicting held-out points); tracks training at low degree; **rises** at high degree (inverted-U / overfitting).
 - Best degree by CV: **3** (close to 4; order 4 nearly zeros quartic term but generalizes slightly worse).
-
 
 Other Input Spaces
 ------------------

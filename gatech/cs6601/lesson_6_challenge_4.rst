@@ -46,5 +46,3 @@ Enumerate over hidden variable Cold:
 
 References
 ----------
-
-* http://web.mit.edu/jmn/www/6.034/d-separation.pdf

@@ -24,8 +24,8 @@ With standard search (wavefront expansion), negative path lengths can cause wave
 
 **Q6: Negative path lengths in directed acyclic graphs?**
 
-Yes — in a DAG, negative edges are safe since there are no cycles. Use `Bellman-Ford <https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm>`_ or topological sort-based relaxation.
+Yes — in a DAG, negative edges are safe since there are no cycles. Use Bellman-Ford or topological sort-based relaxation.
 
 **Q7: Negative heuristic values in A*?**
 
-Negative heuristics don't necessarily overestimate, so they can be admissible. However, combined with negative path costs, they can break optimality guarantees. See `StackOverflow discussion <http://stackoverflow.com/questions/30067813/are-heuristic-functions-that-produce-negative-values-inadmissible>`_.
+Negative heuristics don't necessarily overestimate, so they can be admissible. However, combined with negative path costs, they can break optimality guarantees. See StackOverflow discussion.

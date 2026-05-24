@@ -1,7 +1,6 @@
 Wrap-Up
 =======
 
-
 Cognitive Systems Architecture Revisited
 -----------------------------------------
 
@@ -21,7 +20,6 @@ Key points:
 - Metacognition is "situated in the internal world" — its objects are thoughts, learning processes, and reasoning strategies
 - The system interacts with other cognitive systems (social world), learning from their actions and making sense of them (e.g., using scripts)
 
-
 Principle 1: Represent and Organize Knowledge
 ----------------------------------------------
 
@@ -33,7 +31,6 @@ Examples:
 - **Frames** — support reasoning about sentences ("earthquake killed 25 people") and common sense reasoning
 - **Scripts** — organize actions into sequences, generate expectations, detect surprises
 - **Explanation-based learning** — compose complex knowledge structures on the fly from smaller precedents to support reasoning about concept membership
-
 
 Principle 2: Incremental Learning
 ----------------------------------
@@ -49,7 +46,6 @@ Examples:
 - **Learning by correcting mistakes** — individual failures drive incremental knowledge repair
 
 This mirrors human experience: we encounter the world experience by experience, not as a batch.
-
 
 Principle 3: Top-Down and Bottom-Up Reasoning
 ----------------------------------------------
@@ -68,7 +64,6 @@ Examples:
 
 Current cognitive science theories view brains as **predictive machines** — constantly generating expectations that guide reasoning and action.
 
-
 Principle 4: Match Methods to Tasks
 ------------------------------------
 
@@ -79,7 +74,6 @@ KBAI agents match problem-solving **methods** to **tasks**:
 - Tasks (configuration, diagnosis, design) can each be addressed by multiple methods
 - Methods spawn sub-tasks, which may require different methods (strategy integration)
 - Matching can be done by the designer or by the agent itself (via meta-reasoning)
-
 
 Principle 5: Heuristics and Satisficing
 ----------------------------------------
@@ -96,7 +90,6 @@ Examples:
 
 Humans likewise rarely find optimal solutions — our plans for dinner, commutes, and daily tasks are "good enough" found in near real-time. The power lies in robust, flexible intelligence across a very large class of problems.
 
-
 Principle 6: Exploit Recurring Patterns
 ----------------------------------------
 
@@ -108,7 +101,6 @@ KBAI agents leverage **recurring patterns** in problems:
 - **Configuration** — the overall design pattern recurs; only variable values change per instance
 
 This is not at odds with addressing novel problems — agents use recurring patterns *in conjunction with* other reasoning methods to handle novelty.
-
 
 Principle 7: Unified Reasoning, Learning, and Memory
 -----------------------------------------------------
@@ -128,7 +120,6 @@ Examples:
 - **Correcting mistakes** — memory provides prior knowledge → reasoning identifies the fault → learning repairs it
 
 This mirrors human cognition where reasoning, learning, and memory are inseparably intertwined.
-
 
 Current Research
 ----------------

@@ -1,13 +1,8 @@
 OpenCV
 ======
 
-* Reference: http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_core/py_basic_ops/py_basic_ops.html
+* Reference
 
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4zHbI-fFIlI" frameborder="0" allowfullscreen></iframe>
-
-Smoothing Before Edge Detection
 ---------------------------------
 
 A common pipeline for feature detection:

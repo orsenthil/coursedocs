@@ -314,4 +314,3 @@ You've implemented it successfully and learned a lot about statistics.
 This is all just a single class. Congratulations. That's really awesome.
 Now, next week we talk about common filters and tracking other cards in traffic,
 and you're going to implement our common filter, so I'll see you in the next class.
-

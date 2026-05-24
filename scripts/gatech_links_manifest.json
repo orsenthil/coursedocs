@@ -1,0 +1,1592 @@
+[
+  {
+    "url": "https://samiux.blogspot.com/2013/06/howto-cert-basic-fuzzing-framework-bff.html",
+    "title": "https://samiux.blogspot.com/2013/06/howto-cert-basic-fuzzing-framework-bff.html",
+    "source": "gatech/CS6340/assignment1.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://cs.au.dk/~amoeller/spa/",
+    "title": "https://cs.au.dk/~amoeller/spa/",
+    "source": "gatech/CS6340/index.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://d1b10bmlvqabco.cloudfront.net/attach/jbe3aw2nwc031n/ixory6sosP2/jcigv7z03w61/books.pdf",
+    "title": "https://d1b10bmlvqabco.cloudfront.net/attach/jbe3aw2nwc031n/ixory6sosP2/jcigv7z03w61/books.pdf",
+    "source": "gatech/CS6340/index.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://pages.cs.wisc.edu/~bart/fuzz/fuzz-revisited-talk.pdf",
+    "title": "http://pages.cs.wisc.edu/~bart/fuzz/fuzz-revisited-talk.pdf",
+    "source": "gatech/CS6340/index.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/paper-83.pdf",
+    "title": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/paper-83.pdf",
+    "source": "gatech/CS6340/index.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://s3.amazonaws.com/content.udacity-data.com/courses/ud923/references/ud923-eykholt-paper.pdf",
+    "title": "https://s3.amazonaws.com/content.udacity-data.com/courses/ud923/references/ud923-eykholt-paper.pdf",
+    "source": "gatech/cs6200-O01/beyond_multiprocessing.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://drive.google.com/drive/folders/1SWmW00aeakRZXUcjI-aXih-bVcllDC6J",
+    "title": "https://drive.google.com/drive/folders/1SWmW00aeakRZXUcjI-aXih-bVcllDC6J",
+    "source": "gatech/cs6200-O01/index.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://repl.it/repls/FirebrickGrowingNonagon?lite=true",
+    "title": "Embedded video",
+    "source": "gatech/cs6200-O01/lightweight_threads.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://beej.us/guide/bgnet/html/single/bgnet.html#theory",
+    "title": "https://beej.us/guide/bgnet/html/single/bgnet.html#theory",
+    "source": "gatech/cs6200-O01/notes.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-087-practical-programming-in-c-january-iap-2010/lecture-notes/",
+    "title": "MIT course on C programming",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://learnxinyminutes.com/docs/c/",
+    "title": "Learn C in X minutes",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.linkedin.com/learning/",
+    "title": "Lynda",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://goshdarnfunctionpointers.com/",
+    "title": "Gosh Darn Function Pointers",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cprogramming.com/tutorial/function-pointers.html",
+    "title": "Function Pointers",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=UmLpG077DcU",
+    "title": "Youtube of the Q&A C Video from Chris. D.",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=5xFlMD1XPDM",
+    "title": "Mac GDB",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://darkdust.net/files/GDB%20Cheat%20Sheet.pdf",
+    "title": "GDB help list",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://cs50.harvard.edu/",
+    "title": "CS 50",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://reference.cs50.net/",
+    "title": "CS 50 Reference",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://overiq.com/c-programming/101/typedef-statement-in-c/#typedef-with-a-structure",
+    "title": "typedef example",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.udacity.com/wiki/ud923/resources/text",
+    "title": "https://www.udacity.com/wiki/ud923/resources/text",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://cs-education.github.io/sys/#",
+    "title": "http://cs-education.github.io/sys/#",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://cslibrary.stanford.edu/101/",
+    "title": "http://cslibrary.stanford.edu/101/",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://cslibrary.stanford.edu/102/",
+    "title": "http://cslibrary.stanford.edu/102/",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://cslibrary.stanford.edu/103/",
+    "title": "http://cslibrary.stanford.edu/103/",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://cslibrary.stanford.edu/104/",
+    "title": "http://cslibrary.stanford.edu/104/",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://cslibrary.stanford.edu/105/",
+    "title": "http://cslibrary.stanford.edu/105/",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.cc.gatech.edu/projects/disl/courses/cs8803/summaries/week6/8290_1.txt",
+    "title": "https://www.cc.gatech.edu/projects/disl/courses/cs8803/summaries/week6/8290_1.txt",
+    "source": "gatech/cs6200-O01/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://web.mit.edu/6.826/www/notes/HO16.pdf",
+    "title": "https://web.mit.edu/6.826/www/notes/HO16.pdf",
+    "source": "gatech/cs6200-O01/threads_birrell.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://ccr.sigcomm.org/archive/1995/jan95/ccr-9501-clark.pdf",
+    "title": "The Design Philosophy of the DARPA Internet Protocols",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://arxiv.org/pdf/1409.7092v3.pdf",
+    "title": "PCC - Re-architecting Congestion Control for Consistent High Performance",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.dcs.gla.ac.uk/~lewis/CTCP.pdf",
+    "title": "Compound TCP - A Scalable and TCP-Friendly Congestion Control for High-speed Networks",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.eecs.umich.edu/courses/eecs589/papers/Cubic08.pdf",
+    "title": "CUBIC - A New TCP-Friendly High-Speed TCP Variant",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://ee.lbl.gov/papers/congavoid.pdf",
+    "title": "Congestion Avoidance and Control",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://web.mit.edu/saltzer/www/publications/endtoend/endtoend.pdf",
+    "title": "End-to-End Argument in System Design",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.geocities.ws/rahuljg/Downloads/pki-risks.pdf",
+    "title": "Ten Risks of PKI- What You\u2019re not Being Told about Public Key Infrastructure",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.cs.columbia.edu/~smb/papers/acsac-ipext.pdf",
+    "title": "A Look Back at \"Security Problems in the TCP/IP Protocol Suite\"",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.usenix.org/legacy/event/sec02/full_papers/staniford/staniford.pdf",
+    "title": "How to 0wn the Internet in your Spare Time",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://gost.isi.edu/publications/kerberos-neuman-tso.html",
+    "title": "Kerberos - An Authentication Service for Computer Networks",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.usenix.org/system/files/conference/nsdi12/nsdi12-final82.pdf",
+    "title": "Jellyfish- Networking Datacenters Randomly",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://conferences.sigcomm.org/sigcomm/2013/papers/sigcomm/p3.pdf",
+    "title": "B4 - Experience with a Globally-Deployed Software Defined WAN",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://web.eecs.umich.edu/~mosharaf/Readings/VL2.pdf",
+    "title": "VL2 - A Scalable and Flexible Data Center Network",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://conferences.sigcomm.org/sigcomm/2013/papers/sigcomm/p75.pdf",
+    "title": "See through walls with Wi-Fi!",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://people.csail.mit.edu/jue_w/Papers/RF-IDraw_SIGCOMM14.pdf",
+    "title": "RF-IDraw - Virtual Touch Screen in the Air Using RF Signals",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cs.cornell.edu/people/egs/615/ins-sosp99.pdf",
+    "title": "Intentional Naming System",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.cs.princeton.edu/~jrex/papers/sigmetrics00.pdf",
+    "title": "Stable Internet Routing Without Global Coordination",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.cs.princeton.edu/~jrex/papers/policies.pdf",
+    "title": "BGP routing policies in ISP networks",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://queue.acm.org/detail.cfm?id=2668966",
+    "title": "Why Is It Taking So Long to Secure Internet Routing?",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://cseweb.ucsd.edu/classes/wi01/cse222/papers/partridge-50gb-ton98.pdf",
+    "title": "A 50Gb/s IP Router",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://arxiv.org/abs/1307.2690",
+    "title": "BGP Security in Partial Deployment - Is the Juice Worth the Squeeze?",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://conferences.sigcomm.org/sigcomm/1996/papers/paxson.pdf",
+    "title": "End-to-End Routing Behavior in the Internet",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://drpeering.net/white-papers/Art-Of-Peering-The-Peering-Playbook.html",
+    "title": "The Peering Playbook",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.cs.purdue.edu/homes/fahmy/papers/routing.pdf",
+    "title": "Constraint-Based Routing in the Internet - Basic Principles and Recent Research",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.eecs.berkeley.edu/~sylvia/papers/buffer-sizing.pdf",
+    "title": "Sizing router buffers",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://dspace.mit.edu/handle/1721.1/88141",
+    "title": "Fastpass A Centralized \u201cZero-Queue\u201d Datacenter Network",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.nytimes.com/2014/04/06/magazine/flash-boys-michael-lewis.html",
+    "title": "Flash Boys excerpts",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.wired.com/2012/08/ff_wallstreet_trading/all/",
+    "title": "Raging Bulls - How Wall Street got Addicted to Light Speed Trading",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://portal.etsi.org/nfv/nfv_white_paper.pdf",
+    "title": "Network Functions Virtualisation",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.cs.princeton.edu/~jrex/papers/ewsdn12.pdf",
+    "title": "Toward Software-Defined Cellular Networks",
+    "source": "gatech/cs6250/papers_of_interest.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://openvswitch.org/",
+    "title": "http://openvswitch.org/",
+    "source": "gatech/cs6250/programming_sdns.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://frenetic-lang.org/",
+    "title": "http://frenetic-lang.org/",
+    "source": "gatech/cs6250/programming_sdns.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://projectbismark.net/",
+    "title": "http://projectbismark.net/",
+    "source": "gatech/cs6250/rate_limiting_traffic_shaping.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://projectbismark.net",
+    "title": "http://projectbismark.net",
+    "source": "gatech/cs6250/rate_limiting_traffic_shaping.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.noxrepo.org/",
+    "title": "http://www.noxrepo.org/",
+    "source": "gatech/cs6250/software_defined_networking.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/videoseries?list=PL8B19C3040F6381A2",
+    "title": "Embedded video",
+    "source": "gatech/cs6301/external.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/videoseries?list=PLF206E906175C7E07",
+    "title": "Embedded video",
+    "source": "gatech/cs6301/external.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.oclc.org/research/pmwg/",
+    "title": "http://www.oclc.org/research/pmwg/",
+    "source": "gatech/cs6400/metadata.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://github.com/rxin/db-readings",
+    "title": "https://github.com/rxin/db-readings",
+    "source": "gatech/cs6400/syllabus.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://docs.opencv.org/2.4/_images/filter_2d_tutorial_kernel_theory.png",
+    "title": "External image",
+    "source": "gatech/cs6475/basics.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Blend_modes",
+    "title": "https://en.wikipedia.org/wiki/Blend_modes",
+    "source": "gatech/cs6475/digital_image.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Photography",
+    "title": "https://en.wikipedia.org/wiki/Photography",
+    "source": "gatech/cs6475/introduction.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://graphics.stanford.edu/papers/dual_photography/",
+    "title": "http://graphics.stanford.edu/papers/dual_photography/",
+    "source": "gatech/cs6475/introduction.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Helmholtz_reciprocity",
+    "title": "https://en.wikipedia.org/wiki/Helmholtz_reciprocity",
+    "source": "gatech/cs6475/questions.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Harold_Eugene_Edgerton",
+    "title": "https://en.wikipedia.org/wiki/Harold_Eugene_Edgerton",
+    "source": "gatech/cs6475/questions.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/YojL7UQTVhc",
+    "title": "Embedded video",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/q8cj9Lj9w-g",
+    "title": "Embedded video",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/7R9ZTxoTOSk",
+    "title": "Embedded video",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://digital-photography-school.com/aperture/",
+    "title": "https://digital-photography-school.com/aperture/",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://digital-photography-school.com/iso-settings/",
+    "title": "https://digital-photography-school.com/iso-settings/",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://digital-photography-school.com/shutter-speed/",
+    "title": "https://digital-photography-school.com/shutter-speed/",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=bFbatsu-o1Q",
+    "title": "https://www.youtube.com/watch?v=bFbatsu-o1Q",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://play.google.com/store/apps/details?id=com.riseupgames.proshot2&hl=en",
+    "title": "https://play.google.com/store/apps/details?id=com.riseupgames.proshot2&hl=en",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://play.google.com/store/apps/details?id=pl.vipek.camera2&hl=en",
+    "title": "https://play.google.com/store/apps/details?id=pl.vipek.camera2&hl=en",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Canon_PowerShot_S90",
+    "title": "https://en.wikipedia.org/wiki/Canon_PowerShot_S90",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.nikonusa.com/en/nikon-products/product-archive/dslr-cameras/d3300.html",
+    "title": "https://www.nikonusa.com/en/nikon-products/product-archive/dslr-cameras/d3300.html",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://cs.brown.edu/courses/cs129/",
+    "title": "https://cs.brown.edu/courses/cs129/",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://github.gatech.edu/omscs6475",
+    "title": "https://github.gatech.edu/omscs6475",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://compphotography.wordpress.com/",
+    "title": "https://compphotography.wordpress.com/",
+    "source": "gatech/cs6475/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://szeliski.org/Book/",
+    "title": "http://szeliski.org/Book/",
+    "source": "gatech/cs6476/index.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://students.brown.edu/seeing-theory/",
+    "title": "Visualizing Probability and Statistics",
+    "source": "gatech/cs6476/index.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://cs6476.wordpress.com/",
+    "title": "https://cs6476.wordpress.com/",
+    "source": "gatech/cs6476/index.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.cc.gatech.edu/~hays/compvision/",
+    "title": "https://www.cc.gatech.edu/~hays/compvision/",
+    "source": "gatech/cs6476/index.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://github.com/pdvelez/CV-lecture-quizzes-python",
+    "title": "https://github.com/pdvelez/CV-lecture-quizzes-python",
+    "source": "gatech/cs6476/index.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html",
+    "title": "https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html",
+    "source": "gatech/cs6476/index.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://learn-anything.xyz/computer-vision",
+    "title": "https://learn-anything.xyz/computer-vision",
+    "source": "gatech/cs6476/index.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://mubaris.com/2017-09-09/introduction-to-statistics-using-numpy",
+    "title": "https://mubaris.com/2017-09-09/introduction-to-statistics-using-numpy",
+    "source": "gatech/cs6476/numpy.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.scipy-lectures.org/advanced/advanced_numpy/index.html",
+    "title": "http://www.scipy-lectures.org/advanced/advanced_numpy/index.html",
+    "source": "gatech/cs6476/numpy.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube-nocookie.com/embed/4zHbI-fFIlI",
+    "title": "Embedded video",
+    "source": "gatech/cs6476/opencv.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_core/py_basic_ops/py_basic_ops.html",
+    "title": "http://docs.opencv.org/3.0-beta/doc/py_tutorials/py_core/py_basic_ops/py_basic_ops.html",
+    "source": "gatech/cs6476/opencv.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://github.com/owainlewis/awesome-artificial-intelligence",
+    "title": "Curated Awesome AI",
+    "source": "gatech/cs6601/ai_resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://github.com/vinta/awesome-python",
+    "title": "Curated Awesome Python",
+    "source": "gatech/cs6601/ai_resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://github.com/josephmisiti/awesome-machine-learning",
+    "title": "Curated Awesome ML",
+    "source": "gatech/cs6601/ai_resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://ai.berkeley.edu/home.html",
+    "title": "http://ai.berkeley.edu/home.html",
+    "source": "gatech/cs6601/ai_resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://cs231n.github.io/",
+    "title": "http://cs231n.github.io/",
+    "source": "gatech/cs6601/ai_resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://cs224d.stanford.edu/syllabus.html",
+    "title": "http://cs224d.stanford.edu/syllabus.html",
+    "source": "gatech/cs6601/ai_resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://courses.cs.washington.edu/courses/cse326/03wi/lectures/RaoLect20.pdf",
+    "title": "Topological Search (U. Washington)",
+    "source": "gatech/cs6601/constraint_satisfaction.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/images/isolation-L6_leafValues.svg",
+    "title": "Full Isolation Game Board",
+    "source": "gatech/cs6601/game_playing.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/images/isolation-L2_minMax.svg",
+    "title": "Isolation Game Tree - Level 2",
+    "source": "gatech/cs6601/game_playing.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/images/isolation-L3_minMax.svg",
+    "title": "Isolation Game Tree - Level 3",
+    "source": "gatech/cs6601/game_playing.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.cs.ubc.ca/~hutter/teaching/cpsc322/2-Search6-final.pdf",
+    "title": "University of British Columbia's slides",
+    "source": "gatech/cs6601/game_playing.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://movingai.com/dfid.html",
+    "title": "Visually how Iterative Deepening is different from DFS",
+    "source": "gatech/cs6601/game_playing.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cc.gatech.edu/~thad/6601-gradAI-fall2015/Korf_Multi-player-Alpha-beta-Pruning.pdf",
+    "title": "Korf 1991",
+    "source": "gatech/cs6601/game_playing.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cs.columbia.edu/~sal/notes/assign3-isolation-game.htm",
+    "title": "Columbia CS notes on the Isolation game",
+    "source": "gatech/cs6601/game_playing.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://classroom.udacity.com/courses/cs271/lessons/48720299/concepts/482718700923",
+    "title": "Game Playing (Udacity CS271)",
+    "source": "gatech/cs6601/game_playing.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://classroom.udacity.com/courses/cs271/lessons/48716317/concepts/484037340923",
+    "title": "Game Theory (Udacity CS271)",
+    "source": "gatech/cs6601/game_playing.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.ocf.berkeley.edu/~yosenl/extras/alphabeta/alphabeta.html",
+    "title": "https://www.ocf.berkeley.edu/~yosenl/extras/alphabeta/alphabeta.html",
+    "source": "gatech/cs6601/game_playing.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm",
+    "title": "Bellman-Ford",
+    "source": "gatech/cs6601/lesson_2_challenge_1.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://stackoverflow.com/questions/30067813/are-heuristic-functions-that-produce-negative-values-inadmissible",
+    "title": "StackOverflow discussion",
+    "source": "gatech/cs6601/lesson_2_challenge_1.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.aaai.org/Papers/AAAI/1997/AAAI97-109.pdf",
+    "title": "http://www.aaai.org/Papers/AAAI/1997/AAAI97-109.pdf",
+    "source": "gatech/cs6601/lesson_2_challenge_2.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://web.mit.edu/jmn/www/6.034/d-separation.pdf",
+    "title": "http://web.mit.edu/jmn/www/6.034/d-separation.pdf",
+    "source": "gatech/cs6601/lesson_6_challenge_4.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://stats.stackexchange.com/questions/90902/why-is-leave-one-out-cross-validation-loocv-variance-about-the-mean-estimate-f",
+    "title": "LOOCV",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cs.ucr.edu/~eamonn/CE/Bayesian%20Classification%20withInsect_examples.pdf",
+    "title": "Naive Bayes Classifier with insect examples",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://ti.arc.nasa.gov/m/profile/dhw/papers/78.pdf",
+    "title": "No Free Lunch Theorems",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Decision-Trees_Kohlsdorf.pdf",
+    "title": "Decision Trees, Daniel Kohlsdorf",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Tutorial-on-Boosting_Freund-Schapire.pdf",
+    "title": "Tutorial on Boosting",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Short-Introduction-to-Boosting_Freund-Schapire.pdf",
+    "title": "Short Introduction to Boosting",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://aima.eecs.berkeley.edu/slides-pdf/chapter20b.pdf",
+    "title": "Neural Networks Slides",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Mixture-Models-and-EM_Bishop.pdf",
+    "title": "Pattern Recognition and Machine Learning",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www-static.cc.gatech.edu/~thad/p/journal/using-gps-to-learn-significant-locations.pdf",
+    "title": "Using GPS to Learn Significant Locations and Predict Movement Across Multiple Users",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.math.unipd.it/~aiolli/corsi/0708/IR/Lez12.pdf",
+    "title": "Entropy and Information Gain",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Central_limit_theorem",
+    "title": "https://en.wikipedia.org/wiki/Central_limit_theorem",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.udacity.com/course/deep-learning--ud730",
+    "title": "https://www.udacity.com/course/deep-learning--ud730",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Deep_learning",
+    "title": "https://en.wikipedia.org/wiki/Deep_learning",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Unsupervised_learning",
+    "title": "https://en.wikipedia.org/wiki/Unsupervised_learning",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.wilddolphinproject.org/",
+    "title": "http://www.wilddolphinproject.org/",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.wilddolphinproject.org/our-research/chat-research/",
+    "title": "http://www.wilddolphinproject.org/our-research/chat-research/",
+    "source": "gatech/cs6601/machine_learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://web.archive.org/web/2020/http://datascience.ibm.com/blog/the-mathematics-of-machine-learning/",
+    "title": "IBM - Math of Machine Learning Topics / MOOCs",
+    "source": "gatech/cs6601/math_for_ai.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://ocw.mit.edu/courses/mathematics/18-06sc-linear-algebra-fall-2011/",
+    "title": "MIT - Linear Algebra",
+    "source": "gatech/cs6601/math_for_ai.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.khanacademy.org/math/linear-algebra",
+    "title": "Khan Academy - Linear Algebra",
+    "source": "gatech/cs6601/math_for_ai.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.khanacademy.org/math/calculus-home",
+    "title": "Khan Academy - Calculus",
+    "source": "gatech/cs6601/math_for_ai.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-042j-mathematics-for-computer-science-spring-2015/readings/",
+    "title": "MIT - Math for Computer Science",
+    "source": "gatech/cs6601/math_for_ai.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://ocw.mit.edu/courses/mathematics/18-05-introduction-to-probability-and-statistics-spring-2014/index.htm",
+    "title": "MIT - Intro to Probability and Statistics",
+    "source": "gatech/cs6601/math_for_ai.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/",
+    "title": "https://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/",
+    "source": "gatech/cs6601/math_for_ai.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.statlearning.com/",
+    "title": "An Introduction to Statistical Learning [PDF]",
+    "source": "gatech/cs6601/math_for_ai.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://hastie.su.domains/ElemStatLearn/",
+    "title": "Elements of Statistical Learning [PDF]",
+    "source": "gatech/cs6601/math_for_ai.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://courses.washington.edu/css490/2012.Winter/lecture_slides/02_math_essentials.pdf",
+    "title": "ML Math Essentials",
+    "source": "gatech/cs6601/math_for_ai.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://github.com/sindresorhus/awesome#computer-science",
+    "title": "https://github.com/sindresorhus/awesome#computer-science",
+    "source": "gatech/cs6601/math_for_ai.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md",
+    "title": "https://github.com/vhf/free-programming-books/blob/master/free-programming-books.md",
+    "source": "gatech/cs6601/math_for_ai.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://shop.oreilly.com/product/0636920050896.do",
+    "title": "http://shop.oreilly.com/product/0636920050896.do",
+    "source": "gatech/cs6601/math_for_ai.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://robots.stanford.edu/papers/EmeryMontemerlo04a.pdf",
+    "title": "Emery & Montemerlo (2004)",
+    "source": "gatech/cs6601/planning_under_uncertainty.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://classroom.udacity.com/courses/ud262/lessons/684808907/concepts/last-viewed",
+    "title": "Markov Decision Processes (Isbell & Littman)",
+    "source": "gatech/cs6601/planning_under_uncertainty.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://classroom.udacity.com/courses/ud262/lessons/643978935/concepts/last-viewed",
+    "title": "Reinforcement Learning (Isbell & Littman)",
+    "source": "gatech/cs6601/planning_under_uncertainty.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://classroom.udacity.com/courses/cs271/lessons/48724471/concepts/last-viewed",
+    "title": "Reinforcement Learning (Norvig & Thrun)",
+    "source": "gatech/cs6601/planning_under_uncertainty.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.columbia.edu/~cs2035/courses/ieor6614.S16/goldberg.pdf",
+    "title": "Latest version of slides explaining Landmarks, Reach, and Shortcuts",
+    "source": "gatech/cs6601/preprocessing_for_search.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cs.princeton.edu/courses/archive/spr06/cos423/Handouts/GH05.pdf",
+    "title": "Paper Introducing Landmarks",
+    "source": "gatech/cs6601/preprocessing_for_search.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.siam.org/meetings/alenex04/abstacts/rgutman1.pdf",
+    "title": "Paper Introducing Reach",
+    "source": "gatech/cs6601/preprocessing_for_search.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2004/07/tr-2004-24.pdf",
+    "title": "Paper Comparing all of these algorithms",
+    "source": "gatech/cs6601/preprocessing_for_search.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://ad-publications.informatik.uni-freiburg.de/ESA_transferpatterns_BCEGHRV_2010.pdf",
+    "title": "ESA transfer patterns (2010)",
+    "source": "gatech/cs6601/preprocessing_for_search.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://ad-publications.informatik.uni-freiburg.de/SIGSPATIAL_frequency_BS_2014.pdf",
+    "title": "SIGSPATIAL frequency (2014)",
+    "source": "gatech/cs6601/preprocessing_for_search.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://ad-publications.informatik.uni-freiburg.de/ALENEX_scalable_tp_BHS_2016.pdf",
+    "title": "ALENEX scalable transfer patterns (2016)",
+    "source": "gatech/cs6601/preprocessing_for_search.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://sites.nicholas.duke.edu/statsreview/probability/jmc/",
+    "title": "http://sites.nicholas.duke.edu/statsreview/probability/jmc/",
+    "source": "gatech/cs6601/probability.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.cs.princeton.edu/courses/archive/fall06/cos402/papers/korfrubik.pdf",
+    "title": "Finding Optimal Solutions to Rubik's Cube Using Pattern Databases",
+    "source": "gatech/cs6601/search.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cube20.org/qtm/",
+    "title": "God's Number is 26 in the Quarter-Turn Metric",
+    "source": "gatech/cs6601/search.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cc.gatech.edu/~thad/6601-gradAI-fall2015/02-search-01-Astart-ALT-Reach.pdf",
+    "title": "Reach for A* An Efficient Point-to-Point Shortest Path Algorithm",
+    "source": "gatech/cs6601/search.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cc.gatech.edu/~thad/6601-gradAI-fall2015/02-search-Goldberg03tr.pdf",
+    "title": "Computing the Shortest Path A* Search Meets Graph Theory.",
+    "source": "gatech/cs6601/search.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cc.gatech.edu/~thad/6601-gradAI-fall2015/02-search-Gutman04siam.pdf",
+    "title": "Reach-based Routing A New Approach to Shortest Path Algorithms Optimized for Road Networks.",
+    "source": "gatech/cs6601/search.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://norvig.com/",
+    "title": "http://norvig.com/",
+    "source": "gatech/cs6601/search.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Simulated_annealing",
+    "title": "https://en.wikipedia.org/wiki/Simulated_annealing",
+    "source": "gatech/cs6601/simulated_annealing.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://techtalktone.wordpress.com/2014/11/09/using-learning-by-recording-cases-to-solve-rpm/",
+    "title": "https://techtalktone.wordpress.com/2014/11/09/using-learning-by-recording-cases-to-solve-rpm/",
+    "source": "gatech/cs7637/08---learning-by-recording-cases.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://courses.csail.mit.edu/6.034f/ai3/",
+    "title": "Artificial Intelligence. Patrick Winston",
+    "source": "gatech/cs7637/course-material.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.computerju.com/Materials/AI/Luger-Artificial%20Intelligence-5th%20ed.pdf",
+    "title": "Structures and Strategies for Complex Problem Solving",
+    "source": "gatech/cs7637/course-material.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://github.com/dhconnelly/paip-python",
+    "title": "Paradigms of AI Programming",
+    "source": "gatech/cs7637/course-material.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://nbviewer.ipython.org/url/norvig.com/ipython/Probability.ipynb",
+    "title": "http://nbviewer.ipython.org/url/norvig.com/ipython/Probability.ipynb",
+    "source": "gatech/cs7641/beautiful-probability.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://art.uniroma2.it/basili/MLWM09/002_DecTree_Weka.pdf",
+    "title": "Weka Tutorial",
+    "source": "gatech/cs7641/decision-trees.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.autonlab.org/tutorials/infogain.html",
+    "title": "Information Gain",
+    "source": "gatech/cs7641/decision-trees.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://cdn.oreilly.com/oreilly/booksamplers/9781449319793_sampler.pdf",
+    "title": "Data Analysis",
+    "source": "gatech/cs7641/python-for-data-analysis.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://waikato.github.io/weka-wiki/",
+    "title": "Weka For Regression",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cs.waikato.ac.nz/~remco/weka_bn/node13.html",
+    "title": "Weka Command Line Options",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.brc.dcs.gla.ac.uk/courses/bioinformatics-strand/CMSB/tutorials/WekaTutorial.html",
+    "title": "Weka Tutorial",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://stackoverflow.com/questions/17227977/step-by-step-guide-to-train-a-multilayer-perceptron-for-the-xor-case-in-weka",
+    "title": "StackOverflow question for XOR case",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cs.cmu.edu/~awm/tutorials.html",
+    "title": "Andrew Moore's tutorial",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cs.wustl.edu/~sg/CS527_SP02/learning-theory-notes.pdf",
+    "title": "Computational Learning Theory",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.cis.upenn.edu/~mkearns/papers/pruning.pdf",
+    "title": "Bottom up Pruning",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.coursera.org/course/machlearning",
+    "title": "Introduction to Machine Learning in Coursera",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.udacity.com/course/intro-to-machine-learning--ud120",
+    "title": "Introduction to Machine Learning in Udacity",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.udacity.com/course/intro-to-inferential-statistics--ud201",
+    "title": "Introduction to Inferential Statistics",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.udacity.com/course/intro-to-descriptive-statistics--ud827",
+    "title": "Introduction to Descriptive Statistics",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://greenteapress.com/thinkstats2/html/index.html",
+    "title": "Think Stats, Exploratory Data Analysis in Python",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.eecs.berkeley.edu/Faculty/Homepages/jordan.html",
+    "title": "Michael Jordan",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://storage.googleapis.com/supplemental_media/udacityu/454308909/Bayesian%20Learning%20Extension.pdf",
+    "title": "Bayesian Learning Extension",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cs.waikato.ac.nz/ml/weka/",
+    "title": "http://www.cs.waikato.ac.nz/ml/weka/",
+    "source": "gatech/cs7641/reading-list.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cs.cmu.edu/~tom/pubs/MachineLearning.pdf",
+    "title": "http://www.cs.cmu.edu/~tom/pubs/MachineLearning.pdf",
+    "source": "gatech/cs7641/the-discipline-of-machine-learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.wikiwand.com/en/Temporal_difference_learning",
+    "title": "https://www.wikiwand.com/en/Temporal_difference_learning",
+    "source": "gatech/cs7641/the-discipline-of-machine-learning.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.amazon.com/b?node=16008589011",
+    "title": "Amazon Go",
+    "source": "gatech/cs8803-O01/conditional_particle_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://aws.amazon.com/rekognition/",
+    "title": "Deep learning for computer vision",
+    "source": "gatech/cs8803-O01/conditional_particle_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://ieeexplore.ieee.org/document/1013439/",
+    "title": "http://ieeexplore.ieee.org/document/1013439/",
+    "source": "gatech/cs8803-O01/conditional_particle_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.cs.cmu.edu/~mmde/",
+    "title": "http://www.cs.cmu.edu/~mmde/",
+    "source": "gatech/cs8803-O01/conditional_particle_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://pdfs.semanticscholar.org/9ec1/16137bf6b3ca6a14903472725f4460eeab7d.pdf",
+    "title": "https://pdfs.semanticscholar.org/9ec1/16137bf6b3ca6a14903472725f4460eeab7d.pdf",
+    "source": "gatech/cs8803-O01/conditional_particle_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.probabilistic-robotics.org/",
+    "title": "http://www.probabilistic-robotics.org/",
+    "source": "gatech/cs8803-O01/index.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://storage.googleapis.com/supplemental_media/udacityu/48723604/Lesson2Notes.pdf",
+    "title": "Embedded PDF",
+    "source": "gatech/cs8803-O01/kalman_filter_notes.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/KYEr4BXhD_E",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O01/kalman_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Stanley_(vehicle",
+    "title": "https://en.wikipedia.org/wiki/Stanley_(vehicle",
+    "source": "gatech/cs8803-O01/kalman_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://robots.stanford.edu/papers/thrun.stanley05.pdf",
+    "title": "http://robots.stanford.edu/papers/thrun.stanley05.pdf",
+    "source": "gatech/cs8803-O01/kalman_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Unimodality",
+    "title": "https://en.wikipedia.org/wiki/Unimodality",
+    "source": "gatech/cs8803-O01/kalman_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Multimodal_distribution",
+    "title": "https://en.wikipedia.org/wiki/Multimodal_distribution",
+    "source": "gatech/cs8803-O01/kalman_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.deepideas.net/robot-localization-histogram-filter/",
+    "title": "http://www.deepideas.net/robot-localization-histogram-filter/",
+    "source": "gatech/cs8803-O01/localization.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://storage.googleapis.com/supplemental_media/udacityu/48646841/Lesson4Notes.pdf",
+    "title": "Embedded PDF",
+    "source": "gatech/cs8803-O01/motion_planning_notes.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://storage.googleapis.com/supplemental_media/udacityu/48704330/Lesson3Notes.pdf",
+    "title": "Embedded PDF",
+    "source": "gatech/cs8803-O01/particle_filter_notes.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Posterior_predictive_distribution",
+    "title": "Posterior Predictive Distributions",
+    "source": "gatech/cs8803-O01/particle_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Posterior_probability",
+    "title": "Posterior Probability",
+    "source": "gatech/cs8803-O01/particle_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/4S-sx5_cmLU?rel=0&amp;controls=0&amp;showinfo=0&amp;start=85",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O01/particle_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/Ut0plKzMV0Q?rel=0&amp;controls=0&amp;showinfo=0",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O01/particle_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://americanhistory.si.edu/sites/default/files/styles/blog_image/public/NMAH-ET2012-14098.jpg",
+    "title": "External image",
+    "source": "gatech/cs8803-O01/particle_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Circle_radians.gif",
+    "title": "External image",
+    "source": "gatech/cs8803-O01/particle_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://americanhistory.si.edu/",
+    "title": "http://americanhistory.si.edu/",
+    "source": "gatech/cs8803-O01/particle_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://americanhistory.si.edu/collections/search/object/nmah_1377824",
+    "title": "http://americanhistory.si.edu/collections/search/object/nmah_1377824",
+    "source": "gatech/cs8803-O01/particle_filters.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://storage.googleapis.com/supplemental_media/udacityu/48743150/Lesson5Notes.pdf",
+    "title": "Embedded PDF",
+    "source": "gatech/cs8803-O01/pid_notes.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://storage.googleapis.com/supplemental_media/udacityu/48696626/Lesson6Notes.pdf",
+    "title": "Embedded PDF",
+    "source": "gatech/cs8803-O01/slam_notes.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=GrdnW4Cb_GY",
+    "title": "https://www.youtube.com/watch?v=GrdnW4Cb_GY",
+    "source": "gatech/cs8803-O08/chapter1.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=1GZOzTJOBuM",
+    "title": "https://www.youtube.com/watch?v=1GZOzTJOBuM",
+    "source": "gatech/cs8803-O08/chapter1.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://stackoverflow.com/questions/27763544/direct-coded-vs-table-driven-lexer",
+    "title": "https://stackoverflow.com/questions/27763544/direct-coded-vs-table-driven-lexer",
+    "source": "gatech/cs8803-O08/chapter1.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://drive.google.com/drive/u/0/folders/1QCkexJoXsIev9KOC9opHVl8_o1AjkbIV",
+    "title": "Google Drive folder",
+    "source": "gatech/cs8803-O08/lessons.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://en.wikipedia.org/wiki/Ratfor",
+    "title": "Ratfor \u2014 first compiler",
+    "source": "gatech/cs8803-O08/lessons.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://savage.net.au/Ron/html/graphviz2.marpa/Lexing.and.Parsing.Overview.html",
+    "title": "Overview of lexing and parsing",
+    "source": "gatech/cs8803-O08/lessons.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://stackoverflow.com/a/3614928/18852",
+    "title": "Difference between lexer and parser",
+    "source": "gatech/cs8803-O08/lessons.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://expressions.wingtiplabs.com/game",
+    "title": "http://expressions.wingtiplabs.com/game",
+    "source": "gatech/cs8803-O08/lessons.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.txt2re.com/",
+    "title": "http://www.txt2re.com/",
+    "source": "gatech/cs8803-O08/lessons.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://regexr.com/",
+    "title": "http://regexr.com/",
+    "source": "gatech/cs8803-O08/lessons.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://regexcrossword.com/",
+    "title": "https://regexcrossword.com/",
+    "source": "gatech/cs8803-O08/lessons.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://smlweb.cpsc.ucalgary.ca/start.html",
+    "title": "http://smlweb.cpsc.ucalgary.ca/start.html",
+    "source": "gatech/cs8803-O08/lessons.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://jflap.org/",
+    "title": "http://jflap.org/",
+    "source": "gatech/cs8803-O08/lessons.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=queUceGJqh0",
+    "title": "https://www.youtube.com/watch?v=queUceGJqh0",
+    "source": "gatech/cs8803-O08/lessons.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://cs.wellesley.edu/~cs301/fall03/",
+    "title": "http://cs.wellesley.edu/~cs301/fall03/",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about",
+    "title": "https://lagunita.stanford.edu/courses/Engineering/Compilers/Fall2014/about",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.cs.indiana.edu/~dyb/pubs/nano-jfp.pdf",
+    "title": "https://www.cs.indiana.edu/~dyb/pubs/nano-jfp.pdf",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.clear.rice.edu/comp412/Lectures/",
+    "title": "https://www.clear.rice.edu/comp412/Lectures/",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://github.com/aalhour/awesome-compilers",
+    "title": "https://github.com/aalhour/awesome-compilers",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://hackingoff.com/compilers/scanner-generator#",
+    "title": "http://hackingoff.com/compilers/scanner-generator#",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://people.inf.ethz.ch/zmajo/teaching/cd_ss17/",
+    "title": "http://people.inf.ethz.ch/zmajo/teaching/cd_ss17/",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://dinosaur.compilertools.net/",
+    "title": "http://dinosaur.compilertools.net/",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://elvis.rowan.edu/~bergmann/books/cd/books.html",
+    "title": "http://elvis.rowan.edu/~bergmann/books/cd/books.html",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www2.cs.unibw.de/Tools/Syntax/english/index.html",
+    "title": "http://www2.cs.unibw.de/Tools/Syntax/english/index.html",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://www.sablecc.org/",
+    "title": "http://www.sablecc.org/",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://grammatica.percederberg.net/",
+    "title": "https://grammatica.percederberg.net/",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://re2c.org/",
+    "title": "http://re2c.org/",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://github.com/fbb-git/bisoncpp",
+    "title": "https://github.com/fbb-git/bisoncpp",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.gnu.org/software/bison/",
+    "title": "https://www.gnu.org/software/bison/",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://booksite.elsevier.com/9780120884780/",
+    "title": "http://booksite.elsevier.com/9780120884780/",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://booksite.elsevier.com/9780120884780/Manual/index.html",
+    "title": "http://booksite.elsevier.com/9780120884780/Manual/index.html",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://gcc.godbolt.org/",
+    "title": "https://gcc.godbolt.org/",
+    "source": "gatech/cs8803-O08/resources.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/SH5F-rwWEog?list=PLEbnTDJUr_IcPtUXFy2b1sGRPsLFMghhS",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/n5UWAaw_byw",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/APJ_Eh60Qwo",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/0kiTNN2kHyY",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/5s4CWn6GiwY",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/VSkfnRfNuwI",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/Nxj0g1mk5Ak",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/1XD2wk52-Cs",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/queUceGJqh0",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/fmRgKPLEROg",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/embed/rdnAJBoFKOw",
+    "title": "Embedded video",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.youtube.com/watch?v=3_VCoBfrt9c",
+    "title": "https://www.youtube.com/watch?v=3_VCoBfrt9c",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "http://faculty.ycp.edu/~dhovemey/fall2010/cs340/lecture/lecture9.html",
+    "title": "http://faculty.ycp.edu/~dhovemey/fall2010/cs340/lecture/lecture9.html",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://web.stanford.edu/class/cs143/lectures/lecture07.pdf",
+    "title": "https://web.stanford.edu/class/cs143/lectures/lecture07.pdf",
+    "source": "gatech/cs8803-O08/youtube.rst",
+    "notes": ""
+  },
+  {
+    "url": "https://www.omscs.gatech.edu/",
+    "title": "OMSCS",
+    "source": "gatech/index.rst",
+    "notes": ""
+  }
+]

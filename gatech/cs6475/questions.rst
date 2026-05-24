@@ -12,7 +12,7 @@ Epsilon to Coded Photography
 
 - Fourier transform and Fourier optics
 - Optical heterodyning
-- Helmholtz reciprocity: https://en.wikipedia.org/wiki/Helmholtz_reciprocity
+- Helmholtz reciprocity
 
 Light Field
 -----------
@@ -28,6 +28,6 @@ Computational illumination asks: *what spatio-temporal modulations of light best
 
 - Changing color filters, tunable wavelength filters, or diffraction gratings
 - Better lighting control during capture enables richer scene representations
-- Reference: https://en.wikipedia.org/wiki/Harold_Eugene_Edgerton
+- Reference
 
 **Epsilon photography approach**: Each camera setting records partial scene information; the final image is reconstructed by computationally merging multiple observations, combining the best features from each.

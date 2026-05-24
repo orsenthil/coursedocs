@@ -1,64 +1,15 @@
 Resources
 =========
 
-
 What is Aperture?
 
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/YojL7UQTVhc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-
-Introduction to Aperture
-
-* https://digital-photography-school.com/aperture/
-
-What is ISO?
-
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/q8cj9Lj9w-g" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-* https://digital-photography-school.com/iso-settings/
-
-
-What is Exposure time?
-
-
-The length of the time the image sensor in the camera is exposed to light.
-
-
-.. raw:: html
-
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/7R9ZTxoTOSk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-What is Shutter Speed
-
-* https://digital-photography-school.com/shutter-speed/
-
-Nikon D3300 User Guide
 ----------------------
-
-* https://www.youtube.com/watch?v=bFbatsu-o1Q
 
 Android Apps
 ------------
 
-* https://play.google.com/store/apps/details?id=com.riseupgames.proshot2&hl=en
-* https://play.google.com/store/apps/details?id=pl.vipek.camera2&hl=en
-
-
 Camera Links
 ------------
 
-* https://en.wikipedia.org/wiki/Canon_PowerShot_S90
-* https://www.nikonusa.com/en/nikon-products/product-archive/dslr-cameras/d3300.html
-
 Courses Links
 -------------
-
-* https://cs.brown.edu/courses/cs129/
-* https://github.gatech.edu/omscs6475
-* https://compphotography.wordpress.com/

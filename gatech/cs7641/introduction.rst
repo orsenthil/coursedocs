@@ -25,7 +25,6 @@ Supervised Learning
 - Sell count of identical items in 3 months → **regression** (continuous count).
 - Per-account hacked or not → **classification** (0/1 discrete labels).
 
-
 Unsupervised Learning
 =====================
 
@@ -55,7 +54,6 @@ Unsupervised Learning
 - Market segments from customer data only → **unsupervised**.
 - Diabetes yes/no (like tumor labels) → **supervised**.
 
-
 Supervised Learning — Reference Detail
 --------------------------------------
 
@@ -73,7 +71,6 @@ Supervised Learning — Reference Detail
 - More features → more cues for prediction.
 - Challenge: storing infinite feature vectors.
 - SVM: mathematical trick (covered later) to work in rich feature spaces efficiently.
-
 
 Unsupervised Learning — Reference Detail
 ----------------------------------------

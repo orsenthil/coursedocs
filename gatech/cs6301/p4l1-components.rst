@@ -1,7 +1,6 @@
 Components
 ==========
 
-
 Bottom-Up Design
 -----------------
 
@@ -10,7 +9,6 @@ In contrast to top-down design (requirements → architecture → refinement), t
 **Component** (Szyperski's definition): an executable unit of independent production, acquisition, and deployment that can be composed into a functioning subsystem.
 
 Note: this usage of "component" differs from the architectural sense used in earlier lessons.
-
 
 Buy vs. Build
 --------------
@@ -34,7 +32,6 @@ A key industrial decision: acquire software assets externally or construct them 
 
 Other third-party resource models: **software libraries** (PThreads), **cloud-based services** (NIST Time Service), **turn-key equipment** (TomTom GPS), **IDE plugins** (Checkstyle), **open source** (PHP).
 
-
 Component Characteristics
 --------------------------
 
@@ -43,7 +40,6 @@ Component Characteristics
 - **Configurable** — tailored to needs and target environment
 - **Composable** — with other components and non-component code
 - **Conform to a component model** prescribing syntax, semantics, and composition
-
 
 Component Life Cycle
 --------------------
@@ -55,7 +51,6 @@ Three phases (vs. the usual two of development/runtime):
 3. **Runtime** — components are instantiated and executed
 
 Major differences between component technologies depend on **when composition occurs** and whether a component **repository** exists.
-
 
 Component Models
 -----------------
@@ -74,7 +69,6 @@ Prominent component models:
 - **Microsoft**: COM, DCOM, OLE, ActiveX, COM+, .NET (CLI, CLR, ASP.NET)
 - **OMG**: CORBA/CCM with OMA and IDL
 - **Web Services**: WSDL, UDDI, SOAP
-
 
 Component Issues
 -----------------
@@ -152,7 +146,6 @@ Tension between **proprietary** solutions (vendor lock-in) and **open standards*
 
 Examples: HTML (domain standard, W3C), UNIX (proprietary, AT&T), Direct3D (proprietary, Microsoft), OpenGL (open standard), Java (now proprietary, Oracle), JavaScript (open/public domain).
 
-
 Component Frameworks
 --------------------
 
@@ -174,7 +167,6 @@ Key differences:
 - **Protocols**: Java/CORBA → IIOP, XML, RMI; COM/CLR → DCOM; CLR → XML, SOAP
 - **Platform variability**: Java/CLI → single VM for all platforms; COM → Microsoft platforms only; CORBA → per-language IDL bindings, per-platform ORBs
 
-
 Future Directions
 -----------------
 
@@ -183,7 +175,6 @@ Open concerns as the component marketplace matures:
 - **Liability** — apportioning responsibility when multi-component systems fail
 - **Cross-cutting QoS** — satisfying quality guarantees across independent components
 - **Contract persistence** — balancing new versions against support for existing features
-
 
 Summary
 -------

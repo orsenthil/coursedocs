@@ -1,7 +1,6 @@
 Motion Planning
 ===============
 
-
 * The process of finding a path from start location to the goal location is called planning.
 * Robot Motion Planning
 
@@ -15,30 +14,23 @@ Goal: Find the minimum cost path
 Compute Cost
 ------------
 
-
 Compute Cost 2
 --------------
-
 
 Optimal Path
 ------------
 
-
 Optimal Path 2
 --------------
-
 
 Maze
 ----
 
-
 Maze 2
 ------
 
-
 First Search Program
 --------------------
-
 
 Motion Planning
 ===============
@@ -1147,4 +1139,3 @@ and they are are also some very major paradigms for artificial intelligence in g
 In the next class we talk about how to turn this into actual robot motion.
 We'll talk about continuous state spaces, and we'll talk about what's called "control,"
 in which we make a robot move. I'll see you next week.
-

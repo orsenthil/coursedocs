@@ -22,4 +22,3 @@ Chapters
    routing
    software_defined_networking
    spam
-

@@ -91,7 +91,7 @@ Structured CSPs
 - **Algorithm**: choose a root, apply directed arc consistency from leaves to root (topological order), then assign values from root to leaves.
 - For non-tree graphs: **tree decomposition** or **cutset conditioning** to exploit near-tree structure.
 
-Reference: `Topological Search (U. Washington) <https://courses.cs.washington.edu/courses/cse326/03wi/lectures/RaoLect20.pdf>`_
+Reference: Topological Search (U. Washington)
 
 Iterative (Local Search) Methods
 ---------------------------------

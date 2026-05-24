@@ -1,12 +1,10 @@
 UML Class Models
 ================
 
-
 Overview
 --------
 
 The **UML Class Model Diagram** (also called the Static Structure Diagram) is the most popular and most complex UML diagram type. It is a structure diagram used to model classes, interfaces, objects, relationships, and their properties. Not all features need to be used at once — start abstract and refine over time.
-
 
 Classes
 -------
@@ -53,7 +51,6 @@ Each operation can specify:
 
 Example: A class-scoped operation could return the total count of instantiated objects, since no single instance can answer questions about other instances.
 
-
 Advanced Class Features
 -----------------------
 
@@ -61,7 +58,6 @@ Advanced Class Features
 - **Parameterized classes** — correspond to Java generics or C++ templates (e.g., a ``Set<Vehicle>``)
 - **Nested classes** — classes defined within other classes (Java inner classes)
 - **Composite objects** — objects containing other objects, depicted as class rectangles nested within class rectangles
-
 
 Relationships
 -------------
@@ -71,7 +67,6 @@ Three kinds of relationships in UML class model diagrams:
 - **Association** — e.g., "people drive vehicles" (solid line)
 - **Generalization** — e.g., "a car is a kind of vehicle" (solid line with triangle)
 - **Dependency** — e.g., "cars depend on pollution laws" (dashed line with arrowhead)
-
 
 Associations
 ------------
@@ -101,7 +96,6 @@ Links
 
 Just as classes have instances, associations have **links**. Example: "IBM hires Bob" and "IBM hires Alice" are two links of the same "hires" association.
 
-
 Aggregation and Composition
 ----------------------------
 
@@ -120,7 +114,6 @@ Persons and Spouses             Association
 Bank Accounts and Patrons       Aggregation
 Fonts and Glyphs                Composition
 ==============================  =================
-
 
 Generalization
 --------------
@@ -145,7 +138,6 @@ Superclass/subclass subtlety
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Omnivores vs. Vegetarians: Vegetarians are the **superclass** because generalization requires that subclass instances have all parent properties. Omnivores have an additional property (eating meat) that vegetarians lack, making omnivores the subclass.
-
 
 Key Takeaway
 ------------

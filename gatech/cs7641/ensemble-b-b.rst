@@ -1,7 +1,6 @@
 Ensemble Learning: Boosting and Bagging
 =======================================
 
-
 Ensemble Learning Overview
 --------------------------
 
@@ -28,7 +27,6 @@ Core Idea
 - Each rule is partially right but individually unreliable.
 - Need a principled way to **combine** them → ensemble learning.
 
-
 Ensemble Learning Algorithm (General Form)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -42,7 +40,6 @@ Ensemble Learning Algorithm (General Form)
 
 1. How to select **subsets** of data?
 2. How to **combine** the learned rules?
-
 
 Bagging (Bootstrap Aggregation)
 -------------------------------
@@ -86,7 +83,6 @@ Housing Data Example
 
 **Name**: **Bagging** = **Bootstrap Aggregation**.
 
-
 Boosting
 --------
 
@@ -105,7 +101,6 @@ Motivation vs Bagging
 - Intuition: spend effort on what you haven't mastered (like learning a skill).
 - Spam analogy: don't keep finding rules for already-classified mail; focus on misclassified messages.
 - Weighting prevents **thrashing** — mastered examples down-weighted so they aren't forgotten entirely.
-
 
 Distribution-Weighted Error
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -142,7 +137,6 @@ Distribution-Weighted Error
 - Rare mistakes matter less; frequent mistakes matter more.
 - Boosting uses distributions to define **"hardest"** = highest-weight misclassified examples.
 
-
 Weak Learner
 ~~~~~~~~~~~~
 
@@ -172,7 +166,6 @@ Weak Learner
 - Fix: add more/better hypotheses (e.g., make H3 correct on :math:`x_2`).
 - Finding a weak learner is **easy for 2 seconds, hard for 4** — actually a strong requirement.
 - Need diverse hypotheses that do well on different example subsets.
-
 
 Boosting Algorithm (Pseudocode)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -207,7 +200,6 @@ Boosting Algorithm (Pseudocode)
 | :math:`Z_t` | Normalization constant for valid distribution            |
 +-------------+----------------------------------------------------------+
 
-
 Distribution Update
 ~~~~~~~~~~~~~~~~~~~
 
@@ -231,7 +223,6 @@ Distribution Update
 - Effect: misclassified (hard) examples get more weight next round.
 - Weak learner guarantee ensures progress on re-weighted hard examples.
 
-
 Final Hypothesis
 ~~~~~~~~~~~~~~~~
 
@@ -243,7 +234,6 @@ Final Hypothesis
 - :math:`\alpha_t = \frac{1}{2}\ln\frac{1-\epsilon_t}{\epsilon_t}` — measure of hypothesis quality.
 - Sign function thresholds: positive → +1, negative → −1, zero → undecided.
 - Information discarded by sign (confidence) becomes important in SVM lecture connection.
-
 
 Worked Example: Three Boxes
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -280,7 +270,6 @@ Worked Example: Three Boxes
 - Simple axis-aligned weak learners → complex decision boundary via weighted combination + sign nonlinearity.
 - Analogous to: decision tree shapes, neural net weighted sums, weighted linear regression / k-NN.
 
-
 Why Boosting Works (Intuition)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -293,7 +282,6 @@ Why Boosting Works (Intuition)
 7. Formal proof in assigned reading (AdaBoost convergence bound).
 
 **Information gain perspective**: each round must pick up new information; exponential weights prevent thrashing.
-
 
 Summary
 -------

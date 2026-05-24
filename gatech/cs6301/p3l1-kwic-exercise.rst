@@ -1,12 +1,10 @@
 KWIC Exercise
 =============
 
-
 Introduction
 ------------
 
 This exercise, first described by David Parnas, asks you to design **four different architectures** for the same problem: producing a **Key Word in Context (KWIC) index**. It illustrates how architectural choices affect maintainability, performance, and resilience to change.
-
 
 KWIC Index Definition
 ---------------------
@@ -25,7 +23,6 @@ A line of *n* words produces *n* circular shifts (including the original). **Sto
 - With the Wind **Gone**
 - the Wind Gone **With**
 - Wind Gone With **the**
-
 
 Four Architectural Solutions
 ----------------------------
@@ -104,7 +101,6 @@ Implicit Invocation
 - (−) Harder to reason about control flow and debug (implicit, not explicit invocation)
 - (−) Performance overhead similar to ADT
 
-
 Comparative Evaluation
 ----------------------
 
@@ -118,7 +114,6 @@ Quality                 Shared Data       Pipe & Filter    ADT            Implic
 **Interactive delete**  Difficult         Very difficult   Easy (add op)  Easy
 **Understandability**   Simple            Very intuitive   Clear          Harder to trace
 ======================  ================  ===============  =============  ====================
-
 
 Resilience to Change
 --------------------
@@ -140,7 +135,6 @@ Potential enhancements a customer might request:
 - **Reusability** → Pipe and Filter (independent, pluggable filters)
 - **Data representation change** → Shared Data is *worst* (shared assumptions break everything)
 - **Interactive deletion** → ADT is *best* (just add a delete operation to the Line ADT)
-
 
 Lessons
 -------

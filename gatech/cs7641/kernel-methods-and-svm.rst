@@ -1,7 +1,6 @@
 Kernel Methods and SVM
 ======================
 
-
 Support Vector Machines
 -----------------------
 
@@ -15,7 +14,6 @@ Motivation: Maximum Margin
 - Lines close to one class risk misclassifying nearby unseen points → **overfitting** (believing training data too much).
 - **Least commitment principle**: be consistent with data while committing as little as possible.
 - This is the foundation of **Support Vector Machines (SVMs)**.
-
 
 Hyperplane Notation
 ~~~~~~~~~~~~~~~~~~~
@@ -53,7 +51,6 @@ Hyperplane Notation
 
      w^T x + b = -1 \quad \text{(negative class boundary)}
 
-
 Margin Derivation
 ~~~~~~~~~~~~~~~~~
 
@@ -90,7 +87,6 @@ Margin Derivation
 
 - Setting :math:`w = 0` would maximize margin but fail to classify — need constraints.
 
-
 Primal Optimization Problem
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -115,7 +111,6 @@ Primal Optimization Problem
 - Form: minimize quadratic function subject to linear constraints.
 - SVM primal always has a solution; always has a **unique** solution.
 - Solved via standard QP solvers.
-
 
 Dual Form (Lagrange Multipliers)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -144,7 +139,6 @@ Transform primal → dual (via Lagrange multipliers / KKT):
 
 **Recover bias** :math:`b`: plug any support vector (on margin boundary) into :math:`w^T x + b = \pm 1`.
 
-
 Support Vectors
 ~~~~~~~~~~~~~~~
 
@@ -166,7 +160,6 @@ Support Vectors
 - SVM pre-computes which points matter (via QP) — can discard the rest.
 - Not just nearest neighbors; QP selects the informative ones.
 
-
 Non-Linearly Separable Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -181,7 +174,6 @@ Non-Linearly Separable Data
 - + points form inner cluster; − points form outer ring.
 - No line separates classes in 2D.
 - **Solution**: transform data to higher dimensions where separation becomes linear.
-
 
 Feature Mapping and the Kernel Trick
 ------------------------------------
@@ -225,7 +217,6 @@ Feature Map φ — Worked Example
 - **Never compute** :math:`\phi` — just square the dot product in code.
 - Same optimization, implicit high-dimensional mapping.
 
-
 Kernels
 -------
 
@@ -237,7 +228,6 @@ Definition
 - Mechanism for injecting **domain knowledge** into SVM learning.
 - Every valid kernel corresponds to some (possibly infinite-dimensional) feature map :math:`\phi`.
 - :math:`K(x, y)` = dot product in that implicit feature space.
-
 
 Common Kernels
 ~~~~~~~~~~~~~~
@@ -281,7 +271,6 @@ Common Kernels
 
 - S-shaped transition between similarity levels.
 
-
 Kernel Properties
 ~~~~~~~~~~~~~~~~~
 
@@ -292,7 +281,6 @@ Kernel Properties
 - **Mercer Condition**: technical requirement (positive semi-definite) for kernel to behave as a proper similarity/distance function. Required for all SVM math to hold.
 - Intuition: kernel must relate points consistently, not be arbitrary.
 - In practice: almost any reasonable similarity function has an equivalent (possibly infinite-dimensional) feature map.
-
 
 SVM Summary
 -----------
@@ -322,7 +310,6 @@ SVM Summary
 +---------------------------+--------------------------------------------------+
 | Non-linear separation     | Implicit high-dim mapping via kernel             |
 +---------------------------+--------------------------------------------------+
-
 
 Boosting and Margins
 --------------------
@@ -368,7 +355,6 @@ Why Boosting Resists Overfitting
 5. Large margins → less overfitting (same principle as SVM).
 
 - More weak learners → smoother, less overfit classifier (counter-intuitive: more complexity, less overfit).
-
 
 When Boosting Overfits
 ~~~~~~~~~~~~~~~~~~~~~~

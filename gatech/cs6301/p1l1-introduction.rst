@@ -1,7 +1,6 @@
 Introduction
 ============
 
-
 Learning Objectives
 -------------------
 
@@ -13,7 +12,6 @@ By the end of this course, students will be able to:
 - Apply object-oriented design techniques
 - Select and use appropriate software design patterns
 - Participate in a design review
-
 
 Course Structure
 ----------------

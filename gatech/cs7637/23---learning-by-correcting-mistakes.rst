@@ -1,7 +1,6 @@
 Learning by Correcting Mistakes
 ===============================
 
-
 Introduction
 ------------
 
@@ -13,7 +12,6 @@ The process follows three phases:
 2. Isolate the knowledge element responsible (using explanation)
 3. Repair the knowledge so the same error cannot recur
 
-
 Credit Assignment
 -----------------
 
@@ -24,7 +22,6 @@ Credit Assignment
 - Architecture (structural limitations)
 
 This lesson focuses on errors in classification knowledge. Credit assignment is considered by some (e.g., Marvin Minsky) to be the *central* problem in learning, because agents operate in dynamic worlds — even a perfect agent will eventually fail as the world changes and must be able to self-correct.
-
 
 False and True Suspicious Features
 -----------------------------------
@@ -42,7 +39,6 @@ To narrow down which suspicious feature is responsible:
 
 This is analogous to the focus problem in incremental concept learning, where examples are ordered so each differs from the current concept in exactly one feature.
 
-
 Explanation-Free Repair
 -----------------------
 
@@ -55,7 +51,6 @@ And the agent incorrectly classified a pail (movable handle) as a cup, the repai
     IF object has a handle AND handle is fixed AND object is concave → cup
 
 This is similar to incremental concept learning — the concept definition evolves with new examples. However, this approach has a limitation: the feature set can grow large quickly, and there is no understanding of *why* "handle is fixed" matters. Without explanation, the learning is shallow.
-
 
 Explanation-Based Repair
 ------------------------
@@ -75,7 +70,6 @@ With background knowledge, the agent can build a richer explanation:
 
 The key insight: classification alone is insufficient. Explanation leads to deeper, more robust learning by capturing *why* features matter for a concept.
 
-
 Connection to Incremental Concept Learning
 ------------------------------------------
 
@@ -88,7 +82,6 @@ This reflects a core KBAI principle: reasoning, learning, and memory are tightly
 3. Uses feedback to drive learning (converting the learning task into a problem-solving task)
 
 Learning by correcting mistakes treats learning as problem-solving: isolate the fault, explain it, then repair it. This connects directly to metacognition — the agent reasons about its own reasoning.
-
 
 Cognitive Connection
 --------------------

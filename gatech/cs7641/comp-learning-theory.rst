@@ -16,9 +16,7 @@ Comp Learning Theory
 
     M \ge 1/\epsilon (\ln |H| + \ln 1 / \delta)
 
-
 **What did we learn?**
 
 * What is learnable?
 * Sample Complexity.
-

@@ -6,7 +6,6 @@ Kernels
 
 A **kernel** (filter mask) is a fixed-size array of numerical coefficients with an anchor point, typically at the center. The kernel is convolved with the image to produce filtered output.
 
-.. image:: https://docs.opencv.org/2.4/_images/filter_2d_tutorial_kernel_theory.png
    :align: center
    :height: 300
    :width: 450

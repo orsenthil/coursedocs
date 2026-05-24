@@ -11,7 +11,6 @@ VC Dimensions
 - Need :math:`m` large when :math:`\epsilon` small (low error) or :math:`\delta` small (low failure probability).
 - **Problem**: many hypothesis classes are **infinite** (e.g. real-valued parameters).
 
-
 Which Hypothesis Spaces are Infinite
 ------------------------------------
 
@@ -25,7 +24,6 @@ Which Hypothesis Spaces are Infinite
 
 Nearly everything discussed is infinite syntactically → need a different complexity measure.
 
-
 Maybe It Is Not So Bad
 ----------------------
 
@@ -33,7 +31,6 @@ Maybe It Is Not So Bad
 - Only **11** semantically distinct behaviors (thresholds 1…10 and "all false").
 - **Syntactic** :math:`\mathcal{H}`: all describable hypotheses; **semantic**: distinct input–output functions.
 - Track only **meaningfully different** hypotheses, not every syntactic variant (same idea for decision trees re-splitting useless attributes).
-
 
 Power of Hypothesis Space
 -------------------------
@@ -45,7 +42,6 @@ Power of Hypothesis Space
 - Two points :math:`x_1 < x_2`: cannot get **(+ , −)** — everything left of :math:`\theta` is always negative.
 - **VC dimension = 1** (weak / low expressiveness despite infinite syntactic class).
 
-
 What Does VC Stand For?
 -----------------------
 
@@ -53,7 +49,6 @@ What Does VC Stand For?
 - **Shattering**: hypothesis class **shatters** set :math:`S` if for every labeling of points in :math:`S`, some :math:`h \in \mathcal{H}` realizes it.
 - **VC dimension** :math:`\mathrm{VC}(\mathcal{H})`: size of the **largest** set that can be shattered (or :math:`\infty\)).
 - Finite VC dimension → finite sample complexity even if :math:`|\mathcal{H}| = \infty\).
-
 
 Quiz: Intervals on the Real Line
 --------------------------------
@@ -64,7 +59,6 @@ Quiz: Intervals on the Real Line
   - **Upper bound**: three collinear points — pattern **+ − +** impossible (interval containing 1 and 3 must include middle).
 - Proving VC ≥ :math:`d`: **∃** one set of :math:`d` points that shatters.
 - Proving VC < :math:`d+1`: **∀** arrangements of :math:`d+1` points, **∃** some labeling no hypothesis achieves.
-
 
 Quiz: Linear Separators in :math:`\mathbb{R}^2`
 -----------------------------------------------
@@ -77,7 +71,6 @@ Quiz: Linear Separators in :math:`\mathbb{R}^2`
   - 4 points: **XOR** labeling on square corners (+ on opposite corners) **not** linearly separable — fails for any layout (collinear / collapsed cases also fail).
 - **:math:`d`-dimensional** linear separators: VC = **:math:`d+1`** (matches number of parameters: :math:`d` weights + :math:`\theta`).
 
-
 Quiz: Convex Polygons in :math:`\mathbb{R}^2`
 ---------------------------------------------
 
@@ -86,7 +79,6 @@ Quiz: Convex Polygons in :math:`\mathbb{R}^2`
 - Works for any :math:`n` → **VC dimension = :math:`\infty`** (unbounded parameters as sides grow).
 - Circles alone have VC = 3; convex polygons are **more** expressive in this sense.
 - Polygons with vertices on unit circle are **convex** by construction.
-
 
 Sample Complexity
 -----------------
@@ -100,7 +92,6 @@ Sufficient sample size (with probability :math:`1-\delta\), error ≤ :math:`\ep
 - Same structure as finite case: **:math:`1/\epsilon\)** upfront; failure term **:math:`\log(1/\delta\)`**; hypothesis complexity via **VC dimension** (linear), not :math:`\log|\mathcal{H}|\).
 - VC dimension plays role analogous to **:math:`\log|\mathcal{H}|\)** in finite bounds (VC not logged; size of finite class is).
 
-
 VC Dimension of Finite Hypothesis Classes
 ---------------------------------------
 
@@ -112,7 +103,6 @@ VC Dimension of Finite Hypothesis Classes
 - **:math:`\mathcal{H}`** is PAC-learnable **iff** **VC dimension is finite**.
 - Finite VC → learnable (bound above); infinite VC → not PAC-learnable.
 - VC dimension captures learnability in one quantity.
-
 
 Intervals: Proof Checklist
 --------------------------
@@ -134,7 +124,6 @@ Intervals: Proof Checklist
 - Lower bound (:math:`\mathrm{VC} \ge d`): **∃** one point set of size :math:`d` that shatters (**existential**).
 - Upper bound (:math:`\mathrm{VC} < d+1`): **∀** point arrangements of size :math:`d+1`, **∃** a labeling no :math:`h \in \mathcal{H}` achieves (**for all** / **not exists**).
 
-
 Linear Separators: Additional Arguments
 ---------------------------------------
 
@@ -155,7 +144,6 @@ Linear Separators: Additional Arguments
 - 2D linear separator (:math:`\mathbf{w} \in \mathbb{R}^2`, :math:`\theta`): VC = 3 = #parameters.
 - :math:`d`-dim hyperplane: VC = :math:`d+1` (:math:`d` weights + bias :math:`\theta`).
 
-
 Convex Polygons: VC = ∞
 -----------------------
 
@@ -165,7 +153,6 @@ Convex Polygons: VC = ∞
 - :math:`n` can grow without bound → **unbounded VC dimension**.
 - Vertices on circle ⇒ polygon **convex** (subtended by circle).
 - Contrast: **circle** hypothesis class alone has VC = 3; convex polygons strictly more expressive.
-
 
 Connecting to Original Sample Bound
 -----------------------------------
@@ -178,7 +165,6 @@ Connecting to Original Sample Bound
 
 - For finite :math:`\mathcal{H}`: :math:`\mathrm{VC}(\mathcal{H}) \le \log_2|\mathcal{H}|` because shattering :math:`D` points needs :math:`2^D` distinct hypotheses.
 - Explains why finite bound logs hypothesis count while VC bound does not.
-
 
 Summary
 -------

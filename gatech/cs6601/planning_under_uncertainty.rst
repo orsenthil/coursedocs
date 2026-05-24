@@ -93,7 +93,7 @@ Overview
 
 When the agent cannot directly observe the full state, use a **POMDP**.
 
-* Reference: `Emery & Montemerlo (2004) <http://robots.stanford.edu/papers/EmeryMontemerlo04a.pdf>`_
+* Reference: Emery & Montemerlo (2004)
 
 POMDP vs. MDP
 ~~~~~~~~~~~~~~
@@ -142,6 +142,6 @@ When the transition model :math:`T` and/or reward function :math:`R` are unknown
 Further Study
 ~~~~~~~~~~~~~
 
-- `Markov Decision Processes (Isbell & Littman) <https://classroom.udacity.com/courses/ud262/lessons/684808907/concepts/last-viewed>`_
-- `Reinforcement Learning (Isbell & Littman) <https://classroom.udacity.com/courses/ud262/lessons/643978935/concepts/last-viewed>`_
-- `Reinforcement Learning (Norvig & Thrun) <https://classroom.udacity.com/courses/cs271/lessons/48724471/concepts/last-viewed>`_
+- Markov Decision Processes (Isbell & Littman)
+- Reinforcement Learning (Isbell & Littman)
+- Reinforcement Learning (Norvig & Thrun)

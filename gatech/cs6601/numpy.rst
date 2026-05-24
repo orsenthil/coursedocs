@@ -10,7 +10,6 @@ numpy arrays
 
     Access using matrix[2,3] which will return the value in row 2 and column 3.
 
-
 sum of log probabilities
 ------------------------
 

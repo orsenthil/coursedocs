@@ -12,4 +12,3 @@ C Programming Coding Conventions
 * `sizeof` use without the brackets.
 
 * If the data structure is `void *`, it is usually a pointer.
-

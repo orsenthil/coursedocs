@@ -198,4 +198,3 @@ will install specific flow-table entries that mitigate the effects of the Denial
 The assignment that is spelled out on the home page has links to some more in-depth
 descriptions of this particular assignment and your task is writing a Py Resonance application to
 mitigate the DOS attack.
-

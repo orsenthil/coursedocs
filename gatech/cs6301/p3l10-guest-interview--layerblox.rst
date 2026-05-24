@@ -1,14 +1,12 @@
 Guest Interview- LayerBlox
 ==========================
 
-
 Background
 ----------
 
 Guest: a Georgia Tech CS PhD (software architecture, software engineering, UI design), former Michigan State faculty (12 years, formal modeling of software architecture), then ~6 years at **LogicBlox** — a company specializing in smart databases that applies modeling and formal methods ideas in practice.
 
 LogicBlox uses an **agile process** with short iterations (1–2 week cycles), demos at iteration end, and Jira for issue tracking. New projects start with an **architectural assessment** (~1 month of prototyping and scalability analysis), then scale up developers gradually.
-
 
 LayerBlox
 ---------
@@ -29,7 +27,6 @@ Key properties:
 - Related to **layered architectures**: each layer is understood via its exported interface, independent of implementation or layers beneath it
 - Layering and tiering are **independent** — generated code can go in any tier (middle tier, data tier, etc.)
 
-
 Feature-Based Design
 --------------------
 
@@ -37,7 +34,6 @@ Feature-Based Design
 - Feature analysis identifies the different features that compose into a capability (e.g., forecasting)
 - Features may be implementation-centric rather than customer-visible
 - Feature-based design produces **small, highly reusable fragments** that are composable into different application variants
-
 
 Assembly Specifications
 -----------------------
@@ -50,7 +46,6 @@ An assembly specification describes one variant. It defines:
 
 Different assembly specifications produce **different variants** (different components) that can coexist in the system.
 
-
 Supporting Tools
 ----------------
 
@@ -58,7 +53,6 @@ Built on top of the code generator:
 
 - **Graphical visualization** tool (dot-format graphs) showing dependencies and refinement composition — useful for tracking design simplification over time
 - **Code metrics** tracking refinement size — over time, large refinements break into compositions of smaller ones; metrics identify candidates for proactive decomposition
-
 
 Lessons Learned
 ---------------

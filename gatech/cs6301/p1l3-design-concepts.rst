@@ -1,7 +1,6 @@
 Design Concepts
 ===============
 
-
 Definitions
 -----------
 
@@ -10,7 +9,6 @@ Definitions
 - **Craft** — Skilled occupation built on long experience; more experience with a problem domain yields better designs.
 - **Art** — Conscious use of skill, taste, and creative imagination. Aesthetic principles can inform software design.
 
-
 Programming vs. Software Design
 --------------------------------
 
@@ -18,7 +16,6 @@ Two key differences:
 
 - **Scale** — Programming targets hundreds to thousands of lines; software design addresses large systems (e.g., the ISS has 30 million lines of code).
 - **Non-functional requirements** — Largely irrelevant in small programs but central to software design, which is fundamentally about managing trade-offs among non-functional constraints.
-
 
 Software Design
 ---------------
@@ -31,7 +28,6 @@ Software Design
 Detail design notations include pseudocode, structured programming (sequences, conditions, repetition, sub-procedures), flowcharts, call graphs, and decision tables.
 
 **Design trade-off example:** A weather prediction program using a mesh grid — arrays offer superior performance (hardware-tuned since Fortran), while objects offer flexibility for irregular grid geometries.
-
 
 Approaches to Software Design
 ------------------------------
@@ -50,7 +46,6 @@ Design issues include:
 - Long-term maintainability vs. short-term delivery pressure
 - Tool selection
 
-
 Design Validation
 -----------------
 
@@ -62,7 +57,6 @@ Validation is typically done through team reviews, walk-throughs, or inspections
 
 Early detection of design problems is far cheaper than discovering them at delivery time.
 
-
 Design Documentation
 --------------------
 
@@ -73,7 +67,6 @@ Large, complex systems require documentation for long-term maintenance. Traditio
 The **Leonardo Project** (MCC, 1980s) went further, capturing: stakeholders, design issues and their possible resolutions, design decisions with rationale, version/revision history, constraints, and artifact groupings.
 
 **Design rationale** — the reasons behind design decisions — is critical for downstream maintainers. Capture documentation requirements upfront and record them as the design evolves.
-
 
 Coupling and Cohesion
 ---------------------
@@ -88,14 +81,12 @@ Java examples:
 - **Packages** reduce coupling — encapsulating names and requiring explicit imports restricts unintended dependencies.
 - **Class inheritance** increases coupling — the child depends on parent details, so parent changes can break children.
 
-
 Information Hiding
 ------------------
 
 Developed by **David Parnas**: encapsulate a module's capabilities behind an abstract interface. Clients depend only on the interface, giving freedom to change implementation details without breaking them.
 
 Good candidates for information hiding: hardware device access, database/server access, algorithm specifics, and data structure implementations.
-
 
 Abstraction and Refinement
 --------------------------
@@ -108,14 +99,12 @@ All design methods support abstraction (managing complexity by thinking at highe
 - Parameterized procedures/functions
 - Non-determinism at the specification level
 
-
 Aesthetics in Design
 --------------------
 
 **Aquinas** resolved beauty into *wholeness, harmony, and radiance* — in software terms: completeness, consistency, and conceptual integrity.
 
 **Pascal** apologized for writing a long letter because he lacked the time to write a short one — elegant, simple-looking solutions that satisfy complex requirements demand significant time and energy.
-
 
 Design Philosophy
 -----------------

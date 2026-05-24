@@ -23,13 +23,11 @@ Cross-Validation
 * Leave-One-Out CV (LOOCV_): k = n; low bias, high variance of error estimate
 * Use cross-validation to select hyperparameters (e.g., k in k-NN, tree depth)
 
-.. _LOOCV: http://stats.stackexchange.com/questions/90902/why-is-leave-one-out-cross-validation-loocv-variance-about-the-mean-estimate-f
-
 Gaussian Distribution and Bayes Classification
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 * Gaussian (Normal) distribution: parameterized by mean μ and variance σ²
-* Central Limit Theorem: sum of many independent random variables → Gaussian (https://en.wikipedia.org/wiki/Central_limit_theorem)
+* Central Limit Theorem: sum of many independent random variables → Gaussian
 * Decision boundary between two Gaussians: point where posterior probabilities are equal
 * Classification error = area of overlap between class-conditional distributions
 
@@ -44,17 +42,13 @@ Gaussian Distribution and Bayes Classification
 * Assumes features are conditionally independent given class: P(x₁,x₂,...,xₙ|C) = ∏ P(xᵢ|C)
 * Maximum likelihood estimation for parameters from training data
 * Works well even when independence assumption is violated
-* Reference: `Naive Bayes Classifier with insect examples`_
-
-.. _Naive Bayes Classifier with insect examples: http://www.cs.ucr.edu/~eamonn/CE/Bayesian%20Classification%20withInsect_examples.pdf
+* Reference: Naive Bayes Classifier with insect examples
 
 **No Free Lunch Theorem:**
 
 * No single learning algorithm dominates all others across all possible problems
 * Algorithm choice depends on problem structure and assumptions
-* Reference: `No Free Lunch Theorems`_ (Wolpert & Macready)
-
-.. _No Free Lunch Theorems: https://ti.arc.nasa.gov/m/profile/dhw/papers/78.pdf
+* Reference: No Free Lunch Theorems (Wolpert & Macready)
 
 **Naive Bayes vs k-NN:**
 
@@ -79,9 +73,7 @@ Basics
 * Discrete attributes: multi-way split on values
 * Continuous attributes: binary split on threshold (e.g., x > t)
 * Decision trees are understandable and easy to explain
-* Reference: `Decision Trees, Daniel Kohlsdorf`_
-
-.. _Decision Trees, Daniel Kohlsdorf: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Decision-Trees_Kohlsdorf.pdf
+* Reference: Decision Trees, Daniel Kohlsdorf
 
 Entropy and Information Gain
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -127,10 +119,7 @@ Boosting
 * Final classifier: weighted vote of all weak learners
 * AdaBoost: exponential loss, weight α_t = ½ ln((1-ε_t)/ε_t) where ε_t is weighted error
 * Highly resistant to overfitting in practice (margin theory)
-* References: `Tutorial on Boosting`_, `Short Introduction to Boosting`_ (Freund & Schapire)
-
-.. _Tutorial on Boosting: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Tutorial-on-Boosting_Freund-Schapire.pdf
-.. _Short Introduction to Boosting: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Short-Introduction-to-Boosting_Freund-Schapire.pdf
+* References: Tutorial on Boosting, Short Introduction to Boosting (Freund & Schapire)
 
 Neural Networks
 ---------------
@@ -180,16 +169,14 @@ Back-Propagation
 * For output layer: δⱼ = (yⱼ - tⱼ)f'(netⱼ)
 * For hidden layer: δⱼ = f'(netⱼ) Σ wⱼₖδₖ
 * Issues: local minima, slow convergence, vanishing gradients in deep networks
-* Reference: `Neural Networks Slides`_
-
-.. _Neural Networks Slides: http://aima.eecs.berkeley.edu/slides-pdf/chapter20b.pdf
+* Reference: Neural Networks Slides
 
 Deep Learning
 ~~~~~~~~~~~~~
 
 * Multiple hidden layers learn hierarchical representations
 * Techniques to train deep nets: pre-training, dropout, batch normalization, ReLU activations
-* Resources: https://www.udacity.com/course/deep-learning--ud730, https://en.wikipedia.org/wiki/Deep_learning
+* Resources:
 
 Unsupervised Learning
 ---------------------
@@ -201,7 +188,6 @@ k-Means Clustering
 * Algorithm: (1) initialize k centroids, (2) assign points to nearest centroid, (3) recompute centroids, (4) repeat until convergence
 * Converges to local optimum; sensitive to initialization
 * Hard assignment: each point belongs to exactly one cluster
-* https://en.wikipedia.org/wiki/Unsupervised_learning
 
 Expectation Maximization (EM)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -210,9 +196,7 @@ Expectation Maximization (EM)
 * E-step: compute posterior probability of each point belonging to each cluster
 * M-step: update parameters (means, covariances, mixing weights) using soft assignments
 * Guaranteed to increase likelihood at each iteration; converges to local maximum
-* Reference: `Pattern Recognition and Machine Learning`_ (Bishop)
-
-.. _Pattern Recognition and Machine Learning: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/notes/Machine-Learning/Mixture-Models-and-EM_Bishop.pdf
+* Reference: Pattern Recognition and Machine Learning (Bishop)
 
 Gaussian Mixture Models (GMM)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -222,15 +206,11 @@ Gaussian Mixture Models (GMM)
 * Trained using EM algorithm
 * More flexible than k-means: captures elliptical clusters, soft boundaries
 * Application: learning significant locations from GPS data (Ashbrook & Starner)
-* Reference: `Using GPS to Learn Significant Locations and Predict Movement Across Multiple Users`_
-
-.. _Using GPS to Learn Significant Locations and Predict Movement Across Multiple Users: http://www-static.cc.gatech.edu/~thad/p/journal/using-gps-to-learn-significant-locations.pdf
+* Reference: Using GPS to Learn Significant Locations and Predict Movement Across Multiple Users
 
 Resources
 ---------
 
-* `Entropy and Information Gain`_
-* Wild Dolphin Project: http://www.wilddolphinproject.org/
-* CHAT (Cetacean Hearing and Telemetry): http://www.wilddolphinproject.org/our-research/chat-research/
-
-.. _Entropy and Information Gain: http://www.math.unipd.it/~aiolli/corsi/0708/IR/Lez12.pdf
+* Entropy and Information Gain
+* Wild Dolphin Project
+* CHAT (Cetacean Hearing and Telemetry)

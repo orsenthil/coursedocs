@@ -24,5 +24,3 @@ Sum over all cubies and **divide by 8** (since each twist moves 8 cubies) to mai
 - Sum of Manhattan distances of **edge cubies** ÷ 4
 
 Edge cubies have higher expected Manhattan distance (~5.5) vs corner cubies (~3), making the edge-only heuristic more informative despite the per-node computation cost.
-
-Reference: http://www.aaai.org/Papers/AAAI/1997/AAAI97-109.pdf

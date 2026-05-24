@@ -1,12 +1,10 @@
 Acme
 ====
 
-
 Architectural Description Languages
 ------------------------------------
 
 As awareness of software architecture has grown, so have tools for drawing, simulating, analyzing, reverse engineering, and reporting on architectures. A prerequisite for tool interoperation is a standard **Architectural Description Language (ADL)**.
-
 
 ACME Overview
 -------------
@@ -26,7 +24,6 @@ Key features:
 - **Generics, families, and types** for defining architectural styles
 - Descriptions can be converted to **first-order logic** for use by automatic reasoning tools
 
-
 Architecture Vocabulary
 -----------------------
 
@@ -39,7 +36,6 @@ Acme's seven core terms:
 5. **System** — Acme's term for a configuration; the set of components and connectors
 6. **Attachments** — bindings of ports to roles (specifying the configuration)
 7. **Representations** — hierarchical decomposition across multiple levels of abstraction, with **rep-maps** binding between levels
-
 
 Simple Client-Server Example
 -----------------------------
@@ -55,7 +51,6 @@ To add error communication: add new ports (``err-trap`` on client, ``alert`` on 
 
 AcmeStudio can render these descriptions graphically (components as rectangles, connectors as circles) and generate textual Acme code from diagrams.
 
-
 Decomposition
 -------------
 
@@ -64,14 +59,12 @@ Two kinds of decomposition for managing complexity:
 - **Horizontal** — dividing at the same level of abstraction (e.g., body → digestive, respiratory, immune systems). Handled by Acme's components and connectors.
 - **Vertical** — going deeper into the abstraction hierarchy (e.g., respiratory → lungs, trachea, diaphragm). Handled by Acme's **representations**.
 
-
 Representations and Rep-Maps
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Any component or connector can have one or more lower-level **representations** (supporting multiple views of the same element).
 
 Example: a component with ports ``easyRequests`` and ``hardRequests`` can have a representation containing sub-components ``fastButDumb`` and ``slowButSmart``. The **binding section** (rep-map) maps ``easyRequests`` → ``fastButDumb.P`` and ``hardRequests`` → ``slowButSmart.P``.
-
 
 Extending ACME
 --------------
@@ -91,7 +84,6 @@ Uses include:
 
 Example: a client component might include ``property Aesop-style : style_id``; a server might specify ``property idempotence : boolean = true`` and ``property max-concurrent-clients : integer = ...``; a connector might declare ``property synchronization`` and ``property protocol`` (e.g., using the Wright ADL).
 
-
 Families (Architectural Styles)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -99,12 +91,10 @@ Families (Architectural Styles)
 
 Example: a ``PipeAndFiltersFamily`` defines component type ``FilterType`` and connector type ``PipeType``. Systems declared with type ``PipeAndFiltersFamily`` then use ``filter1 : FilterType``, ``pipe1 : PipeType``, etc.
 
-
 Open Semantic Framework
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Acme descriptions can be exported as **first-order logic** for use by external automated reasoning tools (e.g., theorem provers). Example: ``∃ client, server, RPC such that client is a Component ∧ server is a Component ∧ RPC is a Connector ∧ attached(client.sendRequest, RPC.caller) ∧ ...``
-
 
 ACME Limitations
 ----------------

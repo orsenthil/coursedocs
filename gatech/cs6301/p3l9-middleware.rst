@@ -1,14 +1,12 @@
 Middleware
 ==========
 
-
 Distributed Systems Architecture
 ---------------------------------
 
 This lesson focuses on architectures for **heterogeneous distributed systems** — multiple, potentially different computers collaborating to provide an application. A classic example is a client-server insurance system: web browsers on agent laptops → web server running business logic → database storing policy data.
 
 **Middleware** is the collection of technologies between client and server that address **non-functional constraints** of the distributed system. Middleware is conceptually similar to architectural connectors. Material drawn from the Emmerich paper.
-
 
 Context
 -------
@@ -18,7 +16,6 @@ The Internet has driven explosive growth in distributed applications, bringing:
 - More customers, heavier loads, increasing resource demands → **performance and resource concerns**
 - Specialized hardware (ATMs, card readers, mobile phones, Square readers) → **device heterogeneity**
 - Increasingly powerful applications requiring **integration** of existing components
-
 
 Characteristic Issues
 ---------------------
@@ -31,7 +28,6 @@ Five major categories of issues in distributed systems:
 4. Scalability
 5. Heterogeneity
 
-
 Network Communication
 ~~~~~~~~~~~~~~~~~~~~~
 
@@ -41,7 +37,6 @@ Key concerns when applications span a network:
 - **Reliable delivery**: strategies like retransmission risk duplicate processing
 - **Data representation**: heterogeneous machines may represent data differently
 - **Transactions**: concurrent readers/writers on shared databases risk inconsistency
-
 
 Data Transportability
 ~~~~~~~~~~~~~~~~~~~~~
@@ -54,7 +49,6 @@ Also called serialization (Java), marshalling, or pickling. Differences to resol
 
 Standards: Internet standard x680, Google **Protocol Buffers**.
 
-
 ACID Transactions
 ~~~~~~~~~~~~~~~~~
 
@@ -66,7 +60,6 @@ For reliable database access with multiple concurrent readers/writers:
 - **Durable** — committed transactions are permanently persisted
 
 Not always required — e.g., a voting app where approximate vote counts are acceptable may skip ACID for performance.
-
 
 Coordination
 ~~~~~~~~~~~~
@@ -84,7 +77,6 @@ Design decisions:
 - **Persistence**: database vs. file system for server state
 - **Concurrency**: handling multiple simultaneous clients; transaction integrity
 
-
 Reliability
 ~~~~~~~~~~~
 
@@ -99,7 +91,6 @@ Strategies and their trade-offs:
 
 Classic **reliability-performance trade-off**: replication improves reliability but costs time and resources.
 
-
 Scalability
 ~~~~~~~~~~~
 
@@ -112,7 +103,6 @@ How easily the application grows (more users, greater load). Scaling typically m
 - **Migration transparency** — resources can move between machines without affecting the system
 - **Replication transparency** — data replication is invisible to the application
 
-
 Heterogeneity
 ~~~~~~~~~~~~~
 
@@ -124,7 +114,6 @@ Approaches to managing heterogeneity:
 - **Normative architectures** — e.g., OMG's **Model-Driven Architecture (MDA)** separating machine-independent from machine-dependent parts
 - **Vendor platforms** — JEE (Oracle/Sun), .NET (Microsoft), WebSphere (IBM)
 - **LAMP stack** — Linux (OS), Apache (web server), MySQL (database), PHP (server-side scripting)
-
 
 Kinds of Middleware
 -------------------
@@ -151,7 +140,6 @@ Object/Component Middleware
 
 Extension of RPC to remote objects — send messages to objects on remote machines. Issues include **object identity** (memory addresses not globally unique) and **cross-machine inheritance/delegation**. Provides synchronous and asynchronous messaging, marshalling, exception handling. Examples: CORBA, COM (Microsoft), Java RMI (Oracle).
 
-
 Software Engineering Issues
 ----------------------------
 
@@ -170,7 +158,6 @@ Software Engineering Issues
 - **Device constraints**: power, memory, processing limitations on mobile/embedded devices
 - **Mobility**: handling intermittent connectivity
 
-
 Web Services
 ------------
 
@@ -181,7 +168,6 @@ Software systems supporting **machine-to-machine interaction** over the web usin
 - **Discovery**: **UDDI** (Universal Description, Discovery and Integration) — Yellow Pages for services
 
 Example platform: **J2EE** — web browser (HTML/applets) ↔ web server + EJB containers (business logic) ↔ database services.
-
 
 Service-Oriented Architecture (SOA)
 ------------------------------------
@@ -196,7 +182,6 @@ Characteristics:
 - Services are published, located, and dynamically invoked
 
 **Re-architecting risk**: converting legacy mainframe applications to SOA involves switching from control-driven to reactive/event-driven models — a major and costly transformation with significant risk.
-
 
 Summary
 -------

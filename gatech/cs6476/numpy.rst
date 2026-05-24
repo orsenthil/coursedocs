@@ -30,6 +30,3 @@ For numerically stable sum of log probabilities:
 
 Resources
 ---------
-
-- https://mubaris.com/2017-09-09/introduction-to-statistics-using-numpy
-- http://www.scipy-lectures.org/advanced/advanced_numpy/index.html

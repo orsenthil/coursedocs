@@ -1,7 +1,6 @@
 Localization
 ============
 
-
 Introduction
 ============
 So welcome to Artificial Intelligence for Robotics.
@@ -972,7 +971,6 @@ If we now normalize the 0.25 over here with the 0.3, we get 0.833,
 which is the same as 5/6.
 That's our posterior probability we hold the fair coin after we observed H.
 
-
 Terms
 =====
 
@@ -980,9 +978,5 @@ Terms
 * Grid Based Localization
 * Histogram Filters
 
-
 Resources
 =========
-
-* http://www.deepideas.net/robot-localization-histogram-filter/
-

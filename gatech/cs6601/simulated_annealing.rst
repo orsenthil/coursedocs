@@ -56,7 +56,7 @@ Annealing Intuition
 
 Inspired by metallurgical annealing: heating metal and slowly cooling it allows atoms to settle into a low-energy crystalline structure. Analogous energy minimization produces globally optimal configurations.
 
-* Reference: https://en.wikipedia.org/wiki/Simulated_annealing
+* Reference
 
 Algorithm
 ~~~~~~~~~

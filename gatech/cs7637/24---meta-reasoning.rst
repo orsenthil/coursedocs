@@ -1,7 +1,6 @@
 Meta-Reasoning
 ==============
 
-
 Introduction
 ------------
 
@@ -15,7 +14,6 @@ Meta-reasoning addresses:
 - Strategy selection and integration
 - Goal-based autonomy
 
-
 Mistakes in Knowledge, Reasoning, and Learning
 -----------------------------------------------
 
@@ -24,7 +22,6 @@ Mistakes in Knowledge, Reasoning, and Learning
 **Reasoning errors** — Example from means-ends analysis in the blocks world: the agent pursues multiple goals and reaches a cul-de-sac where no progress is possible without undoing earlier work. Metacognition detects the reasoning error and selects a different strategy (e.g., problem reduction to decompose into independent subgoals).
 
 **Learning errors** — The agent reflects on the *process* that produced incorrect knowledge. If explanation-based learning built a faulty explanation, the agent asks: "What went wrong in my learning process? How do I fix the process itself so the same class of error doesn't recur?"
-
 
 Knowledge Gaps
 --------------
@@ -38,7 +35,6 @@ When the agent detects a gap, it **spawns a learning goal** — acquire knowledg
 
 Similarly, **reasoning gaps** can be addressed by spawning a new reasoning goal. In the blocks-world cul-de-sac, the agent sets up a goal to resolve the impasse, selects problem reduction as a strategy, decomposes into independent subgoals, then returns to means-ends analysis for each.
 
-
 The Blurred Line Between Cognition and Metacognition
 ----------------------------------------------------
 
@@ -50,7 +46,6 @@ Rather than worrying about which box a process belongs in, focus on:
 - What is the process itself?
 
 Think of deliberation and metacognition as overlapping spaces rather than disjoint layers.
-
 
 Strategy Selection
 ------------------
@@ -65,7 +60,6 @@ Given a problem, an agent may have many applicable methods (case-based reasoning
 
 The same analysis applies to selecting among learning methods (e.g., incremental concept learning for sequential examples vs. decision-tree learning for batch examples).
 
-
 Strategy Integration
 --------------------
 
@@ -78,12 +72,10 @@ An agent is not locked into a single strategy. As problem-solving evolves, metac
 
 Example of seamless integration: means-ends analysis reaches a cul-de-sac → metacognition sets up a reasoning goal → selects problem reduction → decomposes into independent subgoals → returns to means-ends analysis for each subgoal.
 
-
 Meta-Meta-Reasoning
 -------------------
 
 Does metacognition need an additional meta-meta layer reasoning over it? No — metacognition uses the same structures (cases, rules, models) as deliberation, so it is already equipped to reason about itself recursively. Current theories model this as a two-layer system (deliberation + metacognition) where metacognition monitors itself without requiring infinite regress.
-
 
 Goal-Based Autonomy
 -------------------
@@ -91,7 +83,6 @@ Goal-Based Autonomy
 **Goal-based autonomy** arises when an agent receives a *new* goal it wasn't explicitly programmed for. Rather than failing brittly, a robust agent uses metacognition to adapt its reasoning and learning methods to the new goal.
 
 Example: A robot programmed to assemble cameras is asked to *disassemble* one. Metacognition enables dynamic, flexible selection and integration of strategies to achieve goals the agent was not originally designed for — mirroring the robustness and flexibility of human cognition.
-
 
 Connections Across the Course
 -----------------------------
@@ -103,7 +94,6 @@ Metacognition has been implicit throughout the course:
 - **Production systems** — agent reaches an impasse, spawns a learning goal, uses chunking to extract a rule from episodic memory
 - **Version spaces** — agent monitors convergence of its specific and general models
 - **Diagnosis** — when treatment fails, the agent diagnoses its own diagnostic process
-
 
 Cognitive Connection
 --------------------

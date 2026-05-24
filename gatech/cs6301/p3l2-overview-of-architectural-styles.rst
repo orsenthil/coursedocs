@@ -1,18 +1,15 @@
 Overview of Architectural Styles
 ================================
 
-
 Introduction
 ------------
 
 Software architecture is the highest level of expression of a design problem. In practice it often amounts to a **box-and-arrow diagram** depicting major components and their dependencies (control flow, data flow). This lesson takes a more principled look at what architecture entails.
 
-
 Informal Definition
 -------------------
 
 Software architecture is the **organization of a system into component subsystems or modules**. It is almost universally done in layers — from an abstract top-level decomposition down to implementable units. Architects often employ **stereotypical architectural styles** to guide the decomposition.
-
 
 Analysis Models vs. Architecture
 ---------------------------------
@@ -23,7 +20,6 @@ When determining components solely from an analysis model:
 - **False:** Analysis models should represent the design approach (mixing analysis and design biases the solution)
 - **True:** Analysis models are resilient to hardware changes (no assumptions about running environment)
 - **False:** Analysis models include all required components (utility/collection classes are added during design)
-
 
 Definitions of Software Architecture
 -------------------------------------
@@ -42,7 +38,6 @@ Definitions of Software Architecture
 - **Connector** — communication **protocol** among components. Defines who speaks, in what order, what information passes, and error handling. May have code to enforce the protocol.
 - **Configuration** — the **topology** of components wired together via connectors (plugging ports into connector ends).
 
-
 Components
 ----------
 
@@ -56,7 +51,6 @@ Components
 - **Staff structure** — Conway's Law: system structure mirrors organization structure
 - **System lifetime trajectory** — anticipated evolution should influence decomposition
 
-
 APIs
 ----
 
@@ -65,7 +59,6 @@ A component's **Application Programming Interface (API)** specifies names, metho
 - A **language binding** (in a specific programming language)
 - A higher-level abstraction (e.g., OCL)
 - An **Architectural Description Language (ADL)**
-
 
 Connectors
 ----------
@@ -78,12 +71,10 @@ Connectors
 - **Asymmetric** relationship (caller/callee)
 - **Synchronous** — caller blocks until callee returns
 
-
 Configuration
 -------------
 
 A configuration is a set of specific associations between components and connectors — the wiring of the system. It defines the overall topology.
-
 
 Terminology
 -----------
@@ -92,7 +83,6 @@ Terminology
 - **As-Intended vs. As-Built architecture** — the planned architecture vs. what is actually constructed
 - **Architectural drift** — divergence of As-Built from As-Intended during development (e.g., incorporating an available component that doesn't perfectly match the plan)
 - **Architectural erosion** — divergence during **maintenance** phase, often from time-pressured fixes that don't update architectural documentation
-
 
 Architectural Styles
 --------------------
@@ -105,7 +95,6 @@ An **architectural style** is a named collection of design decisions appropriate
 - **Process guidance** — team organization, development steps, validation timing
 
 **Example:** Client-server — physically separated components; requesters (clients) ask service providers (servers). Servers are unaware of client identities; clients are isolated from each other; multiple servers can scale dynamically.
-
 
 Catalog of Architectural Styles
 -------------------------------
@@ -137,14 +126,12 @@ Catalog of Architectural Styles
 - **Shared Memory** — components share a common memory space
 - **Table-Driven Interpreter** — requests as expressions in a language; parsed and dispatched by an interpreter
 
-
 Style Issues
 ------------
 
 - **Heterogeneous systems** — real systems often require **multiple styles** (e.g., client-server + GUI event-driven + layered)
 - **Domain-Specific Software Architecture (DSSA)** / **Reference Architecture** — a shared architecture for a family of related systems (e.g., variants of military aircraft control systems); describes commonality, with per-variant extensions
 - **Semantics** — precise definitions of styles are needed to enable reuse and tool support
-
 
 Architecture Description Languages
 -----------------------------------
@@ -156,7 +143,6 @@ Architecture Description Languages
 - **Simulation**
 
 Notable ADLs include **Acme**, Wright, Rapide, Darwin, and UniCon.
-
 
 Architectural Evaluation
 -------------------------
@@ -173,7 +159,6 @@ Early detection of architectural problems is critical because mistakes are costl
 4. Select the solution with least negative impact
 
 **ATAM (Architecture Tradeoff Analysis Method):** A more formal evaluation method developed at the Software Engineering Institute; systematically analyzes trade-offs among quality attributes.
-
 
 Summary
 -------

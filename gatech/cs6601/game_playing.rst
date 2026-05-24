@@ -19,10 +19,8 @@ Isolation Game
 Isolation is a two-player, zero-sum, perfect-information game on a grid.
 Players alternate moves; a player who cannot move loses.
 
-* `Columbia CS notes on the Isolation game <http://www.cs.columbia.edu/~sal/notes/assign3-isolation-game.htm>`_
-* `Full Isolation Game Board`_
-
-.. _Full Isolation Game Board: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/images/isolation-L6_leafValues.svg
+* Columbia CS notes on the Isolation game
+* Full Isolation Game Board
 
 Building a Game Tree
 ~~~~~~~~~~~~~~~~~~~~
@@ -83,11 +81,8 @@ to terminal states. Good evaluation functions:
 Common heuristic for isolation: **number of available moves** for the player,
 or the difference ``my_moves − opponent_moves``.
 
-* `Isolation Game Tree - Level 2`_
-* `Isolation Game Tree - Level 3`_
-
-.. _Isolation Game Tree - Level 2: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/images/isolation-L2_minMax.svg
-.. _Isolation Game Tree - Level 3: https://s3.amazonaws.com/content.udacity-data.com/courses/ud954/images/isolation-L3_minMax.svg
+* Isolation Game Tree - Level 2
+* Isolation Game Tree - Level 3
 
 Quiescent Search
 ~~~~~~~~~~~~~~~~
@@ -114,11 +109,8 @@ Return the best move found when time runs out.
   for b=3, iterative deepening expands only ~50% more nodes than a single depth-*d* search.
 * Natural fit for **time-limited** game-playing — always has a move ready.
 
-* `University of British Columbia's slides`_ on iterative deepening
-* `Visually how Iterative Deepening is different from DFS`_
-
-.. _University of British Columbia's slides: https://www.cs.ubc.ca/~hutter/teaching/cpsc322/2-Search6-final.pdf
-.. _Visually how Iterative Deepening is different from DFS: http://movingai.com/dfid.html
+* University of British Columbia's slides on iterative deepening
+* Visually how Iterative Deepening is different from DFS
 
 Alpha-Beta Pruning
 ------------------
@@ -170,9 +162,7 @@ Alpha-beta pruning is less effective with more than two players because
 utilities are no longer zero-sum — one player's gain is not necessarily another's loss.
 Pruning requires bounds on *all* players' utilities.
 
-* `Korf 1991`_ — generalizes alpha-beta to multi-player games.
-
-.. _Korf 1991: http://www.cc.gatech.edu/~thad/6601-gradAI-fall2015/Korf_Multi-player-Alpha-beta-Pruning.pdf
+* Korf 1991 — generalizes alpha-beta to multi-player games.
 
 Probabilistic Games
 ~~~~~~~~~~~~~~~~~~~
@@ -188,6 +178,6 @@ Alpha-beta pruning still applies but requires known bounds on utility values.
 Further Reading
 ---------------
 
-* `Game Playing (Udacity CS271) <https://classroom.udacity.com/courses/cs271/lessons/48720299/concepts/482718700923>`_
-* `Game Theory (Udacity CS271) <https://classroom.udacity.com/courses/cs271/lessons/48716317/concepts/484037340923>`_
-* Alpha-beta visualization: https://www.ocf.berkeley.edu/~yosenl/extras/alphabeta/alphabeta.html
+* Game Playing (Udacity CS271)
+* Game Theory (Udacity CS271)
+* Alpha-beta visualization

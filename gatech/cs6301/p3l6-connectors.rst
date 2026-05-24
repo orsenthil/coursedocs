@@ -1,12 +1,10 @@
 Connectors
 ==========
 
-
 Overview
 --------
 
 Connectors are responsible for **mediating interactions among components** (Shaw & Garlan). They establish rules governing component interaction and specify auxiliary mechanisms required. Material drawn primarily from the Mehta et al. paper.
-
 
 Atomic Elements
 ---------------
@@ -18,7 +16,6 @@ Connectors are built from atomic elements:
 - **Internal mechanisms** — storage (e.g., buffers) or computational elements (e.g., translation capabilities).
 
 In pipe-and-filter style: **pipes** are the connectors, **filters** are the components.
-
 
 Service Categories
 ------------------
@@ -36,7 +33,6 @@ Examples of category assignments:
 - Acknowledgement, guaranteed delivery, multiplexing, transactions, scheduling, synchronization → **O**
 - Invocation → **O + T** (control and parameter data)
 - Dynamic reconfiguration, load balancing → **F**
-
 
 Procedure Call Connectors
 -------------------------
@@ -58,7 +54,6 @@ Variations:
 - **Fan-in/fan-out**: one-to-one or many
 - **Accessibility**: private, protected, public
 
-
 Event Connectors
 ----------------
 
@@ -78,7 +73,6 @@ Variations:
 - **Causality**: absolute vs. conditional/relative events
 - **Source**: hardware (page faults, interrupts, traps) or software (signals, triggers, GUI input)
 
-
 Data Access Connectors
 ----------------------
 
@@ -95,7 +89,6 @@ Variations:
 - **Accessibility**: private, protected, public
 - **Lifecycle**: who constructs and who destructs
 - **Cardinality**: who defines messages, who receives them
-
 
 Linkage Connectors
 ------------------
@@ -114,7 +107,6 @@ Variations:
 - **Binding time**: compile time, run time, or pre-compile (templates/generics)
 - **Semantics/cardinality**: defines/uses, provides/requires
 
-
 Stream Connectors
 -----------------
 
@@ -131,7 +123,6 @@ Variations:
 - **Synchrony**: synchronous, asynchronous, timed
 - **Structure**: raw vs. structured
 - **Cardinality**: one-to-one, one-to-many, many-to-many
-
 
 Arbitrator Connectors
 ---------------------
@@ -150,7 +141,6 @@ Variations:
 - **Security**: authentication, authorization, screening, durability (single vs. multi-session)
 - **Scheduling** of arbitrator activities
 
-
 Adaptor Connectors
 ------------------
 
@@ -165,7 +155,6 @@ Variations:
 - **Protocol conversion**
 - **Presentation conversion**: e.g., XSLT-driven output transformation
 
-
 Distributor Connectors
 ----------------------
 
@@ -177,7 +166,6 @@ Variations:
 - **Delivery policy**: best effort, exactly once, etc.
 - **Mechanism**: unicast, multicast, broadcast
 - **Routing**: bounded list vs. ad hoc; static, cached, or dynamic paths
-
 
 Composite Connectors
 --------------------
@@ -192,7 +180,6 @@ Simple connectors can be composed into more complex ones:
 
 4. **Peer-to-peer data distribution** (BitTorrent) — combine arbitrator, data access, stream, and distributor connectors. Feature control flow redirection, protocol negotiation, scheduling, voting, at-least-once delivery semantics.
 
-
 Connector Design
 ----------------
 
@@ -206,7 +193,6 @@ Design process:
 6. **Validate** using rules (see below)
 7. Define a custom connector if no existing one fits
 
-
 Validation Rules
 ----------------
 
@@ -217,7 +203,6 @@ Rules constrain combinations of connector dimension values:
 - **Restrictions**: certain combinations are invalid (e.g., pass-by-name + transient)
 - **Prohibitions**: total incompatibility (e.g., streams + atomicity)
 
-
 Linux Case Study
 ----------------
 
@@ -226,7 +211,6 @@ The Mehta paper's case study examines Linux as a provider of higher-order connec
 - **File system** — a composite facade connector providing arbitration, adaptation, and coordination over raw bytes; handles contention and synchronization
 - **Shared memory** — a data-access connector with synchronization concerns
 - **Process scheduling** — an arbitrator connector controlling access to resources
-
 
 Summary
 -------

@@ -1,14 +1,12 @@
 Architectural Views
 ===================
 
-
 Introduction
 ------------
 
 Architecture is not simply a picture — it is a **set of design decisions**. Multiple graphical and textual notations called **views** are used to convey different aspects of those decisions, just as building architects use sketches and blueprints.
 
 Software architecture specifies the components that together compute a solution while satisfying non-functional constraints. This lesson covers **Kruchten's 4+1 views** plus additional useful views: feature, non-functional, bug reporting, context, and utility views.
-
 
 Kruchten's 4+1 Views
 ---------------------
@@ -68,7 +66,6 @@ Important execution sequences from the **external actor's/user's point of view**
 - **Sequence/activity diagrams** — for individual use cases
 - **Structured text** — tabular format with columns for Actor, Action, and Object
 
-
 Context View
 ------------
 
@@ -80,7 +77,6 @@ From OMT's functional view (not in UML). Uses **data flow diagrams (DFDs)** to c
 
 **Example:** Chess-playing program — one actor (human opponent), three flows: submit moves, receive moves, view board diagram.
 
-
 Individual Use Cases
 --------------------
 
@@ -88,7 +84,6 @@ A use case is a **story** illustrating a specific interaction between a user and
 
 - **Narrative text** — unstructured prose
 - **Structured table** — three columns: Actor, Action, Object (what is used/produced)
-
 
 Feature View
 ------------
@@ -115,7 +110,6 @@ A **feature** is a conceptual unit of system behavior from the user's perspectiv
 
 **Validity check:** A configuration must include all required features, respect XOR constraints, and not omit mandatory sub-trees (e.g., a car without an engine is invalid).
 
-
 Non-Functional View
 -------------------
 
@@ -126,12 +120,10 @@ Architecture must address non-functional requirements, which often involve **tra
 
 **Example:** A web browser's core function is displaying web pages, yet its code is dominated by **cache management** (page caches, connection caches, image caches) — all driven by performance requirements. Other critical NFRs for a browser include **security** (online transactions), **extensibility** (plugins), and **portability** (cross-platform).
 
-
 Bug Reporting View
 ------------------
 
 Bug tracking tools contain fields for which **component** a bug relates to and which **feature** was in use. These should correspond to architectural components and feature model elements to avoid confusion and enable traceability.
-
 
 Utility Views
 -------------
@@ -144,7 +136,6 @@ Miscellaneous supporting information about system structure not covered by other
 - Documentation
 - Project manifests (delivery package structure)
 - Supporting tools
-
 
 Conclusion
 ----------

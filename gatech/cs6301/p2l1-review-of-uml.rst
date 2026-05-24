@@ -1,7 +1,6 @@
 Review of UML
 =============
 
-
 History and Origins
 -------------------
 
@@ -13,7 +12,6 @@ Diagrams have been part of software development since flowcharts. In the 1980s, 
 
 The push to unify competing OO methods led to **UML** (Unified Modeling Language), standardized by the **Object Management Group (OMG)**. UML's three principal architects were Rumbaugh, Grady Booch, and Ivar Jacobson. UML diagrams serve both analysis (modeling the problem) and design (modeling the solution).
 
-
 Diagram Types Overview
 ----------------------
 
@@ -23,7 +21,6 @@ UML 2 defines **14 diagram types** in two categories. No single project uses all
 - **Behavioral diagrams** — describe system executions (a single behavioral diagram may capture only one scenario)
 
 Diagrams are valuable for communication (teammates, other teams, future maintainers), supporting development processes, enabling tool-based validation, and structuring design reviews. The trade-off: diagrams must be kept up to date.
-
 
 Structural Diagrams
 -------------------
@@ -80,7 +77,6 @@ Profile Diagram
 
 Used to extend the UML metamodel with new stereotypes, tag values, and constraints. Stereotypes appear in double angle brackets (e.g., ``<<metaclass>>``).
 
-
 Behavioral Diagrams
 -------------------
 
@@ -133,7 +129,6 @@ State Diagram (State Chart)
 
 The most powerful and complex behavioral diagram. Extends finite state machines with aggregation, concurrency, history, and event broadcasting. States can contain sub-state machines separated by dashed lines, running concurrently. Transitions between states are triggered by events/stimuli.
 
-
 Object Constraint Language (OCL)
 --------------------------------
 
@@ -143,7 +138,6 @@ Example: An ``Account`` class with a ``deposit(amount: Real)`` operation can hav
 
 - **Precondition** (``pre``): ``amount > 0``
 - **Postcondition** (``post``): ``balance = balance@pre + amount``
-
 
 UML Metamodel
 -------------

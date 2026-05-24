@@ -4,9 +4,6 @@ Assignment 1 Resources
 Tutorials
 ---------
 
-* https://samiux.blogspot.com/2013/06/howto-cert-basic-fuzzing-framework-bff.html
-
-
 Needs to be done
 ----------------
 

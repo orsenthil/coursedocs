@@ -4,19 +4,14 @@ Particle Filters
 Field Trip
 ----------
 
-* http://americanhistory.si.edu/
-
-
 .. attention::
 
    Information available by clicking on the image of the car.
 
-.. image:: https://americanhistory.si.edu/sites/default/files/styles/blog_image/public/NMAH-ET2012-14098.jpg
    :align: center
    :height: 300
    :width: 450
-   :target: http://americanhistory.si.edu/collections/search/object/nmah_1377824
-
+   :target:
 
 State Space, Belief, Efficiency
 -------------------------------
@@ -26,43 +21,25 @@ Particle filters are
 * Easiest to program
 * Most flexible
 
-
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/4S-sx5_cmLU?rel=0&amp;controls=0&amp;showinfo=0&amp;start=85" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-* Global Localization
 * Each of the red dot, is a discrete guess. There is a x-coordinate, y-coordinate, heading direction. These three values together comprise a single guess.
-* `Posterior Predictive Distributions`_
-* `Posterior Probability`_
-
-.. _Posterior Predictive Distributions: https://en.wikipedia.org/wiki/Posterior_predictive_distribution
-.. _Posterior Probability: https://en.wikipedia.org/wiki/Posterior_probability
+* Posterior Predictive Distributions
+* Posterior Probability
 
 Using Robot Class
 -----------------
 
 Using Radians
 
-.. image::  https://upload.wikimedia.org/wikipedia/commons/4/4e/Circle_radians.gif
    :align: center
    :height: 300
    :width: 450
 
-
 Filters
 -------
-
 
 Robot Movement
 --------------
 
-.. raw:: html
-
-   <iframe width="560" height="315" src="https://www.youtube.com/embed/Ut0plKzMV0Q?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-
-Field Trip
 ==========
 So before I start today's class I'd like to take you on a trip that I recently
 did to share some of the things that excite me in my life with all of you.
@@ -1122,4 +1099,3 @@ and I will apply it to the problem of planning
 robot trajectories and making it move
 in real time.
 So I'll see you in the next class.
-

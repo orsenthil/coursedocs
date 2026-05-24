@@ -20,7 +20,7 @@ OAIS Information Model
 
 The **Open Archival Information System** (OAIS) is the reference model for long-term digital preservation.
 
-* Reference: http://www.oclc.org/research/pmwg/
+* Reference
 
 Key components of the OAIS model:
 

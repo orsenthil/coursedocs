@@ -3,7 +3,7 @@ Threads Birrell
 
 *An Introduction to Programming with Threads* — Andrew D. Birrell, January 6, 1989.
 
-| Paper: https://web.mit.edu/6.826/www/notes/HO16.pdf
+| Paper:
 
 Introduction
 ------------

@@ -528,7 +528,7 @@ References
 ----------
 
 * Andrew Ng's tutorial — self-contained material on decision trees
-* `Weka Tutorial <http://art.uniroma2.it/basili/MLWM09/002_DecTree_Weka.pdf>`_
-* `Information Gain <http://www.autonlab.org/tutorials/infogain.html>`_
+* Weka Tutorial
+* Information Gain
 
 Further topics (assignments): advanced pruning, multi-class trees, missing values, cost-sensitive splits.

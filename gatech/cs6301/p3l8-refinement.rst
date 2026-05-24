@@ -1,14 +1,12 @@
 Refinement
 ==========
 
-
 Complexity and Abstraction
 --------------------------
 
 The primary weapon against complexity is **abstraction** — hiding details to concentrate on the big picture. This lesson addresses managing complexity by carefully **refining** a design from an abstract version into an implementation.
 
 Abstraction implies thinking at **different levels**. For abstraction to help solve a design problem, work done at a lower level must **contribute to** the solution at the higher level.
-
 
 Decomposition
 -------------
@@ -23,7 +21,6 @@ Vertical Decomposition
 
 For each piece at one level, solve a whole sub-problem at a lower level. This lower level is a **refinement** of the upper level. Devising lower-level solutions and ensuring they satisfy upper-level needs is **vertical decomposition**.
 
-
 Three Properties of Proper Refinement
 --------------------------------------
 
@@ -33,12 +30,10 @@ All non-trivial design involves refinement across multiple levels. Three propert
 2. **Property 2**: Each level is internally consistent
 3. **Property 3**: Each lower level faithfully represents the level above it
 
-
 Property 1 — Requirements Satisfaction
 ----------------------------------------
 
 The specification must satisfy its requirements. Verified using traditional methods: software testing, group reviews, customer acceptance criteria.
-
 
 Notation
 --------
@@ -54,7 +49,6 @@ First-order logic notation used throughout:
 - **Retrieve function**: retr(t) = s — maps concrete states to abstract states (many-to-one)
 - **Symbols**: & = and, → = implies
 
-
 Property 2 — Internal Consistency
 -----------------------------------
 
@@ -67,7 +61,6 @@ Formally, for each operation Pᵢ:
 If the invariant was true before and the operation runs correctly, the invariant remains true afterward.
 
 **Implication for developers**: when implementing a spec (even in one step), you must ensure each operation doesn't break any invariant — via testing, code reviews, or proof.
-
 
 Property 3 — Faithful Representation
 --------------------------------------
@@ -105,7 +98,6 @@ Each concrete operation must faithfully reflect its abstract specification.
 
     ∀t ∈ T: invC(t) ∧ Pre-Qᵢ(t, args) ∧ Post-Qᵢ(t, args, t', result) → Post-Pᵢ(retr(t), args, retr(t'), result)
 
-
 Bank Account Example
 --------------------
 
@@ -141,7 +133,6 @@ Checking the properties:
 - **Consistency (Property 2)**: balance doesn't modify state; deposit and withdrawal maintain the invariant by inductive argument (the invariant is initially true and each operation preserves it)
 - **Inputs**: only withdrawal is affected (has a precondition)
 - **Outputs**: all three operations are affected (all concrete postconditions reference ``runningTotal``)
-
 
 Summary
 -------

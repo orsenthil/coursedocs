@@ -115,5 +115,3 @@ Given observed evidence variables, we can compute posterior distributions over u
 
 Reference
 =========
-
-* http://sites.nicholas.duke.edu/statsreview/probability/jmc/

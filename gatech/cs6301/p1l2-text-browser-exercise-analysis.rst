@@ -1,12 +1,10 @@
 Text Browser Exercise (Analysis)
 ================================
 
-
 Problem Statement
 -----------------
 
 Design a text browser application — a widget for browsing text in a file — assuming no GUI toolkit provides one directly. The goal is a cleanly structured solution built from atomic GUI components.
-
 
 Components
 ----------
@@ -17,7 +15,6 @@ Three structural components are needed:
 - **ScrollBar** — A vertical scroll bar with a movable **handle** in a **tray**. The handle position denotes the file position to display (top = start, bottom = end). The handle size relative to the tray denotes the proportion of the file currently visible.
 - **FileManager** — Supplies text from disk. Assumptions: entire file cannot be held in memory; line-oriented access is available; retrieves a limited-length consecutive sequence of lines on request.
 
-
 Use Cases
 ---------
 
@@ -26,7 +23,6 @@ Three primary use cases:
 1. User moves the scroll bar handle
 2. User resizes the viewport
 3. System displays the appropriate file content in response
-
 
 Analysis Model
 --------------
@@ -69,7 +65,6 @@ UML types are used rather than language-specific types. Constraints not expressi
 - ScrollBar: ``handlePosition``, ``handleSize``
 - FileManager: ``document`` (sequence of lines) — interacts with the external operating system actor
 
-
 Relationships
 -------------
 
@@ -91,7 +86,6 @@ HandleProportion Association
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The handle size relative to the tray indicates the portion of the document visible in the viewport: ``handleSize / traySize = viewportSize / documentSize``. This is another **ternary association** with its own OCL constraint.
-
 
 Modeling Benefits
 -----------------

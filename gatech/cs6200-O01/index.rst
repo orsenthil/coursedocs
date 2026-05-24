@@ -1,7 +1,6 @@
 Introduction to Operating Systems
 =================================
 
-
 .. toctree::
 
    c-programming
@@ -28,8 +27,5 @@ Introduction to Operating Systems
    lightweight_threads
    notes
 
-
 Resources Shared by Students
 ----------------------------
-
-* https://drive.google.com/drive/folders/1SWmW00aeakRZXUcjI-aXih-bVcllDC6J

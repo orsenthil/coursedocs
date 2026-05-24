@@ -67,14 +67,12 @@ Computational photography combines **computing**, **digital sensors**, **modern 
 - Controllable lighting and reflectance
 - Supports and enhances the medium of photography
 
-* https://en.wikipedia.org/wiki/Photography
-
 Dual Photography
 ----------------
 
 **Dual photography** exploits Helmholtz reciprocity — the principle that light transport between two points is symmetric — to reconstruct the view from a projector's perspective using photos taken by a camera.
 
-* Paper: http://graphics.stanford.edu/papers/dual_photography/
+* Paper
 
 Panoramas
 ---------

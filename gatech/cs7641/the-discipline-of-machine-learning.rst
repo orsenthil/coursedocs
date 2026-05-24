@@ -39,18 +39,15 @@ humans learn.
 * Robot navigation uses ML.
 * Personalization software uses ML.
 
-
 * Constant Learning*
 
 The ongoing research is about creating ML systems that can be like constant
 self-supervising learners that improve with experience just like humans do.
 
-
 * Ethical questions*
 
 In learning with private data, there are ethical questions. We are dealing with it.
 
-[0]: http://www.cs.cmu.edu/~tom/pubs/MachineLearning.pdf
+[0]:
 
-[1]: https://www.wikiwand.com/en/Temporal_difference_learning
-
+[1]:
