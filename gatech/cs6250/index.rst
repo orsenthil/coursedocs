@@ -7,7 +7,6 @@ Chapters
 .. toctree::
    :maxdepth: 1
 
-   papers_of_interest
    introduction
    architecture_and_principles
    congestion_control_streaming

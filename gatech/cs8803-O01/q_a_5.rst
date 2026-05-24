@@ -1,6 +1,10 @@
 Office Hours Week 5
 ===================
 
+Discussion
+----------
+
+
 Welcome to the 5th office hours.
 
 We had a lot of great questions on twiddle and parameter optimization.

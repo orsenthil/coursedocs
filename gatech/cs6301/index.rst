@@ -10,10 +10,6 @@ If you find some link is exposed, which should not be, please report it.
 .. toctree::
    :maxdepth: 3
 
-   setup
-   office_hours
-   projects
-   external
    p1l1-introduction
    p1l2-text-browser-exercise-analysis
    p1l3-design-concepts

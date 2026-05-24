@@ -1,5 +1,8 @@
+Homework Assignment 3
+=====================
+
 Empty Cell
-==========
+----------
 Welcome to homework assignment number 3.
 This is all about particle filters. All ask you three questions.
 Then we have a fairly involved programming assignment.
@@ -11,7 +14,7 @@ I'm asking this for different values of N--
 N equals 1, 4, and 10.
 
 Empty Cell Solution
-===================
+~~~~~~~~~~~~~~~~~~~
 For N equals 1 it is 0.75 with 3/4 chance that particles will find themselves in B, D, or C,
 and there's only a 1/4 chance that a particle is in A.
 For N equals 4, it's 0.316, which is the same as 0.75^4.
@@ -20,7 +23,7 @@ and 0.75^4 are the chances of 4 particles are outside A.
 As we move on, we get 0.75^10 with a 0.0563.
 
 Motion Question
-===============
+---------------
 Question 2--consider the same world as before with 4 states.
 Now we're facing a situation in which there are 5 particles in A, 3 in B, 3 in C, and 1 in D.
 We will now take a motion step. This is not about measurements, just motion.
@@ -35,7 +38,7 @@ I somewhat sloppily wrote "after infinite steps."
 This is really what does it converge to in the end.
 
 Motion Question Solution
-========================
+~~~~~~~~~~~~~~~~~~~~~~~~
 The correct answer of the 1 step is 3, 3, 3, and 3.
 For example, for cell A we can only get particles from B or C.
 Those will come to A with a 50% chance each.
@@ -47,7 +50,7 @@ I apologize it is a little bit misleading here that all these answers are the sa
 but that's what this example gives us.
 
 Single Particle
-===============
+---------------
 In question 3 I'd like to quiz your intuition.
 Suppose we run a particle filter with N equals 1 particle.
 What will happen?
@@ -59,7 +62,7 @@ Or none of the above.
 You can check multiple boxes on the left.
 
 Single Particle Solution
-========================
+~~~~~~~~~~~~~~~~~~~~~~~~
 The correct answer are it ignores measurements and will likely fail.
 It ignores measurements, because the measurement sets the weighting factor
 in this resampling process, but with only 1 particle
@@ -73,7 +76,7 @@ Even a single particle can be sampled forward.
 So these are the two correct answers over here.
 
 Circular Motion
-===============
+---------------
 Here's our programming assignment.
 In class you already programmed a particle filter for a really simplistic robot
 that was able to measure ranges to landmarks and moved pretty much like a trashbin.
@@ -167,8 +170,14 @@ because now the robot is going in a circle.
 You should look at these numbers over here and see if your code matches
 these exact numbers that my code outputs.
 
+.. literalinclude:: code/circular_motion.py
+   :language: python
+
 Circular Motion Solution
-========================
+~~~~~~~~~~~~~~~~~~~~~~~~
+.. literalinclude:: code/circular_motion_ans.py
+   :language: python
+
 Here's a function "move" as a class function of the class robot
 that implements where I get my motion vector,
 and the motion vector is defined to be steering first, then distance.
@@ -211,7 +220,7 @@ multiply by radius, add to the center of the circle to get my result.
 This routine over here gives me exactly what I wanted.
 
 Sensing
-=======
+-------
 Now I want you to implement a measurement model,
 using the function sense, that is more characteristic
 of what's often in the literature on robotics.
@@ -249,8 +258,11 @@ and therefore all the bearings to the landmarks do change.
 It's 5.3, 3.1, 1.3, and 0.22.
 Implement a measurement function that gives me exactly those values.
 
+.. literalinclude:: code/sensing.py
+   :language: python
+
 Sensing Solution
-================
+~~~~~~~~~~~~~~~~
 Here's my implementation of sense, the measurement model,
 as a function in the class robot.
 I produce a vector called Z, which I return in the end, which has 4 bearings.
@@ -269,7 +281,7 @@ Of course, I make sure that the bearing is normalized between 0 and 2π.
 I append them to the list and return it.
 
 Final Quiz
-==========
+----------
 Now, in our final programming exercise,
 I want you to put everything together and build a particle filter.
 I'm supplying you with code that has as gaps
@@ -362,8 +374,14 @@ All we're going to test is whether your particle filter gives us a good estimate
 when we choose randomly the initial position
 of the robots, measurements, motions, and so on.
 
+.. literalinclude:: code/sensing_with_noise.py
+   :language: python
+
+.. literalinclude:: code/final_quiz.py
+   :language: python
+
 Final Quiz Solution
-===================
+~~~~~~~~~~~~~~~~~~~
 So to implement the full particle filter,
 the only thing is really missing is the measurement_prob function.
 And that's a little bit more involved because I have to

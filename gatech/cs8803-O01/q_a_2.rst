@@ -1,5 +1,9 @@
 Office Hours Week 2
 ===================
+
+Discussion
+----------
+
 Welcome to the second office hours. I have Sebastian here and myself.
 We're going to do this the same way we did last time.
 First we're going to talk about some content,

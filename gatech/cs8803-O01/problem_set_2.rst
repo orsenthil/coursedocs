@@ -1,5 +1,8 @@
+Homework Assignment 2
+=====================
+
 Measurement Update
-==================
+------------------
 [Homework Assignment #2] This is homework assignment #2 in CS 373,
 and it's all about Kalman filters. [Kalman Filters]
 [Measurement Update] So question #1 is measurement update.
@@ -9,13 +12,13 @@ I wonder if the variance Σ² is now smaller, larger, or the same as either of t
 Please check one of the three.
 
 Measurement Update Solution
-===========================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 And the correct answer is smaller. We are more certain afterwards.
 You get a more peaky Gaussian whose standard deviation is smaller.
 This is the correct answer.
 
 New Variance
-============
+------------
 Say we have a prior of a Gaussian with a mean mu and covariance sigma squared,
 and our measurement has exactly the same mean and same covariance.
 Suppose we multiply both and get a new mean, which is the same as the old mean,
@@ -25,7 +28,7 @@ I want you to express nu squared as a multiple of sigma squared.
 Just put the answer here as a real number.
 
 New Variance Solution
-=====================
+~~~~~~~~~~~~~~~~~~~~~
 The answer is a ½ or 0.5
 To see, let us multiply these two gaussians over here--
 which the exponent becomes an addition--
@@ -37,7 +40,7 @@ as large as the old one when applied to the squares.
 So, as a result, you would have this equation over here.
 
 Heavytail Gaussian
-==================
+------------------
 I have another Gaussian question for you--
 this is called a heavytail Gaussian.
 So, as you go to +/- infinity,
@@ -51,7 +54,7 @@ for which this exact function over here is obtained?
 Please just check one of these two boxes.
 
 Heavytail Gaussian Solution
-===========================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The correct answer here is no.
 Suppose we let "x" go to infinity,
 then x-Mu2 for any fixed Mu would go to infinity.
@@ -67,7 +70,7 @@ and this area diverges, it is actually infinite in size,
 so it's not even a valid execution.
 
 How Many Dimensions
-===================
+-------------------
 My next question pertains to the tracking problem that we talked about in class.
 In class we addressed a 1-dimensional tracking problem where we estimated the location of the system and its velocity.
 I'd like now to generalize this to a 2-dimensional problem.
@@ -82,14 +85,14 @@ In the class, it was this kind of state vector. Now, we have a new one.
 How many dimensions or how many variables are there?
 
 How Many Dimensions  Solution
-=============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 And the answer is 4.
 So rather than X and Ẋ, we have X and Y
 and Ẋ and Ẏ as our state vectors.
 And there's 4 variables
 
 State Transition Matrix
-=======================
+-----------------------
 Now comes the tricky question. In the Kalman filter program that we studied,
 the 2-D Kalman filter, we had a matrix F.
 And for delta T equals 0.1, our F matrix, the state transition matrix,
@@ -104,7 +107,7 @@ all of those values. Again please assume that delta T is 0.1,
 and don't write delta T, write 0.1.
 
 State Transition Matrix Solution
-================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 And the answer is the main diagonal remains one.
 This expresses the effect that in the absence of any velocity,
 we expect the x-coordinate and the y-coordinate not to change.
@@ -116,7 +119,7 @@ So this is the 4-dimensionalization
 of this 2-dimensional state-transition matrix over here.
 
 Programming Exercise
-====================
+--------------------
 Let's now come to our programming exercise
 I want you to program exactly what we just talked about.
 We're given a two-dimensional world
@@ -214,8 +217,11 @@ The covariance matrix would look exactly as before,
 because it's not affected by the measurements themselves.
 Your job is to fill in these various matrices. Good luck.
 
+.. literalinclude:: code/multivariate_kalman_filters2.py
+   :language: python
+
 Programming Exercise Solution
-=============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Here's my solution for the programming assignment.
 There are many different ways to structure this, but that's what I've done.
 I have a dt equals 0.1.
@@ -275,7 +281,7 @@ to run Kalman filters on complicated problems,
 and I hope you really got an understanding how the Kalman filter works.
 
 Congratulations
-===============
+---------------
 So congratulations.
 You just made it through the Kalman filter class and the second homework assignment.
 You've implemented Kalman filters,

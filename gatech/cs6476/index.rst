@@ -18,14 +18,3 @@ Computer Vision
    opencv
    images
    terms
-
-Resources
----------
-
-* — Computer Vision: Algorithms and Applications (Richard Szeliski)
-* Visualizing Probability and Statistics
-* - In-campus course details.
-* - In-campus course schedule.
-*  - CV lecture quizzes in Python.
-* - OpenCV Python Tutorials.
-* - MindMap

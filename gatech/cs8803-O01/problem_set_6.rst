@@ -1,5 +1,8 @@
+Homework Assignment 6
+=====================
+
 Matrix Fill In
-==============
+--------------
 [Narrator] Hi class, this is homework assignment #6 on SLAM,
 and we're going to practice some more questions about the graph SLAM algorithm,
 and I will ask you something new about how to make graph SLAM more efficient
@@ -34,7 +37,7 @@ and you can also solve for omega minus 1 times C,
 and out should come the right positions shown in the diagram over here.
 
 Matrix Fill In Solution
-=======================
+~~~~~~~~~~~~~~~~~~~~~~~
 So here is the answer, I feed in all the missing
 values for you. And let’s try to check a few.
 For example, let’s take the elements related to
@@ -69,7 +72,7 @@ here. I hope you got a good number
 of numbers right that was not an easy task.
 
 Online SLAM
-===========
+-----------
 [Narrator] I now want to ask you the really challenging question over here,
 and it goes as follows: one of the weaknesses of slam is
 as we move along and map a world by seeing these landmarks,
@@ -195,7 +198,7 @@ and I can tell you lots of headaches, became amazingly easy.
 So, implement it and you can call yourself a robotic mapper.
 
 Online SLAM Solution
-====================
+~~~~~~~~~~~~~~~~~~~~
 So here is my solution to the programming
 assignment where I asked you to program an
 online version of online SLAM. Let me run it

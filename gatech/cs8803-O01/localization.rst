@@ -2,7 +2,7 @@ Localization
 ============
 
 Introduction
-============
+------------
 So welcome to Artificial Intelligence for Robotics.
 You are entering at exciting 7-week class
 in which you'll learn how to program self-driving cars.
@@ -59,7 +59,7 @@ and in this class that's what I hope to enable you to do.
 Let's dive in.
 
 Localization
-============
+------------
 The very first problem I'm trying to solve is called localization.
 It involves a robot that's lost in space.
 It could be a car. It could be a mobile robot.
@@ -95,7 +95,7 @@ I also want to let you program your own localizer
 so you can program a self-driving car.
 
 Total Probability
-=================
+-----------------
 Let me begin my story in a world where our robot resides.
 Let's assume the robot has no clue where it is.
 Then we would model this with a function--I'm going to draw into this diagram over here
@@ -164,7 +164,7 @@ You might not know yet, but that's really a core aspect of understanding
 a whole bunch of things I'm going to teach you in the class today.
 
 Uniform Probability Quiz
-========================
+------------------------
 So let's move into our first programming exercise,
 and let's program together the very first version of robot localization.
 Here's a bit of program code--an empty list.
@@ -176,22 +176,22 @@ What is the probability of any of those x's?
 Index i goes from 1 to 5.
 
 Uniform Probability Quiz Solution
-=================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 And the answer is 0.2, which is the total probability, 1, divided by 5 grid cells.
 
 Uniform Distribution
-====================
+--------------------
 So now in our Python interface, I'd like to take this code over here,
 which assigns to p an empty list and modified into code where p becomes
 a uniform distribution over 5 grid cells as expressed in a vector of 5 probabilities.
 
 Uniform Distribution Solution
-=============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Here's an easy solution.
 You just initialize the vector with five 0.2s.
 
 Generalized Uniform Distribution
-================================
+--------------------------------
 Let's see if we can modify this to make a vector of length n
 where I can vary the value of n and get a resulting vector with n elements.
 So if n equals 5, we'd get the same result as before,
@@ -199,7 +199,7 @@ but for n equals 10, I should get a vector of length 10,
 each of which would have value zero point one.
 
 Generalized Uniform Distribution Solution
-=========================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is simple.
 Use a for loop as shown here,
 and you append to the list n elements, each of size of 1/n.
@@ -210,7 +210,7 @@ which is not what you want.
 Now we are able to initialize the initial belief of the robot in the world over here.
 
 Probability After Sense
-=======================
+-----------------------
 Let's look at the measurement of this robot in its world with 5 different grid cells--
 x1 through x5.
 Let's assume 2 of those cells are colored red whereas the other 33 are green.
@@ -235,13 +235,13 @@ multiplying in the measurement in the way I've stated.
 Please, for these 5 boxes, fill out the number.
 
 Probability After Sense Solution
-================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is obviously for the red cells we get a 0.12
 whereas for the green cells we get a 0.04,
 which is the product of 0.2 x 0.6 versus 0.2 x 0.2.
 
 Compute Sum
-===========
+-----------
 This is in principle our next belief.
 It only has one problem, which is it isn't a valid probability distribution.
 The reason why is probability distributions always have to add up to 1.
@@ -250,11 +250,11 @@ then we find out it doesn't add up to 1.
 Please type in the sum of all these values.
 
 Compute Sum Solution
-====================
+~~~~~~~~~~~~~~~~~~~~
 If you add up all these values, you get 0.36.
 
 Normalize Distribution
-======================
+----------------------
 To turn this back into a probability distribution,
 we will now divide each of these numbers by 0.36.
 Put differently, we normalize.
@@ -262,7 +262,7 @@ Please, in these 5 fields enter your result for dividing 0.04 or 0.12 by 0.36.
 Please check that the sum of those truly adds up to 1.
 
 Normalize Distribution Solution
-===============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 So 0.12 divided by 0.36 is the same as 12 divided by 36 is the same as 1/3 or 0.333.
 And 0.04 divided by 0.36 is the same as 4 divided by 36,
 that is 1/9.
@@ -274,7 +274,7 @@ The probabilist would also call it posterior distribution of place xi given meas
 Let's implement all this.
 
 pHit and pMiss
-==============
+--------------
 Here's our distribution again.
 Here's our factor for getting the color right or for getting it wrong,
 and let's first start with a non-normalized version.
@@ -282,24 +282,24 @@ Write a piece of code that outputs p after multiplying in pHit and pMiss
 at the corresponding places.
 
 pHit and pMiss Solution
-=======================
+~~~~~~~~~~~~~~~~~~~~~~~
 One way to do this is to go explicitly through all these 5 different cases from 0 to 4
 and multiply in manually the miss or hit case.
 This is not particularly elegant, but it does the job,
 and as I hit the "Run" button, we get the correct answer that is not normalized.
 
 Sum of Probabilities
-====================
+--------------------
 My next question is can you print out the sum of those to normalize them?
 Modify the program so you get the sum of all the p's.
 
 Sum of Probabilities Solution
-=============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Well, it turns out Python gives you a function called "sum,"
 and if you now hit the run button, you get the correct answer.
 
 Sense Function
-==============
+--------------
 I want to make this a little bit more beautiful.
 I will introduce a variable called "world,"
 and for each of the 5 grid cells, world specifies the color of the cell--
@@ -322,7 +322,7 @@ either red or green, and give me the non-normalized Q,
 which gives me the vector 0.04 or 0.12 and so on and so on.
 
 Sense Function Solution
-=======================
+~~~~~~~~~~~~~~~~~~~~~~~
 Here's my solution.
 I start with an empty list over here, and I build it up
 using the append command over time.
@@ -336,14 +336,14 @@ I build up the list, return it, and run it, and out comes
 0.04, 0.12, 0.12, 0.04, and 0.04 as expected.
 
 Normalized Sense Function
-=========================
+-------------------------
 Let's take that same piece of code
 and modify it to give me a valid probability distribution.
 Please modify this code so it normalizes the output of the function sense
 so it add up to 1.
 
 Normalized Sense Function Solution
-==================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Here are the three lines of code I used to program this in.
 First I computed the sum of a vector Q using the function sum,
 which makes it really easy.
@@ -353,7 +353,7 @@ So I've just implemented the absolute key function of localization,
 which is called the measurement update.
 
 Test Sense Function
-===================
+-------------------
 Let's just go back to our example and see what an amazing thing you've just programmed.
 We had a uniform distribution over places.
 Each place had a probability of 0.2.
@@ -369,7 +369,7 @@ Please type green into your measurement variable and rerun your code
 to see if you get the correct result.
 
 Test Sense Function Solution
-============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 I'm now replacing the red by green over here,
 and I rerun my code and out come these funny numbers.
 Somewhere in there is the division by 44,
@@ -378,7 +378,7 @@ than the grid cells in the middle.
 So let's dive in.
 
 Multiple Measurements
-=====================
+---------------------
 In fact, I'd like you to modify this code a little bit more
 in a way that we have multiple measurements.
 Instead of Z, we're going to make a measurement vector called "measurements."
@@ -389,7 +389,7 @@ In fact, can you modify it in a way
 that any sequence of measurements of any length can be processed?
 
 Multiple Measurements Solution
-==============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The modification is simple.
 We will call the procedure sense multiple times,
 in fact, as often as we have measurements, which is the for loop over here,
@@ -404,7 +404,7 @@ And these effects were in total the same for each cell.
 As a result, we get the same output over here. It's quite remarkable.
 
 Exact Motion
-============
+------------
 Before we're done with localization, I'd like to talk about robot motion.
 Suppose we have a distribution over those cells--
 such as this one: 1/9, 1/3, 1/3, 1/9, and 1/9--
@@ -417,7 +417,7 @@ including the cyclic motion.
 Can you tell me for all these 5 values, what the posterior probability is after that motion?
 
 Exact Motion Solution
-=====================
+~~~~~~~~~~~~~~~~~~~~~
 The answer is all of these are shifted to the right.
 The 1/9 in the left-most cell goes over here, the 1/3 over here,
 and finally the right-most 1/9 finds itself on the left side.
@@ -426,7 +426,7 @@ We just shift the probabilities by the actual robot motion.
 Now, that's a degenerate case. Let's program this one.
 
 Move Function
-=============
+-------------
 I define a function "move" with a distribution p and a motion number "U,"
 where U is the number of grid cells that the robot is moving to the right or to the left.
 I want you to program a function that returns the new distribution Q after the move
@@ -444,7 +444,7 @@ we couldn't even see the effect of the motion
 whether that's programmed correctly or not.
 
 Move Function Solution
-======================
+~~~~~~~~~~~~~~~~~~~~~~
 Here is the solution.
 We start with the empty list. We go through all the elements in p.
 This is the tricky line.
@@ -465,7 +465,7 @@ but it's going to be important as we go forward and define
 probabilistic convolution and generalize this to the noisy case.
 
 Inexact Motion 1
-================
+----------------
 Let's talk about inaccurate robot motion.
 We are again given 5 grid cells.
 Let's assume a robot executes its action with high probability correctly, say 0.8,
@@ -493,20 +493,20 @@ I'm going to ask you now for the initial distribution that I'm writing up here,
 can you give me the distribution after the motion?
 
 Inexact Motion 1 Solution
-=========================
+~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is for our intended field over here 0.8,
 the 2 neighbors 0.1 and a zero and zero over here.
 Well done. Let's do this again for a different initial distribution.
 
 Inexact Motion 2
-================
+----------------
 Let's assume we have a 0.5 in this cell and a 0.5 in this cell.
 Remember that this is a cyclic-motion model,
 so whatever falls off on the right side, you'll find on the left side.
 Can you again for U = 2 fill in the posterior distribution?
 
 Inexact Motion 2 Solution
-=========================
+~~~~~~~~~~~~~~~~~~~~~~~~~
 This is a pretty tricky question, which I'm going to answer in two phases.
 Let's just look at the 0.5 over here, 0.8 of that, which is 0.4, ends up over here,
 and 0.1 of this, which is 0.05 ends up over here.
@@ -522,12 +522,12 @@ So the total is the sum of these two things--0.1.
 This is the final answer: 0.4, 0.05, 0.05, 0.4, and 0.1.
 
 Inexact Motion 3
-================
+----------------
 Let me give you a final example in which I assume a uniform distribution,
 and I want you to fill in for me the distribution after motion.
 
 Inexact Motion 3 Solution
-=========================
+~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer as it turns out will be just 0.2 everywhere,
 and the reason is with every grid cell being equally likely,
 applying this motion model will still make each grid cell equally likely.
@@ -550,12 +550,12 @@ as something called Theorem of Total Probability.
 But for the time being, I'd like to program this in.
 
 Inexact Move Function
-=====================
+---------------------
 I'm going to give us a pExact of 0.8, pOvershoot of 0.1, and pUndershoot of 0.1.
 I'd like you to modify the move procedure to accommodate these extra probabilities.
 
 Inexact Move Function Solution
-==============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Here's one way to implement this.
 We're going to introduce the auxiliary variable "s,"
 which we build up in three different steps.
@@ -569,7 +569,7 @@ When we run this, we get for our example prior of 0, 1, 0, 0, 0,
 the answer 0, 0.1, 0.8, 0.1, and 0.
 
 Limit Distribution Quiz
-=======================
+-----------------------
 Here's a question for you that is somewhat involved,
 and I really want to check your intuition.
 Suppose we have 5 grid cells as before
@@ -587,7 +587,7 @@ of going 1 to the right on our little cyclic environment forever.?
 What will be the so-called limit or stationary distribution be in the very end?
 
 Limit Distribution Quiz Solution
-================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 You might have guess it correctly. It's the uniform distribution.
 There's an intuitive reasoning behind this.
 Every time we move, we lose information.
@@ -618,30 +618,30 @@ Clearly, those 0.2s over here meet the balance that is necessary
 to define a valid solution in the limit.
 
 Move Twice
-==========
+----------
 Now let's go back to our code and move many times.
 Let's move twice, so please write a piece of code that makes the robot move twice,
 starting with the initial distribution as shown over here--0, 1, 0, 0, 0.
 
 Move Twice Solution
-===================
+~~~~~~~~~~~~~~~~~~~
 Here's a piece of code that moves twice by the same amount as before,
 and the output now is a vector that assigns 0.66 as the largest value
 and not 0.8 anymore.
 
 Move 1000
-=========
+---------
 Let's move 1,000 times.
 Write a piece of code that moves 1,000 steps and give me the final distribution.
 
 Move 1000 Solution
-==================
+~~~~~~~~~~~~~~~~~~
 Here's my code. We have a loop for 1,000 steps.
 We move 1,000 times, and we print the corresponding distribution over here.
 It's 0.2 in each case as expected.
 
 Sense and Move
-==============
+--------------
 Wow, you've basically programmed the Google self-driving car localization
 even though you might not quite known it yet.
 Let me tell you where we are.
@@ -675,7 +675,7 @@ then moves right by 1, then senses green, then moves right again?
 Let's start with a uniform prior distribution.
 
 Sense and Move Solution
-=======================
+~~~~~~~~~~~~~~~~~~~~~~~
 Here's the routine. It's very short.
 It goes through the measurements. It assumes it has as many motions as measurements.
 It first applies the measurement as before. Then it applies the motion.
@@ -695,14 +695,14 @@ Very correctly, then it would most likely assign this position to the right-most
 as should be, given the sequence of observations over here.
 
 Sense and Move 2
-================
+----------------
 Let's pick a different base.
 Let's assume the robot saw red twice.
 It senses red, it moves, it senses red, it moves again.
 What is the most likely cell?
 
 Sense and Move 2 Solution
-=========================
+~~~~~~~~~~~~~~~~~~~~~~~~~
 Let's run the program, and we find that the most likely cell is the 4th cell.
 That makes sense, because the best match of red, red to the world
 is red over here and red over here.
@@ -733,7 +733,7 @@ But what you've implemented is the core of Google's self-driving car localizatio
 Let me just summarize the essential things we've learned.
 
 Localization Summary
-====================
+--------------------
 We learned that localization maintains a function over all
 possible places where a road might be,
 where each cell has an associated probability value.
@@ -753,7 +753,7 @@ I want to spend a few minutes and go over the formal definition of localization.
 I'm going to introduce probability and ask you lots of questions.
 
 Formal Definition of Probability 1
-==================================
+----------------------------------
 Formally, we define a probability function to be P(X),
 and it's a value that is bounded below and above by 0 and 1.
 X often can take multiple values.
@@ -763,33 +763,33 @@ If the probability for x1 is 0.2, what would be the probability for x2?
 Please enter the number. It's a quiz, obviously.
 
 Formal Definition of Probability 1 Solution
-===========================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is 0.8. The reason being that probabilities always add up to 1.
 
 Formal Definition of Probability 2
-==================================
+----------------------------------
 Let me ask a second question, and I know that's not particularly difficult.
 What if P(X1) = 0?
 
 Formal Definition of Probability 2 Solution
-===========================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is 1. You got it.
 
 Formal Definition of Probability 3
-==================================
+----------------------------------
 For our world with 5 different grid cells,
 suppose we know that the first 4 of them have a 0.1 probability.
 What would be the probability of the 5th and final grid cell?
 
 Formal Definition of Probability 3 Solution
-===========================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is 0.6.
 They have to add up to 1.
 We subtract 4 x 0.1, which is 0.4, which is 0.6.
 That's a valid probability.
 
 Bayes' Rule
-===========
+-----------
 Let's look into measurements, and they will lead to something called "Bayes Rule."
 You might have heard about Bayes Rule before.
 It's the most fundamental consideration in probabilistic inference,
@@ -837,7 +837,7 @@ My resulting probability will be 1/α of the non-normalized probability.
 This is exactly what we did, and this is exactly Bayes Rule.
 
 Cancer Test
-===========
+-----------
 Let me ask you Bayes Rule in the context of a completely different example
 to see if you understand how to apply Bayes Rule.
 This time it's about cancer testing.
@@ -858,7 +858,7 @@ Think of the cancer/non cancer as the robot position
 and think of the positive as whether the colored door observed is the correct one.
 
 Cancer Test Solution
-====================
+~~~~~~~~~~~~~~~~~~~~
 And the answer is 0.0079.
 In other words, there's only 0.79% chance,
 0.79 out of 100 that, despite the positive test result,
@@ -879,7 +879,7 @@ We just applied Bayes Rule to compute a really involved
 probability of having cancer after seeing a test result.
 
 Theorem of Total Probability
-============================
+----------------------------
 Let's look at motion, which will turn out to be something we will call total probability.
 You remember that we cared about a grid cell "xi,"
 and we asked what is the chance of being in xi after robot motion?
@@ -911,7 +911,7 @@ That is often called the Theorem of Total Probability.
 The operation of a weighted sum over other variables is often called a "convolution."
 
 Coin Flip Quiz
-==============
+--------------
 Let me test total probability in a quiz.
 Suppose I flip a coin, and the coin comes up tails or heads.
 Suppose it's a fair coin.
@@ -923,7 +923,7 @@ My quiz for you is what is the probability that the final result is heads?
 That's an example of total probability.
 
 Coin Flip Quiz Solution
-=======================
+~~~~~~~~~~~~~~~~~~~~~~~
 The answer is 1/4. It's easy to see that the probability of heads in step 2
 is the probability of heads in step 2 conditioned on heads in step 1
 times probability of heads in 1
@@ -938,7 +938,7 @@ If I look at this, then this all becomes zero,
 and these guys multiply to 1/4, and the final answer is 1/4.
 
 Two Coin Quiz
-=============
+-------------
 Let me make a final quiz in which I have a coin which probability I don't know.
 There are multiple coins. One is fair and one is loaded.
 The fair coin has a probability of heads of 0.5.
@@ -953,7 +953,7 @@ Apply anything you've learned before--
 one of the rules you've learned before is exactly the right one to apply here.
 
 Two Coin Quiz Solution
-======================
+~~~~~~~~~~~~~~~~~~~~~~
 Let's work this out.
 What I'm really asking you is the probability of a fair coin "f" given that I observed H.
 This has nothing to do with total probability
@@ -972,11 +972,11 @@ which is the same as 5/6.
 That's our posterior probability we hold the fair coin after we observed H.
 
 Terms
-=====
+-----
 
 * Monte Carlo Robot Localization
 * Grid Based Localization
 * Histogram Filters
 
 Resources
-=========
+---------

@@ -11,7 +11,7 @@ So today, we take all those pieces, and we put them together to build a true, ro
 Let's start with localizing.
 
 Localization
-============
+------------
 
 We learned about how maps are being used to localized a moving robot.
 Here is a laser map being produced--in this case, Stanford's car,
@@ -33,7 +33,7 @@ and useful in the context of robotics.
 Please check none, any, or all of those boxes.
 
 Localization Solution
-=====================
+~~~~~~~~~~~~~~~~~~~~~
 Of course, we learned that the Kalman filter is unimodal, just a single bump,
 whereas histograms and particles can have multiple bumps.
 The Kalman filter was more efficient than the histogram and the particles
@@ -42,7 +42,7 @@ And yes, my god, they are all extremely useful--super, super useful
 in case you didn't get this from the class.
 
 Planning
-========
+--------
 We also learned about planning--in particular, breadth-first planning,
 A-star planning, and dynamic programming planning
 that all address slightly different use cases.
@@ -61,7 +61,7 @@ or if the solution is local, which means given an approximate initial solution,
 it cannot really do anything more than just locally refine the solution.
 
 Planning Solution
-=================
+~~~~~~~~~~~~~~~~~
 Smoothing was the only planner that actually really worked in a continuous domain.
 Everything else was very discrete.
 Our breadth-first, A-star, and dynamic programming all find the optimal solution.
@@ -70,7 +70,7 @@ and smoothing is the only local operation
 whereas those over here all optimize a global planning problem.
 
 PID
-===
+---
 Then we also learned about control. You implemented your first controller.
 Control is what makes things like the following experiment possible.
 Here's my quiz.
@@ -80,14 +80,14 @@ minimizing error relative to a reference trajectory, and compensating drift.
 I want you to check exactly one check box for P, one for I, and one for D.
 
 PID Solution
-============
+~~~~~~~~~~~~
 The primary function of P is to minimize the error. We steer in proportion to the error.
 The D term avoids the overshoot, if used wisely.
 Systematic drift and biases are best addressed by the I term.
 That's the correct answer, which I'm sure you got right at this point.
 
 Your Robot Car
-==============
+--------------
 
 Now let's put them all together into a single piece of software.
 Upfront it took me about a whole day to do this.
@@ -146,7 +146,7 @@ which it eventually does, but you can see 2 big regions of collisions
 until the goal is finally reached.
 
 Your Robot Car
-==============
+--------------
 Now let's put them all together into a single piece of software.
 Upfront it took me about a whole day to do this.
 I'm not going to ask you to do it all yourself,
@@ -204,7 +204,7 @@ which it eventually does, but you can see 2 big regions of collisions
 until the goal is finally reached.
 
 Segmented CTE
-=============
+-------------
 I spent a couple hours porting all the code over into this new format,
 and I want to spare you all this editing work so in the final code
 that is a little bit incomplete still, we have a grid.
@@ -283,7 +283,7 @@ if we implement this piece of code correctly.
 Just to warn you, it took me quite a while to work this out.
 
 Segmented CTE Solution
-======================
+~~~~~~~~~~~~~~~~~~~~~~
 Here is my code.
 I compute the dx and dy the way I told you by using the spath of index i + 1
 minus the same at index.
@@ -299,7 +299,7 @@ There are two collisions here but I still reach the goal in 140 steps.
 Let me run it again, and now I reach the goal without collision.
 
 Fun with Parameters
-===================
+-------------------
 In the final question, I'd like to explore something.
 I don't have a good answer for this, but I'd like you to play with those parameters over here--
 the data weight, the weight smoother, the control parameters p_gain and d_gain.
@@ -316,7 +316,7 @@ But I want to give you the opportunity to play with those parameters
 and see what the effects are on this solution.
 
 Wrap Up
-=======
+-------
 This finishes the lecture part of CS373, my basic introduction to robotic AI.
 Even though we haven't done the final exam yet,
 I want to congratulate you for getting this far.
@@ -336,7 +336,7 @@ The rest of this unit contains extra information on SLAM.
 Otherwise, I'll just see you on the final.
 
 SLAM
-====
+----
 Hi, students. I am back to teach you a bit about SLAM.
 There was a request--a popular request, actually, in email and the discussion forum.
 SLAM is a method for mapping that's short for "simultaneous localization and mapping."
@@ -370,14 +370,14 @@ We will reduce the mapping problem to a couple of very intuitive
 additions into a big matrix and a vector, and that's it.
 
 Is Localization Necessary
-=========================
+-------------------------
 Here is a quick quiz.
 When mapping an environment with a mobile robot, uncertainty in robot motion
 forces us to also perform localization.
 I'm going to give you two possible answers--yes and no.
 
 Is Localization Necessary Solution
-==================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is yes.
 In nearly all cases of mapping, we have robot uncertainty in motion.
 That uncertainty might grow over time.
@@ -395,7 +395,7 @@ is uncertain but also the robot itself runs on an uncertain trajectory.
 That makes it hard.
 
 Graph SLAM
-==========
+----------
 Let me tell you about my favorite method of all, called "Graph SLAM."
 This is one of many methods for SLAM, and it's the one that is by far the easiest to explain.
 Let's assume we have a robot,
@@ -454,7 +454,7 @@ The question now is how many total constraints do we have if we count each
 of these constraints as exactly one constraint.
 
 Graph SLAM Solution
-===================
+~~~~~~~~~~~~~~~~~~~
 The answer is 14.
 There is 1 initial location constraint, 5 motions, which adds up to 6,
 and 8 landmarks constraints.
@@ -462,7 +462,7 @@ That's the gist of what we're going to implement.
 The key insight now is that this is insanely simple to do.
 
 Implementing Constraints
-========================
+------------------------
 What we do is we make a matrix and also a vector.
 We label the matrix, which is quadratic, with all the poses and all the landmarks.
 Here we assume the landmarks are distinguishable.
@@ -494,7 +494,7 @@ They only affect values that occur in the region between x1 and x2 and over here
 Remember, these are additive.
 
 Implementing Constraints Solution
-=================================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Here is the answer.
 Let me just re-transform this as is done over here--
 x1 minus x2 is now +4, and x2 minus x1 is -4.
@@ -507,7 +507,7 @@ Now we add 4 to the 5, which gives us a 9, and a -4 to the 0 gives -4.
 This is where we are now.
 
 Adding Landmarks
-================
+----------------
 Let me do another quiz.
 Suppose that at x1 we see landmark L0 at a distance of 9.
 This gives me a relative constraint between x1, right over here,
@@ -519,7 +519,7 @@ to accommodate that we believe that the occasion
 of L0 is 9 greater than the robot position x1.
 
 Adding Landmarks Solution
-=========================
+~~~~~~~~~~~~~~~~~~~~~~~~~
 Here is the answer.
 Obviously x1 minus L0 is -9, because L0 minus x1 is a measurement of +9.
 Let's add this in. We add 1 over here on the main diagonal--1 and 1.
@@ -528,14 +528,14 @@ Then a 9 over here goes back to 0 but to 9 over here.
 I hope this makes perfect sense to you.
 
 SLAM Quiz
-=========
+---------
 Let's summarize what we've learned in the form of a little quiz on Graph SLAM.
 Check this box if Graph SLAM seem to be all about local constraints.
 They require multiplications--if that's true check the box over here.
 The require additions--check this box if this is correct or none of the above.
 
 SLAM Quiz Solution
-==================
+~~~~~~~~~~~~~~~~~~
 The answer is obviously they are all about local constraints.
 That's the entire point.
 Every motions ties together two locations,
@@ -544,7 +544,7 @@ Multiplication is just the wrong thing here, so they're all about additions.
 These are the correct things to check.
 
 Matrix Modification
-===================
+-------------------
 I want to add one last thing here--the initial robot location.
 If we define x0 to be 0, which is the origin of the map,
 then what this means is we add 1 over here and 0 over here.
@@ -558,7 +558,7 @@ So go into this matrix and ask yourself which fields will be 0, the ones untouch
 and which ones will not be 0 that are the ones we modified.
 
 Matrix Modification Solution
-============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is our initial constraint would touch this guy over here.
 The one to second motion touches these things over here.
 The second to third, these guys, and then the landmark observation over here
@@ -572,7 +572,7 @@ That is, there is no direct motion information between these guys,
 and there is no direct constraint between x1 and L, which is this guy is missing over here.
 
 Untouched Fields
-================
+----------------
 Let me do the same quiz again.
 Now we have two landmarks,
 and the picture I'm giving you is a robot with three total positions.
@@ -584,7 +584,7 @@ Of the 30 fields over here how many of them will never be touched?
 Please put your answer over here.
 
 Untouched Fields Solution
-=========================
+~~~~~~~~~~~~~~~~~~~~~~~~~
 The correct answer is 6 for the following missing links:
 this guy here gives me two values in the matrix.
 This guy here another two.
@@ -604,7 +604,7 @@ Landmarks can't see, so they can't put a direct link between any two landmarks.
 Or put differently, in this part over here our matrix will always be a diagonal matrix.
 
 Omega and Xi
-============
+------------
 The last thing I want to tell you before we go into programming
 is why this makes any sense.
 Suppose you fill the matrix, which I call omega [Ω],
@@ -644,7 +644,7 @@ There is an empty function in your code that accepts as parameter
 the initial position, -3, and the two motion values, 5 and 3.
 
 Omega and Xi Solution
-=====================
+~~~~~~~~~~~~~~~~~~~~~
 Here is my result.
 I construct an omega matrix of size 3 x 3, and initially I set the top left corner to 1.
 Then the vector xi, I set very first value to init. Everything else is 0.
@@ -663,7 +663,7 @@ That gives me the vector of res, and res is being output using those "show" comm
 and returned from the procedure.
 
 Landmark Position
-=================
+-----------------
 Now let's add the landmark.
 Let's say the landmark is being seen at all time steps.
 Let's say in the very first time the difference between position and landmark is 10.
@@ -675,7 +675,7 @@ You can work this out in your head. It's a single number.
 Please enter it here.
 
 Landmark Position Solution
-==========================
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is 7.
 Obviously, -3 plus 10 is 7,
 -3 plus 5 plus 5 is 7,
@@ -684,7 +684,7 @@ All of those work out to be 7. We have a fully consistent situation.
 The landmark seems to be consistently seen. There seems to be no noise whatsoever.
 
 Expand
-======
+------
 Now I want you to extend your routine to accommodate the landmark
 Specifically, I want you to use a function that I coded for you that is very useful
 that is called "expand."
@@ -708,7 +708,7 @@ and your code should not just produce this one vector,
 but it should implement the right math.
 
 Expand Solution
-===============
+~~~~~~~~~~~~~~~
 Here is my answer. Here is the expand command.
 It takes the omega vector and turns it in to a 4 x 4
 and assigns the existing coordinate to 0, 1, and 2
@@ -724,7 +724,7 @@ If you implement this correctly, then you get a omega and xi
 that, once you implement this solution equation, gets you this solution over here.
 
 Introducing Noise
-=================
+-----------------
 Here is a really tricky quiz. Let's look at the robot motion again.
 Say I change the last measurement from 2 down to 1.
 You might remember the robot poses were -3, 2, and 5.
@@ -744,7 +744,7 @@ It takes really some thinking.
 Invest in thinking, and you can even go back and try it out.
 
 Introducing Noise Solution
-==========================
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 I'm trying it out and see what happens.
 Before it was a -3, 2, 5, 7, and now the first position is completely unchanged.
 I'll explain to you in a second why.
@@ -782,7 +782,7 @@ we find the best solution to the relaxation of those rubber bands.
 That, to me, is sheer magic.
 
 Confident Measurements
-======================
+----------------------
 I'm going to give you a glimpse as to why it works.
 Suppose we have two robot positions, x0 and x1, and we know they're 10 apart
 with some Gaussian noise, and we know the Gaussian noise in exportation
@@ -834,7 +834,7 @@ because you know believe this measurement
 over-proportionally over other measurements and motions.
 
 Confident Measurements Solution
-===============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Here is my answer.
 In the omega, I replace all the 1's by 5's so we add 5, -5, -5, and 5 over here.
 I also multiplied the measurement by 5. If you forget this, you get a very kooky answer.
@@ -843,7 +843,7 @@ as the guys over here with a 5.
 That gives you the result that I stated.
 
 Implementing SLAM
-=================
+-----------------
 So now we've learned all about Linear GraphSLAM,
 and that's quite a bit--and it's really simple.
 Every time there's a constraint--
@@ -912,7 +912,7 @@ that sets the initial robot pose
 to the center of the world.
 
 Implementing SLAM Solution
-==========================
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 So here is my solution: I've takan all the input parameters,
 and the very first thing is I've set the dimension of the matrix and the vector:
 the length of the Path, plus the number of Landmarks--
@@ -998,7 +998,7 @@ It took myself a number of hours to write,
 and that would be wonderful if you got it right.
 
 Congratulations
-===============
+---------------
 So congratulations.
 I'm impressed you made it so far.
 You really learned a lot about SLAM.

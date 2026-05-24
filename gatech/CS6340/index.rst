@@ -1,9 +1,6 @@
 Software Analysis and Testing
 =============================
 
-Book
-----
-
 Study Material
 --------------
 

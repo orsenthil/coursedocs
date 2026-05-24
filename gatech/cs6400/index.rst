@@ -6,8 +6,6 @@ Notes for the Database systems concepts and design course.
 .. toctree::
    :maxdepth: 3
 
-   syllabus
-   officehours
    welcome
    normalization
    efficiency

@@ -1,47 +1,17 @@
 Particle Filters
 ================
 
-Field Trip
-----------
+Summary
+-------
 
-.. attention::
-
-   Information available by clicking on the image of the car.
-
-   :align: center
-   :height: 300
-   :width: 450
-   :target:
-
-State Space, Belief, Efficiency
--------------------------------
-
-Particle filters are
+Particle filters are:
 
 * Easiest to program
 * Most flexible
+* Each particle is a discrete guess (x, y, heading)
 
-* Each of the red dot, is a discrete guess. There is a x-coordinate, y-coordinate, heading direction. These three values together comprise a single guess.
-* Posterior Predictive Distributions
-* Posterior Probability
-
-Using Robot Class
------------------
-
-Using Radians
-
-   :align: center
-   :height: 300
-   :width: 450
-
-Filters
--------
-
-Robot Movement
---------------
-
-==========
-So before I start today's class I'd like to take you on a trip that I recently
+Field Trip
+---------- I'd like to take you on a trip that I recently
 did to share some of the things that excite me in my life with all of you.
 I actually went to Washington, D.C. and the highlight of the day for
 me was to visit the National Museum of American History.
@@ -77,7 +47,7 @@ the methods I’m teaching you in this class are essentially the same methods as
 we used back in Stanley and in Junior when we did the Urban Challenge.
 
 State Space
-===========
+-----------
 [Narrator] So, in this class you will learn about particle filters.
 In our sequence of algorithms for estimating the state of a system,
 this is the third one and in many ways is the best one.
@@ -97,13 +67,13 @@ and I understand these are not entirely non-ambiguous questions,
 but in the spirit of the method please check whichever fits best.
 
 State Space Solution
-====================
+~~~~~~~~~~~~~~~~~~~~
 When a histogram filter was discrete
 distribution was defined over a finite set of bins,
 whereas the common filter had a continuous state space.
 
 Belief Modality
-===============
+---------------
 [Narrator] So, let me ask you a second quiz.
 In particular I would like to know whether distributions
 that can be represented may be unimodal
@@ -113,7 +83,7 @@ whereas if we can have multiple bumps in our probability distribution,
 check multimodal.
 
 Belief Modality Solution
-========================
+~~~~~~~~~~~~~~~~~~~~~~~~
 [Narrator] And here the histogram filter scores better.
 Even though it was discrete, it was able to represent multiple bumps,
 which the kalman filter couldn't, so it's unimodal.
@@ -122,7 +92,7 @@ The kalman filter was a single Gaussian which is by definition unimodal,
 whereas the histogram filter can have bumps over arbitrary grid cells.
 
 Efficiency
-==========
+----------
 [Narrator] The next question I wouldn't need to dwell on in the class,
 but I think it's important.
 When it comes to scaling in the number of dimensions of the state space,
@@ -136,7 +106,7 @@ and how Gaussian's are represented,
 and I promise you 1 of those answers is correct for either of the 2 filters here.
 
 Efficiency Solution
-===================
+~~~~~~~~~~~~~~~~~~~
 [Narrator] The histogram filter's biggest disadvantage is it scales exponentially,
 and the reason is any grid that is defined over arcade dimensions
 will end up having exponentially many grid cells in the number of dimensions,
@@ -156,7 +126,7 @@ So, if you have a 15, 20 dimensional state space,
 the kalman filters will be more efficient than the histogram filters.
 
 Exact or Approximate
-====================
+--------------------
 [Narrator] Let me ask a last question.
 When applied to robotics do we believe the histogram filter is exact or approximate?
 Same here.
@@ -165,7 +135,7 @@ Please just check the boxes you find most likely,
 and then move on to see my explanation.
 
 Exact or Approximate Solution
-=============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [Narrator] While histogram filters tend to be approximate
 because the world tends not to be discrete.
 So localization, for example, it's clearly an approximate filter.
@@ -178,7 +148,7 @@ but you should understand that both of these filters are not exact.
 Both of them tend to be just approximations of the correct posterior distribution.
 
 Particle Filters
-================
+----------------
 [Narrator] Now let's look into particle filters, the subject of today's class,
 and it's really interesting to see the answers for particle filters.
 First, the state space for particle filters is usually continuous.
@@ -239,7 +209,7 @@ are now clustered in a single location.
 Those comprise the approximate belief of the robot as it localizes itself.
 
 Using Robot Class
-=================
+-----------------
 [Narrator] Hi, I'm Kathleen and Sebastian wrote a piece of code for you
 that I am now going to demonstrate.
 So, the main class is a class called robot.
@@ -270,10 +240,10 @@ and all it does is give you the distance to the 4 landmarks, 1, 2, 3, and 4.
 For now this is all you need to know about the class robot
 that Sebastian has programmed for you.
 You might want to spend some time familiarizing yourself with the code
-to see how this is all configured.
+to see how this is all configured (see the program template under Moving Robot below).
 
 Robot Class Details
-===================
+-------------------
 [Sebastian:] Thank you Kathleen. I really appreciate it.
 This code has a little bit more stuff than you just talked about.
 It actually assimilates noise, but the noise filters are all set to 0,
@@ -288,7 +258,7 @@ It's kind of the key thing for the survival of the fittest rule in particle filt
 So, if you look through the codes don't be confused by this function; we will actually use it later.
 
 Moving Robot
-============
+------------
 [Narrator] Here's our first programming
 exercise.
 I'd like you to make a robot that starts
@@ -320,8 +290,11 @@ but these are the numbers I would expect
 you to output.
 So, have fun coding it!
 
+.. literalinclude:: code/particle_filter_moving_robot1.py
+   :language: python
+
 Moving Robot Solution
-=====================
+~~~~~~~~~~~~~~~~~~~~~
 [Narrator] And here's my solution.
 I initialized the robot--my robot--using the function robot.
 I set the coordinates to be 30, 50, and pi/2.
@@ -333,7 +306,7 @@ and when I hit run,
 this is exactly what I get.
 
 Add Noise
-=========
+---------
 [Narrator] Next, I'd like you to play with the noise.
 Our class robot has built-in noise variables.
 One is for forward motion.
@@ -346,7 +319,7 @@ forward noise equals 5.0, turn noise equals 0.1, and sense noise equals 5.0.
 So, please fit this into your code.
 
 Add Noise Solution
-==================
+~~~~~~~~~~~~~~~~~~
 [Narrator] And here is how I would do it.
 I would just call the function set noise with the parameters as specified
 for the object my robot, and when I hit run now
@@ -355,7 +328,7 @@ In fact, every single time I hit run
 I get a different set of values.
 
 Robot World
-===========
+-----------
 [Narrator] So, now we know about our class robot
 who can turn and then move straight after the turn,
 and which it also can sense the distance to 4 designated landmarks,
@@ -368,7 +341,7 @@ So, it's a cyclic world.
 So, let's now talk particle filters.
 
 Creating Particles
-==================
+------------------
 [Narrator] The particle filter that you're going to program
 maintains a set of 1000 random guesses as to where the reward might be.
 Now, I'm not going to draw 1000 dots here,
@@ -394,7 +367,7 @@ So, when I print the length of this thing
 I will get 1000 instead of 0.
 
 Creating Particles Solution
-===========================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 [Narrator] Here's 1 possible solution if we iterate the following loop 1000 times
 we create an object called robot, and we print this object to our growing list P,
 and when we're done we have 1000 particles,
@@ -409,7 +382,7 @@ and each of which has exactly 3 values associated,
 an X, a Y, and an orientation.
 
 Robot Particles
-===============
+---------------
 [Narrator] I now want you to take each of these particles
 and simulate robot motion.
 Depending on the heading direction,
@@ -423,7 +396,7 @@ and moving forward by 5.0
 to all of those particles in P.
 
 Robot Particles Solution
-========================
+~~~~~~~~~~~~~~~~~~~~~~~~
 [Narrator] So, here's one possible solution: reconstruct P2 as a temporary particle set
 with a later set P equals P2, so this is just a temporary set.
 We then go through all the particles, again, and here is the tricky line.
@@ -439,7 +412,7 @@ and fortunately it's the easy half,
 but the difficult half isn't that much more difficult.
 
 Importance Weight
-=================
+-----------------
 [Narrator] Let me explain how the second half works.
 Suppose an actual robot sits over here,
 and it measures these exact distances to the landmarks over here.
@@ -534,7 +507,7 @@ the rear robot, such that when I hit print W,
 I actually get a list of 1000 importance weights.
 
 Importance Weight Solution
-==========================
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 [Narrator] And this can be done in a single line of code.
 You construct the list W by appending
 the output of the function measurement prop applied to the [i] particle
@@ -554,7 +527,7 @@ should be drawn more frequently than the ones with a small value over here.
 How hard can that be.
 
 Resampling
-==========
+----------
 [Narrator] And it turns out it's actually harder than you think,
 but I'm going to show you how to do it,
 and once you've done it, you can use the exact same code
@@ -598,7 +571,7 @@ P2,
 P4 and P5?
 
 Resampling Solution
-===================
+~~~~~~~~~~~~~~~~~~~
 [Narrator] And the answer is 0.1, 0.2, 0.4, 0.1, and 0.2,
 and to see we just have to normalize those importance weights.
 The sum of those numbers over here are 6.
@@ -608,20 +581,20 @@ So, we divide 0.6 by 6. We get 0.1.
 Obviously those over here add up to 1.
 
 Never Sampled 1
-===============
+---------------
 [Narrator] So, let me makes this alpha-wise expressive and ask another question.
 Is it possible that P1 is never sampled
 in the resampling step? Yes or no?
 Please just check one.
 
 Never Sampled 1 Solution
-========================
+~~~~~~~~~~~~~~~~~~~~~~~~
 [Narrator] And the answer is yes, in the random resampling process
 something with an importance weight of 0.1 is actually
 quite unlikely to be sampled into the next data set.
 
 Never Sampled 2
-===============
+---------------
 [Narrator] Let me now ask the same question about P3
 which is the particle with the largest importance weight.
 Please check yes or no.
@@ -629,21 +602,21 @@ Is it possible that P3 is never sampled in the resampling step?
 Yes or no?
 
 Never Sampled 2 Solution
-========================
+~~~~~~~~~~~~~~~~~~~~~~~~
 [Narrator] And the answer is yes, again.
 Even though this importance weight over here is large,
 it could happen that in each of the 5 resampling steps
 we pick one of the other 4.
 
 Never Sampled 3
-===============
+---------------
 [Narrator] So, I'm going to ask you a tricky question and maybe you can calculate this.
 So, what is the probability of never sampling P3?
 To answer this question assume we make a new particle set
 with N=5 new particles where particles are drawn independently and with replacement.
 
 Never Sampled 3 Solution
-========================
+~~~~~~~~~~~~~~~~~~~~~~~~
 [Narrator] And the answer is 0.0777 approximately,
 and the way to obtain this is
 for this particle to never to be drawn in the resampling phase.
@@ -666,7 +639,7 @@ will survive at a much lower rate than the ones with larger importance weights,
 which is exactly what we wish to get from the resampling step.
 
 New Particle
-============
+------------
 [Narrator] So, what I would like you to do next is to modify our algorithm
 to take the lists of particles and importance weights
 to sample N times the replacement and new particles
@@ -684,7 +657,7 @@ So, try it out, see if you can do it, and if you fail
 look for my advice and then try it again.
 
 New Particle Solution
-=====================
+~~~~~~~~~~~~~~~~~~~~~
 [Narrator] Now it turns out this is not an easy thing to do and
 obviously I think it might be to complete all this normalized alphas,
 but you still have to be able to sample from those.
@@ -698,7 +671,7 @@ Let me show you what is commonly done, and I don't take any guaranty
 that it's entirely unbiased, but there's a very simple trick.
 
 Resampling Wheel
-================
+----------------
 [Narrator] So, here's an idea how to make this more efficient,
 and it turns out empirically it also gives better samples.
 Let's represent all our particles and importance weight in a big wheel.
@@ -743,7 +716,7 @@ So, this is essentially my implementation for the resampling step.
 So, I want you--if you can--to implement that specific resampler in Python.
 
 Resampling Wheel Solution
-=========================
+~~~~~~~~~~~~~~~~~~~~~~~~~
 [Narrator] So, here's my implementation of the resampling step,
 and it follows the same logic that I gave you in a diagram.
 We're creating a new set of particles called P3; it's an empty set in the beginning,
@@ -802,7 +775,7 @@ has the exact same set of distances.
 Therefore, in our particle future, the heading direction plays no role.
 
 Orientation 1
-=============
+-------------
 Here's a quiz.
 Will orientation or heading never play a role?
 And the answers are:
@@ -811,7 +784,7 @@ so we always get a random set of orientations--
 or No--eventually they matter?
 
 Orientation 1 Solution
-======================
+~~~~~~~~~~~~~~~~~~~~~~
 And the correct answer is: of course they will eventually matter.
 So No is the correct answer, and let me show this to you.
 Again, assume our 4 landmarks
@@ -829,12 +802,12 @@ because the prediction is so different for different orientations.
 Let's go and program this.
 
 Orientation 2
-=============
+-------------
 So I want you to take this particle filter,
 and program it to run twice.
 
 Orientation 2 Solution
-======================
+~~~~~~~~~~~~~~~~~~~~~~
 And here's my answer: this is all initialization over here, so we shouldn't touch it.
 But from here on, we want to do things twice.
 So we're going to put a "for" loop here,
@@ -856,7 +829,7 @@ and the "x" values are all about the same.
 So this is the particle failure working.
 
 Error
-=====
+-----
 What I'll do next is to give you
 another program assignment.
 Rather than printing out the particles themselves,
@@ -902,7 +875,7 @@ Can you code it so I get, for each iteration,
 the error number produced by this routine over here?
 
 Error Solution
-==============
+~~~~~~~~~~~~~~
 So here's my solution.
 It's the same command as: print eval(myrobot, p)--
 I know it wasn't very hard,
@@ -934,7 +907,7 @@ Well, this particle filter is just too good.
 It just gets the answer relatively right really, really quickly.
 
 You and Sebastian
-=================
+-----------------
 So one thing I want to stress here is that
 you've just programmed a full particle filter.
 So you got, from me, kind of a very
@@ -953,7 +926,7 @@ that require particle filtering; they're very generic.
 So let me get back to the theory of particle filtering.
 
 Filters
-=======
+-------
 Let me ask you a few questions.
 We had measurement updates and motion updates.
 In the measurement update, the computer posterior over state
@@ -1020,7 +993,7 @@ in 2003, into a tenured Associate Professor position
 so obviously my Job Talk wasn't that bad.
 
 Filters Solution
-================
+~~~~~~~~~~~~~~~~
 And the answer are those 2.
 Those, I used in a Job Talk of 2003.
 But I previously applied at Stanford and actually received an offer,
@@ -1033,7 +1006,7 @@ that applied them to the somewhat more involved
 robot mapping problem.
 
 2012
-====
+----
 Now fast forward to 2012.
 We built the Google Car.
 We're now using multiple methods.
@@ -1083,7 +1056,7 @@ In fact, you've learned pretty much what there is to know
 to become a successful practitioner in robotics.
 
 Preview
-=======
+-------
 In the next class, I will tell you about
 robot motion--how to make the robot move.
 So we're going to move beyond the idea of

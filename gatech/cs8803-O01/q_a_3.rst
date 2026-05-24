@@ -1,5 +1,9 @@
 Office Hours Week 3
 ===================
+
+Discussion
+----------
+
 Hello and welcome to the third office hours. Let's jump right in. &gt;&gt;All right.
 Many students, myself included, had some questions about the resampling wheel.
 Specifically, when you draw a random number between 0 and twice W max,

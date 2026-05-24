@@ -4,7 +4,6 @@ Introduction to Operating Systems
 .. toctree::
 
    c-programming
-   resources
    P1L1
    P1L2
    P2L1
@@ -26,6 +25,3 @@ Introduction to Operating Systems
    beyond_multiprocessing
    lightweight_threads
    notes
-
-Resources Shared by Students
-----------------------------

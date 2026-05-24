@@ -1,8 +1,8 @@
-Problem Set 4
-=============
+Homework Assignment 4
+=====================
 
 Admissible Heuristic
-====================
+--------------------
 Welcome to homework assignment #4 in CS373.
 To remind you, we covered A-star and dynamic programming in class.
 Let's start with an A-star question.
@@ -17,7 +17,7 @@ Is the function shown here admissible or not?
 Please check one of the two radio buttons.
 
 Admissible Heuristic Solution
-=============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is "yes."
 In this part of the state space, we are obviously entering values that are too small,
 but the heuristic is admissible if h(x) is lower than the cost-to-goal.
@@ -25,14 +25,14 @@ It would have been inadmissible if the values over here were much larger
 than the values we want them to be.
 
 Admissible Heuristic 2
-======================
+----------------------
 Here's another heuristic function for a 3 x 3 maze.
 Assume again the cost is 1, and it's our sole goal state in the corner over here.
 Tell me is this admissible?
 Please check one of the two buttons here.
 
 Admissible Heuristic 2 Solution
-===============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is "no,"
 because these numbers over here are too large.
 Why is this bad?
@@ -43,7 +43,7 @@ and pick what might end up being a suboptimal path
 even though in this specific case all the paths seem to be equally good.
 
 Bad Heuristic
-=============
+-------------
 Let me ask a more general question now.
 What may happen if h, the heuristic, is not admissible?
 A-star finds the optimal path always.
@@ -55,7 +55,7 @@ and these statements suggest they just apply sometimes
 under certain circumstances.
 
 Bad Heuristic Solution
-======================
+~~~~~~~~~~~~~~~~~~~~~~
 There was only one correct answer, which is this one over here.
 The inadmissibility of the heuristic might lead down an exploration of the state space
 that leads to the goal on a suboptimal path.
@@ -77,7 +77,7 @@ Therefore this answer here was wrong.
 Of course, none of the above is also a false answer.
 
 Diagonal Motion
-===============
+---------------
 I now what to quiz you about dynamic programming.
 Consider the following 3 x 3 world with a goal state in the corner over here.
 Say the value of the goal state is defined to be zero.
@@ -87,12 +87,12 @@ assuming you can either move straight or diagonally.
 In both cases the cost of motion is 1.
 
 Diagonal Motion Solution
-========================
+~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is 1 over here, 2 here, 3 here, 4 here.
 This one also is resolves to 2 and 3.
 
 Stochastic Motion
-=================
+-----------------
 [Sebastian:] Let me talk about dynamic programming with stochastic actions.
 At the end of this assignment, you'll be able to program this.
 The motivation to study this is as follows:
@@ -184,7 +184,7 @@ and we can see what your code generates.
 In the initial value function, please initialize your value function with 1000.
 
 Stochastic Motion Solution
-==========================
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 Here is my solution.
 As I go through all different actions a, as before,
 I now create a new inner loop of going through different action outcomes.

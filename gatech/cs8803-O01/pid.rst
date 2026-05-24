@@ -25,7 +25,7 @@ Just check one of the three.
 This is a question where I check your intuition. This is not a mathematically precise question.
 
 Robot Motion Solution
-=====================
+~~~~~~~~~~~~~~~~~~~~~
 The answer is subtle. I would actually prefer the red path.
 The reason is as the robot is facing the right side over here,
 it can't take a 45-degree turn onto the green path.
@@ -35,7 +35,7 @@ which are unfeasible for the robot.
 To some extent, we'd like to find a smooth path that is executable by the robot.
 
 Smoothing Algorithm
-===================
+-------------------
 In the path planning class, we specified paths as a sequence of points in a 2D grid
 just like this over here.
 For the smoothing purposes, we will call each point xi.
@@ -53,28 +53,28 @@ If we only apply the first criteria--forget about the second one--will we get th
 and smooth path, or no path. Please check exactly one of those boxes.
 
 Smoothing Algorithm Solution
-============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is if we just optimize this one over here, we get the original path,
 and the reason is obvious. It's already zero for the original setting.
 Further minimization doesn't make it any smaller. It's a quadratic error.
 The minimization has no effect. We just get the original path.
 
 Smoothing Algorithm 2
-=====================
+---------------------
 Now let me ask the exact same question just for the second criterion.
 Forget about the first one.
 What happens if you only optimize this criterion over here.
 Do we get the original path, smooth path, or no path.
 
 Smoothing Algorithm 2 Solution
-==============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer here is you get no path.
 This criterion alone asks that all the y's are as similar as possible.
 If it's minimized, then all the y's are the same, which means you only get a single point,
 and we get no path at all.
 
 Smoothing Algorithm 3
-=====================
+---------------------
 Obviously these two criteria are in conflict to each other.
 In reality, what we do is minimize both, and you do that with some sort of a weight, alpha,
 which you can play with in the code.
@@ -84,7 +84,7 @@ Here's my next question. Suppose we optimize both at the same time with an appro
 What do we get? An original path, a smooth path, or no path?
 
 Smoothing Algorithm 3 Solution
-==============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is we get a smooth path.
 To see why that's the case, let me just simulate the optimization.
 Suppose we're given a solution to the planning problem like this,
@@ -107,7 +107,7 @@ assuming we have n points starting in x0.
 The optimization is only applied to the intermediary points.
 
 Path Smoothing
-==============
+--------------
 How can we optimize these two terms over here?
 The idea is to use gradient descent.
 That is, every time step we take a small step in the direction of minimizing the error over here.
@@ -173,7 +173,7 @@ to just iterate over each individual entry.
 So, for example, these xi's would be these values here.
 
 Path Smoothing Solution
-=======================
+~~~~~~~~~~~~~~~~~~~~~~~
 One way to solve this is to define a variable called change and set it equal to tolerance,
 where tolerance is a parameter in our function, and you can see its default value is very, very small.
 And, as long as this change is greater than or equal to tolerance,
@@ -191,7 +191,7 @@ And we see if we run this, we go from this right-angle, jerky path
 to this nice, smooth path taking us from [0,0] to [4,4].
 
 Zero Data Weight
-================
+----------------
 Here is a tricky quiz question.
 Say we alpha, our data weight to zero, and better, our smoothing weight, to 0.1,
 and we run this to completion. What do we get?
@@ -200,7 +200,7 @@ Or will everything collapse to a single point?
 You can try this out in the RDE before answering this quiz.
 
 Zero Data Weight Solution
-=========================
+~~~~~~~~~~~~~~~~~~~~~~~~~
 The answer is a straight line, and the reason is really subtle.
 It's because we're not modifying the first and last point.
 Otherwise, it would be a single point.
@@ -229,7 +229,7 @@ that is still smooth but maximizes your clearance from obstacles.
 We will revisit this in the homework assignment.
 
 PID Control
-===========
+-----------
 Let's now talk about the second part of this lesson called PID control.
 PID control is a vast field in control, and many, many classes can be taught about this one subject matter.
 What I'll do is I'll give you the very basics, and I'll let you implement the very basics.
@@ -249,7 +249,7 @@ The third possibility is steer in proportion to the this crosstrack error or CTE
 Choose one of those that you think is best suited to control the car.
 
 PID Control Solution
-====================
+~~~~~~~~~~~~~~~~~~~~
 And yes, you'll steer in proportion to the crosstrack error,
 which means the larger the error, the more you're willing to turn towards the target trajectory.
 You can see that this works. As you get closer to trajectory, your steering will be slower and slower.
@@ -261,7 +261,7 @@ Believe me. We accidentally did this once.
 It's a really bad idea.
 
 Proportional Control
-====================
+--------------------
 What you just learned is called a "P-controller" where P stands for proportional.
 Here is a really trick question by which I want to test your intuition--
 one that doesn't have a unique answer, but it has a best answer.
@@ -272,7 +272,7 @@ It never quite reaches the reference trajectory? It overshoots?
 Or either can happen?
 
 Proportional Control Solution
-=============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 My answer is it actually overshoots.
 The problem is no matter how small this constant is over here,
 It will eventually turns its wheels quite a bit towards it's trajectory.
@@ -285,7 +285,7 @@ But it'll never really converge.
 It'll be what's called "marginally stable" or often just "stable" in the literature.
 
 Implement P Controller - Artificial Intelligence for Robotics
-=============================================================
+-------------------------------------------------------------
 I want you to implement such a controller.
 Here is the code I've prepared for you.
 There is a class robot with which you're familiar.
@@ -320,7 +320,7 @@ and you can see how the robot overshoots slowly around the reference trajectory 
 Please go implement this.
 
 Implement P Controller Solution - Artificial Intelligence for Robotics
-======================================================================
+----------------------------------------------------------------------
 Here is my implementation. It's really simple.
 I execute the following loop 100 times.
 I set the crosstrack error to my robot y.
@@ -330,14 +330,14 @@ I print as an output my robot along with the steering direction.
 This simple routine just does it.
 
 Oscillations
-============
+------------
 Let's now modify the parameter to 0.3, and here is my quiz.
 If you modify the control parameter from 0.1 to 0.3, what happens?
 It oscillates faster? It oscillates slower? Or nothing?
 Please check exactly one of those.
 
 Oscillations Solution
-=====================
+~~~~~~~~~~~~~~~~~~~~~
 As we'll see, they'll oscillate faster.
 You have to spend some time with this, but for the larger value of 0.3,
 we reach a negative value in y already here, which means we just crossed the line.
@@ -346,7 +346,7 @@ then our step 13 would still be 0.6 off.
 So clearly the control oscillation is much slower, and we compensate much less
 
 PD Controller - Artificial Intelligence for Robotics
-====================================================
+----------------------------------------------------
 The basic next question is is there a way to void the overshoot?
 It would be nice if we could do this, because driving in an oscillating car is no fun.
 In fact, it makes you really seasick, believe me.
@@ -380,7 +380,7 @@ which we didn't achieve for the proportional controller.
 Please write that routine so we can test it.
 
 PD Controller Solution - Artificial Intelligence for Robotics
-=============================================================
+-------------------------------------------------------------
 Here is my solution. I build a variable called "diffcrosstrackerror,
 which is in my differential, that is set to the momentary crosstrack error
 minus the previous one which I the very first time initialize to the present one.
@@ -389,7 +389,7 @@ but also proportionately to the differential crosstrack error times the paramete
 When I put this in and I run it, I will get exactly the output that I showed you.
 
 Systematic Bias
-===============
+---------------
 Let's talk about a problem that often occurs in robotics called a "systematic bias."
 It goes as follows.
 When you ordered your car, you believed the front wheels were 100% aligned,
@@ -405,7 +405,7 @@ It works just as before or it causes a new, big crosstrack error?
 Go try it out.
 
 Systematic Bias Solution
-========================
+~~~~~~~~~~~~~~~~~~~~~~~~
 Of course it causes a new error.
 If I go to my output for 100 steps, I find that the y value is between 0.7 and 0.9.
 It really a lot of error.
@@ -415,21 +415,21 @@ Even though the bias was in steering, it manifests itself
 as an increased crosstrack error in the y direction.
 
 Is PD Enough
-============
+------------
 Here's a question for you that will require some thought,
 and you can try it out before answering this.
 Can the differential term solve this problem?
 Yes or no?
 
 Is PD Enough Solution
-=====================
+~~~~~~~~~~~~~~~~~~~~~
 The correct answer is no. Let us try this out.
 Let's enter a 3.0 for the differential term, run everything,
 and the y error is still large.
 It converges now, 0.87, but it's still really, really large.
 
 PID Implementation - Artificial Intelligence for Robotics
-=========================================================
+---------------------------------------------------------
 What's the intuition?
 If you drive a car and your normal steering mode leads you to a trajectory far away from the goal,
 then what I submit you do is you notice over a long period of time you can't get closer.
@@ -455,7 +455,7 @@ Let's not worry why I picked those. They're actually wisely chosen, as you will 
 But let's run our code and now modify our code to also allow for this parameter over here.
 
 PID Implementation Solution - Artificial Intelligence for Robotics
-==================================================================
+------------------------------------------------------------------
 Here is my solution. I implement a variable int crosstrack error outside my main loop
 then initialize with zero.
 I then add to the int crosstrack error my local crosstrack_error.
@@ -478,7 +478,7 @@ Some people call it "coordinate ascent" to make it sound a little more sophistic
 but I just called it twiddle, because it really gets to the heart of what's happening.
 
 Twiddle
-=======
+-------
 In Twiddle, we're trying to optimize for a set of parameters.
 To do so, our function run() must return a goodness.
 This goodness value might be the average crosstrack error.
@@ -525,7 +525,7 @@ In doing so, we can zoom in more and more into a detailed parameter until it fin
 It's local hill climber, but it happens to be really, really efficient.
 
 Parameter Optimization - Artificial Intelligence for Robotics
-=============================================================
+-------------------------------------------------------------
 So to implement this I’ve modified the RAN
 procedure to input a parameter vector of three
 parameters. And for reasons that will be obvious
@@ -574,7 +574,7 @@ that the final control error, will be really, really
 small and that’s how we’ll checking.
 
 Parameter Optimization Solution - Artificial Intelligence for Robotics
-======================================================================
+----------------------------------------------------------------------
 Here is my implementation of twiddle. This
 is a routine that you can keep this way for
 many, many different applications. All it
@@ -633,7 +633,7 @@ a little bit more with this code for the
 homework assignment. But this is it for now.
 
 Summary
-=======
+-------
 Let me summarize. You learned two really important
 things that we use every day in robot programming
 and they were somewhat complementary. First

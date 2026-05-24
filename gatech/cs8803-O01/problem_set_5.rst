@@ -1,8 +1,8 @@
-Problem Set 5
-=============
+Homework Assignment 5
+=====================
 
 Missing Parameters
-==================
+------------------
 Welcome to homework 5.
 In the first problem, you're going to build some intuition for what happens to a robot's path
 when one of the these parameters, either toe p, toe d, or toe i, is set equal to 0,
@@ -19,7 +19,7 @@ you would select no problem.
 Keep in mind that each column should be selected exactly 1 time. Good luck!
 
 Missing Parameters Solution
-===========================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 This was actually a really tricky question.
 So let's, first, mark down the answers,
 and now we can talk about why.
@@ -52,7 +52,7 @@ growing oscillations, and this behavior is characteristic of any PID controller
 where the differential term is too small.
 
 Cyclic Smoothing
-================
+----------------
 Welcome to homework assignment #5.
 Today I only have programming assignments. One on smoothing and one on control.
 In both cases, we are trying to drive a car on a racetrack as fast as we can.
@@ -82,7 +82,7 @@ it wasn't a cyclic smoother, and make it so each point get uprooted.
 You don't keep 2 of the points fixed.
 
 Cyclic Smoothing Solution
-=========================
+~~~~~~~~~~~~~~~~~~~~~~~~~
 So here's my solution. I modified the code in trivial ways.
 I go through all the i's as opposed to leaving out the first and last node,
 and because we are cyclic, I now have to add the model of division by the length of the path
@@ -93,7 +93,7 @@ like this, after the smoothing. It actually put all endmarks a little bit,
 which is a bit of a concern, which we address in a minute.
 
 Constrained Smoothing
-=====================
+---------------------
 [Thrun] So in this next assignment, I'd like you to fix certain data points.
 Just as much as you fixed the data points originally in our path,
 the beginning and end point, now I want to fix you 4 points.
@@ -168,7 +168,7 @@ For the update strength, I suggest you use half of weight_smooth for each update
 So in total, you add another 0.1 as update strength.
 
 Constrained Smoothing Solution
-==============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 And here is my solution. These are two update
 lines. They’re basically identical except one
 goes in one direction and the other direction.
@@ -190,7 +190,7 @@ are holding fixed, which is actually
 really, really useful.
 
 Racetrack Control
-=================
+-----------------
 [Thrun] So here's my second piece of software assignments in controls.
 In the class we talked about how to make a car follow a straight line.
 We used the line x = 0
@@ -233,7 +233,7 @@ So it's going to traverse this one in the opposite direction with this one over 
 So good luck coding up the correct crosstrack_error function.
 
 Racetrack Control Solution
-==========================
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 [Thrun] And here is my solution. We have 4 cases.
 On the left side, if I'm on the left side of the racecourse,
 as defined that x is smaller to radius,

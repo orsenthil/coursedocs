@@ -37,5 +37,3 @@ Contents:
    24---meta-reasoning.rst
    25---advanced-topics.rst
    26---wrap-up.rst
-   course-material.rst
-   video-on-kbai.rst

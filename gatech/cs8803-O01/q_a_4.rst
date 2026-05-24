@@ -1,6 +1,10 @@
 Office Hours Week 4
 ===================
 
+Discussion
+----------
+
+
 Hello, and welcome to the fourth Office Hours.
 We've had a lot of really good discussion in the forums and some great questions.
 Let's start with a question from Michael.

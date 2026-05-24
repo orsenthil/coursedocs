@@ -1,5 +1,9 @@
 Office Hours Week 6
 ===================
+
+Discussion
+----------
+
 Hello, and welcome to the sixth office hours.
 This will be the last office hours. Let's get started.
 The first question comes from MJL.
